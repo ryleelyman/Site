@@ -1,0 +1,26 @@
+nav {
+  text-align: right;
+}
+
+.navdiv {
+  background-color: var(--dullbg);
+  padding: 1.5em 1.5em;
+}
+
+.navbutton {
+  display: inline;
+  border: none;
+  padding: 0 calc(4rem / 9); 
+  text-align: center;
+}
+
+.navbutton > * {
+  color: var(--darkfg);
+  font-family: var(--sans);
+}
+
+.current {
+  background-color: var(--brightbg);
+  padding: calc(2em / 3) calc(2em / 3);
+}
+
