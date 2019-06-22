@@ -7,7 +7,6 @@
   --darkfg: #4F2C4D;
   --sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #555;
-  font-size: 16px;
   line-height: 1.5em;
   font-family: "Georgia", serif;
 }
@@ -29,7 +28,6 @@ footer {
 .maindiv {
   background-color: white;
   box-sizing: content-box;
-  max-width: var(--measure);
   margin: 0 auto;
   padding: 1.5rem calc(1.5ch * 1.5 * 1.5);
 }
@@ -54,6 +52,7 @@ body {
   max-width: calc(var(--measure) * 1.5);
   background-color: var(--darkbg);
   margin: 0 auto;
+  font-size: 16px;
 }
 
 .headshot {

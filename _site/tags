@@ -544,7 +544,7 @@
 .m-xl-4	_site/assets/css/style.css	/^  .m-xl-4 { margin: 24px !important; }$/;"	c
 .m-xl-5	_site/assets/css/style.css	/^  .m-xl-5 { margin: 32px !important; }$/;"	c
 .m-xl-6	_site/assets/css/style.css	/^  .m-xl-6 { margin: 40px !important; }$/;"	c
-.maindiv	_site/assets/css/styles.css	/^.maindiv { background-color: white; box-sizing: content-box; margin: 0 auto; padding: 1.5rem cal/;"	c
+.maindiv	_site/assets/css/styles.css	/^.maindiv { background-color: white; box-sizing: content-box; max-width: var(--measure); margin: /;"	c
 .markdown-body	_site/assets/css/style.css	/^.markdown-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, s/;"	c
 .markdown-body .absent	_site/assets/css/style.css	/^.markdown-body .absent { color: #cb2431; }$/;"	c
 .markdown-body .anchor	_site/assets/css/style.css	/^.markdown-body .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1; }$/;"	c
