@@ -29,6 +29,7 @@ footer {
 .maindiv {
   background-color: white;
   box-sizing: content-box;
+  max-width: var(--measure);
   margin: 0 auto;
   padding: 1.5rem calc(1.5ch * 1.5 * 1.5);
 }
