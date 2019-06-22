@@ -1,15 +1,26 @@
-<nav>
-  <div class="navdiv">
-  {% for item in site.data.navigation %}
-    <div class="navbutton">
-      <a
-	{% if page.url == item.link %}
-	  class="current"
+<div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	{% if page.blog == true %}
+	Alanza
+	{% else %}
+	Rylee Lyman
 	{% endif %}
-      href="{{ item.link }}">
-	{{ item.name }}
-      </a>
+      </div>
+      <div>
+	<nav>
+	  {% for item in site.data.navigation %}
+	    <div class="navbutton">
+	      <a {% if page.url == item.link %}
+		   class="current"
+		 {% endif %} href="{{ item.link }}">
+		{{ item.name }}
+	      </a>
+	    </div>
+	  {% endfor %}
+	</nav>
+      </div>
     </div>
-  {% endfor %}
   </div>
-</nav>
+</div>

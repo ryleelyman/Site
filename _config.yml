@@ -2,3 +2,20 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+            path: ""
+            type: "pages"
+    values:
+            layout: "default"
+            math: false
+            blog: false
+  -
+    scope:
+            path: ""
+            type: "posts"
+    values:
+            layout: "post"
+            blog: true

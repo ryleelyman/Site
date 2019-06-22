@@ -7,6 +7,9 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
+    {% if page.math == true %}
+      {% include math.html %}
+    {% endif %}
   </head>
 
   <body>

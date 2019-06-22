@@ -13,4 +13,4 @@ My advisor is [Kim Ruane](http://www.tufts.edu/~kruane01/).
 My email address is <rylee.lyman@tufts.edu>.  
 Office: Bromfield–Pearson 207
 
-[pdf]: {{ "/assets/pdfs/CV.pdf" | relative_url }}
+[pdf]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}

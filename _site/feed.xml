@@ -1,8 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-21T18:12:36-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site</title><subtitle>Website / Blog</subtitle><entry><title type="html">Bananas</title><link href="http://localhost:4000/2019/06/20/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2019-06-20T00:00:00-04:00</published><updated>2019-06-20T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/20/bananas</id><content type="html" xml:base="http://localhost:4000/2019/06/20/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-22T09:54:02-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site</title><subtitle>Website / Blog</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
+to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
+he writes, “is the heart of the healthy internet.”&lt;/p&gt;
 
-&lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.&lt;/p&gt;</content><author><name>jill</name></author><summary type="html">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</summary></entry></feed>
+&lt;p&gt;So hello. Having been given the push I needed, I decided to
+move my academic website to its own URL and use it as an excuse 
+to start blogging. Since much of the rest of this website is
+given over to my career as a mathematician, it’s reasonable to
+expect that I will talk about math here, and I expect to get
+technical with it when I want to.&lt;/p&gt;
+
+&lt;p&gt;Math is not my only passion. I expect to also talk about
+many things related to music. This blog is tentatively titled
+Alanza, my middle name, but also my “artist moniker” when 
+playing solo. I am a moderator on the &lt;a href=&quot;https://llllllll.co&quot;&gt;lines forum&lt;/a&gt;,
+also under the name Alanza.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This site is built with &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, and hosted on
+GitHub Pages. On lines I asked several questions about how to get
+up and running with a website and got &lt;a href=&quot;https://llllllll.co/t/blogging-platforms/23333?u=alanza&quot;&gt;a wealth of knowledge&lt;/a&gt;
+in response. Although, being a millenial, it’s maybe not surprising
+that I’d messed around with HTML as a kid, this site is my first time
+using CSS. I read what I could on &lt;a href=&quot;https://every-layout.dev&quot;&gt;Every Layout&lt;/a&gt;
+to get a feel for what the concerns were, and borrowed their “Sidebar”
+primitive. I also appreciated the from-square-one approach of
+&lt;a href=&quot;https://internetingishard.com&quot;&gt;Internetting Is Hard&lt;/a&gt; when Every Layout
+went over my head. These resources helped get me up to “okay, I can
+Google that” speed.
+I also should shout out &lt;a href=&quot;https://quuxplusone.github.io/blog/2018/08/05/mathjax-in-jekyll/&quot;&gt;Arthur O’Dwyer&lt;/a&gt; for a helpful
+blog post about enabling MathJax in Jekyll—which turns out to be 
+surprisingly simple!&lt;/p&gt;
+
+&lt;p&gt;In college, I taught myself a lot of the basics of typesetting,
+so it was eye-opening to see how very different the concerns are
+when designing for the web. Although the design here is certainly
+minimal, it was also surprisingly relatively painless!
+One of my goals for this year has been to improve my Vim skills
+and incorporate it more into my work. I was very pleased how well
+using Jekyll vs. say, WordPress, furthers this goal!&lt;/p&gt;</content><author><name></name></author><summary type="html">Earlier this week, Marc Weidenbaum of disquiet.com wrote a paean to the blog that I found really inspiring. “Self-publishing,” he writes, “is the heart of the healthy internet.”</summary></entry></feed>

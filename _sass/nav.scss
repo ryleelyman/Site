@@ -2,13 +2,19 @@ nav {
   text-align: right;
 }
 
+.headline {
+  font-size: calc(1.5rem * 1.5);
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
 .navdiv {
   background-color: var(--dullbg);
-  padding: 1.5em 1.5em;
+  padding: 1.5rem 1.5rem;
 }
 
 .navbutton {
-  display: inline;
+  display: inline-block;
   border: none;
   padding: 0 calc(4rem / 9); 
   text-align: center;

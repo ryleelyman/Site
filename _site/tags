@@ -6,6 +6,7 @@
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/3d01d99/
 *	_site/assets/css/style.css	/^* { box-sizing: border-box; }$/;"	s
+*	_site/assets/css/styles.css	/^* { max-width: var(--measure); box-sizing: border-box; }$/;"	s
 ---	assets/text/bio.md	/^---$/;"	s
 .anim-fade-down	_site/assets/css/style.css	/^.anim-fade-down { animation-name: fade-down; animation-duration: 0.3s; animation-fill-mode: forw/;"	c
 .anim-fade-in	_site/assets/css/style.css	/^.anim-fade-in { animation-name: fade-in; animation-duration: 1s; animation-timing-function: ease/;"	c
@@ -137,7 +138,7 @@
 .container-xl	_site/assets/css/style.css	/^.container-xl { max-width: 1280px; margin-right: auto; margin-left: auto; }$/;"	c
 .container::after	_site/assets/css/style.css	/^.container::after { display: table; clear: both; content: ""; }$/;"	c
 .container::before	_site/assets/css/style.css	/^.container::before { display: table; content: ""; }$/;"	c
-.current	_site/assets/css/styles.css	/^.current { color: green; }$/;"	c
+.current	_site/assets/css/styles.css	/^.current { background-color: var(--brightbg); padding: calc(2em \/ 3) calc(2em \/ 3); }$/;"	c
 .d-block	_site/assets/css/style.css	/^.d-block { display: block !important; }$/;"	c
 .d-flex	_site/assets/css/style.css	/^.d-flex { display: flex !important; }$/;"	c
 .d-inline	_site/assets/css/style.css	/^.d-inline { display: inline !important; }$/;"	c
@@ -419,6 +420,9 @@
 .h5	_site/assets/css/style.css	/^.h5 { font-size: 14px !important; }$/;"	c
 .h6	_site/assets/css/style.css	/^.h1, .h2, .h3, .h4, .h5, .h6 { font-weight: 600 !important; }$/;"	c
 .h6	_site/assets/css/style.css	/^.h6 { font-size: 12px !important; }$/;"	c
+.headline	_site/assets/css/styles.css	/^.headline { font-size: calc(1.5rem * 1.5); font-weight: bold; line-height: 1.5rem; }$/;"	c
+.headline	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	c
+.headshot	_site/assets/css/styles.css	/^.headshot { max-width: 200px; }$/;"	c
 .height-fit	_site/assets/css/style.css	/^.height-fit { max-height: 100% !important; }$/;"	c
 .height-full	_site/assets/css/style.css	/^.height-full { height: 100% !important; }$/;"	c
 .hide-lg	_site/assets/css/style.css	/^@media (min-width: 768px) and (max-width: 1012px) { .hide-lg { display: none !important; } }$/;"	c
@@ -540,6 +544,7 @@
 .m-xl-4	_site/assets/css/style.css	/^  .m-xl-4 { margin: 24px !important; }$/;"	c
 .m-xl-5	_site/assets/css/style.css	/^  .m-xl-5 { margin: 32px !important; }$/;"	c
 .m-xl-6	_site/assets/css/style.css	/^  .m-xl-6 { margin: 40px !important; }$/;"	c
+.maindiv	_site/assets/css/styles.css	/^.maindiv { background-color: white; box-sizing: content-box; margin: 0 auto; padding: 1.5rem cal/;"	c
 .markdown-body	_site/assets/css/style.css	/^.markdown-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, s/;"	c
 .markdown-body .absent	_site/assets/css/style.css	/^.markdown-body .absent { color: #cb2431; }$/;"	c
 .markdown-body .anchor	_site/assets/css/style.css	/^.markdown-body .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1; }$/;"	c
@@ -1014,6 +1019,9 @@
 .my-xl-4	_site/assets/css/style.css	/^  .my-xl-4 { margin-top: 24px !important; margin-bottom: 24px !important; } }$/;"	c
 .my-xl-5	_site/assets/css/style.css	/^  .my-xl-5 { margin-top: 32px !important; margin-bottom: 32px !important; } }$/;"	c
 .my-xl-6	_site/assets/css/style.css	/^  .my-xl-6 { margin-top: 40px !important; margin-bottom: 40px !important; } }$/;"	c
+.navbutton	_site/assets/css/styles.css	/^.navbutton { display: inline-block; border: none; padding: 0 calc(4rem \/ 9); text-align: center/;"	c
+.navbutton > *	_site/assets/css/styles.css	/^.navbutton > * { color: var(--darkfg); font-family: var(--sans); }$/;"	s
+.navdiv	_site/assets/css/styles.css	/^.navdiv { background-color: var(--dullbg); padding: 1.5rem 1.5rem; }$/;"	c
 .no-underline	_site/assets/css/style.css	/^.no-underline { text-decoration: none !important; }$/;"	c
 .no-wrap	_site/assets/css/style.css	/^.no-wrap { white-space: nowrap !important; }$/;"	c
 .octicon	_site/assets/css/style.css	/^.octicon { vertical-align: text-bottom; }$/;"	c
@@ -1338,8 +1346,15 @@
 .rule	_site/assets/css/style.css	/^hr, .rule { height: 0; margin: 15px 0; overflow: hidden; background: transparent; border: 0; bor/;"	c
 .rule::after	_site/assets/css/style.css	/^hr::after, .rule::after { display: table; clear: both; content: ""; }$/;"	c
 .rule::before	_site/assets/css/style.css	/^hr::before, .rule::before { display: table; content: ""; }$/;"	c
+.short-text	_site/assets/css/styles.css	/^.short-text { font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }$/;"	c
 .show-on-focus	_site/assets/css/style.css	/^.show-on-focus { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip:/;"	c
 .show-on-focus:focus	_site/assets/css/style.css	/^.show-on-focus:focus { z-index: 20; width: auto; height: auto; clip: auto; }$/;"	c
+.sidebar > *	_site/assets/css/styles.css	/^.sidebar > * { display: flex; flex-wrap: wrap; margin: calc(1rem \/ 2 * -1); }$/;"	s
+.sidebar > * > *	_site/assets/css/styles.css	/^.sidebar > * > * { margin: calc(1rem \/ 2); flex-grow: 1; }$/;"	s
+.sidebar > * > :first-child	_site/assets/css/styles.css	/^.sidebar > * > :first-child { flex-basis: 0; flex-grow: 999; min-width: calc(50% - 1rem); }$/;"	s
+.sidebar-l > *	_site/assets/css/styles.css	/^.sidebar-l > * { display: flex; flex-wrap: wrap; margin: calc(1rem \/ 2 * -1); }$/;"	s
+.sidebar-l > * > *	_site/assets/css/styles.css	/^.sidebar-l > * > * { margin: calc(1rem \/ 2); flex-grow: 1; }$/;"	s
+.sidebar-l > * > :last-child	_site/assets/css/styles.css	/^.sidebar-l > * > :last-child { flex-basis: 0; flex-grow: 999; min-width: calc(50% - 1rem); }$/;"	s
 .sr-only	_site/assets/css/style.css	/^.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect/;"	c
 .table-fixed	_site/assets/css/style.css	/^.table-fixed { table-layout: fixed !important; }$/;"	c
 .text-blue	_site/assets/css/style.css	/^.text-blue { color: #0366d6 !important; }$/;"	c
@@ -1400,15 +1415,29 @@
 ::-webkit-outer-spin-button	_site/assets/css/style.css	/^[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height:/;"	s
 ::-webkit-search-cancel-button	_site/assets/css/style.css	/^[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -web/;"	s
 ::-webkit-search-decoration	_site/assets/css/style.css	/^[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -web/;"	s
-About page	_site/about.html	/^    <h1 id="about-page">About page<\/h1>$/;"	h
+:root	_site/assets/css/styles.css	/^:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: /;"	s
+About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
 About page	about.md	/^# About page$/;"	c
-Bananas	_site/2019/06/20/bananas.html	/^    <h1>Bananas<\/h1>$/;"	h
-Bananas	_site/blog.html	/^    <h2><a href="\/2019\/06\/20\/bananas.html">Bananas<\/a><\/h2>$/;"	i
-Latest Posts	_site/blog.html	/^    <h1>Latest Posts<\/h1>$/;"	h
+Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
+Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
+Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
+Other Manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
+Other Manuscripts	research.md	/^## Other Manuscripts$/;"	s
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t
+Publications and Preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
+Publications and Preprints	research.md	/^## Publications and Preprints$/;"	s
+Research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
+Research	research.md	/^# Research $/;"	c
+Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
+Service	service.md	/^# Service$/;"	c
+Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
+Teaching	teaching.md	/^# Teaching$/;"	c
+Upcoming Travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	i
+Upcoming Travel	research.md	/^## Upcoming Travel$/;"	s
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
+a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
 a:active	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:hover { text-decoration: underline; }$/;"	s
@@ -1417,14 +1446,13 @@ article	_site/assets/css/style.css	/^article, aside, details, figcaption, figure
 aside	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 audio	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 audio:not([controls] )	_site/assets/css/style.css	/^audio:not([controls]) { display: none; height: 0; }$/;"	s
-author: jill	_posts/2019-06-20-bananas.md	/^author: jill$/;"	s
-author: jill	_posts/2019-06-20.md	/^author: jill$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: bolder; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: inherit; }$/;"	s
 blockquote	_site/assets/css/style.css	/^blockquote { margin: 0; }$/;"	s
 body	_site/assets/css/style.css	/^body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,/;"	s
 body	_site/assets/css/style.css	/^body { margin: 0; }$/;"	s
+body	_site/assets/css/styles.css	/^body { max-width: calc(var(--measure) * 1.5); background-color: var(--darkbg); margin: 0 auto; }$/;"	s
 button	_site/assets/css/style.css	/^button { cursor: pointer; border-radius: 0; }$/;"	s
 button	_site/assets/css/style.css	/^button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; \/* /;"	s
 button	_site/assets/css/style.css	/^button, input { \/* 1 *\/ overflow: visible; }$/;"	s
@@ -1441,31 +1469,41 @@ details	_site/assets/css/style.css	/^article, aside, details, figcaption, figure
 details summary	_site/assets/css/style.css	/^details summary { cursor: pointer; }$/;"	s
 details:not([open] ) > *:not(summary)	_site/assets/css/style.css	/^details:not([open]) > *:not(summary) { display: none !important; }$/;"	s
 dfn	_site/assets/css/style.css	/^dfn { font-style: italic; }$/;"	s
+div	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 fieldset	_site/assets/css/style.css	/^fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }$/;"	s
 figcaption	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 figure	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 figure	_site/assets/css/style.css	/^figure { margin: 1em 40px; }$/;"	s
 footer	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 2em; margin: 0.67em 0; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 32px; font-weight: 600; }$/;"	s
 h1	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
+h1	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 h2	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
 h2	_site/assets/css/style.css	/^h2 { font-size: 24px; font-weight: 600; }$/;"	s
+h2	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 h3	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
 h3	_site/assets/css/style.css	/^h3 { font-size: 20px; font-weight: 600; }$/;"	s
+h3	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 h4	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
 h4	_site/assets/css/style.css	/^h4 { font-size: 16px; font-weight: 600; }$/;"	s
+h4	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 h5	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
 h5	_site/assets/css/style.css	/^h5 { font-size: 14px; font-weight: 600; }$/;"	s
+h5	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 h6	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
 h6	_site/assets/css/style.css	/^h6 { font-size: 12px; font-weight: 600; }$/;"	s
+h6	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 header	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+header	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 hidden	_site/assets/css/style.css	/^template, [hidden] { display: none; }$/;"	s
 hr	_site/assets/css/style.css	/^hr { box-sizing: content-box; \/* 1 *\/ height: 0; \/* 1 *\/ overflow: visible; \/* 2 *\/ }$/;"	s
 hr	_site/assets/css/style.css	/^hr, .rule { height: 0; margin: 15px 0; overflow: hidden; background: transparent; border: 0; bor/;"	s
 hr::after	_site/assets/css/style.css	/^hr::after, .rule::after { display: table; clear: both; content: ""; }$/;"	s
 hr::before	_site/assets/css/style.css	/^hr::before, .rule::before { display: table; content: ""; }$/;"	s
 html	_site/assets/css/style.css	/^html { font-family: sans-serif; \/* 1 *\/ -ms-text-size-adjust: 100%; \/* 2 *\/ -webkit-text-siz/;"	s
+html	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 html[type="button"]	_site/assets/css/style.css	/^button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; \/* /;"	s
 img	_site/assets/css/style.css	/^img { border-style: none; }$/;"	s
 input	_site/assets/css/style.css	/^button, input { \/* 1 *\/ overflow: visible; }$/;"	s
@@ -1474,9 +1512,16 @@ input	_site/assets/css/style.css	/^input, select, textarea, button { font-family
 kbd	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ color: inherit; \/* 2 *\/ display: table; \/* 1 *\/ m/;"	s
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$/;"	s
+math: false	index.md	/^math: false$/;"	s
+math: false	service.md	/^math: false$/;"	s
+math: false	teaching.md	/^math: false$/;"	s
+math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
+nav	_site/assets/css/styles.css	/^nav { text-align: right; }$/;"	s
 ol	_site/assets/css/style.css	/^ul, ol { padding-left: 0; margin-top: 0; margin-bottom: 0; }$/;"	s
 ol ol	_site/assets/css/style.css	/^ol ol, ul ol { list-style-type: lower-roman; }$/;"	s
 ol ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
@@ -1487,6 +1532,7 @@ pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, 
 pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono/;"	s
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
+published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 select	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
@@ -1497,6 +1543,7 @@ small	_site/assets/css/style.css	/^small { font-size: 90%; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: bolder; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: inherit; }$/;"	s
+strong	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	s
 sub	_site/assets/css/style.css	/^sub { bottom: -0.25em; }$/;"	s
 sub	_site/assets/css/style.css	/^sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }$/;"	s
 summary	_site/assets/css/style.css	/^summary { display: list-item; }$/;"	s
@@ -1511,7 +1558,6 @@ textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-fam
 textarea	_site/assets/css/style.css	/^textarea { overflow: auto; }$/;"	s
 th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
 title: About	about.md	/^title: About$/;"	s
-title: Rylee Lyman – Home	index.md	/^title: Rylee Lyman – Home$/;"	s
 tt	_site/assets/css/style.css	/^tt, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace/;"	s
 type	_site/assets/css/style.css	/^[type="checkbox"], [type="radio"] { box-sizing: border-box; \/* 1 *\/ padding: 0; \/* 2 *\/ }$/;"	s
 type	_site/assets/css/style.css	/^[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height:/;"	s
