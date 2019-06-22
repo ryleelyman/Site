@@ -1,4 +1,4 @@
-:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: #82859B; --darkfg: #4F2C4D; --sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #555; font-size: calc(16px + (26 - 14) * ((100vw - 300px) /  (1600 - 300))); line-height: 1.5em; font-family: "Georgia", serif; }
+:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: #82859B; --darkfg: #4F2C4D; --sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #555; font-size: 16px; line-height: 1.5em; font-family: "Georgia", serif; }
 
 * { max-width: var(--measure); box-sizing: border-box; }
 
