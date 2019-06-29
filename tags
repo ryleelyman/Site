@@ -422,6 +422,7 @@
 .h6	_site/assets/css/style.css	/^.h6 { font-size: 12px !important; }$/;"	c
 .headline	_site/assets/css/styles.css	/^.headline { font-size: calc(1.5rem * 1.5); font-weight: bold; line-height: 1.5rem; }$/;"	c
 .headline	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	c
+.headline > a	_site/assets/css/styles.css	/^.headline > a { color: var(--darkfg); }$/;"	s
 .headshot	_site/assets/css/styles.css	/^.headshot { max-width: 200px; }$/;"	c
 .height-fit	_site/assets/css/style.css	/^.height-fit { max-height: 100% !important; }$/;"	c
 .height-full	_site/assets/css/style.css	/^.height-full { height: 100% !important; }$/;"	c
@@ -1517,6 +1518,7 @@ mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$
 math: false	index.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
+math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s

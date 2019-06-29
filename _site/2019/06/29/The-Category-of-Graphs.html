@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Category Of Graphs</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ryleelyman.github.io" />
+    
+      <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+
+    
+  </head>
+
+  <body>
+    <div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	
+	<a href="/blog.html">Alanza</a>
+	
+      </div>
+      <div>
+	<nav>
+	  
+	    <div class="navbutton">
+	      <a  href="/">
+		Home
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/research.html">
+		Research
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/teaching.html">
+		Teaching
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/service.html">
+		Service
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/blog.html">
+		Blog
+	      </a>
+	    </div>
+	  
+	</nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="maindiv">
+      <h1>The Category Of Graphs</h1>
+<p>29 Jun 2019</p>
+
+<p>You know the sensation where a familiar word becomes suddenly
+completely <em>strange</em> for no apparent reason? Like suddenly the scales
+fall away from your eyes and you see how utterly weird it is that a
+concept has a particular name? I’ve been having that feeling with the
+word <em>graph</em> as I use it in math.</p>
+
+<p>As a kid, you learn how to <em>graph</em> simple functions in the sense of 
+being able to sketch them on a sheet of, say, <em>graph</em> paper. Millions
+of adults probably faintly remember the shape of <script type="math/tex">y = x^2</script> but aren’t
+quite sure why.</p>
+
+<p>To mathematicians and computer scientists, though, for some reason <em>graph</em>
+means something similar, but different: to them a graph is an object with
+<em>vertices</em> and <em>edges</em>. Indeed, to Serre, that’s literally all a graph is:
+a quadruple <script type="math/tex">(V,E,\bar{},\iota)</script>. Two sets, <script type="math/tex">V</script> and <script type="math/tex">E</script>, represent the
+vertices and (oriented) edges of the graph, and <script type="math/tex">\bar{}\colon E \to E</script> and
+<script type="math/tex">\iota\colon E \to V</script> are functions; <script type="math/tex">\bar{e}</script> is the edge <script type="math/tex">e</script> with its
+orientation reversed, (so <script type="math/tex">\bar{\bar{e}} = e</script> for any edge <script type="math/tex">e</script>, but
+<script type="math/tex">\bar e \neq e</script>), and
+<script type="math/tex">\iota(e)</script> represents the initial vertex of the edge <script type="math/tex">e</script>. This lets us
+define a function <script type="math/tex">\tau\colon E \to V</script> picking out the <em>terminal</em> vertex
+of an edge by setting <script type="math/tex">\tau(e) = \iota(\bar{e})</script>.</p>
+
+<p>A topologist would prefer to say that a graph is a 1-dimensional CW complex.
+So rather than an abstract set of vertices, we have a set of points, <script type="math/tex">V</script>,
+the <script type="math/tex">0</script>-cells of our CW complex. And rather than an abstract set of oriented
+edges, we have a collection of <script type="math/tex">1</script>-cells (intervals of the real line) 
+whose endpoints are attached to <script type="math/tex">0</script>-cells.</p>
+
+<p>These two descriptions really are in agreement for most purposes. Maybe one would
+prefer the more combinatorial description as a way of “rigidifying” some of the
+inherent floppiness of topological spaces. At the same time, using topological methods
+allows one access to a whole host of techniques that a too-rigid approach might bury
+under a sea of formalism.</p>
+
+<p>But of course, neither definition really squares with the idea of the graph of
+<script type="math/tex">y = x^2</script>, hence why I’ve been feeling weird about the word.</p>
+
+<p>Anyway, the <em>category of graphs</em>, introduced by John Stallings in
+<a href="https://www2.math.ou.edu/~nbrady/teaching/s11-5863/stallings.pdf">Topology of Finite Graphs</a>,
+building on work of Serre in <a href="https://d-nb.info/965816907/04">Trees</a>, more about which
+almost certainly soon, has (as all categories do)
+collections of objects and arrows between them.
+Here the objects are graphs and arrows are <em>morphisms of graphs.</em> 
+A morphism <script type="math/tex">f\colon G \to H</script> between
+graphs $G$ and $H$ is a pair of functions <script type="math/tex">f_V\colon V(G) \to V(H)</script> 
+and <script type="math/tex">f_E\colon E(G) \to E(H)</script>, such that the following diagrams commute:
+[\begin{amscd}
+E(G) @&gt;f_E» E(H) <br />
+@V{\iota}VV @V{\iota}VV <br />
+V(G) @&gt;f_V» V(H)
+\end{amscd}\qquad
+\begin{amscd}
+E(G) @&gt;f_E» E(H) <br />
+@V\bar{}VV @V\bar{}VV <br />
+E(G) @&gt;f_E» E(H)
+\end{amscd}]</p>
+
+<p>In English what this is saying is that <script type="math/tex">f</script> preserves the graph structure:
+it sends edges to edges, vertices to vertices, <script type="math/tex">e</script> and <script type="math/tex">\bar e</script> are sent
+to <script type="math/tex">f(e)</script> and <script type="math/tex">\overline{f(e)}</script>, and the initial vertex of <script type="math/tex">e</script> is
+sent to the initial vertex of <script type="math/tex">f(e)</script>.</p>
+
+<p>Stallings emphasizes the rigidity of morphisms in this construction:</p>
+
+<blockquote>
+  <p>By graph and map of graphs, I mean something purely combinatorial or
+algebraic. Pictures can be drawn, but one has to understand that maps are
+rigid and not just continuous, maps do not collapse edges or wrap edges
+around several edges.</p>
+</blockquote>
+
+<p>And it’s true; it’s a little challenging to describe precisely which
+topological maps between graphs are even homotopic to morphisms without
+giving the game (Stallings’ paper) away too quickly!</p>
+
+
+
+    </div>
+  </body>
+</html>

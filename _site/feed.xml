@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-22T13:09:45-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-29T13:38:59-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
+fall away from your eyes and you see how utterly weird it is that a
+concept has a particular name? I’ve been having that feeling with the
+word &lt;em&gt;graph&lt;/em&gt; as I use it in math.&lt;/p&gt;
+
+&lt;p&gt;As a kid, you learn how to &lt;em&gt;graph&lt;/em&gt; simple functions in the sense of 
+being able to sketch them on a sheet of, say, &lt;em&gt;graph&lt;/em&gt; paper. Millions
+of adults probably faintly remember the shape of &lt;script type=&quot;math/tex&quot;&gt;y = x^2&lt;/script&gt; but aren’t
+quite sure why.&lt;/p&gt;
+
+&lt;p&gt;To mathematicians and computer scientists, though, for some reason &lt;em&gt;graph&lt;/em&gt;
+means something similar, but different: to them a graph is an object with
+&lt;em&gt;vertices&lt;/em&gt; and &lt;em&gt;edges&lt;/em&gt;. Indeed, to Serre, that’s literally all a graph is:
+a quadruple &lt;script type=&quot;math/tex&quot;&gt;(V,E,\bar{},\iota)&lt;/script&gt;. Two sets, &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;, represent the
+vertices and (oriented) edges of the graph, and &lt;script type=&quot;math/tex&quot;&gt;\bar{}\colon E \to E&lt;/script&gt; and
+&lt;script type=&quot;math/tex&quot;&gt;\iota\colon E \to V&lt;/script&gt; are functions; &lt;script type=&quot;math/tex&quot;&gt;\bar{e}&lt;/script&gt; is the edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; with its
+orientation reversed, (so &lt;script type=&quot;math/tex&quot;&gt;\bar{\bar{e}} = e&lt;/script&gt; for any edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt;, but
+&lt;script type=&quot;math/tex&quot;&gt;\bar e \neq e&lt;/script&gt;), and
+&lt;script type=&quot;math/tex&quot;&gt;\iota(e)&lt;/script&gt; represents the initial vertex of the edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt;. This lets us
+define a function &lt;script type=&quot;math/tex&quot;&gt;\tau\colon E \to V&lt;/script&gt; picking out the &lt;em&gt;terminal&lt;/em&gt; vertex
+of an edge by setting &lt;script type=&quot;math/tex&quot;&gt;\tau(e) = \iota(\bar{e})&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;A topologist would prefer to say that a graph is a 1-dimensional CW complex.
+So rather than an abstract set of vertices, we have a set of points, &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;,
+the &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;-cells of our CW complex. And rather than an abstract set of oriented
+edges, we have a collection of &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;-cells (intervals of the real line) 
+whose endpoints are attached to &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;-cells.&lt;/p&gt;
+
+&lt;p&gt;These two descriptions really are in agreement for most purposes. Maybe one would
+prefer the more combinatorial description as a way of “rigidifying” some of the
+inherent floppiness of topological spaces. At the same time, using topological methods
+allows one access to a whole host of techniques that a too-rigid approach might bury
+under a sea of formalism.&lt;/p&gt;
+
+&lt;p&gt;But of course, neither definition really squares with the idea of the graph of
+&lt;script type=&quot;math/tex&quot;&gt;y = x^2&lt;/script&gt;, hence why I’ve been feeling weird about the word.&lt;/p&gt;
+
+&lt;p&gt;Anyway, the &lt;em&gt;category of graphs&lt;/em&gt;, introduced by John Stallings in
+&lt;a href=&quot;https://www2.math.ou.edu/~nbrady/teaching/s11-5863/stallings.pdf&quot;&gt;Topology of Finite Graphs&lt;/a&gt;,
+building on work of Serre in &lt;a href=&quot;https://d-nb.info/965816907/04&quot;&gt;Trees&lt;/a&gt;, more about which
+almost certainly soon, has (as all categories do)
+collections of objects and arrows between them.
+Here the objects are graphs and arrows are &lt;em&gt;morphisms of graphs.&lt;/em&gt; 
+A morphism &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to H&lt;/script&gt; between
+graphs $G$ and $H$ is a pair of functions &lt;script type=&quot;math/tex&quot;&gt;f_V\colon V(G) \to V(H)&lt;/script&gt; 
+and &lt;script type=&quot;math/tex&quot;&gt;f_E\colon E(G) \to E(H)&lt;/script&gt;, such that the following diagrams commute:
+[\begin{amscd}
+E(G) @&amp;gt;f_E» E(H) &lt;br /&gt;
+@V{\iota}VV @V{\iota}VV &lt;br /&gt;
+V(G) @&amp;gt;f_V» V(H)
+\end{amscd}\qquad
+\begin{amscd}
+E(G) @&amp;gt;f_E» E(H) &lt;br /&gt;
+@V\bar{}VV @V\bar{}VV &lt;br /&gt;
+E(G) @&amp;gt;f_E» E(H)
+\end{amscd}]&lt;/p&gt;
+
+&lt;p&gt;In English what this is saying is that &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; preserves the graph structure:
+it sends edges to edges, vertices to vertices, &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\bar e&lt;/script&gt; are sent
+to &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\overline{f(e)}&lt;/script&gt;, and the initial vertex of &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; is
+sent to the initial vertex of &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stallings emphasizes the rigidity of morphisms in this construction:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;By graph and map of graphs, I mean something purely combinatorial or
+algebraic. Pictures can be drawn, but one has to understand that maps are
+rigid and not just continuous, maps do not collapse edges or wrap edges
+around several edges.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
+topological maps between graphs are even homotopic to morphisms without
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;
