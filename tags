@@ -1434,6 +1434,8 @@ Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Service	service.md	/^# Service$/;"	c
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
 Teaching	teaching.md	/^# Teaching$/;"	c
+The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
+The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 Upcoming Travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	i
 Upcoming Travel	research.md	/^## Upcoming Travel$/;"	s
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s

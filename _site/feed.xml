@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-29T13:38:59-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-29T13:51:44-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -45,16 +45,18 @@ Here the objects are graphs and arrows are &lt;em&gt;morphisms of graphs.&lt;/em
 A morphism &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to H&lt;/script&gt; between
 graphs $G$ and $H$ is a pair of functions &lt;script type=&quot;math/tex&quot;&gt;f_V\colon V(G) \to V(H)&lt;/script&gt; 
 and &lt;script type=&quot;math/tex&quot;&gt;f_E\colon E(G) \to E(H)&lt;/script&gt;, such that the following diagrams commute:
-[\begin{amscd}
-E(G) @&amp;gt;f_E» E(H) &lt;br /&gt;
-@V{\iota}VV @V{\iota}VV &lt;br /&gt;
-V(G) @&amp;gt;f_V» V(H)
-\end{amscd}\qquad
-\begin{amscd}
-E(G) @&amp;gt;f_E» E(H) &lt;br /&gt;
-@V\bar{}VV @V\bar{}VV &lt;br /&gt;
-E(G) @&amp;gt;f_E» E(H)
-\end{amscd}]&lt;/p&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\require{AMScd}&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+E(G) @&gt;f_E&gt;&gt; E(H) \\
+@V{\iota}VV @V{\iota}VV \\
+V(G) @&gt;f_V&gt;&gt; V(H)
+\end{CD}\qquad
+\begin{CD}
+E(G) @&gt;f_E&gt;&gt; E(H) \\
+@V\bar{}VV @V\bar{}VV \\
+E(G) @&gt;f_E&gt;&gt; E(H)
+\end{CD}&lt;/script&gt;
 
 &lt;p&gt;In English what this is saying is that &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; preserves the graph structure:
 it sends edges to edges, vertices to vertices, &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\bar e&lt;/script&gt; are sent
@@ -72,7 +74,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;

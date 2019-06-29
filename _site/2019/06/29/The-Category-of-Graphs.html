@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>The Category Of Graphs</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ryleelyman.github.io" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ryleelyman.github.io" />
     
       <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
@@ -112,16 +112,18 @@ Here the objects are graphs and arrows are <em>morphisms of graphs.</em>
 A morphism <script type="math/tex">f\colon G \to H</script> between
 graphs $G$ and $H$ is a pair of functions <script type="math/tex">f_V\colon V(G) \to V(H)</script> 
 and <script type="math/tex">f_E\colon E(G) \to E(H)</script>, such that the following diagrams commute:
-[\begin{amscd}
-E(G) @&gt;f_E» E(H) <br />
-@V{\iota}VV @V{\iota}VV <br />
-V(G) @&gt;f_V» V(H)
-\end{amscd}\qquad
-\begin{amscd}
-E(G) @&gt;f_E» E(H) <br />
-@V\bar{}VV @V\bar{}VV <br />
-E(G) @&gt;f_E» E(H)
-\end{amscd}]</p>
+<script type="math/tex">\require{AMScd}</script></p>
+
+<script type="math/tex; mode=display">\begin{CD}
+E(G) @>f_E>> E(H) \\
+@V{\iota}VV @V{\iota}VV \\
+V(G) @>f_V>> V(H)
+\end{CD}\qquad
+\begin{CD}
+E(G) @>f_E>> E(H) \\
+@V\bar{}VV @V\bar{}VV \\
+E(G) @>f_E>> E(H)
+\end{CD}</script>
 
 <p>In English what this is saying is that <script type="math/tex">f</script> preserves the graph structure:
 it sends edges to edges, vertices to vertices, <script type="math/tex">e</script> and <script type="math/tex">\bar e</script> are sent

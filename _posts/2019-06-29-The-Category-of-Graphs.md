@@ -49,16 +49,18 @@ Here the objects are graphs and arrows are *morphisms of graphs.*
 A morphism $$f\colon G \to H$$ between
 graphs $G$ and $H$ is a pair of functions $$f_V\colon V(G) \to V(H)$$ 
 and $$f_E\colon E(G) \to E(H)$$, such that the following diagrams commute:
-\[\begin{amscd}
+$$\require{AMScd}$$
+
+$$\begin{CD}
 E(G) @>f_E>> E(H) \\
 @V{\iota}VV @V{\iota}VV \\
 V(G) @>f_V>> V(H)
-\end{amscd}\qquad
-\begin{amscd}
+\end{CD}\qquad
+\begin{CD}
 E(G) @>f_E>> E(H) \\
 @V\bar{}VV @V\bar{}VV \\
 E(G) @>f_E>> E(H)
-\end{amscd}\]
+\end{CD}$$
 
 In English what this is saying is that $$f$$ preserves the graph structure:
 it sends edges to edges, vertices to vertices, $$e$$ and $$\bar e$$ are sent
