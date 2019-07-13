@@ -47,7 +47,7 @@ almost certainly soon, has (as all categories do)
 collections of objects and arrows between them.
 Here the objects are graphs and arrows are *morphisms of graphs.* 
 A morphism $$f\colon G \to H$$ between
-graphs $G$ and $H$ is a pair of functions $$f_V\colon V(G) \to V(H)$$ 
+graphs $$G$$ and $$H$$ is a pair of functions $$f_V\colon V(G) \to V(H)$$ 
 and $$f_E\colon E(G) \to E(H)$$, such that the following diagrams commute:
 $$\require{AMScd}$$
 

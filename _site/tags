@@ -1521,6 +1521,7 @@ math: false	index.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
 math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
+math: true	_posts/2019-07-13-The-Lay-of-the-Land.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s

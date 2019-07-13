@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-29T13:51:44-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-07-13T20:28:19+02:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Lay Of The Land</title><link href="/2019/07/13/The-Lay-of-the-Land.html" rel="alternate" type="text/html" title="The Lay Of The Land" /><published>2019-07-13T00:00:00+02:00</published><updated>2019-07-13T00:00:00+02:00</updated><id>/2019/07/13/The-Lay-of-the-Land</id><content type="html" xml:base="/2019/07/13/The-Lay-of-the-Land.html">&lt;p&gt;In a poor attempt to remain interesting to the non-mathematically inclined
+reader, maybe it would be good to begin with a few words about the landscape.&lt;/p&gt;
+
+&lt;p&gt;In modern mathematics, there are two notions that might be truly called 
+foundational to all the work we do. These are &lt;em&gt;set theory&lt;/em&gt; and &lt;em&gt;category theory.&lt;/em&gt;
+Both theories are living, evolving things with their specialists, constructions
+and interesting problems, just like any other field of math, 
+but the core ideas are familiar and useful to nearly every mathematician.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;set,&lt;/em&gt; naively, is just a way to collect a bunch of objects (called &lt;em&gt;elements&lt;/em&gt;)
+together. Since a set only cares about membership or lack thereof, duplicate
+elements are ignored. When we’re explicit about them, a set is typically
+denoted as a list of elements (thought of as unordered), surrounded by curly braces.
+So as sets, &lt;script type=&quot;math/tex&quot;&gt;\{1,2,3,3,5\} = \{1,2,3\}&lt;/script&gt;. A set comprises its elements, nothing more,
+nothing less. Thus, maps or functions &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; between sets &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are just
+assignments: to each element &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;X$, we assign a (unique) element&lt;/script&gt;f(x)&lt;script type=&quot;math/tex&quot;&gt;of&lt;/script&gt;Y$$.&lt;/p&gt;
+
+&lt;p&gt;Things, mathematical objects, whatever you can pin down in language,
+may be elements (or not) of sets. Sets may even be elements of other sets, although
+here is a source of worry. Bertrand Russell observed in 1901 that allowing this
+kind of willy-nilly calling things sets yields the mathematical equivalent of the
+following silly story: In a small village there is one barber. He shaves the
+beards of only those men who does not shave themselves. Who shaves the barber?&lt;/p&gt;
+
+&lt;p&gt;The question, of course, has no good answer. If the barber shaves himself, then
+he cannot, but then he must. The mathematical response to Russell’s realization
+was to retrench a bit, but it also paved the way for set theory to become an 
+interesting field of research in its own right.&lt;/p&gt;
+
+&lt;p&gt;Set theory, thanks to work of Kurt Goedel and many others, has raised thorny,
+even unsolvable, problems that mathematicians working in other fields would often
+prefer to gloss over. One example is the following: If you have in front of you
+a finite collection of sets, maybe think of them as baskets in the produce section,
+you can obviously choose an element from each basket. This process is sometimes
+called a &lt;em&gt;choice function.&lt;/em&gt; If you imagine an infinitely long aisle at the grocery
+store with baskets evenly spaced along it, you might agree that you can still
+choose one element from each basket. Even though you won’t live to see it
+through, it’s easy to describe a way to decide how to choose the next element;
+each basket is eventually reached by you, even though you will never reach 
+every basket. This kind of infinity is &lt;em&gt;countably infinite,&lt;/em&gt; like the numbers
+we use for counting. But there are more kinds of infinity, and in those cases
+it’s maybe not immediately clear that we should still be able to take an object from
+each basket. The hypothesis that we &lt;em&gt;can&lt;/em&gt; is called the &lt;em&gt;Axiom of Choice,&lt;/em&gt; and it
+turns out to be “independent” of the rest of the rules of set theory we commonly employ.
+That is, the rest of set theory &lt;em&gt;can remain true&lt;/em&gt; whatever position we wish to take on
+the axiom of choice.&lt;/p&gt;
+
+&lt;p&gt;Category theory, (already touched on implicitly in &lt;a href=&quot;/2019/06/29/The-Category-of-Graphs.html&quot;&gt;The Category of Graphs&lt;/a&gt;) has
+a somewhat similar history, although it arose later. Introduced by Samuel Eilenberg
+and Saunders Mac Lane in their study of algebraic topology, it has since become
+a central perspective in many areas of mathematics and also grown into a field
+of interest in its own right. A category is a collection of objects and arrows.
+Note that I did not say a &lt;em&gt;set.&lt;/em&gt; This distinction is important theoretically
+but in practice categorical and set-theoretic reasoning are typically 
+sufficiently different that this can be ignored. In category theory,
+the sets themselves comprise a category, typically called &lt;strong&gt;Set&lt;/strong&gt; with
+objects sets and arrows functions between sets. This metaphor motivates
+the definition: arrows have a &lt;em&gt;domain&lt;/em&gt; and &lt;em&gt;codomain,&lt;/em&gt; just as functions
+between sets do. Arrows, like functions, may be &lt;em&gt;composed&lt;/em&gt; (i.e.
+“first add four, and then multiply by sixteen”), and the composition is
+associative, but need not be commutative.&lt;/p&gt;
+
+&lt;p&gt;This general picture allows one to talk about several different, yet related,
+situations together at once. Many common constructions in mathematics, including
+“sum” and “product” may be phrased as a certain kind of “universal” construction
+in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
+is particularly interesting within group theory. Originally I had meant to talk
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a poor attempt to remain interesting to the non-mathematically inclined reader, maybe it would be good to begin with a few words about the landscape.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00+02:00</published><updated>2019-06-29T00:00:00+02:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -43,7 +110,7 @@ almost certainly soon, has (as all categories do)
 collections of objects and arrows between them.
 Here the objects are graphs and arrows are &lt;em&gt;morphisms of graphs.&lt;/em&gt; 
 A morphism &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to H&lt;/script&gt; between
-graphs $G$ and $H$ is a pair of functions &lt;script type=&quot;math/tex&quot;&gt;f_V\colon V(G) \to V(H)&lt;/script&gt; 
+graphs &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; is a pair of functions &lt;script type=&quot;math/tex&quot;&gt;f_V\colon V(G) \to V(H)&lt;/script&gt; 
 and &lt;script type=&quot;math/tex&quot;&gt;f_E\colon E(G) \to E(H)&lt;/script&gt;, such that the following diagrams commute:
 &lt;script type=&quot;math/tex&quot;&gt;\require{AMScd}&lt;/script&gt;&lt;/p&gt;
 
@@ -74,7 +141,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00+02:00</published><updated>2019-06-22T00:00:00+02:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;
