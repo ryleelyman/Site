@@ -1436,6 +1436,8 @@ Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
 Teaching	teaching.md	/^# Teaching$/;"	c
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
+The Lay Of The Land	_site/2019/07/13/The-Lay-of-the-Land.html	/^      <h1>The Lay Of The Land<\/h1>$/;"	h
+The Lay Of The Land	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/The-Lay-of-the-Land.html">The Lay Of The Land<\/a><\/h2>$/;"	i
 Upcoming Travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	i
 Upcoming Travel	research.md	/^## Upcoming Travel$/;"	s
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
@@ -1522,6 +1524,7 @@ math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
 math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	_posts/2019-07-13-The-Lay-of-the-Land.md	/^math: true$/;"	s
+math: true	_posts/2019-08-21-A-Group-of-Order-32.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s

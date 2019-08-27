@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/2019/06/22/Hello-World.html</loc>
-<lastmod>2019-06-22T00:00:00+02:00</lastmod>
+<lastmod>2019-06-22T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>/2019/06/29/The-Category-of-Graphs.html</loc>
-<lastmod>2019-06-29T00:00:00+02:00</lastmod>
+<lastmod>2019-06-29T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>/2019/07/13/The-Lay-of-the-Land.html</loc>
-<lastmod>2019-07-13T00:00:00+02:00</lastmod>
+<lastmod>2019-07-13T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>/about.html</loc>
@@ -35,10 +35,10 @@
 </url>
 <url>
 <loc>/assets/pdfs/Lyman.pdf</loc>
-<lastmod>2019-06-22T19:05:47+02:00</lastmod>
+<lastmod>2019-08-27T12:02:15-04:00</lastmod>
 </url>
 <url>
 <loc>/assets/pdfs/freebyz.pdf</loc>
-<lastmod>2019-06-22T16:03:06+02:00</lastmod>
+<lastmod>2019-06-22T10:03:06-04:00</lastmod>
 </url>
 </urlset>

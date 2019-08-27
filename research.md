@@ -23,7 +23,7 @@ polynomially-growing
 free-by-cyclic group $$F_3\rtimes\mathbb{Z}$$ which is a "poison subgroup":
 groups containing it, such as $$\out(F_4)$$, cannot be $$\cato$$ groups.
 On the other hand, every polynomially-growing
-$$W_n\rtimes\mathbb{Z}$$ group is virtually $$\cato$$.
+$$W\rtimes\mathbb{Z}$$ group is virtually $$\cato$$.
 This leaves open the question of whether the $$\out(W)$$ might be $$\cato$$ groups.
 
 ## Publications and Preprints
@@ -49,15 +49,17 @@ This leaves open the question of whether the $$\out(W)$$ might be $$\cato$$ grou
 
 ## Upcoming Travel
 
-This summer, I will attend [Young Geometric Group Theory VIII][yGGT],
-the IHES summer school [Aspects of Geometric Group Theory][IHES],
-and the [Wasatch Topology Conference][Wasatch].
-
-In the fall I will speak at the [SUNY Albany Algebra/Topology Seminar][Albany],
+This fall I will speak at the [Temple Geometry and Topology Seminar][Temple],
+the [SUNY Albany Algebra/Topology Seminar][Albany],
 and at an [AMS Special Session on Effective and Quantitative Advances in
 Low Dimensional Topology and Geometric Group Theory][AMS].
 
+In the spring I will speak at an [AMS Special Session on Combinatorial Methods
+in Geometric Group Theory][AMS2].
+
+[Temple]: https://math.temple.edu/events/seminars/geometry
 [AMS]: http://www.ams.org/meetings/sectional/2263_program_ss3.html
+[AMS2]: http://www.ams.org/meetings/sectional/2273_program_ss26.html#title
 [Albany]: https://www.albany.edu/~mv312143/seminar/
 [YGGT]: https://sites.google.com/site/yggt2019bilbao/home
 [Wasatch]: http://www.math.utah.edu/wtc/
