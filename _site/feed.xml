@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-27T12:39:06-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Lay Of The Land</title><link href="/2019/07/13/The-Lay-of-the-Land.html" rel="alternate" type="text/html" title="The Lay Of The Land" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/The-Lay-of-the-Land</id><content type="html" xml:base="/2019/07/13/The-Lay-of-the-Land.html">&lt;p&gt;In a poor attempt to remain interesting to the non-mathematically inclined
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-09T20:27:20-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+&lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
+to the ArXiv! In it I give an extension to automorphisms of free products
+of the algorithmic construction of relative train track maps for outer automorphisms
+of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms
+of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof.
+I haven’t addressed the question of “why” study these groups in this post, but
+I will another time.&lt;/p&gt;
+
+&lt;p&gt;The length of the paper comes from constructing &lt;em&gt;relative train track maps&lt;/em&gt;
+for outer automorphisms of free products. Relative train track maps
+always seem to scare people who hear about them, so let me attempt an explanation of what’s going on.
+The name and most motivations in the literature derive from the Nielsen–Thurston
+normal forms for homotopy classes of surface homeomorphisms. My application
+has a different feel, so let me attempt to sketch another connection.&lt;/p&gt;
+
+&lt;p&gt;One of the best ways to study a linear transformation
+is by considering its eigenvalues, and thus
+the dynamics of the linear transformations action on the associated vector space.
+The Jordan normal form is designed to present
+the dynamical properties of a linear transformation in a clean, easily understood way.&lt;/p&gt;
+
+&lt;p&gt;Given an automorphism of a free group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt;, its action on the homology of the free group
+gives one a matrix in &lt;script type=&quot;math/tex&quot;&gt;\operatorname{GL}_n(\mathbb{Z})&lt;/script&gt;. However, since free groups
+are nonabelian, this matrix tends to lose a lot of information about the automorphism
+except in particular cases. A little better is the &lt;em&gt;transition matrix&lt;/em&gt; of a
+self-map &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; of a graph &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; with fundamental group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt;. 
+The &lt;script type=&quot;math/tex&quot;&gt;ij&lt;/script&gt;th entry of this matrix records how many times the &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;-image of the &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;th
+edge crosses the &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;th edge in either direction. Here some information is lost again in general.
+The point of a &lt;em&gt;relative train track map&lt;/em&gt; is to find such a map &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; whose
+transition matrix retains as much information as possible.&lt;/p&gt;
+
+&lt;p&gt;Like the Jordan normal form, the transition matrix for a relative train track map is
+&lt;em&gt;block upper-triangular,&lt;/em&gt; corresponding to an increasing sequence of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;-invariant subgraphs.
+Each square submatrix corresponding to a block is &lt;em&gt;irreducible.&lt;/em&gt; Polynomially-growing automorphisms
+have (after taking powers) genuinely upper-triangular transition matrices with 1s on the diagonal.&lt;/p&gt;
+
+&lt;p&gt;Write &lt;script type=&quot;math/tex&quot;&gt;F_n = \langle x_1,\dotsc,x_n\rangle&lt;/script&gt;, let &lt;script type=&quot;math/tex&quot;&gt;\Phi&lt;/script&gt; be an automorphism and suppose
+that &lt;script type=&quot;math/tex&quot;&gt;\Phi(x_i) = u_ix_iv_i&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle&lt;/script&gt;.
+In the free-by-cyclic group &lt;script type=&quot;math/tex&quot;&gt;F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle&lt;/script&gt;,
+this gives us the relation &lt;script type=&quot;math/tex&quot;&gt;tx_it^{-1} = u_ix_iv_i&lt;/script&gt;, which we can rewrite as
+&lt;script type=&quot;math/tex&quot;&gt;x_i^{-1}u_i^{-1}tx_i = v_it&lt;/script&gt;, which, if you squint, starts to look like a relation in
+an HNN extension with stable letter &lt;script type=&quot;math/tex&quot;&gt;x_i&lt;/script&gt;. In fact, by our assumption on &lt;script type=&quot;math/tex&quot;&gt;u_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_i&lt;/script&gt;,
+we actually do get a description of &lt;script type=&quot;math/tex&quot;&gt;F_n\rtimes\mathbb{Z}&lt;/script&gt; as an iterated HNN extension.&lt;/p&gt;
+
+&lt;p&gt;This situation can be good and bad. Gersten gave an example of such a description of a free-by-cyclic
+group which is a “poison subgroup” for nonpositive curvature. There, &lt;script type=&quot;math/tex&quot;&gt;u_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_i&lt;/script&gt;
+are such that &lt;script type=&quot;math/tex&quot;&gt;u_i^{-1}t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_it&lt;/script&gt; have no business being conjugate in a nice action on a CAT(0) space.
+On the other hand, in the situation where they &lt;em&gt;should&lt;/em&gt; be conjugate,
+Bridson–Haefliger give a construction that allows you to bootstrap a
+geometric action on a CAT(0) space up the HNN extension.&lt;/p&gt;
+
+&lt;p&gt;What I realized, was that in the class of automorphisms I was studying,
+if it were the case that the automorphism was already upper-triangular
+with respect to the basis &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt; we were handed, then
+&lt;script type=&quot;math/tex&quot;&gt;u_i^{-1}t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_it&lt;/script&gt; were &lt;em&gt;already&lt;/em&gt; conjugate, so Bridson–Haefliger says we win.
+So, my goal in constructing relative train track maps was to find a basis
+that has this nice property for a (power of) an arbitrary polynomially-growing
+outer automorphism. In the paper, the application is in Section 7, while the
+heavy lifting is to find a way to adapt the relative train track technology appropriately.&lt;/p&gt;
+
+&lt;p&gt;Since relative train track maps with nice properties have become a foundational
+tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! In it I give an extension to automorphisms of free products of the algorithmic construction of relative train track maps for outer automorphisms of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof. I haven’t addressed the question of “why” study these groups in this post, but I will another time.</summary></entry><entry><title type="html">The Lay Of The Land</title><link href="/2019/07/13/The-Lay-of-the-Land.html" rel="alternate" type="text/html" title="The Lay Of The Land" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/The-Lay-of-the-Land</id><content type="html" xml:base="/2019/07/13/The-Lay-of-the-Land.html">&lt;p&gt;In a poor attempt to remain interesting to the non-mathematically inclined
 reader, maybe it would be good to begin with a few words about the landscape.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 

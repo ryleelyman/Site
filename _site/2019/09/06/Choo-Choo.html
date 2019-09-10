@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Choo Choo</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ryleelyman.github.io" />
+    
+      <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+
+    
+  </head>
+
+  <body>
+    <div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	
+	<a href="/blog.html">Alanza</a>
+	
+      </div>
+      <div>
+	<nav>
+	  
+	    <div class="navbutton">
+	      <a  href="/">
+		Home
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/research.html">
+		Research
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/teaching.html">
+		Teaching
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/service.html">
+		Service
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/blog.html">
+		Blog
+	      </a>
+	    </div>
+	  
+	</nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="maindiv">
+      <h1>Choo Choo</h1>
+<p>06 Sep 2019</p>
+
+<p>Today I posted my first paper, 
+<a href="https://arxiv.org/abs/1909.03097">Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups</a>
+to the ArXiv! In it I give an extension to automorphisms of free products
+of the algorithmic construction of relative train track maps for outer automorphisms
+of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms
+of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof.
+I haven’t addressed the question of “why” study these groups in this post, but
+I will another time.</p>
+
+<p>The length of the paper comes from constructing <em>relative train track maps</em>
+for outer automorphisms of free products. Relative train track maps
+always seem to scare people who hear about them, so let me attempt an explanation of what’s going on.
+The name and most motivations in the literature derive from the Nielsen–Thurston
+normal forms for homotopy classes of surface homeomorphisms. My application
+has a different feel, so let me attempt to sketch another connection.</p>
+
+<p>One of the best ways to study a linear transformation
+is by considering its eigenvalues, and thus
+the dynamics of the linear transformations action on the associated vector space.
+The Jordan normal form is designed to present
+the dynamical properties of a linear transformation in a clean, easily understood way.</p>
+
+<p>Given an automorphism of a free group <script type="math/tex">F_n</script>, its action on the homology of the free group
+gives one a matrix in <script type="math/tex">\operatorname{GL}_n(\mathbb{Z})</script>. However, since free groups
+are nonabelian, this matrix tends to lose a lot of information about the automorphism
+except in particular cases. A little better is the <em>transition matrix</em> of a
+self-map <script type="math/tex">f\colon G \to G</script> of a graph <script type="math/tex">G</script> with fundamental group <script type="math/tex">F_n</script>. 
+The <script type="math/tex">ij</script>th entry of this matrix records how many times the <script type="math/tex">f</script>-image of the <script type="math/tex">j</script>th
+edge crosses the <script type="math/tex">i</script>th edge in either direction. Here some information is lost again in general.
+The point of a <em>relative train track map</em> is to find such a map <script type="math/tex">f\colon G \to G</script> whose
+transition matrix retains as much information as possible.</p>
+
+<p>Like the Jordan normal form, the transition matrix for a relative train track map is
+<em>block upper-triangular,</em> corresponding to an increasing sequence of <script type="math/tex">f</script>-invariant subgraphs.
+Each square submatrix corresponding to a block is <em>irreducible.</em> Polynomially-growing automorphisms
+have (after taking powers) genuinely upper-triangular transition matrices with 1s on the diagonal.</p>
+
+<p>Write <script type="math/tex">F_n = \langle x_1,\dotsc,x_n\rangle</script>, let <script type="math/tex">\Phi</script> be an automorphism and suppose
+that <script type="math/tex">\Phi(x_i) = u_ix_iv_i</script>, where <script type="math/tex">u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle</script>.
+In the free-by-cyclic group <script type="math/tex">F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle</script>,
+this gives us the relation <script type="math/tex">tx_it^{-1} = u_ix_iv_i</script>, which we can rewrite as
+<script type="math/tex">x_i^{-1}u_i^{-1}tx_i = v_it</script>, which, if you squint, starts to look like a relation in
+an HNN extension with stable letter <script type="math/tex">x_i</script>. In fact, by our assumption on <script type="math/tex">u_i</script> and <script type="math/tex">v_i</script>,
+we actually do get a description of <script type="math/tex">F_n\rtimes\mathbb{Z}</script> as an iterated HNN extension.</p>
+
+<p>This situation can be good and bad. Gersten gave an example of such a description of a free-by-cyclic
+group which is a “poison subgroup” for nonpositive curvature. There, <script type="math/tex">u_i</script> and <script type="math/tex">v_i</script>
+are such that <script type="math/tex">u_i^{-1}t</script> and <script type="math/tex">v_it</script> have no business being conjugate in a nice action on a CAT(0) space.
+On the other hand, in the situation where they <em>should</em> be conjugate,
+Bridson–Haefliger give a construction that allows you to bootstrap a
+geometric action on a CAT(0) space up the HNN extension.</p>
+
+<p>What I realized, was that in the class of automorphisms I was studying,
+if it were the case that the automorphism was already upper-triangular
+with respect to the basis <script type="math/tex">x_1,\dotsc,x_n</script> we were handed, then
+<script type="math/tex">u_i^{-1}t</script> and <script type="math/tex">v_it</script> were <em>already</em> conjugate, so Bridson–Haefliger says we win.
+So, my goal in constructing relative train track maps was to find a basis
+that has this nice property for a (power of) an arbitrary polynomially-growing
+outer automorphism. In the paper, the application is in Section 7, while the
+heavy lifting is to find a way to adapt the relative train track technology appropriately.</p>
+
+<p>Since relative train track maps with nice properties have become a foundational
+tool in the study of <script type="math/tex">\operatorname{Out}(F_n)</script>, my hope is that this construction
+will help in the study of outer automorphism groups of free products.</p>
+
+
+
+    </div>
+  </body>
+</html>
