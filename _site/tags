@@ -1419,6 +1419,8 @@
 :root	_site/assets/css/styles.css	/^:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: /;"	s
 About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
 About page	about.md	/^# About page$/;"	c
+Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
+Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h

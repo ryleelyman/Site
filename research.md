@@ -29,7 +29,7 @@ This leaves open the question of whether the $$\out(W)$$ might be $$\cato$$ grou
 ## Publications and Preprints
 
 - **Train Tracks, Orbigraphs and $$\cato$$ Free-By-Cyclic Groups**
-*In preparation.*
+[arXiv link][traintracksorbigraphs]
 
 - **Doubly-Uniform Exponential Growth for Free-By-Cyclic Groups**  
 (with Robert Kropholler and Thomas Ng)  
@@ -64,3 +64,4 @@ in Geometric Group Theory][AMS2].
 [YGGT]: https://sites.google.com/site/yggt2019bilbao/home
 [Wasatch]: http://www.math.utah.edu/wtc/
 [IHES]: https://indico.math.cnrs.fr/event/3784/overview
+[traintracksorbigraphs]: https://arxiv.org/abs/1909.03097
