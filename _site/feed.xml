@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-22T12:59:11-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-22T13:10:30-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! In it I give an extension to automorphisms of free products
 of the algorithmic construction of relative train track maps for outer automorphisms
@@ -16,7 +16,7 @@ has a different feel, so let me attempt to sketch another connection.&lt;/p&gt;
 
 &lt;p&gt;One of the best ways to study a linear transformation
 is by considering its eigenvalues, and thus
-the dynamics of the linear transformations action on the associated vector space.
+the dynamics of the linear transformation’s action on the associated vector space.
 The Jordan normal form is designed to present
 the dynamical properties of a linear transformation in a clean, easily understood way.&lt;/p&gt;
 
@@ -50,7 +50,7 @@ On the other hand, in the situation where they &lt;em&gt;should&lt;/em&gt; be co
 Bridson–Haefliger give a construction that allows you to bootstrap a
 geometric action on a CAT(0) space up the HNN extension.&lt;/p&gt;
 
-&lt;p&gt;What I realized, was that in the class of automorphisms I was studying,
+&lt;p&gt;What I realized was that in the class of automorphisms I was studying,
 if it were the case that the automorphism was already upper-triangular
 with respect to the basis &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt; we were handed, then
 &lt;script type=&quot;math/tex&quot;&gt;u_i^{-1}t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_it&lt;/script&gt; were &lt;em&gt;already&lt;/em&gt; conjugate, so Bridson–Haefliger says we win.

@@ -1,10 +1,11 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/3d01d99/
+!_TAG_PROGRAM_VERSION	0.0.0	/f43463a/
 *	_site/assets/css/style.css	/^* { box-sizing: border-box; }$/;"	s
 *	_site/assets/css/styles.css	/^* { max-width: var(--measure); box-sizing: border-box; }$/;"	s
 ---	assets/text/bio.md	/^---$/;"	s
@@ -138,6 +139,7 @@
 .container-xl	_site/assets/css/style.css	/^.container-xl { max-width: 1280px; margin-right: auto; margin-left: auto; }$/;"	c
 .container::after	_site/assets/css/style.css	/^.container::after { display: table; clear: both; content: ""; }$/;"	c
 .container::before	_site/assets/css/style.css	/^.container::before { display: table; content: ""; }$/;"	c
+.current	_sass/nav.scss	/^.current {$/;"	c
 .current	_site/assets/css/styles.css	/^.current { background-color: var(--brightbg); padding: calc(2em \/ 3) calc(2em \/ 3); }$/;"	c
 .d-block	_site/assets/css/style.css	/^.d-block { display: block !important; }$/;"	c
 .d-flex	_site/assets/css/style.css	/^.d-flex { display: flex !important; }$/;"	c
@@ -420,9 +422,13 @@
 .h5	_site/assets/css/style.css	/^.h5 { font-size: 14px !important; }$/;"	c
 .h6	_site/assets/css/style.css	/^.h1, .h2, .h3, .h4, .h5, .h6 { font-weight: 600 !important; }$/;"	c
 .h6	_site/assets/css/style.css	/^.h6 { font-size: 12px !important; }$/;"	c
+.headline	_sass/main.scss	/^.headline,$/;"	c
+.headline	_sass/nav.scss	/^.headline > a {$/;"	c
+.headline	_sass/nav.scss	/^.headline {$/;"	c
 .headline	_site/assets/css/styles.css	/^.headline { font-size: calc(1.5rem * 1.5); font-weight: bold; line-height: 1.5rem; }$/;"	c
 .headline	_site/assets/css/styles.css	/^h1, h2, h3, h4, h5, h6, .headline, strong { font-family: "Helvetica Neue", "Helvetica", "Arial",/;"	c
 .headline > a	_site/assets/css/styles.css	/^.headline > a { color: var(--darkfg); }$/;"	s
+.headshot	_sass/main.scss	/^.headshot {$/;"	c
 .headshot	_site/assets/css/styles.css	/^.headshot { max-width: 200px; }$/;"	c
 .height-fit	_site/assets/css/style.css	/^.height-fit { max-height: 100% !important; }$/;"	c
 .height-full	_site/assets/css/style.css	/^.height-full { height: 100% !important; }$/;"	c
@@ -545,6 +551,7 @@
 .m-xl-4	_site/assets/css/style.css	/^  .m-xl-4 { margin: 24px !important; }$/;"	c
 .m-xl-5	_site/assets/css/style.css	/^  .m-xl-5 { margin: 32px !important; }$/;"	c
 .m-xl-6	_site/assets/css/style.css	/^  .m-xl-6 { margin: 40px !important; }$/;"	c
+.maindiv	_sass/main.scss	/^.maindiv {$/;"	c
 .maindiv	_site/assets/css/styles.css	/^.maindiv { background-color: white; box-sizing: content-box; margin: 0 auto; padding: 1.5rem cal/;"	c
 .markdown-body	_site/assets/css/style.css	/^.markdown-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, s/;"	c
 .markdown-body .absent	_site/assets/css/style.css	/^.markdown-body .absent { color: #cb2431; }$/;"	c
@@ -1020,8 +1027,11 @@
 .my-xl-4	_site/assets/css/style.css	/^  .my-xl-4 { margin-top: 24px !important; margin-bottom: 24px !important; } }$/;"	c
 .my-xl-5	_site/assets/css/style.css	/^  .my-xl-5 { margin-top: 32px !important; margin-bottom: 32px !important; } }$/;"	c
 .my-xl-6	_site/assets/css/style.css	/^  .my-xl-6 { margin-top: 40px !important; margin-bottom: 40px !important; } }$/;"	c
+.navbutton	_sass/nav.scss	/^.navbutton > * {$/;"	c
+.navbutton	_sass/nav.scss	/^.navbutton {$/;"	c
 .navbutton	_site/assets/css/styles.css	/^.navbutton { display: inline-block; border: none; padding: 0 calc(4rem \/ 9); text-align: center/;"	c
 .navbutton > *	_site/assets/css/styles.css	/^.navbutton > * { color: var(--darkfg); font-family: var(--sans); }$/;"	s
+.navdiv	_sass/nav.scss	/^.navdiv {$/;"	c
 .navdiv	_site/assets/css/styles.css	/^.navdiv { background-color: var(--dullbg); padding: 1.5rem 1.5rem; }$/;"	c
 .no-underline	_site/assets/css/style.css	/^.no-underline { text-decoration: none !important; }$/;"	c
 .no-wrap	_site/assets/css/style.css	/^.no-wrap { white-space: nowrap !important; }$/;"	c
@@ -1347,12 +1357,19 @@
 .rule	_site/assets/css/style.css	/^hr, .rule { height: 0; margin: 15px 0; overflow: hidden; background: transparent; border: 0; bor/;"	c
 .rule::after	_site/assets/css/style.css	/^hr::after, .rule::after { display: table; clear: both; content: ""; }$/;"	c
 .rule::before	_site/assets/css/style.css	/^hr::before, .rule::before { display: table; content: ""; }$/;"	c
+.short-text	_sass/main.scss	/^.short-text, {$/;"	c
 .short-text	_site/assets/css/styles.css	/^.short-text { font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }$/;"	c
 .show-on-focus	_site/assets/css/style.css	/^.show-on-focus { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip:/;"	c
 .show-on-focus:focus	_site/assets/css/style.css	/^.show-on-focus:focus { z-index: 20; width: auto; height: auto; clip: auto; }$/;"	c
+.sidebar	_sass/sidebar.scss	/^.sidebar > * > * {$/;"	c
+.sidebar	_sass/sidebar.scss	/^.sidebar > * > :first-child {$/;"	c
+.sidebar	_sass/sidebar.scss	/^}.sidebar > * {$/;"	c
 .sidebar > *	_site/assets/css/styles.css	/^.sidebar > * { display: flex; flex-wrap: wrap; margin: calc(1rem \/ 2 * -1); }$/;"	s
 .sidebar > * > *	_site/assets/css/styles.css	/^.sidebar > * > * { margin: calc(1rem \/ 2); flex-grow: 1; }$/;"	s
 .sidebar > * > :first-child	_site/assets/css/styles.css	/^.sidebar > * > :first-child { flex-basis: 0; flex-grow: 999; min-width: calc(50% - 1rem); }$/;"	s
+.sidebar-l	_sass/sidebar.scss	/^.sidebar-l > * > * {$/;"	c
+.sidebar-l	_sass/sidebar.scss	/^.sidebar-l > * > :last-child {$/;"	c
+.sidebar-l	_sass/sidebar.scss	/^.sidebar-l > * {$/;"	c
 .sidebar-l > *	_site/assets/css/styles.css	/^.sidebar-l > * { display: flex; flex-wrap: wrap; margin: calc(1rem \/ 2 * -1); }$/;"	s
 .sidebar-l > * > *	_site/assets/css/styles.css	/^.sidebar-l > * > * { margin: calc(1rem \/ 2); flex-grow: 1; }$/;"	s
 .sidebar-l > * > :last-child	_site/assets/css/styles.css	/^.sidebar-l > * > :last-child { flex-basis: 0; flex-grow: 999; min-width: calc(50% - 1rem); }$/;"	s
@@ -1449,6 +1466,7 @@ a:active	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;
 a:hover	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:hover { text-decoration: underline; }$/;"	s
 abbr[title]	_site/assets/css/style.css	/^abbr[title] { border-bottom: none; \/* 1 *\/ text-decoration: underline; \/* 2 *\/ text-decorati/;"	s
+about-page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	I
 article	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 aside	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 audio	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
@@ -1532,22 +1550,29 @@ menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, f
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 nav	_site/assets/css/styles.css	/^nav { text-align: right; }$/;"	s
+nsa17ebafb0101	_site/feed.xml	/^<?xml version="1.0" encoding="utf-8"?><feed xmlns="http:\/\/www.w3.org\/2005\/Atom" ><generator /;"	n	uri:http://www.w3.org/2005/Atom
+nsd0b6adda0101	_site/sitemap.xml	/^<urlset xmlns:xsi="http:\/\/www.w3.org\/2001\/XMLSchema-instance" xsi:schemaLocation="http:\/\/w/;"	n	uri:http://www.sitemaps.org/schemas/sitemap/0.9
 ol	_site/assets/css/style.css	/^ul, ol { padding-left: 0; margin-top: 0; margin-bottom: 0; }$/;"	s
 ol ol	_site/assets/css/style.css	/^ol ol, ul ol { list-style-type: lower-roman; }$/;"	s
 ol ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 ol ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 optgroup	_site/assets/css/style.css	/^optgroup { font-weight: bold; }$/;"	s
+other-manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	I
 p	_site/assets/css/style.css	/^p { margin-top: 0; margin-bottom: 10px; }$/;"	s
+phd-candidate	_site/assets/text/bio.html	/^      <h4 id="phd-candidate">PhD Candidate<\/h4>$/;"	I
 pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono/;"	s
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
+publications-and-preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
+research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 select	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
 select	_site/assets/css/style.css	/^button, select { \/* 1 *\/ text-transform: none; }$/;"	s
 select	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
+service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	I
 small	_site/assets/css/style.css	/^small { font-size: 80%; }$/;"	s
 small	_site/assets/css/style.css	/^small { font-size: 90%; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
@@ -1562,6 +1587,7 @@ sup	_site/assets/css/style.css	/^sup { top: -0.5em; }$/;"	s
 svg:not(:root)	_site/assets/css/style.css	/^svg:not(:root) { overflow: hidden; }$/;"	s
 table	_site/assets/css/style.css	/^table { border-spacing: 0; border-collapse: collapse; }$/;"	s
 td	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
+teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	I
 template	_site/assets/css/style.css	/^template, [hidden] { display: none; }$/;"	s
 textarea	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
 textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
@@ -1580,6 +1606,8 @@ ul	_site/assets/css/style.css	/^ul, ol { padding-left: 0; margin-top: 0; margin-
 ul ol	_site/assets/css/style.css	/^ol ol, ul ol { list-style-type: lower-roman; }$/;"	s
 ul ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 ul ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
+upcoming-travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	I
 video	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
+xsi	_site/sitemap.xml	/^<urlset xmlns:xsi="http:\/\/www.w3.org\/2001\/XMLSchema-instance" xsi:schemaLocation="http:\/\/w/;"	n	uri:http://www.w3.org/2001/XMLSchema-instance
 {{ page.title }}	_layouts/post.html	/^<h1>{{ page.title }}<\/h1>$/;"	h
 {{ post.title }}	blog.html	/^    <h2><a href="{{ post.url }}">{{ post.title }}<\/a><\/h2>$/;"	i
