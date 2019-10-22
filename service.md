@@ -5,12 +5,16 @@ math: false
 # Service
 
 - In the 2019--2020 academic year I am organizing
-  a reading group on a to-be-determined topic related
-  to geometric group theory.
+  a reading group on Thurston's Geometrization program,
+  the Virtually Haken and Virtually Fibered conjectures,
+  and Agol's theorem.
+
+- In Fall 2019 I am mentoring David Tu in a Directed Reading Program
+  project on the topic of Category Theory.
 
 - I am a co-organizer of the Tufts Directed Reading Program.
 
-- I am one of two stewards representing the Math department 
+- In 2018 I was one of two stewards representing the Math department 
   in the graduate student union.
 
 - In 2018, I was Treasurer of the [Organization of Graduate
