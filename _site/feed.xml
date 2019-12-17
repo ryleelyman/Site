@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-17T02:08:12-05:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-17T02:12:24-05:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -34,7 +34,7 @@ space of all orbigraphs in question are finite trees, but I am realizing there i
 
 &lt;p&gt;The main tool for studying automorphisms of free groups is what are called
 &lt;em&gt;relative train track maps.&lt;/em&gt; Relative train track maps provide a topological “normal form”
-for elements of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;$. They were introduced by Bestvina–Handel in&lt;/p&gt;
+for elements of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;. They were introduced by Bestvina–Handel in&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;My adaptation to the case of orbigraphs
 builds on later developments by Bestvina–Feighn–Handel in 2000 and
@@ -130,7 +130,8 @@ elements are ignored. When we’re explicit about them, a set is typically
 denoted as a list of elements (thought of as unordered), surrounded by curly braces.
 So as sets, &lt;script type=&quot;math/tex&quot;&gt;\{1,2,3,3,5\} = \{1,2,3\}&lt;/script&gt;. A set comprises its elements, nothing more,
 nothing less. Thus, maps or functions &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; between sets &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are just
-assignments: to each element &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;X$, we assign a (unique) element&lt;/script&gt;f(x)&lt;script type=&quot;math/tex&quot;&gt;of&lt;/script&gt;Y$$.&lt;/p&gt;
+assignments: to each element &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, we assign a (unique) element &lt;script type=&quot;math/tex&quot;&gt;f(x)&lt;/script&gt;
+of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;Things, mathematical objects, whatever you can pin down in language,
 may be elements (or not) of sets. Sets may even be elements of other sets, although
