@@ -1,8 +1,8 @@
 ---
 math: true
 ---
-In a poor attempt to remain interesting to the non-mathematically inclined
-reader, maybe it would be good to begin with a few words about the landscape.
+I'm not sure what this post set out to be. It ended up a digression
+on set theory vs. category theory.
 
 In modern mathematics, there are two notions that might be truly called 
 foundational to all the work we do. These are *set theory* and *category theory.*

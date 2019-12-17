@@ -77,43 +77,97 @@
 
 <p>Today I posted my first paper, 
 <a href="https://arxiv.org/abs/1909.03097">Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups</a>
-to the ArXiv! In it I give an extension to automorphisms of free products
-of the algorithmic construction of relative train track maps for outer automorphisms
-of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms
-of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof.
-I haven’t addressed the question of “why” study these groups in this post, but
-I will another time.</p>
+to the ArXiv! Here is a description of the paper and the idea behind the main application.</p>
 
-<p>The length of the paper comes from constructing <em>relative train track maps</em>
-for outer automorphisms of free products. Relative train track maps
-always seem to scare people who hear about them, so let me attempt an explanation of what’s going on.
-The name and most motivations in the literature derive from the Nielsen–Thurston
-normal forms for homotopy classes of surface homeomorphisms. My application
-has a different feel, so let me attempt to sketch another connection.</p>
+<h3 id="orbigraphs">Orbigraphs</h3>
 
-<p>One of the best ways to study a linear transformation
-is by considering its eigenvalues, and thus
-the dynamics of the linear transformation’s action on the associated vector space.
-The Jordan normal form is designed to present
-the dynamical properties of a linear transformation in a clean, easily understood way.</p>
+<p>One of my main goals currently is to better understand outer automorphisms of
+free products of finite groups. I became interested because I like <a href="https://en.wikipedia.org/wiki/Coxeter_group">Coxeter groups</a>,
+and I was surprised to hear that we knew so little about their automorphisms.
+The natural place to start is the “free” Coxeter group <script type="math/tex">W_n</script>, which is a free product of 
+<script type="math/tex">n</script> copies of <script type="math/tex">\mathbb Z/2\mathbb Z</script>. I’m tempted to say the 
+<em><script type="math/tex">n</script>th copower of <script type="math/tex">\mathbb Z/2\mathbb Z</script>,</em> but I guess it’s a little too scary-sounding.</p>
 
-<p>Given an automorphism of a free group <script type="math/tex">F_n</script>, its action on the homology of the free group
-gives one a matrix in <script type="math/tex">\operatorname{GL}_n(\mathbb{Z})</script>. However, since free groups
-are nonabelian, this matrix tends to lose a lot of information about the automorphism
-except in particular cases. A little better is the <em>transition matrix</em> of a
-self-map <script type="math/tex">f\colon G \to G</script> of a graph <script type="math/tex">G</script> with fundamental group <script type="math/tex">F_n</script>. 
-The <script type="math/tex">ij</script>th entry of this matrix records how many times the <script type="math/tex">f</script>-image of the <script type="math/tex">j</script>th
-edge crosses the <script type="math/tex">i</script>th edge in either direction. Here some information is lost again in general.
-The point of a <em>relative train track map</em> is to find such a map <script type="math/tex">f\colon G \to G</script> whose
-transition matrix retains as much information as possible.</p>
+<p>Along the way I’ve become quite enamored with <a href="https://en.wikipedia.org/wiki/Orbifold">orbifolds</a>. The idea behind
+orbifolds is that just as it is useful to study the fundamental group of a manifold both
+as a group of homotopy classes of loops and as deck transformations of the universal cover,
+so to should there be some object “downstairs” to look at in the case of a group acting
+properly discontinuously but not freely.</p>
 
-<p>Like the Jordan normal form, the transition matrix for a relative train track map is
-<em>block upper-triangular,</em> corresponding to an increasing sequence of <script type="math/tex">f</script>-invariant subgraphs.
-Each square submatrix corresponding to a block is <em>irreducible.</em> Polynomially-growing automorphisms
-have (after taking powers) genuinely upper-triangular transition matrices with 1s on the diagonal.</p>
+<p>An orbigraph, then, is an orbifold quotient of a graph. In other words, the underlying
+topological space of an orbigrph is a (typically finite) graph. At a (typically finite)
+collection of points called <em>cone points,</em> there is some nontrivial stabilizer information.
+Note that there is the related idea of a <a href="https://en.wikipedia.org/wiki/Graph_of_groups">graph of groups</a>, which is more
+general. Since the singular locus of an orbifold is required to be nowhere dense, the term
+“orbigraph” succinctly captures the restrictions I require. I also want to think of
+orbigraphs as having interesting and nontrivial algebraic topology—in essentially the
+same way as in Bass–Serre theory, but I take a slightly less combinatorial bent.</p>
+
+<p>In the paper the underlying
+space of all orbigraphs in question are finite trees, but I am realizing there is maybe some
+(small) usefulness in orbigraphs whose underlying graph is not a tree.</p>
+
+<h3 id="train-tracks">Train Tracks</h3>
+
+<p>The main tool for studying automorphisms of free groups is what are called
+<em>relative train track maps.</em> Relative train track maps provide a topological “normal form”
+for elements of <script type="math/tex">\operatorname{Out}(F_n)</script>$. They were introduced by Bestvina–Handel in</p>
+<ol>
+  <li>My adaptation to the case of orbigraphs
+builds on later developments by Bestvina–Feighn–Handel in 2000 and
+Feighn–Handel in 2011. The name “relative train track map” is inspired by the theory
+of surface homeomorphisms: there a <em>train track</em> is a graph embedded into the surface
+in a prescribed wy.  The combinatorial properties of certain train tracks associated
+to the mapping class of a surface homeomorphism yield a surprisingly rich  amount of
+information about the dynamics of the homeomorphism.</li>
+</ol>
+
+<p>The original idea of Bestvina–Handel’s paper was to attempt to adapt the theory
+to study outer automorphisms of free groups. Here, since any homeomorphism of a graph
+has a finite power homotopic to the identity, we’re forced to consider homotopy equivalences
+of graphs. More explicitly: if <script type="math/tex">\varphi \in \operatorname{Out}(F_n)</script> is an outer
+automorphism of a free group <script type="math/tex">F_n</script> of rank <script type="math/tex">n</script>, <script type="math/tex">G</script> is a graph, and <script type="math/tex">f\colon G \to G</script>
+is a homotopy equivalence such that the (outer) action of <script type="math/tex">f</script> on <script type="math/tex">\pi_1(G)</script> is equal
+to <script type="math/tex">\varphi</script>, then if <script type="math/tex">\varphi</script> has infinite order, <script type="math/tex">f</script> cannot be a homeomorphism.
+We may as well assume <script type="math/tex">f</script> sends vertices to vertices.
+Stallings tells us that in this situation, there is a vertex <script type="math/tex">v</script> of <script type="math/tex">G</script> and a pair of
+edges <script type="math/tex">e</script> and <script type="math/tex">e'</script> incident to <script type="math/tex">v</script> such that <script type="math/tex">f(e)</script> and <script type="math/tex">f(e')</script> share a common segment.
+We say <script type="math/tex">f</script> <em>folds</em> these edges, or that they form an <em>illegal turn</em>.</p>
+
+<p>A <em>train track map</em> has the next best property: We say that <script type="math/tex">f\colon G \to G</script> is a
+<em>train track map</em> if for each edge <script type="math/tex">e</script> of <script type="math/tex">G</script> and each positive integer <script type="math/tex">k</script>,
+the <script type="math/tex">k</script>th iterate, <script type="math/tex">f^k(e)</script> is an immersed path, i.e. it is never sent over an
+illegal turn.</p>
+
+<p>If you’d like to try playing with the definition here’s something to try: let
+<script type="math/tex">G</script> be the “rose with four petals.” That is, <script type="math/tex">G</script> has one vertex and four edges,
+each of which forms a loop. Label the edges <script type="math/tex">A</script> through <script type="math/tex">D</script> and choose an orientation
+for each. Let’s define <script type="math/tex">f</script> as <script type="math/tex">A \mapsto B</script>, <script type="math/tex">B \mapsto C</script>, <script type="math/tex">C \mapsto D</script>, and
+<script type="math/tex">D \mapsto AB</script>, i.e. the path that first follows the edge <script type="math/tex">A</script> and then <script type="math/tex">B</script>.
+There are a few things to check: 1) Find a homotopy inverse for <script type="math/tex">f</script>. 2) Which
+turns (pairs of oriented edges originating at a common vertex) are illegal? 3) Is
+<script type="math/tex">f</script> a train track map?</p>
+
+<p>The word <em>relative</em> above is sort of forced on us by the structure of more complicated 
+homotopy equivalences: as it turns out,
+it may not be the case that we can always avoid illegal turns.
+This is especially true in the “bad” case of polynomial growth, about which more below.</p>
+
+<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups</h3>
+
+<p>Gersten in 1994 showed that <script type="math/tex">\operatorname{Out}(F_n)</script> cannot act
+properly and cocompactly on a CAT(0) metric space when <script type="math/tex">n \ge 4</script>.
+This is something of a bummer, but also to be expected: Acting by geometrically
+on a CAT(0) metric space is a nice situation to be in, and one might think that
+<script type="math/tex">\operatorname{Out}(F_n)</script> should be in some sense too complicated to do so.</p>
+
+<p>I set out aiming to prove a version of Gersten’s theorem for more general free products,
+but instead I found essentially a <em>strong negation</em> of the situation he described.
+Let me describe it in more detail:</p>
 
 <p>Write <script type="math/tex">F_n = \langle x_1,\dotsc,x_n\rangle</script>, let <script type="math/tex">\Phi</script> be an automorphism and suppose
 that <script type="math/tex">\Phi(x_i) = u_ix_iv_i</script>, where <script type="math/tex">u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle</script>.
+Let’s call such  automorphisms <em>upper triangular,</em> by analogy with groups of matrices.
 In the free-by-cyclic group <script type="math/tex">F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle</script>,
 this gives us the relation <script type="math/tex">tx_it^{-1} = u_ix_iv_i</script>, which we can rewrite as
 <script type="math/tex">x_i^{-1}u_i^{-1}tx_i = v_it</script>, which, if you squint, starts to look like a relation in

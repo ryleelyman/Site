@@ -1,42 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-17T00:50:28-05:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-12-17T02:08:12-05:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
-to the ArXiv! In it I give an extension to automorphisms of free products
-of the algorithmic construction of relative train track maps for outer automorphisms
-of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms
-of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof.
-I haven’t addressed the question of “why” study these groups in this post, but
-I will another time.&lt;/p&gt;
+to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
-&lt;p&gt;The length of the paper comes from constructing &lt;em&gt;relative train track maps&lt;/em&gt;
-for outer automorphisms of free products. Relative train track maps
-always seem to scare people who hear about them, so let me attempt an explanation of what’s going on.
-The name and most motivations in the literature derive from the Nielsen–Thurston
-normal forms for homotopy classes of surface homeomorphisms. My application
-has a different feel, so let me attempt to sketch another connection.&lt;/p&gt;
+&lt;h3 id=&quot;orbigraphs&quot;&gt;Orbigraphs&lt;/h3&gt;
 
-&lt;p&gt;One of the best ways to study a linear transformation
-is by considering its eigenvalues, and thus
-the dynamics of the linear transformation’s action on the associated vector space.
-The Jordan normal form is designed to present
-the dynamical properties of a linear transformation in a clean, easily understood way.&lt;/p&gt;
+&lt;p&gt;One of my main goals currently is to better understand outer automorphisms of
+free products of finite groups. I became interested because I like &lt;a href=&quot;https://en.wikipedia.org/wiki/Coxeter_group&quot;&gt;Coxeter groups&lt;/a&gt;,
+and I was surprised to hear that we knew so little about their automorphisms.
+The natural place to start is the “free” Coxeter group &lt;script type=&quot;math/tex&quot;&gt;W_n&lt;/script&gt;, which is a free product of 
+&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; copies of &lt;script type=&quot;math/tex&quot;&gt;\mathbb Z/2\mathbb Z&lt;/script&gt;. I’m tempted to say the 
+&lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;th copower of &lt;script type=&quot;math/tex&quot;&gt;\mathbb Z/2\mathbb Z&lt;/script&gt;,&lt;/em&gt; but I guess it’s a little too scary-sounding.&lt;/p&gt;
 
-&lt;p&gt;Given an automorphism of a free group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt;, its action on the homology of the free group
-gives one a matrix in &lt;script type=&quot;math/tex&quot;&gt;\operatorname{GL}_n(\mathbb{Z})&lt;/script&gt;. However, since free groups
-are nonabelian, this matrix tends to lose a lot of information about the automorphism
-except in particular cases. A little better is the &lt;em&gt;transition matrix&lt;/em&gt; of a
-self-map &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; of a graph &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; with fundamental group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt;. 
-The &lt;script type=&quot;math/tex&quot;&gt;ij&lt;/script&gt;th entry of this matrix records how many times the &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;-image of the &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt;th
-edge crosses the &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;th edge in either direction. Here some information is lost again in general.
-The point of a &lt;em&gt;relative train track map&lt;/em&gt; is to find such a map &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; whose
-transition matrix retains as much information as possible.&lt;/p&gt;
+&lt;p&gt;Along the way I’ve become quite enamored with &lt;a href=&quot;https://en.wikipedia.org/wiki/Orbifold&quot;&gt;orbifolds&lt;/a&gt;. The idea behind
+orbifolds is that just as it is useful to study the fundamental group of a manifold both
+as a group of homotopy classes of loops and as deck transformations of the universal cover,
+so to should there be some object “downstairs” to look at in the case of a group acting
+properly discontinuously but not freely.&lt;/p&gt;
 
-&lt;p&gt;Like the Jordan normal form, the transition matrix for a relative train track map is
-&lt;em&gt;block upper-triangular,&lt;/em&gt; corresponding to an increasing sequence of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;-invariant subgraphs.
-Each square submatrix corresponding to a block is &lt;em&gt;irreducible.&lt;/em&gt; Polynomially-growing automorphisms
-have (after taking powers) genuinely upper-triangular transition matrices with 1s on the diagonal.&lt;/p&gt;
+&lt;p&gt;An orbigraph, then, is an orbifold quotient of a graph. In other words, the underlying
+topological space of an orbigrph is a (typically finite) graph. At a (typically finite)
+collection of points called &lt;em&gt;cone points,&lt;/em&gt; there is some nontrivial stabilizer information.
+Note that there is the related idea of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_of_groups&quot;&gt;graph of groups&lt;/a&gt;, which is more
+general. Since the singular locus of an orbifold is required to be nowhere dense, the term
+“orbigraph” succinctly captures the restrictions I require. I also want to think of
+orbigraphs as having interesting and nontrivial algebraic topology—in essentially the
+same way as in Bass–Serre theory, but I take a slightly less combinatorial bent.&lt;/p&gt;
+
+&lt;p&gt;In the paper the underlying
+space of all orbigraphs in question are finite trees, but I am realizing there is maybe some
+(small) usefulness in orbigraphs whose underlying graph is not a tree.&lt;/p&gt;
+
+&lt;h3 id=&quot;train-tracks&quot;&gt;Train Tracks&lt;/h3&gt;
+
+&lt;p&gt;The main tool for studying automorphisms of free groups is what are called
+&lt;em&gt;relative train track maps.&lt;/em&gt; Relative train track maps provide a topological “normal form”
+for elements of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;$. They were introduced by Bestvina–Handel in&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;My adaptation to the case of orbigraphs
+builds on later developments by Bestvina–Feighn–Handel in 2000 and
+Feighn–Handel in 2011. The name “relative train track map” is inspired by the theory
+of surface homeomorphisms: there a &lt;em&gt;train track&lt;/em&gt; is a graph embedded into the surface
+in a prescribed wy.  The combinatorial properties of certain train tracks associated
+to the mapping class of a surface homeomorphism yield a surprisingly rich  amount of
+information about the dynamics of the homeomorphism.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The original idea of Bestvina–Handel’s paper was to attempt to adapt the theory
+to study outer automorphisms of free groups. Here, since any homeomorphism of a graph
+has a finite power homotopic to the identity, we’re forced to consider homotopy equivalences
+of graphs. More explicitly: if &lt;script type=&quot;math/tex&quot;&gt;\varphi \in \operatorname{Out}(F_n)&lt;/script&gt; is an outer
+automorphism of a free group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt; of rank &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a graph, and &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt;
+is a homotopy equivalence such that the (outer) action of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;\pi_1(G)&lt;/script&gt; is equal
+to &lt;script type=&quot;math/tex&quot;&gt;\varphi&lt;/script&gt;, then if &lt;script type=&quot;math/tex&quot;&gt;\varphi&lt;/script&gt; has infinite order, &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; cannot be a homeomorphism.
+We may as well assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; sends vertices to vertices.
+Stallings tells us that in this situation, there is a vertex &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and a pair of
+edges &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;e'&lt;/script&gt; incident to &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f(e')&lt;/script&gt; share a common segment.
+We say &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; &lt;em&gt;folds&lt;/em&gt; these edges, or that they form an &lt;em&gt;illegal turn&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;train track map&lt;/em&gt; has the next best property: We say that &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; is a
+&lt;em&gt;train track map&lt;/em&gt; if for each edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and each positive integer &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;,
+the &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;th iterate, &lt;script type=&quot;math/tex&quot;&gt;f^k(e)&lt;/script&gt; is an immersed path, i.e. it is never sent over an
+illegal turn.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to try playing with the definition here’s something to try: let
+&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; be the “rose with four petals.” That is, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; has one vertex and four edges,
+each of which forms a loop. Label the edges &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; through &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; and choose an orientation
+for each. Let’s define &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;A \mapsto B&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;B \mapsto C&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;C \mapsto D&lt;/script&gt;, and
+&lt;script type=&quot;math/tex&quot;&gt;D \mapsto AB&lt;/script&gt;, i.e. the path that first follows the edge &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and then &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;.
+There are a few things to check: 1) Find a homotopy inverse for &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;. 2) Which
+turns (pairs of oriented edges originating at a common vertex) are illegal? 3) Is
+&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; a train track map?&lt;/p&gt;
+
+&lt;p&gt;The word &lt;em&gt;relative&lt;/em&gt; above is sort of forced on us by the structure of more complicated 
+homotopy equivalences: as it turns out,
+it may not be the case that we can always avoid illegal turns.
+This is especially true in the “bad” case of polynomial growth, about which more below.&lt;/p&gt;
+
+&lt;h3 id=&quot;cat0-free-by-cyclic-groups&quot;&gt;CAT(0) Free-by-Cyclic Groups&lt;/h3&gt;
+
+&lt;p&gt;Gersten in 1994 showed that &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt; cannot act
+properly and cocompactly on a CAT(0) metric space when &lt;script type=&quot;math/tex&quot;&gt;n \ge 4&lt;/script&gt;.
+This is something of a bummer, but also to be expected: Acting by geometrically
+on a CAT(0) metric space is a nice situation to be in, and one might think that
+&lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt; should be in some sense too complicated to do so.&lt;/p&gt;
+
+&lt;p&gt;I set out aiming to prove a version of Gersten’s theorem for more general free products,
+but instead I found essentially a &lt;em&gt;strong negation&lt;/em&gt; of the situation he described.
+Let me describe it in more detail:&lt;/p&gt;
 
 &lt;p&gt;Write &lt;script type=&quot;math/tex&quot;&gt;F_n = \langle x_1,\dotsc,x_n\rangle&lt;/script&gt;, let &lt;script type=&quot;math/tex&quot;&gt;\Phi&lt;/script&gt; be an automorphism and suppose
 that &lt;script type=&quot;math/tex&quot;&gt;\Phi(x_i) = u_ix_iv_i&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle&lt;/script&gt;.
+Let’s call such  automorphisms &lt;em&gt;upper triangular,&lt;/em&gt; by analogy with groups of matrices.
 In the free-by-cyclic group &lt;script type=&quot;math/tex&quot;&gt;F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle&lt;/script&gt;,
 this gives us the relation &lt;script type=&quot;math/tex&quot;&gt;tx_it^{-1} = u_ix_iv_i&lt;/script&gt;, which we can rewrite as
 &lt;script type=&quot;math/tex&quot;&gt;x_i^{-1}u_i^{-1}tx_i = v_it&lt;/script&gt;, which, if you squint, starts to look like a relation in
@@ -61,8 +115,8 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! In it I give an extension to automorphisms of free products of the algorithmic construction of relative train track maps for outer automorphisms of free groups. I use it to prove that mapping tori of polynomially-growing automorphisms of certain kinds are CAT(0) groups. I want to talk about the main ideas in the proof. I haven’t addressed the question of “why” study these groups in this post, but I will another time.</summary></entry><entry><title type="html">The Lay Of The Land</title><link href="/2019/07/13/The-Lay-of-the-Land.html" rel="alternate" type="text/html" title="The Lay Of The Land" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/The-Lay-of-the-Land</id><content type="html" xml:base="/2019/07/13/The-Lay-of-the-Land.html">&lt;p&gt;In a poor attempt to remain interesting to the non-mathematically inclined
-reader, maybe it would be good to begin with a few words about the landscape.&lt;/p&gt;
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
+on set theory vs. category theory.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 
 foundational to all the work we do. These are &lt;em&gt;set theory&lt;/em&gt; and &lt;em&gt;category theory.&lt;/em&gt;
@@ -128,7 +182,7 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">In a poor attempt to remain interesting to the non-mathematically inclined reader, maybe it would be good to begin with a few words about the landscape.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
