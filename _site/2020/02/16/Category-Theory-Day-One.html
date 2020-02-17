@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154695841-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154695841-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>Category Theory Day One</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ryleelyman.github.io" />
+    
+      <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+
+    
+  </head>
+
+  <body>
+    <div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	
+	<a href="/blog.html">Alanza</a>
+	
+      </div>
+      <div>
+	<nav>
+	  
+	    <div class="navbutton">
+	      <a  href="/">
+		Home
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/research.html">
+		Research
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/teaching.html">
+		Teaching
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/service.html">
+		Service
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/blog.html">
+		Blog
+	      </a>
+	    </div>
+	  
+	</nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="maindiv">
+      <h1>Category Theory Day One</h1>
+<p>16 Feb 2020</p>
+
+<p>My office-mate asked me to give a “second lecture” in category theory
+in <a href="http://www.danielkeliher.com/EminarCurrent.html">Eminar</a>, the Tufts graduate student seminar. I gave a first lecture
+last semester, but I thought it might be nice to have something to point people
+who missed it to, in order to stick to my assignment
+and begin at the Yoneda lemma. So, here is yet another rendition of the first
+hour of a category theory class.</p>
+
+<p>The treatment is brisk. To the interested reader,
+I would highly recommend Emily Riehl’s <a href="http://www.math.jhu.edu/~eriehl/context.pdf"><em>Category Theory in Context</em></a>,
+which is the main inspiration here and
+has the advantage of being available on the author’s website.
+I also recommend Saunders Mac Lane’s 
+<em>Category Theory for the Working Mathematician</em>
+and Francis Borceux’s <em>Handbook of Categorical Algebra.</em></p>
+
+<h2 id="categories">Categories</h2>
+<p>A <em>category</em> <script type="math/tex">C</script> is a collection of <em>objects,</em> say <script type="math/tex">c</script>, <script type="math/tex">d</script>, and 
+<em>arrows</em> between them, say <script type="math/tex">f\colon c\to d</script>.
+Given a pair of arrows as below</p>
+
+<script type="math/tex; mode=display">\require{AMScd}\begin{CD} a @>f>> b @>g>> c,\end{CD}</script>
+
+<p>we require the existence of their <em>composition,</em> <script type="math/tex">gf\colon a\to c</script>.
+Composition is associative, and for each object <script type="math/tex">c</script>, there is a
+(unique) arrow <script type="math/tex">1_c\colon c\to c</script> which acts as an identity for composition
+of arrows.</p>
+
+<p>Many familiar mathematical objects assemble into categories.
+To wit, there is the <em>category of sets,</em> where objects are sets
+and arrows are functions of sets, and the <em>category of topological spaces,</em>
+where objects are topological spaces and arrows are continuous maps.
+However, the notion of a category is flexible: not all categories
+have “sets with additional structure” as objects.
+For instance, a <em>preorder</em> is the same data as a category
+where there is at most one arrow between any two objects.
+Here an arrow <script type="math/tex">c\to d</script> should be interpreted as saying <script type="math/tex">c\le d</script>.</p>
+
+<p>Note that I use the term <em>collection</em> advisedly: Russell’s paradox
+says that there can be no set of all sets, so the category of
+sets has more than a set’s worth of objects! However,
+between any two sets, there is only a set’s worth of distinct functions.
+That is, if <script type="math/tex">a</script> and <script type="math/tex">b</script> are sets, there is a <em>set</em></p>
+
+<script type="math/tex; mode=display">\operatorname{Set}(a,b) = \{f\colon a \to b\}.</script>
+
+<p>Categories where this is the case for all objects are called <em>locally small.</em>
+If additionally there is only a set’s worth of arrows in the entire category
+(and thus only a set’s worth of objects!), the category is called <em>small.</em></p>
+
+<h2 id="functors">Functors</h2>
+<p>If <script type="math/tex">C</script> and <script type="math/tex">D</script> are categories, a <em>functor</em> <script type="math/tex">F\colon C \to D</script>
+is an assignment</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{CD}a &\mapsto &Fa \\ @VfVV \mapsto @VVFfV \\ b &\mapsto &Fb.\end{CD} %]]></script>
+
+<p>I.e. for each object <script type="math/tex">a</script> of <script type="math/tex">C</script>, there is an object <script type="math/tex">Fa</script> in <script type="math/tex">D</script>,
+and for each arrow <script type="math/tex">f\colon a\to b</script> in <script type="math/tex">C</script>, there is an arrow
+<script type="math/tex">Ff\colon Fa\to Fb</script>. Additionally, <script type="math/tex">F</script> is required to satisfy</p>
+
+<script type="math/tex; mode=display">F1_{a} = 1_{Fa}</script>
+
+<p>for all <script type="math/tex">a</script> in <script type="math/tex">C</script>, and <script type="math/tex">F</script> must
+respect composition in the sense that</p>
+
+<script type="math/tex; mode=display">F(gf) = FgFf.</script>
+
+<p>Such functors are sometimes called <em>covariant.</em></p>
+
+<p>Every category <script type="math/tex">C</script> has an <em>opposite category</em> 
+<script type="math/tex">\newcommand{\op}{^{\mathrm{op}}}C\op</script>, which is obtained from
+formally reversing the direction of all the arrows.
+Thus if <script type="math/tex">C</script> has arrows</p>
+
+<script type="math/tex; mode=display">\begin{CD} a @>f>> b @>g>> c,\end{CD}</script>
+
+<p>then <script type="math/tex">C\op</script> has arrows</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{CD} a @<f\op<< b @<g\op<< c.\end{CD} %]]></script>
+
+<p>Any statement about objects and arrows in <script type="math/tex">C</script> has a <em>dual</em>
+statement about objects and arrows in <script type="math/tex">C\op</script>, which is obtained
+by reversing the direction of all the arrows.
+If the proof of the original statement is categorical,
+dualizing the proof yields a proof of the dual statement for <script type="math/tex">C\op</script>.</p>
+
+<p>The definition of a functor admits dualization in <script type="math/tex">C</script> or in <script type="math/tex">D</script>.
+The import is essentially the same as long as only one dualization is
+performed: the result is a <em>contravariant functor</em> <script type="math/tex">G\colon C\op \to D</script>:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{CD} a &\mapsto & Ga \\ @VfVV \mapsto @AAGfA \\ b &\mapsto &Gb.
+\end{CD} %]]></script>
+
+<p>Functors abound in mathematics. Many are so simple that we hardly think about
+them: for instance the “forgetful” 
+functor from the category of groups and homomorphisms
+to sets that sends a group <script type="math/tex">G</script> to its set of elements,
+and a group homomorphism to its action on underlying sets.</p>
+
+<p>If <script type="math/tex">C</script> is a locally small category and <script type="math/tex">c</script> is an object,
+there are two particularly important functors <script type="math/tex">C \to \operatorname{Set}</script>.
+Write <script type="math/tex">C(c,b)</script> and <script type="math/tex">C(b,c)</script> for the set of arrows in <script type="math/tex">C</script>
+with domain and codomain <script type="math/tex">c</script>, respectively.
+If <script type="math/tex">f\colon b\to d</script> is an arrow in <script type="math/tex">C</script>, there are
+functions</p>
+
+<script type="math/tex; mode=display">f_*\colon C(c,b) \to C(c,d) \text{ and }f^*\colon C(d,c) \to C(b,c)</script>
+
+<p>defined as <script type="math/tex">f_*(g) = fg</script> and <script type="math/tex">f^*(h) = hf</script>, respectively.
+The assignments</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{CD} b &\mapsto & C(c,b) &\qquad\qquad &b &\mapsto & C(b,c) \\
+    @VfVV \mapsto @VVf_*V \qquad\qquad @VfVV \mapsto @AAf*A \\
+    d &\mapsto &C(c,d) &\qquad\qquad &d &\mapsto & C(d,c)
+  \end{CD} %]]></script>
+
+<p>define covariant and contravariant functors 
+<script type="math/tex">C(c,-)\colon C \to \operatorname{Set}</script> and<br />
+<script type="math/tex">C(-,c)\colon C\op\to\operatorname{Set}</script>, respectively.</p>
+
+<h3 id="natural-transformations">Natural Transformations</h3>
+<p>Just as we have defined functors between categories,
+it is  useful to consider <em>functor categories,</em>
+whose elements are functors <script type="math/tex">C\to D</script>. To do this, we need 
+a  notion of a morphism between functors. It turns out
+that the right notion is a <em>natural transformation.</em>
+If <script type="math/tex">F,G\colon C \to D</script> are functors, a natural transformation
+<script type="math/tex">\eta\colon F\Rightarrow G</script> is a collection of maps
+<script type="math/tex">\eta_c\colon Fc \to Gc</script>, one for each object <script type="math/tex">c</script> of <script type="math/tex">C</script>
+such that for every arrow <script type="math/tex">f\colon c \to d</script>, the following
+diagram commutes</p>
+
+<script type="math/tex; mode=display">\begin{CD}
+  Fc @>\eta_c>> Gc \\
+  @VFfVV @VVGfV \\
+  Fd @>\eta_d>> Gd.
+\end{CD}</script>
+
+<p>Any directed path in a diagram of objects and arrows within
+a category like the above yields an arrow from the initial 
+“vertex” of the path to the terminal one by reading off the
+labelled arrows. A diagram <em>commutes</em> if any two directed
+paths with the same endpoints yield equal arrows.
+Thus, to say that the above diagram commutes asserts the
+equality</p>
+
+<script type="math/tex; mode=display">Gf\eta_c = \eta_d Ff.</script>
+
+<p>The standard example of a natural transformation is the following.
+Let <script type="math/tex">k</script> be a field, and consider the category of <script type="math/tex">k</script>-vector spaces
+and linear transformations. There is a contravariant functor
+that sends a vector space <script type="math/tex">V</script> to its <em>dual</em> <script type="math/tex">V^*</script>, namely the vector
+space of linear transformations <script type="math/tex">V\to k</script>.
+A linear map <script type="math/tex">f\colon V \to W</script> is sent to a map <script type="math/tex">f^*\colon W^*\to V^*</script>
+which is defined as follows.
+If <script type="math/tex">\lambda\colon W \to k</script> is an element of <script type="math/tex">W^*</script>,
+<script type="math/tex">f^*(\lambda)</script> is the linear  map</p>
+
+<script type="math/tex; mode=display">\lambda f\colon V\to k.</script>
+
+<p>Thus there is a <em>covariant</em> functor sending a vector space <script type="math/tex">V</script>
+to its “double dual” <script type="math/tex">V^{**}=(V^*)^*</script>.
+There is a natural transformation <script type="math/tex">ev</script> from the identity functor
+to the double dual functor.
+At a given vector space <script type="math/tex">V</script>, the map <script type="math/tex">ev_V</script> sends a vector <script type="math/tex">v</script>
+to the linear map <script type="math/tex">V^*\to k</script> defined by “evaluation at <script type="math/tex">v</script>,”
+namely</p>
+
+<script type="math/tex; mode=display">\lambda \mapsto \lambda(v),\quad  \lambda \in V^*.</script>
+
+<p>Naturality of <script type="math/tex">ev</script> asserts that for <script type="math/tex">f\colon V \to W</script>
+a linear map, the following diagram commutes</p>
+
+<script type="math/tex; mode=display">\begin{CD}
+  V @>ev_V>> V^{**} \\
+  @VfVV @VVf^{**}V \\
+  W @>ev_W>> W^{**}.
+\end{CD}</script>
+
+<p>To show this, consider a vector <script type="math/tex">v \in V</script>.
+The element <script type="math/tex">f^{**}(ev_V(v)) \in W^{**}</script> is
+the linear map</p>
+
+<script type="math/tex; mode=display">ev_V(v)\circ f^*\colon W^*\to k,</script>
+
+<p>so its action on <script type="math/tex">\lambda \in W*</script> is</p>
+
+<script type="math/tex; mode=display">ev_V(v)(f^*(\lambda)) = ev_V(v)(\lambda f) = 
+\lambda (f(v)) = ev_W(f(v))(\lambda),</script>
+
+<p>demonstrating naturality.</p>
+
+<p>The map <script type="math/tex">ev_V</script> is an isomorphism when <script type="math/tex">V</script> is finite dimensional.
+Thus we say that when restricted to the <em>subcategory</em>
+of finite dimensional vector spaces, <script type="math/tex">ev</script> is a <em>natural isomorphism.</em></p>
+
+<h3 id="the-yoneda-lemma">The Yoneda Lemma</h3>
+<p>Perhaps the fundamental result in category theory
+is the following:</p>
+
+<blockquote>
+  <p><strong>Theorem.</strong> (The Yoneda Lemma)    <br />
+ Let <script type="math/tex">C</script> be a locally small category and
+ <script type="math/tex">F\colon C \to \operatorname{Set}</script> a functor.
+ For each object <script type="math/tex">c</script> of <script type="math/tex">C</script>, there is a bijection</p>
+</blockquote>
+
+<script type="math/tex; mode=display">\{\alpha\colon C(c,-)\Rightarrow F\} \longleftrightarrow \{x \in Fc\}</script>
+
+<blockquote>
+  <p>implemented by sending a natural transformation
+ <script type="math/tex">\alpha</script> to the element <script type="math/tex">\alpha_c(1_c)</script>.
+ This bijection is natural in <script type="math/tex">F</script> and <script type="math/tex">c</script>.</p>
+</blockquote>
+
+<p>The proof is straightforward, once one figures out what needs proving.
+The utility of the Yoneda lemma is likely 
+far from obvious when one first meets it,
+but it turns out to be a major tool in category theory.</p>
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,4 +1,225 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-01-15T22:57:06-05:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-17T01:13:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
+last semester, but I thought it might be nice to have something to point people
+who missed it to, in order to stick to my assignment
+and begin at the Yoneda lemma. So, here is yet another rendition of the first
+hour of a category theory class.&lt;/p&gt;
+
+&lt;p&gt;The treatment is brisk. To the interested reader,
+I would highly recommend Emily Riehl’s &lt;a href=&quot;http://www.math.jhu.edu/~eriehl/context.pdf&quot;&gt;&lt;em&gt;Category Theory in Context&lt;/em&gt;&lt;/a&gt;,
+which is the main inspiration here and
+has the advantage of being available on the author’s website.
+I also recommend Saunders Mac Lane’s 
+&lt;em&gt;Category Theory for the Working Mathematician&lt;/em&gt;
+and Francis Borceux’s &lt;em&gt;Handbook of Categorical Algebra.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;categories&quot;&gt;Categories&lt;/h2&gt;
+&lt;p&gt;A &lt;em&gt;category&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is a collection of &lt;em&gt;objects,&lt;/em&gt; say &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;, and 
+&lt;em&gt;arrows&lt;/em&gt; between them, say &lt;script type=&quot;math/tex&quot;&gt;f\colon c\to d&lt;/script&gt;.
+Given a pair of arrows as below&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}\begin{CD} a @&gt;f&gt;&gt; b @&gt;g&gt;&gt; c,\end{CD}&lt;/script&gt;
+
+&lt;p&gt;we require the existence of their &lt;em&gt;composition,&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;gf\colon a\to c&lt;/script&gt;.
+Composition is associative, and for each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, there is a
+(unique) arrow &lt;script type=&quot;math/tex&quot;&gt;1_c\colon c\to c&lt;/script&gt; which acts as an identity for composition
+of arrows.&lt;/p&gt;
+
+&lt;p&gt;Many familiar mathematical objects assemble into categories.
+To wit, there is the &lt;em&gt;category of sets,&lt;/em&gt; where objects are sets
+and arrows are functions of sets, and the &lt;em&gt;category of topological spaces,&lt;/em&gt;
+where objects are topological spaces and arrows are continuous maps.
+However, the notion of a category is flexible: not all categories
+have “sets with additional structure” as objects.
+For instance, a &lt;em&gt;preorder&lt;/em&gt; is the same data as a category
+where there is at most one arrow between any two objects.
+Here an arrow &lt;script type=&quot;math/tex&quot;&gt;c\to d&lt;/script&gt; should be interpreted as saying &lt;script type=&quot;math/tex&quot;&gt;c\le d&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that I use the term &lt;em&gt;collection&lt;/em&gt; advisedly: Russell’s paradox
+says that there can be no set of all sets, so the category of
+sets has more than a set’s worth of objects! However,
+between any two sets, there is only a set’s worth of distinct functions.
+That is, if &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; are sets, there is a &lt;em&gt;set&lt;/em&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Set}(a,b) = \{f\colon a \to b\}.&lt;/script&gt;
+
+&lt;p&gt;Categories where this is the case for all objects are called &lt;em&gt;locally small.&lt;/em&gt;
+If additionally there is only a set’s worth of arrows in the entire category
+(and thus only a set’s worth of objects!), the category is called &lt;em&gt;small.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; are categories, a &lt;em&gt;functor&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt;
+is an assignment&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{CD}a &amp;\mapsto &amp;Fa \\ @VfVV \mapsto @VVFfV \\ b &amp;\mapsto &amp;Fb.\end{CD} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;I.e. for each object &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is an object &lt;script type=&quot;math/tex&quot;&gt;Fa&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;,
+and for each arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon a\to b&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is an arrow
+&lt;script type=&quot;math/tex&quot;&gt;Ff\colon Fa\to Fb&lt;/script&gt;. Additionally, &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is required to satisfy&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F1_{a} = 1_{Fa}&lt;/script&gt;
+
+&lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; must
+respect composition in the sense that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(gf) = FgFf.&lt;/script&gt;
+
+&lt;p&gt;Such functors are sometimes called &lt;em&gt;covariant.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Every category &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has an &lt;em&gt;opposite category&lt;/em&gt; 
+&lt;script type=&quot;math/tex&quot;&gt;\newcommand{\op}{^{\mathrm{op}}}C\op&lt;/script&gt;, which is obtained from
+formally reversing the direction of all the arrows.
+Thus if &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has arrows&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD} a @&gt;f&gt;&gt; b @&gt;g&gt;&gt; c,\end{CD}&lt;/script&gt;
+
+&lt;p&gt;then &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt; has arrows&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{CD} a @&lt;f\op&lt;&lt; b @&lt;g\op&lt;&lt; c.\end{CD} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Any statement about objects and arrows in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has a &lt;em&gt;dual&lt;/em&gt;
+statement about objects and arrows in &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt;, which is obtained
+by reversing the direction of all the arrows.
+If the proof of the original statement is categorical,
+dualizing the proof yields a proof of the dual statement for &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The definition of a functor admits dualization in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; or in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.
+The import is essentially the same as long as only one dualization is
+performed: the result is a &lt;em&gt;contravariant functor&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;G\colon C\op \to D&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{CD} a &amp;\mapsto &amp; Ga \\ @VfVV \mapsto @AAGfA \\ b &amp;\mapsto &amp;Gb.
+\end{CD} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Functors abound in mathematics. Many are so simple that we hardly think about
+them: for instance the “forgetful” 
+functor from the category of groups and homomorphisms
+to sets that sends a group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; to its set of elements,
+and a group homomorphism to its action on underlying sets.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is a locally small category and &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; is an object,
+there are two particularly important functors &lt;script type=&quot;math/tex&quot;&gt;C \to \operatorname{Set}&lt;/script&gt;.
+Write &lt;script type=&quot;math/tex&quot;&gt;C(c,b)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C(b,c)&lt;/script&gt; for the set of arrows in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
+with domain and codomain &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, respectively.
+If &lt;script type=&quot;math/tex&quot;&gt;f\colon b\to d&lt;/script&gt; is an arrow in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there are
+functions&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_*\colon C(c,b) \to C(c,d) \text{ and }f^*\colon C(d,c) \to C(b,c)&lt;/script&gt;
+
+&lt;p&gt;defined as &lt;script type=&quot;math/tex&quot;&gt;f_*(g) = fg&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f^*(h) = hf&lt;/script&gt;, respectively.
+The assignments&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{CD} b &amp;\mapsto &amp; C(c,b) &amp;\qquad\qquad &amp;b &amp;\mapsto &amp; C(b,c) \\
+    @VfVV \mapsto @VVf_*V \qquad\qquad @VfVV \mapsto @AAf*A \\
+    d &amp;\mapsto &amp;C(c,d) &amp;\qquad\qquad &amp;d &amp;\mapsto &amp; C(d,c)
+  \end{CD} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;define covariant and contravariant functors 
+&lt;script type=&quot;math/tex&quot;&gt;C(c,-)\colon C \to \operatorname{Set}&lt;/script&gt; and&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;C(-,c)\colon C\op\to\operatorname{Set}&lt;/script&gt;, respectively.&lt;/p&gt;
+
+&lt;h3 id=&quot;natural-transformations&quot;&gt;Natural Transformations&lt;/h3&gt;
+&lt;p&gt;Just as we have defined functors between categories,
+it is  useful to consider &lt;em&gt;functor categories,&lt;/em&gt;
+whose elements are functors &lt;script type=&quot;math/tex&quot;&gt;C\to D&lt;/script&gt;. To do this, we need 
+a  notion of a morphism between functors. It turns out
+that the right notion is a &lt;em&gt;natural transformation.&lt;/em&gt;
+If &lt;script type=&quot;math/tex&quot;&gt;F,G\colon C \to D&lt;/script&gt; are functors, a natural transformation
+&lt;script type=&quot;math/tex&quot;&gt;\eta\colon F\Rightarrow G&lt;/script&gt; is a collection of maps
+&lt;script type=&quot;math/tex&quot;&gt;\eta_c\colon Fc \to Gc&lt;/script&gt;, one for each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
+such that for every arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon c \to d&lt;/script&gt;, the following
+diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+  Fc @&gt;\eta_c&gt;&gt; Gc \\
+  @VFfVV @VVGfV \\
+  Fd @&gt;\eta_d&gt;&gt; Gd.
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;Any directed path in a diagram of objects and arrows within
+a category like the above yields an arrow from the initial 
+“vertex” of the path to the terminal one by reading off the
+labelled arrows. A diagram &lt;em&gt;commutes&lt;/em&gt; if any two directed
+paths with the same endpoints yield equal arrows.
+Thus, to say that the above diagram commutes asserts the
+equality&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Gf\eta_c = \eta_d Ff.&lt;/script&gt;
+
+&lt;p&gt;The standard example of a natural transformation is the following.
+Let &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; be a field, and consider the category of &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-vector spaces
+and linear transformations. There is a contravariant functor
+that sends a vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; to its &lt;em&gt;dual&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;V^*&lt;/script&gt;, namely the vector
+space of linear transformations &lt;script type=&quot;math/tex&quot;&gt;V\to k&lt;/script&gt;.
+A linear map &lt;script type=&quot;math/tex&quot;&gt;f\colon V \to W&lt;/script&gt; is sent to a map &lt;script type=&quot;math/tex&quot;&gt;f^*\colon W^*\to V^*&lt;/script&gt;
+which is defined as follows.
+If &lt;script type=&quot;math/tex&quot;&gt;\lambda\colon W \to k&lt;/script&gt; is an element of &lt;script type=&quot;math/tex&quot;&gt;W^*&lt;/script&gt;,
+&lt;script type=&quot;math/tex&quot;&gt;f^*(\lambda)&lt;/script&gt; is the linear  map&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda f\colon V\to k.&lt;/script&gt;
+
+&lt;p&gt;Thus there is a &lt;em&gt;covariant&lt;/em&gt; functor sending a vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;
+to its “double dual” &lt;script type=&quot;math/tex&quot;&gt;V^{**}=(V^*)^*&lt;/script&gt;.
+There is a natural transformation &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; from the identity functor
+to the double dual functor.
+At a given vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;, the map &lt;script type=&quot;math/tex&quot;&gt;ev_V&lt;/script&gt; sends a vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;
+to the linear map &lt;script type=&quot;math/tex&quot;&gt;V^*\to k&lt;/script&gt; defined by “evaluation at &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;,”
+namely&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda \mapsto \lambda(v),\quad  \lambda \in V^*.&lt;/script&gt;
+
+&lt;p&gt;Naturality of &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; asserts that for &lt;script type=&quot;math/tex&quot;&gt;f\colon V \to W&lt;/script&gt;
+a linear map, the following diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+  V @&gt;ev_V&gt;&gt; V^{**} \\
+  @VfVV @VVf^{**}V \\
+  W @&gt;ev_W&gt;&gt; W^{**}.
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;To show this, consider a vector &lt;script type=&quot;math/tex&quot;&gt;v \in V&lt;/script&gt;.
+The element &lt;script type=&quot;math/tex&quot;&gt;f^{**}(ev_V(v)) \in W^{**}&lt;/script&gt; is
+the linear map&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;ev_V(v)\circ f^*\colon W^*\to k,&lt;/script&gt;
+
+&lt;p&gt;so its action on &lt;script type=&quot;math/tex&quot;&gt;\lambda \in W*&lt;/script&gt; is&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;ev_V(v)(f^*(\lambda)) = ev_V(v)(\lambda f) = 
+\lambda (f(v)) = ev_W(f(v))(\lambda),&lt;/script&gt;
+
+&lt;p&gt;demonstrating naturality.&lt;/p&gt;
+
+&lt;p&gt;The map &lt;script type=&quot;math/tex&quot;&gt;ev_V&lt;/script&gt; is an isomorphism when &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; is finite dimensional.
+Thus we say that when restricted to the &lt;em&gt;subcategory&lt;/em&gt;
+of finite dimensional vector spaces, &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; is a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-yoneda-lemma&quot;&gt;The Yoneda Lemma&lt;/h3&gt;
+&lt;p&gt;Perhaps the fundamental result in category theory
+is the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; (The Yoneda Lemma)    &lt;br /&gt;
+ Let &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; be a locally small category and
+ &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to \operatorname{Set}&lt;/script&gt; a functor.
+ For each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is a bijection&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\{\alpha\colon C(c,-)\Rightarrow F\} \longleftrightarrow \{x \in Fc\}&lt;/script&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;implemented by sending a natural transformation
+ &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; to the element &lt;script type=&quot;math/tex&quot;&gt;\alpha_c(1_c)&lt;/script&gt;.
+ This bijection is natural in &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The proof is straightforward, once one figures out what needs proving.
+The utility of the Yoneda lemma is likely 
+far from obvious when one first meets it,
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -115,7 +336,7 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="http://localhost:4000/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>http://localhost:4000/2019/07/13/A-Digression</id><content type="html" xml:base="http://localhost:4000/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
 on set theory vs. category theory.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 
@@ -183,7 +404,7 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -259,7 +480,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;
