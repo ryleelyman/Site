@@ -2,13 +2,16 @@
 Department of Mathematics  
 [Tufts University](http://math.tufts.edu/)
 
-My research interests are geometric topology, CAT(0) and
-hyperbolic geometry, and geometric group theory.  
+I like thinking about topics realated to outer automorphisms of free groups and
+mapping classes of surface diffeomorphisms.
+I'm curious about geometric topology, geometric group theory, Teichmüller theory,
+tropical geometry, orbifolds, etc.    
 Curriculum Vitae: [PDF]
 
-In the fall I will be entering my fifth year;
-I will also be on the academic job market.
+I am graduating!
 My advisor is [Kim Ruane](http://www.tufts.edu/~kruane01/).
+In the fall I will be a postdoc at
+[Rutgers University Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
 
 My email address is <rylee.lyman@tufts.edu>.  
 Office: Bromfield–Pearson 207

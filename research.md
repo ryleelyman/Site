@@ -31,12 +31,16 @@ on CAT(0) metric spaces.
 
 ## Other Manuscripts
 
+[Here are slides][Thesis Slides] made in Notability for my thesis defense,
+titled Train Tracks and Outer Automorphisms of Hyperbolic Groups.
+
 [Here are slides][Braid Slides] from a lightning talk titled 
 **Recognizing Pseudo-Anosov Braids in Out($$W_n$$).**
 
 [Here are slides][Free By Z Slides] from a recent talk titled
 **Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups.**
 
+[Thesis Slides]: {{ "assets/pdfs/Thesis Defense.pdf" | relative_url }}
 [Free By Z Slides]: {{ "assets/pdfs/freebyz.pdf" | relative_url }}
 [Braid Slides]: {{ "assets/pdfs/PseudoAnosovBraid.pdf" | relative_url }}
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
