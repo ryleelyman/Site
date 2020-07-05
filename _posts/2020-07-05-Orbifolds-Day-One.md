@@ -45,7 +45,7 @@ and the resulting map $$\varphi = \coprod_{i\in I}\varphi_i$$ is differentiable
 (in fact a local diffeomorphism).
 The maps $$f_{ij}$$ assemble into a map $$F\colon U \to V$$ such that the following diagram commutes
 
-$$\require{amsCD}\begin{CD} U @>F>> V \\ @VV\varphiV @VV\psiV \\ M @>f>> N. \end{CD}$$
+$$\require{AMScd}\begin{CD} U @>F>> V \\ @VV\varphi V @VV\psi V \\ M @>f>> N. \end{CD}$$
 
 And we are justified in saying that $$f$$ is differentiable when there exists
 a map $$F$$ constructed as above.
