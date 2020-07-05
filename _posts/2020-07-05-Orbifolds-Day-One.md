@@ -1,3 +1,7 @@
+---
+layout: post
+math: true
+---
 I wrote [some notes][Notes] introducing orbifolds from Haefliger's perspective in *Metric Spaces of Non-positive Curvature*.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.

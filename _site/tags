@@ -1566,6 +1566,7 @@ math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	_posts/2019-07-13-A-Digression.md	/^math: true$/;"	s
 math: true	_posts/2019-09-06-Choo-Choo.md	/^math: true$/;"	s
 math: true	_posts/2020-02-16-Category-Theory-Day-One.md	/^math: true$/;"	s
+math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
