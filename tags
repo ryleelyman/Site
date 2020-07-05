@@ -6,7 +6,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	0.0.0	/6184ac86/
+!_TAG_PROGRAM_VERSION	0.0.0	/02cf1a6/
 *	_site/assets/css/style.css	/^* { box-sizing: border-box; }$/;"	s
 *	_site/assets/css/styles.css	/^* { max-width: var(--measure); box-sizing: border-box; }$/;"	s
 ---	assets/text/bio.md	/^---$/;"	s
@@ -1475,7 +1475,6 @@ The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yon
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
 Upcoming Travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	i
-Upcoming Travel	research.md	/^## Upcoming Travel$/;"	s	chapter:Research
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s

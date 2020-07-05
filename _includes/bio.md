@@ -1,19 +1,19 @@
-**PhD Candidate**  
+**Postdoc**  
 Department of Mathematics  
-[Tufts University](http://math.tufts.edu/)
+[Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science)
 
-I like thinking about topics realated to outer automorphisms of free groups and
+I like thinking about topics related to outer automorphisms of free groups and
 mapping classes of surface diffeomorphisms.
 I'm curious about geometric topology, geometric group theory, Teichmüller theory,
 tropical geometry, orbifolds, etc.    
 Curriculum Vitae: [PDF]
 
-I am graduating!
-My advisor is [Kim Ruane](http://www.tufts.edu/~kruane01/).
+I earned my PhD in Mathematics from [Tufts University](https://math.tufts.edu),
+where my advisor was [Kim Ruane](http://www.tufts.edu/~kruane01/).
 In the fall I will be a postdoc at
-[Rutgers University Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
+[Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
+My advisor at Rutgers is Lee Mosher.
 
-My email address is <rylee.lyman@tufts.edu>.  
-Office: Bromfield–Pearson 207
+My email address is <rylee.lyman@rutgers.edu>.  
 
 [pdf]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
