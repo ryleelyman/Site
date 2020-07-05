@@ -80,5 +80,5 @@ titled Train Tracks and Outer Automorphisms of Hyperbolic Groups.
 [Free By Z Slides]: {{ "assets/pdfs/freebyz.pdf" | relative_url }}
 [Braid Slides]: {{ "assets/pdfs/PseudoAnosovBraid.pdf" | relative_url }}
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
-Nielsen: {{ "assets/pdfs/Nielsen_v3.pdf" | relative_url }}
+[Nielsen]: {{ "assets/pdfs/Nielsen_v3.pdf" | relative_url }}
 [traintracksorbigraphs]: https://arxiv.org/abs/1909.03097

@@ -1460,7 +1460,7 @@ Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3
 Other Manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
 Other Manuscripts	research.md	/^## Other Manuscripts$/;"	s	chapter:Research
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
-Publications and Preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
+Publications and Preprints	_site/research.html	/^    <h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Publications and Preprints	research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Research	research.md	/^# Research $/;"	c
@@ -1474,7 +1474,6 @@ The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda L
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
-Upcoming Travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	i
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
@@ -1586,7 +1585,7 @@ pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, 
 pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono/;"	s
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
-publications-and-preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
+publications-and-preprints	_site/research.html	/^    <h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
@@ -1630,7 +1629,6 @@ ul	_site/assets/css/style.css	/^ul, ol { padding-left: 0; margin-top: 0; margin-
 ul ol	_site/assets/css/style.css	/^ol ol, ul ol { list-style-type: lower-roman; }$/;"	s
 ul ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 ul ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
-upcoming-travel	_site/research.html	/^<h2 id="upcoming-travel">Upcoming Travel<\/h2>$/;"	I
 video	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 xsi	_site/sitemap.xml	/^<urlset xmlns:xsi="http:\/\/www.w3.org\/2001\/XMLSchema-instance" xsi:schemaLocation="http:\/\/w/;"	n	uri:http://www.w3.org/2001/XMLSchema-instance
 {{ page.title }}	_layouts/post.html	/^<h1>{{ page.title }}<\/h1>$/;"	h
