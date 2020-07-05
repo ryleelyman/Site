@@ -8,7 +8,7 @@ math: true
 [Here is my CV][CV].
 
 - **Doubly-Uniform Exponential Growth for Free-By-Cyclic Groups**  
-(with Robert Kropholler and Thomas Ng)  
+(with [Robert Kropholler](http://www.robertkropholler.com) and [Thomas Ng](https://sites.google.com/site/thomasng192/))  
 *In preparation.*
 ## Publications and Preprints
 
@@ -33,7 +33,8 @@ Abstract:
 > we collect some open problems we find interesting.
 
 - **Nielsen realization for infinite-type surfaces** 
-(with Santana Afton, Danny Calegari and Lvzhou Chen)  
+(with [Santana Afton](http://people.math.gatech.edu/~safton3/), 
+[Danny Calegari](http://math.uchicago.edu/~dannyc/) and [Lvzhou Chen](http://math.uchicago.edu/~lzchen/))  
 *Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)
 
 Abstract for v3 (available [here][Nielsen]):
