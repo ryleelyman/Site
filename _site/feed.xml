@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-05T12:18:37-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;This is a placeholder for a blog post introducing the ideas in &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;these notes&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a placeholder for a blog post introducing the ideas in these notes.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-05T12:44:19-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
+There is some surprisingly heavy machinery that goes into it.
+In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
+
+&lt;p&gt;An &lt;em&gt;orbifold&lt;/em&gt; of dimension &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; is a Hausdorff space locally modeled on &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt; modulo
+the action of a finite group.
+This is a simple enough idea on its face:
+a useful perspective on the fundamental group of a manifold 
+is the passage between its action on the universal cover
+and the calculus of loops in the base space.
+For a group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; that acts merely properly discontinuously and not freely,
+the quotient space is no longer a manifold,
+and yet we would like to accesss the “loops” perspective regardless.
+This is the idea that orbifolds are trying to capture.
+It is maybe surprising both how successful this project is,
+and yet how much more complex the theory becomes.&lt;/p&gt;
+
+&lt;p&gt;Let’s remember back to when we learned Calculus.
+First we learned how to manipulate real-valued functions of one variable,
+and later multivariable functions &lt;script type=&quot;math/tex&quot;&gt;f\colon \mathbb{R}^m \to \mathbb{R}^n&lt;/script&gt;.
+In particular, we defined a notion of differentiability for these maps.
+To replicate this effort on differentiable manifolds,
+one uses &lt;em&gt;charts.&lt;/em&gt; The idea is that the local structure of a manifold &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;
+can be captured by a map &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon U \to M&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; is an
+open subset of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt;.
+A map of manifolds &lt;script type=&quot;math/tex&quot;&gt;f\colon M \to N&lt;/script&gt; is &lt;em&gt;defined&lt;/em&gt; to be differentiable
+if its expression in any pair of charts is differentiable.&lt;/p&gt;
+
+&lt;p&gt;A ridiculously maximalist approach to this idea is the following:
+suppose &lt;script type=&quot;math/tex&quot;&gt;(U_i,\varphi_i)_{i\in I}&lt;/script&gt; is an &lt;em&gt;atlas&lt;/em&gt; for &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;
+(in the usual sense), and that &lt;script type=&quot;math/tex&quot;&gt;(V_j,\psi_j)_{j\in J}&lt;/script&gt;
+is an atlas for &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt;.
+A function &lt;script type=&quot;math/tex&quot;&gt;f\colon M \to N&lt;/script&gt;
+defines a map &lt;script type=&quot;math/tex&quot;&gt;f_{ij}\colon U_i \to V_j&lt;/script&gt;
+whenever &lt;script type=&quot;math/tex&quot;&gt;f\varphi_i(U_i) \subset \psi_j(V_j)&lt;/script&gt;.
+By refining the open cover of &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;, we can assume this is always the case.
+We can do the following strange thing:
+the disjoint union &lt;script type=&quot;math/tex&quot;&gt;U = \coprod_{i\in I}U_i&lt;/script&gt;
+is a differentiable manifold, each of whose components is an open subset of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^m&lt;/script&gt;,
+and the resulting map &lt;script type=&quot;math/tex&quot;&gt;\varphi = \coprod_{i\in I}\varphi_i&lt;/script&gt; is differentiable
+(in fact a local diffeomorphism).
+The maps &lt;script type=&quot;math/tex&quot;&gt;f_{ij}&lt;/script&gt; assemble into a map &lt;script type=&quot;math/tex&quot;&gt;F\colon U \to V&lt;/script&gt; such that the following diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{amsCD}\begin{CD} U @&gt;F&gt;&gt; V \\ @VV\varphiV @VV\psiV \\ M @&gt;f&gt;&gt; N. \end{CD}&lt;/script&gt;
+
+&lt;p&gt;And we are justified in saying that &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is differentiable when there exists
+a map &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; constructed as above.
+What we have done, essentially, is said that we don’t understand the quotient manifold,
+but we &lt;em&gt;do&lt;/em&gt; understand open subsets of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^m&lt;/script&gt;, and have performed
+a non-unique but useful construction to exploit that understanding.
+This is the jumping-off point for orbifolds.&lt;/p&gt;
+
+&lt;p&gt;There is just one more wrinkle: 
+the definition of an atlas includes various differentiable maps
+called &lt;em&gt;changes of charts.&lt;/em&gt; It would be convenient if there
+were a way to stipulate that our map &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; must play nicely with these changes of charts
+beyond just saying that there exists a map on the quotient space.
+This is where Lie Groupoids come in: they turn out to be precisely the gadget we need
+to manage the expression of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; in charts while asserting that these expressions
+play nicely with the changes of charts.
+I’ll let you read the notes—and Haefliger too, hopefully.
+Next time I’ll try to wrap my head around the fundamental group of an orbifold,
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
 in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
 last semester, but I thought it might be nice to have something to point people
 who missed it to, in order to stick to my assignment
