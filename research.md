@@ -32,7 +32,7 @@ Abstract:
 > "periodic, reducible of pseudo-Anosov." At the end of the thesis
 > we collect some open problems we find interesting.
 
-- **Nielsen realization for infinite-type surfaces**
+- **Nielsen realization for infinite-type surfaces** 
 (with Santana Afton, Danny Calegari and Lvzhou Chen)  
 *Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)
 
@@ -63,7 +63,7 @@ Abstract:
 > Our results apply to automorphisms of a free product of $$n$$ copies of a finite group $$A$$,
 > as well as to palindromic and symmetric automorphisms of a free group of finite rank.
 > Of independent interest, a key tool in our proof is the construction of relative train track maps
-> on orbigraphs, certain graphs of groups thought of as orbi-spaces.[
+> on orbigraphs, certain graphs of groups thought of as orbi-spaces.
 
 ## Other Manuscripts
 

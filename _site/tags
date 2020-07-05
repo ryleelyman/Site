@@ -1455,6 +1455,8 @@ Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
+Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
+Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
 Other Manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
