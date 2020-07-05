@@ -32,7 +32,7 @@ Abstract:
 > "periodic, reducible of pseudo-Anosov." At the end of the thesis
 > we collect some open problems we find interesting.
 
-- **Nielsen realization for infinite-type surfaces** 
+- **Nielsen realization for infinite-type surfaces**  
 (with [Santana Afton](http://people.math.gatech.edu/~safton3/), 
 [Danny Calegari](http://math.uchicago.edu/~dannyc/) and [Lvzhou Chen](http://math.uchicago.edu/~lzchen/))  
 *Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)
