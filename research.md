@@ -7,10 +7,11 @@ math: true
 
 [Here is my CV][CV].
 
+## Publications and Preprints
+
 - **Doubly-Uniform Exponential Growth for Free-By-Cyclic Groups**  
 (with [Robert Kropholler](http://www.robertkropholler.com) and [Thomas Ng](https://sites.google.com/site/thomasng192/))  
 *In preparation.*
-## Publications and Preprints
 
 - **Train Tracks on Graphs of Groups and Outer Automorphisms of Hyperbolic Groups**  
 *PhD thesis*. Available at: [arXiv:2005.00164](https://arxiv.org/abs/2005.00164)
