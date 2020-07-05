@@ -14,9 +14,8 @@ math: true
 *In preparation.*
 
 - **Train Tracks on Graphs of Groups and Outer Automorphisms of Hyperbolic Groups**  
-*PhD thesis*. Available at: [arXiv:2005.00164](https://arxiv.org/abs/2005.00164)
-
-Abstract:
+*PhD thesis*. Available at: [arXiv:2005.00164](https://arxiv.org/abs/2005.00164)  
+Abstract:  
 > Stallings remarked that an outer automorphism of a free group
 > may be thought of as a subdivision of a graph followed by a sequence of folds.
 > In this thesis, we prove that automorphisms of fundamental groups of graphs of groups
@@ -36,9 +35,8 @@ Abstract:
 - **Nielsen realization for infinite-type surfaces**  
 (with [Santana Afton](http://people.math.gatech.edu/~safton3/), 
 [Danny Calegari](http://math.uchicago.edu/~dannyc/) and [Lvzhou Chen](http://math.uchicago.edu/~lzchen/))  
-*Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)
-
-Abstract for v3 (available [here][Nielsen]):
+*Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)  
+Abstract for version 3 (available [here][Nielsen]):  
 > Given a subgroup $$G$$ of the mapping class group of a surface $$S$$,
 > the Nielsen realization problem asks whether $$G$$ can be realized
 > as a finite group of homeomorphisms of $$S$$. In 1983, Kerckhoff
@@ -53,8 +51,8 @@ Abstract for v3 (available [here][Nielsen]):
 > and locally compact subgroups are discrete.
 
 - **Train Tracks, Orbigraphs and CAT(0) Free-By-Cyclic Groups**  
-*Awaiting revision.* Available at: [arXiv:1909.03097][traintracksorbigraphs]
-Abstract:
+*Awaiting revision.* Available at: [arXiv:1909.03097][traintracksorbigraphs]  
+Abstract:  
 > Gersten gave an example of a polynomially-growing automorphism of $$F_3$$
 > whose mapping torus $$F_3\rtimes\mathbb{Z}$$ cannot act properly by semi-simple
 > isometries on a CAT(0) metric space. By contrast, we show that if $$\Phi$$
