@@ -117,12 +117,12 @@ and tracing the double composition,
 we see that we have $$a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha$$.
 This map will be an isomorphism as soon as we can show that the germ of
 $$f - f_{df_p}$$ belongs to $$\mathfrak{m}_p^2$$, i.e.
-can be written as $$ g_1h_1 + \dotsb g_kh_k$$ 
+can be written as $$ g_1h_1 + \dotsb g_kh_k$$ for some
 smooth functions $$g_i$$ and $$h_i$$ whose germs belong to $$\mathfrak{m}_p$$.
 This is the statement of Taylor's theorem!
 
 Even better, the map $$\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X$$
-is a *natural isomorphism* in the sense that given a smooth map
+is a *natural isomorphism,* in the sense that given a smooth map
 $$\varphi\colon X \to Y$$ of smooth manifolds such that
 $$\varphi(p) = q$$, the following diagram commutes
 
@@ -155,5 +155,5 @@ in our definition of the algebraic cotangent space,
 and we would still end up with a real vector space associated to every stalk.
 In some sense, this says that the only reason one never speaks of a (co)tangent
 space associated to a point in a general topological space is that
-there's no reason like Taylor's theorem for the space to be finite-dimensional!
+there's no reason—like Taylor's theorem—for the space to be finite-dimensional!
 
