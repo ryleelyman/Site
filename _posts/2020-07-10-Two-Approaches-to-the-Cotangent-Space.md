@@ -60,7 +60,7 @@ I won't attempt to make this more precise, except to note that
 after we choose local coordinates $$(x_1,\dotsc,x_n)$$ near $$p = (p_1,\dotsc,p_n)$$,
 a basis for $$T_pX$$ is given by
 
-$$ \frac{\partial}{\partial x_1}\big|_p,\dotsc, \frac{\partial}{\partial x_n}\big|_p. $$
+$$ \frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p. $$
 
 
 The *cotangent space,* which we are more interested in is the
