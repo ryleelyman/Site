@@ -10,6 +10,7 @@ math: true
   {% for post in site.posts %}
   <li>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	  {{ post.date | date: '%B %-d, %Y' }}<br />
       <p>{{ post.excerpt }}</p>
   </li>
   {% endfor %}
