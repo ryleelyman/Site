@@ -156,4 +156,11 @@ and we would still end up with a real vector space associated to every stalk.
 In some sense, this says that the only reason one never speaks of a (co)tangent
 space associated to a point in a general topological space is that
 there's no reason—like Taylor's theorem—for the space to be finite-dimensional!
+Actually, the truth is slightly more subtle:
+every continuous function has a continuous ``square root'' in the sense
+that we can always write $$f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}$$,
+and the functions $$\sqrt{f}$$ and $$\operatorname{sgn}(f)\sqrt(f)$$ are continuous.
+Therefore it is $$\mathfrak{m}_p$$ that is infinite-dimensional,
+while $$\mathfrak{m}_p/\mathfrak{m}_p^2 = 0$$.
+(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)
 
