@@ -1,4 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-05T15:46:19-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-10T10:59:15-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+for a locally-ringed space.
+In the case of the sheaf of differentiable functions on a smooth manifold,
+the two definitions agree.
+What’s more, modulo the appropriate background technology in both subjects,
+the proof is beautiful and simple—I feel like shouting it from the rooftops
+at the moment, so this blog post will try and give a little exposition.
+I’ll try to move briskly without assuming total familiarity with either side of things.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-algebraic-cotangent-space&quot;&gt;The Algebraic Cotangent Space&lt;/h2&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; be a smooth manifold of dimension &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;.
+The &lt;em&gt;sheaf&lt;/em&gt; of differentiable functions on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is a
+contravariant functor from the category of open subsets of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; to the category of rings
+that assigns to an open set &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt;
+the ring &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt; of differentiable functions &lt;script type=&quot;math/tex&quot;&gt;f\colon U \to \mathbb{R}&lt;/script&gt;—addition
+and multiplication in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt; are done pointwise in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The sheaf is not so important for us;
+what we are interested in today are the &lt;em&gt;stalks.&lt;/em&gt;
+The idea is that elements of the &lt;em&gt;stalk,&lt;/em&gt;
+called &lt;em&gt;germs&lt;/em&gt; capture the “infinitesimal behavior”
+of smooth functions at a point.
+Here is the formal definition.
+Given a point &lt;script type=&quot;math/tex&quot;&gt;p \in X&lt;/script&gt;, 
+the &lt;em&gt;stalk&lt;/em&gt; of &lt;em&gt;germs&lt;/em&gt; of smooth functions at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is the ring&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.&lt;/script&gt;
+
+&lt;p&gt;The equivalence relation &lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt; is defined as follows:
+we say &lt;script type=&quot;math/tex&quot;&gt;(f,U) \sim (g,V)&lt;/script&gt; if there exists an open neighborhood
+&lt;script type=&quot;math/tex&quot;&gt;U' \subset U \cap V&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f|_{U'} = g|_{U'}&lt;/script&gt;.
+The equivalence class of &lt;script type=&quot;math/tex&quot;&gt;(f,U)&lt;/script&gt; is its &lt;em&gt;germ.&lt;/em&gt;
+The ring &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p&lt;/script&gt; is the direct limit of the &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt;
+as &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; varies over the open neighborhoods of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notice that there is a surjection &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p \to \mathbb{R}&lt;/script&gt;
+that sends the germ of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;f(p)\in \mathbb{R}&lt;/script&gt;.
+The definition is independent of the choice of representative &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;.
+Since &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt; is a field, the kernel of the map
+is a maximal ideal; let’s call it &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;.
+Observe that 
+&lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2&lt;/script&gt; is a module over
+&lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}&lt;/script&gt;, 
+i.e. a real vector space;
+we will call it the &lt;em&gt;algebraic cotangent space at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-usual-cotangent-space&quot;&gt;The Usual Cotangent Space&lt;/h2&gt;
+
+&lt;p&gt;We retain our manifold &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and point &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; from the previous section.
+The &lt;em&gt;tangent space at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;,&lt;/em&gt; denoted &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt;
+can be thought of as the space of “directions” in &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+This is made precise by defining it to be the space of
+directional &lt;em&gt;derivatives&lt;/em&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+I won’t attempt to make this more precise, except to note that
+after we choose local coordinates &lt;script type=&quot;math/tex&quot;&gt;(x_1,\dotsc,x_n)&lt;/script&gt; near &lt;script type=&quot;math/tex&quot;&gt;p = (p_1,\dotsc,p_n)&lt;/script&gt;,
+a basis for &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt; is given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial}{\partial x_1}\big|_p,\dotsc, \frac{\partial}{\partial x_n}\big|_p.&lt;/script&gt;
+
+&lt;p&gt;The &lt;em&gt;cotangent space,&lt;/em&gt; which we are more interested in is the
+&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast x&lt;/script&gt;.
+Elements of the cotangent space are &lt;em&gt;linear functionals&lt;/em&gt; on tangent vectors.
+Given coordinates &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt;,
+the &lt;em&gt;dual basis&lt;/em&gt; of the cotangent space is given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;dx_1,\dotsc dx_n,&lt;/script&gt;
+
+&lt;p&gt;so we have &lt;script type=&quot;math/tex&quot;&gt;dx_i\left( \frac{\partial}{\partial x_j}|_p\right)&lt;/script&gt; equal to &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;
+when &lt;script type=&quot;math/tex&quot;&gt;i = j&lt;/script&gt; and equal to &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; otherwise.
+(There perhaps ought to be some notational inclusion of the point &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;,
+but we will suppress this.)&lt;/p&gt;
+
+&lt;h2 id=&quot;the-algebraic-cotangent-space-agrees-with-the-usual-one&quot;&gt;The Algebraic Cotangent Space Agrees With the Usual One&lt;/h2&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a smooth function on an open neighborhood of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;
+satisfying &lt;script type=&quot;math/tex&quot;&gt;f(p) = 0&lt;/script&gt;,
+abusing notation, we shall write the corresponding element of
+&lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2&lt;/script&gt;
+as &lt;script type=&quot;math/tex&quot;&gt;f + \mathfrak{m}_p^2&lt;/script&gt;.
+Given such an element,
+I claim we can interpret &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as a linear functional on tangent vectors at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;
+by sending a tangent vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; to the value of the directional derivative of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+For instance, in local coordinates &lt;script type=&quot;math/tex&quot;&gt;(x_1,\dotsc,x_n)&lt;/script&gt;,
+the vector &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial}{\partial x_i}|_p&lt;/script&gt; is sent to &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial f}{\partial x_i}(p)&lt;/script&gt;.
+Extending linearly defines a linear functional on &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt;,
+which we shall denote &lt;script type=&quot;math/tex&quot;&gt;df_p&lt;/script&gt;.
+The value of the directional derivative of a function depends only on its germ
+essentially by definition,
+and the product rule from calculus tells us that the assignment
+&lt;script type=&quot;math/tex&quot;&gt;f \mapsto df_p&lt;/script&gt; sends elements of &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p^2&lt;/script&gt; to the zero functional.
+The linearity of the derivative implies that &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;-linear combinations
+of germs are sent to &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;-linear combinations of functionals,
+so the assignment&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f + \mathfrak{m}_p^2 \mapsto df_p&lt;/script&gt;
+
+&lt;p&gt;really defines a map &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;We claim this map is an isomorphism, for which it suffices to define an inverse.
+Choose local coordinates &lt;script type=&quot;math/tex&quot;&gt;\vec x = (x_1,\dotsc,x_n)&lt;/script&gt; around &lt;script type=&quot;math/tex&quot;&gt;\vec p = (p_1,\dotsc,p_n)&lt;/script&gt;.
+A general element &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast X&lt;/script&gt;
+may be written as the linear combination
+&lt;script type=&quot;math/tex&quot;&gt;\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.&lt;/script&gt;
+Write &lt;script type=&quot;math/tex&quot;&gt;\vec a = (a_1,\dotsc,a_n)&lt;/script&gt;.
+The function &lt;script type=&quot;math/tex&quot;&gt;f_\alpha&lt;/script&gt; defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)&lt;/script&gt;
+
+&lt;p&gt;clearly has germ belonging to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;,
+and tracing the double composition,
+we see that we have &lt;script type=&quot;math/tex&quot;&gt;a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha&lt;/script&gt;.
+This map will be an isomorphism as soon as we can show that the germ of
+&lt;script type=&quot;math/tex&quot;&gt;f - f_{df_p}&lt;/script&gt; belongs to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p^2&lt;/script&gt;, i.e.
+can be written as &lt;script type=&quot;math/tex&quot;&gt;g_1h_1 + \dotsb g_kh_k&lt;/script&gt; 
+smooth functions &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;h_i&lt;/script&gt; whose germs belong to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;.
+This is the statement of Taylor’s theorem!&lt;/p&gt;
+
+&lt;p&gt;Even better, the map &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X&lt;/script&gt;
+is a &lt;em&gt;natural isomorphism&lt;/em&gt; in the sense that given a smooth map
+&lt;script type=&quot;math/tex&quot;&gt;\varphi\colon X \to Y&lt;/script&gt; of smooth manifolds such that
+&lt;script type=&quot;math/tex&quot;&gt;\varphi(p) = q&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}
+	\begin{CD}
+		\mathfrak{m}_q/\mathfrak{m}_q^2 @&gt;{\cong}&gt;&gt; T_q^\ast Y \\
+		@VV{\varphi^\ast}V @VV{\varphi^\ast}V \\
+		\mathfrak{m}_p/\mathfrak{m}_p^2 @&gt;{\cong}&gt;&gt; T_p^\ast X.
+	\end{CD}&lt;/script&gt;
+
+&lt;p&gt;To verify this, we shall follow an element &lt;script type=&quot;math/tex&quot;&gt;f + \mathfrak{m}_q^2&lt;/script&gt;
+around the diagram&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+		f + \mathfrak{m}^2_q @&gt;&gt;&gt; df_q \\
+		@VVV @VVV \\
+		f\varphi + \mathfrak{m}_p^2 @&gt;&gt;&gt; d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
+	\end{CD}&lt;/script&gt;
+
+&lt;p&gt;and the fact that equality holds is the multi-variable chain rule!&lt;/p&gt;
+
+&lt;p&gt;Having exploited our knowledge of undegraduate calculus to prove a satisfying
+natural isomorphism,
+I’ll leave you with one final reason this proof excites me.
+If we had wanted to, we could have replaced “differentiable” with “continuous”
+in our definition of the algebraic cotangent space,
+and we would still end up with a real vector space associated to every stalk.
+In some sense, this says that the only reason one never speaks of a (co)tangent
+space associated to a point in a general topological space is that
+there’s no reason like Taylor’s theorem for the space to be finite-dimensional!&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
 
@@ -60,7 +209,7 @@ to manage the expression of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
 in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
 last semester, but I thought it might be nice to have something to point people
 who missed it to, in order to stick to my assignment
@@ -281,7 +430,7 @@ is the following:&lt;/p&gt;
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
 The utility of the Yoneda lemma is likely 
 far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -398,7 +547,7 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="http://localhost:4000/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>http://localhost:4000/2019/07/13/A-Digression</id><content type="html" xml:base="http://localhost:4000/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
 on set theory vs. category theory.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 
@@ -466,7 +615,7 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -542,7 +691,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;
