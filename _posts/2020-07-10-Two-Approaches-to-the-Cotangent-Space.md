@@ -5,7 +5,7 @@ math: true
 There is a "sheaf-theoretic" definition of something like a *cotangent space at a point*
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
-the two definitions agree.
+the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
 What's more, modulo the appropriate background technology in both subjects,
 the proof is beautiful and simple—I feel like shouting it from the rooftops
 at the moment, so this blog post will try and give a little exposition.
@@ -23,7 +23,7 @@ and multiplication in $$\mathscr{O}(U)$$ are done pointwise in $$\mathbb{R}$$.
 The sheaf is not so important for us;
 what we are interested in today are the *stalks.*
 The idea is that elements of the *stalk,*
-called *germs* capture the "infinitesimal behavior"
+called *germs,* capture the "infinitesimal behavior"
 of smooth functions at a point.
 Here is the formal definition.
 Given a point $$p \in X$$, 
