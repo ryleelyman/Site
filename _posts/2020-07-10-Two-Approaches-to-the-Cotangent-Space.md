@@ -63,13 +63,13 @@ a basis for $$T_pX$$ is given by
 $$ \frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p. $$
 
 
-The *cotangent space,* which we are more interested in is the
-*dual* of the tangent space and is denoted $$T_p^\ast x$$.
+The *cotangent space,* which we are more interested in, is the
+*dual* of the tangent space and is denoted $$T_p^\ast X$$.
 Elements of the cotangent space are *linear functionals* on tangent vectors.
 Given coordinates $$x_1,\dotsc,x_n$$,
 the *dual basis* of the cotangent space is given by
 
-$$ dx_1,\dotsc dx_n, $$
+$$ dx_1,\dotsc, dx_n, $$
 
 so we have $$dx_i\left( \frac{\partial}{\partial x_j}|_p\right)$$ equal to $$1$$
 when $$i = j$$ and equal to $$0$$ otherwise.
@@ -85,7 +85,7 @@ $$\mathfrak{m}_p/\mathfrak{m}_p^2$$
 as $$f + \mathfrak{m}_p^2$$.
 Given such an element,
 I claim we can interpret $$f$$ as a linear functional on tangent vectors at $$p$$
-by sending a tangent vector $$v$$ to the value of the directional derivative of $$f$$ at $$p$$.
+by sending a tangent vector $$v$$ to the value of the derivative of $$f$$ at $$p$$ in the direction $$v$$.
 For instance, in local coordinates $$(x_1,\dotsc,x_n)$$,
 the vector $$\frac{\partial}{\partial x_i}|_p$$ is sent to $$ \frac{\partial f}{\partial x_i}(p) $$.
 Extending linearly defines a linear functional on $$T_pX$$,
@@ -153,9 +153,10 @@ I'll leave you with one final reason this proof excites me.
 If we had wanted to, we could have replaced "differentiable" with "continuous"
 in our definition of the algebraic cotangent space,
 and we would still end up with a real vector space associated to every stalk.
-In some sense, this says that the only reason one never speaks of a (co)tangent
+In some sense, I guessed that this says that the only reason one never speaks of a (co)tangent
 space associated to a point in a general topological space is that
 there's no reason—like Taylor's theorem—for the space to be finite-dimensional!
+
 Actually, the truth is slightly more subtle:
 every continuous function has a continuous "square root" in the sense
 that we can always write $$f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}$$,

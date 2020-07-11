@@ -135,13 +135,13 @@ a basis for <script type="math/tex">T_pX</script> is given by</p>
 
 <script type="math/tex; mode=display">\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.</script>
 
-<p>The <em>cotangent space,</em> which we are more interested in is the
-<em>dual</em> of the tangent space and is denoted <script type="math/tex">T_p^\ast x</script>.
+<p>The <em>cotangent space,</em> which we are more interested in, is the
+<em>dual</em> of the tangent space and is denoted <script type="math/tex">T_p^\ast X</script>.
 Elements of the cotangent space are <em>linear functionals</em> on tangent vectors.
 Given coordinates <script type="math/tex">x_1,\dotsc,x_n</script>,
 the <em>dual basis</em> of the cotangent space is given by</p>
 
-<script type="math/tex; mode=display">dx_1,\dotsc dx_n,</script>
+<script type="math/tex; mode=display">dx_1,\dotsc, dx_n,</script>
 
 <p>so we have <script type="math/tex">dx_i\left( \frac{\partial}{\partial x_j}|_p\right)</script> equal to <script type="math/tex">1</script>
 when <script type="math/tex">i = j</script> and equal to <script type="math/tex">0</script> otherwise.
@@ -157,7 +157,7 @@ abusing notation, we shall write the corresponding element of
 as <script type="math/tex">f + \mathfrak{m}_p^2</script>.
 Given such an element,
 I claim we can interpret <script type="math/tex">f</script> as a linear functional on tangent vectors at <script type="math/tex">p</script>
-by sending a tangent vector <script type="math/tex">v</script> to the value of the directional derivative of <script type="math/tex">f</script> at <script type="math/tex">p</script>.
+by sending a tangent vector <script type="math/tex">v</script> to the value of the derivative of <script type="math/tex">f</script> at <script type="math/tex">p</script> in the direction <script type="math/tex">v</script>.
 For instance, in local coordinates <script type="math/tex">(x_1,\dotsc,x_n)</script>,
 the vector <script type="math/tex">\frac{\partial}{\partial x_i}|_p</script> is sent to <script type="math/tex">\frac{\partial f}{\partial x_i}(p)</script>.
 Extending linearly defines a linear functional on <script type="math/tex">T_pX</script>,
@@ -222,10 +222,11 @@ I’ll leave you with one final reason this proof excites me.
 If we had wanted to, we could have replaced “differentiable” with “continuous”
 in our definition of the algebraic cotangent space,
 and we would still end up with a real vector space associated to every stalk.
-In some sense, this says that the only reason one never speaks of a (co)tangent
+In some sense, I guessed that this says that the only reason one never speaks of a (co)tangent
 space associated to a point in a general topological space is that
-there’s no reason—like Taylor’s theorem—for the space to be finite-dimensional!
-Actually, the truth is slightly more subtle:
+there’s no reason—like Taylor’s theorem—for the space to be finite-dimensional!</p>
+
+<p>Actually, the truth is slightly more subtle:
 every continuous function has a continuous “square root” in the sense
 that we can always write <script type="math/tex">f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}</script>,
 and the functions <script type="math/tex">\sqrt{f}</script> and <script type="math/tex">\operatorname{sgn}(f)\sqrt(f)</script> are continuous.

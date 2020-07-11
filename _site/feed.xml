@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-10T15:22:11-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-10T21:43:16-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
 the two definitions agree.
@@ -58,13 +58,13 @@ a basis for &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt; is given
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.&lt;/script&gt;
 
-&lt;p&gt;The &lt;em&gt;cotangent space,&lt;/em&gt; which we are more interested in is the
-&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast x&lt;/script&gt;.
+&lt;p&gt;The &lt;em&gt;cotangent space,&lt;/em&gt; which we are more interested in, is the
+&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast X&lt;/script&gt;.
 Elements of the cotangent space are &lt;em&gt;linear functionals&lt;/em&gt; on tangent vectors.
 Given coordinates &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt;,
 the &lt;em&gt;dual basis&lt;/em&gt; of the cotangent space is given by&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;dx_1,\dotsc dx_n,&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;dx_1,\dotsc, dx_n,&lt;/script&gt;
 
 &lt;p&gt;so we have &lt;script type=&quot;math/tex&quot;&gt;dx_i\left( \frac{\partial}{\partial x_j}|_p\right)&lt;/script&gt; equal to &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;
 when &lt;script type=&quot;math/tex&quot;&gt;i = j&lt;/script&gt; and equal to &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; otherwise.
@@ -80,7 +80,7 @@ abusing notation, we shall write the corresponding element of
 as &lt;script type=&quot;math/tex&quot;&gt;f + \mathfrak{m}_p^2&lt;/script&gt;.
 Given such an element,
 I claim we can interpret &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as a linear functional on tangent vectors at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;
-by sending a tangent vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; to the value of the directional derivative of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+by sending a tangent vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; to the value of the derivative of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; in the direction &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;.
 For instance, in local coordinates &lt;script type=&quot;math/tex&quot;&gt;(x_1,\dotsc,x_n)&lt;/script&gt;,
 the vector &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial}{\partial x_i}|_p&lt;/script&gt; is sent to &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial f}{\partial x_i}(p)&lt;/script&gt;.
 Extending linearly defines a linear functional on &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt;,
@@ -145,10 +145,11 @@ I’ll leave you with one final reason this proof excites me.
 If we had wanted to, we could have replaced “differentiable” with “continuous”
 in our definition of the algebraic cotangent space,
 and we would still end up with a real vector space associated to every stalk.
-In some sense, this says that the only reason one never speaks of a (co)tangent
+In some sense, I guessed that this says that the only reason one never speaks of a (co)tangent
 space associated to a point in a general topological space is that
-there’s no reason—like Taylor’s theorem—for the space to be finite-dimensional!
-Actually, the truth is slightly more subtle:
+there’s no reason—like Taylor’s theorem—for the space to be finite-dimensional!&lt;/p&gt;
+
+&lt;p&gt;Actually, the truth is slightly more subtle:
 every continuous function has a continuous “square root” in the sense
 that we can always write &lt;script type=&quot;math/tex&quot;&gt;f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}&lt;/script&gt;,
 and the functions &lt;script type=&quot;math/tex&quot;&gt;\sqrt{f}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\operatorname{sgn}(f)\sqrt(f)&lt;/script&gt; are continuous.
