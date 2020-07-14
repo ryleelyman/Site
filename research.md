@@ -46,7 +46,7 @@ Abstract for version 3 (which is available [here][Nielsen]):
 > As applications, we classify torsion elements in the mapping class group
 > of the plane minus a Cantor set, and also show that topological groups
 > containing sequences of torsion elements limiting to the identity do not
-> embed continuously into the mapping class group of $SS$. Finally,
+> embed continuously into the mapping class group of $$S$$. Finally,
 > we show that compact subgroups of the mapping class group of $$S$$ are finite,
 > and locally compact subgroups are discrete.
 
