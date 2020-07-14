@@ -36,7 +36,7 @@ Abstract:
 (with [Santana Afton](http://people.math.gatech.edu/~safton3/), 
 [Danny Calegari](http://math.uchicago.edu/~dannyc/) and [Lvzhou Chen](http://math.uchicago.edu/~lzchen/))  
 *Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)  
-Abstract for version 3 (available [here][Nielsen]):  
+Abstract for version 3 (which is available [here][Nielsen]):  
 > Given a subgroup $$G$$ of the mapping class group of a surface $$S$$,
 > the Nielsen realization problem asks whether $$G$$ can be realized
 > as a finite group of homeomorphisms of $$S$$. In 1983, Kerckhoff
@@ -80,5 +80,5 @@ titled Train Tracks and Outer Automorphisms of Hyperbolic Groups.
 [Free By Z Slides]: {{ "assets/pdfs/freebyz.pdf" | relative_url }}
 [Braid Slides]: {{ "assets/pdfs/PseudoAnosovBraid.pdf" | relative_url }}
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
-[Nielsen]: {{ "assets/pdfs/Nielsen_v3.pdf" | relative_url }}
+[Nielsen]: {{ "assets/pdfs/Nielsen_v3b.pdf" | relative_url }}
 [traintracksorbigraphs]: https://arxiv.org/abs/1909.03097
