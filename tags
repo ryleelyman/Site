@@ -1543,6 +1543,7 @@ Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
+Geometric Group Theory without Boundaries	research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h

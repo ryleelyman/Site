@@ -7,6 +7,20 @@ math: true
 
 [Here is my CV][CV].
 
+## Geometric Group Theory without Boundaries
+
+Along with Macarena Arenas, Sami Douba and Abdul Zalloum,
+I am organizing a virtual "summer school" that will run the last two weeks of July.
+More info is available on the [summer school website](https://sites.google.com/view/ggtwb/home?authuser=0).
+
+I am giving three lectures in this summer school on Bass and Serre's theory 
+of graphs of groups and groups acting on trees.
+
+Here are notes for the first lecture in [PDF][Lecture1PDF] and [Notability][Lecture1Note] formats.
+
+[Lecture1PDF]: {{ "assets/pdfs/GGTWB1.pdf" | relative_url }}
+[Lecture1Note]: {{ "assets/pdfs/GGTWB1.note" | relative_url }}
+
 ## Publications and Preprints
 
 - **Doubly-Uniform Exponential Growth for Free-By-Cyclic Groups**  
