@@ -16,7 +16,8 @@ More info is available on the [summer school website](https://sites.google.com/v
 I am giving three lectures in this summer school on Bass and Serre's theory 
 of graphs of groups and groups acting on trees.
 
-Here are notes for the first lecture in [PDF][Lecture1PDF] and [Notability][Lecture1Note] formats.
+Here are notes (with the annotations I added live)
+for the first lecture in [PDF][Lecture1PDF] and [Notability][Lecture1Note] formats.
 
 [Lecture1PDF]: {{ "assets/pdfs/GGTWB1.pdf" | relative_url }}
 [Lecture1Note]: {{ "assets/pdfs/GGTWB1.note" | relative_url }}
