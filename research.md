@@ -18,9 +18,16 @@ of graphs of groups and groups acting on trees.
 
 Here are notes (with the annotations I added live)
 for the first lecture in [PDF][Lecture1PDF] and [Notability][Lecture1Note] formats.
+A recording of the first lecture is on [YouTube][YouTube1].
+
+Here are notes
+for the second lecture in [PDF][Lecture2PDF] and [Notability][Lecture2Note] formats.
 
 [Lecture1PDF]: {{ "assets/pdfs/GGTWB1.pdf" | relative_url }}
 [Lecture1Note]: {{ "assets/pdfs/GGTWB1.note" | relative_url }}
+[YouTube1]:  https://www.youtube.com/watch?v=6-x5g2p0u3s
+[Lecture2PDF]: {{ "assets/pdfs/GGTWB2.pdf" | relative_url }}
+[Lecture2Note]: {{ "assets/pdfs/GGTWB2.note" | relative_url }}
 
 ## Publications and Preprints
 
