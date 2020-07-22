@@ -17,15 +17,10 @@ I am giving three lectures in this summer school on Bass and Serre's theory
 of graphs of groups and groups acting on trees.
 
 Here are notes (with the annotations I added live)
-for the first lecture in [PDF][Lecture1PDF] and [Notability][Lecture1Note] formats.
-A recording of the first lecture is on [YouTube][YouTube1].
-
-Here are notes (with the annotations I added live)
-for the second lecture in [PDF][Lecture2PDF] and [Notability][Lecture2Note] formats.
-A recording of the second lecture is on [YouTube][YouTube2].
-
-Here are notes
-for the third and final lecture in [PDF][Lecture3PDF] and [Notability][Lecture3Note] formats.
+for the lectures, as well as links to recordings of the lectures.
+ - Lecture 1 [PDF][Lecture1PDF], [Notability][Lecture1Note], [YouTube][Youtube1]
+ - Lecture 2 [PDF][Lecture2PDF], [Notability][Lecture2Note], [YouTube][YouTube2]
+ - Lecture 3 [PDF][Lecture3PDF], [Notability][Lecture3Note], [YouTube][YouTube3].
 
 [Lecture1PDF]: {{ "assets/pdfs/GGTWB1.pdf" | relative_url }}
 [Lecture1Note]: {{ "assets/pdfs/GGTWB1.note" | relative_url }}
@@ -35,6 +30,7 @@ for the third and final lecture in [PDF][Lecture3PDF] and [Notability][Lecture3N
 [YouTube2]: https://www.youtube.com/watch?v=opilmxidthY
 [Lecture3PDF]: {{ "assets/pdfs/GGTWB3.pdf" | relative_url }}
 [Lecture3Note]: {{ "assets/pdfs/GGTWB3.note" | relative_url }}
+[YouTube3]: https://www.youtube.com/watch?v=LVPoa7sgMnc
 
 ## Publications and Preprints
 
