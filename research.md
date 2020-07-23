@@ -21,6 +21,7 @@ for the lectures, as well as links to recordings of the lectures.
  - Lecture 1 [PDF][Lecture1PDF], [Notability][Lecture1Note], [YouTube][Youtube1]
  - Lecture 2 [PDF][Lecture2PDF], [Notability][Lecture2Note], [YouTube][YouTube2]
  - Lecture 3 [PDF][Lecture3PDF], [Notability][Lecture3Note], [YouTube][YouTube3].
+[Here][exercises] are some suggested exercises.
 
 [Lecture1PDF]: {{ "assets/pdfs/GGTWB1.pdf" | relative_url }}
 [Lecture1Note]: {{ "assets/pdfs/GGTWB1.note" | relative_url }}
@@ -31,6 +32,7 @@ for the lectures, as well as links to recordings of the lectures.
 [Lecture3PDF]: {{ "assets/pdfs/GGTWB3.pdf" | relative_url }}
 [Lecture3Note]: {{ "assets/pdfs/GGTWB3.note" | relative_url }}
 [YouTube3]: https://www.youtube.com/watch?v=LVPoa7sgMnc
+[exercises]: {{ "assets/pdfs/GGTWBexercises.pdf" | relative_url }}
 
 ## Publications and Preprints
 
