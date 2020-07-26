@@ -1,4 +1,257 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-22T20:24:59-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-26T19:43:35-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
+there is an adjunction between the categories of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
+The adjunction is somewhat mysterious to me as I begin to write this,
+so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
+
+&lt;p&gt;The functors in question are the &lt;em&gt;pushforward&lt;/em&gt; and &lt;em&gt;inverse image&lt;/em&gt; functors,
+which arise naturally in algebraic geometry (so I am led to believe).
+What makes the adjunction difficult to understand is that the definitions
+of the functors in question don’t seem to play nicely with each other.&lt;/p&gt;
+
+&lt;p&gt;The proof (with a little setting the stage) appears below.
+The method of proof, like most category-theoretic proofs,
+is a story of careful bookkeeping with functors and natural transformations,
+along with simple calculations to check.
+The idea essentially seems to be that the 
+unit &lt;script type=&quot;math/tex&quot;&gt;\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}&lt;/script&gt;
+“shreds a section &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; into pieces,” while the counit
+&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}&lt;/script&gt;
+recognizes that these “shredded up” sections assemble into sections of &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;adjunctions&quot;&gt;Adjunctions&lt;/h2&gt;
+&lt;p&gt;Remember, given categories &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;, a pair of functors
+&lt;script type=&quot;math/tex&quot;&gt;F \colon C \to D&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G \colon D \to C&lt;/script&gt; form an &lt;em&gt;adjoint pair&lt;/em&gt;
+when there exists an isomorphism&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;D(Fc,d) \cong C(c,Gd)&lt;/script&gt;
+
+&lt;p&gt;which is natural in &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;.
+We say &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;left adjoint&lt;/em&gt; to &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;,
+or equivalently that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is &lt;em&gt;right adjoint&lt;/em&gt; to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;.
+In particular, setting &lt;script type=&quot;math/tex&quot;&gt;d = Fc&lt;/script&gt;, we have&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;D(Fc,Fc) \cong C(c,GFc).&lt;/script&gt;
+
+&lt;p&gt;which gives us a natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta \colon 1_C \Longrightarrow GF&lt;/script&gt;.
+Similarly, we have &lt;script type=&quot;math/tex&quot;&gt;\epsilon\colon FG \Longrightarrow 1_D&lt;/script&gt;.
+The natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is called the &lt;em&gt;unit&lt;/em&gt; of the adjunction,
+and &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; is the &lt;em&gt;counit.&lt;/em&gt;
+In fact, the existence of these natural transformations
+could be taken to be the &lt;em&gt;definition&lt;/em&gt; of an adjunction,
+provided the natural transformations satisfy the identities&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,&lt;/script&gt;
+
+&lt;p&gt;which says that for all &lt;script type=&quot;math/tex&quot;&gt;c \in C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt;, the compositions&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}
+\begin{CD}
+Fc @&gt;{F\eta_c}&gt;&gt; FGFc @&gt;{\epsilon_{Fc}}&gt;&gt; Fc
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+Gd @&gt;{\eta_{Gd}}&gt;&gt; GFGd @&gt;{G\epsilon_d}&gt;&gt; Gd
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;are the identity.&lt;/p&gt;
+
+&lt;p&gt;My goal in this blog post is to show that the functors I am interested in
+satisfy this latter definition of an adjunction.&lt;/p&gt;
+
+&lt;h2 id=&quot;sheaves&quot;&gt;Sheaves&lt;/h2&gt;
+&lt;p&gt;Given a pair of spaces &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi \colon X \to Y&lt;/script&gt;,
+we have functors &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y&lt;/script&gt;
+and &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X&lt;/script&gt; from the category
+of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; and &lt;em&gt;vice versa.&lt;/em&gt;
+The former is simple to describe: if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
+the sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{F}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; is the assignment&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;U \mapsto \mathscr{F}(\pi^{-1}(U))&lt;/script&gt;
+
+&lt;p&gt;for all open subsets &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The latter is slightly more complicated.
+Recall that if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
+there is a space &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; equipped with a local homeomorphism &lt;script type=&quot;math/tex&quot;&gt;\rho \colon F \to Y&lt;/script&gt;.
+The sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is the sheaf of local sections of &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;;
+&lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is called the &lt;em&gt;espace étale&lt;/em&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
+The set of points of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; above &lt;script type=&quot;math/tex&quot;&gt;y \in Y&lt;/script&gt; is the &lt;em&gt;stalk&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}_y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus a section &lt;script type=&quot;math/tex&quot;&gt;s \colon U \to F&lt;/script&gt; is an element &lt;script type=&quot;math/tex&quot;&gt;(s_y)_{y \in U}&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\prod_{y \in U} \mathscr{F}_y&lt;/script&gt;.
+Continuity of &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; is the condition that for all &lt;script type=&quot;math/tex&quot;&gt;y \in U&lt;/script&gt;, there exists
+an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_y&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; and an element &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_y)&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;f_x = s_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in U_y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Given that &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; admit maps to &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, we can form their pullback,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+\pi^{-1}F @&gt;&gt;&gt; F \\
+@VVV @VV{\rho}V \\
+X @&gt;{\pi}&gt;&gt; Y
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;which as a set is  &lt;script type=&quot;math/tex&quot;&gt;\{ (x,f_y) \in X \times F : \pi(x) = y\}&lt;/script&gt;.
+The topology on &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F&lt;/script&gt; is induced from the product topology on &lt;script type=&quot;math/tex&quot;&gt;X \times F&lt;/script&gt;.
+The sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}&lt;/script&gt; is the sheaf of sections of &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F \to X&lt;/script&gt;.
+The universal property of the pullback ensures that this really defines a functor
+from the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The claim is that &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}&lt;/script&gt; is left adjoint to &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast&lt;/script&gt;.
+Therefore we should expect natural transformations
+&lt;script type=&quot;math/tex&quot;&gt;\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}&lt;/script&gt;
+and &lt;script type=&quot;math/tex&quot;&gt;\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-unit-of-the-adjunction&quot;&gt;The Unit of the Adjunction&lt;/h3&gt;
+
+&lt;p&gt;So let &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; be a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
+A section &lt;script type=&quot;math/tex&quot;&gt;s \colon \pi^{-1}(U) \to \pi^{-1}F&lt;/script&gt;
+is a map&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in \pi^{-1}(U),\  s_{\pi(X)} \in \mathscr{F}_{\pi(x)}&lt;/script&gt;
+
+&lt;p&gt;satisfying the following compatibility condition:
+for each point &lt;script type=&quot;math/tex&quot;&gt;x \in \pi^{-1}(U)&lt;/script&gt;, there exists
+an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x \subset \pi^{-1}(U)&lt;/script&gt; containing &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
+and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that
+&lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
+Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_x)&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;f_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;In particular, if &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a section in
+&lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}(U)&lt;/script&gt;, the assignment &lt;script type=&quot;math/tex&quot;&gt;x \mapsto (x,f_{\pi(x)})&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;x \in \pi^{-1}(U)&lt;/script&gt;
+defines a section in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;.
+Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; 
+by the rule&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta_{\mathscr{F}}(U)(f) = [x \mapsto (x,f_{\pi(x)}),\ x \in \pi^{-1}(U)].&lt;/script&gt;
+
+&lt;p&gt;(Let’s parse the notation: a natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; yields
+a map of sheaves &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}&lt;/script&gt; for each sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
+This is the definition of that map on the open subset &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt;.)&lt;/p&gt;
+
+&lt;p&gt;To prove the claim that &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is a natural transformation,
+we need to show that given a map &lt;script type=&quot;math/tex&quot;&gt;\phi \colon \mathscr{F} \to \mathscr{F}'&lt;/script&gt;
+of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+\mathscr{F} @&gt;{\eta_{\mathscr{F}}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F} \\
+@V{\phi}VV @VV{\pi_\ast\pi^{-1}\phi}V \\
+\mathscr{F}' @&gt;{\eta_{\mathscr{F}'}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F}'.
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, the upper right path of the square sends
+&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,f_{\pi(x)})]&lt;/script&gt; and then to
+&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,\phi_{\pi(x)}(f_{\pi(x)}))]&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}'(U)&lt;/script&gt;.
+On the other hand, the lower left path of the square
+sends &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;\phi(U)(f)&lt;/script&gt; and then to
+&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,(\phi(U)(f))_{\pi(x)})]&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}'(U)&lt;/script&gt;.
+The equality&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\phi(U)(f))_{\pi(x)} = \phi_{\pi(x)}(f_{\pi(x)})&lt;/script&gt;
+
+&lt;p&gt;holds pointwise, since taking the stalk at &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is functorial.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-counit-of-the-adjunction&quot;&gt;The Counit of the Adjunction&lt;/h3&gt;
+
+&lt;p&gt;Now suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.
+Let &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast G&lt;/script&gt; denote the &lt;em&gt;espace étale&lt;/em&gt; over &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;A section &lt;script type=&quot;math/tex&quot;&gt;s \colon V \to \pi^{-1}\pi_\ast G&lt;/script&gt; is a map&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in V,\ s_{\pi(x)} \in \pi_\ast\mathscr{G}_{\pi(x)}&lt;/script&gt;
+
+&lt;p&gt;satisfying the following compatibility condition:
+for each point &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, there exists an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x \subset V&lt;/script&gt;
+containing &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
+Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;g_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since the sets &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}(U_x)&lt;/script&gt; cover &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; by assumption,
+sheafiness of &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; implies the existence of a unique &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is equal to the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt;
+under the natural map &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt;.
+Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)&lt;/script&gt;
+sending &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;We claim that &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; defines a natural transformation from &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt;.
+To prove the claim, we need to show that given a map &lt;script type=&quot;math/tex&quot;&gt;\psi\colon \mathscr{G} \to \mathscr{G}'&lt;/script&gt;
+of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+\pi^{-1}\pi_\ast\mathscr{G} @&gt;{\epsilon_{\mathscr{G}}}&gt;&gt; \mathscr{G} \\
+@V{\pi^{-1}\pi_\ast\psi}VV @VV{\psi}V \\
+\pi^{-1}\pi_\ast \mathscr{G}' @&gt;{\epsilon_{\mathscr{G}'}}&gt;&gt; \mathscr{G}'.
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\pi_\ast\mathscr{G}(V)&lt;/script&gt;,
+the upper right path of the square sends us first to some &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;,
+and then sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\psi(V)(g) \in \mathscr{G}'(V)&lt;/script&gt;.
+On the other hand, the lower left path of the square sends
+&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}))]&lt;/script&gt;
+in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}'(V)&lt;/script&gt;, and then to
+some &lt;script type=&quot;math/tex&quot;&gt;g' \in \mathscr{G}'(V)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;g'_x&lt;/script&gt; is the image of
+&lt;script type=&quot;math/tex&quot;&gt;(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}'_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set containing &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; such that
+&lt;script type=&quot;math/tex&quot;&gt;s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))&lt;/script&gt; 
+represents &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;\pi(x) \in U&lt;/script&gt;,
+we have &lt;script type=&quot;math/tex&quot;&gt;(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}&lt;/script&gt;.
+Furthermore we know that &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt; 
+is such that the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt;
+is &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.
+Therefore we have that
+the image of &lt;script type=&quot;math/tex&quot;&gt;\psi(\pi^{-1}(U))(s)_{\pi(x)}&lt;/script&gt;
+in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}'_x&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;\psi(V)(g)_x&lt;/script&gt;,
+as desired.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-inverse-imagepushforward-adjunction&quot;&gt;The inverse image–pushforward adjunction&lt;/h2&gt;
+
+&lt;p&gt;To conclude, we just need to show that two double compositions
+of natural transformations are the identity.
+The first, translated into our particular case,
+says that if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
+we have that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+\pi^{-1}\mathscr{F} @&gt;{\pi^{-1}\eta_{\mathscr{F}}}&gt;&gt; \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @&gt;{\epsilon_{\pi^{-1}\mathscr{F}}}&gt;&gt;
+\pi^{-1}\mathscr{F}
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;is equal to the identity.
+If &lt;script type=&quot;math/tex&quot;&gt;V \subset X&lt;/script&gt; is an open set and
+&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\mathscr{F}(V)&lt;/script&gt; is a section,
+where &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; is an element of the stalk &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}_{\pi(x)}&lt;/script&gt;.
+The first map sends this section to the section&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;[x \mapsto (x,\eta_{\pi(x)}(s_{\pi(x)}))] \in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).&lt;/script&gt;
+
+&lt;p&gt;The second map sends this section to the unique section &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;
+whose image in the stalk at &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;\eta_{\pi(x)}(s_{\pi(x)})&lt;/script&gt;.
+But &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is defined such that this is exactly the assignment &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt;!
+So far so good.&lt;/p&gt;
+
+&lt;p&gt;The second double composition we need to show is equal to the identity is defined 
+for a sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; as follows&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
+\pi_\ast\mathscr{G} @&gt;{\eta_{\pi_\ast\mathscr{G}}}&gt;&gt; \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
+@&gt;{\pi_\ast\epsilon_{\mathscr{G}}}&gt;&gt; \pi_\ast\mathscr{G}.
+\end{CD}&lt;/script&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))&lt;/script&gt;
+is a section,
+the first map sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to the section&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;[x \mapsto (x,g_\pi(x))] \in \pi^{-1}\pi_\ast\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U).&lt;/script&gt;
+
+&lt;p&gt;The second map sends this section to the unique section in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}(U)&lt;/script&gt;
+whose image in the stalk at &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;g_\pi(x)&lt;/script&gt;. Indeed, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; is that section!&lt;/p&gt;
+
+&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space and a continuous map , there is an adjunction between the categories of sheaves on and sheaves on . The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
 the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
@@ -155,7 +408,7 @@ that we can always write &lt;script type=&quot;math/tex&quot;&gt;f(x) = \operato
 and the functions &lt;script type=&quot;math/tex&quot;&gt;\sqrt{f}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\operatorname{sgn}(f)\sqrt(f)&lt;/script&gt; are continuous.
 Therefore it is &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt; that is infinite-dimensional,
 while &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 = 0&lt;/script&gt;.
-(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
+(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
 
@@ -217,7 +470,7 @@ to manage the expression of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
 in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
 last semester, but I thought it might be nice to have something to point people
 who missed it to, in order to stick to my assignment
@@ -438,7 +691,7 @@ is the following:&lt;/p&gt;
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
 The utility of the Yoneda lemma is likely 
 far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -555,7 +808,7 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="http://localhost:4000/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>http://localhost:4000/2019/07/13/A-Digression</id><content type="html" xml:base="http://localhost:4000/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
 on set theory vs. category theory.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 
@@ -623,7 +876,7 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -699,7 +952,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;
