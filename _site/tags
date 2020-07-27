@@ -1531,9 +1531,12 @@
 :root	_site/assets/css/styles.css	/^:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: /;"	s
 A Digression	_site/2019/07/13/A-Digression.html	/^      <h1>A Digression<\/h1>$/;"	h
 A Digression	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/A-Digression.html">A Digression<\/a><\/h2>$/;"	i
+A Sheafy Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^      <h1>A Sheafy Adjunction<\/h1>$/;"	h
+A Sheafy Adjunction	_site/blog.html	/^    <h2><a href="\/2020\/07\/26\/A-Sheafy-Adjunction.html">A Sheafy Adjunction<\/a><\/h2>$/;"	i
 About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
 About page	about.md	/^# About page$/;"	c
 Adjunctions	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Adjunctions$/;"	s
+Adjunctions	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="adjunctions">Adjunctions<\/h2>$/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
 CAT(0) Free-by-Cyclic Groups	_site/2019/09/06/Choo-Choo.html	/^<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups<\/h3>$/;"	j
 Categories	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Categories$/;"	s
@@ -1566,6 +1569,7 @@ Research	research.md	/^# Research $/;"	c
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Service	service.md	/^# Service$/;"	c
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
+Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
 Teaching	teaching.md	/^# Teaching$/;"	c
 The Algebraic Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space$/;"	s
@@ -1574,7 +1578,9 @@ The Algebraic Cotangent Space Agrees With the Usual One	_posts/2020-07-10-Two-Ap
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
+The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	j
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
+The Unit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	j
 The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Usual Cotangent Space$/;"	s
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
@@ -1591,6 +1597,7 @@ a:hover	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"
 a:hover	_site/assets/css/style.css	/^a:hover { text-decoration: underline; }$/;"	s
 abbr[title]	_site/assets/css/style.css	/^abbr[title] { border-bottom: none; \/* 1 *\/ text-decoration: underline; \/* 2 *\/ text-decorati/;"	s
 about-page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	I
+adjunctions	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="adjunctions">Adjunctions<\/h2>$/;"	I
 article	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 aside	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 audio	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
@@ -1708,6 +1715,7 @@ select	_site/assets/css/style.css	/^button, input, select, textarea { font: inhe
 select	_site/assets/css/style.css	/^button, select { \/* 1 *\/ text-transform: none; }$/;"	s
 select	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	I
+sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	I
 small	_site/assets/css/style.css	/^small { font-size: 80%; }$/;"	s
 small	_site/assets/css/style.css	/^small { font-size: 90%; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
@@ -1729,6 +1737,8 @@ textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-fam
 textarea	_site/assets/css/style.css	/^textarea { overflow: auto; }$/;"	s
 th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
 the-algebraic-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	I
+the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
+the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
 title: About	about.md	/^title: About$/;"	s
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I

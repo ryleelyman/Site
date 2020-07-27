@@ -70,12 +70,16 @@ Given a pair of spaces $$X$$ and $$Y$$, and a continuous map $$\pi \colon X \to 
 we have functors $$\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y$$
 and $$\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X$$ from the category
 of sheaves on $$X$$ to the category of sheaves on $$Y$$ and *vice versa.*
-The former is simple to describe: if $$\mathscr{F}$$ is a sheaf on $$X$$,
-the sheaf $$\pi_\ast\mathscr{F}$$ on $$Y$$ is the assignment
+The former is simple to describe: if $$\mathscr{G}$$ is a sheaf on $$X$$,
+the *pushforward sheaf* $$\pi_\ast\mathscr{G}$$ on $$Y$$ is the assignment
 
 $$U \mapsto \mathscr{F}(\pi^{-1}(U))$$
 
 for all open subsets $$U$$ of $$Y$$.
+If $$\psi \colon \mathscr{G} \to \mathscr{G}'$$ is a morphism of sheaves on $$X$$,
+the morphism $$\pi_\ast\psi$$ is defined by the rule
+
+$$(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).$$
 
 The latter is slightly more complicated.
 Recall that if $$\mathscr{F}$$ is a sheaf on $$Y$$,
@@ -84,10 +88,15 @@ The sheaf $$\mathscr{F}$$ is the sheaf of local sections of $$\rho$$;
 $$F$$ is called the *espace étale* for the sheaf $$\mathscr{F}$$.
 The set of points of $$F$$ above $$y \in Y$$ is the *stalk* $$\mathscr{F}_y$$.
 
-Thus a section $$s \colon U \to F$$ is an element $$(s_y)_{y \in U}$$ of $$\prod_{y \in U} \mathscr{F}_y$$.
-Continuity of $$s$$ is the condition that for all $$y \in U$$, there exists
-an open neighborhood $$U_y$$ of $$y$$ and an element $$f \in \mathscr{F}(U_y)$$
-such that $$f_x = s_x$$ for all $$x \in U_y$$.
+As usual, a section $$s\colon U \to F$$ of the projection $$\rho \colon F \to X$$
+is an element $$(s_y)_{y \in U}$$ of $$\prod_{y \in U} \mathscr{F}_y$$.
+In our case, continuity of $$s$$ is the following condition
+
+$$\begin{equation}\label{star}\tag{$\ast$}
+\text{for all } y \in U, \text{ there exists an open neighborhood }
+U_y \text{ of } y\\  \text{ and } f\in\mathscr{F}(U_y) \text{ such that }
+f_x = s_x \text{ for all } x \in U_y.
+\end{equation}$$
 
 Given that $$F$$ and $$X$$ admit maps to $$Y$$, we can form their pullback,
 
@@ -99,9 +108,26 @@ X @>{\pi}>> Y
 
 which as a set is  $$\{ (x,f_y) \in X \times F : \pi(x) = y\}$$.
 The topology on $$\pi^{-1}F$$ is induced from the product topology on $$X \times F$$.
-The sheaf $$\pi^{-1}\mathscr{F}$$ is the sheaf of sections of $$\pi^{-1}F \to X$$.
+The *inverse image sheaf* $$\pi^{-1}\mathscr{F}$$ is the sheaf of sections of $$\pi^{-1}F \to X$$.
 The universal property of the pullback ensures that this really defines a functor
 from the category of sheaves on $$Y$$ to the category of sheaves on $$X$$.
+
+Condition $$\eqref{star}$$ for continuity of a section $$s\colon V \to \pi^{-1}F$$—that is,
+a tuple $$(s_{\pi(x)})_{x \in V}$$ in $$\prod_{x \in V}\mathscr{F}_{\pi(x)}$$—says
+that for all $$x \in V$$ there exists an open neighborhood $$V_x$$ of $$x$$
+and an open neighborhood $$U_x$$ in $$Y$$ such that $$\pi(V_x) \subset U_x$$.
+Furthermore there exists a section $$f \in \mathscr{F}(U_x)$$ 
+such that $$f_{\pi(v)} = s_{\pi(v)}$$ for all $$v \in V_x$$.
+
+If $$\phi\colon \mathscr{F} \to \mathscr{F}'$$ is a morphism of sheaves on $$Y$$,
+the resulting morphism $$\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'$$
+is defined by 
+
+$$(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.$$
+
+One needs to demonstrate that the right-hand side satisfies condition $$\eqref{star}$$;
+the check is simple, so I'll leave it to the reader.
+
 
 The claim is that $$\pi^{-1}$$ is left adjoint to $$\pi_\ast$$.
 Therefore we should expect natural transformations
@@ -110,27 +136,24 @@ and $$\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}$$
 
 ### The Unit of the Adjunction
 
-So let $$\mathscr{F}$$ be a sheaf on $$Y$$.
-A section $$s \colon \pi^{-1}(U) \to \pi^{-1}F$$
-is a map 
+So let $$\mathscr{F}$$ be a sheaf on $$Y$$,
+and let $$U$$ be an open set in $$Y$$.
+Since $$\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))$$,
+we can think of $$s \in \pi_\ast\pi^{-1}\mathscr{F}(U)$$ as
+a section $$s \colon \pi^{-1}(U) \to \pi^{-1}F$$,
+i.e. a tuple $$(s_{\pi(x)})_{x \in \pi^{-1}(U)}$$
+satisfying the compatibility condition above.
 
-$$x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in \pi^{-1}(U),\  s_{\pi(X)} \in \mathscr{F}_{\pi(x)}$$
+Note that in particular if $$U \subset Y$$ is open
+and $$f \in \mathscr{F}(U)$$, the continuity condition $$\eqref{star}$$
+for a section $$\pi^{-1}(U)\to \pi^{-1}F$$ is satisfied by the section
+$$(f_{\pi(x)})_{x \in \pi^{-1}(U)}$$,
+and thus defines an element of $$\pi_\ast\pi^{-1}\mathscr{F}(U)$$.
 
-satisfying the following compatibility condition:
-for each point $$x \in \pi^{-1}(U)$$, there exists
-an open neighborhood $$V_x \subset \pi^{-1}(U)$$ containing $$x$$
-and an open neighborhood $$U_x$$ in $$Y$$ such that
-$$\pi(V_x) \subset U_x$$.
-Furthermore there exists a section $$f \in \mathscr{F}(U_x)$$
-such that $$f_{\pi(v)} = s_{\pi(v)}$$ for all $$v \in V_x$$.
-
-In particular, if $$U \subset Y$$ is an open set and $$f$$ is a section in
-$$\mathscr{F}(U)$$, the assignment $$x \mapsto (x,f_{\pi(x)})$$ for $$x \in \pi^{-1}(U)$$
-defines a section in $$\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))$$.
 Let us thus define a map $$\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)$$ 
-by the rule
+as
 
-$$\eta_{\mathscr{F}}(U)(f) = [x \mapsto (x,f_{\pi(x)}),\ x \in \pi^{-1}(U)].$$
+$$\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.$$
 
 (Let's parse the notation: a natural transformation $$\eta$$ yields
 a map of sheaves $$\eta_{\mathscr{F}}$$ for each sheaf $$\mathscr{F}$$.
@@ -146,40 +169,36 @@ $$\begin{CD}
 \mathscr{F}' @>{\eta_{\mathscr{F}'}}>> \pi_\ast\pi^{-1}\mathscr{F}'.
 \end{CD}$$
 
-Given $$f \in \mathscr{F}(U)$$, the upper right path of the square sends
-$$f$$ to $$[x \mapsto (x,f_{\pi(x)})]$$ and then to
-$$[x \mapsto (x,\phi_{\pi(x)}(f_{\pi(x)}))]$$ in $$\pi_\ast\pi^{-1}\mathscr{F}'(U)$$.
-On the other hand, the lower left path of the square
-sends $$f$$ first to $$\phi(U)(f)$$ and then to
-$$[x \mapsto (x,(\phi(U)(f))_{\pi(x)})]$$ in $$\pi_\ast\pi^{-1}\mathscr{F}'(U)$$.
-The equality
+Given $$f \in \mathscr{F}(U)$$, commutativity of the square is the claim that
+the following equality holds
 
-$$(\phi(U)(f))_{\pi(x)} = \phi_{\pi(x)}(f_{\pi(x)})$$
+$$ \left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
+= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.$$
 
-holds pointwise, since taking the stalk at $$x$$ is functorial.
+This is in fact true, since taking the stalk at $$x$$ is functorial.
 
 ### The Counit of the Adjunction
 
 Now suppose that $$\mathscr{G}$$ is a sheaf on $$X$$.
 Let $$\pi_\ast G$$ denote the *espace étale* over $$Y$$ for the sheaf $$\pi_\ast\mathscr{G}$$.
 
-A section $$s \colon V \to \pi^{-1}\pi_\ast G$$ is a map
-
-$$x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in V,\ s_{\pi(x)} \in \pi_\ast\mathscr{G}_{\pi(x)}$$
-
-satisfying the following compatibility condition:
-for each point $$x \in V$$, there exists an open neighborhood $$V_x \subset V$$
-containing $$x$$ and an open neighborhood $$U_x$$ in $$Y$$
-such that $$\pi(V_x) \subset U_x$$.
-Furthermore there exists a section $$g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))$$
-such that $$g_{\pi(v)} = s_{\pi(v)}$$ for all $$v \in V_x$$.
+A section $$s \colon V \to \pi^{-1}\pi_\ast G$$
+is a tuple $$(s_{\pi(x)})_{x \in V}$$ taking values in $$\pi_\ast\mathscr{G}_{\pi(x)}$$
+satisfying the continuity condition $$\eqref{star}$$,
+which in our particular case asserts the existence,
+for each $$x \in V$$, of an open neighborhood $$V_x$$ of $$x$$ and an open neighborhood
+$$U_x$$ in $$Y$$ satisfying $$\pi(V_x) \subset U_x$$.
+Furthermore there exists $$g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))$$
+such that the image of $$s_{\pi(x)}$$ in $$\mathscr{G}_x$$ under the natural map
+$$\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x$$ is equal to $$g_x$$.
 
 Since the sets $$\pi^{-1}(U_x)$$ cover $$V$$ by assumption,
 sheafiness of $$\mathscr{G}$$ implies the existence of a unique $$g \in \mathscr{G}(V)$$
 such that $$g_x$$ is equal to the image of $$s_{\pi(x)}$$
-under the natural map $$\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x$$.
+under the natural map $$\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x$$
+for *all* $$x \in V$$.
 Let us thus define a map $$\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)$$
-sending $$[x \mapsto (x,s_{\pi(x)})]$$ to $$g$$.
+sending $$(s_{\pi(x)})_{x\in V}$$ to $$g$$.
 
 We claim that $$\epsilon$$ defines a natural transformation from $$\pi^{-1}\pi_\ast\mathscr{G}$$ to $$\mathscr{G}$$.
 To prove the claim, we need to show that given a map $$\psi\colon \mathscr{G} \to \mathscr{G}'$$
@@ -191,12 +210,12 @@ $$\begin{CD}
 \pi^{-1}\pi_\ast \mathscr{G}' @>{\epsilon_{\mathscr{G}'}}>> \mathscr{G}'.
 \end{CD}$$
 
-Given $$[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\pi_\ast\mathscr{G}(V)$$,
+Given $$(s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)$$,
 the upper right path of the square sends us first to some $$g \in \mathscr{G}(V)$$
 such that $$g_x$$ is the image of $$s_{\pi(x)}$$ in $$\mathscr{G}_x$$ for all $$x \in V$$,
 and then sends $$g$$ to $$\psi(V)(g) \in \mathscr{G}'(V)$$.
 On the other hand, the lower left path of the square sends
-$$[x \mapsto (x,s_{\pi(x)})]$$ first to $$[x \mapsto (x,(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}))]$$
+$$(s_{\pi(x)})_{x \in V}$$ first to $$\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}$$
 in $$\pi^{-1}\pi_\ast\mathscr{G}'(V)$$, and then to
 some $$g' \in \mathscr{G}'(V)$$ such that $$g'_x$$ is the image of
 $$(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})$$ in $$\mathscr{G}'_x$$ for all $$x \in V$$.
@@ -227,17 +246,28 @@ $$\begin{CD}
 \end{CD}$$
 
 is equal to the identity.
-If $$V \subset X$$ is an open set and
-$$[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\mathscr{F}(V)$$ is a section,
-where $$s_{\pi(x)}$$ is an element of the stalk $$\mathscr{F}_{\pi(x)}$$.
-The first map sends this section to the section
+The difficulty here seems to be largely notational.
+Let $$V \subset X$$ be an open set.
+Suppose $$(s_{\pi(x)})_{x \in V}$$ is a section in $$\pi^{-1}\mathscr{F}(V)$$.
+We have
 
-$$[x \mapsto (x,\eta_{\pi(x)}(s_{\pi(x)}))] \in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).$$
+$$(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
+= \left((\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}
+\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).$$
 
-The second map sends this section to the unique section $$f$$ in $$\pi^{-1}\mathscr{F}(V)$$
-whose image in the stalk at $$\pi(x)$$ is equal to $$\eta_{\pi(x)}(s_{\pi(x)})$$.
-But $$\eta$$ is defined such that this is exactly the assignment $$[x \mapsto (x,s_{\pi(x)})]$$!
-So far so good.
+First observe that the continuity condition $$\eqref{star}$$ tells us that
+there is, for each $$x \in V$$, an open neighborhood $$V_x$$ of $$x$$ and
+an open set $$U_x \subset Y$$ containing $$\pi(V_x)$$.
+On this open set we have $$s \in \mathscr{F}(U_x)$$ such that
+$$\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})$$.
+
+We saw above that $$(\eta_{\mathscr{F}})(U_x)(s)$$ is the section
+$$(s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
+\pi^{-1}\mathscr{F}(\pi^{-1}(U))$$.
+The map $$\epsilon_{\pi^{-1}\mathscr F}$$ recognizes that the sections
+$$(s_{\pi(x)})_{x \in \pi^{-1}(U_x)}$$ satisfy the compatibility conditions
+to glue up to form a section $$(s_{\pi(x)})_{x \in V}$$ in $$\pi^{-1}\mathscr{F}(V)$$,
+demonstrating that the double composition is indeed the identity. So far so good.
 
 The second double composition we need to show is equal to the identity is defined 
 for a sheaf $$\mathscr{G}$$ on $$X$$ as follows
@@ -247,13 +277,13 @@ $$\begin{CD}
 @>{\pi_\ast\epsilon_{\mathscr{G}}}>> \pi_\ast\mathscr{G}.
 \end{CD}$$
 
-If $$U \subset Y$$ is an open set and $$g \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))$$
+If $$U \subset Y$$ is an open set and $$g \in \pi_\ast\mathscr{G}(U)$$
 is a section,
 the first map sends $$g$$ to the section
+$$(g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)$$.
 
-$$[x \mapsto (x,g_\pi(x))] \in \pi^{-1}\pi_\ast\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U).$$
 
-The second map sends this section to the unique section in $$\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}(U)$$
-whose image in the stalk at $$\pi(x)$$ is $$g_\pi(x)$$. Indeed, $$g$$ is that section!
+The second map recognizes that the above section and $$g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}$$
+agree on each stalk, and so sends our section back to $$g$$.
 
 This completes the proof that inverse image and pushforward form an adjoint pair of functors.

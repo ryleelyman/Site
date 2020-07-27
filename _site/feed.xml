@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-26T19:43:35-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-27T13:39:15-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
 there is an adjunction between the categories of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
 The adjunction is somewhat mysterious to me as I begin to write this,
 so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
@@ -65,12 +65,16 @@ satisfy this latter definition of an adjunction.&lt;/p&gt;
 we have functors &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y&lt;/script&gt;
 and &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X&lt;/script&gt; from the category
 of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; and &lt;em&gt;vice versa.&lt;/em&gt;
-The former is simple to describe: if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
-the sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{F}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; is the assignment&lt;/p&gt;
+The former is simple to describe: if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
+the &lt;em&gt;pushforward sheaf&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; is the assignment&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;U \mapsto \mathscr{F}(\pi^{-1}(U))&lt;/script&gt;
 
-&lt;p&gt;for all open subsets &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;for all open subsets &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
+If &lt;script type=&quot;math/tex&quot;&gt;\psi \colon \mathscr{G} \to \mathscr{G}'&lt;/script&gt; is a morphism of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
+the morphism &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\psi&lt;/script&gt; is defined by the rule&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).&lt;/script&gt;
 
 &lt;p&gt;The latter is slightly more complicated.
 Recall that if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
@@ -79,10 +83,15 @@ The sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is 
 &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is called the &lt;em&gt;espace étale&lt;/em&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
 The set of points of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; above &lt;script type=&quot;math/tex&quot;&gt;y \in Y&lt;/script&gt; is the &lt;em&gt;stalk&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}_y&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Thus a section &lt;script type=&quot;math/tex&quot;&gt;s \colon U \to F&lt;/script&gt; is an element &lt;script type=&quot;math/tex&quot;&gt;(s_y)_{y \in U}&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\prod_{y \in U} \mathscr{F}_y&lt;/script&gt;.
-Continuity of &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; is the condition that for all &lt;script type=&quot;math/tex&quot;&gt;y \in U&lt;/script&gt;, there exists
-an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_y&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; and an element &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_y)&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;f_x = s_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in U_y&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;As usual, a section &lt;script type=&quot;math/tex&quot;&gt;s\colon U \to F&lt;/script&gt; of the projection &lt;script type=&quot;math/tex&quot;&gt;\rho \colon F \to X&lt;/script&gt;
+is an element &lt;script type=&quot;math/tex&quot;&gt;(s_y)_{y \in U}&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\prod_{y \in U} \mathscr{F}_y&lt;/script&gt;.
+In our case, continuity of &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; is the following condition&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}\label{star}\tag{$\ast$}
+\text{for all } y \in U, \text{ there exists an open neighborhood }
+U_y \text{ of } y\\  \text{ and } f\in\mathscr{F}(U_y) \text{ such that }
+f_x = s_x \text{ for all } x \in U_y.
+\end{equation}&lt;/script&gt;
 
 &lt;p&gt;Given that &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; admit maps to &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, we can form their pullback,&lt;/p&gt;
 
@@ -94,9 +103,25 @@ X @&gt;{\pi}&gt;&gt; Y
 
 &lt;p&gt;which as a set is  &lt;script type=&quot;math/tex&quot;&gt;\{ (x,f_y) \in X \times F : \pi(x) = y\}&lt;/script&gt;.
 The topology on &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F&lt;/script&gt; is induced from the product topology on &lt;script type=&quot;math/tex&quot;&gt;X \times F&lt;/script&gt;.
-The sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}&lt;/script&gt; is the sheaf of sections of &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F \to X&lt;/script&gt;.
+The &lt;em&gt;inverse image sheaf&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}&lt;/script&gt; is the sheaf of sections of &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F \to X&lt;/script&gt;.
 The universal property of the pullback ensures that this really defines a functor
 from the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt; for continuity of a section &lt;script type=&quot;math/tex&quot;&gt;s\colon V \to \pi^{-1}F&lt;/script&gt;—that is,
+a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\prod_{x \in V}\mathscr{F}_{\pi(x)}&lt;/script&gt;—says
+that for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt; there exists an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
+and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
+Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_x)&lt;/script&gt; 
+such that &lt;script type=&quot;math/tex&quot;&gt;f_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;\phi\colon \mathscr{F} \to \mathscr{F}'&lt;/script&gt; is a morphism of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
+the resulting morphism &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'&lt;/script&gt;
+is defined by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.&lt;/script&gt;
+
+&lt;p&gt;One needs to demonstrate that the right-hand side satisfies condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;;
+the check is simple, so I’ll leave it to the reader.&lt;/p&gt;
 
 &lt;p&gt;The claim is that &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}&lt;/script&gt; is left adjoint to &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast&lt;/script&gt;.
 Therefore we should expect natural transformations
@@ -105,27 +130,24 @@ and &lt;script type=&quot;math/tex&quot;&gt;\epsilon \colon \pi^{-1}\pi_\ast \Lo
 
 &lt;h3 id=&quot;the-unit-of-the-adjunction&quot;&gt;The Unit of the Adjunction&lt;/h3&gt;
 
-&lt;p&gt;So let &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; be a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
-A section &lt;script type=&quot;math/tex&quot;&gt;s \colon \pi^{-1}(U) \to \pi^{-1}F&lt;/script&gt;
-is a map&lt;/p&gt;
+&lt;p&gt;So let &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; be a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
+and let &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; be an open set in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
+Since &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;,
+we can think of &lt;script type=&quot;math/tex&quot;&gt;s \in \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; as
+a section &lt;script type=&quot;math/tex&quot;&gt;s \colon \pi^{-1}(U) \to \pi^{-1}F&lt;/script&gt;,
+i.e. a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U)}&lt;/script&gt;
+satisfying the compatibility condition above.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in \pi^{-1}(U),\  s_{\pi(X)} \in \mathscr{F}_{\pi(x)}&lt;/script&gt;
+&lt;p&gt;Note that in particular if &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is open
+and &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;
+for a section &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}(U)\to \pi^{-1}F&lt;/script&gt; is satisfied by the section
+&lt;script type=&quot;math/tex&quot;&gt;(f_{\pi(x)})_{x \in \pi^{-1}(U)}&lt;/script&gt;,
+and thus defines an element of &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;satisfying the following compatibility condition:
-for each point &lt;script type=&quot;math/tex&quot;&gt;x \in \pi^{-1}(U)&lt;/script&gt;, there exists
-an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x \subset \pi^{-1}(U)&lt;/script&gt; containing &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
-and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that
-&lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
-Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_x)&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;f_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; 
+as&lt;/p&gt;
 
-&lt;p&gt;In particular, if &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a section in
-&lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}(U)&lt;/script&gt;, the assignment &lt;script type=&quot;math/tex&quot;&gt;x \mapsto (x,f_{\pi(x)})&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;x \in \pi^{-1}(U)&lt;/script&gt;
-defines a section in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;.
-Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; 
-by the rule&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta_{\mathscr{F}}(U)(f) = [x \mapsto (x,f_{\pi(x)}),\ x \in \pi^{-1}(U)].&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.&lt;/script&gt;
 
 &lt;p&gt;(Let’s parse the notation: a natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; yields
 a map of sheaves &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}&lt;/script&gt; for each sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
@@ -141,40 +163,36 @@ of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, the foll
 \mathscr{F}' @&gt;{\eta_{\mathscr{F}'}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F}'.
 \end{CD}&lt;/script&gt;
 
-&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, the upper right path of the square sends
-&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,f_{\pi(x)})]&lt;/script&gt; and then to
-&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,\phi_{\pi(x)}(f_{\pi(x)}))]&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}'(U)&lt;/script&gt;.
-On the other hand, the lower left path of the square
-sends &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;\phi(U)(f)&lt;/script&gt; and then to
-&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,(\phi(U)(f))_{\pi(x)})]&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}'(U)&lt;/script&gt;.
-The equality&lt;/p&gt;
+&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, commutativity of the square is the claim that
+the following equality holds&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\phi(U)(f))_{\pi(x)} = \phi_{\pi(x)}(f_{\pi(x)})&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
+= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.&lt;/script&gt;
 
-&lt;p&gt;holds pointwise, since taking the stalk at &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is functorial.&lt;/p&gt;
+&lt;p&gt;This is in fact true, since taking the stalk at &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is functorial.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-counit-of-the-adjunction&quot;&gt;The Counit of the Adjunction&lt;/h3&gt;
 
 &lt;p&gt;Now suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.
 Let &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast G&lt;/script&gt; denote the &lt;em&gt;espace étale&lt;/em&gt; over &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;A section &lt;script type=&quot;math/tex&quot;&gt;s \colon V \to \pi^{-1}\pi_\ast G&lt;/script&gt; is a map&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x \mapsto (x,s_{\pi(x)}) \qquad\text{for } x \in V,\ s_{\pi(x)} \in \pi_\ast\mathscr{G}_{\pi(x)}&lt;/script&gt;
-
-&lt;p&gt;satisfying the following compatibility condition:
-for each point &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, there exists an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x \subset V&lt;/script&gt;
-containing &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
-Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;g_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;A section &lt;script type=&quot;math/tex&quot;&gt;s \colon V \to \pi^{-1}\pi_\ast G&lt;/script&gt;
+is a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; taking values in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)}&lt;/script&gt;
+satisfying the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;,
+which in our particular case asserts the existence,
+for each &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, of an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and an open neighborhood
+&lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; satisfying &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
+Furthermore there exists &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))&lt;/script&gt;
+such that the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt; under the natural map
+&lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;Since the sets &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}(U_x)&lt;/script&gt; cover &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; by assumption,
 sheafiness of &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; implies the existence of a unique &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
 such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is equal to the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt;
-under the natural map &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt;.
+under the natural map &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt;
+for &lt;em&gt;all&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.
 Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)&lt;/script&gt;
-sending &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
+sending &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x\in V}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;We claim that &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; defines a natural transformation from &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt;.
 To prove the claim, we need to show that given a map &lt;script type=&quot;math/tex&quot;&gt;\psi\colon \mathscr{G} \to \mathscr{G}'&lt;/script&gt;
@@ -186,12 +204,12 @@ of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, the foll
 \pi^{-1}\pi_\ast \mathscr{G}' @&gt;{\epsilon_{\mathscr{G}'}}&gt;&gt; \mathscr{G}'.
 \end{CD}&lt;/script&gt;
 
-&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\pi_\ast\mathscr{G}(V)&lt;/script&gt;,
+&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)&lt;/script&gt;,
 the upper right path of the square sends us first to some &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
 such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;,
 and then sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\psi(V)(g) \in \mathscr{G}'(V)&lt;/script&gt;.
 On the other hand, the lower left path of the square sends
-&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}))]&lt;/script&gt;
+&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}&lt;/script&gt;
 in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}'(V)&lt;/script&gt;, and then to
 some &lt;script type=&quot;math/tex&quot;&gt;g' \in \mathscr{G}'(V)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;g'_x&lt;/script&gt; is the image of
 &lt;script type=&quot;math/tex&quot;&gt;(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}'_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.&lt;/p&gt;
@@ -222,17 +240,28 @@ we have that&lt;/p&gt;
 \end{CD}&lt;/script&gt;
 
 &lt;p&gt;is equal to the identity.
-If &lt;script type=&quot;math/tex&quot;&gt;V \subset X&lt;/script&gt; is an open set and
-&lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})] \in \pi^{-1}\mathscr{F}(V)&lt;/script&gt; is a section,
-where &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; is an element of the stalk &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}_{\pi(x)}&lt;/script&gt;.
-The first map sends this section to the section&lt;/p&gt;
+The difficulty here seems to be largely notational.
+Let &lt;script type=&quot;math/tex&quot;&gt;V \subset X&lt;/script&gt; be an open set.
+Suppose &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; is a section in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;.
+We have&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;[x \mapsto (x,\eta_{\pi(x)}(s_{\pi(x)}))] \in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
+= \left((\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}
+\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).&lt;/script&gt;
 
-&lt;p&gt;The second map sends this section to the unique section &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;
-whose image in the stalk at &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;\eta_{\pi(x)}(s_{\pi(x)})&lt;/script&gt;.
-But &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is defined such that this is exactly the assignment &lt;script type=&quot;math/tex&quot;&gt;[x \mapsto (x,s_{\pi(x)})]&lt;/script&gt;!
-So far so good.&lt;/p&gt;
+&lt;p&gt;First observe that the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt; tells us that
+there is, for each &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and
+an open set &lt;script type=&quot;math/tex&quot;&gt;U_x \subset Y&lt;/script&gt; containing &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x)&lt;/script&gt;.
+On this open set we have &lt;script type=&quot;math/tex&quot;&gt;s \in \mathscr{F}(U_x)&lt;/script&gt; such that
+&lt;script type=&quot;math/tex&quot;&gt;\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;We saw above that &lt;script type=&quot;math/tex&quot;&gt;(\eta_{\mathscr{F}})(U_x)(s)&lt;/script&gt; is the section
+&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
+\pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;.
+The map &lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\pi^{-1}\mathscr F}&lt;/script&gt; recognizes that the sections
+&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U_x)}&lt;/script&gt; satisfy the compatibility conditions
+to glue up to form a section &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;,
+demonstrating that the double composition is indeed the identity. So far so good.&lt;/p&gt;
 
 &lt;p&gt;The second double composition we need to show is equal to the identity is defined 
 for a sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; as follows&lt;/p&gt;
@@ -242,14 +271,13 @@ for a sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; o
 @&gt;{\pi_\ast\epsilon_{\mathscr{G}}}&gt;&gt; \pi_\ast\mathscr{G}.
 \end{CD}&lt;/script&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))&lt;/script&gt;
+&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U)&lt;/script&gt;
 is a section,
-the first map sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to the section&lt;/p&gt;
+the first map sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to the section
+&lt;script type=&quot;math/tex&quot;&gt;(g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)&lt;/script&gt;.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;[x \mapsto (x,g_\pi(x))] \in \pi^{-1}\pi_\ast\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U).&lt;/script&gt;
-
-&lt;p&gt;The second map sends this section to the unique section in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}(U)&lt;/script&gt;
-whose image in the stalk at &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;g_\pi(x)&lt;/script&gt;. Indeed, &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; is that section!&lt;/p&gt;
+&lt;p&gt;The second map recognizes that the above section and &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}&lt;/script&gt;
+agree on each stalk, and so sends our section back to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space and a continuous map , there is an adjunction between the categories of sheaves on and sheaves on . The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
