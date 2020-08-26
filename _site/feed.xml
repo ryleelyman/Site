@@ -1,4 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-27T13:39:15-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-26T09:05:48-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
+cheekily playing with unhooking a signifier from what it typically signifies.
+Namely, one of the (many) tricky foundational things about working with orbifolds
+goes by the name “the axiom of choice is false for the category of smooth manifolds.”&lt;/p&gt;
+
+&lt;p&gt;One way to misinterpret the statement is to take it literally:
+as undergraduate math majors learn, the axiom of choice says that given an infinite collection of sets,
+you can always choose exactly one element of each set, even if the collection is infinite.
+Therefore the statement “the axiom of choice is false for the category of smooth manifolds”
+could reasonably be thought to mean “given a collection of smooth manifolds,
+which are in particular sets with additional structure,
+it is &lt;em&gt;not&lt;/em&gt; the case that you can always choose a point in each manifold if the collection is sufficiently large.”
+Of course, if we accept the axiom of choice 
+(I do, since I like the 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Nielsen–Schreier_theorem#Axiomatic_foundations&quot;&gt;Nielsen–Schreier theorem&lt;/a&gt;
+which says that subgroups of free groups are free), 
+then this statement is nonsense: it doesn’t matter if the collection of sets is really a collection of manifolds
+or a collection of the contents of various grocery stores, we can always choose one element from each.
+What, then, does this statement mean?&lt;/p&gt;
+
+&lt;p&gt;As it turns out, there are two statements equivalent to the axiom of choice that have category-theoretic import.
+This post is primarily concerned with the latter, but the former is too cute to pass up.&lt;/p&gt;
+
+&lt;h2 id=&quot;every-epimorphism-splits&quot;&gt;Every Epimorphism Splits&lt;/h2&gt;
+
+&lt;p&gt;Set theory is kind of in an odd position within mathematics.
+I read some complaint that most mathematicians see sets every day
+and yet have never seen sets be &lt;em&gt;interesting,&lt;/em&gt; 
+and so discount the possibility that set theory could be a worthwhile pursuit.
+The standard formulation of set theory as a foundation for mathematics is somewhat unfortunate, too:
+if we take the axioms of Zermelo–Frankel set theory too literally, then we notice that everything is a set,
+even the elements of sets.
+Thus nonsensical questions like “what are the elements of 6” are allowable on a technicality.&lt;/p&gt;
+
+&lt;p&gt;I learned this complaint, and everything in this section, from a beautiful 8-page article by Tom Leinster called
+&lt;a href=&quot;https://arxiv.org/pdf/1212.6543.pdf&quot;&gt;“Rethinking Set Theory”&lt;/a&gt; from which I’d like to quote most of the abstract:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mathematicians manipulate sets with confidence almost every day, rarely making mistakes. 
+Few of us, however, could accurately quote what are often referred to as “the” axioms of set theory. 
+This suggests that we all carry around with us, perhaps subconsciously, 
+a reliable body of operating principles for manipulating sets. 
+What if we were to take some of those principles and adopt them as our axioms instead? 
+The message of this article is that this can be done, in a simple, practical way (due to Lawvere). 
+The resulting axioms are ten thoroughly mundane statements about sets.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Of these axioms, the formulation of the axiom of choice is perhaps the most devastatingly simple:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; Every [surjective function of sets] has a right inverse.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To see that this is really equivalent, notice that if &lt;script type=&quot;math/tex&quot;&gt;p\colon S \to T&lt;/script&gt; is a surjective function of sets,
+then we may identify &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt; with the disjoint union&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\coprod_{t \in T} p^{-1}(t).&lt;/script&gt;
+
+&lt;p&gt;A &lt;em&gt;right inverse&lt;/em&gt; for the function &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is a function &lt;script type=&quot;math/tex&quot;&gt;i \colon T \to S&lt;/script&gt;
+such that &lt;script type=&quot;math/tex&quot;&gt;p(i(t)) = t&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;.
+Notice that this means that &lt;script type=&quot;math/tex&quot;&gt;i\colon T \to S&lt;/script&gt; picks out one element of &lt;script type=&quot;math/tex&quot;&gt;p^{-1}(t)&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;
+varies over the elements of &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;,
+so the existence of such a function is equivalent to being able to perform choice in the sense that we said above!&lt;/p&gt;
+
+&lt;p&gt;This axiom can be reformulated in any category:
+the correct generalization of a surjective function is called an &lt;em&gt;epimorphism;&lt;/em&gt;
+for categories of “sets with additional structure” (e.g. groups, rings, manifolds) the surjective maps 
+are epimorphisms, but the converse is not always true.&lt;/p&gt;
+
+&lt;p&gt;A right inverse for an arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon c \to d&lt;/script&gt; makes sense in any category:
+it’s an arrow &lt;script type=&quot;math/tex&quot;&gt;r \colon d \to c&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;fr&lt;/script&gt; is the identity arrow of &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;.
+It’s a general fact that admitting a right inverse implies that the arrow is an epimorphism,
+even though we haven’t defined what that is.
+In fact, for categories of “sets with additional structure” if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; admits a right inverse,
+then it is surjective.
+We say &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a &lt;em&gt;split epimorphism&lt;/em&gt; (the name comes from “split exact sequences” of e.g. groups).&lt;/p&gt;
+
+&lt;p&gt;This allows us to cheekily reformulate the axiom of choice in any category as the following statement&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; every epimorphism is split.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This axiom fails for smooth manifolds:
+a surjective map from the real line to the unit circle in &lt;script type=&quot;math/tex&quot;&gt;\mathbb R^2&lt;/script&gt; given by sending &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
+to &lt;script type=&quot;math/tex&quot;&gt;(\cos x,\sin x)&lt;/script&gt; for instance, fails to have a right inverse.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-equivalent-definition-of-equivalence-of-categories&quot;&gt;An Equivalent Definition of Equivalence of Categories&lt;/h2&gt;
+
+&lt;p&gt;Another use of the axiom of choice in category theory is the following theorem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; A functor &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt; between categories &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and $$D$ is an &lt;em&gt;equivalence of categories&lt;/em&gt;
+if and only if it is &lt;em&gt;fully faithful&lt;/em&gt; and &lt;em&gt;essentially surjective.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here the functor &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;full&lt;/em&gt; if for all objects &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;c'&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, the function
+&lt;script type=&quot;math/tex&quot;&gt;F\colon C(c,c') \to D(Fc,Fc')&lt;/script&gt; is surjective, and &lt;em&gt;faithful&lt;/em&gt; if it is injective.
+So &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;fully faithful&lt;/em&gt; if it induces a bijection from the set of arrows betwwen any two objects in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
+to their images in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;The functor &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;essentially surjective&lt;/em&gt; if every object &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt; is isomorphic to &lt;script type=&quot;math/tex&quot;&gt;Fc&lt;/script&gt; for some
+&lt;script type=&quot;math/tex&quot;&gt;c \in C&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally an &lt;em&gt;equivalence of categories&lt;/em&gt; is a functor &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt; such that there exists an “inverse”
+functor &lt;script type=&quot;math/tex&quot;&gt;G \colon D \to C&lt;/script&gt; and natural isomorphisms between the two double compositions and the
+identity functors of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;, respectively.&lt;/p&gt;
+
+&lt;p&gt;The proof that an equivalence of categories has the above properties is fairly simple: in an alternate universe,
+this blog post would give it, and show that the converse requires the axiom of choice.
+Let me just content myself with pointing out that the use of the axiom of choice is to pick
+a &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;Fc&lt;/script&gt; is isomorphic to &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt;.
+In fact, it turns out that the theorem is &lt;em&gt;equivalent&lt;/em&gt; to the axiom of choice,
+if you make the appropriate definitions of the categories involved.
+(e.g. &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; should be an index set, and &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; a clever category based on a collection
+of sets indexed by &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.)&lt;/p&gt;
+
+&lt;p&gt;One can define (small) categories &lt;em&gt;internal&lt;/em&gt; to a category and 
+do category theory in this way. Thus one way to phrase the axiom of choice for a category is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; A functor between categories internal to &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
+is an equivalence if and only if it is fully faithful and essentially surjective.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It turns out that the category of smooth manifolds &lt;em&gt;also&lt;/em&gt; fails this axiom,
+essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
 there is an adjunction between the categories of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
 The adjunction is somewhat mysterious to me as I begin to write this,
 so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
@@ -279,7 +405,7 @@ the first map sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to 
 &lt;p&gt;The second map recognizes that the above section and &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}&lt;/script&gt;
 agree on each stalk, and so sends our section back to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space and a continuous map , there is an adjunction between the categories of sheaves on and sheaves on . The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space and a continuous map , there is an adjunction between the categories of sheaves on and sheaves on . The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
 the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
@@ -436,7 +562,7 @@ that we can always write &lt;script type=&quot;math/tex&quot;&gt;f(x) = \operato
 and the functions &lt;script type=&quot;math/tex&quot;&gt;\sqrt{f}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\operatorname{sgn}(f)\sqrt(f)&lt;/script&gt; are continuous.
 Therefore it is &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt; that is infinite-dimensional,
 while &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 = 0&lt;/script&gt;.
-(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
+(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
 
@@ -498,7 +624,7 @@ to manage the expression of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
 in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
 last semester, but I thought it might be nice to have something to point people
 who missed it to, in order to stick to my assignment
@@ -719,7 +845,7 @@ is the following:&lt;/p&gt;
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
 The utility of the Yoneda lemma is likely 
 far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -836,7 +962,7 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="http://localhost:4000/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>http://localhost:4000/2019/07/13/A-Digression</id><content type="html" xml:base="http://localhost:4000/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
 on set theory vs. category theory.&lt;/p&gt;
 
 &lt;p&gt;In modern mathematics, there are two notions that might be truly called 
@@ -904,7 +1030,7 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
 completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
 fall away from your eyes and you see how utterly weird it is that a
 concept has a particular name? I’ve been having that feeling with the
@@ -980,7 +1106,7 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>/2019/06/22/Hello-World</id><content type="html" xml:base="/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
 Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
 to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
 he writes, “is the heart of the healthy internet.”&lt;/p&gt;

@@ -1537,6 +1537,8 @@ About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
 About page	about.md	/^# About page$/;"	c
 Adjunctions	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Adjunctions$/;"	s
 Adjunctions	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="adjunctions">Adjunctions<\/h2>$/;"	i
+An Equivalent Definition of Equivalence of Categories	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## An Equivalent Definition of Equivalence of Categories$/;"	s
+An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
 CAT(0) Free-by-Cyclic Groups	_site/2019/09/06/Choo-Choo.html	/^<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups<\/h3>$/;"	j
 Categories	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Categories$/;"	s
@@ -1545,6 +1547,8 @@ Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h
 Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Category-Theory-Day-One.html">Category Theory Day One<\/a><\/h2/;"	i
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
+Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
+Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
 Geometric Group Theory without Boundaries	_site/research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
@@ -1553,6 +1557,7 @@ Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
+Morita Equivalence and Other Headaches	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="morita-equivalence-and-other-headaches">Morita Equivalence and Other Headaches<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
 Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
@@ -1575,16 +1580,18 @@ Teaching	teaching.md	/^# Teaching$/;"	c
 The Algebraic Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space$/;"	s
 The Algebraic Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	i
 The Algebraic Cotangent Space Agrees With the Usual One	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space Agrees With the Usual One$/;"	s
+The Axiom Of Choice Is False For Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^      <h1>The Axiom Of Choice Is False For Manifolds<\/h1>$/;"	h
+The Axiom Of Choice Is False For Manifolds	_site/blog.html	/^    <h2><a href="\/2020\/08\/02\/The-Axiom-of-Choice-is-False-for-Manifolds.html">The Axiom Of C/;"	i
+The Axiom of Choice is False for Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="the-axiom-of-choice-is-false-for-manifolds">The Axiom of Choice is False for Manifolds<\//;"	i
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
-The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	j
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
-The Unit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	j
 The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Usual Cotangent Space$/;"	s
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
+The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
@@ -1598,6 +1605,7 @@ a:hover	_site/assets/css/style.css	/^a:hover { text-decoration: underline; }$/;"
 abbr[title]	_site/assets/css/style.css	/^abbr[title] { border-bottom: none; \/* 1 *\/ text-decoration: underline; \/* 2 *\/ text-decorati/;"	s
 about-page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	I
 adjunctions	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="adjunctions">Adjunctions<\/h2>$/;"	I
+an-equivalent-definition-of-equivalence-of-categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	I
 article	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 aside	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 audio	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
@@ -1628,6 +1636,7 @@ details summary	_site/assets/css/style.css	/^details summary { cursor: pointer; 
 details:not([open] ) > *:not(summary)	_site/assets/css/style.css	/^details:not([open]) > *:not(summary) { display: none !important; }$/;"	s
 dfn	_site/assets/css/style.css	/^dfn { font-style: italic; }$/;"	s
 div	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
+every-epimorphism-splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	I
 fieldset	_site/assets/css/style.css	/^fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }$/;"	s
 figcaption	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 figure	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
@@ -1687,6 +1696,7 @@ math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: tr
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+morita-equivalence-and-other-headaches	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="morita-equivalence-and-other-headaches">Morita Equivalence and Other Headaches<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
@@ -1708,6 +1718,7 @@ progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: 
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
 publications-and-preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
+published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
 research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
@@ -1737,8 +1748,8 @@ textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-fam
 textarea	_site/assets/css/style.css	/^textarea { overflow: auto; }$/;"	s
 th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
 the-algebraic-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	I
-the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
-the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
+the-axiom-of-choice-is-false-for-manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="the-axiom-of-choice-is-false-for-manifolds">The Axiom of Choice is False for Manifolds<\//;"	I
+the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
 title: About	about.md	/^title: About$/;"	s
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I

@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154695841-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154695841-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>The Axiom Of Choice Is False For Manifolds</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ryleelyman.github.io" />
+    
+      <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+
+    
+  </head>
+
+  <body>
+    <div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	
+	<a href="/blog.html">Alanza</a>
+	
+      </div>
+      <div>
+	<nav>
+	  
+	    <div class="navbutton">
+	      <a  href="/">
+		Home
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/research.html">
+		Research
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/teaching.html">
+		Teaching
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/service.html">
+		Service
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/blog.html">
+		Blog
+	      </a>
+	    </div>
+	  
+	</nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="maindiv">
+      <h1>The Axiom Of Choice Is False For Manifolds</h1>
+<p>02 Aug 2020</p>
+
+<p>This is a post about one of those things that is really a case of category theory
+cheekily playing with unhooking a signifier from what it typically signifies.
+Namely, one of the (many) tricky foundational things about working with orbifolds
+goes by the name “the axiom of choice is false for the category of smooth manifolds.”</p>
+
+<p>One way to misinterpret the statement is to take it literally:
+as undergraduate math majors learn, the axiom of choice says that given an infinite collection of sets,
+you can always choose exactly one element of each set, even if the collection is infinite.
+Therefore the statement “the axiom of choice is false for the category of smooth manifolds”
+could reasonably be thought to mean “given a collection of smooth manifolds,
+which are in particular sets with additional structure,
+it is <em>not</em> the case that you can always choose a point in each manifold if the collection is sufficiently large.”
+Of course, if we accept the axiom of choice 
+(I do, since I like the 
+<a href="https://en.wikipedia.org/wiki/Nielsen–Schreier_theorem#Axiomatic_foundations">Nielsen–Schreier theorem</a>
+which says that subgroups of free groups are free), 
+then this statement is nonsense: it doesn’t matter if the collection of sets is really a collection of manifolds
+or a collection of the contents of various grocery stores, we can always choose one element from each.
+What, then, does this statement mean?</p>
+
+<p>As it turns out, there are two statements equivalent to the axiom of choice that have category-theoretic import.
+This post is primarily concerned with the latter, but the former is too cute to pass up.</p>
+
+<h2 id="every-epimorphism-splits">Every Epimorphism Splits</h2>
+
+<p>Set theory is kind of in an odd position within mathematics.
+I read some complaint that most mathematicians see sets every day
+and yet have never seen sets be <em>interesting,</em> 
+and so discount the possibility that set theory could be a worthwhile pursuit.
+The standard formulation of set theory as a foundation for mathematics is somewhat unfortunate, too:
+if we take the axioms of Zermelo–Frankel set theory too literally, then we notice that everything is a set,
+even the elements of sets.
+Thus nonsensical questions like “what are the elements of 6” are allowable on a technicality.</p>
+
+<p>I learned this complaint, and everything in this section, from a beautiful 8-page article by Tom Leinster called
+<a href="https://arxiv.org/pdf/1212.6543.pdf">“Rethinking Set Theory”</a> from which I’d like to quote most of the abstract:</p>
+
+<blockquote>
+  <p>Mathematicians manipulate sets with confidence almost every day, rarely making mistakes. 
+Few of us, however, could accurately quote what are often referred to as “the” axioms of set theory. 
+This suggests that we all carry around with us, perhaps subconsciously, 
+a reliable body of operating principles for manipulating sets. 
+What if we were to take some of those principles and adopt them as our axioms instead? 
+The message of this article is that this can be done, in a simple, practical way (due to Lawvere). 
+The resulting axioms are ten thoroughly mundane statements about sets.</p>
+</blockquote>
+
+<p>Of these axioms, the formulation of the axiom of choice is perhaps the most devastatingly simple:</p>
+
+<blockquote>
+  <p><strong>10.</strong> Every [surjective function of sets] has a right inverse.</p>
+</blockquote>
+
+<p>To see that this is really equivalent, notice that if <script type="math/tex">p\colon S \to T</script> is a surjective function of sets,
+then we may identify <script type="math/tex">S</script> with the disjoint union</p>
+
+<script type="math/tex; mode=display">\coprod_{t \in T} p^{-1}(t).</script>
+
+<p>A <em>right inverse</em> for the function <script type="math/tex">p</script> is a function <script type="math/tex">i \colon T \to S</script>
+such that <script type="math/tex">p(i(t)) = t</script> for all <script type="math/tex">t</script> in <script type="math/tex">T</script>.
+Notice that this means that <script type="math/tex">i\colon T \to S</script> picks out one element of <script type="math/tex">p^{-1}(t)</script> as <script type="math/tex">t</script>
+varies over the elements of <script type="math/tex">T</script>,
+so the existence of such a function is equivalent to being able to perform choice in the sense that we said above!</p>
+
+<p>This axiom can be reformulated in any category:
+the correct generalization of a surjective function is called an <em>epimorphism;</em>
+for categories of “sets with additional structure” (e.g. groups, rings, manifolds) the surjective maps 
+are epimorphisms, but the converse is not always true.</p>
+
+<p>A right inverse for an arrow <script type="math/tex">f\colon c \to d</script> makes sense in any category:
+it’s an arrow <script type="math/tex">r \colon d \to c</script> such that <script type="math/tex">fr</script> is the identity arrow of <script type="math/tex">c</script>.
+It’s a general fact that admitting a right inverse implies that the arrow is an epimorphism,
+even though we haven’t defined what that is.
+In fact, for categories of “sets with additional structure” if <script type="math/tex">f</script> admits a right inverse,
+then it is surjective.
+We say <script type="math/tex">f</script> is a <em>split epimorphism</em> (the name comes from “split exact sequences” of e.g. groups).</p>
+
+<p>This allows us to cheekily reformulate the axiom of choice in any category as the following statement</p>
+
+<blockquote>
+  <p><strong>The Axiom of Choice for a Category:</strong> every epimorphism is split.</p>
+</blockquote>
+
+<p>This axiom fails for smooth manifolds:
+a surjective map from the real line to the unit circle in <script type="math/tex">\mathbb R^2</script> given by sending <script type="math/tex">x</script>
+to <script type="math/tex">(\cos x,\sin x)</script> for instance, fails to have a right inverse.</p>
+
+<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equivalence of Categories</h2>
+
+<p>Another use of the axiom of choice in category theory is the following theorem:</p>
+
+<blockquote>
+  <p><strong>Theorem:</strong> A functor <script type="math/tex">F\colon C \to D</script> between categories <script type="math/tex">C</script> and $$D$ is an <em>equivalence of categories</em>
+if and only if it is <em>fully faithful</em> and <em>essentially surjective.</em></p>
+</blockquote>
+
+<p>Here the functor <script type="math/tex">F</script> is <em>full</em> if for all objects <script type="math/tex">c</script> and <script type="math/tex">c'</script> in <script type="math/tex">C</script>, the function
+<script type="math/tex">F\colon C(c,c') \to D(Fc,Fc')</script> is surjective, and <em>faithful</em> if it is injective.
+So <script type="math/tex">F</script> is <em>fully faithful</em> if it induces a bijection from the set of arrows betwwen any two objects in <script type="math/tex">C</script>
+to their images in <script type="math/tex">D</script>.</p>
+
+<p>The functor <script type="math/tex">F</script> is <em>essentially surjective</em> if every object <script type="math/tex">d \in D</script> is isomorphic to <script type="math/tex">Fc</script> for some
+<script type="math/tex">c \in C</script>.</p>
+
+<p>Finally an <em>equivalence of categories</em> is a functor <script type="math/tex">F\colon C \to D</script> such that there exists an “inverse”
+functor <script type="math/tex">G \colon D \to C</script> and natural isomorphisms between the two double compositions and the
+identity functors of <script type="math/tex">C</script> and <script type="math/tex">D</script>, respectively.</p>
+
+<p>The proof that an equivalence of categories has the above properties is fairly simple: in an alternate universe,
+this blog post would give it, and show that the converse requires the axiom of choice.
+Let me just content myself with pointing out that the use of the axiom of choice is to pick
+a <script type="math/tex">c</script> such that <script type="math/tex">Fc</script> is isomorphic to <script type="math/tex">d</script> for all <script type="math/tex">d \in D</script>.
+In fact, it turns out that the theorem is <em>equivalent</em> to the axiom of choice,
+if you make the appropriate definitions of the categories involved.
+(e.g. <script type="math/tex">D</script> should be an index set, and <script type="math/tex">C</script> a clever category based on a collection
+of sets indexed by <script type="math/tex">D</script>.)</p>
+
+<p>One can define (small) categories <em>internal</em> to a category and 
+do category theory in this way. Thus one way to phrase the axiom of choice for a category is:</p>
+
+<blockquote>
+  <p><strong>The Axiom of Choice for a Category:</strong> A functor between categories internal to <script type="math/tex">C</script>
+is an equivalence if and only if it is fully faithful and essentially surjective.</p>
+</blockquote>
+
+<p>It turns out that the category of smooth manifolds <em>also</em> fails this axiom,
+essentially because it fails the previous one!</p>
+
+
+    </div>
+  </body>
+</html>
