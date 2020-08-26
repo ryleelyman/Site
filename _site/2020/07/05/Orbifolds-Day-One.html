@@ -79,13 +79,13 @@
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.</p>
 
-<p>An <em>orbifold</em> of dimension <script type="math/tex">n</script> is a Hausdorff space locally modeled on <script type="math/tex">\mathbb{R}^n</script> modulo
+<p>An <em>orbifold</em> of dimension \(n\) is a Hausdorff space locally modeled on \(\mathbb{R}^n\) modulo
 the action of a finite group.
 This is a simple enough idea on its face:
 a useful perspective on the fundamental group of a manifold 
 is the passage between its action on the universal cover
 and the calculus of loops in the base space.
-For a group <script type="math/tex">G</script> that acts merely properly discontinuously and not freely,
+For a group \(G\) that acts merely properly discontinuously and not freely,
 the quotient space is no longer a manifold,
 and yet we would like to accesss the “loops” perspective regardless.
 This is the idea that orbifolds are trying to capture.
@@ -94,46 +94,46 @@ and yet how much more complex the theory becomes.</p>
 
 <p>Let’s remember back to when we learned Calculus.
 First we learned how to manipulate real-valued functions of one variable,
-and later multivariable functions <script type="math/tex">f\colon \mathbb{R}^m \to \mathbb{R}^n</script>.
+and later multivariable functions \(f\colon \mathbb{R}^m \to \mathbb{R}^n\).
 In particular, we defined a notion of differentiability for these maps.
 To replicate this effort on differentiable manifolds,
-one uses <em>charts.</em> The idea is that the local structure of a manifold <script type="math/tex">M</script>
-can be captured by a map <script type="math/tex">\varphi\colon U \to M</script>, where <script type="math/tex">U</script> is an
-open subset of <script type="math/tex">\mathbb{R}^n</script>.
-A map of manifolds <script type="math/tex">f\colon M \to N</script> is <em>defined</em> to be differentiable
+one uses <em>charts.</em> The idea is that the local structure of a manifold \(M\)
+can be captured by a map \(\varphi\colon U \to M\), where \(U\) is an
+open subset of \(\mathbb{R}^n\).
+A map of manifolds \(f\colon M \to N\) is <em>defined</em> to be differentiable
 if its expression in any pair of charts is differentiable.</p>
 
 <p>A ridiculously maximalist approach to this idea is the following:
-suppose <script type="math/tex">(U_i,\varphi_i)_{i\in I}</script> is an <em>atlas</em> for <script type="math/tex">M</script>
-(in the usual sense), and that <script type="math/tex">(V_j,\psi_j)_{j\in J}</script>
-is an atlas for <script type="math/tex">N</script>.
-A function <script type="math/tex">f\colon M \to N</script>
-defines a map <script type="math/tex">f_{ij}\colon U_i \to V_j</script>
-whenever <script type="math/tex">f\varphi_i(U_i) \subset \psi_j(V_j)</script>.
-By refining the open cover of <script type="math/tex">M</script>, we can assume this is always the case.
+suppose \((U_i,\varphi_i)_{i\in I}\) is an <em>atlas</em> for \(M\)
+(in the usual sense), and that \((V_j,\psi_j)_{j\in J}\)
+is an atlas for \(N\).
+A function \(f\colon M \to N\)
+defines a map \(f_{ij}\colon U_i \to V_j\)
+whenever \(f\varphi_i(U_i) \subset \psi_j(V_j)\).
+By refining the open cover of \(M\), we can assume this is always the case.
 We can do the following strange thing:
-the disjoint union <script type="math/tex">U = \coprod_{i\in I}U_i</script>
-is a differentiable manifold, each of whose components is an open subset of <script type="math/tex">\mathbb{R}^m</script>,
-and the resulting map <script type="math/tex">\varphi = \coprod_{i\in I}\varphi_i</script> is differentiable
+the disjoint union \(U = \coprod_{i\in I}U_i\)
+is a differentiable manifold, each of whose components is an open subset of \(\mathbb{R}^m\),
+and the resulting map \(\varphi = \coprod_{i\in I}\varphi_i\) is differentiable
 (in fact a local diffeomorphism).
-The maps <script type="math/tex">f_{ij}</script> assemble into a map <script type="math/tex">F\colon U \to V</script> such that the following diagram commutes</p>
+The maps \(f_{ij}\) assemble into a map \(F\colon U \to V\) such that the following diagram commutes</p>
 
-<script type="math/tex; mode=display">\require{AMScd}\begin{CD} U @>F>> V \\ @VV\varphi V @VV\psi V \\ M @>f>> N. \end{CD}</script>
+\[\require{AMScd}\begin{CD} U @&gt;F&gt;&gt; V \\ @VV\varphi V @VV\psi V \\ M @&gt;f&gt;&gt; N. \end{CD}\]
 
-<p>And we are justified in saying that <script type="math/tex">f</script> is differentiable when there exists
-a map <script type="math/tex">F</script> constructed as above.
+<p>And we are justified in saying that \(f\) is differentiable when there exists
+a map \(F\) constructed as above.
 What we have done, essentially, is said that we don’t understand the quotient manifold,
-but we <em>do</em> understand open subsets of <script type="math/tex">\mathbb{R}^m</script>, and have performed
+but we <em>do</em> understand open subsets of \(\mathbb{R}^m\), and have performed
 a non-unique but useful construction to exploit that understanding.
 This is the jumping-off point for orbifolds.</p>
 
 <p>There is just one more wrinkle: 
 the definition of an atlas includes various differentiable maps
 called <em>changes of charts.</em> It would be convenient if there
-were a way to stipulate that our map <script type="math/tex">F</script> must play nicely with these changes of charts
+were a way to stipulate that our map \(F\) must play nicely with these changes of charts
 beyond just saying that there exists a map on the quotient space.
 This is where Lie Groupoids come in: they turn out to be precisely the gadget we need
-to manage the expression of <script type="math/tex">f</script> in charts while asserting that these expressions
+to manage the expression of \(f\) in charts while asserting that these expressions
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,

@@ -75,8 +75,8 @@
       <h1>A Sheafy Adjunction</h1>
 <p>26 Jul 2020</p>
 
-<p>Given a topological space <script type="math/tex">X</script> and a continuous map <script type="math/tex">\pi\colon X \to Y</script>,
-there is an adjunction between the categories of sheaves on <script type="math/tex">X</script> and sheaves on <script type="math/tex">Y</script>.
+<p>Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\),
+there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\).
 The adjunction is somewhat mysterious to me as I begin to write this,
 so the hope is that by writing about it, I’ll begin to understand.</p>
 
@@ -90,47 +90,47 @@ The method of proof, like most category-theoretic proofs,
 is a story of careful bookkeeping with functors and natural transformations,
 along with simple calculations to check.
 The idea essentially seems to be that the 
-unit <script type="math/tex">\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}</script>
-“shreds a section <script type="math/tex">f</script> into pieces,” while the counit
-<script type="math/tex">\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}</script>
-recognizes that these “shredded up” sections assemble into sections of <script type="math/tex">\mathscr{G}</script>.</p>
+unit \(\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}\)
+“shreds a section \(f\) into pieces,” while the counit
+\(\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}\)
+recognizes that these “shredded up” sections assemble into sections of \(\mathscr{G}\).</p>
 
 <h2 id="adjunctions">Adjunctions</h2>
-<p>Remember, given categories <script type="math/tex">C</script> and <script type="math/tex">D</script>, a pair of functors
-<script type="math/tex">F \colon C \to D</script> and <script type="math/tex">G \colon D \to C</script> form an <em>adjoint pair</em>
+<p>Remember, given categories \(C\) and \(D\), a pair of functors
+\(F \colon C \to D\) and \(G \colon D \to C\) form an <em>adjoint pair</em>
 when there exists an isomorphism</p>
 
-<script type="math/tex; mode=display">D(Fc,d) \cong C(c,Gd)</script>
+\[D(Fc,d) \cong C(c,Gd)\]
 
-<p>which is natural in <script type="math/tex">c</script> and <script type="math/tex">d</script>.
-We say <script type="math/tex">F</script> is <em>left adjoint</em> to <script type="math/tex">G</script>,
-or equivalently that <script type="math/tex">G</script> is <em>right adjoint</em> to <script type="math/tex">F</script>.
-In particular, setting <script type="math/tex">d = Fc</script>, we have</p>
+<p>which is natural in \(c\) and \(d\).
+We say \(F\) is <em>left adjoint</em> to \(G\),
+or equivalently that \(G\) is <em>right adjoint</em> to \(F\).
+In particular, setting \(d = Fc\), we have</p>
 
-<script type="math/tex; mode=display">D(Fc,Fc) \cong C(c,GFc).</script>
+\[D(Fc,Fc) \cong C(c,GFc).\]
 
-<p>which gives us a natural transformation <script type="math/tex">\eta \colon 1_C \Longrightarrow GF</script>.
-Similarly, we have <script type="math/tex">\epsilon\colon FG \Longrightarrow 1_D</script>.
-The natural transformation <script type="math/tex">\eta</script> is called the <em>unit</em> of the adjunction,
-and <script type="math/tex">\epsilon</script> is the <em>counit.</em>
+<p>which gives us a natural transformation \(\eta \colon 1_C \Longrightarrow GF\).
+Similarly, we have \(\epsilon\colon FG \Longrightarrow 1_D\).
+The natural transformation \(\eta\) is called the <em>unit</em> of the adjunction,
+and \(\epsilon\) is the <em>counit.</em>
 In fact, the existence of these natural transformations
 could be taken to be the <em>definition</em> of an adjunction,
 provided the natural transformations satisfy the identities</p>
 
-<script type="math/tex; mode=display">\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,</script>
+\[\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,\]
 
-<p>which says that for all <script type="math/tex">c \in C</script> and <script type="math/tex">d \in D</script>, the compositions</p>
+<p>which says that for all \(c \in C\) and \(d \in D\), the compositions</p>
 
-<script type="math/tex; mode=display">\require{AMScd}
+\[\require{AMScd}
 \begin{CD}
-Fc @>{F\eta_c}>> FGFc @>{\epsilon_{Fc}}>> Fc
-\end{CD}</script>
+Fc @&gt;{F\eta_c}&gt;&gt; FGFc @&gt;{\epsilon_{Fc}}&gt;&gt; Fc
+\end{CD}\]
 
 <p>and</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-Gd @>{\eta_{Gd}}>> GFGd @>{G\epsilon_d}>> Gd
-\end{CD}</script>
+\[\begin{CD}
+Gd @&gt;{\eta_{Gd}}&gt;&gt; GFGd @&gt;{G\epsilon_d}&gt;&gt; Gd
+\end{CD}\]
 
 <p>are the identity.</p>
 
@@ -138,169 +138,169 @@ Gd @>{\eta_{Gd}}>> GFGd @>{G\epsilon_d}>> Gd
 satisfy this latter definition of an adjunction.</p>
 
 <h2 id="sheaves">Sheaves</h2>
-<p>Given a pair of spaces <script type="math/tex">X</script> and <script type="math/tex">Y</script>, and a continuous map <script type="math/tex">\pi \colon X \to Y</script>,
-we have functors <script type="math/tex">\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y</script>
-and <script type="math/tex">\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X</script> from the category
-of sheaves on <script type="math/tex">X</script> to the category of sheaves on <script type="math/tex">Y</script> and <em>vice versa.</em>
-The former is simple to describe: if <script type="math/tex">\mathscr{G}</script> is a sheaf on <script type="math/tex">X</script>,
-the <em>pushforward sheaf</em> <script type="math/tex">\pi_\ast\mathscr{G}</script> on <script type="math/tex">Y</script> is the assignment</p>
+<p>Given a pair of spaces \(X\) and \(Y\), and a continuous map \(\pi \colon X \to Y\),
+we have functors \(\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y\)
+and \(\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X\) from the category
+of sheaves on \(X\) to the category of sheaves on \(Y\) and <em>vice versa.</em>
+The former is simple to describe: if \(\mathscr{G}\) is a sheaf on \(X\),
+the <em>pushforward sheaf</em> \(\pi_\ast\mathscr{G}\) on \(Y\) is the assignment</p>
 
-<script type="math/tex; mode=display">U \mapsto \mathscr{F}(\pi^{-1}(U))</script>
+\[U \mapsto \mathscr{F}(\pi^{-1}(U))\]
 
-<p>for all open subsets <script type="math/tex">U</script> of <script type="math/tex">Y</script>.
-If <script type="math/tex">\psi \colon \mathscr{G} \to \mathscr{G}'</script> is a morphism of sheaves on <script type="math/tex">X</script>,
-the morphism <script type="math/tex">\pi_\ast\psi</script> is defined by the rule</p>
+<p>for all open subsets \(U\) of \(Y\).
+If \(\psi \colon \mathscr{G} \to \mathscr{G}'\) is a morphism of sheaves on \(X\),
+the morphism \(\pi_\ast\psi\) is defined by the rule</p>
 
-<script type="math/tex; mode=display">(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).</script>
+\[(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).\]
 
 <p>The latter is slightly more complicated.
-Recall that if <script type="math/tex">\mathscr{F}</script> is a sheaf on <script type="math/tex">Y</script>,
-there is a space <script type="math/tex">F</script> equipped with a local homeomorphism <script type="math/tex">\rho \colon F \to Y</script>.
-The sheaf <script type="math/tex">\mathscr{F}</script> is the sheaf of local sections of <script type="math/tex">\rho</script>;
-<script type="math/tex">F</script> is called the <em>espace étale</em> for the sheaf <script type="math/tex">\mathscr{F}</script>.
-The set of points of <script type="math/tex">F</script> above <script type="math/tex">y \in Y</script> is the <em>stalk</em> <script type="math/tex">\mathscr{F}_y</script>.</p>
+Recall that if \(\mathscr{F}\) is a sheaf on \(Y\),
+there is a space \(F\) equipped with a local homeomorphism \(\rho \colon F \to Y\).
+The sheaf \(\mathscr{F}\) is the sheaf of local sections of \(\rho\);
+\(F\) is called the <em>espace étale</em> for the sheaf \(\mathscr{F}\).
+The set of points of \(F\) above \(y \in Y\) is the <em>stalk</em> \(\mathscr{F}_y\).</p>
 
-<p>As usual, a section <script type="math/tex">s\colon U \to F</script> of the projection <script type="math/tex">\rho \colon F \to X</script>
-is an element <script type="math/tex">(s_y)_{y \in U}</script> of <script type="math/tex">\prod_{y \in U} \mathscr{F}_y</script>.
-In our case, continuity of <script type="math/tex">s</script> is the following condition</p>
+<p>As usual, a section \(s\colon U \to F\) of the projection \(\rho \colon F \to X\)
+is an element \((s_y)_{y \in U}\) of \(\prod_{y \in U} \mathscr{F}_y\).
+In our case, continuity of \(s\) is the following condition</p>
 
-<script type="math/tex; mode=display">\begin{equation}\label{star}\tag{$\ast$}
+\[\begin{equation}\label{star}\tag{$\ast$}
 \text{for all } y \in U, \text{ there exists an open neighborhood }
 U_y \text{ of } y\\  \text{ and } f\in\mathscr{F}(U_y) \text{ such that }
 f_x = s_x \text{ for all } x \in U_y.
-\end{equation}</script>
+\end{equation}\]
 
-<p>Given that <script type="math/tex">F</script> and <script type="math/tex">X</script> admit maps to <script type="math/tex">Y</script>, we can form their pullback,</p>
+<p>Given that \(F\) and \(X\) admit maps to \(Y\), we can form their pullback,</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-\pi^{-1}F @>>> F \\
+\[\begin{CD}
+\pi^{-1}F @&gt;&gt;&gt; F \\
 @VVV @VV{\rho}V \\
-X @>{\pi}>> Y
-\end{CD}</script>
+X @&gt;{\pi}&gt;&gt; Y
+\end{CD}\]
 
-<p>which as a set is  <script type="math/tex">\{ (x,f_y) \in X \times F : \pi(x) = y\}</script>.
-The topology on <script type="math/tex">\pi^{-1}F</script> is induced from the product topology on <script type="math/tex">X \times F</script>.
-The <em>inverse image sheaf</em> <script type="math/tex">\pi^{-1}\mathscr{F}</script> is the sheaf of sections of <script type="math/tex">\pi^{-1}F \to X</script>.
+<p>which as a set is  \(\{ (x,f_y) \in X \times F : \pi(x) = y\}\).
+The topology on \(\pi^{-1}F\) is induced from the product topology on \(X \times F\).
+The <em>inverse image sheaf</em> \(\pi^{-1}\mathscr{F}\) is the sheaf of sections of \(\pi^{-1}F \to X\).
 The universal property of the pullback ensures that this really defines a functor
-from the category of sheaves on <script type="math/tex">Y</script> to the category of sheaves on <script type="math/tex">X</script>.</p>
+from the category of sheaves on \(Y\) to the category of sheaves on \(X\).</p>
 
-<p>Condition <script type="math/tex">\eqref{star}</script> for continuity of a section <script type="math/tex">s\colon V \to \pi^{-1}F</script>—that is,
-a tuple <script type="math/tex">(s_{\pi(x)})_{x \in V}</script> in <script type="math/tex">\prod_{x \in V}\mathscr{F}_{\pi(x)}</script>—says
-that for all <script type="math/tex">x \in V</script> there exists an open neighborhood <script type="math/tex">V_x</script> of <script type="math/tex">x</script>
-and an open neighborhood <script type="math/tex">U_x</script> in <script type="math/tex">Y</script> such that <script type="math/tex">\pi(V_x) \subset U_x</script>.
-Furthermore there exists a section <script type="math/tex">f \in \mathscr{F}(U_x)</script> 
-such that <script type="math/tex">f_{\pi(v)} = s_{\pi(v)}</script> for all <script type="math/tex">v \in V_x</script>.</p>
+<p>Condition \(\eqref{star}\) for continuity of a section \(s\colon V \to \pi^{-1}F\)—that is,
+a tuple \((s_{\pi(x)})_{x \in V}\) in \(\prod_{x \in V}\mathscr{F}_{\pi(x)}\)—says
+that for all \(x \in V\) there exists an open neighborhood \(V_x\) of \(x\)
+and an open neighborhood \(U_x\) in \(Y\) such that \(\pi(V_x) \subset U_x\).
+Furthermore there exists a section \(f \in \mathscr{F}(U_x)\) 
+such that \(f_{\pi(v)} = s_{\pi(v)}\) for all \(v \in V_x\).</p>
 
-<p>If <script type="math/tex">\phi\colon \mathscr{F} \to \mathscr{F}'</script> is a morphism of sheaves on <script type="math/tex">Y</script>,
-the resulting morphism <script type="math/tex">\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'</script>
+<p>If \(\phi\colon \mathscr{F} \to \mathscr{F}'\) is a morphism of sheaves on \(Y\),
+the resulting morphism \(\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'\)
 is defined by</p>
 
-<script type="math/tex; mode=display">(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.</script>
+\[(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.\]
 
-<p>One needs to demonstrate that the right-hand side satisfies condition <script type="math/tex">\eqref{star}</script>;
+<p>One needs to demonstrate that the right-hand side satisfies condition \(\eqref{star}\);
 the check is simple, so I’ll leave it to the reader.</p>
 
-<p>The claim is that <script type="math/tex">\pi^{-1}</script> is left adjoint to <script type="math/tex">\pi_\ast</script>.
+<p>The claim is that \(\pi^{-1}\) is left adjoint to \(\pi_\ast\).
 Therefore we should expect natural transformations
-<script type="math/tex">\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}</script>
-and <script type="math/tex">\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}</script>.</p>
+\(\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}\)
+and \(\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}\).</p>
 
 <h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction</h3>
 
-<p>So let <script type="math/tex">\mathscr{F}</script> be a sheaf on <script type="math/tex">Y</script>,
-and let <script type="math/tex">U</script> be an open set in <script type="math/tex">Y</script>.
-Since <script type="math/tex">\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))</script>,
-we can think of <script type="math/tex">s \in \pi_\ast\pi^{-1}\mathscr{F}(U)</script> as
-a section <script type="math/tex">s \colon \pi^{-1}(U) \to \pi^{-1}F</script>,
-i.e. a tuple <script type="math/tex">(s_{\pi(x)})_{x \in \pi^{-1}(U)}</script>
+<p>So let \(\mathscr{F}\) be a sheaf on \(Y\),
+and let \(U\) be an open set in \(Y\).
+Since \(\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))\),
+we can think of \(s \in \pi_\ast\pi^{-1}\mathscr{F}(U)\) as
+a section \(s \colon \pi^{-1}(U) \to \pi^{-1}F\),
+i.e. a tuple \((s_{\pi(x)})_{x \in \pi^{-1}(U)}\)
 satisfying the compatibility condition above.</p>
 
-<p>Note that in particular if <script type="math/tex">U \subset Y</script> is open
-and <script type="math/tex">f \in \mathscr{F}(U)</script>, the continuity condition <script type="math/tex">\eqref{star}</script>
-for a section <script type="math/tex">\pi^{-1}(U)\to \pi^{-1}F</script> is satisfied by the section
-<script type="math/tex">(f_{\pi(x)})_{x \in \pi^{-1}(U)}</script>,
-and thus defines an element of <script type="math/tex">\pi_\ast\pi^{-1}\mathscr{F}(U)</script>.</p>
+<p>Note that in particular if \(U \subset Y\) is open
+and \(f \in \mathscr{F}(U)\), the continuity condition \(\eqref{star}\)
+for a section \(\pi^{-1}(U)\to \pi^{-1}F\) is satisfied by the section
+\((f_{\pi(x)})_{x \in \pi^{-1}(U)}\),
+and thus defines an element of \(\pi_\ast\pi^{-1}\mathscr{F}(U)\).</p>
 
-<p>Let us thus define a map <script type="math/tex">\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)</script> 
+<p>Let us thus define a map \(\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)\) 
 as</p>
 
-<script type="math/tex; mode=display">\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.</script>
+\[\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.\]
 
-<p>(Let’s parse the notation: a natural transformation <script type="math/tex">\eta</script> yields
-a map of sheaves <script type="math/tex">\eta_{\mathscr{F}}</script> for each sheaf <script type="math/tex">\mathscr{F}</script>.
-This is the definition of that map on the open subset <script type="math/tex">U \subset Y</script>.)</p>
+<p>(Let’s parse the notation: a natural transformation \(\eta\) yields
+a map of sheaves \(\eta_{\mathscr{F}}\) for each sheaf \(\mathscr{F}\).
+This is the definition of that map on the open subset \(U \subset Y\).)</p>
 
-<p>To prove the claim that <script type="math/tex">\eta</script> is a natural transformation,
-we need to show that given a map <script type="math/tex">\phi \colon \mathscr{F} \to \mathscr{F}'</script>
-of sheaves on <script type="math/tex">Y</script>, the following diagram commutes</p>
+<p>To prove the claim that \(\eta\) is a natural transformation,
+we need to show that given a map \(\phi \colon \mathscr{F} \to \mathscr{F}'\)
+of sheaves on \(Y\), the following diagram commutes</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-\mathscr{F} @>{\eta_{\mathscr{F}}}>> \pi_\ast\pi^{-1}\mathscr{F} \\
+\[\begin{CD}
+\mathscr{F} @&gt;{\eta_{\mathscr{F}}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F} \\
 @V{\phi}VV @VV{\pi_\ast\pi^{-1}\phi}V \\
-\mathscr{F}' @>{\eta_{\mathscr{F}'}}>> \pi_\ast\pi^{-1}\mathscr{F}'.
-\end{CD}</script>
+\mathscr{F}' @&gt;{\eta_{\mathscr{F}'}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F}'.
+\end{CD}\]
 
-<p>Given <script type="math/tex">f \in \mathscr{F}(U)</script>, commutativity of the square is the claim that
+<p>Given \(f \in \mathscr{F}(U)\), commutativity of the square is the claim that
 the following equality holds</p>
 
-<script type="math/tex; mode=display">\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
-= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.</script>
+\[\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
+= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.\]
 
-<p>This is in fact true, since taking the stalk at <script type="math/tex">x</script> is functorial.</p>
+<p>This is in fact true, since taking the stalk at \(x\) is functorial.</p>
 
 <h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction</h3>
 
-<p>Now suppose that <script type="math/tex">\mathscr{G}</script> is a sheaf on <script type="math/tex">X</script>.
-Let <script type="math/tex">\pi_\ast G</script> denote the <em>espace étale</em> over <script type="math/tex">Y</script> for the sheaf <script type="math/tex">\pi_\ast\mathscr{G}</script>.</p>
+<p>Now suppose that \(\mathscr{G}\) is a sheaf on \(X\).
+Let \(\pi_\ast G\) denote the <em>espace étale</em> over \(Y\) for the sheaf \(\pi_\ast\mathscr{G}\).</p>
 
-<p>A section <script type="math/tex">s \colon V \to \pi^{-1}\pi_\ast G</script>
-is a tuple <script type="math/tex">(s_{\pi(x)})_{x \in V}</script> taking values in <script type="math/tex">\pi_\ast\mathscr{G}_{\pi(x)}</script>
-satisfying the continuity condition <script type="math/tex">\eqref{star}</script>,
+<p>A section \(s \colon V \to \pi^{-1}\pi_\ast G\)
+is a tuple \((s_{\pi(x)})_{x \in V}\) taking values in \(\pi_\ast\mathscr{G}_{\pi(x)}\)
+satisfying the continuity condition \(\eqref{star}\),
 which in our particular case asserts the existence,
-for each <script type="math/tex">x \in V</script>, of an open neighborhood <script type="math/tex">V_x</script> of <script type="math/tex">x</script> and an open neighborhood
-<script type="math/tex">U_x</script> in <script type="math/tex">Y</script> satisfying <script type="math/tex">\pi(V_x) \subset U_x</script>.
-Furthermore there exists <script type="math/tex">g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))</script>
-such that the image of <script type="math/tex">s_{\pi(x)}</script> in <script type="math/tex">\mathscr{G}_x</script> under the natural map
-<script type="math/tex">\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x</script> is equal to <script type="math/tex">g_x</script>.</p>
+for each \(x \in V\), of an open neighborhood \(V_x\) of \(x\) and an open neighborhood
+\(U_x\) in \(Y\) satisfying \(\pi(V_x) \subset U_x\).
+Furthermore there exists \(g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))\)
+such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) under the natural map
+\(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\) is equal to \(g_x\).</p>
 
-<p>Since the sets <script type="math/tex">\pi^{-1}(U_x)</script> cover <script type="math/tex">V</script> by assumption,
-sheafiness of <script type="math/tex">\mathscr{G}</script> implies the existence of a unique <script type="math/tex">g \in \mathscr{G}(V)</script>
-such that <script type="math/tex">g_x</script> is equal to the image of <script type="math/tex">s_{\pi(x)}</script>
-under the natural map <script type="math/tex">\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x</script>
-for <em>all</em> <script type="math/tex">x \in V</script>.
-Let us thus define a map <script type="math/tex">\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)</script>
-sending <script type="math/tex">(s_{\pi(x)})_{x\in V}</script> to <script type="math/tex">g</script>.</p>
+<p>Since the sets \(\pi^{-1}(U_x)\) cover \(V\) by assumption,
+sheafiness of \(\mathscr{G}\) implies the existence of a unique \(g \in \mathscr{G}(V)\)
+such that \(g_x\) is equal to the image of \(s_{\pi(x)}\)
+under the natural map \(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\)
+for <em>all</em> \(x \in V\).
+Let us thus define a map \(\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)\)
+sending \((s_{\pi(x)})_{x\in V}\) to \(g\).</p>
 
-<p>We claim that <script type="math/tex">\epsilon</script> defines a natural transformation from <script type="math/tex">\pi^{-1}\pi_\ast\mathscr{G}</script> to <script type="math/tex">\mathscr{G}</script>.
-To prove the claim, we need to show that given a map <script type="math/tex">\psi\colon \mathscr{G} \to \mathscr{G}'</script>
-of sheaves on <script type="math/tex">X</script>, the following diagram commutes</p>
+<p>We claim that \(\epsilon\) defines a natural transformation from \(\pi^{-1}\pi_\ast\mathscr{G}\) to \(\mathscr{G}\).
+To prove the claim, we need to show that given a map \(\psi\colon \mathscr{G} \to \mathscr{G}'\)
+of sheaves on \(X\), the following diagram commutes</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-\pi^{-1}\pi_\ast\mathscr{G} @>{\epsilon_{\mathscr{G}}}>> \mathscr{G} \\
+\[\begin{CD}
+\pi^{-1}\pi_\ast\mathscr{G} @&gt;{\epsilon_{\mathscr{G}}}&gt;&gt; \mathscr{G} \\
 @V{\pi^{-1}\pi_\ast\psi}VV @VV{\psi}V \\
-\pi^{-1}\pi_\ast \mathscr{G}' @>{\epsilon_{\mathscr{G}'}}>> \mathscr{G}'.
-\end{CD}</script>
+\pi^{-1}\pi_\ast \mathscr{G}' @&gt;{\epsilon_{\mathscr{G}'}}&gt;&gt; \mathscr{G}'.
+\end{CD}\]
 
-<p>Given <script type="math/tex">(s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)</script>,
-the upper right path of the square sends us first to some <script type="math/tex">g \in \mathscr{G}(V)</script>
-such that <script type="math/tex">g_x</script> is the image of <script type="math/tex">s_{\pi(x)}</script> in <script type="math/tex">\mathscr{G}_x</script> for all <script type="math/tex">x \in V</script>,
-and then sends <script type="math/tex">g</script> to <script type="math/tex">\psi(V)(g) \in \mathscr{G}'(V)</script>.
+<p>Given \((s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)\),
+the upper right path of the square sends us first to some \(g \in \mathscr{G}(V)\)
+such that \(g_x\) is the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) for all \(x \in V\),
+and then sends \(g\) to \(\psi(V)(g) \in \mathscr{G}'(V)\).
 On the other hand, the lower left path of the square sends
-<script type="math/tex">(s_{\pi(x)})_{x \in V}</script> first to <script type="math/tex">\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}</script>
-in <script type="math/tex">\pi^{-1}\pi_\ast\mathscr{G}'(V)</script>, and then to
-some <script type="math/tex">g' \in \mathscr{G}'(V)</script> such that <script type="math/tex">g'_x</script> is the image of
-<script type="math/tex">(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})</script> in <script type="math/tex">\mathscr{G}'_x</script> for all <script type="math/tex">x \in V</script>.</p>
+\((s_{\pi(x)})_{x \in V}\) first to \(\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}\)
+in \(\pi^{-1}\pi_\ast\mathscr{G}'(V)\), and then to
+some \(g' \in \mathscr{G}'(V)\) such that \(g'_x\) is the image of
+\((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\) in \(\mathscr{G}'_x\) for all \(x \in V\).</p>
 
-<p>If <script type="math/tex">U \subset Y</script> is an open set containing <script type="math/tex">\pi(x)</script> such that
-<script type="math/tex">s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))</script> 
-represents <script type="math/tex">s_{\pi(x)}</script> for <script type="math/tex">\pi(x) \in U</script>,
-we have <script type="math/tex">(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}</script>.
-Furthermore we know that <script type="math/tex">g \in \mathscr{G}(V)</script> 
-is such that the image of <script type="math/tex">s_{\pi(x)}</script> in <script type="math/tex">\mathscr{G}_x</script>
-is <script type="math/tex">g_x</script> for all <script type="math/tex">x \in V</script>.
+<p>If \(U \subset Y\) is an open set containing \(\pi(x)\) such that
+\(s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))\) 
+represents \(s_{\pi(x)}\) for \(\pi(x) \in U\),
+we have \((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}\).
+Furthermore we know that \(g \in \mathscr{G}(V)\) 
+is such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\)
+is \(g_x\) for all \(x \in V\).
 Therefore we have that
-the image of <script type="math/tex">\psi(\pi^{-1}(U))(s)_{\pi(x)}</script>
-in <script type="math/tex">\mathscr{G}'_x</script> is equal to <script type="math/tex">\psi(V)(g)_x</script>,
+the image of \(\psi(\pi^{-1}(U))(s)_{\pi(x)}\)
+in \(\mathscr{G}'_x\) is equal to \(\psi(V)(g)_x\),
 as desired.</p>
 
 <h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction</h2>
@@ -308,53 +308,53 @@ as desired.</p>
 <p>To conclude, we just need to show that two double compositions
 of natural transformations are the identity.
 The first, translated into our particular case,
-says that if <script type="math/tex">\mathscr{F}</script> is a sheaf on <script type="math/tex">Y</script>,
+says that if \(\mathscr{F}\) is a sheaf on \(Y\),
 we have that</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-\pi^{-1}\mathscr{F} @>{\pi^{-1}\eta_{\mathscr{F}}}>> \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @>{\epsilon_{\pi^{-1}\mathscr{F}}}>>
+\[\begin{CD}
+\pi^{-1}\mathscr{F} @&gt;{\pi^{-1}\eta_{\mathscr{F}}}&gt;&gt; \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @&gt;{\epsilon_{\pi^{-1}\mathscr{F}}}&gt;&gt;
 \pi^{-1}\mathscr{F}
-\end{CD}</script>
+\end{CD}\]
 
 <p>is equal to the identity.
 The difficulty here seems to be largely notational.
-Let <script type="math/tex">V \subset X</script> be an open set.
-Suppose <script type="math/tex">(s_{\pi(x)})_{x \in V}</script> is a section in <script type="math/tex">\pi^{-1}\mathscr{F}(V)</script>.
+Let \(V \subset X\) be an open set.
+Suppose \((s_{\pi(x)})_{x \in V}\) is a section in \(\pi^{-1}\mathscr{F}(V)\).
 We have</p>
 
-<script type="math/tex; mode=display">(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
+\[(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
 = \left((\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}
-\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).</script>
+\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).\]
 
-<p>First observe that the continuity condition <script type="math/tex">\eqref{star}</script> tells us that
-there is, for each <script type="math/tex">x \in V</script>, an open neighborhood <script type="math/tex">V_x</script> of <script type="math/tex">x</script> and
-an open set <script type="math/tex">U_x \subset Y</script> containing <script type="math/tex">\pi(V_x)</script>.
-On this open set we have <script type="math/tex">s \in \mathscr{F}(U_x)</script> such that
-<script type="math/tex">\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})</script>.</p>
+<p>First observe that the continuity condition \(\eqref{star}\) tells us that
+there is, for each \(x \in V\), an open neighborhood \(V_x\) of \(x\) and
+an open set \(U_x \subset Y\) containing \(\pi(V_x)\).
+On this open set we have \(s \in \mathscr{F}(U_x)\) such that
+\(\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\).</p>
 
-<p>We saw above that <script type="math/tex">(\eta_{\mathscr{F}})(U_x)(s)</script> is the section
-<script type="math/tex">(s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
-\pi^{-1}\mathscr{F}(\pi^{-1}(U))</script>.
-The map <script type="math/tex">\epsilon_{\pi^{-1}\mathscr F}</script> recognizes that the sections
-<script type="math/tex">(s_{\pi(x)})_{x \in \pi^{-1}(U_x)}</script> satisfy the compatibility conditions
-to glue up to form a section <script type="math/tex">(s_{\pi(x)})_{x \in V}</script> in <script type="math/tex">\pi^{-1}\mathscr{F}(V)</script>,
+<p>We saw above that \((\eta_{\mathscr{F}})(U_x)(s)\) is the section
+\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
+\pi^{-1}\mathscr{F}(\pi^{-1}(U))\).
+The map \(\epsilon_{\pi^{-1}\mathscr F}\) recognizes that the sections
+\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)}\) satisfy the compatibility conditions
+to glue up to form a section \((s_{\pi(x)})_{x \in V}\) in \(\pi^{-1}\mathscr{F}(V)\),
 demonstrating that the double composition is indeed the identity. So far so good.</p>
 
 <p>The second double composition we need to show is equal to the identity is defined 
-for a sheaf <script type="math/tex">\mathscr{G}</script> on <script type="math/tex">X</script> as follows</p>
+for a sheaf \(\mathscr{G}\) on \(X\) as follows</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-\pi_\ast\mathscr{G} @>{\eta_{\pi_\ast\mathscr{G}}}>> \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
-@>{\pi_\ast\epsilon_{\mathscr{G}}}>> \pi_\ast\mathscr{G}.
-\end{CD}</script>
+\[\begin{CD}
+\pi_\ast\mathscr{G} @&gt;{\eta_{\pi_\ast\mathscr{G}}}&gt;&gt; \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
+@&gt;{\pi_\ast\epsilon_{\mathscr{G}}}&gt;&gt; \pi_\ast\mathscr{G}.
+\end{CD}\]
 
-<p>If <script type="math/tex">U \subset Y</script> is an open set and <script type="math/tex">g \in \pi_\ast\mathscr{G}(U)</script>
+<p>If \(U \subset Y\) is an open set and \(g \in \pi_\ast\mathscr{G}(U)\)
 is a section,
-the first map sends <script type="math/tex">g</script> to the section
-<script type="math/tex">(g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)</script>.</p>
+the first map sends \(g\) to the section
+\((g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)\).</p>
 
-<p>The second map recognizes that the above section and <script type="math/tex">g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}</script>
-agree on each stalk, and so sends our section back to <script type="math/tex">g</script>.</p>
+<p>The second map recognizes that the above section and \(g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}\)
+agree on each stalk, and so sends our section back to \(g\).</p>
 
 <p>This completes the proof that inverse image and pushforward form an adjoint pair of functors.</p>
 

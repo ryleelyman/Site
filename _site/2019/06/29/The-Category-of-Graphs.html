@@ -83,26 +83,26 @@ word <em>graph</em> as I use it in math.</p>
 
 <p>As a kid, you learn how to <em>graph</em> simple functions in the sense of 
 being able to sketch them on a sheet of, say, <em>graph</em> paper. Millions
-of adults probably faintly remember the shape of <script type="math/tex">y = x^2</script> but aren’t
+of adults probably faintly remember the shape of \(y = x^2\) but aren’t
 quite sure why.</p>
 
 <p>To mathematicians and computer scientists, though, for some reason <em>graph</em>
 means something similar, but different: to them a graph is an object with
 <em>vertices</em> and <em>edges</em>. Indeed, to Serre, that’s literally all a graph is:
-a quadruple <script type="math/tex">(V,E,\bar{},\iota)</script>. Two sets, <script type="math/tex">V</script> and <script type="math/tex">E</script>, represent the
-vertices and (oriented) edges of the graph, and <script type="math/tex">\bar{}\colon E \to E</script> and
-<script type="math/tex">\iota\colon E \to V</script> are functions; <script type="math/tex">\bar{e}</script> is the edge <script type="math/tex">e</script> with its
-orientation reversed, (so <script type="math/tex">\bar{\bar{e}} = e</script> for any edge <script type="math/tex">e</script>, but
-<script type="math/tex">\bar e \neq e</script>), and
-<script type="math/tex">\iota(e)</script> represents the initial vertex of the edge <script type="math/tex">e</script>. This lets us
-define a function <script type="math/tex">\tau\colon E \to V</script> picking out the <em>terminal</em> vertex
-of an edge by setting <script type="math/tex">\tau(e) = \iota(\bar{e})</script>.</p>
+a quadruple \((V,E,\bar{},\iota)\). Two sets, \(V\) and \(E\), represent the
+vertices and (oriented) edges of the graph, and \(\bar{}\colon E \to E\) and
+\(\iota\colon E \to V\) are functions; \(\bar{e}\) is the edge \(e\) with its
+orientation reversed, (so \(\bar{\bar{e}} = e\) for any edge \(e\), but
+\(\bar e \neq e\)), and
+\(\iota(e)\) represents the initial vertex of the edge \(e\). This lets us
+define a function \(\tau\colon E \to V\) picking out the <em>terminal</em> vertex
+of an edge by setting \(\tau(e) = \iota(\bar{e})\).</p>
 
 <p>A topologist would prefer to say that a graph is a 1-dimensional CW complex.
-So rather than an abstract set of vertices, we have a set of points, <script type="math/tex">V</script>,
-the <script type="math/tex">0</script>-cells of our CW complex. And rather than an abstract set of oriented
-edges, we have a collection of <script type="math/tex">1</script>-cells (intervals of the real line) 
-whose endpoints are attached to <script type="math/tex">0</script>-cells.</p>
+So rather than an abstract set of vertices, we have a set of points, \(V\),
+the \(0\)-cells of our CW complex. And rather than an abstract set of oriented
+edges, we have a collection of \(1\)-cells (intervals of the real line) 
+whose endpoints are attached to \(0\)-cells.</p>
 
 <p>These two descriptions really are in agreement for most purposes. Maybe one would
 prefer the more combinatorial description as a way of “rigidifying” some of the
@@ -111,7 +111,7 @@ allows one access to a whole host of techniques that a too-rigid approach might 
 under a sea of formalism.</p>
 
 <p>But of course, neither definition really squares with the idea of the graph of
-<script type="math/tex">y = x^2</script>, hence why I’ve been feeling weird about the word.</p>
+\(y = x^2\), hence why I’ve been feeling weird about the word.</p>
 
 <p>Anyway, the <em>category of graphs</em>, introduced by John Stallings in
 <a href="https://www2.math.ou.edu/~nbrady/teaching/s11-5863/stallings.pdf">Topology of Finite Graphs</a>,
@@ -119,26 +119,26 @@ building on work of Serre in <a href="https://d-nb.info/965816907/04">Trees</a>,
 almost certainly soon, has (as all categories do)
 collections of objects and arrows between them.
 Here the objects are graphs and arrows are <em>morphisms of graphs.</em> 
-A morphism <script type="math/tex">f\colon G \to H</script> between
-graphs <script type="math/tex">G</script> and <script type="math/tex">H</script> is a pair of functions <script type="math/tex">f_V\colon V(G) \to V(H)</script> 
-and <script type="math/tex">f_E\colon E(G) \to E(H)</script>, such that the following diagrams commute:
-<script type="math/tex">\require{AMScd}</script></p>
+A morphism \(f\colon G \to H\) between
+graphs \(G\) and \(H\) is a pair of functions \(f_V\colon V(G) \to V(H)\) 
+and \(f_E\colon E(G) \to E(H)\), such that the following diagrams commute:
+\(\require{AMScd}\)</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-E(G) @>f_E>> E(H) \\
+\[\begin{CD}
+E(G) @&gt;f_E&gt;&gt; E(H) \\
 @V{\iota}VV @V{\iota}VV \\
-V(G) @>f_V>> V(H)
+V(G) @&gt;f_V&gt;&gt; V(H)
 \end{CD}\qquad
 \begin{CD}
-E(G) @>f_E>> E(H) \\
+E(G) @&gt;f_E&gt;&gt; E(H) \\
 @V\bar{}VV @V\bar{}VV \\
-E(G) @>f_E>> E(H)
-\end{CD}</script>
+E(G) @&gt;f_E&gt;&gt; E(H)
+\end{CD}\]
 
-<p>In English what this is saying is that <script type="math/tex">f</script> preserves the graph structure:
-it sends edges to edges, vertices to vertices, <script type="math/tex">e</script> and <script type="math/tex">\bar e</script> are sent
-to <script type="math/tex">f(e)</script> and <script type="math/tex">\overline{f(e)}</script>, and the initial vertex of <script type="math/tex">e</script> is
-sent to the initial vertex of <script type="math/tex">f(e)</script>.</p>
+<p>In English what this is saying is that \(f\) preserves the graph structure:
+it sends edges to edges, vertices to vertices, \(e\) and \(\bar e\) are sent
+to \(f(e)\) and \(\overline{f(e)}\), and the initial vertex of \(e\) is
+sent to the initial vertex of \(f(e)\).</p>
 
 <p>Stallings emphasizes the rigidity of morphisms in this construction:</p>
 

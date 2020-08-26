@@ -128,15 +128,15 @@ The resulting axioms are ten thoroughly mundane statements about sets.</p>
   <p><strong>10.</strong> Every [surjective function of sets] has a right inverse.</p>
 </blockquote>
 
-<p>To see that this is really equivalent, notice that if <script type="math/tex">p\colon S \to T</script> is a surjective function of sets,
-then we may identify <script type="math/tex">S</script> with the disjoint union</p>
+<p>To see that this is really equivalent, notice that if \(p\colon S \to T\) is a surjective function of sets,
+then we may identify \(S\) with the disjoint union</p>
 
-<script type="math/tex; mode=display">\coprod_{t \in T} p^{-1}(t).</script>
+\[\coprod_{t \in T} p^{-1}(t).\]
 
-<p>A <em>right inverse</em> for the function <script type="math/tex">p</script> is a function <script type="math/tex">i \colon T \to S</script>
-such that <script type="math/tex">p(i(t)) = t</script> for all <script type="math/tex">t</script> in <script type="math/tex">T</script>.
-Notice that this means that <script type="math/tex">i\colon T \to S</script> picks out one element of <script type="math/tex">p^{-1}(t)</script> as <script type="math/tex">t</script>
-varies over the elements of <script type="math/tex">T</script>,
+<p>A <em>right inverse</em> for the function \(p\) is a function \(i \colon T \to S\)
+such that \(p(i(t)) = t\) for all \(t\) in \(T\).
+Notice that this means that \(i\colon T \to S\) picks out one element of \(p^{-1}(t)\) as \(t\)
+varies over the elements of \(T\),
 so the existence of such a function is equivalent to being able to perform choice in the sense that we said above!</p>
 
 <p>This axiom can be reformulated in any category:
@@ -144,13 +144,13 @@ the correct generalization of a surjective function is called an <em>epimorphism
 for categories of “sets with additional structure” (e.g. groups, rings, manifolds) the surjective maps 
 are epimorphisms, but the converse is not always true.</p>
 
-<p>A right inverse for an arrow <script type="math/tex">f\colon c \to d</script> makes sense in any category:
-it’s an arrow <script type="math/tex">r \colon d \to c</script> such that <script type="math/tex">fr</script> is the identity arrow of <script type="math/tex">c</script>.
+<p>A right inverse for an arrow \(f\colon c \to d\) makes sense in any category:
+it’s an arrow \(r \colon d \to c\) such that \(fr\) is the identity arrow of \(c\).
 It’s a general fact that admitting a right inverse implies that the arrow is an epimorphism,
 even though we haven’t defined what that is.
-In fact, for categories of “sets with additional structure” if <script type="math/tex">f</script> admits a right inverse,
+In fact, for categories of “sets with additional structure” if \(f\) admits a right inverse,
 then it is surjective.
-We say <script type="math/tex">f</script> is a <em>split epimorphism</em> (the name comes from “split exact sequences” of e.g. groups).</p>
+We say \(f\) is a <em>split epimorphism</em> (the name comes from “split exact sequences” of e.g. groups).</p>
 
 <p>This allows us to cheekily reformulate the axiom of choice in any category as the following statement</p>
 
@@ -159,44 +159,44 @@ We say <script type="math/tex">f</script> is a <em>split epimorphism</em> (the n
 </blockquote>
 
 <p>This axiom fails for smooth manifolds:
-a surjective map from the real line to the unit circle in <script type="math/tex">\mathbb R^2</script> given by sending <script type="math/tex">x</script>
-to <script type="math/tex">(\cos x,\sin x)</script> for instance, fails to have a right inverse.</p>
+a surjective map from the real line to the unit circle in \(\mathbb R^2\) given by sending \(x\)
+to \((\cos x,\sin x)\) for instance, fails to have a right inverse.</p>
 
 <h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equivalence of Categories</h2>
 
 <p>Another use of the axiom of choice in category theory is the following theorem:</p>
 
 <blockquote>
-  <p><strong>Theorem:</strong> A functor <script type="math/tex">F\colon C \to D</script> between categories <script type="math/tex">C</script> and $$D$ is an <em>equivalence of categories</em>
+  <p><strong>Theorem:</strong> A functor \(F\colon C \to D\) between categories \(C\) and $$D$ is an <em>equivalence of categories</em>
 if and only if it is <em>fully faithful</em> and <em>essentially surjective.</em></p>
 </blockquote>
 
-<p>Here the functor <script type="math/tex">F</script> is <em>full</em> if for all objects <script type="math/tex">c</script> and <script type="math/tex">c'</script> in <script type="math/tex">C</script>, the function
-<script type="math/tex">F\colon C(c,c') \to D(Fc,Fc')</script> is surjective, and <em>faithful</em> if it is injective.
-So <script type="math/tex">F</script> is <em>fully faithful</em> if it induces a bijection from the set of arrows betwwen any two objects in <script type="math/tex">C</script>
-to their images in <script type="math/tex">D</script>.</p>
+<p>Here the functor \(F\) is <em>full</em> if for all objects \(c\) and \(c'\) in \(C\), the function
+\(F\colon C(c,c') \to D(Fc,Fc')\) is surjective, and <em>faithful</em> if it is injective.
+So \(F\) is <em>fully faithful</em> if it induces a bijection from the set of arrows betwwen any two objects in \(C\)
+to their images in \(D\).</p>
 
-<p>The functor <script type="math/tex">F</script> is <em>essentially surjective</em> if every object <script type="math/tex">d \in D</script> is isomorphic to <script type="math/tex">Fc</script> for some
-<script type="math/tex">c \in C</script>.</p>
+<p>The functor \(F\) is <em>essentially surjective</em> if every object \(d \in D\) is isomorphic to \(Fc\) for some
+\(c \in C\).</p>
 
-<p>Finally an <em>equivalence of categories</em> is a functor <script type="math/tex">F\colon C \to D</script> such that there exists an “inverse”
-functor <script type="math/tex">G \colon D \to C</script> and natural isomorphisms between the two double compositions and the
-identity functors of <script type="math/tex">C</script> and <script type="math/tex">D</script>, respectively.</p>
+<p>Finally an <em>equivalence of categories</em> is a functor \(F\colon C \to D\) such that there exists an “inverse”
+functor \(G \colon D \to C\) and natural isomorphisms between the two double compositions and the
+identity functors of \(C\) and \(D\), respectively.</p>
 
 <p>The proof that an equivalence of categories has the above properties is fairly simple: in an alternate universe,
 this blog post would give it, and show that the converse requires the axiom of choice.
 Let me just content myself with pointing out that the use of the axiom of choice is to pick
-a <script type="math/tex">c</script> such that <script type="math/tex">Fc</script> is isomorphic to <script type="math/tex">d</script> for all <script type="math/tex">d \in D</script>.
+a \(c\) such that \(Fc\) is isomorphic to \(d\) for all \(d \in D\).
 In fact, it turns out that the theorem is <em>equivalent</em> to the axiom of choice,
 if you make the appropriate definitions of the categories involved.
-(e.g. <script type="math/tex">D</script> should be an index set, and <script type="math/tex">C</script> a clever category based on a collection
-of sets indexed by <script type="math/tex">D</script>.)</p>
+(e.g. \(D\) should be an index set, and \(C\) a clever category based on a collection
+of sets indexed by \(D\).)</p>
 
 <p>One can define (small) categories <em>internal</em> to a category and 
 do category theory in this way. Thus one way to phrase the axiom of choice for a category is:</p>
 
 <blockquote>
-  <p><strong>The Axiom of Choice for a Category:</strong> A functor between categories internal to <script type="math/tex">C</script>
+  <p><strong>The Axiom of Choice for a Category:</strong> A functor between categories internal to \(C\)
 is an equivalence if and only if it is fully faithful and essentially surjective.</p>
 </blockquote>
 

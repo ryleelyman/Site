@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-26T09:29:18-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-08-26T10:46:35-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
 cheekily playing with unhooking a signifier from what it typically signifies.
 Namely, one of the (many) tricky foundational things about working with orbifolds
 goes by the name “the axiom of choice is false for the category of smooth manifolds.”&lt;/p&gt;
@@ -51,15 +51,15 @@ The resulting axioms are ten thoroughly mundane statements about sets.&lt;/p&gt;
   &lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; Every [surjective function of sets] has a right inverse.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;To see that this is really equivalent, notice that if &lt;script type=&quot;math/tex&quot;&gt;p\colon S \to T&lt;/script&gt; is a surjective function of sets,
-then we may identify &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt; with the disjoint union&lt;/p&gt;
+&lt;p&gt;To see that this is really equivalent, notice that if \(p\colon S \to T\) is a surjective function of sets,
+then we may identify \(S\) with the disjoint union&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\coprod_{t \in T} p^{-1}(t).&lt;/script&gt;
+\[\coprod_{t \in T} p^{-1}(t).\]
 
-&lt;p&gt;A &lt;em&gt;right inverse&lt;/em&gt; for the function &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is a function &lt;script type=&quot;math/tex&quot;&gt;i \colon T \to S&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;p(i(t)) = t&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;.
-Notice that this means that &lt;script type=&quot;math/tex&quot;&gt;i\colon T \to S&lt;/script&gt; picks out one element of &lt;script type=&quot;math/tex&quot;&gt;p^{-1}(t)&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;
-varies over the elements of &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;,
+&lt;p&gt;A &lt;em&gt;right inverse&lt;/em&gt; for the function \(p\) is a function \(i \colon T \to S\)
+such that \(p(i(t)) = t\) for all \(t\) in \(T\).
+Notice that this means that \(i\colon T \to S\) picks out one element of \(p^{-1}(t)\) as \(t\)
+varies over the elements of \(T\),
 so the existence of such a function is equivalent to being able to perform choice in the sense that we said above!&lt;/p&gt;
 
 &lt;p&gt;This axiom can be reformulated in any category:
@@ -67,13 +67,13 @@ the correct generalization of a surjective function is called an &lt;em&gt;epimo
 for categories of “sets with additional structure” (e.g. groups, rings, manifolds) the surjective maps 
 are epimorphisms, but the converse is not always true.&lt;/p&gt;
 
-&lt;p&gt;A right inverse for an arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon c \to d&lt;/script&gt; makes sense in any category:
-it’s an arrow &lt;script type=&quot;math/tex&quot;&gt;r \colon d \to c&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;fr&lt;/script&gt; is the identity arrow of &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;.
+&lt;p&gt;A right inverse for an arrow \(f\colon c \to d\) makes sense in any category:
+it’s an arrow \(r \colon d \to c\) such that \(fr\) is the identity arrow of \(c\).
 It’s a general fact that admitting a right inverse implies that the arrow is an epimorphism,
 even though we haven’t defined what that is.
-In fact, for categories of “sets with additional structure” if &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; admits a right inverse,
+In fact, for categories of “sets with additional structure” if \(f\) admits a right inverse,
 then it is surjective.
-We say &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a &lt;em&gt;split epimorphism&lt;/em&gt; (the name comes from “split exact sequences” of e.g. groups).&lt;/p&gt;
+We say \(f\) is a &lt;em&gt;split epimorphism&lt;/em&gt; (the name comes from “split exact sequences” of e.g. groups).&lt;/p&gt;
 
 &lt;p&gt;This allows us to cheekily reformulate the axiom of choice in any category as the following statement&lt;/p&gt;
 
@@ -82,50 +82,50 @@ We say &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a &lt;em&gt;s
 &lt;/blockquote&gt;
 
 &lt;p&gt;This axiom fails for smooth manifolds:
-a surjective map from the real line to the unit circle in &lt;script type=&quot;math/tex&quot;&gt;\mathbb R^2&lt;/script&gt; given by sending &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
-to &lt;script type=&quot;math/tex&quot;&gt;(\cos x,\sin x)&lt;/script&gt; for instance, fails to have a right inverse.&lt;/p&gt;
+a surjective map from the real line to the unit circle in \(\mathbb R^2\) given by sending \(x\)
+to \((\cos x,\sin x)\) for instance, fails to have a right inverse.&lt;/p&gt;
 
 &lt;h2 id=&quot;an-equivalent-definition-of-equivalence-of-categories&quot;&gt;An Equivalent Definition of Equivalence of Categories&lt;/h2&gt;
 
 &lt;p&gt;Another use of the axiom of choice in category theory is the following theorem:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; A functor &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt; between categories &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and $$D$ is an &lt;em&gt;equivalence of categories&lt;/em&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; A functor \(F\colon C \to D\) between categories \(C\) and $$D$ is an &lt;em&gt;equivalence of categories&lt;/em&gt;
 if and only if it is &lt;em&gt;fully faithful&lt;/em&gt; and &lt;em&gt;essentially surjective.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Here the functor &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;full&lt;/em&gt; if for all objects &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;c'&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, the function
-&lt;script type=&quot;math/tex&quot;&gt;F\colon C(c,c') \to D(Fc,Fc')&lt;/script&gt; is surjective, and &lt;em&gt;faithful&lt;/em&gt; if it is injective.
-So &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;fully faithful&lt;/em&gt; if it induces a bijection from the set of arrows betwwen any two objects in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
-to their images in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Here the functor \(F\) is &lt;em&gt;full&lt;/em&gt; if for all objects \(c\) and \(c'\) in \(C\), the function
+\(F\colon C(c,c') \to D(Fc,Fc')\) is surjective, and &lt;em&gt;faithful&lt;/em&gt; if it is injective.
+So \(F\) is &lt;em&gt;fully faithful&lt;/em&gt; if it induces a bijection from the set of arrows betwwen any two objects in \(C\)
+to their images in \(D\).&lt;/p&gt;
 
-&lt;p&gt;The functor &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;essentially surjective&lt;/em&gt; if every object &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt; is isomorphic to &lt;script type=&quot;math/tex&quot;&gt;Fc&lt;/script&gt; for some
-&lt;script type=&quot;math/tex&quot;&gt;c \in C&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;The functor \(F\) is &lt;em&gt;essentially surjective&lt;/em&gt; if every object \(d \in D\) is isomorphic to \(Fc\) for some
+\(c \in C\).&lt;/p&gt;
 
-&lt;p&gt;Finally an &lt;em&gt;equivalence of categories&lt;/em&gt; is a functor &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt; such that there exists an “inverse”
-functor &lt;script type=&quot;math/tex&quot;&gt;G \colon D \to C&lt;/script&gt; and natural isomorphisms between the two double compositions and the
-identity functors of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Finally an &lt;em&gt;equivalence of categories&lt;/em&gt; is a functor \(F\colon C \to D\) such that there exists an “inverse”
+functor \(G \colon D \to C\) and natural isomorphisms between the two double compositions and the
+identity functors of \(C\) and \(D\), respectively.&lt;/p&gt;
 
 &lt;p&gt;The proof that an equivalence of categories has the above properties is fairly simple: in an alternate universe,
 this blog post would give it, and show that the converse requires the axiom of choice.
 Let me just content myself with pointing out that the use of the axiom of choice is to pick
-a &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;Fc&lt;/script&gt; is isomorphic to &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt;.
+a \(c\) such that \(Fc\) is isomorphic to \(d\) for all \(d \in D\).
 In fact, it turns out that the theorem is &lt;em&gt;equivalent&lt;/em&gt; to the axiom of choice,
 if you make the appropriate definitions of the categories involved.
-(e.g. &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; should be an index set, and &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; a clever category based on a collection
-of sets indexed by &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.)&lt;/p&gt;
+(e.g. \(D\) should be an index set, and \(C\) a clever category based on a collection
+of sets indexed by \(D\).)&lt;/p&gt;
 
 &lt;p&gt;One can define (small) categories &lt;em&gt;internal&lt;/em&gt; to a category and 
 do category theory in this way. Thus one way to phrase the axiom of choice for a category is:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; A functor between categories internal to &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
+  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; A functor between categories internal to \(C\)
 is an equivalence if and only if it is fully faithful and essentially surjective.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;It turns out that the category of smooth manifolds &lt;em&gt;also&lt;/em&gt; fails this axiom,
-essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi\colon X \to Y&lt;/script&gt;,
-there is an adjunction between the categories of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
+essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\),
+there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\).
 The adjunction is somewhat mysterious to me as I begin to write this,
 so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
 
@@ -139,47 +139,47 @@ The method of proof, like most category-theoretic proofs,
 is a story of careful bookkeeping with functors and natural transformations,
 along with simple calculations to check.
 The idea essentially seems to be that the 
-unit &lt;script type=&quot;math/tex&quot;&gt;\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}&lt;/script&gt;
-“shreds a section &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; into pieces,” while the counit
-&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}&lt;/script&gt;
-recognizes that these “shredded up” sections assemble into sections of &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt;.&lt;/p&gt;
+unit \(\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}\)
+“shreds a section \(f\) into pieces,” while the counit
+\(\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}\)
+recognizes that these “shredded up” sections assemble into sections of \(\mathscr{G}\).&lt;/p&gt;
 
 &lt;h2 id=&quot;adjunctions&quot;&gt;Adjunctions&lt;/h2&gt;
-&lt;p&gt;Remember, given categories &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;, a pair of functors
-&lt;script type=&quot;math/tex&quot;&gt;F \colon C \to D&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G \colon D \to C&lt;/script&gt; form an &lt;em&gt;adjoint pair&lt;/em&gt;
+&lt;p&gt;Remember, given categories \(C\) and \(D\), a pair of functors
+\(F \colon C \to D\) and \(G \colon D \to C\) form an &lt;em&gt;adjoint pair&lt;/em&gt;
 when there exists an isomorphism&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;D(Fc,d) \cong C(c,Gd)&lt;/script&gt;
+\[D(Fc,d) \cong C(c,Gd)\]
 
-&lt;p&gt;which is natural in &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;.
-We say &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is &lt;em&gt;left adjoint&lt;/em&gt; to &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;,
-or equivalently that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is &lt;em&gt;right adjoint&lt;/em&gt; to &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt;.
-In particular, setting &lt;script type=&quot;math/tex&quot;&gt;d = Fc&lt;/script&gt;, we have&lt;/p&gt;
+&lt;p&gt;which is natural in \(c\) and \(d\).
+We say \(F\) is &lt;em&gt;left adjoint&lt;/em&gt; to \(G\),
+or equivalently that \(G\) is &lt;em&gt;right adjoint&lt;/em&gt; to \(F\).
+In particular, setting \(d = Fc\), we have&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;D(Fc,Fc) \cong C(c,GFc).&lt;/script&gt;
+\[D(Fc,Fc) \cong C(c,GFc).\]
 
-&lt;p&gt;which gives us a natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta \colon 1_C \Longrightarrow GF&lt;/script&gt;.
-Similarly, we have &lt;script type=&quot;math/tex&quot;&gt;\epsilon\colon FG \Longrightarrow 1_D&lt;/script&gt;.
-The natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is called the &lt;em&gt;unit&lt;/em&gt; of the adjunction,
-and &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; is the &lt;em&gt;counit.&lt;/em&gt;
+&lt;p&gt;which gives us a natural transformation \(\eta \colon 1_C \Longrightarrow GF\).
+Similarly, we have \(\epsilon\colon FG \Longrightarrow 1_D\).
+The natural transformation \(\eta\) is called the &lt;em&gt;unit&lt;/em&gt; of the adjunction,
+and \(\epsilon\) is the &lt;em&gt;counit.&lt;/em&gt;
 In fact, the existence of these natural transformations
 could be taken to be the &lt;em&gt;definition&lt;/em&gt; of an adjunction,
 provided the natural transformations satisfy the identities&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,&lt;/script&gt;
+\[\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,\]
 
-&lt;p&gt;which says that for all &lt;script type=&quot;math/tex&quot;&gt;c \in C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;d \in D&lt;/script&gt;, the compositions&lt;/p&gt;
+&lt;p&gt;which says that for all \(c \in C\) and \(d \in D\), the compositions&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}
+\[\require{AMScd}
 \begin{CD}
-Fc @&gt;{F\eta_c}&gt;&gt; FGFc @&gt;{\epsilon_{Fc}}&gt;&gt; Fc
-\end{CD}&lt;/script&gt;
+Fc @&amp;gt;{F\eta_c}&amp;gt;&amp;gt; FGFc @&amp;gt;{\epsilon_{Fc}}&amp;gt;&amp;gt; Fc
+\end{CD}\]
 
 &lt;p&gt;and&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-Gd @&gt;{\eta_{Gd}}&gt;&gt; GFGd @&gt;{G\epsilon_d}&gt;&gt; Gd
-\end{CD}&lt;/script&gt;
+\[\begin{CD}
+Gd @&amp;gt;{\eta_{Gd}}&amp;gt;&amp;gt; GFGd @&amp;gt;{G\epsilon_d}&amp;gt;&amp;gt; Gd
+\end{CD}\]
 
 &lt;p&gt;are the identity.&lt;/p&gt;
 
@@ -187,169 +187,169 @@ Gd @&gt;{\eta_{Gd}}&gt;&gt; GFGd @&gt;{G\epsilon_d}&gt;&gt; Gd
 satisfy this latter definition of an adjunction.&lt;/p&gt;
 
 &lt;h2 id=&quot;sheaves&quot;&gt;Sheaves&lt;/h2&gt;
-&lt;p&gt;Given a pair of spaces &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, and a continuous map &lt;script type=&quot;math/tex&quot;&gt;\pi \colon X \to Y&lt;/script&gt;,
-we have functors &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y&lt;/script&gt;
-and &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X&lt;/script&gt; from the category
-of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; and &lt;em&gt;vice versa.&lt;/em&gt;
-The former is simple to describe: if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
-the &lt;em&gt;pushforward sheaf&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; is the assignment&lt;/p&gt;
+&lt;p&gt;Given a pair of spaces \(X\) and \(Y\), and a continuous map \(\pi \colon X \to Y\),
+we have functors \(\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y\)
+and \(\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X\) from the category
+of sheaves on \(X\) to the category of sheaves on \(Y\) and &lt;em&gt;vice versa.&lt;/em&gt;
+The former is simple to describe: if \(\mathscr{G}\) is a sheaf on \(X\),
+the &lt;em&gt;pushforward sheaf&lt;/em&gt; \(\pi_\ast\mathscr{G}\) on \(Y\) is the assignment&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;U \mapsto \mathscr{F}(\pi^{-1}(U))&lt;/script&gt;
+\[U \mapsto \mathscr{F}(\pi^{-1}(U))\]
 
-&lt;p&gt;for all open subsets &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
-If &lt;script type=&quot;math/tex&quot;&gt;\psi \colon \mathscr{G} \to \mathscr{G}'&lt;/script&gt; is a morphism of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;,
-the morphism &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\psi&lt;/script&gt; is defined by the rule&lt;/p&gt;
+&lt;p&gt;for all open subsets \(U\) of \(Y\).
+If \(\psi \colon \mathscr{G} \to \mathscr{G}'\) is a morphism of sheaves on \(X\),
+the morphism \(\pi_\ast\psi\) is defined by the rule&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).&lt;/script&gt;
+\[(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).\]
 
 &lt;p&gt;The latter is slightly more complicated.
-Recall that if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
-there is a space &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; equipped with a local homeomorphism &lt;script type=&quot;math/tex&quot;&gt;\rho \colon F \to Y&lt;/script&gt;.
-The sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is the sheaf of local sections of &lt;script type=&quot;math/tex&quot;&gt;\rho&lt;/script&gt;;
-&lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is called the &lt;em&gt;espace étale&lt;/em&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
-The set of points of &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; above &lt;script type=&quot;math/tex&quot;&gt;y \in Y&lt;/script&gt; is the &lt;em&gt;stalk&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}_y&lt;/script&gt;.&lt;/p&gt;
+Recall that if \(\mathscr{F}\) is a sheaf on \(Y\),
+there is a space \(F\) equipped with a local homeomorphism \(\rho \colon F \to Y\).
+The sheaf \(\mathscr{F}\) is the sheaf of local sections of \(\rho\);
+\(F\) is called the &lt;em&gt;espace étale&lt;/em&gt; for the sheaf \(\mathscr{F}\).
+The set of points of \(F\) above \(y \in Y\) is the &lt;em&gt;stalk&lt;/em&gt; \(\mathscr{F}_y\).&lt;/p&gt;
 
-&lt;p&gt;As usual, a section &lt;script type=&quot;math/tex&quot;&gt;s\colon U \to F&lt;/script&gt; of the projection &lt;script type=&quot;math/tex&quot;&gt;\rho \colon F \to X&lt;/script&gt;
-is an element &lt;script type=&quot;math/tex&quot;&gt;(s_y)_{y \in U}&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\prod_{y \in U} \mathscr{F}_y&lt;/script&gt;.
-In our case, continuity of &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; is the following condition&lt;/p&gt;
+&lt;p&gt;As usual, a section \(s\colon U \to F\) of the projection \(\rho \colon F \to X\)
+is an element \((s_y)_{y \in U}\) of \(\prod_{y \in U} \mathscr{F}_y\).
+In our case, continuity of \(s\) is the following condition&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}\label{star}\tag{$\ast$}
+\[\begin{equation}\label{star}\tag{$\ast$}
 \text{for all } y \in U, \text{ there exists an open neighborhood }
 U_y \text{ of } y\\  \text{ and } f\in\mathscr{F}(U_y) \text{ such that }
 f_x = s_x \text{ for all } x \in U_y.
-\end{equation}&lt;/script&gt;
+\end{equation}\]
 
-&lt;p&gt;Given that &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; admit maps to &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, we can form their pullback,&lt;/p&gt;
+&lt;p&gt;Given that \(F\) and \(X\) admit maps to \(Y\), we can form their pullback,&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-\pi^{-1}F @&gt;&gt;&gt; F \\
+\[\begin{CD}
+\pi^{-1}F @&amp;gt;&amp;gt;&amp;gt; F \\
 @VVV @VV{\rho}V \\
-X @&gt;{\pi}&gt;&gt; Y
-\end{CD}&lt;/script&gt;
+X @&amp;gt;{\pi}&amp;gt;&amp;gt; Y
+\end{CD}\]
 
-&lt;p&gt;which as a set is  &lt;script type=&quot;math/tex&quot;&gt;\{ (x,f_y) \in X \times F : \pi(x) = y\}&lt;/script&gt;.
-The topology on &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F&lt;/script&gt; is induced from the product topology on &lt;script type=&quot;math/tex&quot;&gt;X \times F&lt;/script&gt;.
-The &lt;em&gt;inverse image sheaf&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}&lt;/script&gt; is the sheaf of sections of &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}F \to X&lt;/script&gt;.
+&lt;p&gt;which as a set is  \(\{ (x,f_y) \in X \times F : \pi(x) = y\}\).
+The topology on \(\pi^{-1}F\) is induced from the product topology on \(X \times F\).
+The &lt;em&gt;inverse image sheaf&lt;/em&gt; \(\pi^{-1}\mathscr{F}\) is the sheaf of sections of \(\pi^{-1}F \to X\).
 The universal property of the pullback ensures that this really defines a functor
-from the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; to the category of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.&lt;/p&gt;
+from the category of sheaves on \(Y\) to the category of sheaves on \(X\).&lt;/p&gt;
 
-&lt;p&gt;Condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt; for continuity of a section &lt;script type=&quot;math/tex&quot;&gt;s\colon V \to \pi^{-1}F&lt;/script&gt;—that is,
-a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\prod_{x \in V}\mathscr{F}_{\pi(x)}&lt;/script&gt;—says
-that for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt; there exists an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;
-and an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
-Furthermore there exists a section &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U_x)&lt;/script&gt; 
-such that &lt;script type=&quot;math/tex&quot;&gt;f_{\pi(v)} = s_{\pi(v)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;v \in V_x&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Condition \(\eqref{star}\) for continuity of a section \(s\colon V \to \pi^{-1}F\)—that is,
+a tuple \((s_{\pi(x)})_{x \in V}\) in \(\prod_{x \in V}\mathscr{F}_{\pi(x)}\)—says
+that for all \(x \in V\) there exists an open neighborhood \(V_x\) of \(x\)
+and an open neighborhood \(U_x\) in \(Y\) such that \(\pi(V_x) \subset U_x\).
+Furthermore there exists a section \(f \in \mathscr{F}(U_x)\) 
+such that \(f_{\pi(v)} = s_{\pi(v)}\) for all \(v \in V_x\).&lt;/p&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;\phi\colon \mathscr{F} \to \mathscr{F}'&lt;/script&gt; is a morphism of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
-the resulting morphism &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'&lt;/script&gt;
+&lt;p&gt;If \(\phi\colon \mathscr{F} \to \mathscr{F}'\) is a morphism of sheaves on \(Y\),
+the resulting morphism \(\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'\)
 is defined by&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.&lt;/script&gt;
+\[(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.\]
 
-&lt;p&gt;One needs to demonstrate that the right-hand side satisfies condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;;
+&lt;p&gt;One needs to demonstrate that the right-hand side satisfies condition \(\eqref{star}\);
 the check is simple, so I’ll leave it to the reader.&lt;/p&gt;
 
-&lt;p&gt;The claim is that &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}&lt;/script&gt; is left adjoint to &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast&lt;/script&gt;.
+&lt;p&gt;The claim is that \(\pi^{-1}\) is left adjoint to \(\pi_\ast\).
 Therefore we should expect natural transformations
-&lt;script type=&quot;math/tex&quot;&gt;\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}&lt;/script&gt;
-and &lt;script type=&quot;math/tex&quot;&gt;\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}&lt;/script&gt;.&lt;/p&gt;
+\(\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}\)
+and \(\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}\).&lt;/p&gt;
 
 &lt;h3 id=&quot;the-unit-of-the-adjunction&quot;&gt;The Unit of the Adjunction&lt;/h3&gt;
 
-&lt;p&gt;So let &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; be a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
-and let &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; be an open set in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.
-Since &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;,
-we can think of &lt;script type=&quot;math/tex&quot;&gt;s \in \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; as
-a section &lt;script type=&quot;math/tex&quot;&gt;s \colon \pi^{-1}(U) \to \pi^{-1}F&lt;/script&gt;,
-i.e. a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U)}&lt;/script&gt;
+&lt;p&gt;So let \(\mathscr{F}\) be a sheaf on \(Y\),
+and let \(U\) be an open set in \(Y\).
+Since \(\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))\),
+we can think of \(s \in \pi_\ast\pi^{-1}\mathscr{F}(U)\) as
+a section \(s \colon \pi^{-1}(U) \to \pi^{-1}F\),
+i.e. a tuple \((s_{\pi(x)})_{x \in \pi^{-1}(U)}\)
 satisfying the compatibility condition above.&lt;/p&gt;
 
-&lt;p&gt;Note that in particular if &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is open
-and &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;
-for a section &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}(U)\to \pi^{-1}F&lt;/script&gt; is satisfied by the section
-&lt;script type=&quot;math/tex&quot;&gt;(f_{\pi(x)})_{x \in \pi^{-1}(U)}&lt;/script&gt;,
-and thus defines an element of &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Note that in particular if \(U \subset Y\) is open
+and \(f \in \mathscr{F}(U)\), the continuity condition \(\eqref{star}\)
+for a section \(\pi^{-1}(U)\to \pi^{-1}F\) is satisfied by the section
+\((f_{\pi(x)})_{x \in \pi^{-1}(U)}\),
+and thus defines an element of \(\pi_\ast\pi^{-1}\mathscr{F}(U)\).&lt;/p&gt;
 
-&lt;p&gt;Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)&lt;/script&gt; 
+&lt;p&gt;Let us thus define a map \(\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)\) 
 as&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.&lt;/script&gt;
+\[\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.\]
 
-&lt;p&gt;(Let’s parse the notation: a natural transformation &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; yields
-a map of sheaves &lt;script type=&quot;math/tex&quot;&gt;\eta_{\mathscr{F}}&lt;/script&gt; for each sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt;.
-This is the definition of that map on the open subset &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt;.)&lt;/p&gt;
+&lt;p&gt;(Let’s parse the notation: a natural transformation \(\eta\) yields
+a map of sheaves \(\eta_{\mathscr{F}}\) for each sheaf \(\mathscr{F}\).
+This is the definition of that map on the open subset \(U \subset Y\).)&lt;/p&gt;
 
-&lt;p&gt;To prove the claim that &lt;script type=&quot;math/tex&quot;&gt;\eta&lt;/script&gt; is a natural transformation,
-we need to show that given a map &lt;script type=&quot;math/tex&quot;&gt;\phi \colon \mathscr{F} \to \mathscr{F}'&lt;/script&gt;
-of sheaves on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+&lt;p&gt;To prove the claim that \(\eta\) is a natural transformation,
+we need to show that given a map \(\phi \colon \mathscr{F} \to \mathscr{F}'\)
+of sheaves on \(Y\), the following diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-\mathscr{F} @&gt;{\eta_{\mathscr{F}}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F} \\
+\[\begin{CD}
+\mathscr{F} @&amp;gt;{\eta_{\mathscr{F}}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\mathscr{F} \\
 @V{\phi}VV @VV{\pi_\ast\pi^{-1}\phi}V \\
-\mathscr{F}' @&gt;{\eta_{\mathscr{F}'}}&gt;&gt; \pi_\ast\pi^{-1}\mathscr{F}'.
-\end{CD}&lt;/script&gt;
+\mathscr{F}' @&amp;gt;{\eta_{\mathscr{F}'}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\mathscr{F}'.
+\end{CD}\]
 
-&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;f \in \mathscr{F}(U)&lt;/script&gt;, commutativity of the square is the claim that
+&lt;p&gt;Given \(f \in \mathscr{F}(U)\), commutativity of the square is the claim that
 the following equality holds&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
-= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.&lt;/script&gt;
+\[\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
+= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.\]
 
-&lt;p&gt;This is in fact true, since taking the stalk at &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; is functorial.&lt;/p&gt;
+&lt;p&gt;This is in fact true, since taking the stalk at \(x\) is functorial.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-counit-of-the-adjunction&quot;&gt;The Counit of the Adjunction&lt;/h3&gt;
 
-&lt;p&gt;Now suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.
-Let &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast G&lt;/script&gt; denote the &lt;em&gt;espace étale&lt;/em&gt; over &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; for the sheaf &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Now suppose that \(\mathscr{G}\) is a sheaf on \(X\).
+Let \(\pi_\ast G\) denote the &lt;em&gt;espace étale&lt;/em&gt; over \(Y\) for the sheaf \(\pi_\ast\mathscr{G}\).&lt;/p&gt;
 
-&lt;p&gt;A section &lt;script type=&quot;math/tex&quot;&gt;s \colon V \to \pi^{-1}\pi_\ast G&lt;/script&gt;
-is a tuple &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; taking values in &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)}&lt;/script&gt;
-satisfying the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt;,
+&lt;p&gt;A section \(s \colon V \to \pi^{-1}\pi_\ast G\)
+is a tuple \((s_{\pi(x)})_{x \in V}\) taking values in \(\pi_\ast\mathscr{G}_{\pi(x)}\)
+satisfying the continuity condition \(\eqref{star}\),
 which in our particular case asserts the existence,
-for each &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, of an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and an open neighborhood
-&lt;script type=&quot;math/tex&quot;&gt;U_x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; satisfying &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x) \subset U_x&lt;/script&gt;.
-Furthermore there exists &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))&lt;/script&gt;
-such that the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt; under the natural map
-&lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt;.&lt;/p&gt;
+for each \(x \in V\), of an open neighborhood \(V_x\) of \(x\) and an open neighborhood
+\(U_x\) in \(Y\) satisfying \(\pi(V_x) \subset U_x\).
+Furthermore there exists \(g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))\)
+such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) under the natural map
+\(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\) is equal to \(g_x\).&lt;/p&gt;
 
-&lt;p&gt;Since the sets &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}(U_x)&lt;/script&gt; cover &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; by assumption,
-sheafiness of &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; implies the existence of a unique &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is equal to the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt;
-under the natural map &lt;script type=&quot;math/tex&quot;&gt;\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x&lt;/script&gt;
-for &lt;em&gt;all&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.
-Let us thus define a map &lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)&lt;/script&gt;
-sending &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x\in V}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Since the sets \(\pi^{-1}(U_x)\) cover \(V\) by assumption,
+sheafiness of \(\mathscr{G}\) implies the existence of a unique \(g \in \mathscr{G}(V)\)
+such that \(g_x\) is equal to the image of \(s_{\pi(x)}\)
+under the natural map \(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\)
+for &lt;em&gt;all&lt;/em&gt; \(x \in V\).
+Let us thus define a map \(\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)\)
+sending \((s_{\pi(x)})_{x\in V}\) to \(g\).&lt;/p&gt;
 
-&lt;p&gt;We claim that &lt;script type=&quot;math/tex&quot;&gt;\epsilon&lt;/script&gt; defines a natural transformation from &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt;.
-To prove the claim, we need to show that given a map &lt;script type=&quot;math/tex&quot;&gt;\psi\colon \mathscr{G} \to \mathscr{G}'&lt;/script&gt;
-of sheaves on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+&lt;p&gt;We claim that \(\epsilon\) defines a natural transformation from \(\pi^{-1}\pi_\ast\mathscr{G}\) to \(\mathscr{G}\).
+To prove the claim, we need to show that given a map \(\psi\colon \mathscr{G} \to \mathscr{G}'\)
+of sheaves on \(X\), the following diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-\pi^{-1}\pi_\ast\mathscr{G} @&gt;{\epsilon_{\mathscr{G}}}&gt;&gt; \mathscr{G} \\
+\[\begin{CD}
+\pi^{-1}\pi_\ast\mathscr{G} @&amp;gt;{\epsilon_{\mathscr{G}}}&amp;gt;&amp;gt; \mathscr{G} \\
 @V{\pi^{-1}\pi_\ast\psi}VV @VV{\psi}V \\
-\pi^{-1}\pi_\ast \mathscr{G}' @&gt;{\epsilon_{\mathscr{G}'}}&gt;&gt; \mathscr{G}'.
-\end{CD}&lt;/script&gt;
+\pi^{-1}\pi_\ast \mathscr{G}' @&amp;gt;{\epsilon_{\mathscr{G}'}}&amp;gt;&amp;gt; \mathscr{G}'.
+\end{CD}\]
 
-&lt;p&gt;Given &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)&lt;/script&gt;,
-the upper right path of the square sends us first to some &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt;
-such that &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; is the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;,
-and then sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\psi(V)(g) \in \mathscr{G}'(V)&lt;/script&gt;.
+&lt;p&gt;Given \((s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)\),
+the upper right path of the square sends us first to some \(g \in \mathscr{G}(V)\)
+such that \(g_x\) is the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) for all \(x \in V\),
+and then sends \(g\) to \(\psi(V)(g) \in \mathscr{G}'(V)\).
 On the other hand, the lower left path of the square sends
-&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; first to &lt;script type=&quot;math/tex&quot;&gt;\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}&lt;/script&gt;
-in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\pi_\ast\mathscr{G}'(V)&lt;/script&gt;, and then to
-some &lt;script type=&quot;math/tex&quot;&gt;g' \in \mathscr{G}'(V)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;g'_x&lt;/script&gt; is the image of
-&lt;script type=&quot;math/tex&quot;&gt;(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}'_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.&lt;/p&gt;
+\((s_{\pi(x)})_{x \in V}\) first to \(\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}\)
+in \(\pi^{-1}\pi_\ast\mathscr{G}'(V)\), and then to
+some \(g' \in \mathscr{G}'(V)\) such that \(g'_x\) is the image of
+\((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\) in \(\mathscr{G}'_x\) for all \(x \in V\).&lt;/p&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set containing &lt;script type=&quot;math/tex&quot;&gt;\pi(x)&lt;/script&gt; such that
-&lt;script type=&quot;math/tex&quot;&gt;s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))&lt;/script&gt; 
-represents &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;\pi(x) \in U&lt;/script&gt;,
-we have &lt;script type=&quot;math/tex&quot;&gt;(\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}&lt;/script&gt;.
-Furthermore we know that &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(V)&lt;/script&gt; 
-is such that the image of &lt;script type=&quot;math/tex&quot;&gt;s_{\pi(x)}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}_x&lt;/script&gt;
-is &lt;script type=&quot;math/tex&quot;&gt;g_x&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;.
+&lt;p&gt;If \(U \subset Y\) is an open set containing \(\pi(x)\) such that
+\(s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))\) 
+represents \(s_{\pi(x)}\) for \(\pi(x) \in U\),
+we have \((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}\).
+Furthermore we know that \(g \in \mathscr{G}(V)\) 
+is such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\)
+is \(g_x\) for all \(x \in V\).
 Therefore we have that
-the image of &lt;script type=&quot;math/tex&quot;&gt;\psi(\pi^{-1}(U))(s)_{\pi(x)}&lt;/script&gt;
-in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}'_x&lt;/script&gt; is equal to &lt;script type=&quot;math/tex&quot;&gt;\psi(V)(g)_x&lt;/script&gt;,
+the image of \(\psi(\pi^{-1}(U))(s)_{\pi(x)}\)
+in \(\mathscr{G}'_x\) is equal to \(\psi(V)(g)_x\),
 as desired.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-inverse-imagepushforward-adjunction&quot;&gt;The inverse image–pushforward adjunction&lt;/h2&gt;
@@ -357,55 +357,55 @@ as desired.&lt;/p&gt;
 &lt;p&gt;To conclude, we just need to show that two double compositions
 of natural transformations are the identity.
 The first, translated into our particular case,
-says that if &lt;script type=&quot;math/tex&quot;&gt;\mathscr{F}&lt;/script&gt; is a sheaf on &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;,
+says that if \(\mathscr{F}\) is a sheaf on \(Y\),
 we have that&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-\pi^{-1}\mathscr{F} @&gt;{\pi^{-1}\eta_{\mathscr{F}}}&gt;&gt; \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @&gt;{\epsilon_{\pi^{-1}\mathscr{F}}}&gt;&gt;
+\[\begin{CD}
+\pi^{-1}\mathscr{F} @&amp;gt;{\pi^{-1}\eta_{\mathscr{F}}}&amp;gt;&amp;gt; \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @&amp;gt;{\epsilon_{\pi^{-1}\mathscr{F}}}&amp;gt;&amp;gt;
 \pi^{-1}\mathscr{F}
-\end{CD}&lt;/script&gt;
+\end{CD}\]
 
 &lt;p&gt;is equal to the identity.
 The difficulty here seems to be largely notational.
-Let &lt;script type=&quot;math/tex&quot;&gt;V \subset X&lt;/script&gt; be an open set.
-Suppose &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; is a section in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;.
+Let \(V \subset X\) be an open set.
+Suppose \((s_{\pi(x)})_{x \in V}\) is a section in \(\pi^{-1}\mathscr{F}(V)\).
 We have&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
+\[(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
 = \left((\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}
-\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).&lt;/script&gt;
+\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).\]
 
-&lt;p&gt;First observe that the continuity condition &lt;script type=&quot;math/tex&quot;&gt;\eqref{star}&lt;/script&gt; tells us that
-there is, for each &lt;script type=&quot;math/tex&quot;&gt;x \in V&lt;/script&gt;, an open neighborhood &lt;script type=&quot;math/tex&quot;&gt;V_x&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; and
-an open set &lt;script type=&quot;math/tex&quot;&gt;U_x \subset Y&lt;/script&gt; containing &lt;script type=&quot;math/tex&quot;&gt;\pi(V_x)&lt;/script&gt;.
-On this open set we have &lt;script type=&quot;math/tex&quot;&gt;s \in \mathscr{F}(U_x)&lt;/script&gt; such that
-&lt;script type=&quot;math/tex&quot;&gt;\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;First observe that the continuity condition \(\eqref{star}\) tells us that
+there is, for each \(x \in V\), an open neighborhood \(V_x\) of \(x\) and
+an open set \(U_x \subset Y\) containing \(\pi(V_x)\).
+On this open set we have \(s \in \mathscr{F}(U_x)\) such that
+\(\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\).&lt;/p&gt;
 
-&lt;p&gt;We saw above that &lt;script type=&quot;math/tex&quot;&gt;(\eta_{\mathscr{F}})(U_x)(s)&lt;/script&gt; is the section
-&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
-\pi^{-1}\mathscr{F}(\pi^{-1}(U))&lt;/script&gt;.
-The map &lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\pi^{-1}\mathscr F}&lt;/script&gt; recognizes that the sections
-&lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in \pi^{-1}(U_x)}&lt;/script&gt; satisfy the compatibility conditions
-to glue up to form a section &lt;script type=&quot;math/tex&quot;&gt;(s_{\pi(x)})_{x \in V}&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\pi^{-1}\mathscr{F}(V)&lt;/script&gt;,
+&lt;p&gt;We saw above that \((\eta_{\mathscr{F}})(U_x)(s)\) is the section
+\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
+\pi^{-1}\mathscr{F}(\pi^{-1}(U))\).
+The map \(\epsilon_{\pi^{-1}\mathscr F}\) recognizes that the sections
+\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)}\) satisfy the compatibility conditions
+to glue up to form a section \((s_{\pi(x)})_{x \in V}\) in \(\pi^{-1}\mathscr{F}(V)\),
 demonstrating that the double composition is indeed the identity. So far so good.&lt;/p&gt;
 
 &lt;p&gt;The second double composition we need to show is equal to the identity is defined 
-for a sheaf &lt;script type=&quot;math/tex&quot;&gt;\mathscr{G}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; as follows&lt;/p&gt;
+for a sheaf \(\mathscr{G}\) on \(X\) as follows&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-\pi_\ast\mathscr{G} @&gt;{\eta_{\pi_\ast\mathscr{G}}}&gt;&gt; \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
-@&gt;{\pi_\ast\epsilon_{\mathscr{G}}}&gt;&gt; \pi_\ast\mathscr{G}.
-\end{CD}&lt;/script&gt;
+\[\begin{CD}
+\pi_\ast\mathscr{G} @&amp;gt;{\eta_{\pi_\ast\mathscr{G}}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
+@&amp;gt;{\pi_\ast\epsilon_{\mathscr{G}}}&amp;gt;&amp;gt; \pi_\ast\mathscr{G}.
+\end{CD}\]
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;U \subset Y&lt;/script&gt; is an open set and &lt;script type=&quot;math/tex&quot;&gt;g \in \pi_\ast\mathscr{G}(U)&lt;/script&gt;
+&lt;p&gt;If \(U \subset Y\) is an open set and \(g \in \pi_\ast\mathscr{G}(U)\)
 is a section,
-the first map sends &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt; to the section
-&lt;script type=&quot;math/tex&quot;&gt;(g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)&lt;/script&gt;.&lt;/p&gt;
+the first map sends \(g\) to the section
+\((g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)\).&lt;/p&gt;
 
-&lt;p&gt;The second map recognizes that the above section and &lt;script type=&quot;math/tex&quot;&gt;g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}&lt;/script&gt;
-agree on each stalk, and so sends our section back to &lt;script type=&quot;math/tex&quot;&gt;g&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;The second map recognizes that the above section and \(g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}\)
+agree on each stalk, and so sends our section back to \(g\).&lt;/p&gt;
 
-&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space and a continuous map , there is an adjunction between the categories of sheaves on and sheaves on . The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
 the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
@@ -416,12 +416,12 @@ I’ll try to move briskly without assuming total familiarity with either side o
 
 &lt;h2 id=&quot;the-algebraic-cotangent-space&quot;&gt;The Algebraic Cotangent Space&lt;/h2&gt;
 
-&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; be a smooth manifold of dimension &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;.
-The &lt;em&gt;sheaf&lt;/em&gt; of differentiable functions on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is a
-contravariant functor from the category of open subsets of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; to the category of rings
-that assigns to an open set &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt;
-the ring &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt; of differentiable functions &lt;script type=&quot;math/tex&quot;&gt;f\colon U \to \mathbb{R}&lt;/script&gt;—addition
-and multiplication in &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt; are done pointwise in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Let \(X\) be a smooth manifold of dimension \(n\).
+The &lt;em&gt;sheaf&lt;/em&gt; of differentiable functions on \(X\) is a
+contravariant functor from the category of open subsets of \(X\) to the category of rings
+that assigns to an open set \(U\)
+the ring \(\mathscr{O}(U)\) of differentiable functions \(f\colon U \to \mathbb{R}\)—addition
+and multiplication in \(\mathscr{O}(U)\) are done pointwise in \(\mathbb{R}\).&lt;/p&gt;
 
 &lt;p&gt;The sheaf is not so important for us;
 what we are interested in today are the &lt;em&gt;stalks.&lt;/em&gt;
@@ -429,120 +429,120 @@ The idea is that elements of the &lt;em&gt;stalk,&lt;/em&gt;
 called &lt;em&gt;germs,&lt;/em&gt; capture the “infinitesimal behavior”
 of smooth functions at a point.
 Here is the formal definition.
-Given a point &lt;script type=&quot;math/tex&quot;&gt;p \in X&lt;/script&gt;, 
-the &lt;em&gt;stalk&lt;/em&gt; of &lt;em&gt;germs&lt;/em&gt; of smooth functions at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is the ring&lt;/p&gt;
+Given a point \(p \in X\), 
+the &lt;em&gt;stalk&lt;/em&gt; of &lt;em&gt;germs&lt;/em&gt; of smooth functions at \(p\) is the ring&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.&lt;/script&gt;
+\[\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.\]
 
-&lt;p&gt;The equivalence relation &lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt; is defined as follows:
-we say &lt;script type=&quot;math/tex&quot;&gt;(f,U) \sim (g,V)&lt;/script&gt; if there exists an open neighborhood
-&lt;script type=&quot;math/tex&quot;&gt;U' \subset U \cap V&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f|_{U'} = g|_{U'}&lt;/script&gt;.
-The equivalence class of &lt;script type=&quot;math/tex&quot;&gt;(f,U)&lt;/script&gt; is its &lt;em&gt;germ.&lt;/em&gt;
-The ring &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p&lt;/script&gt; is the direct limit of the &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}(U)&lt;/script&gt;
-as &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; varies over the open neighborhoods of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;The equivalence relation \(\sim\) is defined as follows:
+we say \((f,U) \sim (g,V)\) if there exists an open neighborhood
+\(U' \subset U \cap V\) such that \(f|_{U'} = g|_{U'}\).
+The equivalence class of \((f,U)\) is its &lt;em&gt;germ.&lt;/em&gt;
+The ring \(\mathscr{O}_p\) is the direct limit of the \(\mathscr{O}(U)\)
+as \(U\) varies over the open neighborhoods of \(p\).&lt;/p&gt;
 
-&lt;p&gt;Notice that there is a surjection &lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p \to \mathbb{R}&lt;/script&gt;
-that sends the germ of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;f(p)\in \mathbb{R}&lt;/script&gt;.
-The definition is independent of the choice of representative &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;.
-Since &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt; is a field, the kernel of the map
-is a maximal ideal; let’s call it &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;.
+&lt;p&gt;Notice that there is a surjection \(\mathscr{O}_p \to \mathbb{R}\)
+that sends the germ of \(f\) at \(p\) to \(f(p)\in \mathbb{R}\).
+The definition is independent of the choice of representative \(f\).
+Since \(\mathbb{R}\) is a field, the kernel of the map
+is a maximal ideal; let’s call it \(\mathfrak{m}_p\).
 Observe that 
-&lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2&lt;/script&gt; is a module over
-&lt;script type=&quot;math/tex&quot;&gt;\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}&lt;/script&gt;, 
+\(\mathfrak{m}_p/\mathfrak{m}_p^2\) is a module over
+\(\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}\), 
 i.e. a real vector space;
-we will call it the &lt;em&gt;algebraic cotangent space at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.&lt;/em&gt;&lt;/p&gt;
+we will call it the &lt;em&gt;algebraic cotangent space at \(p\).&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-usual-cotangent-space&quot;&gt;The Usual Cotangent Space&lt;/h2&gt;
 
-&lt;p&gt;We retain our manifold &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and point &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; from the previous section.
-The &lt;em&gt;tangent space at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;,&lt;/em&gt; denoted &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt;
-can be thought of as the space of “directions” in &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+&lt;p&gt;We retain our manifold \(X\) and point \(p\) from the previous section.
+The &lt;em&gt;tangent space at \(p\),&lt;/em&gt; denoted \(T_pX\)
+can be thought of as the space of “directions” in \(X\) at \(p\).
 This is made precise by defining it to be the space of
-directional &lt;em&gt;derivatives&lt;/em&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;.
+directional &lt;em&gt;derivatives&lt;/em&gt; at \(p\).
 I won’t attempt to make this more precise, except to note that
-after we choose local coordinates &lt;script type=&quot;math/tex&quot;&gt;(x_1,\dotsc,x_n)&lt;/script&gt; near &lt;script type=&quot;math/tex&quot;&gt;p = (p_1,\dotsc,p_n)&lt;/script&gt;,
-a basis for &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt; is given by&lt;/p&gt;
+after we choose local coordinates \((x_1,\dotsc,x_n)\) near \(p = (p_1,\dotsc,p_n)\),
+a basis for \(T_pX\) is given by&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.&lt;/script&gt;
+\[\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.\]
 
 &lt;p&gt;The &lt;em&gt;cotangent space,&lt;/em&gt; which we are more interested in, is the
-&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast X&lt;/script&gt;.
+&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted \(T_p^\ast X\).
 Elements of the cotangent space are &lt;em&gt;linear functionals&lt;/em&gt; on tangent vectors.
-Given coordinates &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt;,
+Given coordinates \(x_1,\dotsc,x_n\),
 the &lt;em&gt;dual basis&lt;/em&gt; of the cotangent space is given by&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;dx_1,\dotsc, dx_n,&lt;/script&gt;
+\[dx_1,\dotsc, dx_n,\]
 
-&lt;p&gt;so we have &lt;script type=&quot;math/tex&quot;&gt;dx_i\left( \frac{\partial}{\partial x_j}|_p\right)&lt;/script&gt; equal to &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;
-when &lt;script type=&quot;math/tex&quot;&gt;i = j&lt;/script&gt; and equal to &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; otherwise.
-(There perhaps ought to be some notational inclusion of the point &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;,
+&lt;p&gt;so we have \(dx_i\left( \frac{\partial}{\partial x_j}|_p\right)\) equal to \(1\)
+when \(i = j\) and equal to \(0\) otherwise.
+(There perhaps ought to be some notational inclusion of the point \(p\),
 but we will suppress this.)&lt;/p&gt;
 
 &lt;h2 id=&quot;the-algebraic-cotangent-space-agrees-with-the-usual-one&quot;&gt;The Algebraic Cotangent Space Agrees With the Usual One&lt;/h2&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is a smooth function on an open neighborhood of &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;
-satisfying &lt;script type=&quot;math/tex&quot;&gt;f(p) = 0&lt;/script&gt;,
+&lt;p&gt;If \(f\) is a smooth function on an open neighborhood of \(p\)
+satisfying \(f(p) = 0\),
 abusing notation, we shall write the corresponding element of
-&lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2&lt;/script&gt;
-as &lt;script type=&quot;math/tex&quot;&gt;f + \mathfrak{m}_p^2&lt;/script&gt;.
+\(\mathfrak{m}_p/\mathfrak{m}_p^2\)
+as \(f + \mathfrak{m}_p^2\).
 Given such an element,
-I claim we can interpret &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as a linear functional on tangent vectors at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;
-by sending a tangent vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; to the value of the derivative of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; in the direction &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;.
-For instance, in local coordinates &lt;script type=&quot;math/tex&quot;&gt;(x_1,\dotsc,x_n)&lt;/script&gt;,
-the vector &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial}{\partial x_i}|_p&lt;/script&gt; is sent to &lt;script type=&quot;math/tex&quot;&gt;\frac{\partial f}{\partial x_i}(p)&lt;/script&gt;.
-Extending linearly defines a linear functional on &lt;script type=&quot;math/tex&quot;&gt;T_pX&lt;/script&gt;,
-which we shall denote &lt;script type=&quot;math/tex&quot;&gt;df_p&lt;/script&gt;.
+I claim we can interpret \(f\) as a linear functional on tangent vectors at \(p\)
+by sending a tangent vector \(v\) to the value of the derivative of \(f\) at \(p\) in the direction \(v\).
+For instance, in local coordinates \((x_1,\dotsc,x_n)\),
+the vector \(\frac{\partial}{\partial x_i}|_p\) is sent to \(\frac{\partial f}{\partial x_i}(p)\).
+Extending linearly defines a linear functional on \(T_pX\),
+which we shall denote \(df_p\).
 The value of the directional derivative of a function depends only on its germ
 essentially by definition,
 and the product rule from calculus tells us that the assignment
-&lt;script type=&quot;math/tex&quot;&gt;f \mapsto df_p&lt;/script&gt; sends elements of &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p^2&lt;/script&gt; to the zero functional.
-The linearity of the derivative implies that &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;-linear combinations
-of germs are sent to &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;-linear combinations of functionals,
+\(f \mapsto df_p\) sends elements of \(\mathfrak{m}_p^2\) to the zero functional.
+The linearity of the derivative implies that \(\mathbb{R}\)-linear combinations
+of germs are sent to \(\mathbb{R}\)-linear combinations of functionals,
 so the assignment&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f + \mathfrak{m}_p^2 \mapsto df_p&lt;/script&gt;
+\[f + \mathfrak{m}_p^2 \mapsto df_p\]
 
-&lt;p&gt;really defines a map &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;really defines a map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\).&lt;/p&gt;
 
 &lt;p&gt;We claim this map is an isomorphism, for which it suffices to define an inverse.
-Choose local coordinates &lt;script type=&quot;math/tex&quot;&gt;\vec x = (x_1,\dotsc,x_n)&lt;/script&gt; around &lt;script type=&quot;math/tex&quot;&gt;\vec p = (p_1,\dotsc,p_n)&lt;/script&gt;.
-A general element &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;T_p^\ast X&lt;/script&gt;
+Choose local coordinates \(\vec x = (x_1,\dotsc,x_n)\) around \(\vec p = (p_1,\dotsc,p_n)\).
+A general element \(\alpha\) of \(T_p^\ast X\)
 may be written as the linear combination
-&lt;script type=&quot;math/tex&quot;&gt;\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.&lt;/script&gt;
-Write &lt;script type=&quot;math/tex&quot;&gt;\vec a = (a_1,\dotsc,a_n)&lt;/script&gt;.
-The function &lt;script type=&quot;math/tex&quot;&gt;f_\alpha&lt;/script&gt; defined as&lt;/p&gt;
+\(\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.\)
+Write \(\vec a = (a_1,\dotsc,a_n)\).
+The function \(f_\alpha\) defined as&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)&lt;/script&gt;
+\[f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)\]
 
-&lt;p&gt;clearly has germ belonging to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;,
+&lt;p&gt;clearly has germ belonging to \(\mathfrak{m}_p\),
 and tracing the double composition,
-we see that we have &lt;script type=&quot;math/tex&quot;&gt;a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha&lt;/script&gt;.
+we see that we have \(a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha\).
 This map will be an isomorphism as soon as we can show that the germ of
-&lt;script type=&quot;math/tex&quot;&gt;f - f_{df_p}&lt;/script&gt; belongs to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p^2&lt;/script&gt;, i.e.
-can be written as &lt;script type=&quot;math/tex&quot;&gt;g_1h_1 + \dotsb g_kh_k&lt;/script&gt; for some
-smooth functions &lt;script type=&quot;math/tex&quot;&gt;g_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;h_i&lt;/script&gt; whose germs belong to &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt;.
+\(f - f_{df_p}\) belongs to \(\mathfrak{m}_p^2\), i.e.
+can be written as \(g_1h_1 + \dotsb g_kh_k\) for some
+smooth functions \(g_i\) and \(h_i\) whose germs belong to \(\mathfrak{m}_p\).
 This is the statement of Taylor’s theorem!&lt;/p&gt;
 
-&lt;p&gt;Even better, the map &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X&lt;/script&gt;
+&lt;p&gt;Even better, the map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\)
 is a &lt;em&gt;natural isomorphism,&lt;/em&gt; in the sense that given a smooth map
-&lt;script type=&quot;math/tex&quot;&gt;\varphi\colon X \to Y&lt;/script&gt; of smooth manifolds such that
-&lt;script type=&quot;math/tex&quot;&gt;\varphi(p) = q&lt;/script&gt;, the following diagram commutes&lt;/p&gt;
+\(\varphi\colon X \to Y\) of smooth manifolds such that
+\(\varphi(p) = q\), the following diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}
+\[\require{AMScd}
 	\begin{CD}
-		\mathfrak{m}_q/\mathfrak{m}_q^2 @&gt;{\cong}&gt;&gt; T_q^\ast Y \\
+		\mathfrak{m}_q/\mathfrak{m}_q^2 @&amp;gt;{\cong}&amp;gt;&amp;gt; T_q^\ast Y \\
 		@VV{\varphi^\ast}V @VV{\varphi^\ast}V \\
-		\mathfrak{m}_p/\mathfrak{m}_p^2 @&gt;{\cong}&gt;&gt; T_p^\ast X.
-	\end{CD}&lt;/script&gt;
+		\mathfrak{m}_p/\mathfrak{m}_p^2 @&amp;gt;{\cong}&amp;gt;&amp;gt; T_p^\ast X.
+	\end{CD}\]
 
-&lt;p&gt;To verify this, we shall follow an element &lt;script type=&quot;math/tex&quot;&gt;f + \mathfrak{m}_q^2&lt;/script&gt;
+&lt;p&gt;To verify this, we shall follow an element \(f + \mathfrak{m}_q^2\)
 around the diagram&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-		f + \mathfrak{m}^2_q @&gt;&gt;&gt; df_q \\
+\[\begin{CD}
+		f + \mathfrak{m}^2_q @&amp;gt;&amp;gt;&amp;gt; df_q \\
 		@VVV @VVV \\
-		f\varphi + \mathfrak{m}_p^2 @&gt;&gt;&gt; d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
-	\end{CD}&lt;/script&gt;
+		f\varphi + \mathfrak{m}_p^2 @&amp;gt;&amp;gt;&amp;gt; d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
+	\end{CD}\]
 
 &lt;p&gt;and the fact that equality holds is the multi-variable chain rule!&lt;/p&gt;
 
@@ -558,21 +558,21 @@ there’s no reason—like Taylor’s theorem—for the space to be finite-dimen
 
 &lt;p&gt;Actually, the truth is slightly more subtle:
 every continuous function has a continuous “square root” in the sense
-that we can always write &lt;script type=&quot;math/tex&quot;&gt;f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}&lt;/script&gt;,
-and the functions &lt;script type=&quot;math/tex&quot;&gt;\sqrt{f}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\operatorname{sgn}(f)\sqrt(f)&lt;/script&gt; are continuous.
-Therefore it is &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p&lt;/script&gt; that is infinite-dimensional,
-while &lt;script type=&quot;math/tex&quot;&gt;\mathfrak{m}_p/\mathfrak{m}_p^2 = 0&lt;/script&gt;.
+that we can always write \(f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}\),
+and the functions \(\sqrt{f}\) and \(\operatorname{sgn}(f)\sqrt(f)\) are continuous.
+Therefore it is \(\mathfrak{m}_p\) that is infinite-dimensional,
+while \(\mathfrak{m}_p/\mathfrak{m}_p^2 = 0\).
 (Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
 
-&lt;p&gt;An &lt;em&gt;orbifold&lt;/em&gt; of dimension &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; is a Hausdorff space locally modeled on &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt; modulo
+&lt;p&gt;An &lt;em&gt;orbifold&lt;/em&gt; of dimension \(n\) is a Hausdorff space locally modeled on \(\mathbb{R}^n\) modulo
 the action of a finite group.
 This is a simple enough idea on its face:
 a useful perspective on the fundamental group of a manifold 
 is the passage between its action on the universal cover
 and the calculus of loops in the base space.
-For a group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; that acts merely properly discontinuously and not freely,
+For a group \(G\) that acts merely properly discontinuously and not freely,
 the quotient space is no longer a manifold,
 and yet we would like to accesss the “loops” perspective regardless.
 This is the idea that orbifolds are trying to capture.
@@ -581,46 +581,46 @@ and yet how much more complex the theory becomes.&lt;/p&gt;
 
 &lt;p&gt;Let’s remember back to when we learned Calculus.
 First we learned how to manipulate real-valued functions of one variable,
-and later multivariable functions &lt;script type=&quot;math/tex&quot;&gt;f\colon \mathbb{R}^m \to \mathbb{R}^n&lt;/script&gt;.
+and later multivariable functions \(f\colon \mathbb{R}^m \to \mathbb{R}^n\).
 In particular, we defined a notion of differentiability for these maps.
 To replicate this effort on differentiable manifolds,
-one uses &lt;em&gt;charts.&lt;/em&gt; The idea is that the local structure of a manifold &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;
-can be captured by a map &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon U \to M&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;U&lt;/script&gt; is an
-open subset of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^n&lt;/script&gt;.
-A map of manifolds &lt;script type=&quot;math/tex&quot;&gt;f\colon M \to N&lt;/script&gt; is &lt;em&gt;defined&lt;/em&gt; to be differentiable
+one uses &lt;em&gt;charts.&lt;/em&gt; The idea is that the local structure of a manifold \(M\)
+can be captured by a map \(\varphi\colon U \to M\), where \(U\) is an
+open subset of \(\mathbb{R}^n\).
+A map of manifolds \(f\colon M \to N\) is &lt;em&gt;defined&lt;/em&gt; to be differentiable
 if its expression in any pair of charts is differentiable.&lt;/p&gt;
 
 &lt;p&gt;A ridiculously maximalist approach to this idea is the following:
-suppose &lt;script type=&quot;math/tex&quot;&gt;(U_i,\varphi_i)_{i\in I}&lt;/script&gt; is an &lt;em&gt;atlas&lt;/em&gt; for &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;
-(in the usual sense), and that &lt;script type=&quot;math/tex&quot;&gt;(V_j,\psi_j)_{j\in J}&lt;/script&gt;
-is an atlas for &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt;.
-A function &lt;script type=&quot;math/tex&quot;&gt;f\colon M \to N&lt;/script&gt;
-defines a map &lt;script type=&quot;math/tex&quot;&gt;f_{ij}\colon U_i \to V_j&lt;/script&gt;
-whenever &lt;script type=&quot;math/tex&quot;&gt;f\varphi_i(U_i) \subset \psi_j(V_j)&lt;/script&gt;.
-By refining the open cover of &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;, we can assume this is always the case.
+suppose \((U_i,\varphi_i)_{i\in I}\) is an &lt;em&gt;atlas&lt;/em&gt; for \(M\)
+(in the usual sense), and that \((V_j,\psi_j)_{j\in J}\)
+is an atlas for \(N\).
+A function \(f\colon M \to N\)
+defines a map \(f_{ij}\colon U_i \to V_j\)
+whenever \(f\varphi_i(U_i) \subset \psi_j(V_j)\).
+By refining the open cover of \(M\), we can assume this is always the case.
 We can do the following strange thing:
-the disjoint union &lt;script type=&quot;math/tex&quot;&gt;U = \coprod_{i\in I}U_i&lt;/script&gt;
-is a differentiable manifold, each of whose components is an open subset of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^m&lt;/script&gt;,
-and the resulting map &lt;script type=&quot;math/tex&quot;&gt;\varphi = \coprod_{i\in I}\varphi_i&lt;/script&gt; is differentiable
+the disjoint union \(U = \coprod_{i\in I}U_i\)
+is a differentiable manifold, each of whose components is an open subset of \(\mathbb{R}^m\),
+and the resulting map \(\varphi = \coprod_{i\in I}\varphi_i\) is differentiable
 (in fact a local diffeomorphism).
-The maps &lt;script type=&quot;math/tex&quot;&gt;f_{ij}&lt;/script&gt; assemble into a map &lt;script type=&quot;math/tex&quot;&gt;F\colon U \to V&lt;/script&gt; such that the following diagram commutes&lt;/p&gt;
+The maps \(f_{ij}\) assemble into a map \(F\colon U \to V\) such that the following diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}\begin{CD} U @&gt;F&gt;&gt; V \\ @VV\varphi V @VV\psi V \\ M @&gt;f&gt;&gt; N. \end{CD}&lt;/script&gt;
+\[\require{AMScd}\begin{CD} U @&amp;gt;F&amp;gt;&amp;gt; V \\ @VV\varphi V @VV\psi V \\ M @&amp;gt;f&amp;gt;&amp;gt; N. \end{CD}\]
 
-&lt;p&gt;And we are justified in saying that &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; is differentiable when there exists
-a map &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; constructed as above.
+&lt;p&gt;And we are justified in saying that \(f\) is differentiable when there exists
+a map \(F\) constructed as above.
 What we have done, essentially, is said that we don’t understand the quotient manifold,
-but we &lt;em&gt;do&lt;/em&gt; understand open subsets of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^m&lt;/script&gt;, and have performed
+but we &lt;em&gt;do&lt;/em&gt; understand open subsets of \(\mathbb{R}^m\), and have performed
 a non-unique but useful construction to exploit that understanding.
 This is the jumping-off point for orbifolds.&lt;/p&gt;
 
 &lt;p&gt;There is just one more wrinkle: 
 the definition of an atlas includes various differentiable maps
 called &lt;em&gt;changes of charts.&lt;/em&gt; It would be convenient if there
-were a way to stipulate that our map &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; must play nicely with these changes of charts
+were a way to stipulate that our map \(F\) must play nicely with these changes of charts
 beyond just saying that there exists a map on the quotient space.
 This is where Lie Groupoids come in: they turn out to be precisely the gadget we need
-to manage the expression of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; in charts while asserting that these expressions
+to manage the expression of \(f\) in charts while asserting that these expressions
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
@@ -640,15 +640,15 @@ I also recommend Saunders Mac Lane’s
 and Francis Borceux’s &lt;em&gt;Handbook of Categorical Algebra.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;categories&quot;&gt;Categories&lt;/h2&gt;
-&lt;p&gt;A &lt;em&gt;category&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is a collection of &lt;em&gt;objects,&lt;/em&gt; say &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;, and 
-&lt;em&gt;arrows&lt;/em&gt; between them, say &lt;script type=&quot;math/tex&quot;&gt;f\colon c\to d&lt;/script&gt;.
+&lt;p&gt;A &lt;em&gt;category&lt;/em&gt; \(C\) is a collection of &lt;em&gt;objects,&lt;/em&gt; say \(c\), \(d\), and 
+&lt;em&gt;arrows&lt;/em&gt; between them, say \(f\colon c\to d\).
 Given a pair of arrows as below&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\require{AMScd}\begin{CD} a @&gt;f&gt;&gt; b @&gt;g&gt;&gt; c,\end{CD}&lt;/script&gt;
+\[\require{AMScd}\begin{CD} a @&amp;gt;f&amp;gt;&amp;gt; b @&amp;gt;g&amp;gt;&amp;gt; c,\end{CD}\]
 
-&lt;p&gt;we require the existence of their &lt;em&gt;composition,&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;gf\colon a\to c&lt;/script&gt;.
-Composition is associative, and for each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, there is a
-(unique) arrow &lt;script type=&quot;math/tex&quot;&gt;1_c\colon c\to c&lt;/script&gt; which acts as an identity for composition
+&lt;p&gt;we require the existence of their &lt;em&gt;composition,&lt;/em&gt; \(gf\colon a\to c\).
+Composition is associative, and for each object \(c\), there is a
+(unique) arrow \(1_c\colon c\to c\) which acts as an identity for composition
 of arrows.&lt;/p&gt;
 
 &lt;p&gt;Many familiar mathematical objects assemble into categories.
@@ -659,111 +659,107 @@ However, the notion of a category is flexible: not all categories
 have “sets with additional structure” as objects.
 For instance, a &lt;em&gt;preorder&lt;/em&gt; is the same data as a category
 where there is at most one arrow between any two objects.
-Here an arrow &lt;script type=&quot;math/tex&quot;&gt;c\to d&lt;/script&gt; should be interpreted as saying &lt;script type=&quot;math/tex&quot;&gt;c\le d&lt;/script&gt;.&lt;/p&gt;
+Here an arrow \(c\to d\) should be interpreted as saying \(c\le d\).&lt;/p&gt;
 
 &lt;p&gt;Note that I use the term &lt;em&gt;collection&lt;/em&gt; advisedly: Russell’s paradox
 says that there can be no set of all sets, so the category of
 sets has more than a set’s worth of objects! However,
 between any two sets, there is only a set’s worth of distinct functions.
-That is, if &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; are sets, there is a &lt;em&gt;set&lt;/em&gt;&lt;/p&gt;
+That is, if \(a\) and \(b\) are sets, there is a &lt;em&gt;set&lt;/em&gt;&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Set}(a,b) = \{f\colon a \to b\}.&lt;/script&gt;
+\[\operatorname{Set}(a,b) = \{f\colon a \to b\}.\]
 
 &lt;p&gt;Categories where this is the case for all objects are called &lt;em&gt;locally small.&lt;/em&gt;
 If additionally there is only a set’s worth of arrows in the entire category
 (and thus only a set’s worth of objects!), the category is called &lt;em&gt;small.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; are categories, a &lt;em&gt;functor&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to D&lt;/script&gt;
+&lt;p&gt;If \(C\) and \(D\) are categories, a &lt;em&gt;functor&lt;/em&gt; \(F\colon C \to D\)
 is an assignment&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{CD}a &amp;\mapsto &amp;Fa \\ @VfVV \mapsto @VVFfV \\ b &amp;\mapsto &amp;Fb.\end{CD} %]]&gt;&lt;/script&gt;
+\[\begin{CD}a &amp;amp;\mapsto &amp;amp;Fa \\ @VfVV \mapsto @VVFfV \\ b &amp;amp;\mapsto &amp;amp;Fb.\end{CD}\]
 
-&lt;p&gt;I.e. for each object &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is an object &lt;script type=&quot;math/tex&quot;&gt;Fa&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;,
-and for each arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon a\to b&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is an arrow
-&lt;script type=&quot;math/tex&quot;&gt;Ff\colon Fa\to Fb&lt;/script&gt;. Additionally, &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is required to satisfy&lt;/p&gt;
+&lt;p&gt;I.e. for each object \(a\) of \(C\), there is an object \(Fa\) in \(D\),
+and for each arrow \(f\colon a\to b\) in \(C\), there is an arrow
+\(Ff\colon Fa\to Fb\). Additionally, \(F\) is required to satisfy&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;F1_{a} = 1_{Fa}&lt;/script&gt;
+\[F1_{a} = 1_{Fa}\]
 
-&lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; must
+&lt;p&gt;for all \(a\) in \(C\), and \(F\) must
 respect composition in the sense that&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;F(gf) = FgFf.&lt;/script&gt;
+\[F(gf) = FgFf.\]
 
 &lt;p&gt;Such functors are sometimes called &lt;em&gt;covariant.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Every category &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has an &lt;em&gt;opposite category&lt;/em&gt; 
-&lt;script type=&quot;math/tex&quot;&gt;\newcommand{\op}{^{\mathrm{op}}}C\op&lt;/script&gt;, which is obtained from
+&lt;p&gt;Every category \(C\) has an &lt;em&gt;opposite category&lt;/em&gt; 
+\(\newcommand{\op}{^{\mathrm{op}}}C\op\), which is obtained from
 formally reversing the direction of all the arrows.
-Thus if &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has arrows&lt;/p&gt;
+Thus if \(C\) has arrows&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD} a @&gt;f&gt;&gt; b @&gt;g&gt;&gt; c,\end{CD}&lt;/script&gt;
+\[\begin{CD} a @&amp;gt;f&amp;gt;&amp;gt; b @&amp;gt;g&amp;gt;&amp;gt; c,\end{CD}\]
 
-&lt;p&gt;then &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt; has arrows&lt;/p&gt;
+&lt;p&gt;then \(C\op\) has arrows&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{CD} a @&lt;f\op&lt;&lt; b @&lt;g\op&lt;&lt; c.\end{CD} %]]&gt;&lt;/script&gt;
+\[\begin{CD} a @&amp;lt;f\op&amp;lt;&amp;lt; b @&amp;lt;g\op&amp;lt;&amp;lt; c.\end{CD}\]
 
-&lt;p&gt;Any statement about objects and arrows in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; has a &lt;em&gt;dual&lt;/em&gt;
-statement about objects and arrows in &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt;, which is obtained
+&lt;p&gt;Any statement about objects and arrows in \(C\) has a &lt;em&gt;dual&lt;/em&gt;
+statement about objects and arrows in \(C\op\), which is obtained
 by reversing the direction of all the arrows.
 If the proof of the original statement is categorical,
-dualizing the proof yields a proof of the dual statement for &lt;script type=&quot;math/tex&quot;&gt;C\op&lt;/script&gt;.&lt;/p&gt;
+dualizing the proof yields a proof of the dual statement for \(C\op\).&lt;/p&gt;
 
-&lt;p&gt;The definition of a functor admits dualization in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; or in &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt;.
+&lt;p&gt;The definition of a functor admits dualization in \(C\) or in \(D\).
 The import is essentially the same as long as only one dualization is
-performed: the result is a &lt;em&gt;contravariant functor&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;G\colon C\op \to D&lt;/script&gt;:&lt;/p&gt;
+performed: the result is a &lt;em&gt;contravariant functor&lt;/em&gt; \(G\colon C\op \to D\):&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{CD} a &amp;\mapsto &amp; Ga \\ @VfVV \mapsto @AAGfA \\ b &amp;\mapsto &amp;Gb.
-\end{CD} %]]&gt;&lt;/script&gt;
+\[\begin{CD} a &amp;amp;\mapsto &amp;amp; Ga \\ @VfVV \mapsto @AAGfA \\ b &amp;amp;\mapsto &amp;amp;Gb.
+\end{CD}\]
 
 &lt;p&gt;Functors abound in mathematics. Many are so simple that we hardly think about
 them: for instance the “forgetful” 
 functor from the category of groups and homomorphisms
-to sets that sends a group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; to its set of elements,
+to sets that sends a group \(G\) to its set of elements,
 and a group homomorphism to its action on underlying sets.&lt;/p&gt;
 
-&lt;p&gt;If &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; is a locally small category and &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; is an object,
-there are two particularly important functors &lt;script type=&quot;math/tex&quot;&gt;C \to \operatorname{Set}&lt;/script&gt;.
-Write &lt;script type=&quot;math/tex&quot;&gt;C(c,b)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C(b,c)&lt;/script&gt; for the set of arrows in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
-with domain and codomain &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;, respectively.
-If &lt;script type=&quot;math/tex&quot;&gt;f\colon b\to d&lt;/script&gt; is an arrow in &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there are
+&lt;p&gt;If \(C\) is a locally small category and \(c\) is an object,
+there are two particularly important functors \(C \to \operatorname{Set}\).
+Write \(C(c,b)\) and \(C(b,c)\) for the set of arrows in \(C\)
+with domain and codomain \(c\), respectively.
+If \(f\colon b\to d\) is an arrow in \(C\), there are
 functions&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_*\colon C(c,b) \to C(c,d) \text{ and }f^*\colon C(d,c) \to C(b,c)&lt;/script&gt;
+\[f_*\colon C(c,b) \to C(c,d) \text{ and }f^*\colon C(d,c) \to C(b,c)\]
 
-&lt;p&gt;defined as &lt;script type=&quot;math/tex&quot;&gt;f_*(g) = fg&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f^*(h) = hf&lt;/script&gt;, respectively.
+&lt;p&gt;defined as \(f_*(g) = fg\) and \(f^*(h) = hf\), respectively.
 The assignments&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{CD} b &amp;\mapsto &amp; C(c,b) &amp;\qquad\qquad &amp;b &amp;\mapsto &amp; C(b,c) \\
+\[\begin{CD} b &amp;amp;\mapsto &amp;amp; C(c,b) &amp;amp;\qquad\qquad &amp;amp;b &amp;amp;\mapsto &amp;amp; C(b,c) \\
     @VfVV \mapsto @VVf_*V \qquad\qquad @VfVV \mapsto @AAf*A \\
-    d &amp;\mapsto &amp;C(c,d) &amp;\qquad\qquad &amp;d &amp;\mapsto &amp; C(d,c)
-  \end{CD} %]]&gt;&lt;/script&gt;
+    d &amp;amp;\mapsto &amp;amp;C(c,d) &amp;amp;\qquad\qquad &amp;amp;d &amp;amp;\mapsto &amp;amp; C(d,c)
+  \end{CD}\]
 
 &lt;p&gt;define covariant and contravariant functors 
-&lt;script type=&quot;math/tex&quot;&gt;C(c,-)\colon C \to \operatorname{Set}&lt;/script&gt; and&lt;br /&gt;
-&lt;script type=&quot;math/tex&quot;&gt;C(-,c)\colon C\op\to\operatorname{Set}&lt;/script&gt;, respectively.&lt;/p&gt;
+\(C(c,-)\colon C \to \operatorname{Set}\) and&lt;br /&gt;
+\(C(-,c)\colon C\op\to\operatorname{Set}\), respectively.&lt;/p&gt;
 
 &lt;h3 id=&quot;natural-transformations&quot;&gt;Natural Transformations&lt;/h3&gt;
 &lt;p&gt;Just as we have defined functors between categories,
 it is  useful to consider &lt;em&gt;functor categories,&lt;/em&gt;
-whose elements are functors &lt;script type=&quot;math/tex&quot;&gt;C\to D&lt;/script&gt;. To do this, we need 
+whose elements are functors \(C\to D\). To do this, we need 
 a  notion of a morphism between functors. It turns out
 that the right notion is a &lt;em&gt;natural transformation.&lt;/em&gt;
-If &lt;script type=&quot;math/tex&quot;&gt;F,G\colon C \to D&lt;/script&gt; are functors, a natural transformation
-&lt;script type=&quot;math/tex&quot;&gt;\eta\colon F\Rightarrow G&lt;/script&gt; is a collection of maps
-&lt;script type=&quot;math/tex&quot;&gt;\eta_c\colon Fc \to Gc&lt;/script&gt;, one for each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;
-such that for every arrow &lt;script type=&quot;math/tex&quot;&gt;f\colon c \to d&lt;/script&gt;, the following
+If \(F,G\colon C \to D\) are functors, a natural transformation
+\(\eta\colon F\Rightarrow G\) is a collection of maps
+\(\eta_c\colon Fc \to Gc\), one for each object \(c\) of \(C\)
+such that for every arrow \(f\colon c \to d\), the following
 diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-  Fc @&gt;\eta_c&gt;&gt; Gc \\
+\[\begin{CD}
+  Fc @&amp;gt;\eta_c&amp;gt;&amp;gt; Gc \\
   @VFfVV @VVGfV \\
-  Fd @&gt;\eta_d&gt;&gt; Gd.
-\end{CD}&lt;/script&gt;
+  Fd @&amp;gt;\eta_d&amp;gt;&amp;gt; Gd.
+\end{CD}\]
 
 &lt;p&gt;Any directed path in a diagram of objects and arrows within
 a category like the above yields an arrow from the initial 
@@ -773,55 +769,55 @@ paths with the same endpoints yield equal arrows.
 Thus, to say that the above diagram commutes asserts the
 equality&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;Gf\eta_c = \eta_d Ff.&lt;/script&gt;
+\[Gf\eta_c = \eta_d Ff.\]
 
 &lt;p&gt;The standard example of a natural transformation is the following.
-Let &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; be a field, and consider the category of &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-vector spaces
+Let \(k\) be a field, and consider the category of \(k\)-vector spaces
 and linear transformations. There is a contravariant functor
-that sends a vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; to its &lt;em&gt;dual&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;V^*&lt;/script&gt;, namely the vector
-space of linear transformations &lt;script type=&quot;math/tex&quot;&gt;V\to k&lt;/script&gt;.
-A linear map &lt;script type=&quot;math/tex&quot;&gt;f\colon V \to W&lt;/script&gt; is sent to a map &lt;script type=&quot;math/tex&quot;&gt;f^*\colon W^*\to V^*&lt;/script&gt;
+that sends a vector space \(V\) to its &lt;em&gt;dual&lt;/em&gt; \(V^*\), namely the vector
+space of linear transformations \(V\to k\).
+A linear map \(f\colon V \to W\) is sent to a map \(f^*\colon W^*\to V^*\)
 which is defined as follows.
-If &lt;script type=&quot;math/tex&quot;&gt;\lambda\colon W \to k&lt;/script&gt; is an element of &lt;script type=&quot;math/tex&quot;&gt;W^*&lt;/script&gt;,
-&lt;script type=&quot;math/tex&quot;&gt;f^*(\lambda)&lt;/script&gt; is the linear  map&lt;/p&gt;
+If \(\lambda\colon W \to k\) is an element of \(W^*\),
+\(f^*(\lambda)\) is the linear  map&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda f\colon V\to k.&lt;/script&gt;
+\[\lambda f\colon V\to k.\]
 
-&lt;p&gt;Thus there is a &lt;em&gt;covariant&lt;/em&gt; functor sending a vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;
-to its “double dual” &lt;script type=&quot;math/tex&quot;&gt;V^{**}=(V^*)^*&lt;/script&gt;.
-There is a natural transformation &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; from the identity functor
+&lt;p&gt;Thus there is a &lt;em&gt;covariant&lt;/em&gt; functor sending a vector space \(V\)
+to its “double dual” \(V^{**}=(V^*)^*\).
+There is a natural transformation \(ev\) from the identity functor
 to the double dual functor.
-At a given vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;, the map &lt;script type=&quot;math/tex&quot;&gt;ev_V&lt;/script&gt; sends a vector &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;
-to the linear map &lt;script type=&quot;math/tex&quot;&gt;V^*\to k&lt;/script&gt; defined by “evaluation at &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;,”
+At a given vector space \(V\), the map \(ev_V\) sends a vector \(v\)
+to the linear map \(V^*\to k\) defined by “evaluation at \(v\),”
 namely&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\lambda \mapsto \lambda(v),\quad  \lambda \in V^*.&lt;/script&gt;
+\[\lambda \mapsto \lambda(v),\quad  \lambda \in V^*.\]
 
-&lt;p&gt;Naturality of &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; asserts that for &lt;script type=&quot;math/tex&quot;&gt;f\colon V \to W&lt;/script&gt;
+&lt;p&gt;Naturality of \(ev\) asserts that for \(f\colon V \to W\)
 a linear map, the following diagram commutes&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-  V @&gt;ev_V&gt;&gt; V^{**} \\
+\[\begin{CD}
+  V @&amp;gt;ev_V&amp;gt;&amp;gt; V^{**} \\
   @VfVV @VVf^{**}V \\
-  W @&gt;ev_W&gt;&gt; W^{**}.
-\end{CD}&lt;/script&gt;
+  W @&amp;gt;ev_W&amp;gt;&amp;gt; W^{**}.
+\end{CD}\]
 
-&lt;p&gt;To show this, consider a vector &lt;script type=&quot;math/tex&quot;&gt;v \in V&lt;/script&gt;.
-The element &lt;script type=&quot;math/tex&quot;&gt;f^{**}(ev_V(v)) \in W^{**}&lt;/script&gt; is
+&lt;p&gt;To show this, consider a vector \(v \in V\).
+The element \(f^{**}(ev_V(v)) \in W^{**}\) is
 the linear map&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;ev_V(v)\circ f^*\colon W^*\to k,&lt;/script&gt;
+\[ev_V(v)\circ f^*\colon W^*\to k,\]
 
-&lt;p&gt;so its action on &lt;script type=&quot;math/tex&quot;&gt;\lambda \in W*&lt;/script&gt; is&lt;/p&gt;
+&lt;p&gt;so its action on \(\lambda \in W*\) is&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;ev_V(v)(f^*(\lambda)) = ev_V(v)(\lambda f) = 
-\lambda (f(v)) = ev_W(f(v))(\lambda),&lt;/script&gt;
+\[ev_V(v)(f^*(\lambda)) = ev_V(v)(\lambda f) = 
+\lambda (f(v)) = ev_W(f(v))(\lambda),\]
 
 &lt;p&gt;demonstrating naturality.&lt;/p&gt;
 
-&lt;p&gt;The map &lt;script type=&quot;math/tex&quot;&gt;ev_V&lt;/script&gt; is an isomorphism when &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; is finite dimensional.
+&lt;p&gt;The map \(ev_V\) is an isomorphism when \(V\) is finite dimensional.
 Thus we say that when restricted to the &lt;em&gt;subcategory&lt;/em&gt;
-of finite dimensional vector spaces, &lt;script type=&quot;math/tex&quot;&gt;ev&lt;/script&gt; is a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
+of finite dimensional vector spaces, \(ev\) is a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;the-yoneda-lemma&quot;&gt;The Yoneda Lemma&lt;/h3&gt;
 &lt;p&gt;Perhaps the fundamental result in category theory
@@ -829,17 +825,17 @@ is the following:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; (The Yoneda Lemma)    &lt;br /&gt;
- Let &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt; be a locally small category and
- &lt;script type=&quot;math/tex&quot;&gt;F\colon C \to \operatorname{Set}&lt;/script&gt; a functor.
- For each object &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;C&lt;/script&gt;, there is a bijection&lt;/p&gt;
+ Let \(C\) be a locally small category and
+ \(F\colon C \to \operatorname{Set}\) a functor.
+ For each object \(c\) of \(C\), there is a bijection&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\{\alpha\colon C(c,-)\Rightarrow F\} \longleftrightarrow \{x \in Fc\}&lt;/script&gt;
+\[\{\alpha\colon C(c,-)\Rightarrow F\} \longleftrightarrow \{x \in Fc\}\]
 
 &lt;blockquote&gt;
   &lt;p&gt;implemented by sending a natural transformation
- &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; to the element &lt;script type=&quot;math/tex&quot;&gt;\alpha_c(1_c)&lt;/script&gt;.
- This bijection is natural in &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt;.&lt;/p&gt;
+ \(\alpha\) to the element \(\alpha_c(1_c)\).
+ This bijection is natural in \(F\) and \(c\).&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
@@ -854,9 +850,9 @@ to the ArXiv! Here is a description of the paper and the idea behind the main ap
 &lt;p&gt;One of my main goals currently is to better understand outer automorphisms of
 free products of finite groups. I became interested because I like &lt;a href=&quot;https://en.wikipedia.org/wiki/Coxeter_group&quot;&gt;Coxeter groups&lt;/a&gt;,
 and I was surprised to hear that we knew so little about their automorphisms.
-The natural place to start is the “free” Coxeter group &lt;script type=&quot;math/tex&quot;&gt;W_n&lt;/script&gt;, which is a free product of 
-&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; copies of &lt;script type=&quot;math/tex&quot;&gt;\mathbb Z/2\mathbb Z&lt;/script&gt;. I’m tempted to say the 
-&lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;th copower of &lt;script type=&quot;math/tex&quot;&gt;\mathbb Z/2\mathbb Z&lt;/script&gt;,&lt;/em&gt; but I guess it’s a little too scary-sounding.&lt;/p&gt;
+The natural place to start is the “free” Coxeter group \(W_n\), which is a free product of 
+\(n\) copies of \(\mathbb Z/2\mathbb Z\). I’m tempted to say the 
+&lt;em&gt;\(n\)th copower of \(\mathbb Z/2\mathbb Z\),&lt;/em&gt; but I guess it’s a little too scary-sounding.&lt;/p&gt;
 
 &lt;p&gt;Along the way I’ve become quite enamored with &lt;a href=&quot;https://en.wikipedia.org/wiki/Orbifold&quot;&gt;orbifolds&lt;/a&gt;. The idea behind
 orbifolds is that just as it is useful to study the fundamental group of a manifold both
@@ -881,7 +877,7 @@ space of all orbigraphs in question are finite trees, but I am realizing there i
 
 &lt;p&gt;The main tool for studying automorphisms of free groups is what are called
 &lt;em&gt;relative train track maps.&lt;/em&gt; Relative train track maps provide a topological “normal form”
-for elements of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;. They were introduced by Bestvina–Handel in&lt;/p&gt;
+for elements of \(\operatorname{Out}(F_n)\). They were introduced by Bestvina–Handel in&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;My adaptation to the case of orbigraphs
 builds on later developments by Bestvina–Feighn–Handel in 2000 and
@@ -895,28 +891,28 @@ information about the dynamics of the homeomorphism.&lt;/li&gt;
 &lt;p&gt;The original idea of Bestvina–Handel’s paper was to attempt to adapt the theory
 to study outer automorphisms of free groups. Here, since any homeomorphism of a graph
 has a finite power homotopic to the identity, we’re forced to consider homotopy equivalences
-of graphs. More explicitly: if &lt;script type=&quot;math/tex&quot;&gt;\varphi \in \operatorname{Out}(F_n)&lt;/script&gt; is an outer
-automorphism of a free group &lt;script type=&quot;math/tex&quot;&gt;F_n&lt;/script&gt; of rank &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a graph, and &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt;
-is a homotopy equivalence such that the (outer) action of &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;\pi_1(G)&lt;/script&gt; is equal
-to &lt;script type=&quot;math/tex&quot;&gt;\varphi&lt;/script&gt;, then if &lt;script type=&quot;math/tex&quot;&gt;\varphi&lt;/script&gt; has infinite order, &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; cannot be a homeomorphism.
-We may as well assume &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; sends vertices to vertices.
-Stallings tells us that in this situation, there is a vertex &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and a pair of
-edges &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;e'&lt;/script&gt; incident to &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;f(e')&lt;/script&gt; share a common segment.
-We say &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; &lt;em&gt;folds&lt;/em&gt; these edges, or that they form an &lt;em&gt;illegal turn&lt;/em&gt;.&lt;/p&gt;
+of graphs. More explicitly: if \(\varphi \in \operatorname{Out}(F_n)\) is an outer
+automorphism of a free group \(F_n\) of rank \(n\), \(G\) is a graph, and \(f\colon G \to G\)
+is a homotopy equivalence such that the (outer) action of \(f\) on \(\pi_1(G)\) is equal
+to \(\varphi\), then if \(\varphi\) has infinite order, \(f\) cannot be a homeomorphism.
+We may as well assume \(f\) sends vertices to vertices.
+Stallings tells us that in this situation, there is a vertex \(v\) of \(G\) and a pair of
+edges \(e\) and \(e'\) incident to \(v\) such that \(f(e)\) and \(f(e')\) share a common segment.
+We say \(f\) &lt;em&gt;folds&lt;/em&gt; these edges, or that they form an &lt;em&gt;illegal turn&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;A &lt;em&gt;train track map&lt;/em&gt; has the next best property: We say that &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to G&lt;/script&gt; is a
-&lt;em&gt;train track map&lt;/em&gt; if for each edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and each positive integer &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;,
-the &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;th iterate, &lt;script type=&quot;math/tex&quot;&gt;f^k(e)&lt;/script&gt; is an immersed path, i.e. it is never sent over an
+&lt;p&gt;A &lt;em&gt;train track map&lt;/em&gt; has the next best property: We say that \(f\colon G \to G\) is a
+&lt;em&gt;train track map&lt;/em&gt; if for each edge \(e\) of \(G\) and each positive integer \(k\),
+the \(k\)th iterate, \(f^k(e)\) is an immersed path, i.e. it is never sent over an
 illegal turn.&lt;/p&gt;
 
 &lt;p&gt;If you’d like to try playing with the definition here’s something to try: let
-&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; be the “rose with four petals.” That is, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; has one vertex and four edges,
-each of which forms a loop. Label the edges &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; through &lt;script type=&quot;math/tex&quot;&gt;D&lt;/script&gt; and choose an orientation
-for each. Let’s define &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;A \mapsto B&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;B \mapsto C&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;C \mapsto D&lt;/script&gt;, and
-&lt;script type=&quot;math/tex&quot;&gt;D \mapsto AB&lt;/script&gt;, i.e. the path that first follows the edge &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and then &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;.
-There are a few things to check: 1) Find a homotopy inverse for &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt;. 2) Which
+\(G\) be the “rose with four petals.” That is, \(G\) has one vertex and four edges,
+each of which forms a loop. Label the edges \(A\) through \(D\) and choose an orientation
+for each. Let’s define \(f\) as \(A \mapsto B\), \(B \mapsto C\), \(C \mapsto D\), and
+\(D \mapsto AB\), i.e. the path that first follows the edge \(A\) and then \(B\).
+There are a few things to check: 1) Find a homotopy inverse for \(f\). 2) Which
 turns (pairs of oriented edges originating at a common vertex) are illegal? 3) Is
-&lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; a train track map?&lt;/p&gt;
+\(f\) a train track map?&lt;/p&gt;
 
 &lt;p&gt;The word &lt;em&gt;relative&lt;/em&gt; above is sort of forced on us by the structure of more complicated 
 homotopy equivalences: as it turns out,
@@ -925,43 +921,43 @@ This is especially true in the “bad” case of polynomial growth, about which 
 
 &lt;h3 id=&quot;cat0-free-by-cyclic-groups&quot;&gt;CAT(0) Free-by-Cyclic Groups&lt;/h3&gt;
 
-&lt;p&gt;Gersten in 1994 showed that &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt; cannot act
-properly and cocompactly on a CAT(0) metric space when &lt;script type=&quot;math/tex&quot;&gt;n \ge 4&lt;/script&gt;.
+&lt;p&gt;Gersten in 1994 showed that \(\operatorname{Out}(F_n)\) cannot act
+properly and cocompactly on a CAT(0) metric space when \(n \ge 4\).
 This is something of a bummer, but also to be expected: Acting by geometrically
 on a CAT(0) metric space is a nice situation to be in, and one might think that
-&lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt; should be in some sense too complicated to do so.&lt;/p&gt;
+\(\operatorname{Out}(F_n)\) should be in some sense too complicated to do so.&lt;/p&gt;
 
 &lt;p&gt;I set out aiming to prove a version of Gersten’s theorem for more general free products,
 but instead I found essentially a &lt;em&gt;strong negation&lt;/em&gt; of the situation he described.
 Let me describe it in more detail:&lt;/p&gt;
 
-&lt;p&gt;Write &lt;script type=&quot;math/tex&quot;&gt;F_n = \langle x_1,\dotsc,x_n\rangle&lt;/script&gt;, let &lt;script type=&quot;math/tex&quot;&gt;\Phi&lt;/script&gt; be an automorphism and suppose
-that &lt;script type=&quot;math/tex&quot;&gt;\Phi(x_i) = u_ix_iv_i&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle&lt;/script&gt;.
+&lt;p&gt;Write \(F_n = \langle x_1,\dotsc,x_n\rangle\), let \(\Phi\) be an automorphism and suppose
+that \(\Phi(x_i) = u_ix_iv_i\), where \(u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle\).
 Let’s call such  automorphisms &lt;em&gt;upper triangular,&lt;/em&gt; by analogy with groups of matrices.
-In the free-by-cyclic group &lt;script type=&quot;math/tex&quot;&gt;F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle&lt;/script&gt;,
-this gives us the relation &lt;script type=&quot;math/tex&quot;&gt;tx_it^{-1} = u_ix_iv_i&lt;/script&gt;, which we can rewrite as
-&lt;script type=&quot;math/tex&quot;&gt;x_i^{-1}u_i^{-1}tx_i = v_it&lt;/script&gt;, which, if you squint, starts to look like a relation in
-an HNN extension with stable letter &lt;script type=&quot;math/tex&quot;&gt;x_i&lt;/script&gt;. In fact, by our assumption on &lt;script type=&quot;math/tex&quot;&gt;u_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_i&lt;/script&gt;,
-we actually do get a description of &lt;script type=&quot;math/tex&quot;&gt;F_n\rtimes\mathbb{Z}&lt;/script&gt; as an iterated HNN extension.&lt;/p&gt;
+In the free-by-cyclic group \(F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle\),
+this gives us the relation \(tx_it^{-1} = u_ix_iv_i\), which we can rewrite as
+\(x_i^{-1}u_i^{-1}tx_i = v_it\), which, if you squint, starts to look like a relation in
+an HNN extension with stable letter \(x_i\). In fact, by our assumption on \(u_i\) and \(v_i\),
+we actually do get a description of \(F_n\rtimes\mathbb{Z}\) as an iterated HNN extension.&lt;/p&gt;
 
 &lt;p&gt;This situation can be good and bad. Gersten gave an example of such a description of a free-by-cyclic
-group which is a “poison subgroup” for nonpositive curvature. There, &lt;script type=&quot;math/tex&quot;&gt;u_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_i&lt;/script&gt;
-are such that &lt;script type=&quot;math/tex&quot;&gt;u_i^{-1}t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_it&lt;/script&gt; have no business being conjugate in a nice action on a CAT(0) space.
+group which is a “poison subgroup” for nonpositive curvature. There, \(u_i\) and \(v_i\)
+are such that \(u_i^{-1}t\) and \(v_it\) have no business being conjugate in a nice action on a CAT(0) space.
 On the other hand, in the situation where they &lt;em&gt;should&lt;/em&gt; be conjugate,
 Bridson–Haefliger give a construction that allows you to bootstrap a
 geometric action on a CAT(0) space up the HNN extension.&lt;/p&gt;
 
 &lt;p&gt;What I realized was that in the class of automorphisms I was studying,
 if it were the case that the automorphism was already upper-triangular
-with respect to the basis &lt;script type=&quot;math/tex&quot;&gt;x_1,\dotsc,x_n&lt;/script&gt; we were handed, then
-&lt;script type=&quot;math/tex&quot;&gt;u_i^{-1}t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v_it&lt;/script&gt; were &lt;em&gt;already&lt;/em&gt; conjugate, so Bridson–Haefliger says we win.
+with respect to the basis \(x_1,\dotsc,x_n\) we were handed, then
+\(u_i^{-1}t\) and \(v_it\) were &lt;em&gt;already&lt;/em&gt; conjugate, so Bridson–Haefliger says we win.
 So, my goal in constructing relative train track maps was to find a basis
 that has this nice property for a (power of) an arbitrary polynomially-growing
 outer automorphism. In the paper, the application is in Section 7, while the
 heavy lifting is to find a way to adapt the relative train track technology appropriately.&lt;/p&gt;
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
-tool in the study of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Out}(F_n)&lt;/script&gt;, my hope is that this construction
+tool in the study of \(\operatorname{Out}(F_n)\), my hope is that this construction
 will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
 on set theory vs. category theory.&lt;/p&gt;
 
@@ -975,10 +971,10 @@ but the core ideas are familiar and useful to nearly every mathematician.&lt;/p&
 together. Since a set only cares about membership or lack thereof, duplicate
 elements are ignored. When we’re explicit about them, a set is typically
 denoted as a list of elements (thought of as unordered), surrounded by curly braces.
-So as sets, &lt;script type=&quot;math/tex&quot;&gt;\{1,2,3,3,5\} = \{1,2,3\}&lt;/script&gt;. A set comprises its elements, nothing more,
-nothing less. Thus, maps or functions &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; between sets &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are just
-assignments: to each element &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, we assign a (unique) element &lt;script type=&quot;math/tex&quot;&gt;f(x)&lt;/script&gt;
-of &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.&lt;/p&gt;
+So as sets, \(\{1,2,3,3,5\} = \{1,2,3\}\). A set comprises its elements, nothing more,
+nothing less. Thus, maps or functions \(f\) between sets \(X\) and \(Y\) are just
+assignments: to each element \(x\) in \(X\), we assign a (unique) element \(f(x)\)
+of \(Y\).&lt;/p&gt;
 
 &lt;p&gt;Things, mathematical objects, whatever you can pin down in language,
 may be elements (or not) of sets. Sets may even be elements of other sets, although
@@ -1038,26 +1034,26 @@ word &lt;em&gt;graph&lt;/em&gt; as I use it in math.&lt;/p&gt;
 
 &lt;p&gt;As a kid, you learn how to &lt;em&gt;graph&lt;/em&gt; simple functions in the sense of 
 being able to sketch them on a sheet of, say, &lt;em&gt;graph&lt;/em&gt; paper. Millions
-of adults probably faintly remember the shape of &lt;script type=&quot;math/tex&quot;&gt;y = x^2&lt;/script&gt; but aren’t
+of adults probably faintly remember the shape of \(y = x^2\) but aren’t
 quite sure why.&lt;/p&gt;
 
 &lt;p&gt;To mathematicians and computer scientists, though, for some reason &lt;em&gt;graph&lt;/em&gt;
 means something similar, but different: to them a graph is an object with
 &lt;em&gt;vertices&lt;/em&gt; and &lt;em&gt;edges&lt;/em&gt;. Indeed, to Serre, that’s literally all a graph is:
-a quadruple &lt;script type=&quot;math/tex&quot;&gt;(V,E,\bar{},\iota)&lt;/script&gt;. Two sets, &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;, represent the
-vertices and (oriented) edges of the graph, and &lt;script type=&quot;math/tex&quot;&gt;\bar{}\colon E \to E&lt;/script&gt; and
-&lt;script type=&quot;math/tex&quot;&gt;\iota\colon E \to V&lt;/script&gt; are functions; &lt;script type=&quot;math/tex&quot;&gt;\bar{e}&lt;/script&gt; is the edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; with its
-orientation reversed, (so &lt;script type=&quot;math/tex&quot;&gt;\bar{\bar{e}} = e&lt;/script&gt; for any edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt;, but
-&lt;script type=&quot;math/tex&quot;&gt;\bar e \neq e&lt;/script&gt;), and
-&lt;script type=&quot;math/tex&quot;&gt;\iota(e)&lt;/script&gt; represents the initial vertex of the edge &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt;. This lets us
-define a function &lt;script type=&quot;math/tex&quot;&gt;\tau\colon E \to V&lt;/script&gt; picking out the &lt;em&gt;terminal&lt;/em&gt; vertex
-of an edge by setting &lt;script type=&quot;math/tex&quot;&gt;\tau(e) = \iota(\bar{e})&lt;/script&gt;.&lt;/p&gt;
+a quadruple \((V,E,\bar{},\iota)\). Two sets, \(V\) and \(E\), represent the
+vertices and (oriented) edges of the graph, and \(\bar{}\colon E \to E\) and
+\(\iota\colon E \to V\) are functions; \(\bar{e}\) is the edge \(e\) with its
+orientation reversed, (so \(\bar{\bar{e}} = e\) for any edge \(e\), but
+\(\bar e \neq e\)), and
+\(\iota(e)\) represents the initial vertex of the edge \(e\). This lets us
+define a function \(\tau\colon E \to V\) picking out the &lt;em&gt;terminal&lt;/em&gt; vertex
+of an edge by setting \(\tau(e) = \iota(\bar{e})\).&lt;/p&gt;
 
 &lt;p&gt;A topologist would prefer to say that a graph is a 1-dimensional CW complex.
-So rather than an abstract set of vertices, we have a set of points, &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;,
-the &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;-cells of our CW complex. And rather than an abstract set of oriented
-edges, we have a collection of &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;-cells (intervals of the real line) 
-whose endpoints are attached to &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt;-cells.&lt;/p&gt;
+So rather than an abstract set of vertices, we have a set of points, \(V\),
+the \(0\)-cells of our CW complex. And rather than an abstract set of oriented
+edges, we have a collection of \(1\)-cells (intervals of the real line) 
+whose endpoints are attached to \(0\)-cells.&lt;/p&gt;
 
 &lt;p&gt;These two descriptions really are in agreement for most purposes. Maybe one would
 prefer the more combinatorial description as a way of “rigidifying” some of the
@@ -1066,7 +1062,7 @@ allows one access to a whole host of techniques that a too-rigid approach might 
 under a sea of formalism.&lt;/p&gt;
 
 &lt;p&gt;But of course, neither definition really squares with the idea of the graph of
-&lt;script type=&quot;math/tex&quot;&gt;y = x^2&lt;/script&gt;, hence why I’ve been feeling weird about the word.&lt;/p&gt;
+\(y = x^2\), hence why I’ve been feeling weird about the word.&lt;/p&gt;
 
 &lt;p&gt;Anyway, the &lt;em&gt;category of graphs&lt;/em&gt;, introduced by John Stallings in
 &lt;a href=&quot;https://www2.math.ou.edu/~nbrady/teaching/s11-5863/stallings.pdf&quot;&gt;Topology of Finite Graphs&lt;/a&gt;,
@@ -1074,26 +1070,26 @@ building on work of Serre in &lt;a href=&quot;https://d-nb.info/965816907/04&quo
 almost certainly soon, has (as all categories do)
 collections of objects and arrows between them.
 Here the objects are graphs and arrows are &lt;em&gt;morphisms of graphs.&lt;/em&gt; 
-A morphism &lt;script type=&quot;math/tex&quot;&gt;f\colon G \to H&lt;/script&gt; between
-graphs &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; is a pair of functions &lt;script type=&quot;math/tex&quot;&gt;f_V\colon V(G) \to V(H)&lt;/script&gt; 
-and &lt;script type=&quot;math/tex&quot;&gt;f_E\colon E(G) \to E(H)&lt;/script&gt;, such that the following diagrams commute:
-&lt;script type=&quot;math/tex&quot;&gt;\require{AMScd}&lt;/script&gt;&lt;/p&gt;
+A morphism \(f\colon G \to H\) between
+graphs \(G\) and \(H\) is a pair of functions \(f_V\colon V(G) \to V(H)\) 
+and \(f_E\colon E(G) \to E(H)\), such that the following diagrams commute:
+\(\require{AMScd}\)&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{CD}
-E(G) @&gt;f_E&gt;&gt; E(H) \\
+\[\begin{CD}
+E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H) \\
 @V{\iota}VV @V{\iota}VV \\
-V(G) @&gt;f_V&gt;&gt; V(H)
+V(G) @&amp;gt;f_V&amp;gt;&amp;gt; V(H)
 \end{CD}\qquad
 \begin{CD}
-E(G) @&gt;f_E&gt;&gt; E(H) \\
+E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H) \\
 @V\bar{}VV @V\bar{}VV \\
-E(G) @&gt;f_E&gt;&gt; E(H)
-\end{CD}&lt;/script&gt;
+E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H)
+\end{CD}\]
 
-&lt;p&gt;In English what this is saying is that &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; preserves the graph structure:
-it sends edges to edges, vertices to vertices, &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\bar e&lt;/script&gt; are sent
-to &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\overline{f(e)}&lt;/script&gt;, and the initial vertex of &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; is
-sent to the initial vertex of &lt;script type=&quot;math/tex&quot;&gt;f(e)&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;In English what this is saying is that \(f\) preserves the graph structure:
+it sends edges to edges, vertices to vertices, \(e\) and \(\bar e\) are sent
+to \(f(e)\) and \(\overline{f(e)}\), and the initial vertex of \(e\) is
+sent to the initial vertex of \(f(e)\).&lt;/p&gt;
 
 &lt;p&gt;Stallings emphasizes the rigidity of morphisms in this construction:&lt;/p&gt;
 

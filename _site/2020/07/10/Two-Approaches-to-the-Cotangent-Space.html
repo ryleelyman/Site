@@ -86,12 +86,12 @@ I’ll try to move briskly without assuming total familiarity with either side o
 
 <h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space</h2>
 
-<p>Let <script type="math/tex">X</script> be a smooth manifold of dimension <script type="math/tex">n</script>.
-The <em>sheaf</em> of differentiable functions on <script type="math/tex">X</script> is a
-contravariant functor from the category of open subsets of <script type="math/tex">X</script> to the category of rings
-that assigns to an open set <script type="math/tex">U</script>
-the ring <script type="math/tex">\mathscr{O}(U)</script> of differentiable functions <script type="math/tex">f\colon U \to \mathbb{R}</script>—addition
-and multiplication in <script type="math/tex">\mathscr{O}(U)</script> are done pointwise in <script type="math/tex">\mathbb{R}</script>.</p>
+<p>Let \(X\) be a smooth manifold of dimension \(n\).
+The <em>sheaf</em> of differentiable functions on \(X\) is a
+contravariant functor from the category of open subsets of \(X\) to the category of rings
+that assigns to an open set \(U\)
+the ring \(\mathscr{O}(U)\) of differentiable functions \(f\colon U \to \mathbb{R}\)—addition
+and multiplication in \(\mathscr{O}(U)\) are done pointwise in \(\mathbb{R}\).</p>
 
 <p>The sheaf is not so important for us;
 what we are interested in today are the <em>stalks.</em>
@@ -99,120 +99,120 @@ The idea is that elements of the <em>stalk,</em>
 called <em>germs,</em> capture the “infinitesimal behavior”
 of smooth functions at a point.
 Here is the formal definition.
-Given a point <script type="math/tex">p \in X</script>, 
-the <em>stalk</em> of <em>germs</em> of smooth functions at <script type="math/tex">p</script> is the ring</p>
+Given a point \(p \in X\), 
+the <em>stalk</em> of <em>germs</em> of smooth functions at \(p\) is the ring</p>
 
-<script type="math/tex; mode=display">\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.</script>
+\[\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.\]
 
-<p>The equivalence relation <script type="math/tex">\sim</script> is defined as follows:
-we say <script type="math/tex">(f,U) \sim (g,V)</script> if there exists an open neighborhood
-<script type="math/tex">U' \subset U \cap V</script> such that <script type="math/tex">f|_{U'} = g|_{U'}</script>.
-The equivalence class of <script type="math/tex">(f,U)</script> is its <em>germ.</em>
-The ring <script type="math/tex">\mathscr{O}_p</script> is the direct limit of the <script type="math/tex">\mathscr{O}(U)</script>
-as <script type="math/tex">U</script> varies over the open neighborhoods of <script type="math/tex">p</script>.</p>
+<p>The equivalence relation \(\sim\) is defined as follows:
+we say \((f,U) \sim (g,V)\) if there exists an open neighborhood
+\(U' \subset U \cap V\) such that \(f|_{U'} = g|_{U'}\).
+The equivalence class of \((f,U)\) is its <em>germ.</em>
+The ring \(\mathscr{O}_p\) is the direct limit of the \(\mathscr{O}(U)\)
+as \(U\) varies over the open neighborhoods of \(p\).</p>
 
-<p>Notice that there is a surjection <script type="math/tex">\mathscr{O}_p \to \mathbb{R}</script>
-that sends the germ of <script type="math/tex">f</script> at <script type="math/tex">p</script> to <script type="math/tex">f(p)\in \mathbb{R}</script>.
-The definition is independent of the choice of representative <script type="math/tex">f</script>.
-Since <script type="math/tex">\mathbb{R}</script> is a field, the kernel of the map
-is a maximal ideal; let’s call it <script type="math/tex">\mathfrak{m}_p</script>.
+<p>Notice that there is a surjection \(\mathscr{O}_p \to \mathbb{R}\)
+that sends the germ of \(f\) at \(p\) to \(f(p)\in \mathbb{R}\).
+The definition is independent of the choice of representative \(f\).
+Since \(\mathbb{R}\) is a field, the kernel of the map
+is a maximal ideal; let’s call it \(\mathfrak{m}_p\).
 Observe that 
-<script type="math/tex">\mathfrak{m}_p/\mathfrak{m}_p^2</script> is a module over
-<script type="math/tex">\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}</script>, 
+\(\mathfrak{m}_p/\mathfrak{m}_p^2\) is a module over
+\(\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}\), 
 i.e. a real vector space;
-we will call it the <em>algebraic cotangent space at <script type="math/tex">p</script>.</em></p>
+we will call it the <em>algebraic cotangent space at \(p\).</em></p>
 
 <h2 id="the-usual-cotangent-space">The Usual Cotangent Space</h2>
 
-<p>We retain our manifold <script type="math/tex">X</script> and point <script type="math/tex">p</script> from the previous section.
-The <em>tangent space at <script type="math/tex">p</script>,</em> denoted <script type="math/tex">T_pX</script>
-can be thought of as the space of “directions” in <script type="math/tex">X</script> at <script type="math/tex">p</script>.
+<p>We retain our manifold \(X\) and point \(p\) from the previous section.
+The <em>tangent space at \(p\),</em> denoted \(T_pX\)
+can be thought of as the space of “directions” in \(X\) at \(p\).
 This is made precise by defining it to be the space of
-directional <em>derivatives</em> at <script type="math/tex">p</script>.
+directional <em>derivatives</em> at \(p\).
 I won’t attempt to make this more precise, except to note that
-after we choose local coordinates <script type="math/tex">(x_1,\dotsc,x_n)</script> near <script type="math/tex">p = (p_1,\dotsc,p_n)</script>,
-a basis for <script type="math/tex">T_pX</script> is given by</p>
+after we choose local coordinates \((x_1,\dotsc,x_n)\) near \(p = (p_1,\dotsc,p_n)\),
+a basis for \(T_pX\) is given by</p>
 
-<script type="math/tex; mode=display">\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.</script>
+\[\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.\]
 
 <p>The <em>cotangent space,</em> which we are more interested in, is the
-<em>dual</em> of the tangent space and is denoted <script type="math/tex">T_p^\ast X</script>.
+<em>dual</em> of the tangent space and is denoted \(T_p^\ast X\).
 Elements of the cotangent space are <em>linear functionals</em> on tangent vectors.
-Given coordinates <script type="math/tex">x_1,\dotsc,x_n</script>,
+Given coordinates \(x_1,\dotsc,x_n\),
 the <em>dual basis</em> of the cotangent space is given by</p>
 
-<script type="math/tex; mode=display">dx_1,\dotsc, dx_n,</script>
+\[dx_1,\dotsc, dx_n,\]
 
-<p>so we have <script type="math/tex">dx_i\left( \frac{\partial}{\partial x_j}|_p\right)</script> equal to <script type="math/tex">1</script>
-when <script type="math/tex">i = j</script> and equal to <script type="math/tex">0</script> otherwise.
-(There perhaps ought to be some notational inclusion of the point <script type="math/tex">p</script>,
+<p>so we have \(dx_i\left( \frac{\partial}{\partial x_j}|_p\right)\) equal to \(1\)
+when \(i = j\) and equal to \(0\) otherwise.
+(There perhaps ought to be some notational inclusion of the point \(p\),
 but we will suppress this.)</p>
 
 <h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space Agrees With the Usual One</h2>
 
-<p>If <script type="math/tex">f</script> is a smooth function on an open neighborhood of <script type="math/tex">p</script>
-satisfying <script type="math/tex">f(p) = 0</script>,
+<p>If \(f\) is a smooth function on an open neighborhood of \(p\)
+satisfying \(f(p) = 0\),
 abusing notation, we shall write the corresponding element of
-<script type="math/tex">\mathfrak{m}_p/\mathfrak{m}_p^2</script>
-as <script type="math/tex">f + \mathfrak{m}_p^2</script>.
+\(\mathfrak{m}_p/\mathfrak{m}_p^2\)
+as \(f + \mathfrak{m}_p^2\).
 Given such an element,
-I claim we can interpret <script type="math/tex">f</script> as a linear functional on tangent vectors at <script type="math/tex">p</script>
-by sending a tangent vector <script type="math/tex">v</script> to the value of the derivative of <script type="math/tex">f</script> at <script type="math/tex">p</script> in the direction <script type="math/tex">v</script>.
-For instance, in local coordinates <script type="math/tex">(x_1,\dotsc,x_n)</script>,
-the vector <script type="math/tex">\frac{\partial}{\partial x_i}|_p</script> is sent to <script type="math/tex">\frac{\partial f}{\partial x_i}(p)</script>.
-Extending linearly defines a linear functional on <script type="math/tex">T_pX</script>,
-which we shall denote <script type="math/tex">df_p</script>.
+I claim we can interpret \(f\) as a linear functional on tangent vectors at \(p\)
+by sending a tangent vector \(v\) to the value of the derivative of \(f\) at \(p\) in the direction \(v\).
+For instance, in local coordinates \((x_1,\dotsc,x_n)\),
+the vector \(\frac{\partial}{\partial x_i}|_p\) is sent to \(\frac{\partial f}{\partial x_i}(p)\).
+Extending linearly defines a linear functional on \(T_pX\),
+which we shall denote \(df_p\).
 The value of the directional derivative of a function depends only on its germ
 essentially by definition,
 and the product rule from calculus tells us that the assignment
-<script type="math/tex">f \mapsto df_p</script> sends elements of <script type="math/tex">\mathfrak{m}_p^2</script> to the zero functional.
-The linearity of the derivative implies that <script type="math/tex">\mathbb{R}</script>-linear combinations
-of germs are sent to <script type="math/tex">\mathbb{R}</script>-linear combinations of functionals,
+\(f \mapsto df_p\) sends elements of \(\mathfrak{m}_p^2\) to the zero functional.
+The linearity of the derivative implies that \(\mathbb{R}\)-linear combinations
+of germs are sent to \(\mathbb{R}\)-linear combinations of functionals,
 so the assignment</p>
 
-<script type="math/tex; mode=display">f + \mathfrak{m}_p^2 \mapsto df_p</script>
+\[f + \mathfrak{m}_p^2 \mapsto df_p\]
 
-<p>really defines a map <script type="math/tex">\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X</script>.</p>
+<p>really defines a map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\).</p>
 
 <p>We claim this map is an isomorphism, for which it suffices to define an inverse.
-Choose local coordinates <script type="math/tex">\vec x = (x_1,\dotsc,x_n)</script> around <script type="math/tex">\vec p = (p_1,\dotsc,p_n)</script>.
-A general element <script type="math/tex">\alpha</script> of <script type="math/tex">T_p^\ast X</script>
+Choose local coordinates \(\vec x = (x_1,\dotsc,x_n)\) around \(\vec p = (p_1,\dotsc,p_n)\).
+A general element \(\alpha\) of \(T_p^\ast X\)
 may be written as the linear combination
-<script type="math/tex">\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.</script>
-Write <script type="math/tex">\vec a = (a_1,\dotsc,a_n)</script>.
-The function <script type="math/tex">f_\alpha</script> defined as</p>
+\(\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.\)
+Write \(\vec a = (a_1,\dotsc,a_n)\).
+The function \(f_\alpha\) defined as</p>
 
-<script type="math/tex; mode=display">f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)</script>
+\[f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)\]
 
-<p>clearly has germ belonging to <script type="math/tex">\mathfrak{m}_p</script>,
+<p>clearly has germ belonging to \(\mathfrak{m}_p\),
 and tracing the double composition,
-we see that we have <script type="math/tex">a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha</script>.
+we see that we have \(a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha\).
 This map will be an isomorphism as soon as we can show that the germ of
-<script type="math/tex">f - f_{df_p}</script> belongs to <script type="math/tex">\mathfrak{m}_p^2</script>, i.e.
-can be written as <script type="math/tex">g_1h_1 + \dotsb g_kh_k</script> for some
-smooth functions <script type="math/tex">g_i</script> and <script type="math/tex">h_i</script> whose germs belong to <script type="math/tex">\mathfrak{m}_p</script>.
+\(f - f_{df_p}\) belongs to \(\mathfrak{m}_p^2\), i.e.
+can be written as \(g_1h_1 + \dotsb g_kh_k\) for some
+smooth functions \(g_i\) and \(h_i\) whose germs belong to \(\mathfrak{m}_p\).
 This is the statement of Taylor’s theorem!</p>
 
-<p>Even better, the map <script type="math/tex">\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X</script>
+<p>Even better, the map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\)
 is a <em>natural isomorphism,</em> in the sense that given a smooth map
-<script type="math/tex">\varphi\colon X \to Y</script> of smooth manifolds such that
-<script type="math/tex">\varphi(p) = q</script>, the following diagram commutes</p>
+\(\varphi\colon X \to Y\) of smooth manifolds such that
+\(\varphi(p) = q\), the following diagram commutes</p>
 
-<script type="math/tex; mode=display">\require{AMScd}
+\[\require{AMScd}
 	\begin{CD}
-		\mathfrak{m}_q/\mathfrak{m}_q^2 @>{\cong}>> T_q^\ast Y \\
+		\mathfrak{m}_q/\mathfrak{m}_q^2 @&gt;{\cong}&gt;&gt; T_q^\ast Y \\
 		@VV{\varphi^\ast}V @VV{\varphi^\ast}V \\
-		\mathfrak{m}_p/\mathfrak{m}_p^2 @>{\cong}>> T_p^\ast X.
-	\end{CD}</script>
+		\mathfrak{m}_p/\mathfrak{m}_p^2 @&gt;{\cong}&gt;&gt; T_p^\ast X.
+	\end{CD}\]
 
-<p>To verify this, we shall follow an element <script type="math/tex">f + \mathfrak{m}_q^2</script>
+<p>To verify this, we shall follow an element \(f + \mathfrak{m}_q^2\)
 around the diagram</p>
 
-<script type="math/tex; mode=display">\begin{CD}
-		f + \mathfrak{m}^2_q @>>> df_q \\
+\[\begin{CD}
+		f + \mathfrak{m}^2_q @&gt;&gt;&gt; df_q \\
 		@VVV @VVV \\
-		f\varphi + \mathfrak{m}_p^2 @>>> d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
-	\end{CD}</script>
+		f\varphi + \mathfrak{m}_p^2 @&gt;&gt;&gt; d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
+	\end{CD}\]
 
 <p>and the fact that equality holds is the multi-variable chain rule!</p>
 
@@ -228,10 +228,10 @@ there’s no reason—like Taylor’s theorem—for the space to be finite-dimen
 
 <p>Actually, the truth is slightly more subtle:
 every continuous function has a continuous “square root” in the sense
-that we can always write <script type="math/tex">f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}</script>,
-and the functions <script type="math/tex">\sqrt{f}</script> and <script type="math/tex">\operatorname{sgn}(f)\sqrt(f)</script> are continuous.
-Therefore it is <script type="math/tex">\mathfrak{m}_p</script> that is infinite-dimensional,
-while <script type="math/tex">\mathfrak{m}_p/\mathfrak{m}_p^2 = 0</script>.
+that we can always write \(f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}\),
+and the functions \(\sqrt{f}\) and \(\operatorname{sgn}(f)\sqrt(f)\) are continuous.
+Therefore it is \(\mathfrak{m}_p\) that is infinite-dimensional,
+while \(\mathfrak{m}_p/\mathfrak{m}_p^2 = 0\).
 (Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)</p>
 
 

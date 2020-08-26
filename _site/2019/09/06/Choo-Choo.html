@@ -84,9 +84,9 @@ to the ArXiv! Here is a description of the paper and the idea behind the main ap
 <p>One of my main goals currently is to better understand outer automorphisms of
 free products of finite groups. I became interested because I like <a href="https://en.wikipedia.org/wiki/Coxeter_group">Coxeter groups</a>,
 and I was surprised to hear that we knew so little about their automorphisms.
-The natural place to start is the “free” Coxeter group <script type="math/tex">W_n</script>, which is a free product of 
-<script type="math/tex">n</script> copies of <script type="math/tex">\mathbb Z/2\mathbb Z</script>. I’m tempted to say the 
-<em><script type="math/tex">n</script>th copower of <script type="math/tex">\mathbb Z/2\mathbb Z</script>,</em> but I guess it’s a little too scary-sounding.</p>
+The natural place to start is the “free” Coxeter group \(W_n\), which is a free product of 
+\(n\) copies of \(\mathbb Z/2\mathbb Z\). I’m tempted to say the 
+<em>\(n\)th copower of \(\mathbb Z/2\mathbb Z\),</em> but I guess it’s a little too scary-sounding.</p>
 
 <p>Along the way I’ve become quite enamored with <a href="https://en.wikipedia.org/wiki/Orbifold">orbifolds</a>. The idea behind
 orbifolds is that just as it is useful to study the fundamental group of a manifold both
@@ -111,7 +111,7 @@ space of all orbigraphs in question are finite trees, but I am realizing there i
 
 <p>The main tool for studying automorphisms of free groups is what are called
 <em>relative train track maps.</em> Relative train track maps provide a topological “normal form”
-for elements of <script type="math/tex">\operatorname{Out}(F_n)</script>. They were introduced by Bestvina–Handel in</p>
+for elements of \(\operatorname{Out}(F_n)\). They were introduced by Bestvina–Handel in</p>
 <ol>
   <li>My adaptation to the case of orbigraphs
 builds on later developments by Bestvina–Feighn–Handel in 2000 and
@@ -125,28 +125,28 @@ information about the dynamics of the homeomorphism.</li>
 <p>The original idea of Bestvina–Handel’s paper was to attempt to adapt the theory
 to study outer automorphisms of free groups. Here, since any homeomorphism of a graph
 has a finite power homotopic to the identity, we’re forced to consider homotopy equivalences
-of graphs. More explicitly: if <script type="math/tex">\varphi \in \operatorname{Out}(F_n)</script> is an outer
-automorphism of a free group <script type="math/tex">F_n</script> of rank <script type="math/tex">n</script>, <script type="math/tex">G</script> is a graph, and <script type="math/tex">f\colon G \to G</script>
-is a homotopy equivalence such that the (outer) action of <script type="math/tex">f</script> on <script type="math/tex">\pi_1(G)</script> is equal
-to <script type="math/tex">\varphi</script>, then if <script type="math/tex">\varphi</script> has infinite order, <script type="math/tex">f</script> cannot be a homeomorphism.
-We may as well assume <script type="math/tex">f</script> sends vertices to vertices.
-Stallings tells us that in this situation, there is a vertex <script type="math/tex">v</script> of <script type="math/tex">G</script> and a pair of
-edges <script type="math/tex">e</script> and <script type="math/tex">e'</script> incident to <script type="math/tex">v</script> such that <script type="math/tex">f(e)</script> and <script type="math/tex">f(e')</script> share a common segment.
-We say <script type="math/tex">f</script> <em>folds</em> these edges, or that they form an <em>illegal turn</em>.</p>
+of graphs. More explicitly: if \(\varphi \in \operatorname{Out}(F_n)\) is an outer
+automorphism of a free group \(F_n\) of rank \(n\), \(G\) is a graph, and \(f\colon G \to G\)
+is a homotopy equivalence such that the (outer) action of \(f\) on \(\pi_1(G)\) is equal
+to \(\varphi\), then if \(\varphi\) has infinite order, \(f\) cannot be a homeomorphism.
+We may as well assume \(f\) sends vertices to vertices.
+Stallings tells us that in this situation, there is a vertex \(v\) of \(G\) and a pair of
+edges \(e\) and \(e'\) incident to \(v\) such that \(f(e)\) and \(f(e')\) share a common segment.
+We say \(f\) <em>folds</em> these edges, or that they form an <em>illegal turn</em>.</p>
 
-<p>A <em>train track map</em> has the next best property: We say that <script type="math/tex">f\colon G \to G</script> is a
-<em>train track map</em> if for each edge <script type="math/tex">e</script> of <script type="math/tex">G</script> and each positive integer <script type="math/tex">k</script>,
-the <script type="math/tex">k</script>th iterate, <script type="math/tex">f^k(e)</script> is an immersed path, i.e. it is never sent over an
+<p>A <em>train track map</em> has the next best property: We say that \(f\colon G \to G\) is a
+<em>train track map</em> if for each edge \(e\) of \(G\) and each positive integer \(k\),
+the \(k\)th iterate, \(f^k(e)\) is an immersed path, i.e. it is never sent over an
 illegal turn.</p>
 
 <p>If you’d like to try playing with the definition here’s something to try: let
-<script type="math/tex">G</script> be the “rose with four petals.” That is, <script type="math/tex">G</script> has one vertex and four edges,
-each of which forms a loop. Label the edges <script type="math/tex">A</script> through <script type="math/tex">D</script> and choose an orientation
-for each. Let’s define <script type="math/tex">f</script> as <script type="math/tex">A \mapsto B</script>, <script type="math/tex">B \mapsto C</script>, <script type="math/tex">C \mapsto D</script>, and
-<script type="math/tex">D \mapsto AB</script>, i.e. the path that first follows the edge <script type="math/tex">A</script> and then <script type="math/tex">B</script>.
-There are a few things to check: 1) Find a homotopy inverse for <script type="math/tex">f</script>. 2) Which
+\(G\) be the “rose with four petals.” That is, \(G\) has one vertex and four edges,
+each of which forms a loop. Label the edges \(A\) through \(D\) and choose an orientation
+for each. Let’s define \(f\) as \(A \mapsto B\), \(B \mapsto C\), \(C \mapsto D\), and
+\(D \mapsto AB\), i.e. the path that first follows the edge \(A\) and then \(B\).
+There are a few things to check: 1) Find a homotopy inverse for \(f\). 2) Which
 turns (pairs of oriented edges originating at a common vertex) are illegal? 3) Is
-<script type="math/tex">f</script> a train track map?</p>
+\(f\) a train track map?</p>
 
 <p>The word <em>relative</em> above is sort of forced on us by the structure of more complicated 
 homotopy equivalences: as it turns out,
@@ -155,43 +155,43 @@ This is especially true in the “bad” case of polynomial growth, about which 
 
 <h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups</h3>
 
-<p>Gersten in 1994 showed that <script type="math/tex">\operatorname{Out}(F_n)</script> cannot act
-properly and cocompactly on a CAT(0) metric space when <script type="math/tex">n \ge 4</script>.
+<p>Gersten in 1994 showed that \(\operatorname{Out}(F_n)\) cannot act
+properly and cocompactly on a CAT(0) metric space when \(n \ge 4\).
 This is something of a bummer, but also to be expected: Acting by geometrically
 on a CAT(0) metric space is a nice situation to be in, and one might think that
-<script type="math/tex">\operatorname{Out}(F_n)</script> should be in some sense too complicated to do so.</p>
+\(\operatorname{Out}(F_n)\) should be in some sense too complicated to do so.</p>
 
 <p>I set out aiming to prove a version of Gersten’s theorem for more general free products,
 but instead I found essentially a <em>strong negation</em> of the situation he described.
 Let me describe it in more detail:</p>
 
-<p>Write <script type="math/tex">F_n = \langle x_1,\dotsc,x_n\rangle</script>, let <script type="math/tex">\Phi</script> be an automorphism and suppose
-that <script type="math/tex">\Phi(x_i) = u_ix_iv_i</script>, where <script type="math/tex">u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle</script>.
+<p>Write \(F_n = \langle x_1,\dotsc,x_n\rangle\), let \(\Phi\) be an automorphism and suppose
+that \(\Phi(x_i) = u_ix_iv_i\), where \(u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle\).
 Let’s call such  automorphisms <em>upper triangular,</em> by analogy with groups of matrices.
-In the free-by-cyclic group <script type="math/tex">F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle</script>,
-this gives us the relation <script type="math/tex">tx_it^{-1} = u_ix_iv_i</script>, which we can rewrite as
-<script type="math/tex">x_i^{-1}u_i^{-1}tx_i = v_it</script>, which, if you squint, starts to look like a relation in
-an HNN extension with stable letter <script type="math/tex">x_i</script>. In fact, by our assumption on <script type="math/tex">u_i</script> and <script type="math/tex">v_i</script>,
-we actually do get a description of <script type="math/tex">F_n\rtimes\mathbb{Z}</script> as an iterated HNN extension.</p>
+In the free-by-cyclic group \(F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle\),
+this gives us the relation \(tx_it^{-1} = u_ix_iv_i\), which we can rewrite as
+\(x_i^{-1}u_i^{-1}tx_i = v_it\), which, if you squint, starts to look like a relation in
+an HNN extension with stable letter \(x_i\). In fact, by our assumption on \(u_i\) and \(v_i\),
+we actually do get a description of \(F_n\rtimes\mathbb{Z}\) as an iterated HNN extension.</p>
 
 <p>This situation can be good and bad. Gersten gave an example of such a description of a free-by-cyclic
-group which is a “poison subgroup” for nonpositive curvature. There, <script type="math/tex">u_i</script> and <script type="math/tex">v_i</script>
-are such that <script type="math/tex">u_i^{-1}t</script> and <script type="math/tex">v_it</script> have no business being conjugate in a nice action on a CAT(0) space.
+group which is a “poison subgroup” for nonpositive curvature. There, \(u_i\) and \(v_i\)
+are such that \(u_i^{-1}t\) and \(v_it\) have no business being conjugate in a nice action on a CAT(0) space.
 On the other hand, in the situation where they <em>should</em> be conjugate,
 Bridson–Haefliger give a construction that allows you to bootstrap a
 geometric action on a CAT(0) space up the HNN extension.</p>
 
 <p>What I realized was that in the class of automorphisms I was studying,
 if it were the case that the automorphism was already upper-triangular
-with respect to the basis <script type="math/tex">x_1,\dotsc,x_n</script> we were handed, then
-<script type="math/tex">u_i^{-1}t</script> and <script type="math/tex">v_it</script> were <em>already</em> conjugate, so Bridson–Haefliger says we win.
+with respect to the basis \(x_1,\dotsc,x_n\) we were handed, then
+\(u_i^{-1}t\) and \(v_it\) were <em>already</em> conjugate, so Bridson–Haefliger says we win.
 So, my goal in constructing relative train track maps was to find a basis
 that has this nice property for a (power of) an arbitrary polynomially-growing
 outer automorphism. In the paper, the application is in Section 7, while the
 heavy lifting is to find a way to adapt the relative train track technology appropriately.</p>
 
 <p>Since relative train track maps with nice properties have become a foundational
-tool in the study of <script type="math/tex">\operatorname{Out}(F_n)</script>, my hope is that this construction
+tool in the study of \(\operatorname{Out}(F_n)\), my hope is that this construction
 will help in the study of outer automorphism groups of free products.</p>
 
 
