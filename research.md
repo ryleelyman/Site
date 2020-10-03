@@ -86,7 +86,7 @@ Abstract:
 > tori are thick, and thus not relatively hyperbolic. These are the first
 > families comprising infinitely many examples for each rank of the nonabelian
 > free group; they contrast strongly with Gersten’s example of a thick
-> free-by-cyclic group, which cannot be a subgroup of a CAT(0) > group.
+> free-by-cyclic group, which cannot be a subgroup of a CAT(0) group.
 
 ## Other Manuscripts
 
