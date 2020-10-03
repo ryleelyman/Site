@@ -62,8 +62,8 @@ Abstract:
 - **Nielsen realization for infinite-type surfaces**  
 (with [Santana Afton](http://people.math.gatech.edu/~safton3/), 
 [Danny Calegari](http://math.uchicago.edu/~dannyc/) and [Lvzhou Chen](http://math.uchicago.edu/~lzchen/))  
-*Submitted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)  
-Abstract for version 3 (which is available [here][Nielsen]):  
+*Accepted.* Available at: [arXiv:2002.09760](https://arxiv.org/abs/2002.09760)  
+Abstract:
 > Given a subgroup $$G$$ of the mapping class group of a surface $$S$$,
 > the Nielsen realization problem asks whether $$G$$ can be realized
 > as a finite group of homeomorphisms of $$S$$. In 1983, Kerckhoff
@@ -77,20 +77,16 @@ Abstract for version 3 (which is available [here][Nielsen]):
 > we show that compact subgroups of the mapping class group of $$S$$ are finite,
 > and locally compact subgroups are discrete.
 
-- **Train Tracks, Orbigraphs and CAT(0) Free-By-Cyclic Groups**  
-*Awaiting revision.* Available at: [arXiv:1909.03097][traintracksorbigraphs]  
+- **Some new CAT(0) free-by-cyclic groups**   
+*Accepted.* Available at: [arXiv:1909.03097][somenewcat0freebyz]  
 Abstract:  
-> Gersten gave an example of a polynomially-growing automorphism of $$F_3$$
-> whose mapping torus $$F_3\rtimes\mathbb{Z}$$ cannot act properly by semi-simple
-> isometries on a CAT(0) metric space. By contrast, we show that if $$\Phi$$
-> is a polynomially-growing automorphism belonging to one of several related groups,
-> then there exists $$k>0$$ such that the mapping torus of $$\Phi^k$$ acts
-> properly and cocompactly on a CAT(0) metric space.
-> This $k$ can often be bounded uniformly.
-> Our results apply to automorphisms of a free product of $$n$$ copies of a finite group $$A$$,
-> as well as to palindromic and symmetric automorphisms of a free group of finite rank.
-> Of independent interest, a key tool in our proof is the construction of relative train track maps
-> on orbigraphs, certain graphs of groups thought of as orbi-spaces.
+> We show the existence
+> of several new infinite families of polynomially-growing automorphisms of
+> free groups whose mapping tori are CAT(0) free-by-cyclic groups. Such mapping
+> tori are thick, and thus not relatively hyperbolic. These are the first
+> families comprising infinitely many examples for each rank of the nonabelian
+> free group; they contrast strongly with Gersten’s example of a thick
+> free-by-cyclic group, which cannot be a subgroup of a CAT(0) > group.
 
 ## Other Manuscripts
 
@@ -108,4 +104,4 @@ titled Train Tracks and Outer Automorphisms of Hyperbolic Groups.
 [Braid Slides]: {{ "assets/pdfs/PseudoAnosovBraid.pdf" | relative_url }}
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
 [Nielsen]: {{ "assets/pdfs/Nielsen_v3b.pdf" | relative_url }}
-[traintracksorbigraphs]: https://arxiv.org/abs/1909.03097
+[somenewcat0freebyz]: https://arxiv.org/abs/1909.03097

@@ -1557,7 +1557,6 @@ Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
-Morita Equivalence and Other Headaches	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="morita-equivalence-and-other-headaches">Morita Equivalence and Other Headaches<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
 Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
@@ -1580,14 +1579,17 @@ Teaching	teaching.md	/^# Teaching$/;"	c
 The Algebraic Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space$/;"	s
 The Algebraic Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	i
 The Algebraic Cotangent Space Agrees With the Usual One	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space Agrees With the Usual One$/;"	s
+The Algebraic Cotangent Space Agrees With the Usual One	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space A/;"	i
 The Axiom Of Choice Is False For Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^      <h1>The Axiom Of Choice Is False For Manifolds<\/h1>$/;"	h
 The Axiom Of Choice Is False For Manifolds	_site/blog.html	/^    <h2><a href="\/2020\/08\/02\/The-Axiom-of-Choice-is-False-for-Manifolds.html">The Axiom Of C/;"	i
-The Axiom of Choice is False for Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="the-axiom-of-choice-is-false-for-manifolds">The Axiom of Choice is False for Manifolds<\//;"	i
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
+The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	j
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
+The Unit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	j
 The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Usual Cotangent Space$/;"	s
+The Usual Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	i
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
@@ -1696,7 +1698,6 @@ math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: tr
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
 math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
-morita-equivalence-and-other-headaches	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="morita-equivalence-and-other-headaches">Morita Equivalence and Other Headaches<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
@@ -1748,8 +1749,11 @@ textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-fam
 textarea	_site/assets/css/style.css	/^textarea { overflow: auto; }$/;"	s
 th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
 the-algebraic-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	I
-the-axiom-of-choice-is-false-for-manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="the-axiom-of-choice-is-false-for-manifolds">The Axiom of Choice is False for Manifolds<\//;"	I
+the-algebraic-cotangent-space-agrees-with-the-usual-one	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space A/;"	I
+the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
 the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
+the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
+the-usual-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
 title: About	about.md	/^title: About$/;"	s
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I
