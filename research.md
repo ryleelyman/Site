@@ -78,7 +78,7 @@ Abstract:
 > and locally compact subgroups are discrete.
 
 - **Some new CAT(0) free-by-cyclic groups**   
-*Accepted.* Available at: [arXiv:1909.03097][somenewcat0freebyz]  
+*Accepted.* Available at: [arXiv:1909.03097][newfreebyz]  
 Abstract:  
 > We show the existence
 > of several new infinite families of polynomially-growing automorphisms of
@@ -103,5 +103,4 @@ titled Train Tracks and Outer Automorphisms of Hyperbolic Groups.
 [Free By Z Slides]: {{ "assets/pdfs/freebyz.pdf" | relative_url }}
 [Braid Slides]: {{ "assets/pdfs/PseudoAnosovBraid.pdf" | relative_url }}
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
-[Nielsen]: {{ "assets/pdfs/Nielsen_v3b.pdf" | relative_url }}
-[somenewcat0freebyz]: https://arxiv.org/abs/1909.03097
+[newfreebyz]: https://arxiv.org/abs/1909.03097
