@@ -1551,6 +1551,8 @@ Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Mani
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
+Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
+Geometric Group Theory without Boundaries	ResearchOld.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Geometric Group Theory without Boundaries	_site/research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
 Geometric Group Theory without Boundaries	research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
@@ -1563,13 +1565,16 @@ Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds 
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
+Other Manuscripts	ResearchOld.md	/^## Other Manuscripts$/;"	s	chapter:Research
 Other Manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
 Other Manuscripts	research.md	/^## Other Manuscripts$/;"	s	chapter:Research
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
+Publications and Preprints	ResearchOld.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Publications and Preprints	research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Research	Research.md	/^# Research$/;"	c
+Research	ResearchOld.md	/^# Research $/;"	c
 Research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Research	research.md	/^# Research $/;"	c
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
@@ -1692,6 +1697,7 @@ math: false	index.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
 math: true	Research.md	/^math: true$/;"	s
+math: true	ResearchOld.md	/^math: true$/;"	s
 math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	_posts/2019-07-13-A-Digression.md	/^math: true$/;"	s
 math: true	_posts/2019-09-06-Choo-Choo.md	/^math: true$/;"	s
