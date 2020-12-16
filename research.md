@@ -12,8 +12,18 @@ math: true
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
 (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas]) *In preparation.*
 
- - **Folding for cube complexes**  
-(with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob]) *In preparation.*
+ - **Folding-like techniques for CAT(0) cube complexes**  
+(with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob]) *Submitted.*
+Abstract:
+> In a seminal paper,
+> Stallings introduced folding of morphisms of graphs. 
+> One consequence of folding is the representation of finitely-generated subgroups 
+> of a finite-rank free group as immersions of finite graphs. 
+> Stallings's methods allow one to construct this representation algorithmically,
+> giving effective, algorithmic answers and proofs to classical questions about subgroups of free groups. 
+> Recently Dani–Levcovitz used Stallings-like methods to study subgroups of right-angled Coxeter groups,
+> which act geometrically on CAT(0) cube complexes. 
+> In this paper we extend their techniques to fundamental groups of non-positively curved cube complexes.
 
  - **Some new CAT(0) free-by-cyclic groups**  
 *Accepted.* Available at [arXiv:1909.03097](http://arXiv.org/abs/1909.03097).  
