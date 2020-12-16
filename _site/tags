@@ -1552,9 +1552,8 @@ Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manif
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
 Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
-Geometric Group Theory without Boundaries	ResearchOld.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
-Geometric Group Theory without Boundaries	_site/research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
-Geometric Group Theory without Boundaries	research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
+Geometric Group Theory without Boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
+Geometric Group Theory without Boundaries	_site/ResearchOld.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
@@ -1565,18 +1564,14 @@ Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds 
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
-Other Manuscripts	ResearchOld.md	/^## Other Manuscripts$/;"	s	chapter:Research
-Other Manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
-Other Manuscripts	research.md	/^## Other Manuscripts$/;"	s	chapter:Research
+Other Manuscripts	_site/ResearchOld.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
-Publications and Preprints	ResearchOld.md	/^## Publications and Preprints$/;"	s	chapter:Research
-Publications and Preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
-Publications and Preprints	research.md	/^## Publications and Preprints$/;"	s	chapter:Research
+Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
+Publications and Preprints	_site/ResearchOld.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Research	Research.md	/^# Research$/;"	c
-Research	ResearchOld.md	/^# Research $/;"	c
-Research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
-Research	research.md	/^# Research $/;"	c
+Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
+Research	_site/ResearchOld.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Service	service.md	/^# Service$/;"	c
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
@@ -1653,7 +1648,8 @@ figure	_site/assets/css/style.css	/^figure { margin: 1em 40px; }$/;"	s
 footer	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
-geometric-group-theory-without-boundaries	_site/research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
+geometric-group-theory-without-boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
+geometric-group-theory-without-boundaries	_site/ResearchOld.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
 h1	_site/assets/css/style.css	/^h1 { font-size: 2em; margin: 0.67em 0; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 32px; font-weight: 600; }$/;"	s
 h1	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
@@ -1697,7 +1693,6 @@ math: false	index.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
 math: true	Research.md	/^math: true$/;"	s
-math: true	ResearchOld.md	/^math: true$/;"	s
 math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	_posts/2019-07-13-A-Digression.md	/^math: true$/;"	s
 math: true	_posts/2019-09-06-Choo-Choo.md	/^math: true$/;"	s
@@ -1705,7 +1700,6 @@ math: true	_posts/2020-02-16-Category-Theory-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: true$/;"	s
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
-math: true	research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
@@ -1719,17 +1713,19 @@ ol ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { l
 ol ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 optgroup	_site/assets/css/style.css	/^optgroup { font-weight: bold; }$/;"	s
 orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	I
-other-manuscripts	_site/research.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	I
+other-manuscripts	_site/ResearchOld.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	I
 p	_site/assets/css/style.css	/^p { margin-top: 0; margin-bottom: 10px; }$/;"	s
 phd-candidate	_site/assets/text/bio.html	/^      <h4 id="phd-candidate">PhD Candidate<\/h4>$/;"	I
 pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono/;"	s
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
-publications-and-preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
+publications-and-preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
+publications-and-preprints	_site/ResearchOld.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
-research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
+research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
+research	_site/ResearchOld.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 select	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
