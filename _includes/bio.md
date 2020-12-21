@@ -5,14 +5,14 @@ Department of Mathematics
 I like thinking about topics related to outer automorphisms of free groups and
 mapping classes of surface diffeomorphisms.
 I'm curious about geometric topology, geometric group theory, Teichmüller theory,
-tropical geometry, orbifolds, etc.    
+tropical geometry, orbifolds, cube complexes, etc.    
 Curriculum Vitae: [PDF]
 
 I earned my PhD in Mathematics from [Tufts University](https://math.tufts.edu),
 where my advisor was [Kim Ruane](http://www.tufts.edu/~kruane01/).
 In the fall I will be a postdoc at
 [Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
-My advisor at Rutgers is Lee Mosher.
+My mentor at Rutgers is Lee Mosher.
 
 My email address is <rylee.lyman@rutgers.edu>.  
 
