@@ -10,10 +10,27 @@ math: true
 ## Publications and Preprints
 
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
-(with [Robert Kropholler][Rob] and [Thomas Ng][Thomas]) *In preparation.*
+ (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas])
+ Available [here](/assets/pdfs/KrophollerLymanNg.pdf).
+ Abstract:
+ > We introduce a quantitative characterization of subgroup alternatives
+ > modeled on the Tits alternative
+ > in terms of group laws
+ > and investigate when this property is preserved under extensions.
+ > We develop a framework that lets us expand the classes of groups
+ > known to have locally uniform exponential growth to include
+ > extensions of either word hyperbolic or right-angled Artin groups
+ > by groups with locally uniform exponential growth.
+ > From this, we deduce that the automorphism group 
+ > of a torsion-free one-ended hyperbolic group has locally uniform exponential growth.
+ > Our methods also demonstrate that automorphism groups
+ > of torsion-free one-ended toral relatively hyperbolic groups
+ > and certain right-angled Artin groups satisfy our quantitative subgroup alternative.
+
 
  - **Folding-like techniques for CAT(0) cube complexes**  
-(with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob]) *Submitted.*
+ (with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob]) *Submitted.*
+ Available at [arXiv:2011.05374](https://arxiv.org/abs/2011.05374).
 Abstract:
 > In a seminal paper,
 > Stallings introduced folding of morphisms of graphs. 

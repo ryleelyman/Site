@@ -88,7 +88,7 @@ to $$(\cos x,\sin x)$$ for instance, fails to have a right inverse.
 
 Another use of the axiom of choice in category theory is the following theorem:
 
-> **Theorem:** A functor $$F\colon C \to D$$ between categories $$C$$ and $$D$ is an *equivalence of categories*
+> **Theorem:** A functor $$F\colon C \to D$$ between categories $$C$$ and $$D$$ is an *equivalence of categories*
 > if and only if it is *fully faithful* and *essentially surjective.*
 
 Here the functor $$F$$ is *full* if for all objects $$c$$ and $$c'$$ in $$C$$, the function

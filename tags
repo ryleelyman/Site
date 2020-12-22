@@ -1533,12 +1533,16 @@ A Digression	_site/2019/07/13/A-Digression.html	/^      <h1>A Digression<\/h1>$/
 A Digression	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/A-Digression.html">A Digression<\/a><\/h2>$/;"	i
 A Sheafy Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^      <h1>A Sheafy Adjunction<\/h1>$/;"	h
 A Sheafy Adjunction	_site/blog.html	/^    <h2><a href="\/2020\/07\/26\/A-Sheafy-Adjunction.html">A Sheafy Adjunction<\/a><\/h2>$/;"	i
+A pseudo-Anosov braid example	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## A pseudo-Anosov braid example$/;"	s
+A pseudo-Anosov braid example	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="a-pseudo-anosov-braid-example">A pseudo-Anosov braid example<\/h2>$/;"	i
 About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
 About page	about.md	/^# About page$/;"	c
 Adjunctions	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Adjunctions$/;"	s
 Adjunctions	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="adjunctions">Adjunctions<\/h2>$/;"	i
 An Equivalent Definition of Equivalence of Categories	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## An Equivalent Definition of Equivalence of Categories$/;"	s
 An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	i
+Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Background on graphs of groups$/;"	s
+Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
 CAT(0) Free-by-Cyclic Groups	_site/2019/09/06/Choo-Choo.html	/^<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups<\/h3>$/;"	j
 Categories	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Categories$/;"	s
@@ -1553,25 +1557,23 @@ Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
 Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Geometric Group Theory without Boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
-Geometric Group Theory without Boundaries	_site/ResearchOld.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
+Morphisms and maps of graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Morphisms and maps of graphs of groups$/;"	s
+Morphisms and maps of graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
 Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
-Other Manuscripts	_site/ResearchOld.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	i
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
-Publications and Preprints	_site/ResearchOld.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Research	Research.md	/^# Research$/;"	c
 Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
-Research	_site/ResearchOld.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Service	service.md	/^# Service$/;"	c
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
@@ -1588,6 +1590,8 @@ The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
 The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	j
+The Train Track Algorithm For Graphs Of Groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^      <h1>The Train Track Algorithm For Graphs Of Groups<\/h1>$/;"	h
+The Train Track Algorithm For Graphs Of Groups	_site/blog.html	/^    <h2><a href="\/2020\/12\/21\/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">The Train /;"	i
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
 The Unit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	j
 The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Usual Cotangent Space$/;"	s
@@ -1598,11 +1602,14 @@ The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
+Train track maps	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Train track maps$/;"	s
+Train track maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	i
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
+a-pseudo-anosov-braid-example	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="a-pseudo-anosov-braid-example">A pseudo-Anosov braid example<\/h2>$/;"	I
 a:active	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:hover { text-decoration: underline; }$/;"	s
@@ -1617,6 +1624,7 @@ audio:not([controls] )	_site/assets/css/style.css	/^audio:not([controls]) { disp
 b	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: bolder; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: inherit; }$/;"	s
+background-on-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	I
 blockquote	_site/assets/css/style.css	/^blockquote { margin: 0; }$/;"	s
 body	_site/assets/css/style.css	/^body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,/;"	s
 body	_site/assets/css/style.css	/^body { margin: 0; }$/;"	s
@@ -1649,7 +1657,6 @@ footer	_site/assets/css/style.css	/^article, aside, details, figcaption, figure,
 footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
 geometric-group-theory-without-boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
-geometric-group-theory-without-boundaries	_site/ResearchOld.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
 h1	_site/assets/css/style.css	/^h1 { font-size: 2em; margin: 0.67em 0; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 32px; font-weight: 600; }$/;"	s
 h1	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
@@ -1701,6 +1708,7 @@ math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: true$/;"	s
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
+morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
@@ -1713,7 +1721,6 @@ ol ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { l
 ol ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 optgroup	_site/assets/css/style.css	/^optgroup { font-weight: bold; }$/;"	s
 orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	I
-other-manuscripts	_site/ResearchOld.html	/^<h2 id="other-manuscripts">Other Manuscripts<\/h2>$/;"	I
 p	_site/assets/css/style.css	/^p { margin-top: 0; margin-bottom: 10px; }$/;"	s
 phd-candidate	_site/assets/text/bio.html	/^      <h4 id="phd-candidate">PhD Candidate<\/h4>$/;"	I
 pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
@@ -1721,11 +1728,10 @@ pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-fam
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
 publications-and-preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
-publications-and-preprints	_site/ResearchOld.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
+published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
-research	_site/ResearchOld.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 select	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
@@ -1761,6 +1767,7 @@ the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="t
 the-usual-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
 title: About	about.md	/^title: About$/;"	s
+train-track-maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	I
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I
 tt	_site/assets/css/style.css	/^tt, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace/;"	s
 type	_site/assets/css/style.css	/^[type="checkbox"], [type="radio"] { box-sizing: border-box; \/* 1 *\/ padding: 0; \/* 2 *\/ }$/;"	s
