@@ -1649,10 +1649,12 @@ details:not([open] ) > *:not(summary)	_site/assets/css/style.css	/^details:not([
 dfn	_site/assets/css/style.css	/^dfn { font-style: italic; }$/;"	s
 div	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 every-epimorphism-splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	I
+extensions	_site/Research.html	/^<div id="extensions" style="display: none">$/;"	I
 fieldset	_site/assets/css/style.css	/^fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }$/;"	s
 figcaption	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 figure	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 figure	_site/assets/css/style.css	/^figure { margin: 1em 40px; }$/;"	s
+folding	_site/Research.html	/^<div id="folding" style="display: none">$/;"	I
 footer	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
@@ -1713,6 +1715,8 @@ natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 nav	_site/assets/css/styles.css	/^nav { text-align: right; }$/;"	s
+newCAT0	_site/Research.html	/^<div id="newCAT0" style="display: none">$/;"	I
+nielsenrealization	_site/Research.html	/^<div id="nielsenrealization" style="display: none">$/;"	I
 nsa17ebafb0101	_site/feed.xml	/^<?xml version="1.0" encoding="utf-8"?><feed xmlns="http:\/\/www.w3.org\/2005\/Atom" ><generator /;"	n	uri:http://www.w3.org/2005/Atom
 nsd0b6adda0101	_site/sitemap.xml	/^<urlset xmlns:xsi="http:\/\/www.w3.org\/2001\/XMLSchema-instance" xsi:schemaLocation="http:\/\/w/;"	n	uri:http://www.sitemaps.org/schemas/sitemap/0.9
 ol	_site/assets/css/style.css	/^ul, ol { padding-left: 0; margin-top: 0; margin-bottom: 0; }$/;"	s
@@ -1766,6 +1770,7 @@ the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.htm
 the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
 the-usual-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
+thesis	_site/Research.html	/^<div id="thesis" style="display: none">$/;"	I
 title: About	about.md	/^title: About$/;"	s
 train-track-maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	I
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I
