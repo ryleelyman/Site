@@ -9,9 +9,11 @@ math: true
 
 ## Publications and Preprints
 
+ - **Train track maps and CTs on graphs of groups**   
+  *In preparation.*
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
- (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas])
- Available [here](/assets/pdfs/KrophollerLymanNg.pdf).   
+ (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas]) *Submitted.*   
+ Available at [arXiv:2012.14880](https://arxiv.org/abs/2012.14880).  
  <a onclick="displayabs('extensions')">Abstract</a>
  <div id="extensions" style="display: none">
   <blockquote>
