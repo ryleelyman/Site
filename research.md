@@ -115,7 +115,7 @@ math: true
 ## Geometric Group Theory without Boundaries
 
 Along with Macarena Arenas, Sami Douba and Abdul Zalloum,
-I organized a virtual "summer school" that will ran July 2020.
+I organized a virtual "summer school" that ran July 2020.
 More info is available on the [summer school website](https://sites.google.com/view/ggtwb/home?authuser=0).
 
 I gave three lectures in this summer school on Bass and Serre's theory 
