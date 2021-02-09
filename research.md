@@ -9,8 +9,17 @@ math: true
 
 ## Publications and Preprints
 
- - **Train track maps and CTs on graphs of groups**   
-  *In preparation.*
+- **Train track maps and CTs on graphs of groups**   
+Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848).   
+<a onclick="displayabs('CTs')">Abstract</a>
+<div id="CTs" style="display: none">
+<blockquote>
+In this paper we develop the theory of train track maps on graphs of groups. We
+prove the existence of CTs representing outer automorphisms of free products.
+We generalize an index inequality due to Feighn-Handel to the graph of groups
+setting, sharpening a result of Martino.
+</blockquote>
+</div>
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
  (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas]) *Submitted.*   
  Available at [arXiv:2012.14880](https://arxiv.org/abs/2012.14880).  
@@ -70,7 +79,7 @@ math: true
 
  - **Nielsen realization for infinite-type surfaces**  
 (with [Santana Afton][Santana], [Danny Calegari][Danny] and [Lvzhou Chen][Lvzhou])
-*Accepted.* Available at: [arXiv:2002.09760](http://arxiv.org/abs/20002.09760).  
+*Accepted.* Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).  
 <a onclick="displayabs('nielsenrealization')">Abstract</a>
 <div id="nielsenrealization" style="display: none">
   <blockquote>
