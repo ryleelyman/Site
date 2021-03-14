@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-08T19:49:15-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Train Track Algorithm For Graphs Of Groups</title><link href="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html" rel="alternate" type="text/html" title="The Train Track Algorithm For Graphs Of Groups" /><published>2020-12-21T00:00:00-05:00</published><updated>2020-12-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups</id><content type="html" xml:base="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">&lt;p&gt;Train track maps, which also come in “relative” and other flavors,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-14T13:44:33-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Notes On Orbifolds</title><link href="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
+and graphs of groups as étale groupoids.&lt;/p&gt;
+
+&lt;p&gt;The talk comes out of joint work in progress with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Tyrone Ghaswala&lt;/a&gt;.
+It starts with us realizing that some representations of the braid group
+into the automorphism group of a free group that each of us knew how to obtain by different methods
+were really the same representation.
+We thought that there ought to be some way to reconcile these two representations topologically
+by working with the mapping class group of certain 2-dimensional orbifolds.&lt;/p&gt;
+
+&lt;p&gt;From there things got complicated: we discovered that there is a good amount of contention about what
+a map of an orbifold even is.
+The consensus, outside of low-dimensional topology, seems to be to work with étale groupoids,
+rather than deal with orbifolds in terms of local charts.
+This has the advantage of making ineffective orbifolds easier.
+To wit, see the complications in the paper &lt;a href=&quot;https://arxiv.org/pdf/1606.04439.pdf&quot;&gt;Atlases for Ineffective Orbifolds&lt;/a&gt; by Pronk, Scull and Tommasini.&lt;/p&gt;
+
+&lt;p&gt;Within low-dimensional topology, it’s usually thought that the mapping class group
+of a 2-dimensional orbifold whose underlying space is a finite-type surface 
+and whose singular set is a finite collection of points
+is the subgroup of the mapping class group of the surface where the singular set is marked
+preserving the singular points of a given order.
+One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry><entry><title type="html">The Train Track Algorithm For Graphs Of Groups</title><link href="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html" rel="alternate" type="text/html" title="The Train Track Algorithm For Graphs Of Groups" /><published>2020-12-21T00:00:00-05:00</published><updated>2020-12-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups</id><content type="html" xml:base="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">&lt;p&gt;Train track maps, which also come in “relative” and other flavors,
 are particularly nice homotopy equivalences of graphs
 used as tools to reason about outer automorphisms of free groups.
 I wrote a paper extending train track maps (as well as relative train track maps and “CTs”)
@@ -1411,45 +1433,4 @@ around several edges.&lt;/p&gt;
 
 &lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
 topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/2019/06/22/Hello-World.html" rel="alternate" type="text/html" title="Hello World" /><published>2019-06-22T00:00:00-04:00</published><updated>2019-06-22T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/22/Hello-World</id><content type="html" xml:base="http://localhost:4000/2019/06/22/Hello-World.html">&lt;p&gt;Earlier this week,
-Marc Weidenbaum of &lt;a href=&quot;https://disquiet.com&quot;&gt;disquiet.com&lt;/a&gt; wrote a &lt;a href=&quot;https://disquiet.com/2019/06/16/word-blog-20th-anniversary-1999/&quot;&gt;paean
-to the blog&lt;/a&gt; that I found really inspiring. “Self-publishing,”
-he writes, “is the heart of the healthy internet.”&lt;/p&gt;
-
-&lt;p&gt;So hello. Having been given the push I needed, I decided to
-move my academic website to its own URL and use it as an excuse 
-to start blogging. Since much of the rest of this website is
-given over to my career as a mathematician, it’s reasonable to
-expect that I will talk about math here, and I expect to get
-technical with it when I want to.&lt;/p&gt;
-
-&lt;p&gt;Math is not my only passion. I expect to also talk about
-many things related to music. This blog is tentatively titled
-Alanza, my middle name, but also my “artist moniker” when 
-playing solo. I am a moderator on the &lt;a href=&quot;https://llllllll.co&quot;&gt;lines forum&lt;/a&gt;,
-also under the name Alanza.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This site is built with &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, and hosted on
-GitHub Pages. On lines I asked several questions about how to get
-up and running with a website and got &lt;a href=&quot;https://llllllll.co/t/blogging-platforms/23333?u=alanza&quot;&gt;a wealth of knowledge&lt;/a&gt;
-in response. Although, being a millenial, it’s maybe not surprising
-that I’d messed around with HTML as a kid, this site is my first time
-using CSS. I read what I could on &lt;a href=&quot;https://every-layout.dev&quot;&gt;Every Layout&lt;/a&gt;
-to get a feel for what the concerns were, and borrowed their “Sidebar”
-primitive. I also appreciated the from-square-one approach of
-&lt;a href=&quot;https://internetingishard.com&quot;&gt;Internetting Is Hard&lt;/a&gt; when Every Layout
-went over my head. These resources helped get me up to “okay, I can
-Google that” speed.
-I also should shout out &lt;a href=&quot;https://quuxplusone.github.io/blog/2018/08/05/mathjax-in-jekyll/&quot;&gt;Arthur O’Dwyer&lt;/a&gt; for a helpful
-blog post about enabling MathJax in Jekyll—which turns out to be 
-surprisingly simple!&lt;/p&gt;
-
-&lt;p&gt;In college, I taught myself a lot of the basics of typesetting,
-so it was eye-opening to see how very different the concerns are
-when designing for the web. Although the design here is certainly
-minimal, it was also surprisingly relatively painless!
-One of my goals for this year has been to improve my Vim skills
-and incorporate it more into my work. I was very pleased how well
-using Jekyll vs. say, WordPress, furthers this goal!&lt;/p&gt;</content><author><name></name></author><summary type="html">Earlier this week, Marc Weidenbaum of disquiet.com wrote a paean to the blog that I found really inspiring. “Self-publishing,” he writes, “is the heart of the healthy internet.”</summary></entry></feed>
+giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry></feed>

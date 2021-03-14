@@ -1545,6 +1545,7 @@ Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-G
 Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
 CAT(0) Free-by-Cyclic Groups	_site/2019/09/06/Choo-Choo.html	/^<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups<\/h3>$/;"	j
+CTs	_site/Research.html	/^<div id="CTs" style="display: none">$/;"	I
 Categories	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Categories$/;"	s
 Categories	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="categories">Categories<\/h2>$/;"	i
 Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h1>Category Theory Day One<\/h1>$/;"	h
@@ -1698,6 +1699,7 @@ legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ c
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$/;"	s
+math: false	_posts/2021-03-14-Notes-on-Orbifolds.md	/^math: false$/;"	s
 math: false	index.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
