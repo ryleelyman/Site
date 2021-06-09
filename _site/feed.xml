@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-14T13:44:33-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Notes On Orbifolds</title><link href="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-09T19:37:11-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Mathematical Postcard</title><link href="http://localhost:4000/2021/06/09/A-Mathematical-Postcard.html" rel="alternate" type="text/html" title="A Mathematical Postcard" /><published>2021-06-09T00:00:00-04:00</published><updated>2021-06-09T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/09/A-Mathematical-Postcard</id><content type="html" xml:base="http://localhost:4000/2021/06/09/A-Mathematical-Postcard.html">&lt;p&gt;I submitted a “mathematical postcard” (see below)
+to the &lt;a href=&quot;https://www.ncngt.org&quot;&gt;Nearly Carbon Neutral Geometric Topology&lt;/a&gt; conference.
+The purpose of this post is to share the postcard
+and offer a little more context and explanation for it.
+I’m also giving a talk in said conference,
+but I’ll talk about that in a separate post.&lt;/p&gt;
+
+&lt;p&gt;Here is the postcard:&lt;/p&gt;
+
+&lt;style&gt; .pdf-embed-wrap-a6602a3f-36f3-410a-8cb1-12fc9635886f { display:flex; flex-direction: column; width: 100%; height: 400px; } .pdf-embed-container-a6602a3f-36f3-410a-8cb1-12fc9635886f { height: 100%; } .pdf-embed-container-a6602a3f-36f3-410a-8cb1-12fc9635886f iframe { width: 100%; height: 100%; } &lt;/style&gt;
+&lt;div class=&quot;pdf-embed-wrap-a6602a3f-36f3-410a-8cb1-12fc9635886f&quot;&gt; &lt;div class=&quot;pdf-embed-container-a6602a3f-36f3-410a-8cb1-12fc9635886f&quot;&gt; &lt;iframe src=&quot;/assets/pdfs/postcard.pdf&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt; &lt;/div&gt; &lt;/div&gt;
+
+&lt;p&gt;Let me say a little more about the space we’re talking about.
+Let&lt;/p&gt;
+
+\[F = A_1*\dotsb*A_n*F_k\]
+
+&lt;p&gt;be a free product of the groups \(A_1,\dotsc,A_n\) with a free group of rank \(k\).
+It follows from elementary Bass–Serre theory
+that \(F\) acts on a (simplicial) tree \(T\) with trivial edge stabilizers
+and vertex stabilizers each conjugate to some \(A_i\).
+Let’s assume that the action is &lt;em&gt;minimal,&lt;/em&gt; i.e. that there is no proper invariant subtree.
+Say two such trees \(S\) and \(T\) are &lt;em&gt;equivalent&lt;/em&gt; if there is an \(F\)-equivariant homeomorphism from \(S\) to \(T\).
+It turns out that there are many inequivalent, minimal actions!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/math/0501288&quot;&gt;Guirardel and Levitt&lt;/a&gt; define an Outer Space to parametrize them all
+(up to a finer notion of equivalence: isometry).
+It is a topological space on which the group of those outer automorphisms of \(F\)
+which preserve the conjugacy classes of the \(A_i\) acts.
+If the \(A_i\) are &lt;em&gt;freely indecomposable,&lt;/em&gt; for example, if they are finite,
+then this is all of \(\operatorname{Out}(F)\).
+This Outer Space admits a &lt;em&gt;spine,&lt;/em&gt;
+a subspace which is a simplicial complex
+and onto which it deformation retracts \(\operatorname{Out}(F)\)-equivariantly.
+Vertices of the spine are equivalence classes of minimal actions as above.
+Two vertices are connected by an edge when one can be obtained from the other by collapsing an orbit of edges.
+When \(n \ge 2\), the dimension of this spine is \(n + 2k - 2\).&lt;/p&gt;
+
+&lt;p&gt;When each \(A_i\) is finite, the spine is locally finite,
+and \(\operatorname{Out}(F)\) acts with finite stabilizers and finite quotient.
+This is the bread-and-butter situation for geometric group theory,
+so outer automorphism groups of free products of finite and cyclic groups are interesting to study as a class
+because one can use the geometry of the spine of Outer Space to investigate them.&lt;/p&gt;
+
+&lt;p&gt;Again by Bass–Serre theory, one can think of vertices of the spine
+via their quotient graphs of groups \(\mathcal{G}\),
+as is happening in the postcard.
+These quotient graphs of groups will have first Betti number \(k\)
+and \(n\) vertices with nontrivial vertex group each isomorphic to one of the \(A_i\).&lt;/p&gt;
+
+&lt;p&gt;The combinatorial types of the examples in the postcard play a particularly special role
+in studying the spine of Outer Space.
+I call vertices combinatorially equivalent to the first and last examples &lt;em&gt;thistles&lt;/em&gt;
+with \(n\) prickles and \(k\) petals (here \(n = 3\) and \(k = 4\)).
+Vertices combinatorially equivalent to the middle examples are &lt;em&gt;bugs&lt;/em&gt;
+with a head, \(n-1\) legs and \(k\) wings.&lt;/p&gt;
+
+&lt;p&gt;One reason thistles and bugs are special is illustrated in the postcard:
+&lt;em&gt;collapse Whitehead moves&lt;/em&gt; along with their cousins &lt;em&gt;expand Whitehead moves,&lt;/em&gt;
+form a system of paths in the spine of Outer Space that connect any two thistles to each other.
+&lt;a href=&quot;https://link.springer.com/article/10.1007%2FBF01236258&quot;&gt;Collins and Zieschang&lt;/a&gt; prove a version of Whitehead’s algorithm for free products
+using in particular two families of &lt;em&gt;Whitehead automorphisms&lt;/em&gt; that they call \(S\)-Whitehead automorphisms
+and \(J\)-multiple Whitehead automorphisms.
+The former correspond to expand Whitehead moves, and the latter to collapse Whitehead moves,
+and their result says that any two thistles in the spine of Outer Space may be connected by a path of Whitehead moves
+which have a very nice interplay with a &lt;em&gt;norm&lt;/em&gt; one can put on thistles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/expandWhitehead.png&quot; alt=&quot;An expand Whitehead move&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let me finish by indicating my interest in these paths:
+&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/004093839400042J&quot;&gt;Vogtmann&lt;/a&gt; proved that the outer automorphism group of a free group of rank \(k\)
+is what’s called &lt;em&gt;simply connected at infinity&lt;/em&gt; for \(k \ge 5\).
+Briefly, a space \(X\) is simply connected at infinity if it has one &lt;a href=&quot;https://en.wikipedia.org/wiki/End_(topology)&quot;&gt;end&lt;/a&gt; 
+and for any compact subset \(K\),
+there is a compact subset \(L\) with \(L \supset K\) such that
+any loop in \(X\setminus L\) is nullhomotopic via a homotopy in \(X\setminus K\).
+A group is simply connected at infinity if some (and hence any) simplicial complex
+on which it acts with finite stabilizers and finite quotient is simply connected at infinity.
+So \(\mathbb{R}\) has two ends, \(\mathbb{R}^2\) has one end but is not simply connected at infinity,
+and \(\mathbb{R}^{n}\) is simply connected at infinity for \(n \ge 3\);
+therefore \(\mathbb{Z}^n\) is simply connected at infinity for \(n \ge 3\).
+Vogtmann’s proof involves a careful understanding of the combinatorics of (expand) Whitehead moves
+in the spine of Outer Space (for a free group).
+I’m in the early stages of working on generalizing her result to free products of finite and cyclic groups.
+The general strategy of the proof will follow hers,
+but already I am seeing that the presence of collapse Whitehead moves will require their own analysis to handle.&lt;/p&gt;</content><author><name></name></author><summary type="html">I submitted a “mathematical postcard” (see below) to the Nearly Carbon Neutral Geometric Topology conference. The purpose of this post is to share the postcard and offer a little more context and explanation for it. I’m also giving a talk in said conference, but I’ll talk about that in a separate post.</summary></entry><entry><title type="html">Notes On Orbifolds</title><link href="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
 and graphs of groups as étale groupoids.&lt;/p&gt;
 
 &lt;p&gt;The talk comes out of joint work in progress with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Tyrone Ghaswala&lt;/a&gt;.
@@ -1357,80 +1442,4 @@ situations together at once. Many common constructions in mathematics, including
 “sum” and “product” may be phrased as a certain kind of “universal” construction
 in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
 is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry><entry><title type="html">The Category Of Graphs</title><link href="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html" rel="alternate" type="text/html" title="The Category Of Graphs" /><published>2019-06-29T00:00:00-04:00</published><updated>2019-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2019/06/29/The-Category-of-Graphs</id><content type="html" xml:base="http://localhost:4000/2019/06/29/The-Category-of-Graphs.html">&lt;p&gt;You know the sensation where a familiar word becomes suddenly
-completely &lt;em&gt;strange&lt;/em&gt; for no apparent reason? Like suddenly the scales
-fall away from your eyes and you see how utterly weird it is that a
-concept has a particular name? I’ve been having that feeling with the
-word &lt;em&gt;graph&lt;/em&gt; as I use it in math.&lt;/p&gt;
-
-&lt;p&gt;As a kid, you learn how to &lt;em&gt;graph&lt;/em&gt; simple functions in the sense of 
-being able to sketch them on a sheet of, say, &lt;em&gt;graph&lt;/em&gt; paper. Millions
-of adults probably faintly remember the shape of \(y = x^2\) but aren’t
-quite sure why.&lt;/p&gt;
-
-&lt;p&gt;To mathematicians and computer scientists, though, for some reason &lt;em&gt;graph&lt;/em&gt;
-means something similar, but different: to them a graph is an object with
-&lt;em&gt;vertices&lt;/em&gt; and &lt;em&gt;edges&lt;/em&gt;. Indeed, to Serre, that’s literally all a graph is:
-a quadruple \((V,E,\bar{},\iota)\). Two sets, \(V\) and \(E\), represent the
-vertices and (oriented) edges of the graph, and \(\bar{}\colon E \to E\) and
-\(\iota\colon E \to V\) are functions; \(\bar{e}\) is the edge \(e\) with its
-orientation reversed, (so \(\bar{\bar{e}} = e\) for any edge \(e\), but
-\(\bar e \neq e\)), and
-\(\iota(e)\) represents the initial vertex of the edge \(e\). This lets us
-define a function \(\tau\colon E \to V\) picking out the &lt;em&gt;terminal&lt;/em&gt; vertex
-of an edge by setting \(\tau(e) = \iota(\bar{e})\).&lt;/p&gt;
-
-&lt;p&gt;A topologist would prefer to say that a graph is a 1-dimensional CW complex.
-So rather than an abstract set of vertices, we have a set of points, \(V\),
-the \(0\)-cells of our CW complex. And rather than an abstract set of oriented
-edges, we have a collection of \(1\)-cells (intervals of the real line) 
-whose endpoints are attached to \(0\)-cells.&lt;/p&gt;
-
-&lt;p&gt;These two descriptions really are in agreement for most purposes. Maybe one would
-prefer the more combinatorial description as a way of “rigidifying” some of the
-inherent floppiness of topological spaces. At the same time, using topological methods
-allows one access to a whole host of techniques that a too-rigid approach might bury
-under a sea of formalism.&lt;/p&gt;
-
-&lt;p&gt;But of course, neither definition really squares with the idea of the graph of
-\(y = x^2\), hence why I’ve been feeling weird about the word.&lt;/p&gt;
-
-&lt;p&gt;Anyway, the &lt;em&gt;category of graphs&lt;/em&gt;, introduced by John Stallings in
-&lt;a href=&quot;https://www2.math.ou.edu/~nbrady/teaching/s11-5863/stallings.pdf&quot;&gt;Topology of Finite Graphs&lt;/a&gt;,
-building on work of Serre in &lt;a href=&quot;https://d-nb.info/965816907/04&quot;&gt;Trees&lt;/a&gt;, more about which
-almost certainly soon, has (as all categories do)
-collections of objects and arrows between them.
-Here the objects are graphs and arrows are &lt;em&gt;morphisms of graphs.&lt;/em&gt; 
-A morphism \(f\colon G \to H\) between
-graphs \(G\) and \(H\) is a pair of functions \(f_V\colon V(G) \to V(H)\) 
-and \(f_E\colon E(G) \to E(H)\), such that the following diagrams commute:
-\(\require{AMScd}\)&lt;/p&gt;
-
-\[\begin{CD}
-E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H) \\
-@V{\iota}VV @V{\iota}VV \\
-V(G) @&amp;gt;f_V&amp;gt;&amp;gt; V(H)
-\end{CD}\qquad
-\begin{CD}
-E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H) \\
-@V\bar{}VV @V\bar{}VV \\
-E(G) @&amp;gt;f_E&amp;gt;&amp;gt; E(H)
-\end{CD}\]
-
-&lt;p&gt;In English what this is saying is that \(f\) preserves the graph structure:
-it sends edges to edges, vertices to vertices, \(e\) and \(\bar e\) are sent
-to \(f(e)\) and \(\overline{f(e)}\), and the initial vertex of \(e\) is
-sent to the initial vertex of \(f(e)\).&lt;/p&gt;
-
-&lt;p&gt;Stallings emphasizes the rigidity of morphisms in this construction:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;By graph and map of graphs, I mean something purely combinatorial or
-algebraic. Pictures can be drawn, but one has to understand that maps are
-rigid and not just continuous, maps do not collapse edges or wrap edges
-around several edges.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And it’s true; it’s a little challenging to describe precisely which
-topological maps between graphs are even homotopic to morphisms without
-giving the game (Stallings’ paper) away too quickly!&lt;/p&gt;</content><author><name></name></author><summary type="html">You know the sensation where a familiar word becomes suddenly completely strange for no apparent reason? Like suddenly the scales fall away from your eyes and you see how utterly weird it is that a concept has a particular name? I’ve been having that feeling with the word graph as I use it in math.</summary></entry></feed>
+about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry></feed>

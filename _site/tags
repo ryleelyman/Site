@@ -1566,6 +1566,8 @@ Morphisms and maps of graphs of groups	_posts/2020-12-21-The-Train-Track-Algorit
 Morphisms and maps of graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
+Notes On Orbifolds	_site/2021/03/14/Notes-on-Orbifolds.html	/^      <h1>Notes On Orbifolds<\/h1>$/;"	h
+Notes On Orbifolds	_site/blog.html	/^    <h2><a href="\/2021\/03\/14\/Notes-on-Orbifolds.html">Notes On Orbifolds<\/a><\/h2>$/;"	i
 Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
@@ -1737,6 +1739,7 @@ publications-and-preprints	_site/Research.html	/^<h2 id="publications-and-prepri
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
 published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^published: true$/;"	s
+published: true	_posts/2021-06-09-A-Mathematical-Postcard.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
