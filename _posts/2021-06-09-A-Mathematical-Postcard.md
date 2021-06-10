@@ -68,7 +68,7 @@ using in particular two families of *Whitehead automorphisms* that they call $$S
 and $$J$$-multiple Whitehead automorphisms.
 The former correspond to expand Whitehead moves, and the latter to collapse Whitehead moves,
 and their result says that any two thistles in the spine of Outer Space may be connected by a path of Whitehead moves
-which have a very nice interplay with a *norm* one can put on thistles.
+which has a very nice interplay with a *norm* one can put on thistles.
 
 ![An expand Whitehead move](/assets/img/expandWhitehead.png)
 
