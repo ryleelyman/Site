@@ -12,7 +12,8 @@ but I'll talk about that in a separate post.
 
 Here is the postcard:
 
-{% pdf "/assets/pdfs/postcard.pdf" no_link height=400px %}
+<iframe src="/assets/pdfs/postcard.pdf" width="100%" height="400px">
+</iframe>
 
 Let me say a little more about the space we're talking about.
 Let
