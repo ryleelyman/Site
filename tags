@@ -1531,6 +1531,8 @@
 :root	_site/assets/css/styles.css	/^:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: /;"	s
 A Digression	_site/2019/07/13/A-Digression.html	/^      <h1>A Digression<\/h1>$/;"	h
 A Digression	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/A-Digression.html">A Digression<\/a><\/h2>$/;"	i
+A Mathematical Postcard	_site/2021/06/09/A-Mathematical-Postcard.html	/^      <h1>A Mathematical Postcard<\/h1>$/;"	h
+A Mathematical Postcard	_site/blog.html	/^    <h2><a href="\/2021\/06\/09\/A-Mathematical-Postcard.html">A Mathematical Postcard<\/a><\/h2/;"	i
 A Sheafy Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^      <h1>A Sheafy Adjunction<\/h1>$/;"	h
 A Sheafy Adjunction	_site/blog.html	/^    <h2><a href="\/2020\/07\/26\/A-Sheafy-Adjunction.html">A Sheafy Adjunction<\/a><\/h2>$/;"	i
 A pseudo-Anosov braid example	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## A pseudo-Anosov braid example$/;"	s
@@ -1740,6 +1742,7 @@ published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
 published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^published: true$/;"	s
 published: true	_posts/2021-06-09-A-Mathematical-Postcard.md	/^published: true$/;"	s
+published: true	_posts/2021-06-12-Nielsen-Realization.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s

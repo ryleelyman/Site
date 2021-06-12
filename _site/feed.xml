@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-06-09T21:00:51-04:00</updated><id>/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Mathematical Postcard</title><link href="/2021/06/09/A-Mathematical-Postcard.html" rel="alternate" type="text/html" title="A Mathematical Postcard" /><published>2021-06-09T00:00:00-04:00</published><updated>2021-06-09T00:00:00-04:00</updated><id>/2021/06/09/A-Mathematical-Postcard</id><content type="html" xml:base="/2021/06/09/A-Mathematical-Postcard.html">&lt;p&gt;I submitted a “mathematical postcard” (see below)
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-12T15:26:02-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Nielsen Realization</title><link href="http://localhost:4000/2021/06/12/Nielsen-Realization.html" rel="alternate" type="text/html" title="Nielsen Realization" /><published>2021-06-12T00:00:00-04:00</published><updated>2021-06-12T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/12/Nielsen-Realization</id><content type="html" xml:base="http://localhost:4000/2021/06/12/Nielsen-Realization.html">&lt;p&gt;I’m giving a talk in &lt;a href=&quot;https://www.ncngt.org/home&quot;&gt;Nearly Carbon Neutral Geometric Topology&lt;/a&gt;
+about Nielsen realization for infinite-type surfaces.
+The format for the conference is that everyone records and uploads their talks beforehand,
+and then the conference format allows for discussion and comments via Discord.
+The purpose of this post is to share and talk a little bit about my talk, which is below.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/QwA3bSwkcW0&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The Nielsen realization problem was posed by Nielsen in 1932.
+The &lt;em&gt;mapping class group&lt;/em&gt; of a surface \(S\),
+call it \(\operatorname{Map}(S)\),
+is the group of isotopy classes of homeomorphisms of \(S\).
+For a subgroup \(G\) of \(\operatorname{Map}(S)\),
+it is not generally possible to realize \(G\)
+as a group of honest homeomorphisms of \(S\).
+Nielsen’s question was whether, in the special case that \(G\) is finite, such a realization is always possible.
+Kerckhoff answered Nielsen’s question in the affirmative in 1983 for finite-type surfaces.
+In fact, Kerckhoff showed the stronger result that finite subgroups of \(\operatorname{Map}(S)\)
+arise as groups of isometries of hyperbolic metrics on \(S\)
+(when \(S\) supports a hyperbolic metric, of course).
+The first and main theorem I discuss in my talk,
+which is joint work with &lt;a href=&quot;https://sites.google.com/view/santanaafton/home&quot;&gt;Santana Afton&lt;/a&gt;, &lt;a href=&quot;https://math.uchicago.edu/~dannyc/&quot;&gt;Danny Calegari&lt;/a&gt; and &lt;a href=&quot;https://lvzhouchen.github.io&quot;&gt;Lvzhou Chen&lt;/a&gt;,
+is an extension of Kerckhoff’s result to orientable, infinite-type surfaces.&lt;/p&gt;
+
+&lt;p&gt;Kerckhoff’s proof is very cool;
+I talk through the main ideas in my talk,
+but briefly he defines a \(G\)-invariant, real-valued function on the &lt;em&gt;Teichmüller space of \(S\),&lt;/em&gt;
+which parametrizes (homotopy classes of) hyperbolic metrics on \(S\),
+and shows that it attains a unique minimum, which is therefore fixed by \(G\).
+This fixed point yields a realization of \(G\) as a group of isometries of the corresponding hyperbolic metric.
+Kerckhoff’s proof does not work for infinite-type surfaces
+basically because a certain finite sum in the definition of his function in the finite-type case
+would need to become an infinite series,
+and the obvious definition yields a divergent series.
+As I mention in the talk,
+I’d be very interested in talking with you
+if you have ideas about how to weight this series to produce one that converges.
+Instead the proof that we give involves cutting our surface up into finite-type pieces,
+and applying Kerckhoff’s result to each of the pieces.&lt;/p&gt;
+
+&lt;p&gt;I became interested in infinite-type surfaces and their mapping class groups
+after reading a very cool (and short) &lt;a href=&quot;https://arxiv.org/abs/1904.10060&quot;&gt;paper&lt;/a&gt;
+of &lt;a href=&quot;https://sites.google.com/view/lovingmath/home?authuser=0&quot;&gt;Marissa Kawehi Loving&lt;/a&gt; and &lt;a href=&quot;https://justinlanier.org&quot;&gt;Justin Lanier&lt;/a&gt;
+finding interesting subgroups of big mapping class groups that cannot be found in finite-type mapping class groups.
+It’s a theorem that \(\operatorname{Map}(S)\) is a subgroup of the symmetric group on a countable set.
+I wondered whether the symmetric group on a countable set is ever a subgroup of a big mapping class group.
+The second result I discuss in the talk has the corollary that &lt;em&gt;no,&lt;/em&gt;
+the symmetric group on a countable set cannot continuously embed in any big mapping class group.&lt;/p&gt;
+
+&lt;p&gt;Finally, after reading a draft of our paper, &lt;a href=&quot;https://www.math.utah.edu/~bestvina/&quot;&gt;Mladen Bestvina&lt;/a&gt; suggested to me
+that we should be able to use our techniques to prove that compact subgroups of mapping class groups are finite
+and locally compact subgroups are discrete.
+After a few days of thinking, I was able to find a proof!
+It includes my new favorite way of proving that a group is finite:
+show that it is &lt;em&gt;torsion,&lt;/em&gt; that every element has finite order,
+and that it is &lt;em&gt;virtually torsion free,&lt;/em&gt; i.e. that it has a finite-index torsion-free subgroup.
+Only the trivial subgroup of such a group is torsion free,
+so this shows that the trivial subgroup has finite index in the whole group—so the group is finite.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m giving a talk in Nearly Carbon Neutral Geometric Topology about Nielsen realization for infinite-type surfaces. The format for the conference is that everyone records and uploads their talks beforehand, and then the conference format allows for discussion and comments via Discord. The purpose of this post is to share and talk a little bit about my talk, which is below.</summary></entry><entry><title type="html">A Mathematical Postcard</title><link href="http://localhost:4000/2021/06/09/A-Mathematical-Postcard.html" rel="alternate" type="text/html" title="A Mathematical Postcard" /><published>2021-06-09T00:00:00-04:00</published><updated>2021-06-09T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/09/A-Mathematical-Postcard</id><content type="html" xml:base="http://localhost:4000/2021/06/09/A-Mathematical-Postcard.html">&lt;p&gt;I submitted a “mathematical postcard” (see below)
 to the &lt;a href=&quot;https://www.ncngt.org&quot;&gt;Nearly Carbon Neutral Geometric Topology&lt;/a&gt; conference.
 The purpose of this post is to share the postcard
 and offer a little more context and explanation for it.
@@ -63,7 +120,7 @@ using in particular two families of &lt;em&gt;Whitehead automorphisms&lt;/em&gt;
 and \(J\)-multiple Whitehead automorphisms.
 The former correspond to expand Whitehead moves, and the latter to collapse Whitehead moves,
 and their result says that any two thistles in the spine of Outer Space may be connected by a path of Whitehead moves
-which have a very nice interplay with a &lt;em&gt;norm&lt;/em&gt; one can put on thistles.&lt;/p&gt;
+which has a very nice interplay with a &lt;em&gt;norm&lt;/em&gt; one can put on thistles.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/expandWhitehead.png&quot; alt=&quot;An expand Whitehead move&quot; /&gt;&lt;/p&gt;
 
@@ -83,7 +140,7 @@ Vogtmann’s proof involves a careful understanding of the combinatorics of (exp
 in the spine of Outer Space (for a free group).
 I’m in the early stages of working on generalizing her result to free products of finite and cyclic groups.
 The general strategy of the proof will follow hers,
-but already I am seeing that the presence of collapse Whitehead moves will require their own analysis to handle.&lt;/p&gt;</content><author><name></name></author><summary type="html">I submitted a “mathematical postcard” (see below) to the Nearly Carbon Neutral Geometric Topology conference. The purpose of this post is to share the postcard and offer a little more context and explanation for it. I’m also giving a talk in said conference, but I’ll talk about that in a separate post.</summary></entry><entry><title type="html">Notes On Orbifolds</title><link href="/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
+but already I am seeing that the presence of collapse Whitehead moves will require their own analysis to handle.&lt;/p&gt;</content><author><name></name></author><summary type="html">I submitted a “mathematical postcard” (see below) to the Nearly Carbon Neutral Geometric Topology conference. The purpose of this post is to share the postcard and offer a little more context and explanation for it. I’m also giving a talk in said conference, but I’ll talk about that in a separate post.</summary></entry><entry><title type="html">Notes On Orbifolds</title><link href="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
 and graphs of groups as étale groupoids.&lt;/p&gt;
 
 &lt;p&gt;The talk comes out of joint work in progress with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Tyrone Ghaswala&lt;/a&gt;.
@@ -105,7 +162,7 @@ of a 2-dimensional orbifold whose underlying space is a finite-type surface
 and whose singular set is a finite collection of points
 is the subgroup of the mapping class group of the surface where the singular set is marked
 preserving the singular points of a given order.
-One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry><entry><title type="html">The Train Track Algorithm For Graphs Of Groups</title><link href="/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html" rel="alternate" type="text/html" title="The Train Track Algorithm For Graphs Of Groups" /><published>2020-12-21T00:00:00-05:00</published><updated>2020-12-21T00:00:00-05:00</updated><id>/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups</id><content type="html" xml:base="/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">&lt;p&gt;Train track maps, which also come in “relative” and other flavors,
+One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry><entry><title type="html">The Train Track Algorithm For Graphs Of Groups</title><link href="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html" rel="alternate" type="text/html" title="The Train Track Algorithm For Graphs Of Groups" /><published>2020-12-21T00:00:00-05:00</published><updated>2020-12-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups</id><content type="html" xml:base="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">&lt;p&gt;Train track maps, which also come in “relative” and other flavors,
 are particularly nice homotopy equivalences of graphs
 used as tools to reason about outer automorphisms of free groups.
 I wrote a paper extending train track maps (as well as relative train track maps and “CTs”)
@@ -414,7 +471,7 @@ and \(\{\bar B'',F''\}\).&lt;/p&gt;
 
 &lt;p&gt;As it turns out, both of these turns are legal, so this is a train track map!
 Indeed \(\lambda_9\) is also the largest real root of \(x^4 - x^3 - x^2 - x + 1\),
-the polynomial we mentioned before in connection with \(\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Train track maps, which also come in “relative” and other flavors, are particularly nice homotopy equivalences of graphs used as tools to reason about outer automorphisms of free groups. I wrote a paper extending train track maps (as well as relative train track maps and “CTs”) to graphs of groups (with trivial edge groups for CTs). In this post I want to talk a little about how to think about train track maps and (“tame” in some sense) homotopy equivalences of graphs of groups more generally. At the end of the post I talk through using the train track algorithm to compute an example coming from a pseudo-Anosov 5-braid.</summary></entry><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
+the polynomial we mentioned before in connection with \(\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Train track maps, which also come in “relative” and other flavors, are particularly nice homotopy equivalences of graphs used as tools to reason about outer automorphisms of free groups. I wrote a paper extending train track maps (as well as relative train track maps and “CTs”) to graphs of groups (with trivial edge groups for CTs). In this post I want to talk a little about how to think about train track maps and (“tame” in some sense) homotopy equivalences of graphs of groups more generally. At the end of the post I talk through using the train track algorithm to compute an example coming from a pseudo-Anosov 5-braid.</summary></entry><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
 cheekily playing with unhooking a signifier from what it typically signifies.
 Namely, one of the (many) tricky foundational things about working with orbifolds
 goes by the name “the axiom of choice is false for the category of smooth manifolds.”&lt;/p&gt;
@@ -540,7 +597,7 @@ is an equivalence if and only if it is fully faithful and essentially surjective
 &lt;/blockquote&gt;
 
 &lt;p&gt;It turns out that the category of smooth manifolds &lt;em&gt;also&lt;/em&gt; fails this axiom,
-essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\),
+essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\),
 there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\).
 The adjunction is somewhat mysterious to me as I begin to write this,
 so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
@@ -821,7 +878,7 @@ the first map sends \(g\) to the section
 &lt;p&gt;The second map recognizes that the above section and \(g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}\)
 agree on each stalk, and so sends our section back to \(g\).&lt;/p&gt;
 
-&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
+&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
 for a locally-ringed space.
 In the case of the sheaf of differentiable functions on a smooth manifold,
 the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
@@ -978,7 +1035,7 @@ that we can always write \(f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}
 and the functions \(\sqrt{f}\) and \(\operatorname{sgn}(f)\sqrt(f)\) are continuous.
 Therefore it is \(\mathfrak{m}_p\) that is infinite-dimensional,
 while \(\mathfrak{m}_p/\mathfrak{m}_p^2 = 0\).
-(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
+(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
 There is some surprisingly heavy machinery that goes into it.
 In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
 
@@ -1040,7 +1097,7 @@ to manage the expression of \(f\) in charts while asserting that these expressio
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
 in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
 last semester, but I thought it might be nice to have something to point people
 who missed it to, in order to stick to my assignment
@@ -1257,7 +1314,7 @@ is the following:&lt;/p&gt;
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
 The utility of the Yoneda lemma is likely 
 far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>/2019/09/06/Choo-Choo</id><content type="html" xml:base="/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
 &lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
 to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
 
@@ -1374,72 +1431,4 @@ heavy lifting is to find a way to adapt the relative train track technology appr
 
 &lt;p&gt;Since relative train track maps with nice properties have become a foundational
 tool in the study of \(\operatorname{Out}(F_n)\), my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry><entry><title type="html">A Digression</title><link href="/2019/07/13/A-Digression.html" rel="alternate" type="text/html" title="A Digression" /><published>2019-07-13T00:00:00-04:00</published><updated>2019-07-13T00:00:00-04:00</updated><id>/2019/07/13/A-Digression</id><content type="html" xml:base="/2019/07/13/A-Digression.html">&lt;p&gt;I’m not sure what this post set out to be. It ended up a digression
-on set theory vs. category theory.&lt;/p&gt;
-
-&lt;p&gt;In modern mathematics, there are two notions that might be truly called 
-foundational to all the work we do. These are &lt;em&gt;set theory&lt;/em&gt; and &lt;em&gt;category theory.&lt;/em&gt;
-Both theories are living, evolving things with their specialists, constructions
-and interesting problems, just like any other field of math, 
-but the core ideas are familiar and useful to nearly every mathematician.&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;set,&lt;/em&gt; naively, is just a way to collect a bunch of objects (called &lt;em&gt;elements&lt;/em&gt;)
-together. Since a set only cares about membership or lack thereof, duplicate
-elements are ignored. When we’re explicit about them, a set is typically
-denoted as a list of elements (thought of as unordered), surrounded by curly braces.
-So as sets, \(\{1,2,3,3,5\} = \{1,2,3\}\). A set comprises its elements, nothing more,
-nothing less. Thus, maps or functions \(f\) between sets \(X\) and \(Y\) are just
-assignments: to each element \(x\) in \(X\), we assign a (unique) element \(f(x)\)
-of \(Y\).&lt;/p&gt;
-
-&lt;p&gt;Things, mathematical objects, whatever you can pin down in language,
-may be elements (or not) of sets. Sets may even be elements of other sets, although
-here is a source of worry. Bertrand Russell observed in 1901 that allowing this
-kind of willy-nilly calling things sets yields the mathematical equivalent of the
-following silly story: In a small village there is one barber. He shaves the
-beards of only those men who does not shave themselves. Who shaves the barber?&lt;/p&gt;
-
-&lt;p&gt;The question, of course, has no good answer. If the barber shaves himself, then
-he cannot, but then he must. The mathematical response to Russell’s realization
-was to retrench a bit, but it also paved the way for set theory to become an 
-interesting field of research in its own right.&lt;/p&gt;
-
-&lt;p&gt;Set theory, thanks to work of Kurt Goedel and many others, has raised thorny,
-even unsolvable, problems that mathematicians working in other fields would often
-prefer to gloss over. One example is the following: If you have in front of you
-a finite collection of sets, maybe think of them as baskets in the produce section,
-you can obviously choose an element from each basket. This process is sometimes
-called a &lt;em&gt;choice function.&lt;/em&gt; If you imagine an infinitely long aisle at the grocery
-store with baskets evenly spaced along it, you might agree that you can still
-choose one element from each basket. Even though you won’t live to see it
-through, it’s easy to describe a way to decide how to choose the next element;
-each basket is eventually reached by you, even though you will never reach 
-every basket. This kind of infinity is &lt;em&gt;countably infinite,&lt;/em&gt; like the numbers
-we use for counting. But there are more kinds of infinity, and in those cases
-it’s maybe not immediately clear that we should still be able to take an object from
-each basket. The hypothesis that we &lt;em&gt;can&lt;/em&gt; is called the &lt;em&gt;Axiom of Choice,&lt;/em&gt; and it
-turns out to be “independent” of the rest of the rules of set theory we commonly employ.
-That is, the rest of set theory &lt;em&gt;can remain true&lt;/em&gt; whatever position we wish to take on
-the axiom of choice.&lt;/p&gt;
-
-&lt;p&gt;Category theory, (already touched on implicitly in &lt;a href=&quot;/2019/06/29/The-Category-of-Graphs.html&quot;&gt;The Category of Graphs&lt;/a&gt;) has
-a somewhat similar history, although it arose later. Introduced by Samuel Eilenberg
-and Saunders Mac Lane in their study of algebraic topology, it has since become
-a central perspective in many areas of mathematics and also grown into a field
-of interest in its own right. A category is a collection of objects and arrows.
-Note that I did not say a &lt;em&gt;set.&lt;/em&gt; This distinction is important theoretically
-but in practice categorical and set-theoretic reasoning are typically 
-sufficiently different that this can be ignored. In category theory,
-the sets themselves comprise a category, typically called &lt;strong&gt;Set&lt;/strong&gt; with
-objects sets and arrows functions between sets. This metaphor motivates
-the definition: arrows have a &lt;em&gt;domain&lt;/em&gt; and &lt;em&gt;codomain,&lt;/em&gt; just as functions
-between sets do. Arrows, like functions, may be &lt;em&gt;composed&lt;/em&gt; (i.e.
-“first add four, and then multiply by sixteen”), and the composition is
-associative, but need not be commutative.&lt;/p&gt;
-
-&lt;p&gt;This general picture allows one to talk about several different, yet related,
-situations together at once. Many common constructions in mathematics, including
-“sum” and “product” may be phrased as a certain kind of “universal” construction
-in the language of category theory. One such construction, the &lt;em&gt;free object,&lt;/em&gt;
-is particularly interesting within group theory. Originally I had meant to talk
-about it in this post, but perhaps the next one.&lt;/p&gt;</content><author><name></name></author><summary type="html">I’m not sure what this post set out to be. It ended up a digression on set theory vs. category theory.</summary></entry></feed>
+will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry></feed>
