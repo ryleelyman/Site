@@ -6,6 +6,19 @@ published: true
 Sometimes a pullback square is an intersection!
 Here's a short post about something cute that came up in my research this week.
 
+Aside from [NCNGT][NCNGT], which has been very lovely,
+my math this week has been carefully walking through a small side proposition
+in a paper I'm working on with [Ty Ghaswala][Ty].
+The idea is that graphs of groups come with a notion of a covering space due to Bass,
+and étale groupoids come with their own notion of covering spaces
+(for us, we're following the definition in Bridson–Haefliger),
+and given that you can construct an étale groupoid associated to any graph of groups,
+I wanted to reconcile the two notions.
+The proof ends up being a story of very careful bookkeeping;
+I spent much more of this week than I expected trying to gently pin down what goes where
+and why and balance the sudden explosion of notation it seemed to require—not the most fun,
+but so it goes. And then right at the very end I had this delightful little puzzle. Let me tell you about it.
+
 So I happened to be staring at the following commutative diagram of groups and homomorphisms,
 all of which are injective in the particular case I was concerned with
 
