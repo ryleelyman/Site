@@ -87,3 +87,6 @@ for which it suffices to argue that given an element in the intersection
 $$f_w(\mathscr{L}_w) \cap \operatorname{ad}(\delta_{\hat e})\iota_e(\mathscr{G}_e)$$,
 we can pull it back (as it were) and show that it really comes from an element of $$\mathscr{L}_e$$.
 This turned out to be true thanks to an extra property my situation enjoys!
+
+[NCNGT]: https://www.ncngt.org
+[Ty]: http://cirget.math.uqam.ca/~tyghaswala/
