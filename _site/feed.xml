@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-12T15:26:02-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Nielsen Realization</title><link href="http://localhost:4000/2021/06/12/Nielsen-Realization.html" rel="alternate" type="text/html" title="Nielsen Realization" /><published>2021-06-12T00:00:00-04:00</published><updated>2021-06-12T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/12/Nielsen-Realization</id><content type="html" xml:base="http://localhost:4000/2021/06/12/Nielsen-Realization.html">&lt;p&gt;I’m giving a talk in &lt;a href=&quot;https://www.ncngt.org/home&quot;&gt;Nearly Carbon Neutral Geometric Topology&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-17T22:09:49-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
+Here’s a short post about something cute that came up in my research this week.&lt;/p&gt;
+
+&lt;p&gt;So I happened to be staring at the following commutative diagram of groups and homomorphisms,
+all of which are injective in the particular case I was concerned with&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+  \mathscr{L}_{\hat e} @&amp;gt;f_{\hat e}&amp;gt;&amp;gt; \mathscr{G}_e \\
+  @V\iota_{\hat e}VV @VV\operatorname{ad}(\delta_{\hat e})\iota_eV \\
+  \mathscr{L}_w @&amp;gt;f_w&amp;gt;&amp;gt; \mathscr{G}_v.
+\end{CD}\]
+
+&lt;p&gt;It’s not really important what these groups &lt;em&gt;are,&lt;/em&gt;
+but in case you’re curious this is a commutative diagram associated to a morphism of graphs of groups—in
+my particular case, a covering map.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I wanted to know, is the image of \(\mathscr{L}_e\) under these maps
+equal to the intersection \(f_w(\mathscr{G}_w) \cap \operatorname{ad}(\delta_{\hat e})\iota_e(\mathscr{G}_e)\)?
+Since the situation is pretty general, I wondered if there was maybe a universal property argument:
+like, if in the situation above, the square is always a &lt;em&gt;pullback square,&lt;/em&gt;
+then maybe we would be able to show that the two subgroups above were equal.&lt;/p&gt;
+
+&lt;p&gt;It turns out that I had it kind of backwards:
+Given injective homomorphisms \(f\colon H \to G\) and \(g\colon K \to G\), the &lt;em&gt;pullback&lt;/em&gt;
+\(H\times_G K\) is (up to unique isomorphism) the intersection \(f(H) \cap g(K)\).
+Recall that the pullback
+is characterized by the following universal property:
+it fits in the following commutative diagram&lt;/p&gt;
+
+\[\begin{CD}
+  H\times_G K @&amp;gt;\pi_2&amp;gt;&amp;gt; K \\
+  @V\pi_1VV @VVgV \\
+  H @&amp;gt;f&amp;gt;&amp;gt; G,
+\end{CD}\]
+
+&lt;p&gt;and is universal for this property in the sense that given a group \(L\)
+fitting into the commutative diagram&lt;/p&gt;
+
+\[\begin{CD}
+  L @&amp;gt;p_2&amp;gt;&amp;gt; K \\
+  @Vp_1VV @VVgV \\
+  H @&amp;gt;f&amp;gt;&amp;gt; G
+\end{CD}\]
+
+&lt;p&gt;there is a unique homomorphism \(q\colon L \to H\times_GK\) such that
+\(\pi_2q = p_2\) and \(\pi_1q = p_1.\)
+(If there was justice and not MathJax in this world, I’d draw the full commutative diagram I’m alluding to here.)&lt;/p&gt;
+
+&lt;p&gt;So! Assuming \(f\) and \(g\) are injective, let’s prove that \(H\times_GK\) is the intersection
+\(f(H)\cap g(K)\).
+This is not hard: first observe that the intersection admits maps \(\pi_1 \colon f(H)\cap g(K) \to H\)
+and \(\pi_2\colon f(H)\cap g(K) \to K\):
+\(\pi_1\) takes \(g \in f(H)\cap g(K)\), recognizes we can write it as \(f(\hat g)\)
+for a unique \(\hat g\) in \(H\), and sends \(g\) to \(\hat g\).
+Injectivity of \(f\) assures that this really defines a well-defined homomorphism,
+while general properties of functions assure that \(\pi_1\) is injective.
+The compositions \(f\pi_1\) and \(g\pi_2\) are the natural inclusion \(\iota\colon f(H)\cap g(K) \to G\).
+The map \(\pi_2\) is defined similarly.
+Next observe that any group \(L\) fitting into the commutative diagram above
+clearly maps into \(f(H)\cap g(K)\), in other words,
+the map \(fp_1 = gp_2\) factor through a map \(q\colon L \to f(H)\cap g(K)\) as \(\iota q\).
+From here it’s not hard to argue that in fact \(\pi_1q = p_1\) and \(\pi_2q = p_2\); I’ll leave it to you.&lt;/p&gt;
+
+&lt;p&gt;Even though in my particular situation I had the universals backwards,
+I did find this realization clarifying:
+it showed that to prove my result,
+I needed to show that \(\mathscr{L}_e\) way up above has the universal property of the pullback,
+for which it suffices to argue that given an element in the intersection
+\(f_w(\mathscr{L}_w) \cap \operatorname{ad}(\delta_{\hat e})\iota_e(\mathscr{G}_e)\),
+we can pull it back (as it were) and show that it really comes from an element of \(\mathscr{L}_e\).
+This turned out to be true thanks to an extra property my situation enjoys!&lt;/p&gt;</content><author><name></name></author><summary type="html">Sometimes a pullback square is an intersection! Here’s a short post about something cute that came up in my research this week.</summary></entry><entry><title type="html">Nielsen Realization</title><link href="http://localhost:4000/2021/06/12/Nielsen-Realization.html" rel="alternate" type="text/html" title="Nielsen Realization" /><published>2021-06-12T00:00:00-04:00</published><updated>2021-06-12T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/12/Nielsen-Realization</id><content type="html" xml:base="http://localhost:4000/2021/06/12/Nielsen-Realization.html">&lt;p&gt;I’m giving a talk in &lt;a href=&quot;https://www.ncngt.org/home&quot;&gt;Nearly Carbon Neutral Geometric Topology&lt;/a&gt;
 about Nielsen realization for infinite-type surfaces.
 The format for the conference is that everyone records and uploads their talks beforehand,
 and then the conference format allows for discussion and comments via Discord.
@@ -1314,121 +1384,4 @@ is the following:&lt;/p&gt;
 &lt;p&gt;The proof is straightforward, once one figures out what needs proving.
 The utility of the Yoneda lemma is likely 
 far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry><entry><title type="html">Choo Choo</title><link href="http://localhost:4000/2019/09/06/Choo-Choo.html" rel="alternate" type="text/html" title="Choo Choo" /><published>2019-09-06T00:00:00-04:00</published><updated>2019-09-06T00:00:00-04:00</updated><id>http://localhost:4000/2019/09/06/Choo-Choo</id><content type="html" xml:base="http://localhost:4000/2019/09/06/Choo-Choo.html">&lt;p&gt;Today I posted my first paper, 
-&lt;a href=&quot;https://arxiv.org/abs/1909.03097&quot;&gt;Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups&lt;/a&gt;
-to the ArXiv! Here is a description of the paper and the idea behind the main application.&lt;/p&gt;
-
-&lt;h3 id=&quot;orbigraphs&quot;&gt;Orbigraphs&lt;/h3&gt;
-
-&lt;p&gt;One of my main goals currently is to better understand outer automorphisms of
-free products of finite groups. I became interested because I like &lt;a href=&quot;https://en.wikipedia.org/wiki/Coxeter_group&quot;&gt;Coxeter groups&lt;/a&gt;,
-and I was surprised to hear that we knew so little about their automorphisms.
-The natural place to start is the “free” Coxeter group \(W_n\), which is a free product of 
-\(n\) copies of \(\mathbb Z/2\mathbb Z\). I’m tempted to say the 
-&lt;em&gt;\(n\)th copower of \(\mathbb Z/2\mathbb Z\),&lt;/em&gt; but I guess it’s a little too scary-sounding.&lt;/p&gt;
-
-&lt;p&gt;Along the way I’ve become quite enamored with &lt;a href=&quot;https://en.wikipedia.org/wiki/Orbifold&quot;&gt;orbifolds&lt;/a&gt;. The idea behind
-orbifolds is that just as it is useful to study the fundamental group of a manifold both
-as a group of homotopy classes of loops and as deck transformations of the universal cover,
-so to should there be some object “downstairs” to look at in the case of a group acting
-properly discontinuously but not freely.&lt;/p&gt;
-
-&lt;p&gt;An orbigraph, then, is an orbifold quotient of a graph. In other words, the underlying
-topological space of an orbigrph is a (typically finite) graph. At a (typically finite)
-collection of points called &lt;em&gt;cone points,&lt;/em&gt; there is some nontrivial stabilizer information.
-Note that there is the related idea of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Graph_of_groups&quot;&gt;graph of groups&lt;/a&gt;, which is more
-general. Since the singular locus of an orbifold is required to be nowhere dense, the term
-“orbigraph” succinctly captures the restrictions I require. I also want to think of
-orbigraphs as having interesting and nontrivial algebraic topology—in essentially the
-same way as in Bass–Serre theory, but I take a slightly less combinatorial bent.&lt;/p&gt;
-
-&lt;p&gt;In the paper the underlying
-space of all orbigraphs in question are finite trees, but I am realizing there is maybe some
-(small) usefulness in orbigraphs whose underlying graph is not a tree.&lt;/p&gt;
-
-&lt;h3 id=&quot;train-tracks&quot;&gt;Train Tracks&lt;/h3&gt;
-
-&lt;p&gt;The main tool for studying automorphisms of free groups is what are called
-&lt;em&gt;relative train track maps.&lt;/em&gt; Relative train track maps provide a topological “normal form”
-for elements of \(\operatorname{Out}(F_n)\). They were introduced by Bestvina–Handel in&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;My adaptation to the case of orbigraphs
-builds on later developments by Bestvina–Feighn–Handel in 2000 and
-Feighn–Handel in 2011. The name “relative train track map” is inspired by the theory
-of surface homeomorphisms: there a &lt;em&gt;train track&lt;/em&gt; is a graph embedded into the surface
-in a prescribed wy.  The combinatorial properties of certain train tracks associated
-to the mapping class of a surface homeomorphism yield a surprisingly rich  amount of
-information about the dynamics of the homeomorphism.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The original idea of Bestvina–Handel’s paper was to attempt to adapt the theory
-to study outer automorphisms of free groups. Here, since any homeomorphism of a graph
-has a finite power homotopic to the identity, we’re forced to consider homotopy equivalences
-of graphs. More explicitly: if \(\varphi \in \operatorname{Out}(F_n)\) is an outer
-automorphism of a free group \(F_n\) of rank \(n\), \(G\) is a graph, and \(f\colon G \to G\)
-is a homotopy equivalence such that the (outer) action of \(f\) on \(\pi_1(G)\) is equal
-to \(\varphi\), then if \(\varphi\) has infinite order, \(f\) cannot be a homeomorphism.
-We may as well assume \(f\) sends vertices to vertices.
-Stallings tells us that in this situation, there is a vertex \(v\) of \(G\) and a pair of
-edges \(e\) and \(e'\) incident to \(v\) such that \(f(e)\) and \(f(e')\) share a common segment.
-We say \(f\) &lt;em&gt;folds&lt;/em&gt; these edges, or that they form an &lt;em&gt;illegal turn&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;train track map&lt;/em&gt; has the next best property: We say that \(f\colon G \to G\) is a
-&lt;em&gt;train track map&lt;/em&gt; if for each edge \(e\) of \(G\) and each positive integer \(k\),
-the \(k\)th iterate, \(f^k(e)\) is an immersed path, i.e. it is never sent over an
-illegal turn.&lt;/p&gt;
-
-&lt;p&gt;If you’d like to try playing with the definition here’s something to try: let
-\(G\) be the “rose with four petals.” That is, \(G\) has one vertex and four edges,
-each of which forms a loop. Label the edges \(A\) through \(D\) and choose an orientation
-for each. Let’s define \(f\) as \(A \mapsto B\), \(B \mapsto C\), \(C \mapsto D\), and
-\(D \mapsto AB\), i.e. the path that first follows the edge \(A\) and then \(B\).
-There are a few things to check: 1) Find a homotopy inverse for \(f\). 2) Which
-turns (pairs of oriented edges originating at a common vertex) are illegal? 3) Is
-\(f\) a train track map?&lt;/p&gt;
-
-&lt;p&gt;The word &lt;em&gt;relative&lt;/em&gt; above is sort of forced on us by the structure of more complicated 
-homotopy equivalences: as it turns out,
-it may not be the case that we can always avoid illegal turns.
-This is especially true in the “bad” case of polynomial growth, about which more below.&lt;/p&gt;
-
-&lt;h3 id=&quot;cat0-free-by-cyclic-groups&quot;&gt;CAT(0) Free-by-Cyclic Groups&lt;/h3&gt;
-
-&lt;p&gt;Gersten in 1994 showed that \(\operatorname{Out}(F_n)\) cannot act
-properly and cocompactly on a CAT(0) metric space when \(n \ge 4\).
-This is something of a bummer, but also to be expected: Acting by geometrically
-on a CAT(0) metric space is a nice situation to be in, and one might think that
-\(\operatorname{Out}(F_n)\) should be in some sense too complicated to do so.&lt;/p&gt;
-
-&lt;p&gt;I set out aiming to prove a version of Gersten’s theorem for more general free products,
-but instead I found essentially a &lt;em&gt;strong negation&lt;/em&gt; of the situation he described.
-Let me describe it in more detail:&lt;/p&gt;
-
-&lt;p&gt;Write \(F_n = \langle x_1,\dotsc,x_n\rangle\), let \(\Phi\) be an automorphism and suppose
-that \(\Phi(x_i) = u_ix_iv_i\), where \(u_i,v_i \in \langle x_1,\dotsc,x_{i-1}\rangle\).
-Let’s call such  automorphisms &lt;em&gt;upper triangular,&lt;/em&gt; by analogy with groups of matrices.
-In the free-by-cyclic group \(F_n\rtimes_\Phi\mathbb{Z} = \langle x_1,\dotsc,x_n,t\rangle\),
-this gives us the relation \(tx_it^{-1} = u_ix_iv_i\), which we can rewrite as
-\(x_i^{-1}u_i^{-1}tx_i = v_it\), which, if you squint, starts to look like a relation in
-an HNN extension with stable letter \(x_i\). In fact, by our assumption on \(u_i\) and \(v_i\),
-we actually do get a description of \(F_n\rtimes\mathbb{Z}\) as an iterated HNN extension.&lt;/p&gt;
-
-&lt;p&gt;This situation can be good and bad. Gersten gave an example of such a description of a free-by-cyclic
-group which is a “poison subgroup” for nonpositive curvature. There, \(u_i\) and \(v_i\)
-are such that \(u_i^{-1}t\) and \(v_it\) have no business being conjugate in a nice action on a CAT(0) space.
-On the other hand, in the situation where they &lt;em&gt;should&lt;/em&gt; be conjugate,
-Bridson–Haefliger give a construction that allows you to bootstrap a
-geometric action on a CAT(0) space up the HNN extension.&lt;/p&gt;
-
-&lt;p&gt;What I realized was that in the class of automorphisms I was studying,
-if it were the case that the automorphism was already upper-triangular
-with respect to the basis \(x_1,\dotsc,x_n\) we were handed, then
-\(u_i^{-1}t\) and \(v_it\) were &lt;em&gt;already&lt;/em&gt; conjugate, so Bridson–Haefliger says we win.
-So, my goal in constructing relative train track maps was to find a basis
-that has this nice property for a (power of) an arbitrary polynomially-growing
-outer automorphism. In the paper, the application is in Section 7, while the
-heavy lifting is to find a way to adapt the relative train track technology appropriately.&lt;/p&gt;
-
-&lt;p&gt;Since relative train track maps with nice properties have become a foundational
-tool in the study of \(\operatorname{Out}(F_n)\), my hope is that this construction
-will help in the study of outer automorphism groups of free products.&lt;/p&gt;</content><author><name></name></author><summary type="html">Today I posted my first paper, Train Tracks, Orbigraphs and CAT(0) Free-by-cyclic Groups to the ArXiv! Here is a description of the paper and the idea behind the main application.</summary></entry></feed>
+but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry></feed>

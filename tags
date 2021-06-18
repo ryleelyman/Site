@@ -1743,6 +1743,7 @@ published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	
 published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^published: true$/;"	s
 published: true	_posts/2021-06-09-A-Mathematical-Postcard.md	/^published: true$/;"	s
 published: true	_posts/2021-06-12-Nielsen-Realization.md	/^published: true$/;"	s
+published: true	_posts/2021-06-17-Pullbacks-and-Intersections.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
