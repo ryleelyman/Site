@@ -1,5 +1,188 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-17T22:09:49-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T19:16:15-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Free Actions On R Trees</title><link href="http://localhost:4000/2021/06/21/Free-Actions-on-R-Trees.html" rel="alternate" type="text/html" title="Free Actions On R Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-Actions-on-R-Trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-Actions-on-R-Trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
+with a free action on a &lt;em&gt;real tree&lt;/em&gt; is a free product of free abelian and surface groups.
+The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing
+free actions of such groups on real trees.&lt;/p&gt;
+
+&lt;p&gt;Let us begin by defining real trees.
+An &lt;em&gt;arc&lt;/em&gt; in a space \(X\) is an embedding \(\gamma\colon [a,b] \to X\)
+of a closed interval of \(\mathbb{R}\) in \(X\).
+If \((X,d)\) is a metric space,
+an arc in \(X\) is a &lt;em&gt;geodesic&lt;/em&gt; if the embedding is an isometric embedding—that is,
+for all \(s\) and \(t\) in \([a,b]\), we have&lt;/p&gt;
+
+\[d(\gamma(s),\gamma(t)) = |t - s|.\]
+
+&lt;p&gt;A &lt;em&gt;real tree&lt;/em&gt; or an \(\mathbb{R}\)&lt;em&gt;-tree&lt;/em&gt; is a metric space \((T,d)\)
+in which every two points are joined by a unique arc,
+and this arc is the image of a geodesic.&lt;/p&gt;
+
+&lt;h2 id=&quot;examples-of-real-trees&quot;&gt;Examples of real trees&lt;/h2&gt;
+
+&lt;p&gt;Let’s see a couple of examples of real trees.
+As a first example,
+\(\mathbb{R}\) is a real tree.
+If \(X\) is a simply connected simplicial complex of dimension \(1\),
+that is, a &lt;em&gt;simplicial tree,&lt;/em&gt;
+we can define a metric on \(X\)
+by declaring each edge of \(X\) to be isometric to an interval of \(\mathbb{R}\) of length \(1\),
+and then giving \(X\) the metric where the distance between two points is the length of a shortest path between them.
+In this metric, \(X\) becomes a real tree.
+The metric topology is in general strictly coarser than the simplicial topology.
+This means the “identity” map from the simplicial complex \(X\) to the metric space \(X\) is continuous,
+but its inverse need not be continuous.&lt;/p&gt;
+
+&lt;h2 id=&quot;free-abelian-groups-act-freely-on-real-trees&quot;&gt;Free abelian groups act freely on real trees&lt;/h2&gt;
+
+&lt;p&gt;It’s not hard to construct free actions of finitely generated free abelian groups on real trees,
+in fact the word “tree” is somewhat obfuscating:
+the real tree in question is the real line \(\mathbb{R}\).
+Let \(a_1,\dotsc,a_n\) be a basis for \(\mathbb{Z}^n\).
+Have each \(a_i\) act by translation on \(\mathbb{R}\) by some distance \(t_i\).
+If the \(t_i\) are not rationally related, then the resulting action of \(\mathbb{Z}^n\) is free.
+It also has &lt;em&gt;dense orbits,&lt;/em&gt; a property of some other actions of groups on real trees
+that I struggled to visualize—I find this simpler example helpful in that regard!&lt;/p&gt;
+
+&lt;h2 id=&quot;surface-groups-act-freely-on-real-trees&quot;&gt;Surface groups act freely on real trees&lt;/h2&gt;
+
+&lt;p&gt;The following is admittedly more complicated.
+Let \(S\) be a surface equipped with a complete Riemannian metric of constant sectional curvature \(-1\).
+A &lt;em&gt;measured geodesic lamination&lt;/em&gt; \((\mathscr{L},\mu)\) on \(S\)
+is a closed subset \(\mathscr{L} \subset S\) (the &lt;em&gt;lamination&lt;/em&gt;) which decomposes as a disjoint union of
+complete geodesics (called &lt;em&gt;leaves&lt;/em&gt;)
+together with a &lt;em&gt;transverse measure&lt;/em&gt; \(\mu\).
+This is an assignment, for each arc \(c\) transverse to \(\mathscr{L}\),
+of a Radon measure \(\mu|_c\) with support equal to \(c \cap \mathscr{L}\)
+that is invariant under homotopy transverse to \(\mathscr{L}\).&lt;/p&gt;
+
+&lt;p&gt;That’s a bit of a mouthful, sorry!
+A simple example of a measured geodesic lamination is just a closed geodesic \(\gamma\) on \(S\),
+where the transverse measure simply counts the points of intersections of arcs \(c\) with \(\gamma\).
+Notice that even if an arc \(c\) transverse to \(\gamma\) is homotopic to an arc with fewer points of intersection,
+this homotopy cannot be performed transverse to \(\gamma\), so the measure is really homotopy invariant.
+There are measured geodesic laminations with stranger properties
+than those that come from closed geodesics,
+but I think it can be helpful when trying to picture things involving geodesic laminations,
+to just imagine the closed geodesic case and think of a general measured geodesic lamination
+as being a sort of generalization or “limit” of this picture.
+Thurston has a cute picture in his notes on the geometry and topology of 3-manifolds, see below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/geodesiclamination.png&quot; alt=&quot;Thurston's picture of a geodesic lamination&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyway, let \((\mathscr{L},\mu)\) be a measured geodesic lamination.
+We can lift it to a \(\pi_1(S)\)-invariant measured geodesic lamination \((\tilde{\mathscr{L}},\tilde\mu)\)
+on the universal cover \(\tilde S\) of \(S\).
+I will describe &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/004093839190002L&quot;&gt;Morgan and Shalen’s&lt;/a&gt;
+construction of a real tree &lt;em&gt;dual&lt;/em&gt; to \((\tilde{\mathscr{L}},\tilde\mu)\).
+Since \((\tilde{\mathscr{L}},\tilde\mu)\) is \(\pi_1(S)\)-invariant,
+we will obtain an action of \(\pi_1(S)\) by isometries on the dual real tree.
+Let \(C\) be the set of complementary components of \(\tilde S\setminus \tilde{\mathscr{L}}\).
+Given components \(c\) and \(c'\),
+let \(\gamma\) be a path with one endpoint in \(c\) and the other in \(c'\)
+such that \(\gamma\) is transverse to \(\tilde{\mathscr{L}}\) and intersects each leaf of \(\tilde{\mathscr{L}}\)
+at most once.
+For example, given a point \(x\) in \(c\) and \(y\) in \(c'\),
+the path \(\gamma\) could be the unique geodesic from \(x\) to \(y\).
+Define&lt;/p&gt;
+
+\[d(c,c') = \int_\gamma d\tilde\mu.\]
+
+&lt;p&gt;Morgan and Shalen show that this defines a well-defined distance function on \(C\),
+and that this distance satisfies a \(0\)-hyperbolicity condition,
+therefore there is a real tree \(T\) equipped with an isometric embedding \(C \to T\)
+such that \(T\) is the smallest subtree containing the image of \(C\).
+This tree \(T\) is unique up to unique isometry,
+so in particular the action of \(\pi_1(S)\) on \(C\) extends to an action on \(T\).&lt;/p&gt;
+
+&lt;p&gt;Let us return to our example of a measured geodesic lamination \((\mathscr{L},\mu)\),
+where \(\mathscr{L}\) was a closed geodesic \(\gamma\)
+and the transverse measure \(\mu\) counted intersection points.
+Thinking of \(\gamma\) as an element of \(\pi_1(S)\),
+the lamination \(\tilde{\mathscr{L}}\) has a leaf for each conjugate of \(\gamma\) in \(\pi_1(S)\),
+and each leaf separates \(\tilde S\) into two components.
+The minimal intersection number for a path joining the complementary components is \(1\),
+so adjacent components are at distance one in \(T\).
+In fact, if you know a little Bass–Serre theory,
+the dual tree turns out to be exactly the Bass–Serre tree for the one-edge splitting of \(\pi_1(S)\)
+with edge group \(\langle\gamma\rangle\), where each edge has been assigned length \(1\)!
+Notice that the action of \(\pi_1(S)\) on this particular tree is &lt;em&gt;not&lt;/em&gt; free.&lt;/p&gt;
+
+&lt;p&gt;Morgan and Shalen show that the stabilizer of a point \(p\) in \(T\) under the action of \(\pi_1(S)\)
+is the stabilizer of the corresponding component of \(\tilde S \setminus \tilde{\mathscr{L}}\) if
+\(p\) is in the image of \(C\), and is the stabilizer of a leaf of \(\mathscr{L}\) otherwise.
+Their key result (which they prove with a Baire Category Theorem argument!)
+is the following.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; If \(S\) is a closed hyperbolic surface that is not the connect sum of three projective planes,
+there is a measured geodesic lamination \((\mathscr{L},\mu)\) on \(S\)
+all of whose leaves and complementary components are simply connected.&lt;/p&gt;
+
+&lt;p&gt;It follows that the action of \(\pi_1(S)\) on the dual tree \(T\) is free.
+Morgan and Shalen also prove algebraically that if \(S\) &lt;em&gt;is&lt;/em&gt; the connect sum of three projective planes,
+then \(\pi_1(S)\) cannot act freely on a real tree.&lt;/p&gt;
+
+&lt;h2 id=&quot;free-products-of-groups-acting-freely&quot;&gt;Free products of groups acting freely&lt;/h2&gt;
+
+&lt;p&gt;In the remainder of this post,
+we will prove the following theorem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; If \(A\) and \(B\) are groups acting freely on real trees \(S\) and \(T\),
+then there is a real tree \(X\) on which the free product \(A*B\) acts freely.&lt;/p&gt;
+
+&lt;p&gt;If \(G\) is a finitely generated group,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Grushko_theorem&quot;&gt;Grushko’s theorem&lt;/a&gt;
+says that the number of factors in any free product decomposition of \(G\) is finite,
+so applying the theorem inductively provides examples of free actions
+of finitely generated free products of free abelian and surface groups.
+(Provided, of course, that none of the surfaces in question are the projective plane,
+the Klein bottle, or the connect sum of three projective planes.)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; The free product \(G = A*B\) acts on a (simplicial) tree \(Y\)
+with two orbits of vertices and one orbit of edges with trivial edge stabilizers.
+By the orbit stabilizer theorem, the tree has the following description.
+The vertex set is the union of the sets of cosets of \(A\) and \(B\) in \(G\),
+and the edge set is the set of elements of \(G\).
+The edge labeled \(g\) connects the vertices labeled \(gA\) and \(gB\).
+Choose points \(s \in S\) and \(t \in T\).
+The real tree \(X\) will be constructed in the following way.
+We replace vertices of \(Y\) with copies of \(S\) or \(T\), corresponding to whether
+the vertex corresponded to a coset of \(A\) or \(B\), respectively,
+gluing the edges of \(Y\) so that one endpoint lies in a copy of \(S\) and the other in a copy of \(T\).&lt;/p&gt;
+
+&lt;p&gt;Explicitly the space \(X\) is the quotient of the disjoint union \(G\times S \sqcup G \times T \sqcup G\times [0,1]\)
+by the following relations, where \(g \in G\), \(x \in S\), \(y \in T\), \(a \in A\) and \(b \in B\):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;\((ga,x) \sim (g,a.x)\),&lt;/li&gt;
+  &lt;li&gt;\((gb,y) \sim (g,b.y)\),&lt;/li&gt;
+  &lt;li&gt;\((g,0) \sim (g,s)\) and&lt;/li&gt;
+  &lt;li&gt;\((g,1) \sim (g,t)\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One checks that the relations imply that there is a copy of \(S\) for each coset \(gA\) in \(G\),
+a copy of \(T\) for each coset \(gB\) in \(G\),
+and an edge \([0,1]\) for each element of \(G\).
+Since \(Y\) was a tree, \(X\) will be a real tree.
+The multiplication in the labels of the disjoint union yields an action of \(G\) on \(X\) by isometries.
+There is a natural equivariant map \(X \to Y\) that collapses each copy of \(S\) and each copy of \(T\) to a point.
+Each element \(g\) of \(G\) either acts freely on \(Y\) (in which case it must act freely on \(X\)),
+or it stabilizes a unique vertex of \(Y\), in which case \(g\) is conjugate to an element of \(A\) or \(B\).
+In this latter case, \(g\) preserves a copy of \(S\) or \(T\) 
+and one checks that it acts as an element of \(A\) or \(B\).
+But since the actions of \(A\) and \(B\) were free, it follows that if \(g\) is nontrivial, then it acts freely.
+\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
 Here’s a short post about something cute that came up in my research this week.&lt;/p&gt;
+
+&lt;p&gt;Aside from &lt;a href=&quot;https://www.ncngt.org&quot;&gt;NCNGT&lt;/a&gt;, which has been very lovely,
+my math this week has been carefully walking through a small side proposition
+in a paper I’m working on with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Ty Ghaswala&lt;/a&gt;.
+The idea is that graphs of groups come with a notion of a covering space due to Bass,
+and étale groupoids come with their own notion of covering spaces
+(for us, we’re following the definition in Bridson–Haefliger),
+and given that you can construct an étale groupoid associated to any graph of groups,
+I wanted to reconcile the two notions.
+The proof ends up being a story of very careful bookkeeping;
+I spent much more of this week than I expected trying to gently pin down what goes where
+and why and balance the sudden explosion of notation it seemed to require—not the most fun,
+but so it goes. And then right at the very end I had this delightful little puzzle. Let me tell you about it.&lt;/p&gt;
 
 &lt;p&gt;So I happened to be staring at the following commutative diagram of groups and homomorphisms,
 all of which are injective in the particular case I was concerned with&lt;/p&gt;
@@ -1167,221 +1350,4 @@ to manage the expression of \(f\) in charts while asserting that these expressio
 play nicely with the changes of charts.
 I’ll let you read the notes—and Haefliger too, hopefully.
 Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry><entry><title type="html">Category Theory Day One</title><link href="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html" rel="alternate" type="text/html" title="Category Theory Day One" /><published>2020-02-16T00:00:00-05:00</published><updated>2020-02-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/16/Category-Theory-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/02/16/Category-Theory-Day-One.html">&lt;p&gt;My office-mate asked me to give a “second lecture” in category theory
-in &lt;a href=&quot;http://www.danielkeliher.com/EminarCurrent.html&quot;&gt;Eminar&lt;/a&gt;, the Tufts graduate student seminar. I gave a first lecture
-last semester, but I thought it might be nice to have something to point people
-who missed it to, in order to stick to my assignment
-and begin at the Yoneda lemma. So, here is yet another rendition of the first
-hour of a category theory class.&lt;/p&gt;
-
-&lt;p&gt;The treatment is brisk. To the interested reader,
-I would highly recommend Emily Riehl’s &lt;a href=&quot;http://www.math.jhu.edu/~eriehl/context.pdf&quot;&gt;&lt;em&gt;Category Theory in Context&lt;/em&gt;&lt;/a&gt;,
-which is the main inspiration here and
-has the advantage of being available on the author’s website.
-I also recommend Saunders Mac Lane’s 
-&lt;em&gt;Category Theory for the Working Mathematician&lt;/em&gt;
-and Francis Borceux’s &lt;em&gt;Handbook of Categorical Algebra.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;categories&quot;&gt;Categories&lt;/h2&gt;
-&lt;p&gt;A &lt;em&gt;category&lt;/em&gt; \(C\) is a collection of &lt;em&gt;objects,&lt;/em&gt; say \(c\), \(d\), and 
-&lt;em&gt;arrows&lt;/em&gt; between them, say \(f\colon c\to d\).
-Given a pair of arrows as below&lt;/p&gt;
-
-\[\require{AMScd}\begin{CD} a @&amp;gt;f&amp;gt;&amp;gt; b @&amp;gt;g&amp;gt;&amp;gt; c,\end{CD}\]
-
-&lt;p&gt;we require the existence of their &lt;em&gt;composition,&lt;/em&gt; \(gf\colon a\to c\).
-Composition is associative, and for each object \(c\), there is a
-(unique) arrow \(1_c\colon c\to c\) which acts as an identity for composition
-of arrows.&lt;/p&gt;
-
-&lt;p&gt;Many familiar mathematical objects assemble into categories.
-To wit, there is the &lt;em&gt;category of sets,&lt;/em&gt; where objects are sets
-and arrows are functions of sets, and the &lt;em&gt;category of topological spaces,&lt;/em&gt;
-where objects are topological spaces and arrows are continuous maps.
-However, the notion of a category is flexible: not all categories
-have “sets with additional structure” as objects.
-For instance, a &lt;em&gt;preorder&lt;/em&gt; is the same data as a category
-where there is at most one arrow between any two objects.
-Here an arrow \(c\to d\) should be interpreted as saying \(c\le d\).&lt;/p&gt;
-
-&lt;p&gt;Note that I use the term &lt;em&gt;collection&lt;/em&gt; advisedly: Russell’s paradox
-says that there can be no set of all sets, so the category of
-sets has more than a set’s worth of objects! However,
-between any two sets, there is only a set’s worth of distinct functions.
-That is, if \(a\) and \(b\) are sets, there is a &lt;em&gt;set&lt;/em&gt;&lt;/p&gt;
-
-\[\operatorname{Set}(a,b) = \{f\colon a \to b\}.\]
-
-&lt;p&gt;Categories where this is the case for all objects are called &lt;em&gt;locally small.&lt;/em&gt;
-If additionally there is only a set’s worth of arrows in the entire category
-(and thus only a set’s worth of objects!), the category is called &lt;em&gt;small.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
-&lt;p&gt;If \(C\) and \(D\) are categories, a &lt;em&gt;functor&lt;/em&gt; \(F\colon C \to D\)
-is an assignment&lt;/p&gt;
-
-\[\begin{CD}a &amp;amp;\mapsto &amp;amp;Fa \\ @VfVV \mapsto @VVFfV \\ b &amp;amp;\mapsto &amp;amp;Fb.\end{CD}\]
-
-&lt;p&gt;I.e. for each object \(a\) of \(C\), there is an object \(Fa\) in \(D\),
-and for each arrow \(f\colon a\to b\) in \(C\), there is an arrow
-\(Ff\colon Fa\to Fb\). Additionally, \(F\) is required to satisfy&lt;/p&gt;
-
-\[F1_{a} = 1_{Fa}\]
-
-&lt;p&gt;for all \(a\) in \(C\), and \(F\) must
-respect composition in the sense that&lt;/p&gt;
-
-\[F(gf) = FgFf.\]
-
-&lt;p&gt;Such functors are sometimes called &lt;em&gt;covariant.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Every category \(C\) has an &lt;em&gt;opposite category&lt;/em&gt; 
-\(\newcommand{\op}{^{\mathrm{op}}}C\op\), which is obtained from
-formally reversing the direction of all the arrows.
-Thus if \(C\) has arrows&lt;/p&gt;
-
-\[\begin{CD} a @&amp;gt;f&amp;gt;&amp;gt; b @&amp;gt;g&amp;gt;&amp;gt; c,\end{CD}\]
-
-&lt;p&gt;then \(C\op\) has arrows&lt;/p&gt;
-
-\[\begin{CD} a @&amp;lt;f\op&amp;lt;&amp;lt; b @&amp;lt;g\op&amp;lt;&amp;lt; c.\end{CD}\]
-
-&lt;p&gt;Any statement about objects and arrows in \(C\) has a &lt;em&gt;dual&lt;/em&gt;
-statement about objects and arrows in \(C\op\), which is obtained
-by reversing the direction of all the arrows.
-If the proof of the original statement is categorical,
-dualizing the proof yields a proof of the dual statement for \(C\op\).&lt;/p&gt;
-
-&lt;p&gt;The definition of a functor admits dualization in \(C\) or in \(D\).
-The import is essentially the same as long as only one dualization is
-performed: the result is a &lt;em&gt;contravariant functor&lt;/em&gt; \(G\colon C\op \to D\):&lt;/p&gt;
-
-\[\begin{CD} a &amp;amp;\mapsto &amp;amp; Ga \\ @VfVV \mapsto @AAGfA \\ b &amp;amp;\mapsto &amp;amp;Gb.
-\end{CD}\]
-
-&lt;p&gt;Functors abound in mathematics. Many are so simple that we hardly think about
-them: for instance the “forgetful” 
-functor from the category of groups and homomorphisms
-to sets that sends a group \(G\) to its set of elements,
-and a group homomorphism to its action on underlying sets.&lt;/p&gt;
-
-&lt;p&gt;If \(C\) is a locally small category and \(c\) is an object,
-there are two particularly important functors \(C \to \operatorname{Set}\).
-Write \(C(c,b)\) and \(C(b,c)\) for the set of arrows in \(C\)
-with domain and codomain \(c\), respectively.
-If \(f\colon b\to d\) is an arrow in \(C\), there are
-functions&lt;/p&gt;
-
-\[f_*\colon C(c,b) \to C(c,d) \text{ and }f^*\colon C(d,c) \to C(b,c)\]
-
-&lt;p&gt;defined as \(f_*(g) = fg\) and \(f^*(h) = hf\), respectively.
-The assignments&lt;/p&gt;
-
-\[\begin{CD} b &amp;amp;\mapsto &amp;amp; C(c,b) &amp;amp;\qquad\qquad &amp;amp;b &amp;amp;\mapsto &amp;amp; C(b,c) \\
-    @VfVV \mapsto @VVf_*V \qquad\qquad @VfVV \mapsto @AAf*A \\
-    d &amp;amp;\mapsto &amp;amp;C(c,d) &amp;amp;\qquad\qquad &amp;amp;d &amp;amp;\mapsto &amp;amp; C(d,c)
-  \end{CD}\]
-
-&lt;p&gt;define covariant and contravariant functors 
-\(C(c,-)\colon C \to \operatorname{Set}\) and&lt;br /&gt;
-\(C(-,c)\colon C\op\to\operatorname{Set}\), respectively.&lt;/p&gt;
-
-&lt;h3 id=&quot;natural-transformations&quot;&gt;Natural Transformations&lt;/h3&gt;
-&lt;p&gt;Just as we have defined functors between categories,
-it is  useful to consider &lt;em&gt;functor categories,&lt;/em&gt;
-whose elements are functors \(C\to D\). To do this, we need 
-a  notion of a morphism between functors. It turns out
-that the right notion is a &lt;em&gt;natural transformation.&lt;/em&gt;
-If \(F,G\colon C \to D\) are functors, a natural transformation
-\(\eta\colon F\Rightarrow G\) is a collection of maps
-\(\eta_c\colon Fc \to Gc\), one for each object \(c\) of \(C\)
-such that for every arrow \(f\colon c \to d\), the following
-diagram commutes&lt;/p&gt;
-
-\[\begin{CD}
-  Fc @&amp;gt;\eta_c&amp;gt;&amp;gt; Gc \\
-  @VFfVV @VVGfV \\
-  Fd @&amp;gt;\eta_d&amp;gt;&amp;gt; Gd.
-\end{CD}\]
-
-&lt;p&gt;Any directed path in a diagram of objects and arrows within
-a category like the above yields an arrow from the initial 
-“vertex” of the path to the terminal one by reading off the
-labelled arrows. A diagram &lt;em&gt;commutes&lt;/em&gt; if any two directed
-paths with the same endpoints yield equal arrows.
-Thus, to say that the above diagram commutes asserts the
-equality&lt;/p&gt;
-
-\[Gf\eta_c = \eta_d Ff.\]
-
-&lt;p&gt;The standard example of a natural transformation is the following.
-Let \(k\) be a field, and consider the category of \(k\)-vector spaces
-and linear transformations. There is a contravariant functor
-that sends a vector space \(V\) to its &lt;em&gt;dual&lt;/em&gt; \(V^*\), namely the vector
-space of linear transformations \(V\to k\).
-A linear map \(f\colon V \to W\) is sent to a map \(f^*\colon W^*\to V^*\)
-which is defined as follows.
-If \(\lambda\colon W \to k\) is an element of \(W^*\),
-\(f^*(\lambda)\) is the linear  map&lt;/p&gt;
-
-\[\lambda f\colon V\to k.\]
-
-&lt;p&gt;Thus there is a &lt;em&gt;covariant&lt;/em&gt; functor sending a vector space \(V\)
-to its “double dual” \(V^{**}=(V^*)^*\).
-There is a natural transformation \(ev\) from the identity functor
-to the double dual functor.
-At a given vector space \(V\), the map \(ev_V\) sends a vector \(v\)
-to the linear map \(V^*\to k\) defined by “evaluation at \(v\),”
-namely&lt;/p&gt;
-
-\[\lambda \mapsto \lambda(v),\quad  \lambda \in V^*.\]
-
-&lt;p&gt;Naturality of \(ev\) asserts that for \(f\colon V \to W\)
-a linear map, the following diagram commutes&lt;/p&gt;
-
-\[\begin{CD}
-  V @&amp;gt;ev_V&amp;gt;&amp;gt; V^{**} \\
-  @VfVV @VVf^{**}V \\
-  W @&amp;gt;ev_W&amp;gt;&amp;gt; W^{**}.
-\end{CD}\]
-
-&lt;p&gt;To show this, consider a vector \(v \in V\).
-The element \(f^{**}(ev_V(v)) \in W^{**}\) is
-the linear map&lt;/p&gt;
-
-\[ev_V(v)\circ f^*\colon W^*\to k,\]
-
-&lt;p&gt;so its action on \(\lambda \in W*\) is&lt;/p&gt;
-
-\[ev_V(v)(f^*(\lambda)) = ev_V(v)(\lambda f) = 
-\lambda (f(v)) = ev_W(f(v))(\lambda),\]
-
-&lt;p&gt;demonstrating naturality.&lt;/p&gt;
-
-&lt;p&gt;The map \(ev_V\) is an isomorphism when \(V\) is finite dimensional.
-Thus we say that when restricted to the &lt;em&gt;subcategory&lt;/em&gt;
-of finite dimensional vector spaces, \(ev\) is a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-yoneda-lemma&quot;&gt;The Yoneda Lemma&lt;/h3&gt;
-&lt;p&gt;Perhaps the fundamental result in category theory
-is the following:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; (The Yoneda Lemma)    &lt;br /&gt;
- Let \(C\) be a locally small category and
- \(F\colon C \to \operatorname{Set}\) a functor.
- For each object \(c\) of \(C\), there is a bijection&lt;/p&gt;
-&lt;/blockquote&gt;
-
-\[\{\alpha\colon C(c,-)\Rightarrow F\} \longleftrightarrow \{x \in Fc\}\]
-
-&lt;blockquote&gt;
-  &lt;p&gt;implemented by sending a natural transformation
- \(\alpha\) to the element \(\alpha_c(1_c)\).
- This bijection is natural in \(F\) and \(c\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The proof is straightforward, once one figures out what needs proving.
-The utility of the Yoneda lemma is likely 
-far from obvious when one first meets it,
-but it turns out to be a major tool in category theory.&lt;/p&gt;</content><author><name></name></author><summary type="html">My office-mate asked me to give a “second lecture” in category theory in Eminar, the Tufts graduate student seminar. I gave a first lecture last semester, but I thought it might be nice to have something to point people who missed it to, in order to stick to my assignment and begin at the Yoneda lemma. So, here is yet another rendition of the first hour of a category theory class.</summary></entry></feed>
+and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry></feed>

@@ -1556,6 +1556,12 @@ Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
 Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
+Examples of real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Examples of real trees$/;"	s
+Examples of real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Examples of real trees$/;"	s
+Free abelian groups act freely on real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Free abelian groups act freely on real trees$/;"	s
+Free abelian groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free abelian groups act freely on real trees$/;"	s
+Free products of groups acting freely	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Free products of groups acting freely$/;"	s
+Free products of groups acting freely	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free products of groups acting freely$/;"	s
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
 Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
@@ -1568,6 +1574,8 @@ Morphisms and maps of graphs of groups	_posts/2020-12-21-The-Train-Track-Algorit
 Morphisms and maps of graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
+Nielsen Realization	_site/2021/06/12/Nielsen-Realization.html	/^      <h1>Nielsen Realization<\/h1>$/;"	h
+Nielsen Realization	_site/blog.html	/^    <h2><a href="\/2021\/06\/12\/Nielsen-Realization.html">Nielsen Realization<\/a><\/h2>$/;"	i
 Notes On Orbifolds	_site/2021/03/14/Notes-on-Orbifolds.html	/^      <h1>Notes On Orbifolds<\/h1>$/;"	h
 Notes On Orbifolds	_site/blog.html	/^    <h2><a href="\/2021\/03\/14\/Notes-on-Orbifolds.html">Notes On Orbifolds<\/a><\/h2>$/;"	i
 Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds Day One<\/h1>$/;"	h
@@ -1577,12 +1585,16 @@ Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
+Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^      <h1>Pullbacks And Intersections<\/h1>$/;"	h
+Pullbacks And Intersections	_site/blog.html	/^    <h2><a href="\/2021\/06\/17\/Pullbacks-and-Intersections.html">Pullbacks And Intersections<\//;"	i
 Research	Research.md	/^# Research$/;"	c
 Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Service	service.md	/^# Service$/;"	c
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
+Surface groups act freely on real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Surface groups act freely on real trees$/;"	s
+Surface groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Surface groups act freely on real trees$/;"	s
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
 Teaching	teaching.md	/^# Teaching$/;"	c
 The Algebraic Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space$/;"	s
@@ -1744,6 +1756,8 @@ published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups
 published: true	_posts/2021-06-09-A-Mathematical-Postcard.md	/^published: true$/;"	s
 published: true	_posts/2021-06-12-Nielsen-Realization.md	/^published: true$/;"	s
 published: true	_posts/2021-06-17-Pullbacks-and-Intersections.md	/^published: true$/;"	s
+published: true	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^published: true$/;"	s
+published: true	_posts/2021-06-21-Free-actions-on-real-trees.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
