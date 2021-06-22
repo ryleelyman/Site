@@ -10,7 +10,7 @@ Curriculum Vitae: [PDF]
 
 I earned my PhD in Mathematics from [Tufts University](https://math.tufts.edu),
 where my advisor was [Kim Ruane](http://www.tufts.edu/~kruane01/).
-In the fall I will be a postdoc at
+I am a postdoc at
 [Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
 My mentor at Rutgers is Lee Mosher.
 
