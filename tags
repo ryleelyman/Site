@@ -1564,7 +1564,6 @@ Free products of groups acting freely	_posts/2021-06-21-Free-Actions-on-R-Trees.
 Free products of groups acting freely	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free products of groups acting freely$/;"	s
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
-Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Geometric Group Theory without Boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
@@ -1582,6 +1581,8 @@ Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds 
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
+Outreach	outreach.md	/^# Outreach$/;"	c
+Outreach	service.md	/^# Outreach$/;"	c
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
@@ -1589,8 +1590,8 @@ Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^
 Pullbacks And Intersections	_site/blog.html	/^    <h2><a href="\/2021\/06\/17\/Pullbacks-and-Intersections.html">Pullbacks And Intersections<\//;"	i
 Research	Research.md	/^# Research$/;"	c
 Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
+Rutgers University	teaching.md	/^## Rutgers University$/;"	s	chapter:Teaching
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
-Service	service.md	/^# Service$/;"	c
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
 Surface groups act freely on real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Surface groups act freely on real trees$/;"	s
@@ -1621,6 +1622,7 @@ Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:mat
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
 Train track maps	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Train track maps$/;"	s
 Train track maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	i
+Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
@@ -1711,12 +1713,14 @@ input	_site/assets/css/style.css	/^button, input { \/* 1 *\/ overflow: visible; 
 input	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
 input	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 kbd	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
+layout: post	_posts/2021-06-21-Geometric-group-theory-without-boundaries.md	/^layout: post$/;"	s
 legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ color: inherit; \/* 2 *\/ display: table; \/* 1 *\/ m/;"	s
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$/;"	s
 math: false	_posts/2021-03-14-Notes-on-Orbifolds.md	/^math: false$/;"	s
 math: false	index.md	/^math: false$/;"	s
+math: false	outreach.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
 math: true	Research.md	/^math: true$/;"	s
