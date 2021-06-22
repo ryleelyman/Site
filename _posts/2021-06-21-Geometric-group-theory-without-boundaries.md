@@ -1,7 +1,7 @@
 ---
 layout: post
 ---
-Along with [Macarena Arenas][Macarena], [[Sami Douba]] and [[Abdul Zalloum]],
+Along with [Macarena Arenas][Macarena], [Sami Douba] and [Abdul Zalloum],
 I am organizing a virtual "summer school" that began today and will run until July 2.
 More info is available on the [summer school website](https://sites.google.com/view/ggtwbii/home?authuser=0).
 This is the second iteration of the summer school!
