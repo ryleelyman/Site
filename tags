@@ -1554,6 +1554,8 @@ Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h
 Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Category-Theory-Day-One.html">Category Theory Day One<\/a><\/h2/;"	i
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
+Edges belong to two triangles	_posts/2021-06-25-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
+Edges do not cross	_posts/2021-06-25-The-Farey-graph.md	/^## Edges do not cross$/;"	s
 Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
 Examples of real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Examples of real trees$/;"	s
@@ -1616,6 +1618,7 @@ The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Spac
 The Usual Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	i
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
+The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-25-The-Farey-graph.md	/^## The action of $$\\operatorname{SL}_2(\\mathbb{Z})$\$$/;"	s
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
@@ -1731,6 +1734,7 @@ math: true	_posts/2020-02-16-Category-Theory-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: true$/;"	s
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
+math: true	_posts/2021-06-25-The-Farey-graph.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I

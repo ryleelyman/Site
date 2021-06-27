@@ -1554,6 +1554,8 @@ Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h
 Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Category-Theory-Day-One.html">Category Theory Day One<\/a><\/h2/;"	i
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
+Edges belong to two triangles	_posts/2021-06-25-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
+Edges do not cross	_posts/2021-06-25-The-Farey-graph.md	/^## Edges do not cross$/;"	s
 Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
 Examples of real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Examples of real trees$/;"	s
@@ -1564,7 +1566,6 @@ Free products of groups acting freely	_posts/2021-06-21-Free-Actions-on-R-Trees.
 Free products of groups acting freely	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free products of groups acting freely$/;"	s
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
-Geometric Group Theory without Boundaries	Research.md	/^## Geometric Group Theory without Boundaries$/;"	s	chapter:Research
 Geometric Group Theory without Boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
@@ -1591,6 +1592,7 @@ Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^
 Pullbacks And Intersections	_site/blog.html	/^    <h2><a href="\/2021\/06\/17\/Pullbacks-and-Intersections.html">Pullbacks And Intersections<\//;"	i
 Research	Research.md	/^# Research$/;"	c
 Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
+Rutgers University	teaching.md	/^## Rutgers University$/;"	s	chapter:Teaching
 Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
@@ -1616,12 +1618,14 @@ The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Spac
 The Usual Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	i
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
+The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-25-The-Farey-graph.md	/^## The action of $$\\operatorname{SL}_2(\\mathbb{Z})$\$$/;"	s
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
 Train track maps	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Train track maps$/;"	s
 Train track maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	i
+Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
@@ -1712,6 +1716,7 @@ input	_site/assets/css/style.css	/^button, input { \/* 1 *\/ overflow: visible; 
 input	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
 input	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 kbd	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
+layout: post	_posts/2021-06-21-Geometric-group-theory-without-boundaries.md	/^layout: post$/;"	s
 legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ color: inherit; \/* 2 *\/ display: table; \/* 1 *\/ m/;"	s
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
@@ -1729,6 +1734,7 @@ math: true	_posts/2020-02-16-Category-Theory-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: true$/;"	s
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
+math: true	_posts/2021-06-25-The-Farey-graph.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I

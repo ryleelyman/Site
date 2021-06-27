@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-21T21:37:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Free Actions On Real Trees</title><link href="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html" rel="alternate" type="text/html" title="Free Actions On Real Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-actions-on-real-trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-27T18:07:59-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/25/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-25T00:00:00-04:00</published><updated>2021-06-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/25/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/25/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
+is an object that appears in many guises throughout math.
+For me, it appears several times as a complex related to
+the outer automorphism group of a free group of rank two,
+but it has connections to things like continued fractions as well.
+The purpose of this post is introduce the Farey graph
+and prove a couple of basic properties of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/FareyGraph.png&quot; alt=&quot;The first four layer of the Farey graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Farey graph has as vertices all rational numbers
+expressed as fractions \(\frac{p}{q}\) in lowest terms with \(q \ge 0\),
+together with a vertex for \(\frac{1}{0}\).
+Two vertices \(\frac{a}{b}\) and \(\frac{c}{d}\) span an edge
+when the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d \end{pmatrix}\) has determinant \(\pm 1\).
+Above is a picture; thanks to StackExchange user &lt;a href=&quot;https://tex.stackexchange.com/a/165845/212812&quot;&gt;marchetto&lt;/a&gt;
+for the TikZ code for producing the Farey diagram, to which I mainly added numbers.
+I’d like to demonstrate that the visual properties of the Farey graph hold:
+namely, that every edge belongs to exactly two triangles,
+and that edges do not cross.&lt;/p&gt;
+
+&lt;h2 id=&quot;edges-belong-to-two-triangles&quot;&gt;Edges belong to two triangles&lt;/h2&gt;
+
+&lt;p&gt;In this section we will show that every edge of the Farey graph belongs to two triangles.
+The key tool will be a lemma I learned from
+&lt;a href=&quot;http://pi.math.cornell.edu/~hatcher/TN/TNch1.pdf&quot;&gt;Allen Hatcher’s &lt;em&gt;Topology of Numbers&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Suppose \(a\) and \(b\) are integers with no common divisor.
+If one integral solution of \(ay - bx = n\) is \((x,y) = (c,d)\),
+then the general integral solution is \((x,y) = (c + ka, d + kb)\) for integer \(k\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Consider a general solution \((x,y)\).
+Given our known solution \((c,d)\), we see that \(a(y-d) - b(x -c) = n - n = 0\).
+Since \(a\) and \(b\) have no common factors, it follows that \(a\) divides \(x-c\) and \(b\) divides \(y-d\).
+In fact, we have \(a(y-d) = abk = b(x-c)\), from which the result follows. \(\blacksquare\)&lt;/p&gt;
+
+&lt;p&gt;A variant on the proof shows that if \(ac - bd = -n\), then the general integral solution for
+\(ax - by = n\) is \((ka - c,kb - d)\).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Proposition.&lt;/strong&gt; Suppose that \(\frac ab\) and \(\frac cd\) are in the Farey graph,
+and that \(ad &amp;gt; bc\). If \(\frac xy\) is adjacent to both \(\frac ab\) and \(\frac bc\),
+then \(\frac xy = \frac{a\pm c}{b\pm d}\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
+Suppose \(\frac ab\) and \(\frac cd\) are as in the statement.
+Now suppose \(\frac xy\) is adjacent to both \(\frac ab\) and \(\frac cd\).
+Suppose first for definiteness that \(ay - bx = 1\).
+By the lemma, we have that \((x,y) = (ka + c, kb + d)\) for some integer \(k\).
+By assumption, we have \(cy - dx = \pm 1\), so the lemma shows that \((x,y) = (\ell c \mp a,\ell d \mp b)\)
+for some integer \(\ell.\)
+Therefore we have \(a(k \pm 1) = (\ell - 1)c\) and \(b(k \pm 1) = (\ell-1)d\),
+from which it follows that \((k \pm 1)(\ell - 1)(ad - bc) = 0\).
+Therefore either \(k = \mp 1\) or \(\ell = 1\),
+both of which imply \((x,y) = (c \mp a,d \mp b)\).
+If instead we have \(ay-bx = -1\), then the conclusion is the same.
+We of course have \(\frac{c \mp a}{d \mp b} = \frac{a \pm c}{b \pm d}\). \(\blacksquare\)&lt;/p&gt;
+
+&lt;h2 id=&quot;the-action-of-operatornamesl_2mathbbz&quot;&gt;The action of \(\operatorname{SL}_2(\mathbb{Z})\)&lt;/h2&gt;
+
+&lt;p&gt;In this section we analyze the action of \(\operatorname{SL}_2(\mathbb{Z})\) on the Farey diagram,
+proving that it is transitive on edges and triangles.&lt;/p&gt;
+
+&lt;p&gt;First let us define the action of \(\operatorname{SL}_2(\mathbb{Z})\) on the Farey diagram.
+The action of \(\operatorname{SL}_2(\mathbb{Z})\) on \(\mathbb{Z}^2\)
+restricts to an action on the vertex set of the Farey diagram.
+Indeed, \(a\) and \(b\) are relatively prime if and only if there exists integers \(x\) and \(y\)
+such that \(ax + by = 1\)
+if and only if \((a,b)\) is the first column of a matrix in \(\operatorname{SL}_2(\mathbb{Z})\)
+if and only if there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) taking \((1,0)\) to \((a,b)\).
+In terms of fractions, if \(z = \frac{p}{q}\) is a vertex of the Farey diagram,
+then the action of \(\begin{pmatrix} a &amp;amp; b \\ c &amp;amp; d \end{pmatrix}\) sends \(z\) to&lt;/p&gt;
+
+\[\frac{az + b}{cz + d} = \frac{ap + bq}{cp + dq}.\]
+
+&lt;p&gt;This action preserves adjacency: the reader is encouraged to figure out why.
+Indeed, the action is transitive on edges:
+can you show that if \(\frac ab\) and \(\frac cd\) are adjacent in the diagram,
+there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) sending the edge between \(\frac 01\) and \(\frac 10\)
+to the edge between \(\frac ab\) and \(\frac cd\)?&lt;/p&gt;
+
+&lt;p&gt;Finally, put a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cyclic_order&quot;&gt;cyclic order&lt;/a&gt; on the vertex set of the Farey diagram
+by taking the cyclic order induced by the linear order on \(\mathbb{Q} \cup \{\infty\}\).
+That is, given three distinct elements \(p\), \(q\) and \(r\) in \(\mathbb{Q}\cup\infty\),
+say \((p,q,r)\) is &lt;em&gt;cyclically ordered&lt;/em&gt; if
+\(a &amp;lt; b &amp;lt; c\) or \(b &amp;lt; c &amp;lt; a\) or \(c &amp;lt; a &amp;lt; b\) holds.
+For example \((\infty,-2,0)\) is cyclically ordered.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Proposition.&lt;/strong&gt; Suppose \(p\), \(q\) and \(r\) are the vertices of a triangle in the Farey diagram and that
+\((p,q,r)\) is cyclically ordered.
+Then there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) sending \((0,1,\infty)\) to \((p,q,r)\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
+Suppose \(p = \frac cd\) and \(r = \frac ab\).
+Because \(p\) and \(r\) are adjacent in the Farey diagram,
+the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d \end{pmatrix}\) has determinant \(\pm 1\).&lt;/p&gt;
+
+&lt;p&gt;Assume first that \(ad-bc = 1\), i.e. that \(p &amp;lt; r\).
+Then the claim is that \(q = \frac{a+c}{b+d}\),
+which is the image of \(\frac 11\) under the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d\end{pmatrix}\).
+In other words, the claim is that \((p,\frac{a-c}{b-d},r)\) is not circularly ordered,
+for which we need to show that \(p&amp;lt;\frac{a-c}{b-d}&amp;lt;r\) is false.
+Assume first that \(b-d\) is nonnegative.
+Then \(ad &amp;gt; bc\) implies \(ab - ad &amp;lt; ab - bc\), which implies \(\frac ab &amp;lt; \frac{a-c}{b-d}\), and the claim follows.
+Next assume that \(b-d\) is negative.
+Then \(ad &amp;gt; bc\) implies that \(ad - dc &amp;gt; bc - dc\), which implies \(\frac{a-c}{b-d} &amp;lt; \frac cd\),
+and the claim follows (Note that we assume that \(d\) is nonnegative.)&lt;/p&gt;
+
+&lt;p&gt;Next assume that \(ad - bc = -1\), i.e. that \(r &amp;lt; p\).
+Then the claim is that \(q = \frac{a-c}{b-d}\),
+which is the image of \(\frac 11\) under the matrix \(\begin{pmatrix} a &amp;amp; - c \\ b &amp;amp; -d\end{pmatrix}\)
+in \(\operatorname{SL}_2(\mathbb{Z})\).
+In other words, the claim is that \((p,\frac{a+c}{b+d},r)\) is not circularly ordered,
+for which we need to show that it neither \(\frac{a+c}{b+d} &amp;lt; r &amp;lt; p\) nor \(r &amp;lt; p &amp;lt; \frac{a+c}{b+d}\) holds.
+In fact, \(ad &amp;lt; bc\) implies \(ab + bc &amp;gt; ab + ad\) holds, which implies \(\frac{a+c}{b+d} &amp;gt; \frac ab\).
+But, \(ad &amp;lt; bc\) implies that \(ad + dc &amp;lt; bc + dc\), which implies that \(\frac{a+c}{b+d} &amp;lt; \frac cd\),
+and the claim follows. \(\blacksquare\)&lt;/p&gt;
+
+&lt;p&gt;In fact, the proof above shows that the matrix in \(\operatorname{SL}_2(\mathbb{Z})\)
+is unique up to multiplication of all the entries by \(-1\).
+This corresponds to the matrix \(\begin{pmatrix} -1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}\),
+which generates the &lt;em&gt;center&lt;/em&gt; of \(\operatorname{SL}_2(\mathbb{Z})\).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; The stabilizer of a triangle is isomorphic to \(C_3 \times C_2 \cong C_6\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An explicit generator for the cyclic group of order \(6\) stabilizing the triangle spanned by \((0,1,\infty)\)
+is \(\begin{pmatrix} 1 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}\).&lt;/p&gt;
+
+&lt;p&gt;The proposition also yields an element of \(\operatorname{SL}_2(\mathbb{Z})\) interchanging \(0\) and \(\infty\):
+this element is \(\begin{pmatrix} 0 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}\).
+This element is unique up to multiplication by \(-1\) and has order \(4\), so we have proven the following.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; The stabilizer of an edge is isomorphic to \(C_4\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;edges-do-not-cross&quot;&gt;Edges do not cross&lt;/h2&gt;
+
+&lt;p&gt;We finish this post by proving that edges of the Farey diagram do not cross,
+in the sense that if \(p\) and \(q\) are adjacent and \(r\) and \(s\) are adjacent
+and \(p\), \(q\), \(r\) and \(s\) are all distinct,
+then if \((p,r,q)\) is cyclically ordered, then \((p,s,q)\) is also cyclically ordered.
+By results in the previous section, we may assume \(p = 0\) and \(q = \infty\).
+That is, if \(r = \frac ab\) is positive and \(\frac cd\) is adjacent to \(\frac ab\),
+then \(\frac cd\) is also positive.
+By swapping the roles of \(r\) and \(s\) if necessary, we may assume that \(ad - bc = 1\).
+Since we assume that \(a\), \(b\), and \(d\) are positive integers, then we must have \(c \ge 0\)
+in order to satisfy \(ad -bc = 1\).&lt;/p&gt;</content><author><name></name></author><summary type="html">The Farey graph, or Farey diagram, is an object that appears in many guises throughout math. For me, it appears several times as a complex related to the outer automorphism group of a free group of rank two, but it has connections to things like continued fractions as well. The purpose of this post is introduce the Farey graph and prove a couple of basic properties of it.</summary></entry><entry><title type="html">Free Actions On Real Trees</title><link href="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html" rel="alternate" type="text/html" title="Free Actions On Real Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-actions-on-real-trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
 with a free action on a &lt;em&gt;real tree&lt;/em&gt; is a free product of free abelian and surface groups.
 The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing
 free actions of such groups on real trees.&lt;/p&gt;
@@ -168,7 +322,24 @@ or it stabilizes a unique vertex of \(Y\), in which case \(g\) is conjugate to a
 In this latter case, \(g\) preserves a copy of \(S\) or \(T\) 
 and one checks that it acts as an element of \(A\) or \(B\).
 But since the actions of \(A\) and \(B\) were free, it follows that if \(g\) is nontrivial, then it acts freely.
-\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
+\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Geometric Group Theory Without Boundaries</title><link href="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html" rel="alternate" type="text/html" title="Geometric Group Theory Without Boundaries" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html">&lt;p&gt;Along with &lt;a href=&quot;https://www.dpmms.cam.ac.uk/~mcr59/&quot;&gt;Macarena Arenas&lt;/a&gt;, &lt;a href=&quot;https://www.math.mcgill.ca/sdouba/&quot;&gt;Sami Douba&lt;/a&gt; and &lt;a href=&quot;https://mast.queensu.ca/~abdul/&quot;&gt;Abdul Zalloum&lt;/a&gt;,
+I am organizing a virtual “summer school” that began today and will run until July 2.
+More info is available on the &lt;a href=&quot;https://sites.google.com/view/ggtwbii/&quot;&gt;summer school website&lt;/a&gt;.
+This is the second iteration of the summer school!
+I spoke in the first iteration; the purpose of this post is to house links to the notes,
+recordings and exercises for the mini-course I gave.&lt;/p&gt;
+
+&lt;p&gt;I gave three lectures in this summer school on Bass and Serre’s theory
+of graphs of groups and groups acting on trees.&lt;/p&gt;
+
+&lt;p&gt;Here are notes (with the annotations I added live)
+for the lectures, as well as links to recordings of the lectures.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lecture 1 &lt;a href=&quot;/assets/pdfs/GGTWB1.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB1.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=6-x5g2p0u3s&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lecture 2 &lt;a href=&quot;/assets/pdfs/GGTWB2.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB2.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=opilmxidthY&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lecture 3 &lt;a href=&quot;/assets/pdfs/GGTWB3.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB3.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=LVPoa7sgMnc&quot;&gt;YouTube&lt;/a&gt;.
+&lt;a href=&quot;/assets/pdfs/GGTWBexercises.pdf&quot;&gt;Here&lt;/a&gt; are some suggested exercises.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
 Here’s a short post about something cute that came up in my research this week.&lt;/p&gt;
 
 &lt;p&gt;Aside from &lt;a href=&quot;https://www.ncngt.org&quot;&gt;NCNGT&lt;/a&gt;, which has been very lovely,
@@ -1131,223 +1302,4 @@ the first map sends \(g\) to the section
 &lt;p&gt;The second map recognizes that the above section and \(g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}\)
 agree on each stalk, and so sends our section back to \(g\).&lt;/p&gt;
 
-&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry><entry><title type="html">Two Approaches To The Cotangent Space</title><link href="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html" rel="alternate" type="text/html" title="Two Approaches To The Cotangent Space" /><published>2020-07-10T00:00:00-04:00</published><updated>2020-07-10T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space</id><content type="html" xml:base="http://localhost:4000/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html">&lt;p&gt;There is a “sheaf-theoretic” definition of something like a &lt;em&gt;cotangent space at a point&lt;/em&gt;
-for a locally-ringed space.
-In the case of the sheaf of differentiable functions on a smooth manifold,
-the two definitions—sheaf-theoretic and the usual one in differential geometry—agree.
-What’s more, modulo the appropriate background technology in both subjects,
-the proof is beautiful and simple—I feel like shouting it from the rooftops
-at the moment, so this blog post will try and give a little exposition.
-I’ll try to move briskly without assuming total familiarity with either side of things.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-algebraic-cotangent-space&quot;&gt;The Algebraic Cotangent Space&lt;/h2&gt;
-
-&lt;p&gt;Let \(X\) be a smooth manifold of dimension \(n\).
-The &lt;em&gt;sheaf&lt;/em&gt; of differentiable functions on \(X\) is a
-contravariant functor from the category of open subsets of \(X\) to the category of rings
-that assigns to an open set \(U\)
-the ring \(\mathscr{O}(U)\) of differentiable functions \(f\colon U \to \mathbb{R}\)—addition
-and multiplication in \(\mathscr{O}(U)\) are done pointwise in \(\mathbb{R}\).&lt;/p&gt;
-
-&lt;p&gt;The sheaf is not so important for us;
-what we are interested in today are the &lt;em&gt;stalks.&lt;/em&gt;
-The idea is that elements of the &lt;em&gt;stalk,&lt;/em&gt;
-called &lt;em&gt;germs,&lt;/em&gt; capture the “infinitesimal behavior”
-of smooth functions at a point.
-Here is the formal definition.
-Given a point \(p \in X\), 
-the &lt;em&gt;stalk&lt;/em&gt; of &lt;em&gt;germs&lt;/em&gt; of smooth functions at \(p\) is the ring&lt;/p&gt;
-
-\[\mathscr{O}_p = \{(f,U) : f \in \mathscr{O}(U),\ p\in U \}/\sim.\]
-
-&lt;p&gt;The equivalence relation \(\sim\) is defined as follows:
-we say \((f,U) \sim (g,V)\) if there exists an open neighborhood
-\(U' \subset U \cap V\) such that \(f|_{U'} = g|_{U'}\).
-The equivalence class of \((f,U)\) is its &lt;em&gt;germ.&lt;/em&gt;
-The ring \(\mathscr{O}_p\) is the direct limit of the \(\mathscr{O}(U)\)
-as \(U\) varies over the open neighborhoods of \(p\).&lt;/p&gt;
-
-&lt;p&gt;Notice that there is a surjection \(\mathscr{O}_p \to \mathbb{R}\)
-that sends the germ of \(f\) at \(p\) to \(f(p)\in \mathbb{R}\).
-The definition is independent of the choice of representative \(f\).
-Since \(\mathbb{R}\) is a field, the kernel of the map
-is a maximal ideal; let’s call it \(\mathfrak{m}_p\).
-Observe that 
-\(\mathfrak{m}_p/\mathfrak{m}_p^2\) is a module over
-\(\mathscr{O}_p/\mathfrak{m}_p \cong \mathbb{R}\), 
-i.e. a real vector space;
-we will call it the &lt;em&gt;algebraic cotangent space at \(p\).&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-usual-cotangent-space&quot;&gt;The Usual Cotangent Space&lt;/h2&gt;
-
-&lt;p&gt;We retain our manifold \(X\) and point \(p\) from the previous section.
-The &lt;em&gt;tangent space at \(p\),&lt;/em&gt; denoted \(T_pX\)
-can be thought of as the space of “directions” in \(X\) at \(p\).
-This is made precise by defining it to be the space of
-directional &lt;em&gt;derivatives&lt;/em&gt; at \(p\).
-I won’t attempt to make this more precise, except to note that
-after we choose local coordinates \((x_1,\dotsc,x_n)\) near \(p = (p_1,\dotsc,p_n)\),
-a basis for \(T_pX\) is given by&lt;/p&gt;
-
-\[\frac{\partial}{\partial x_1}\bigg|_p,\dotsc, \frac{\partial}{\partial x_n}\bigg|_p.\]
-
-&lt;p&gt;The &lt;em&gt;cotangent space,&lt;/em&gt; which we are more interested in, is the
-&lt;em&gt;dual&lt;/em&gt; of the tangent space and is denoted \(T_p^\ast X\).
-Elements of the cotangent space are &lt;em&gt;linear functionals&lt;/em&gt; on tangent vectors.
-Given coordinates \(x_1,\dotsc,x_n\),
-the &lt;em&gt;dual basis&lt;/em&gt; of the cotangent space is given by&lt;/p&gt;
-
-\[dx_1,\dotsc, dx_n,\]
-
-&lt;p&gt;so we have \(dx_i\left( \frac{\partial}{\partial x_j}|_p\right)\) equal to \(1\)
-when \(i = j\) and equal to \(0\) otherwise.
-(There perhaps ought to be some notational inclusion of the point \(p\),
-but we will suppress this.)&lt;/p&gt;
-
-&lt;h2 id=&quot;the-algebraic-cotangent-space-agrees-with-the-usual-one&quot;&gt;The Algebraic Cotangent Space Agrees With the Usual One&lt;/h2&gt;
-
-&lt;p&gt;If \(f\) is a smooth function on an open neighborhood of \(p\)
-satisfying \(f(p) = 0\),
-abusing notation, we shall write the corresponding element of
-\(\mathfrak{m}_p/\mathfrak{m}_p^2\)
-as \(f + \mathfrak{m}_p^2\).
-Given such an element,
-I claim we can interpret \(f\) as a linear functional on tangent vectors at \(p\)
-by sending a tangent vector \(v\) to the value of the derivative of \(f\) at \(p\) in the direction \(v\).
-For instance, in local coordinates \((x_1,\dotsc,x_n)\),
-the vector \(\frac{\partial}{\partial x_i}|_p\) is sent to \(\frac{\partial f}{\partial x_i}(p)\).
-Extending linearly defines a linear functional on \(T_pX\),
-which we shall denote \(df_p\).
-The value of the directional derivative of a function depends only on its germ
-essentially by definition,
-and the product rule from calculus tells us that the assignment
-\(f \mapsto df_p\) sends elements of \(\mathfrak{m}_p^2\) to the zero functional.
-The linearity of the derivative implies that \(\mathbb{R}\)-linear combinations
-of germs are sent to \(\mathbb{R}\)-linear combinations of functionals,
-so the assignment&lt;/p&gt;
-
-\[f + \mathfrak{m}_p^2 \mapsto df_p\]
-
-&lt;p&gt;really defines a map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\).&lt;/p&gt;
-
-&lt;p&gt;We claim this map is an isomorphism, for which it suffices to define an inverse.
-Choose local coordinates \(\vec x = (x_1,\dotsc,x_n)\) around \(\vec p = (p_1,\dotsc,p_n)\).
-A general element \(\alpha\) of \(T_p^\ast X\)
-may be written as the linear combination
-\(\alpha = a_1\mathop{dx_1} + \dotsb + a_n\mathop{dx_n}.\)
-Write \(\vec a = (a_1,\dotsc,a_n)\).
-The function \(f_\alpha\) defined as&lt;/p&gt;
-
-\[f_\alpha(\vec x) = \vec a\cdot(\vec x - \vec p)\]
-
-&lt;p&gt;clearly has germ belonging to \(\mathfrak{m}_p\),
-and tracing the double composition,
-we see that we have \(a \mapsto f_\alpha + \mathfrak{m}_p^2 \mapsto d(f_\alpha)_p = \alpha\).
-This map will be an isomorphism as soon as we can show that the germ of
-\(f - f_{df_p}\) belongs to \(\mathfrak{m}_p^2\), i.e.
-can be written as \(g_1h_1 + \dotsb g_kh_k\) for some
-smooth functions \(g_i\) and \(h_i\) whose germs belong to \(\mathfrak{m}_p\).
-This is the statement of Taylor’s theorem!&lt;/p&gt;
-
-&lt;p&gt;Even better, the map \(\mathfrak{m}_p/\mathfrak{m}_p^2 \to T_p^\ast X\)
-is a &lt;em&gt;natural isomorphism,&lt;/em&gt; in the sense that given a smooth map
-\(\varphi\colon X \to Y\) of smooth manifolds such that
-\(\varphi(p) = q\), the following diagram commutes&lt;/p&gt;
-
-\[\require{AMScd}
-	\begin{CD}
-		\mathfrak{m}_q/\mathfrak{m}_q^2 @&amp;gt;{\cong}&amp;gt;&amp;gt; T_q^\ast Y \\
-		@VV{\varphi^\ast}V @VV{\varphi^\ast}V \\
-		\mathfrak{m}_p/\mathfrak{m}_p^2 @&amp;gt;{\cong}&amp;gt;&amp;gt; T_p^\ast X.
-	\end{CD}\]
-
-&lt;p&gt;To verify this, we shall follow an element \(f + \mathfrak{m}_q^2\)
-around the diagram&lt;/p&gt;
-
-\[\begin{CD}
-		f + \mathfrak{m}^2_q @&amp;gt;&amp;gt;&amp;gt; df_q \\
-		@VVV @VVV \\
-		f\varphi + \mathfrak{m}_p^2 @&amp;gt;&amp;gt;&amp;gt; d(f\varphi)_p = \mathop{df_q}\mathop{d\varphi_p},
-	\end{CD}\]
-
-&lt;p&gt;and the fact that equality holds is the multi-variable chain rule!&lt;/p&gt;
-
-&lt;p&gt;Having exploited our knowledge of undegraduate calculus to prove a satisfying
-natural isomorphism,
-I’ll leave you with one final reason this proof excites me.
-If we had wanted to, we could have replaced “differentiable” with “continuous”
-in our definition of the algebraic cotangent space,
-and we would still end up with a real vector space associated to every stalk.
-In some sense, I guessed that this says that the only reason one never speaks of a (co)tangent
-space associated to a point in a general topological space is that
-there’s no reason—like Taylor’s theorem—for the space to be finite-dimensional!&lt;/p&gt;
-
-&lt;p&gt;Actually, the truth is slightly more subtle:
-every continuous function has a continuous “square root” in the sense
-that we can always write \(f(x) = \operatorname{sgn}(f(x))\sqrt{f(x)}\sqrt{f(x)}\),
-and the functions \(\sqrt{f}\) and \(\operatorname{sgn}(f)\sqrt(f)\) are continuous.
-Therefore it is \(\mathfrak{m}_p\) that is infinite-dimensional,
-while \(\mathfrak{m}_p/\mathfrak{m}_p^2 = 0\).
-(Thanks to Curtis Heberle and Christopher Davis for pointing out my error!)&lt;/p&gt;</content><author><name></name></author><summary type="html">There is a “sheaf-theoretic” definition of something like a cotangent space at a point for a locally-ringed space. In the case of the sheaf of differentiable functions on a smooth manifold, the two definitions—sheaf-theoretic and the usual one in differential geometry—agree. What’s more, modulo the appropriate background technology in both subjects, the proof is beautiful and simple—I feel like shouting it from the rooftops at the moment, so this blog post will try and give a little exposition. I’ll try to move briskly without assuming total familiarity with either side of things.</summary></entry><entry><title type="html">Orbifolds Day One</title><link href="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html" rel="alternate" type="text/html" title="Orbifolds Day One" /><published>2020-07-05T00:00:00-04:00</published><updated>2020-07-05T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/05/Orbifolds-Day-One</id><content type="html" xml:base="http://localhost:4000/2020/07/05/Orbifolds-Day-One.html">&lt;p&gt;I wrote &lt;a href=&quot;/assets/pdfs/OrbifoldNotes1.pdf&quot;&gt;some notes&lt;/a&gt; introducing orbifolds from Haefliger’s perspective in &lt;em&gt;Metric Spaces of Non-positive Curvature&lt;/em&gt;.
-There is some surprisingly heavy machinery that goes into it.
-In this blog post I want to talk a little about it at a high level.&lt;/p&gt;
-
-&lt;p&gt;An &lt;em&gt;orbifold&lt;/em&gt; of dimension \(n\) is a Hausdorff space locally modeled on \(\mathbb{R}^n\) modulo
-the action of a finite group.
-This is a simple enough idea on its face:
-a useful perspective on the fundamental group of a manifold 
-is the passage between its action on the universal cover
-and the calculus of loops in the base space.
-For a group \(G\) that acts merely properly discontinuously and not freely,
-the quotient space is no longer a manifold,
-and yet we would like to accesss the “loops” perspective regardless.
-This is the idea that orbifolds are trying to capture.
-It is maybe surprising both how successful this project is,
-and yet how much more complex the theory becomes.&lt;/p&gt;
-
-&lt;p&gt;Let’s remember back to when we learned Calculus.
-First we learned how to manipulate real-valued functions of one variable,
-and later multivariable functions \(f\colon \mathbb{R}^m \to \mathbb{R}^n\).
-In particular, we defined a notion of differentiability for these maps.
-To replicate this effort on differentiable manifolds,
-one uses &lt;em&gt;charts.&lt;/em&gt; The idea is that the local structure of a manifold \(M\)
-can be captured by a map \(\varphi\colon U \to M\), where \(U\) is an
-open subset of \(\mathbb{R}^n\).
-A map of manifolds \(f\colon M \to N\) is &lt;em&gt;defined&lt;/em&gt; to be differentiable
-if its expression in any pair of charts is differentiable.&lt;/p&gt;
-
-&lt;p&gt;A ridiculously maximalist approach to this idea is the following:
-suppose \((U_i,\varphi_i)_{i\in I}\) is an &lt;em&gt;atlas&lt;/em&gt; for \(M\)
-(in the usual sense), and that \((V_j,\psi_j)_{j\in J}\)
-is an atlas for \(N\).
-A function \(f\colon M \to N\)
-defines a map \(f_{ij}\colon U_i \to V_j\)
-whenever \(f\varphi_i(U_i) \subset \psi_j(V_j)\).
-By refining the open cover of \(M\), we can assume this is always the case.
-We can do the following strange thing:
-the disjoint union \(U = \coprod_{i\in I}U_i\)
-is a differentiable manifold, each of whose components is an open subset of \(\mathbb{R}^m\),
-and the resulting map \(\varphi = \coprod_{i\in I}\varphi_i\) is differentiable
-(in fact a local diffeomorphism).
-The maps \(f_{ij}\) assemble into a map \(F\colon U \to V\) such that the following diagram commutes&lt;/p&gt;
-
-\[\require{AMScd}\begin{CD} U @&amp;gt;F&amp;gt;&amp;gt; V \\ @VV\varphi V @VV\psi V \\ M @&amp;gt;f&amp;gt;&amp;gt; N. \end{CD}\]
-
-&lt;p&gt;And we are justified in saying that \(f\) is differentiable when there exists
-a map \(F\) constructed as above.
-What we have done, essentially, is said that we don’t understand the quotient manifold,
-but we &lt;em&gt;do&lt;/em&gt; understand open subsets of \(\mathbb{R}^m\), and have performed
-a non-unique but useful construction to exploit that understanding.
-This is the jumping-off point for orbifolds.&lt;/p&gt;
-
-&lt;p&gt;There is just one more wrinkle: 
-the definition of an atlas includes various differentiable maps
-called &lt;em&gt;changes of charts.&lt;/em&gt; It would be convenient if there
-were a way to stipulate that our map \(F\) must play nicely with these changes of charts
-beyond just saying that there exists a map on the quotient space.
-This is where Lie Groupoids come in: they turn out to be precisely the gadget we need
-to manage the expression of \(f\) in charts while asserting that these expressions
-play nicely with the changes of charts.
-I’ll let you read the notes—and Haefliger too, hopefully.
-Next time I’ll try to wrap my head around the fundamental group of an orbifold,
-and hopefully thereafter the mapping class group of an orbifold.&lt;/p&gt;</content><author><name></name></author><summary type="html">I wrote some notes introducing orbifolds from Haefliger’s perspective in Metric Spaces of Non-positive Curvature. There is some surprisingly heavy machinery that goes into it. In this blog post I want to talk a little about it at a high level.</summary></entry></feed>
+&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry></feed>
