@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-06-27T18:07:59-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/25/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-25T00:00:00-04:00</published><updated>2021-06-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/25/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/25/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-01T23:08:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Gromov Hyperbolicity For Arbitrary Metric Spaces</title><link href="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html" rel="alternate" type="text/html" title="Gromov Hyperbolicity For Arbitrary Metric Spaces" /><published>2021-07-01T00:00:00-04:00</published><updated>2021-07-01T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces</id><content type="html" xml:base="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">&lt;p&gt;Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces.
+However, it is only a quasi-isometry invariant for geodesic metric spaces.
+I learned this from a
+&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0723086905000113?via%3Dihub&quot;&gt;paper of Väisälä&lt;/a&gt;.
+The purpose of this post is to understand the counterexample he gives.
+I also define Gromov hyperbolicity and quasi-isometry in this post,
+which might make it useful for future reference.
+The reader already familiar with Gromov hyperbolicity and quasi-isometries
+might wish to skip ahead to the heading below.&lt;/p&gt;
+
+&lt;p&gt;Let \((X,d)\) be a metric space.
+We say that \(X\) is a &lt;em&gt;length space&lt;/em&gt; if the distance between any two points \(x\) and \(y\) in \(X\)
+is equal to the infimum of the length of a path joining them.
+A &lt;em&gt;geodesic&lt;/em&gt; in \(X\) is a path \(\gamma\colon [a,b] \to X\) from a closed interval \([a,b] \subset \mathbb{R}\)
+such that \(d(\gamma(s),\gamma(t)) = |s-t|\) for all \(s\) and \(t\) in the interval \([a,b]\).
+We say that \(X\) is a &lt;em&gt;geodesic&lt;/em&gt; metric space if any two points can be joined by a geodesic.
+Geodesic metric spaces are length spaces but not necessarily conversely.&lt;/p&gt;
+
+&lt;p&gt;Gromov’s original definition of hyperbolicity of \(X\) is the following.
+Given points \(x\), \(y\) and \(z\) in \(X\), define the &lt;em&gt;Gromov product&lt;/em&gt;
+of \(x\) and \(y\) with respect to \(z\) to be the quantity&lt;/p&gt;
+
+\[(x,y)_z = \frac{1}{2}\left(d(x,z) + d(y,z) - d(x,y)\right).\]
+
+&lt;p&gt;Then we say that \(X\) is &lt;em&gt;\(\delta\)-hyperbolic&lt;/em&gt; if there exists some \(\delta \ge 0\)
+with the property that for any four points \(x\), \(y\), \(z\) and \(w\) in \(X\),
+we have&lt;/p&gt;
+
+\[(x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta.\]
+
+&lt;p&gt;Let’s try and make sense of this.
+The intuition for the Gromov product is the following.
+A &lt;em&gt;tripod&lt;/em&gt; is a metric tree with four vertices, three of which are leaves and one of which has valence three.
+Given any triple of points \(x\), \(y\) and \(z\) in a metric space,
+you should convince yourself that we can always construct a tripod
+with leaves \(\hat x\), \(\hat y\) and \(\hat z\) such that we have&lt;/p&gt;
+
+\[d(x,y) = d(\hat x,\hat y),\quad d(x,z) = d(\hat x,\hat z),\quad\text{and}\quad d(y,z) = d(\hat y,\hat z).\]
+
+&lt;p&gt;In this situation, the Gromov product \((x,y)_z\)
+is equal to the distance from \(\hat z\) to the center vertex of the tripod.
+To make sense of the hyperbolicity condition,
+let’s continue to think about trees,
+only in this case assume that \(X\) itself is a metric tree.
+Then in this case it’s not too hard to argue that the hyperbolicity condition holds with \(\delta = 0\);
+a picture illustrating the general case is below.
+Thus one way to think of \(\delta\)-hyperbolicity is to think that from the point of view of any point \(w \in X\),
+triangles in \(X\) look like triangles in trees, up to an error of \(\delta\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/GromovProduct.jpeg&quot; alt=&quot;Trees are $$0$$-hyperbolic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If \(X\) is a geodesic metric space, there are other conditions equivalent to this one
+that are more directly about the geometry of, e.g. triangles in \(X\).
+I’ve been collecting as many of these conditions as the community will give me
+in a &lt;a href=&quot;https://mathoverflow.net/q/396359/135175&quot;&gt;MathOverflow post&lt;/a&gt;.
+Eventually I expect to make a blog post or several about the various definitions.&lt;/p&gt;
+
+&lt;p&gt;Given metric spaces \((X,d_X)\) and \((Y,d_Y)\) and constants \(K \ge 1\) and \(C \ge 0\),
+a &lt;em&gt;\((K,C)\)-quasi-isometric embedding&lt;/em&gt; is a function \(f\colon X \to Y\)
+(it need not be continuous)
+such that for all points \(x\) and \(y\) in \(X\), the following inequality holds&lt;/p&gt;
+
+\[\frac 1Kd_X(x,y) - C \le d_Y(f(x),f(y)) \le Kd_X(x,y) + C.\]
+
+&lt;p&gt;So we see that \(f\) is allowed to distort distances by a bounded multiplicative and additive amount.
+A &lt;em&gt;\((K,C)\)-quasi-isometry&lt;/em&gt; is a \((K,C)\)-quasi-isometric embedding with the additional property that
+for every point \(y \in Y\) there is a point \(x \in X\) such that \(d_Y(y,f(x)) \le C\).&lt;/p&gt;
+
+&lt;h2 id=&quot;the-theorem-and-the-counterexample&quot;&gt;The theorem and the counterexample&lt;/h2&gt;
+
+&lt;p&gt;Väisälä proves the following theorem.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; Let \(X\) and \(Y\) be length spaces and \(f\colon X \to Y\) a quasi-isometric embedding.
+If \(Y\) is \(\delta\)-hyperbolic, then \(X\) is \(\delta'\)-hyperbolic
+for some \(\delta'\) depending only on \(\delta\) and the quasi-isometry constants for \(f\).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;He then observes that the theorem is not true if one does not assume that \(X\) is a length space.
+Here is the counterexample.
+The hyperbolic space \(Y\) is the real line \(\mathbb{R}\) with the standard metric.
+(Recall that \(\mathbb{R}\) is a real tree, and thus \(0\)-hyperbolic.)
+The space \(X\) is the graph of the absolute value function \(\{(x,y) \in \mathbb{R}^2 : y = |x| \}\)
+with the Euclidean metric.
+The claim is that the map \(f\colon X \to Y\) defined as \(f(x,y) = x\) is a quasi-isometric embedding,
+but that \(X\) is not hyperbolic.&lt;/p&gt;
+
+&lt;p&gt;First we show that \(f\) is a quasi-isometric embedding.
+Indeed, it is clear that given \(\vec x\) and \(\vec y\) in \(X\),
+we have \(d_Y(f(\vec x),f(\vec y)) \le d_X(\vec x,\vec y)\).
+On the other hand, note that \(d_X(\vec x,\vec y)\) is furthest from \(d_Y(f(\vec x),f(\vec y))\)
+when \(\vec x\) and \(\vec y\) are in the same quadrant, where we have
+\(d_X(\vec x,\vec y) = \sqrt{2}d_Y(f(\vec x),f(\vec y))\).
+Thus the map \(f\) is a \((\sqrt 2,0)\)-quasi-isometric embedding, in fact a \((\sqrt 2,0)\)-quasi-isometry.&lt;/p&gt;
+
+&lt;p&gt;Finally we show that \(X\) is not hyperbolic.
+Consider the four points \(x = (0,0)\), \(y = (-2t,2t)\), \(z = (2t,2t)\) and \(w = (t,t)\).
+Then we have&lt;/p&gt;
+
+\[(x,z)_w = \frac 12\left(\sqrt 2t + \sqrt 2t - 2\sqrt 2t\right) = 0,\]
+
+\[(x,y)_w = \frac 12\left(\sqrt 2t + 2\sqrt 5t - 2\sqrt 2t\right) \approx 1.53t\]
+
+\[(y,z)_w = \frac 12\left(2\sqrt 5 + \sqrt 2t - 4t\right) \approx 0.94t\]
+
+&lt;p&gt;But observe that as \(t \to \infty\), we have that \((x,y)_w\) and \((y,z)_w\) tend to \(\infty\),
+so no uniform choice of \(\delta\) makes the inequality
+\((x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta\) hold.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/27/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-27T00:00:00-04:00</published><updated>2021-06-27T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/27/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/27/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
 is an object that appears in many guises throughout math.
 For me, it appears several times as a complex related to
 the outer automorphism group of a free group of rank two,
@@ -1021,285 +1127,4 @@ is an equivalence if and only if it is fully faithful and essentially surjective
 &lt;/blockquote&gt;
 
 &lt;p&gt;It turns out that the category of smooth manifolds &lt;em&gt;also&lt;/em&gt; fails this axiom,
-essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry><entry><title type="html">A Sheafy Adjunction</title><link href="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html" rel="alternate" type="text/html" title="A Sheafy Adjunction" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>http://localhost:4000/2020/07/26/A-Sheafy-Adjunction</id><content type="html" xml:base="http://localhost:4000/2020/07/26/A-Sheafy-Adjunction.html">&lt;p&gt;Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\),
-there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\).
-The adjunction is somewhat mysterious to me as I begin to write this,
-so the hope is that by writing about it, I’ll begin to understand.&lt;/p&gt;
-
-&lt;p&gt;The functors in question are the &lt;em&gt;pushforward&lt;/em&gt; and &lt;em&gt;inverse image&lt;/em&gt; functors,
-which arise naturally in algebraic geometry (so I am led to believe).
-What makes the adjunction difficult to understand is that the definitions
-of the functors in question don’t seem to play nicely with each other.&lt;/p&gt;
-
-&lt;p&gt;The proof (with a little setting the stage) appears below.
-The method of proof, like most category-theoretic proofs,
-is a story of careful bookkeeping with functors and natural transformations,
-along with simple calculations to check.
-The idea essentially seems to be that the 
-unit \(\eta_\mathscr{F} \colon \mathscr{F} \to \pi_\ast\pi^{-1}\mathscr{F}\)
-“shreds a section \(f\) into pieces,” while the counit
-\(\epsilon_{\mathscr{G}} \colon \pi^{-1}\pi_\ast\mathscr{G} \to \mathscr{G}\)
-recognizes that these “shredded up” sections assemble into sections of \(\mathscr{G}\).&lt;/p&gt;
-
-&lt;h2 id=&quot;adjunctions&quot;&gt;Adjunctions&lt;/h2&gt;
-&lt;p&gt;Remember, given categories \(C\) and \(D\), a pair of functors
-\(F \colon C \to D\) and \(G \colon D \to C\) form an &lt;em&gt;adjoint pair&lt;/em&gt;
-when there exists an isomorphism&lt;/p&gt;
-
-\[D(Fc,d) \cong C(c,Gd)\]
-
-&lt;p&gt;which is natural in \(c\) and \(d\).
-We say \(F\) is &lt;em&gt;left adjoint&lt;/em&gt; to \(G\),
-or equivalently that \(G\) is &lt;em&gt;right adjoint&lt;/em&gt; to \(F\).
-In particular, setting \(d = Fc\), we have&lt;/p&gt;
-
-\[D(Fc,Fc) \cong C(c,GFc).\]
-
-&lt;p&gt;which gives us a natural transformation \(\eta \colon 1_C \Longrightarrow GF\).
-Similarly, we have \(\epsilon\colon FG \Longrightarrow 1_D\).
-The natural transformation \(\eta\) is called the &lt;em&gt;unit&lt;/em&gt; of the adjunction,
-and \(\epsilon\) is the &lt;em&gt;counit.&lt;/em&gt;
-In fact, the existence of these natural transformations
-could be taken to be the &lt;em&gt;definition&lt;/em&gt; of an adjunction,
-provided the natural transformations satisfy the identities&lt;/p&gt;
-
-\[\epsilon F \circ F\eta = 1_F \quad\text{and}\quad G\epsilon \circ \eta G = 1_G,\]
-
-&lt;p&gt;which says that for all \(c \in C\) and \(d \in D\), the compositions&lt;/p&gt;
-
-\[\require{AMScd}
-\begin{CD}
-Fc @&amp;gt;{F\eta_c}&amp;gt;&amp;gt; FGFc @&amp;gt;{\epsilon_{Fc}}&amp;gt;&amp;gt; Fc
-\end{CD}\]
-
-&lt;p&gt;and&lt;/p&gt;
-
-\[\begin{CD}
-Gd @&amp;gt;{\eta_{Gd}}&amp;gt;&amp;gt; GFGd @&amp;gt;{G\epsilon_d}&amp;gt;&amp;gt; Gd
-\end{CD}\]
-
-&lt;p&gt;are the identity.&lt;/p&gt;
-
-&lt;p&gt;My goal in this blog post is to show that the functors I am interested in
-satisfy this latter definition of an adjunction.&lt;/p&gt;
-
-&lt;h2 id=&quot;sheaves&quot;&gt;Sheaves&lt;/h2&gt;
-&lt;p&gt;Given a pair of spaces \(X\) and \(Y\), and a continuous map \(\pi \colon X \to Y\),
-we have functors \(\pi_\ast \colon \operatorname{Sh}_X \to \operatorname{Sh}_Y\)
-and \(\pi^{-1}\colon \operatorname {Sh}_Y \to \operatorname{Sh}_X\) from the category
-of sheaves on \(X\) to the category of sheaves on \(Y\) and &lt;em&gt;vice versa.&lt;/em&gt;
-The former is simple to describe: if \(\mathscr{G}\) is a sheaf on \(X\),
-the &lt;em&gt;pushforward sheaf&lt;/em&gt; \(\pi_\ast\mathscr{G}\) on \(Y\) is the assignment&lt;/p&gt;
-
-\[U \mapsto \mathscr{F}(\pi^{-1}(U))\]
-
-&lt;p&gt;for all open subsets \(U\) of \(Y\).
-If \(\psi \colon \mathscr{G} \to \mathscr{G}'\) is a morphism of sheaves on \(X\),
-the morphism \(\pi_\ast\psi\) is defined by the rule&lt;/p&gt;
-
-\[(\pi_\ast\psi)(U) = \psi(\pi^{-1}(U)).\]
-
-&lt;p&gt;The latter is slightly more complicated.
-Recall that if \(\mathscr{F}\) is a sheaf on \(Y\),
-there is a space \(F\) equipped with a local homeomorphism \(\rho \colon F \to Y\).
-The sheaf \(\mathscr{F}\) is the sheaf of local sections of \(\rho\);
-\(F\) is called the &lt;em&gt;espace étale&lt;/em&gt; for the sheaf \(\mathscr{F}\).
-The set of points of \(F\) above \(y \in Y\) is the &lt;em&gt;stalk&lt;/em&gt; \(\mathscr{F}_y\).&lt;/p&gt;
-
-&lt;p&gt;As usual, a section \(s\colon U \to F\) of the projection \(\rho \colon F \to X\)
-is an element \((s_y)_{y \in U}\) of \(\prod_{y \in U} \mathscr{F}_y\).
-In our case, continuity of \(s\) is the following condition&lt;/p&gt;
-
-\[\begin{equation}\label{star}\tag{$\ast$}
-\text{for all } y \in U, \text{ there exists an open neighborhood }
-U_y \text{ of } y\\  \text{ and } f\in\mathscr{F}(U_y) \text{ such that }
-f_x = s_x \text{ for all } x \in U_y.
-\end{equation}\]
-
-&lt;p&gt;Given that \(F\) and \(X\) admit maps to \(Y\), we can form their pullback,&lt;/p&gt;
-
-\[\begin{CD}
-\pi^{-1}F @&amp;gt;&amp;gt;&amp;gt; F \\
-@VVV @VV{\rho}V \\
-X @&amp;gt;{\pi}&amp;gt;&amp;gt; Y
-\end{CD}\]
-
-&lt;p&gt;which as a set is  \(\{ (x,f_y) \in X \times F : \pi(x) = y\}\).
-The topology on \(\pi^{-1}F\) is induced from the product topology on \(X \times F\).
-The &lt;em&gt;inverse image sheaf&lt;/em&gt; \(\pi^{-1}\mathscr{F}\) is the sheaf of sections of \(\pi^{-1}F \to X\).
-The universal property of the pullback ensures that this really defines a functor
-from the category of sheaves on \(Y\) to the category of sheaves on \(X\).&lt;/p&gt;
-
-&lt;p&gt;Condition \(\eqref{star}\) for continuity of a section \(s\colon V \to \pi^{-1}F\)—that is,
-a tuple \((s_{\pi(x)})_{x \in V}\) in \(\prod_{x \in V}\mathscr{F}_{\pi(x)}\)—says
-that for all \(x \in V\) there exists an open neighborhood \(V_x\) of \(x\)
-and an open neighborhood \(U_x\) in \(Y\) such that \(\pi(V_x) \subset U_x\).
-Furthermore there exists a section \(f \in \mathscr{F}(U_x)\) 
-such that \(f_{\pi(v)} = s_{\pi(v)}\) for all \(v \in V_x\).&lt;/p&gt;
-
-&lt;p&gt;If \(\phi\colon \mathscr{F} \to \mathscr{F}'\) is a morphism of sheaves on \(Y\),
-the resulting morphism \(\pi^{-1}\phi \colon \pi^{-1}\mathscr{F} \to \pi^{-1}\mathscr{F}'\)
-is defined by&lt;/p&gt;
-
-\[(\pi^{-1}\phi)(V)\left[(s_{\pi(x)})_{x \in V}\right] = \left(\phi_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}.\]
-
-&lt;p&gt;One needs to demonstrate that the right-hand side satisfies condition \(\eqref{star}\);
-the check is simple, so I’ll leave it to the reader.&lt;/p&gt;
-
-&lt;p&gt;The claim is that \(\pi^{-1}\) is left adjoint to \(\pi_\ast\).
-Therefore we should expect natural transformations
-\(\eta \colon 1_{\operatorname{Sh}_Y} \Longrightarrow \pi_\ast\pi^{-1}\)
-and \(\epsilon \colon \pi^{-1}\pi_\ast \Longrightarrow 1_{\operatorname{Sh}_X}\).&lt;/p&gt;
-
-&lt;h3 id=&quot;the-unit-of-the-adjunction&quot;&gt;The Unit of the Adjunction&lt;/h3&gt;
-
-&lt;p&gt;So let \(\mathscr{F}\) be a sheaf on \(Y\),
-and let \(U\) be an open set in \(Y\).
-Since \(\pi_\ast\pi^{-1}\mathscr{F}(U) = \pi^{-1}\mathscr{F}(\pi^{-1}(U))\),
-we can think of \(s \in \pi_\ast\pi^{-1}\mathscr{F}(U)\) as
-a section \(s \colon \pi^{-1}(U) \to \pi^{-1}F\),
-i.e. a tuple \((s_{\pi(x)})_{x \in \pi^{-1}(U)}\)
-satisfying the compatibility condition above.&lt;/p&gt;
-
-&lt;p&gt;Note that in particular if \(U \subset Y\) is open
-and \(f \in \mathscr{F}(U)\), the continuity condition \(\eqref{star}\)
-for a section \(\pi^{-1}(U)\to \pi^{-1}F\) is satisfied by the section
-\((f_{\pi(x)})_{x \in \pi^{-1}(U)}\),
-and thus defines an element of \(\pi_\ast\pi^{-1}\mathscr{F}(U)\).&lt;/p&gt;
-
-&lt;p&gt;Let us thus define a map \(\eta_{\mathscr{F}}(U)\colon \mathscr{F}(U) \to \pi_\ast\pi^{-1}\mathscr{F}(U)\) 
-as&lt;/p&gt;
-
-\[\eta_{\mathscr{F}}(U)(f) = (f_{\pi(x)})_{x\in\pi^{-1}(U)}.\]
-
-&lt;p&gt;(Let’s parse the notation: a natural transformation \(\eta\) yields
-a map of sheaves \(\eta_{\mathscr{F}}\) for each sheaf \(\mathscr{F}\).
-This is the definition of that map on the open subset \(U \subset Y\).)&lt;/p&gt;
-
-&lt;p&gt;To prove the claim that \(\eta\) is a natural transformation,
-we need to show that given a map \(\phi \colon \mathscr{F} \to \mathscr{F}'\)
-of sheaves on \(Y\), the following diagram commutes&lt;/p&gt;
-
-\[\begin{CD}
-\mathscr{F} @&amp;gt;{\eta_{\mathscr{F}}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\mathscr{F} \\
-@V{\phi}VV @VV{\pi_\ast\pi^{-1}\phi}V \\
-\mathscr{F}' @&amp;gt;{\eta_{\mathscr{F}'}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\mathscr{F}'.
-\end{CD}\]
-
-&lt;p&gt;Given \(f \in \mathscr{F}(U)\), commutativity of the square is the claim that
-the following equality holds&lt;/p&gt;
-
-\[\left((\phi(U)(f))_{\pi(x)}\right)_{x \in \pi^{-1}(U)} 
-= \left(\phi_{\pi(x)}(f_{\pi(x)})\right)_{x \in \pi^{-1}(U)}.\]
-
-&lt;p&gt;This is in fact true, since taking the stalk at \(x\) is functorial.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-counit-of-the-adjunction&quot;&gt;The Counit of the Adjunction&lt;/h3&gt;
-
-&lt;p&gt;Now suppose that \(\mathscr{G}\) is a sheaf on \(X\).
-Let \(\pi_\ast G\) denote the &lt;em&gt;espace étale&lt;/em&gt; over \(Y\) for the sheaf \(\pi_\ast\mathscr{G}\).&lt;/p&gt;
-
-&lt;p&gt;A section \(s \colon V \to \pi^{-1}\pi_\ast G\)
-is a tuple \((s_{\pi(x)})_{x \in V}\) taking values in \(\pi_\ast\mathscr{G}_{\pi(x)}\)
-satisfying the continuity condition \(\eqref{star}\),
-which in our particular case asserts the existence,
-for each \(x \in V\), of an open neighborhood \(V_x\) of \(x\) and an open neighborhood
-\(U_x\) in \(Y\) satisfying \(\pi(V_x) \subset U_x\).
-Furthermore there exists \(g \in \pi_\ast\mathscr{G}(U_x) = \mathscr{G}(\pi^{-1}(U_x))\)
-such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) under the natural map
-\(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\) is equal to \(g_x\).&lt;/p&gt;
-
-&lt;p&gt;Since the sets \(\pi^{-1}(U_x)\) cover \(V\) by assumption,
-sheafiness of \(\mathscr{G}\) implies the existence of a unique \(g \in \mathscr{G}(V)\)
-such that \(g_x\) is equal to the image of \(s_{\pi(x)}\)
-under the natural map \(\pi_\ast\mathscr{G}_{\pi(x)} \to \mathscr{G}_x\)
-for &lt;em&gt;all&lt;/em&gt; \(x \in V\).
-Let us thus define a map \(\epsilon_{\mathscr{G}}(V) \colon \pi^{-1}\pi_\ast\mathscr{G}(V) \to \mathscr{G}(V)\)
-sending \((s_{\pi(x)})_{x\in V}\) to \(g\).&lt;/p&gt;
-
-&lt;p&gt;We claim that \(\epsilon\) defines a natural transformation from \(\pi^{-1}\pi_\ast\mathscr{G}\) to \(\mathscr{G}\).
-To prove the claim, we need to show that given a map \(\psi\colon \mathscr{G} \to \mathscr{G}'\)
-of sheaves on \(X\), the following diagram commutes&lt;/p&gt;
-
-\[\begin{CD}
-\pi^{-1}\pi_\ast\mathscr{G} @&amp;gt;{\epsilon_{\mathscr{G}}}&amp;gt;&amp;gt; \mathscr{G} \\
-@V{\pi^{-1}\pi_\ast\psi}VV @VV{\psi}V \\
-\pi^{-1}\pi_\ast \mathscr{G}' @&amp;gt;{\epsilon_{\mathscr{G}'}}&amp;gt;&amp;gt; \mathscr{G}'.
-\end{CD}\]
-
-&lt;p&gt;Given \((s_{\pi(x)})_{x \in V} \in \pi^{-1}\pi_\ast\mathscr{G}(V)\),
-the upper right path of the square sends us first to some \(g \in \mathscr{G}(V)\)
-such that \(g_x\) is the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\) for all \(x \in V\),
-and then sends \(g\) to \(\psi(V)(g) \in \mathscr{G}'(V)\).
-On the other hand, the lower left path of the square sends
-\((s_{\pi(x)})_{x \in V}\) first to \(\left((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}\)
-in \(\pi^{-1}\pi_\ast\mathscr{G}'(V)\), and then to
-some \(g' \in \mathscr{G}'(V)\) such that \(g'_x\) is the image of
-\((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)})\) in \(\mathscr{G}'_x\) for all \(x \in V\).&lt;/p&gt;
-
-&lt;p&gt;If \(U \subset Y\) is an open set containing \(\pi(x)\) such that
-\(s \in \pi_\ast\mathscr{G}(U) = \mathscr{G}(\pi^{-1}(U))\) 
-represents \(s_{\pi(x)}\) for \(\pi(x) \in U\),
-we have \((\pi_\ast\psi)_{\pi(x)}(s_{\pi(x)}) = \psi(\pi^{-1}(U))(s)_{\pi(x)}\).
-Furthermore we know that \(g \in \mathscr{G}(V)\) 
-is such that the image of \(s_{\pi(x)}\) in \(\mathscr{G}_x\)
-is \(g_x\) for all \(x \in V\).
-Therefore we have that
-the image of \(\psi(\pi^{-1}(U))(s)_{\pi(x)}\)
-in \(\mathscr{G}'_x\) is equal to \(\psi(V)(g)_x\),
-as desired.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-inverse-imagepushforward-adjunction&quot;&gt;The inverse image–pushforward adjunction&lt;/h2&gt;
-
-&lt;p&gt;To conclude, we just need to show that two double compositions
-of natural transformations are the identity.
-The first, translated into our particular case,
-says that if \(\mathscr{F}\) is a sheaf on \(Y\),
-we have that&lt;/p&gt;
-
-\[\begin{CD}
-\pi^{-1}\mathscr{F} @&amp;gt;{\pi^{-1}\eta_{\mathscr{F}}}&amp;gt;&amp;gt; \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F} @&amp;gt;{\epsilon_{\pi^{-1}\mathscr{F}}}&amp;gt;&amp;gt;
-\pi^{-1}\mathscr{F}
-\end{CD}\]
-
-&lt;p&gt;is equal to the identity.
-The difficulty here seems to be largely notational.
-Let \(V \subset X\) be an open set.
-Suppose \((s_{\pi(x)})_{x \in V}\) is a section in \(\pi^{-1}\mathscr{F}(V)\).
-We have&lt;/p&gt;
-
-\[(\pi^{-1}\eta_{\mathscr{F}})(V)\left[(s_{\pi(x)})_{x\in V}\right]
-= \left((\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\right)_{x \in V}
-\in \pi^{-1}\pi_\ast\pi^{-1}\mathscr{F}(V).\]
-
-&lt;p&gt;First observe that the continuity condition \(\eqref{star}\) tells us that
-there is, for each \(x \in V\), an open neighborhood \(V_x\) of \(x\) and
-an open set \(U_x \subset Y\) containing \(\pi(V_x)\).
-On this open set we have \(s \in \mathscr{F}(U_x)\) such that
-\(\left((\eta_{\mathscr{F}})(U_x)(s)\right)_{\pi(x)} = (\eta_{\mathscr{F}})_{\pi(x)}(s_{\pi(x)})\).&lt;/p&gt;
-
-&lt;p&gt;We saw above that \((\eta_{\mathscr{F}})(U_x)(s)\) is the section
-\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)} \in \pi_\ast\pi^{-1}\mathscr{F}(U_x) = 
-\pi^{-1}\mathscr{F}(\pi^{-1}(U))\).
-The map \(\epsilon_{\pi^{-1}\mathscr F}\) recognizes that the sections
-\((s_{\pi(x)})_{x \in \pi^{-1}(U_x)}\) satisfy the compatibility conditions
-to glue up to form a section \((s_{\pi(x)})_{x \in V}\) in \(\pi^{-1}\mathscr{F}(V)\),
-demonstrating that the double composition is indeed the identity. So far so good.&lt;/p&gt;
-
-&lt;p&gt;The second double composition we need to show is equal to the identity is defined 
-for a sheaf \(\mathscr{G}\) on \(X\) as follows&lt;/p&gt;
-
-\[\begin{CD}
-\pi_\ast\mathscr{G} @&amp;gt;{\eta_{\pi_\ast\mathscr{G}}}&amp;gt;&amp;gt; \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}
-@&amp;gt;{\pi_\ast\epsilon_{\mathscr{G}}}&amp;gt;&amp;gt; \pi_\ast\mathscr{G}.
-\end{CD}\]
-
-&lt;p&gt;If \(U \subset Y\) is an open set and \(g \in \pi_\ast\mathscr{G}(U)\)
-is a section,
-the first map sends \(g\) to the section
-\((g_{\pi(x)})_{x \in \pi^{-1}(U)} \in \pi_\ast\pi^{-1}\pi_\ast\mathscr{G}(U)\).&lt;/p&gt;
-
-&lt;p&gt;The second map recognizes that the above section and \(g \in \mathscr{G}(\pi^{-1}(U)) = \pi_\ast\mathscr{G}\)
-agree on each stalk, and so sends our section back to \(g\).&lt;/p&gt;
-
-&lt;p&gt;This completes the proof that inverse image and pushforward form an adjoint pair of functors.&lt;/p&gt;</content><author><name></name></author><summary type="html">Given a topological space \(X\) and a continuous map \(\pi\colon X \to Y\), there is an adjunction between the categories of sheaves on \(X\) and sheaves on \(Y\). The adjunction is somewhat mysterious to me as I begin to write this, so the hope is that by writing about it, I’ll begin to understand.</summary></entry></feed>
+essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry></feed>
