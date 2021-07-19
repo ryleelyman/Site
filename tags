@@ -1737,6 +1737,8 @@ math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: tr
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
 math: true	_posts/2021-06-25-The-Farey-graph.md	/^math: true$/;"	s
 math: true	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^math: true$/;"	s
+math: true	_posts/2021-07-17-A-Nice-Coincidence.md	/^math: true$/;"	s
+math: true	_posts/2021-07-19-A-Nice-Coincidence.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
