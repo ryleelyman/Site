@@ -1535,6 +1535,7 @@ A Mathematical Postcard	_site/2021/06/09/A-Mathematical-Postcard.html	/^      <h
 A Mathematical Postcard	_site/blog.html	/^    <h2><a href="\/2021\/06\/09\/A-Mathematical-Postcard.html">A Mathematical Postcard<\/a><\/h2/;"	i
 A Sheafy Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^      <h1>A Sheafy Adjunction<\/h1>$/;"	h
 A Sheafy Adjunction	_site/blog.html	/^    <h2><a href="\/2020\/07\/26\/A-Sheafy-Adjunction.html">A Sheafy Adjunction<\/a><\/h2>$/;"	i
+A parallel example	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## A parallel example$/;"	s
 A pseudo-Anosov braid example	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## A pseudo-Anosov braid example$/;"	s
 A pseudo-Anosov braid example	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="a-pseudo-anosov-braid-example">A pseudo-Anosov braid example<\/h2>$/;"	i
 About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
@@ -1554,19 +1555,26 @@ Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h
 Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Category-Theory-Day-One.html">Category Theory Day One<\/a><\/h2/;"	i
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
-Edges belong to two triangles	_posts/2021-06-25-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
-Edges do not cross	_posts/2021-06-25-The-Farey-graph.md	/^## Edges do not cross$/;"	s
+Edges belong to two triangles	_posts/2021-06-27-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
+Edges belong to two triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	i
+Edges do not cross	_posts/2021-06-27-The-Farey-graph.md	/^## Edges do not cross$/;"	s
+Edges do not cross	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-do-not-cross">Edges do not cross<\/h2>$/;"	i
 Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
-Examples of real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Examples of real trees$/;"	s
 Examples of real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Examples of real trees$/;"	s
-Free abelian groups act freely on real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Free abelian groups act freely on real trees$/;"	s
+Examples of real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="examples-of-real-trees">Examples of real trees<\/h2>$/;"	i
+Free Actions On Real Trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^      <h1>Free Actions On Real Trees<\/h1>$/;"	h
+Free Actions On Real Trees	_site/blog.html	/^    <h2><a href="\/2021\/06\/21\/Free-actions-on-real-trees.html">Free Actions On Real Trees<\/a/;"	i
 Free abelian groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free abelian groups act freely on real trees$/;"	s
-Free products of groups acting freely	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Free products of groups acting freely$/;"	s
+Free abelian groups act freely on real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-abelian-groups-act-freely-on-real-trees">Free abelian groups act freely on real tre/;"	i
 Free products of groups acting freely	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Free products of groups acting freely$/;"	s
+Free products of groups acting freely	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-products-of-groups-acting-freely">Free products of groups acting freely<\/h2>$/;"	i
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
-Geometric Group Theory without Boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	i
+Geometric Group Theory Without Boundaries	_site/2021/06/21/Geometric-group-theory-without-boundaries.html	/^      <h1>Geometric Group Theory Without Boundaries<\/h1>$/;"	h
+Geometric Group Theory Without Boundaries	_site/blog.html	/^    <h2><a href="\/2021\/06\/21\/Geometric-group-theory-without-boundaries.html">Geometric Group/;"	i
+Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^      <h1>Gromov Hyperbolicity For Arbitrary Metric Spaces<\/h1>$/;"	h
+Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/blog.html	/^    <h2><a href="\/2021\/07\/01\/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">Gromov H/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
@@ -1583,6 +1591,8 @@ Orbifolds Day One	_site/2020/07/05/Orbifolds-Day-One.html	/^      <h1>Orbifolds 
 Orbifolds Day One	_site/blog.html	/^    <h2><a href="\/2020\/07\/05\/Orbifolds-Day-One.html">Orbifolds Day One<\/a><\/h2>$/;"	i
 Orbigraphs	_posts/2019-09-06-Choo-Choo.md	/^### Orbigraphs$/;"	S	section:math: true
 Orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	j
+Outreach	_site/outreach.html	/^      <h1 id="outreach">Outreach<\/h1>$/;"	h
+Outreach	_site/service.html	/^      <h1 id="outreach">Outreach<\/h1>$/;"	h
 Outreach	outreach.md	/^# Outreach$/;"	c
 Outreach	service.md	/^# Outreach$/;"	c
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
@@ -1592,12 +1602,12 @@ Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^
 Pullbacks And Intersections	_site/blog.html	/^    <h2><a href="\/2021\/06\/17\/Pullbacks-and-Intersections.html">Pullbacks And Intersections<\//;"	i
 Research	Research.md	/^# Research$/;"	c
 Research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
+Rutgers University	_site/teaching.html	/^<h2 id="rutgers-university">Rutgers University<\/h2>$/;"	i
 Rutgers University	teaching.md	/^## Rutgers University$/;"	s	chapter:Teaching
-Service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	h
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
-Surface groups act freely on real trees	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^## Surface groups act freely on real trees$/;"	s
 Surface groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Surface groups act freely on real trees$/;"	s
+Surface groups act freely on real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="surface-groups-act-freely-on-real-trees">Surface groups act freely on real trees<\/h2>$/;"	i
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
 Teaching	teaching.md	/^# Teaching$/;"	c
 The Algebraic Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^## The Algebraic Cotangent Space$/;"	s
@@ -1606,10 +1616,15 @@ The Algebraic Cotangent Space Agrees With the Usual One	_posts/2020-07-10-Two-Ap
 The Algebraic Cotangent Space Agrees With the Usual One	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space A/;"	i
 The Axiom Of Choice Is False For Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^      <h1>The Axiom Of Choice Is False For Manifolds<\/h1>$/;"	h
 The Axiom Of Choice Is False For Manifolds	_site/blog.html	/^    <h2><a href="\/2020\/08\/02\/The-Axiom-of-Choice-is-False-for-Manifolds.html">The Axiom Of C/;"	i
+The Baire space	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Baire space$/;"	s
+The Bowditch boundary	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Bowditch boundary$/;"	s
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
 The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	j
+The Farey Graph	_site/2021/06/27/The-Farey-graph.html	/^      <h1>The Farey Graph<\/h1>$/;"	h
+The Farey Graph	_site/blog.html	/^    <h2><a href="\/2021\/06\/27\/The-Farey-graph.html">The Farey Graph<\/a><\/h2>$/;"	i
+The Gromov boundary of $$T$$	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Gromov boundary of $$T$\$$/;"	s
 The Train Track Algorithm For Graphs Of Groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^      <h1>The Train Track Algorithm For Graphs Of Groups<\/h1>$/;"	h
 The Train Track Algorithm For Graphs Of Groups	_site/blog.html	/^    <h2><a href="\/2020\/12\/21\/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">The Train /;"	i
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
@@ -1618,14 +1633,17 @@ The Usual Cotangent Space	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Spac
 The Usual Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	i
 The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda Lemma$/;"	S	section:Functors
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
-The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-25-The-Farey-graph.md	/^## The action of $$\\operatorname{SL}_2(\\mathbb{Z})$\$$/;"	s
+The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-27-The-Farey-graph.md	/^## The action of $$\\operatorname{SL}_2(\\mathbb{Z})$\$$/;"	s
+The action of \\(\\operatorname{SL}_2(\\mathbb{Z})\\)	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	i
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 The theorem and the counterexample	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^## The theorem and the counterexample$/;"	s
+The theorem and the counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
 Train Tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	j
 Train track maps	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Train track maps$/;"	s
 Train track maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	i
+Tufts University	_site/teaching.html	/^<h2 id="tufts-university">Tufts University<\/h2>$/;"	i
 Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
@@ -1671,7 +1689,10 @@ details summary	_site/assets/css/style.css	/^details summary { cursor: pointer; 
 details:not([open] ) > *:not(summary)	_site/assets/css/style.css	/^details:not([open]) > *:not(summary) { display: none !important; }$/;"	s
 dfn	_site/assets/css/style.css	/^dfn { font-style: italic; }$/;"	s
 div	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
+edges-belong-to-two-triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	I
+edges-do-not-cross	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-do-not-cross">Edges do not cross<\/h2>$/;"	I
 every-epimorphism-splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	I
+examples-of-real-trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="examples-of-real-trees">Examples of real trees<\/h2>$/;"	I
 extensions	_site/Research.html	/^<div id="extensions" style="display: none">$/;"	I
 fieldset	_site/assets/css/style.css	/^fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }$/;"	s
 figcaption	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
@@ -1680,8 +1701,9 @@ figure	_site/assets/css/style.css	/^figure { margin: 1em 40px; }$/;"	s
 folding	_site/Research.html	/^<div id="folding" style="display: none">$/;"	I
 footer	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
+free-abelian-groups-act-freely-on-real-trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-abelian-groups-act-freely-on-real-trees">Free abelian groups act freely on real tre/;"	I
+free-products-of-groups-acting-freely	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-products-of-groups-acting-freely">Free products of groups acting freely<\/h2>$/;"	I
 functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
-geometric-group-theory-without-boundaries	_site/Research.html	/^<h2 id="geometric-group-theory-without-boundaries">Geometric Group Theory without Boundaries<\/h/;"	I
 h1	_site/assets/css/style.css	/^h1 { font-size: 2em; margin: 0.67em 0; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 32px; font-weight: 600; }$/;"	s
 h1	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
@@ -1735,8 +1757,10 @@ math: true	_posts/2020-02-16-Category-Theory-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-05-Orbifolds-Day-One.md	/^math: true$/;"	s
 math: true	_posts/2020-07-10-Two-Approaches-to-the-Cotangent-Space.md	/^math: true$/;"	s
 math: true	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^math: true$/;"	s
-math: true	_posts/2021-06-25-The-Farey-graph.md	/^math: true$/;"	s
+math: true	_posts/2021-06-27-The-Farey-graph.md	/^math: true$/;"	s
 math: true	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^math: true$/;"	s
+math: true	_posts/2021-07-19-A-Nice-Coincidence.md	/^math: true$/;"	s
+math: true	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
@@ -1753,6 +1777,8 @@ ol ol ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { l
 ol ul ol	_site/assets/css/style.css	/^ul ul ol, ul ol ol, ol ul ol, ol ol ol { list-style-type: lower-alpha; }$/;"	s
 optgroup	_site/assets/css/style.css	/^optgroup { font-weight: bold; }$/;"	s
 orbigraphs	_site/2019/09/06/Choo-Choo.html	/^<h3 id="orbigraphs">Orbigraphs<\/h3>$/;"	I
+outreach	_site/outreach.html	/^      <h1 id="outreach">Outreach<\/h1>$/;"	I
+outreach	_site/service.html	/^      <h1 id="outreach">Outreach<\/h1>$/;"	I
 p	_site/assets/css/style.css	/^p { margin-top: 0; margin-bottom: 10px; }$/;"	s
 phd-candidate	_site/assets/text/bio.html	/^      <h4 id="phd-candidate">PhD Candidate<\/h4>$/;"	I
 pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
@@ -1766,15 +1792,14 @@ published: true	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups
 published: true	_posts/2021-06-09-A-Mathematical-Postcard.md	/^published: true$/;"	s
 published: true	_posts/2021-06-12-Nielsen-Realization.md	/^published: true$/;"	s
 published: true	_posts/2021-06-17-Pullbacks-and-Intersections.md	/^published: true$/;"	s
-published: true	_posts/2021-06-21-Free-Actions-on-R-Trees.md	/^published: true$/;"	s
 published: true	_posts/2021-06-21-Free-actions-on-real-trees.md	/^published: true$/;"	s
 research	_site/Research.html	/^      <h1 id="research">Research<\/h1>$/;"	I
+rutgers-university	_site/teaching.html	/^<h2 id="rutgers-university">Rutgers University<\/h2>$/;"	I
 samp	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 section	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 select	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
 select	_site/assets/css/style.css	/^button, select { \/* 1 *\/ text-transform: none; }$/;"	s
 select	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
-service	_site/service.html	/^      <h1 id="service">Service<\/h1>$/;"	I
 sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	I
 small	_site/assets/css/style.css	/^small { font-size: 80%; }$/;"	s
 small	_site/assets/css/style.css	/^small { font-size: 90%; }$/;"	s
@@ -1787,6 +1812,7 @@ sub	_site/assets/css/style.css	/^sub, sup { font-size: 75%; line-height: 0; posi
 summary	_site/assets/css/style.css	/^summary { display: list-item; }$/;"	s
 sup	_site/assets/css/style.css	/^sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }$/;"	s
 sup	_site/assets/css/style.css	/^sup { top: -0.5em; }$/;"	s
+surface-groups-act-freely-on-real-trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="surface-groups-act-freely-on-real-trees">Surface groups act freely on real trees<\/h2>$/;"	I
 svg:not(:root)	_site/assets/css/style.css	/^svg:not(:root) { overflow: hidden; }$/;"	s
 table	_site/assets/css/style.css	/^table { border-spacing: 0; border-collapse: collapse; }$/;"	s
 td	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
@@ -1796,10 +1822,12 @@ textarea	_site/assets/css/style.css	/^button, input, select, textarea { font: in
 textarea	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 textarea	_site/assets/css/style.css	/^textarea { overflow: auto; }$/;"	s
 th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
+the-action-of-operatornamesl_2mathbbz	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	I
 the-algebraic-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	I
 the-algebraic-cotangent-space-agrees-with-the-usual-one	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space A/;"	I
 the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
 the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
+the-theorem-and-the-counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	I
 the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
 the-usual-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	I
 the-yoneda-lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	I
@@ -1808,6 +1836,7 @@ title: About	about.md	/^title: About$/;"	s
 train-track-maps	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="train-track-maps">Train track maps<\/h2>$/;"	I
 train-tracks	_site/2019/09/06/Choo-Choo.html	/^<h3 id="train-tracks">Train Tracks<\/h3>$/;"	I
 tt	_site/assets/css/style.css	/^tt, code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace/;"	s
+tufts-university	_site/teaching.html	/^<h2 id="tufts-university">Tufts University<\/h2>$/;"	I
 type	_site/assets/css/style.css	/^[type="checkbox"], [type="radio"] { box-sizing: border-box; \/* 1 *\/ padding: 0; \/* 2 *\/ }$/;"	s
 type	_site/assets/css/style.css	/^[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height:/;"	s
 type	_site/assets/css/style.css	/^[type="search"] { -webkit-appearance: textfield; \/* 1 *\/ outline-offset: -2px; \/* 2 *\/ }$/;"	s

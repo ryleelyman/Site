@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-01T23:08:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Gromov Hyperbolicity For Arbitrary Metric Spaces</title><link href="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html" rel="alternate" type="text/html" title="Gromov Hyperbolicity For Arbitrary Metric Spaces" /><published>2021-07-01T00:00:00-04:00</published><updated>2021-07-01T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces</id><content type="html" xml:base="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">&lt;p&gt;Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-25T22:45:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Boundaries Of Free Splittings</title><link href="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html" rel="alternate" type="text/html" title="Boundaries Of Free Splittings" /><published>2021-07-25T00:00:00-04:00</published><updated>2021-07-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/25/Boundaries-of-free-splittings</id><content type="html" xml:base="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html">&lt;p&gt;The other day on Twitter I asked whether it might be the case that a non-proper
+hyperbolic metric space might still have locally compact Gromov boundary.
+I was particularly interested in the case of a simplicial tree
+equipped with the path metric where each edge has length \(1\)
+with some vertices of infinite valence.
+The answer in this case is &lt;em&gt;no.&lt;/em&gt;
+Instead, the boundary of such a tree is homeomorphic to the &lt;em&gt;Baire space&lt;/em&gt; \(\mathbb{N}^\mathbb{N}\).
+In this post I’ll talk through why this is the case.
+There is also a notion of a &lt;em&gt;Bowditch boundary&lt;/em&gt; for a tree with vertices of infinite valence.
+I’d like to show that the Bowditch boundary of such a tree is a Cantor set.&lt;/p&gt;
+
+&lt;p&gt;The trees we are interested in are Bass–Serre trees associated to free splittings of countable groups
+with the property that some vertex group is infinite.
+Let \(T\) be such a tree.
+Then \(T\) admits a cocompact group action, has countably infinitely many edges
+and has a vertex of countably infinite valence.
+We can give \(T\) the structure of a metric space by considering the path metric
+where each edge is assigned length \(1\).
+The “identity map” from \(T\) as a simplicial complex to \(T\) as a metric space
+is continuous, but its inverse is not.
+The property that \(T\) admits a cocompact group action
+implies that any geodesic ray (isometric embedding of \(\mathbb{R}_{\ge 0}\))
+passes through infinitely many vertices of infinite valence.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-gromov-boundary-of-t&quot;&gt;The Gromov boundary of \(T\)&lt;/h2&gt;
+&lt;p&gt;Fix a point \(p\) in \(T\).
+The Gromov boundary \(\partial_\infty T\) of \(T\) is the set of geodesic rays in \(T\) beginning at \(p\).
+(It turns out that the Gromov boundary is independent of the choice of basepoint.)
+Let \(J\) be a (finite) geodesic segment in \(T\) beginning at \(p\).
+A basic open set \(U_J\) for the topology on \(\partial_\infty T\)
+is given by the set of geodesic rays that contain \(J\) as a subpath.
+I’ll leave it to show you that the intersection of basic open sets is either empty or another basic open set.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-baire-space&quot;&gt;The Baire space&lt;/h2&gt;
+&lt;p&gt;The Baire space \(\mathbb{N}^\mathbb{N}\) is homeomorphic to the irrational numbers.
+A theorem of Alexandrov and Urysohn says that
+the Baire space is characterized up to homeomorphism by the following properties.
+It is a (nonempty) &lt;em&gt;Polish space,&lt;/em&gt; meaning it is &lt;em&gt;separable&lt;/em&gt; and &lt;em&gt;completely metrizable.&lt;/em&gt;
+It is &lt;em&gt;zero-dimensional,&lt;/em&gt; meaning it has a basis of clopen sets.
+Finally, every compact subset has empty interior.&lt;/p&gt;
+
+&lt;p&gt;To show that the Gromov boundary of \(T\) is homeomorphic to the Baire space,
+we will verify these properties.
+It is completely metrizable by general theory.
+There are countably infinitely many finite geodesic segments in \(T\) beginning at \(p\)
+(one for each vertex of \(T\)),
+so \(\partial_\infty T\) is second countable, and in particular separable.
+A basic closed set of \(\partial_\infty T\) is given by the set of those geodesic rays
+that do &lt;em&gt;not&lt;/em&gt; contain a geodesic segment \(J\) as a subpath.
+It’s not hard to find a collection of geodesic segments such that any geodesic ray
+that does not contain any of these geodesic segments as a subpath must contain \(J\) as a subpath.
+I’ll leave the details to you.
+Therefore \(\partial_\infty T\) has a basis of clopen sets.
+To show that every compact subset has empty interior,
+it suffices to show that our basic clopen sets are never compact.
+To see this, continue \(J\) until you reach a vertex of infinite valence,
+giving us a new finite geodesic segment \(J'\).
+Write \(U_J \setminus U_{J'}\) as a finite disjoint union of basic open sets,
+and \(U_{J'}\) as the infinite disjoint union of the \(U_{J''}\),
+where \(J''\) is one edge longer than \(J'\).
+The result is an open cover of \(U_J\) with no finite subcover.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-bowditch-boundary&quot;&gt;The Bowditch boundary&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;Bowditch boundary&lt;/em&gt; of \(T\) is the set \(\partial T = \partial_\infty T \cup V_\infty(T)\),
+where \(V_\infty(T)\) denotes the set of vertices of \(T\) with infinite valence.
+The Bowditch boundary carries with it the &lt;em&gt;observer’s topology,&lt;/em&gt; which we now describe.
+Given two points \(q\) and \(r\) in \(T\), the &lt;em&gt;direction of \(r\) at \(q\)&lt;/em&gt; is the component of \(T\setminus \{q\}\)
+that contains \(r\).
+We continue to think of points of \(\partial_\infty T\) as geodesic rays based at \(p\);
+for convenience suppose that \(p\) is either in the interior of an edge or a vertex with finite valence.
+We may additionally think of a point \(v \in V_\infty(T)\)
+as being represented by the geodesic segment from \(p\) to \(v\).
+We say that a point of \(\partial T\) belongs to a direction if the
+corresponding geodesic starting at \(p\) is contained in the direction.
+The set of directions in \(T\) forms a subbasis for the observer’s topology on \(\partial T\);
+thus a basic open set is given by a finite intersection of directions of \(T\).
+Put another way, a basic open set is given by the set of those geodesics based at \(p\)
+that avoid a given finite subset of \(T\).
+We can always take this finite set to be a set of vertices or midpoints of edges,
+so the observer’s topology is second countable.&lt;/p&gt;
+
+&lt;p&gt;We’d like to show that the Bowditch boundary of \(T\) is a Cantor set.
+It is clear that \(\partial T\) has no isolated points.
+It is compact and Hausdorff by general theory.
+Thus it suffices to show that our basis elements are clopen.
+We will show that our open basic open sets are compact.
+Indeed, let \(U\) be a basic open set determined by the finite set of points \(\{z_1,\dotsc,z_n\} \subset T\),
+and let \(\{U_{\alpha}\}_{\alpha\in I}\) be an open cover of \(U\) by basic open sets,
+which are determined by finite sets of points containing \(\{z_1,\dotsc, z_n\}\) as a subset.
+Take \(U_\alpha \in I\).
+Then there are finitely many points \(z_{n+1},\dotsc,z_{n+k}\) determining \(U_\alpha\) and contained in \(U\).
+For each \(z_{n+i}\) for \(i\) satisfying \(1 \le i \le k\), we can find \(\alpha_i \in I\)
+such that \(U_{\alpha_i}\) contains \(z_{n+i}\).
+Then \(U_\alpha,U_{\alpha_1},\dotsc,U_{\alpha_k}\) is a finite subcover of \(U\).&lt;/p&gt;
+
+&lt;h2 id=&quot;a-parallel-example&quot;&gt;A parallel example&lt;/h2&gt;
+&lt;p&gt;Let the Cantor space be \(\{0,1\}^{\mathbb{N}}\).
+The subspace of sequences which are eventually constant is countable and dense.
+The subspace of sequences which are &lt;em&gt;not&lt;/em&gt; eventually constant is
+&lt;a href=&quot;https://math.stackexchange.com/a/254381/447318&quot;&gt;homeomorphic to the Baire space&lt;/a&gt;.
+This is more or less what is happening here: we add countably many points to
+our non-locally compact Gromov boundary to get the compact Bowditch boundary.&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day on Twitter I asked whether it might be the case that a non-proper hyperbolic metric space might still have locally compact Gromov boundary. I was particularly interested in the case of a simplicial tree equipped with the path metric where each edge has length \(1\) with some vertices of infinite valence. The answer in this case is no. Instead, the boundary of such a tree is homeomorphic to the Baire space \(\mathbb{N}^\mathbb{N}\). In this post I’ll talk through why this is the case. There is also a notion of a Bowditch boundary for a tree with vertices of infinite valence. I’d like to show that the Bowditch boundary of such a tree is a Cantor set.</summary></entry><entry><title type="html">A Nice Coincidence</title><link href="http://localhost:4000/2021/07/19/A-Nice-Coincidence.html" rel="alternate" type="text/html" title="A Nice Coincidence" /><published>2021-07-19T00:00:00-04:00</published><updated>2021-07-19T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/19/A-Nice-Coincidence</id><content type="html" xml:base="http://localhost:4000/2021/07/19/A-Nice-Coincidence.html">&lt;p&gt;The other day I “proved” the Farrell–Jones conjecture for a family of groups.
+The word “proved” is in quotes because actually there was nothing to prove,
+I just happened to be primed to notice that all the conditions were already there.
+The purpose of this post is to tell you the story of how this came to be
+and give the sketch of the proof that requires zero input from me.&lt;/p&gt;
+
+&lt;p&gt;Here is the story.
+The first full week of July,
+I attended &lt;a href=&quot;https://homepages.warwick.ac.uk/~masmbe/Charney/&quot;&gt;Ruth Charney’s birthday conference&lt;/a&gt;.
+It was wonderful to be around people doing math in person again!
+At this conference, Mladen Bestvina gave a talk about the Farrell–Jones conjecture
+for (virtually torsion-free) hyperbolic-by-cyclic groups.
+I don’t fully understand the statement of the conjecture,
+which says that certain assembly maps (?) in \(K\)-theory (??) or \(L\)-theory (???) are isomorphisms.
+However, I did learn a useful tool for proving the Farrell–Jones conjecture,
+a relatively recent (as in 2017) theorem due to Knopf:
+if a (countable) group \(G\) acts acylindrically (without inversions) on a (simplicial) tree 
+and the vertex stabilizers satisfy the Farrell–Jones conjecture, then so does \(G\).
+Here &lt;em&gt;acylindrically&lt;/em&gt; means that there exists \(K \ge 0\) such that the stabilizer
+of any geodesic segment of length \(K\) is finite.&lt;/p&gt;
+
+&lt;p&gt;One of the things I worked on this past week after coming back was my first review for zbMath.
+The paper I reviewed studied high-dimensional graph manifolds,
+which were introduced by Figerio, Lafont and Sisto.
+A high-dimensional graph manifold is made of &lt;em&gt;pieces,&lt;/em&gt;
+each piece is a product of a torus and
+a finite-volume hyperbolic manifold with toric cusps,
+and the pieces are glued together by cutting off the cusps
+into torus boundary components and gluing the tori.
+As such, the fundamental group of a high-dimensional graph manifold is naturally
+the fundamental group of a graph of groups
+whose vertex groups are the pieces and whose edge groups are \(\mathbb{Z}^{n-1}\).
+Figerio, Lafont and Sisto prove that the high-dimensional graph manifold is
+what’s called &lt;em&gt;irreducible&lt;/em&gt; if and only if the action of the fundamental group
+on the Bass–Serre tree for the graph of groups is acylindrical (in fact, you can take \(K\) to be \(3\)).&lt;/p&gt;
+
+&lt;p&gt;Since CAT(0) groups (in particular, the fundamental groups of the pieces)
+satisfy the Farrell–Jones conjecture,
+the theorem above implies that irreducible high-dimensional graph manifold groups
+satisfy the Farrell–Jones conjecture!
+Not bad for no real work, eh?&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day I “proved” the Farrell–Jones conjecture for a family of groups. The word “proved” is in quotes because actually there was nothing to prove, I just happened to be primed to notice that all the conditions were already there. The purpose of this post is to tell you the story of how this came to be and give the sketch of the proof that requires zero input from me.</summary></entry><entry><title type="html">Gromov Hyperbolicity For Arbitrary Metric Spaces</title><link href="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html" rel="alternate" type="text/html" title="Gromov Hyperbolicity For Arbitrary Metric Spaces" /><published>2021-07-01T00:00:00-04:00</published><updated>2021-07-01T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces</id><content type="html" xml:base="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">&lt;p&gt;Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces.
 However, it is only a quasi-isometry invariant for geodesic metric spaces.
 I learned this from a
 &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0723086905000113?via%3Dihub&quot;&gt;paper of Väisälä&lt;/a&gt;.
@@ -100,11 +241,13 @@ Then we have&lt;/p&gt;
 
 \[(x,y)_w = \frac 12\left(\sqrt 2t + 2\sqrt 5t - 2\sqrt 2t\right) \approx 1.53t\]
 
-\[(y,z)_w = \frac 12\left(2\sqrt 5 + \sqrt 2t - 4t\right) \approx 0.94t\]
+\[(y,z)_w = \frac 12\left(2\sqrt 5t + \sqrt 2t - 4t\right) \approx 0.94t\]
 
 &lt;p&gt;But observe that as \(t \to \infty\), we have that \((x,y)_w\) and \((y,z)_w\) tend to \(\infty\),
 so no uniform choice of \(\delta\) makes the inequality
-\((x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta\) hold.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/27/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-27T00:00:00-04:00</published><updated>2021-06-27T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/27/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/27/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
+\((x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta\) hold.
+The problem, roughly, is that the quasi-isometry condition cannot see the “kink” in the space \(X\),
+while the \(\delta\)-hyperbolicity condition, at least for this family of triangles, can.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/27/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-27T00:00:00-04:00</published><updated>2021-06-27T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/27/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/27/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
 is an object that appears in many guises throughout math.
 For me, it appears several times as a complex related to
 the outer automorphism group of a free group of rank two,
@@ -692,439 +835,4 @@ of a 2-dimensional orbifold whose underlying space is a finite-type surface
 and whose singular set is a finite collection of points
 is the subgroup of the mapping class group of the surface where the singular set is marked
 preserving the singular points of a given order.
-One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry><entry><title type="html">The Train Track Algorithm For Graphs Of Groups</title><link href="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html" rel="alternate" type="text/html" title="The Train Track Algorithm For Graphs Of Groups" /><published>2020-12-21T00:00:00-05:00</published><updated>2020-12-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups</id><content type="html" xml:base="http://localhost:4000/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">&lt;p&gt;Train track maps, which also come in “relative” and other flavors,
-are particularly nice homotopy equivalences of graphs
-used as tools to reason about outer automorphisms of free groups.
-I wrote a paper extending train track maps (as well as relative train track maps and “CTs”)
-to graphs of groups (with trivial edge groups for CTs).
-In this post I want to talk a little about how to think about train track maps
-and (“tame” in some sense) homotopy equivalences of graphs of groups more generally.
-At the end of the post I talk through using the train track algorithm
-to compute an example coming from a pseudo-Anosov 5-braid.&lt;/p&gt;
-
-&lt;h2 id=&quot;background-on-graphs-of-groups&quot;&gt;Background on graphs of groups&lt;/h2&gt;
-&lt;p&gt;First, a little background for anyone reading who isn’t an expert in graphs of groups.
-The standard reference is Chapter 1 of Serre’s book &lt;em&gt;Trees,&lt;/em&gt; 
-which is terse but very good.
-Group actions on trees (i.e. simply connected, 1-dimensional simplicial complexes)
-crop up all over the place in the theory of infinite groups.
-A &lt;em&gt;graph of groups&lt;/em&gt; is a kind of “orbifold quotient” of a group action on a tree.
-Technically one needs to assume that the action satisfies the condition of
-“no inversions in edges” which means what it probably sounds like
-and can always be accomplished by passing to the barycentric subdivision of the tree.
-Under this hypothesis, the quotient space of the action is naturally a graph
-(i.e. a 1-dimensional CW complex, which will be connected).
-Attached to the vertices and edges of the graph are groups
-recording stabilizer information.
-The “no inversions in edges” hypothesis ensures that if an edge is stabilized by a group element,
-then so are the incident vertices,
-so there are injective homomorphisms from edge groups into incident vertex groups.&lt;/p&gt;
-
-&lt;p&gt;If you happen to like thinking categorically,
-a graph of groups can be succinctly described this way.
-A graph \(\Gamma\) describes a small category \(\Gamma\) whose objects are the cells of \(\Gamma\)
-and whose nonidentity arrows run from edges to incident vertices.
-A graph of groups is a functor from the small category \(\Gamma\)
-to the category of groups with arrows monomorphisms.&lt;/p&gt;
-
-&lt;p&gt;The fundamental theorem of Bass–Serre theory asserts a perfect correspondence between
-groups acting on trees on the one hand and graphs of groups on the other.
-The exciting part of the theorem says that given a graph of groups,
-there is a group, called the &lt;em&gt;fundamental group of the graph of groups&lt;/em&gt;
-and a tree, called the &lt;em&gt;Bass–Serre tree&lt;/em&gt; on which it acts
-so that the quotient graph of groups is the given graph of groups.
-By the way, the fundamental group is really a group of homotopy classes of loops
-in the right sense.
-In the language of orbifolds, every graph of groups is “good.”
-What’s more, a simple presentation of the fundamental group of the graph of groups
-can be written down, and the tree and action explicitly described.&lt;/p&gt;
-
-&lt;h2 id=&quot;morphisms-and-maps-of-graphs-of-groups&quot;&gt;Morphisms and maps of graphs of groups&lt;/h2&gt;
-&lt;p&gt;Let’s call a continuous map of graphs a &lt;em&gt;morphism&lt;/em&gt; if it sends vertices to vertices and edges to edges.
-There is a notion, due to Bass, of a &lt;em&gt;morphism&lt;/em&gt; of graphs of groups.
-It’s a little complicated, so I’d rather talk around it than give a formal definition here.
-Suppose \(G\) and \(G'\) are groups acting on trees \(T\) and \(T'\), respectively,
-and suppose that we have a homomorphism \(f_\sharp\colon G \to G'\).
-A morphism \(\tilde f\colon T \to T'\) is &lt;em&gt;equivariant&lt;/em&gt; with respect to \(f_\sharp\) 
-if for all \(g \in G\) and \(x \in T\), we have&lt;/p&gt;
-
-\[\tilde f(g.x) = f_\sharp(g).\tilde f(x).\]
-
-&lt;p&gt;If \(\mathcal{G}\) and \(\mathcal{G}'\) are the quotient graphs of groups,
-Bass’s definition is designed so that in this situation there is a morphism \(f\colon\mathscr{G} \to \mathscr{G}'\).
-Conversely, given a morphism of graphs of groups \(f\colon \mathscr{G} \to \mathscr{G}'\),
-there is a map \(f_\sharp\colon G \to G'\) and an equivariant map \(\tilde f\colon T\to T'\).
-The correspondence is not quite perfect—in some situations there are multiple morphisms of graphs of groups
-yielding the same pair \(f_\sharp\) and \(\tilde f\),
-but the difference is understood.&lt;/p&gt;
-
-&lt;p&gt;If one happens to be categorically minded, it’s possible to give a succinct definition 
-of a morphism of graphs of groups.
-Suppose \(\mathcal{G}\) and \(\mathcal{G}'\) are graphs of groups with underlying graphs
-\(\Gamma\) and \(\Gamma'\), respectively.
-A morphism of graphs \(f\colon \Gamma \to \Gamma'\) yields a functor of the associated small categories.
-(Indeed, one could eke out slightly more generality 
-by defining morphisms of graphs to be those maps yielding a functor of small categories.)
-A morphism of graphs of groups is a morphism of underlying graphs \(f\colon \Gamma \to \Gamma'\)
-and a &lt;em&gt;pseudonatural transformation&lt;/em&gt; of functors \(f\colon \mathscr{G} \Rightarrow \mathscr{G}'f\).&lt;/p&gt;
-
-&lt;p&gt;Now suppose we have an automorphism \(f_\sharp\colon G \to G\) and a map
-\(\tilde f \colon T \to T\) which is equivariant with respect to \(f_\sharp\) 
-but may not be a morphism.
-After performing a homotopy, 
-we may assume that \(\tilde f\) 
-is a linear embedding on each edge, 
-expanding it over an edge path.
-Now \(\tilde f\) will become a morphism after (equivariantly) subdividing each edge into finitely many edges,
-so on the quotient graph of groups we are interested in maps 
-which may be represented as a subdivision followed by a morphism.
-Such a map \(f\colon \mathcal{G}\to\mathcal{G}\) sends vertices to vertices and edges to paths in the graph of groups.
-If additionally the image of each edge is a &lt;em&gt;tight&lt;/em&gt; path, i.e. it cannot be shortened by a homotopy,
-we’ll call such a map a &lt;em&gt;topological representative.&lt;/em&gt;
-For (many) examples of this kind of map, hang on for one more section.&lt;/p&gt;
-
-&lt;h2 id=&quot;train-track-maps&quot;&gt;Train track maps&lt;/h2&gt;
-
-&lt;p&gt;Train track maps were introduced by Bestvina and Handel in their 1992 paper
-“Train tracks and automorphisms of free groups”
-to study outer automorphisms of free groups.
-They remain one of the main tools for their study.
-A topological representative is a &lt;em&gt;train track map&lt;/em&gt; if for each edge \(e\),
-the path \(f^k(e))\) is immersed for all \(k \ge 1\),
-i.e. it cannot be shortened by a homotopy.
-If one accepts immersions and homotopy in a graph of groups sense,
-the same definition works for both topological representatives on graphs and on graphs of groups.&lt;/p&gt;
-
-&lt;p&gt;Bestvina and Handel describe an algorithm that takes as input an arbitrary topological representative
-and progressively either improves it to a train track map or finds an invariant subgraph.
-(It is &lt;em&gt;a priori&lt;/em&gt; possible to be both a train track map and have an invariant subgraph, 
-but these cases are of less interest.)&lt;/p&gt;
-
-&lt;p&gt;The argument is a beautiful application of the Perron–Frobenius theory of nonnegative integer matrices.
-A nonnegative integer matrix \(M\) is &lt;em&gt;irreducible&lt;/em&gt; if for each \(i\) and \(j\) there exists \(k\)
-such that the \(ij\)th entry of \(M^k\) is positive.
-To a topological representative \(f\colon \mathcal{G} \to \mathcal{G}\) we can associate a &lt;em&gt;transition matrix&lt;/em&gt;
-with rows and columns for each edge of the underlying graph \(\Gamma\)
-and \(ij\)th entry the number of times the image of the \(j\)th edge crosses the \(i\)th edge in either direction.
-It turns out that the transition matrix of \(f\) is irreducible exactly when \(f\) has no invariant subgraph.&lt;/p&gt;
-
-&lt;p&gt;Each irreducible matrix has a real &lt;em&gt;Perron–Frobenius eigenvalue&lt;/em&gt; \(\lambda\) satisfying \(\lambda \ge 1\).
-If \(f\) is not a train track map, Bestvina and Handel argue, then the Perron–Frobenius eigenvalue may be decreased
-by their algorithm.
-But by arguing that the number of edges of the graphs they consider remains bounded,
-the Perron–Frobenius eigenvalue can only be decreased finitely many times before reaching a minimum,
-at which point a train track map is reached.&lt;/p&gt;
-
-&lt;h2 id=&quot;a-pseudo-anosov-braid-example&quot;&gt;A pseudo-Anosov braid example&lt;/h2&gt;
-
-&lt;p&gt;To illustrate the algorithm and hopefully offer some illumination on how to think about maps of graphs of groups,
-I’d like to compute a train track map for the 
-&lt;a href=&quot;https://arxiv.org/abs/math/0506295&quot;&gt;pseudo-Anosov 5-braid with the least dilatation,&lt;/a&gt;
-\(\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\),
-seen as an (outer) automorphism of \(W_5\), the free product of 5 copies of the cyclic group of order 2.&lt;/p&gt;
-
-&lt;p&gt;Write&lt;/p&gt;
-
-\[W_5 = \langle a_1,a_2,\dotsc,a_5 \mid a_1^2 = a_2^2 = \dotsb = a_5^2 = 1 \rangle.\]
-
-&lt;p&gt;There is a homomorphism from the braid group \(B_n\) to \(\operatorname{Aut}(W_n)\)
-sending the generator \(\sigma_i\) to the automorphism&lt;/p&gt;
-
-\[\begin{cases}
-a_i \mapsto a_ia_{i+1}a_i^{-1} \\
-a_{i+1} \mapsto a_i \\
-a_j \mapsto a_j &amp;amp; j \neq i, i+1.
-\end{cases}\]
-
-&lt;p&gt;There’s a good reason (involving orbifolds) that the homomorphism sends
-pseudo-Anosov braids to (outer) automorphisms representable by irreducible train track maps,
-but let us just remark that we expect our eventual train track map to have
-Perron–Frobenius eigenvalue equal to the dilatation of \(\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\),
-that is, \(\lambda \approx 1.722\), the largest root of \(x^4 - x^3 - x^2 - x + 1\).&lt;/p&gt;
-
-&lt;p&gt;Under the homomorphism, the action of our element on the generators of \(W_5\) is given by&lt;/p&gt;
-
-\[\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\begin{cases}
-a_1 \mapsto a_1a_2a_3a_2^{-1}a_1^{-1} \\
-a_2 \mapsto a_1a_2a_4a_2^{-1}a_1^{-1} \\
-a_3 \mapsto a_1a_2a_1^{-1} \\
-a_4 \mapsto a_1a_5a_1^{-1} \\
-a_5 \mapsto a_1.
-\end{cases}\]
-
-&lt;p&gt;To start, we need a graph of groups with fundamental group \(W_5\).
-It is a fact that if all edge groups in a graph of groups are trivial,
-and the underlying graph is a tree,
-then the fundamental group of the graph of groups is isomorphic to the free product of the vertex groups.
-Thus a good candidate is the following graph of groups \(\mathcal{G}_1\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/thistle.jpg&quot; alt=&quot;A graph of groups with fundamental group $$W_5$$&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There is one vertex with trivial vertex group, five vertices with vertex group cyclic of order 2,
-represented in the image by a number 2,
-and five edges, each one connecting a vertex with nontrivial vertex group to the vertex with trivial vertex group.
-Let us base the fundamental group at the center vertex with trivial vertex group.
-Under our identification of this fundamental group with \(W_5\),
-a generator of \(W_5\) is represented by a loop that travels out along an edge,
-picks up the nontrivial element of the vertex group, and then travels back.
-Thus for example \(a_2\) is represented by the loop \(\bar Ba_2B\).&lt;/p&gt;
-
-&lt;p&gt;Let’s introduce some notation: 
-I’ll write a period for the nontrivial element of any vertex group,
-and write a hat above an edge to mean traveling along the edge, 
-picking up the nontrivial element of the vertex group and then traveling back.
-Thus the group element \(a_1a_2a_3a_2^{-1}a_1^{-1}\) is represented in our graph of groups
-by the loop \(\hat A\hat B\hat C\hat B\hat A\).&lt;/p&gt;
-
-&lt;p&gt;We may represent \(\sigma_1\sigma_1\sigma_3\sigma_4\sigma_1\sigma_2\) by the map
-\(f_1\colon \mathcal{G}_1\to\mathcal{G}_1\) defined as&lt;/p&gt;
-
-\[f_1 \begin{cases}
-A \mapsto C\hat B \hat A \\
-B \mapsto D\hat B \hat A \\
-C \mapsto B \hat A \\
-D \mapsto E \hat A \\
-E \mapsto A
-\end{cases}\]
-
-&lt;p&gt;The transition matrix of \(f_1\) is&lt;/p&gt;
-
-\[\begin{pmatrix}
-2 &amp;amp; 2 &amp;amp; 2 &amp;amp; 2 &amp;amp; 1 \\
-2 &amp;amp; 2 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\
-1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0
-\end{pmatrix},\]
-
-&lt;p&gt;whose Perron–Frobenius eigenvalue \(\lambda_1\) is the largest real root of
-\(-x^5 + 4x^4 + 2x^3 + 4x + 1\) and satisfies \(\lambda_1 \approx 4.577\).&lt;/p&gt;
-
-&lt;p&gt;How do we decide whether \(f_1\) is a train track map?
-Since \(f_1\) sends edges to tight edge paths,
-the only place where cancellation could occur is where the images of edges are joined together.
-For example, in \(f_1^2(A)\), there is cancellation between \(f_1(B)\) and \(f_1(\bar A)\)
-because the last edge of \(f_1(B)\), namely \(A\), is equal to the reverse of the first edge of \(f_1(\bar A)\).
-Thus we know \(f_1\) is not a train track map.&lt;/p&gt;
-
-&lt;p&gt;We can formalize this as follows: a &lt;em&gt;turn&lt;/em&gt; is a pair of edges sharing a common initial vertex,
-e.g. \(\{\bar A,\bar A\}\) or \(\{\bar B,\bar C\}\).
-The former turn is &lt;em&gt;degenerate,&lt;/em&gt; while the latter is not.
-If the vertex in question has nontrivial vertex group,
-rather than just pairs of edges,
-we should consider pairs of pairs consisting of an edge together with a vertex group element.
-Thus at the initial vertex of the edge \(A\),
-the turn \(\{.A,A\}\) is nondegenerate.
-A topological representative \(f\colon \mathcal{G} \to \mathcal{G}\) induces a map \(Tf\)
-on the set of turns by sending \(\{E,E'\}\) to the
-turn determined by the initial edges in the image of \(f(E)\) and \(f(E')\).
-A turn is &lt;em&gt;illegal&lt;/em&gt; if it is eventually mapped to a degenerate turn.
-In our example, every turn based at the center vertex is illegal because
-each such turn is mapped to \(\{\bar A,\bar A\}\).
-Thus we can say that \(f_1\) is not a train track map
-because, for instance, the image of \(f_1(A)\) contains the illegal turn \(\{\bar B,\bar A\}\).&lt;/p&gt;
-
-&lt;p&gt;To improve the situation, let’s &lt;em&gt;fold&lt;/em&gt; \(\bar A\) and \(\bar B\). 
-They each have initial segments mapped to the path \(\hat A\hat B\),
-so subdivide at the endpoint of these initial segments and then identify them to create a new edge as pictured.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/fold1.jpg&quot; alt=&quot;Folding the edges $$\bar A$$ and $$\bar B$$&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The correspondence \(A \leadsto A'F\) and \(B \leadsto B'F\) allows us to define
-a new map on our new graph of groups \(f_2\colon \mathcal{G}_2\to \mathcal{G}_2\).
-The new map admits some tightening, which yields a corresponding reduction in the Perron–Frobenius eigenvalue
-\(\lambda_2\),
-which is now the largest root of the polynomial \(x^6 - 2x^5 - 2x^4 - 4x^2 + 3x + 2\)
-and satisfies \(\lambda_2 \approx 2.994\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map2.jpg&quot; alt=&quot;The second topological representative&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;However, the map \(f_2\) is still not a train track map, 
-since every turn based at either of the vertices with trivial vertex stabilizer is eventually mapped to
-\(\{\bar F,\bar F\}\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/turns2.jpg&quot; alt=&quot;The second map on turns&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Let’s fold again, this time identifying all of \(E\) with an initial segment of \(\bar F\).
-The correspondence \(F \leadsto F'E\) yields a new map \(f_3\colon \mathcal{G}_3 \to \mathcal{G}_3\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map3.jpg&quot; alt=&quot;The third topological representative&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now the Perron–Frobenius eigenvalue \(\lambda_3\) is the largest root of
-\(x^6 - 2x^5 - 2x^4 - 2x^3 + 5x - 2\) and satisfies \(\lambda_3 \approx 2.875\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/turns3.jpg&quot; alt=&quot;The third map on turns&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There are still illegal turns, so let’s fold \(C\) and \(D\) with \(E\) to produce a valence-one vertex
-with trivial vertex group.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/fold3.jpg&quot; alt=&quot;The third fold&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Folding doesn’t produce any cancellation, so the Perron–Frobenius eigenvalue is unchanged.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map4.jpg&quot; alt=&quot;The fourth and fifth maps&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The valence-one homotopy does decrease the Perron–Frobenius eigenvalue;
-\(\lambda_5\) is the largest root of \(-x^5 + x^4 + x^3 + x^2 + x - 2\)
-and satisfies \(\lambda_5 \approx 1.830\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/turns5.jpg&quot; alt=&quot;The fifth map on turns&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The image of \(F'\) contains the illegal turn \(\{\bar A',\bar B'\}\),
-which is first mapped to \(\{\bar C',\bar D'\}\) before degenerating.
-So we’ll fold \(\bar D'\) and \(\bar C'\), then \(\bar A'\) and \(\bar B'\), 
-and then the interior of \(F'\) if need be.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map6.jpg&quot; alt=&quot;The sixth and seventh maps&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As it happens, the second fold produces nontrivial tightening;
-\(\lambda_7\) is the largest root of \(-x^7 + x^6 + x^5 + x^4 + x^3 - 2x^2 - 2\)
-and satisfies \(\lambda_7 \approx 1.789\).
-We have produced a vertex of valence two with trivial vertex group and would like to get rid of it via a homotopy.
-The eigenvector coefficient of the edge \(G\) is larger than the eigenvector coefficient for \(F'\),
-so we collapse \(G\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map8.jpg&quot; alt=&quot;The eighth map&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Perron–Frobenius eigenvalue \(\lambda_8\) is the largest root of
-\(x^6 - x^5 - 2x^3 - x - 1\) and satisfies \(\lambda_8 \approx 1.783\).
-The turn \(\{\bar E',\bar F'\}\) is illegal and in the image of \(F'\), so we fold them.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/map9.jpg&quot; alt=&quot;The ninth map&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Perron–Frobenius eigenvalue \(\lambda_9\) is the largest root of \(x^6 - x^5 - 2x^3 - x + 1\)
-and satisfies \(\lambda_9 \approx 1.722\).
-The only turns that we need to worry about in the image of edges of \(f_9\) are \(\{E',\bar F''\}\)
-and \(\{\bar B'',F''\}\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/traintrack/turns9.jpg&quot; alt=&quot;The ninth map on turns&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As it turns out, both of these turns are legal, so this is a train track map!
-Indeed \(\lambda_9\) is also the largest real root of \(x^4 - x^3 - x^2 - x + 1\),
-the polynomial we mentioned before in connection with \(\sigma_1\sigma_2\sigma_3\sigma_4\sigma_1\sigma_2\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Train track maps, which also come in “relative” and other flavors, are particularly nice homotopy equivalences of graphs used as tools to reason about outer automorphisms of free groups. I wrote a paper extending train track maps (as well as relative train track maps and “CTs”) to graphs of groups (with trivial edge groups for CTs). In this post I want to talk a little about how to think about train track maps and (“tame” in some sense) homotopy equivalences of graphs of groups more generally. At the end of the post I talk through using the train track algorithm to compute an example coming from a pseudo-Anosov 5-braid.</summary></entry><entry><title type="html">The Axiom Of Choice Is False For Manifolds</title><link href="http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html" rel="alternate" type="text/html" title="The Axiom Of Choice Is False For Manifolds" /><published>2020-08-02T00:00:00-04:00</published><updated>2020-08-02T00:00:00-04:00</updated><id>http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds</id><content type="html" xml:base="http://localhost:4000/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html">&lt;p&gt;This is a post about one of those things that is really a case of category theory
-cheekily playing with unhooking a signifier from what it typically signifies.
-Namely, one of the (many) tricky foundational things about working with orbifolds
-goes by the name “the axiom of choice is false for the category of smooth manifolds.”&lt;/p&gt;
-
-&lt;p&gt;One way to misinterpret the statement is to take it literally:
-as undergraduate math majors learn, the axiom of choice says that given an infinite collection of sets,
-you can always choose exactly one element of each set, even if the collection is infinite.
-Therefore the statement “the axiom of choice is false for the category of smooth manifolds”
-could reasonably be thought to mean “given a collection of smooth manifolds,
-which are in particular sets with additional structure,
-it is &lt;em&gt;not&lt;/em&gt; the case that you can always choose a point in each manifold if the collection is sufficiently large.”
-Of course, if we accept the axiom of choice 
-(I do, since I like the 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Nielsen–Schreier_theorem#Axiomatic_foundations&quot;&gt;Nielsen–Schreier theorem&lt;/a&gt;
-which says that subgroups of free groups are free), 
-then this statement is nonsense: it doesn’t matter if the collection of sets is really a collection of manifolds
-or a collection of the contents of various grocery stores, we can always choose one element from each.
-What, then, does this statement mean?&lt;/p&gt;
-
-&lt;p&gt;As it turns out, there are two statements equivalent to the axiom of choice that have category-theoretic import.
-This post is primarily concerned with the latter, but the former is too cute to pass up.&lt;/p&gt;
-
-&lt;h2 id=&quot;every-epimorphism-splits&quot;&gt;Every Epimorphism Splits&lt;/h2&gt;
-
-&lt;p&gt;Set theory is kind of in an odd position within mathematics.
-I read some complaint that most mathematicians see sets every day
-and yet have never seen sets be &lt;em&gt;interesting,&lt;/em&gt; 
-and so discount the possibility that set theory could be a worthwhile pursuit.
-The standard formulation of set theory as a foundation for mathematics is somewhat unfortunate, too:
-if we take the axioms of Zermelo–Frankel set theory too literally, then we notice that everything is a set,
-even the elements of sets.
-Thus nonsensical questions like “what are the elements of 6” are allowable on a technicality.&lt;/p&gt;
-
-&lt;p&gt;I learned this complaint, and everything in this section, from a beautiful 8-page article by Tom Leinster called
-&lt;a href=&quot;https://arxiv.org/pdf/1212.6543.pdf&quot;&gt;“Rethinking Set Theory”&lt;/a&gt; from which I’d like to quote most of the abstract:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Mathematicians manipulate sets with confidence almost every day, rarely making mistakes. 
-Few of us, however, could accurately quote what are often referred to as “the” axioms of set theory. 
-This suggests that we all carry around with us, perhaps subconsciously, 
-a reliable body of operating principles for manipulating sets. 
-What if we were to take some of those principles and adopt them as our axioms instead? 
-The message of this article is that this can be done, in a simple, practical way (due to Lawvere). 
-The resulting axioms are ten thoroughly mundane statements about sets.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Of these axioms, the formulation of the axiom of choice is perhaps the most devastatingly simple:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;10.&lt;/strong&gt; Every [surjective function of sets] has a right inverse.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To see that this is really equivalent, notice that if \(p\colon S \to T\) is a surjective function of sets,
-then we may identify \(S\) with the disjoint union&lt;/p&gt;
-
-\[\coprod_{t \in T} p^{-1}(t).\]
-
-&lt;p&gt;A &lt;em&gt;right inverse&lt;/em&gt; for the function \(p\) is a function \(i \colon T \to S\)
-such that \(p(i(t)) = t\) for all \(t\) in \(T\).
-Notice that this means that \(i\colon T \to S\) picks out one element of \(p^{-1}(t)\) as \(t\)
-varies over the elements of \(T\),
-so the existence of such a function is equivalent to being able to perform choice in the sense that we said above!&lt;/p&gt;
-
-&lt;p&gt;This axiom can be reformulated in any category:
-the correct generalization of a surjective function is called an &lt;em&gt;epimorphism;&lt;/em&gt;
-for categories of “sets with additional structure” (e.g. groups, rings, manifolds) the surjective maps 
-are epimorphisms, but the converse is not always true.&lt;/p&gt;
-
-&lt;p&gt;A right inverse for an arrow \(f\colon c \to d\) makes sense in any category:
-it’s an arrow \(r \colon d \to c\) such that \(fr\) is the identity arrow of \(c\).
-It’s a general fact that admitting a right inverse implies that the arrow is an epimorphism,
-even though we haven’t defined what that is.
-In fact, for categories of “sets with additional structure” if \(f\) admits a right inverse,
-then it is surjective.
-We say \(f\) is a &lt;em&gt;split epimorphism&lt;/em&gt; (the name comes from “split exact sequences” of e.g. groups).&lt;/p&gt;
-
-&lt;p&gt;This allows us to cheekily reformulate the axiom of choice in any category as the following statement&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; every epimorphism is split.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This axiom fails for smooth manifolds:
-a surjective map from the real line to the unit circle in \(\mathbb R^2\) given by sending \(x\)
-to \((\cos x,\sin x)\) for instance, fails to have a right inverse.&lt;/p&gt;
-
-&lt;h2 id=&quot;an-equivalent-definition-of-equivalence-of-categories&quot;&gt;An Equivalent Definition of Equivalence of Categories&lt;/h2&gt;
-
-&lt;p&gt;Another use of the axiom of choice in category theory is the following theorem:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Theorem:&lt;/strong&gt; A functor \(F\colon C \to D\) between categories \(C\) and \(D\) is an &lt;em&gt;equivalence of categories&lt;/em&gt;
-if and only if it is &lt;em&gt;fully faithful&lt;/em&gt; and &lt;em&gt;essentially surjective.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Here the functor \(F\) is &lt;em&gt;full&lt;/em&gt; if for all objects \(c\) and \(c'\) in \(C\), the function
-\(F\colon C(c,c') \to D(Fc,Fc')\) is surjective, and &lt;em&gt;faithful&lt;/em&gt; if it is injective.
-So \(F\) is &lt;em&gt;fully faithful&lt;/em&gt; if it induces a bijection from the set of arrows betwwen any two objects in \(C\)
-to their images in \(D\).&lt;/p&gt;
-
-&lt;p&gt;The functor \(F\) is &lt;em&gt;essentially surjective&lt;/em&gt; if every object \(d \in D\) is isomorphic to \(Fc\) for some
-\(c \in C\).&lt;/p&gt;
-
-&lt;p&gt;Finally an &lt;em&gt;equivalence of categories&lt;/em&gt; is a functor \(F\colon C \to D\) such that there exists an “inverse”
-functor \(G \colon D \to C\) and natural isomorphisms between the two double compositions and the
-identity functors of \(C\) and \(D\), respectively.&lt;/p&gt;
-
-&lt;p&gt;The proof that an equivalence of categories has the above properties is fairly simple: in an alternate universe,
-this blog post would give it, and show that the converse requires the axiom of choice.
-Let me just content myself with pointing out that the use of the axiom of choice is to pick
-a \(c\) such that \(Fc\) is isomorphic to \(d\) for all \(d \in D\).
-In fact, it turns out that the theorem is &lt;em&gt;equivalent&lt;/em&gt; to the axiom of choice,
-if you make the appropriate definitions of the categories involved.
-(e.g. \(D\) should be an index set, and \(C\) a clever category based on a collection
-of sets indexed by \(D\).)&lt;/p&gt;
-
-&lt;p&gt;One can define (small) categories &lt;em&gt;internal&lt;/em&gt; to a category and 
-do category theory in this way. Thus one way to phrase the axiom of choice for a category is:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;The Axiom of Choice for a Category:&lt;/strong&gt; A functor between categories internal to \(C\)
-is an equivalence if and only if it is fully faithful and essentially surjective.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It turns out that the category of smooth manifolds &lt;em&gt;also&lt;/em&gt; fails this axiom,
-essentially because it fails the previous one!&lt;/p&gt;</content><author><name></name></author><summary type="html">This is a post about one of those things that is really a case of category theory cheekily playing with unhooking a signifier from what it typically signifies. Namely, one of the (many) tricky foundational things about working with orbifolds goes by the name “the axiom of choice is false for the category of smooth manifolds.”</summary></entry></feed>
+One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry></feed>
