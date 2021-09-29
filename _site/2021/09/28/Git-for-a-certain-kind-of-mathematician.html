@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154695841-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154695841-1');
+    </script>
+	<script>function displayabs(y) {
+		var x = document.getElementById(y);
+		if (x.style.display == 'block') {
+			x.style.display = 'none';
+		} else {
+			x.style.display = 'block';
+		}
+	}
+	</script>
+
+    <meta charset="utf-8">
+    <title>Git For A Certain Kind Of Mathematician</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+  </head>
+
+  <body>
+    <div class="navdiv">
+  <div class="sidebar-l">
+    <div>
+      <div class="headline">
+	
+	<a href="/blog.html">Alanza</a>
+	
+      </div>
+      <div>
+	<nav>
+	  
+	    <div class="navbutton">
+	      <a  href="/">
+		Home
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/research.html">
+		Research
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/teaching.html">
+		Teaching
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/outreach.html">
+		Outreach
+	      </a>
+	    </div>
+	  
+	    <div class="navbutton">
+	      <a  href="/blog.html">
+		Blog
+	      </a>
+	    </div>
+	  
+	</nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="maindiv">
+      <h1>Git For A Certain Kind Of Mathematician</h1>
+<p>28 Sep 2021</p>
+
+<p>As a mathematician,
+I collaborate with other mathematicians on papers.
+I’ve used Overleaf, emailing the paper back and forth,
+and taking turns in Dropbox as my mode of collaboration.
+I <em>haven’t</em> collaborated using Git, but I sure would like to.
+The purpose of this post is for mathematicians
+like for example my younger self,
+who are familiar with the command line
+and curious about Git as a tool,
+and for whatever reason don’t have the patience for something like “Git for Poets.”
+I explain Git just enough to get you started on a simple project,
+and hopefully enough so that you can start
+Googling things you’re unfamiliar with.
+I’m not an expert, and I expect my inexpertise to show.</p>
+
+<p>Let’s start. There are two ways I typically start.
+The first way is 
+that I have files on my computer that I would like to use Git on.
+So I would open a command line,
+<code class="language-plaintext highlighter-rouge">cd</code> over to where those files are (say <code class="language-plaintext highlighter-rouge">~/Documents/waver</code>) and invoke
+<code class="language-plaintext highlighter-rouge">git init</code>.
+This starts a new Git repository in the folder you’re in.</p>
+
+<p>The other way is some Git repository already exists
+(probably on GitHub)
+and I would like to work on those files.
+In that case I would find the URL of that repository,
+<code class="language-plaintext highlighter-rouge">cd</code> to the directory where I would like to put my copy of the repository,
+and invoke
+<code class="language-plaintext highlighter-rouge">git clone &lt;url&gt;</code>.
+This automatically creates a new folder with the contents of the repository,
+so if I was cloning <code class="language-plaintext highlighter-rouge">ryleelyman/waver</code> on GitHub, for instance,
+and I wanted it to end up in <code class="language-plaintext highlighter-rouge">~/Documents/waver</code>,
+I would run <code class="language-plaintext highlighter-rouge">git clone https://github.com/ryleelyman/waver.git</code> 
+in my <code class="language-plaintext highlighter-rouge">~/Documents</code> folder.</p>
+
+<p>Now Git is paying attention to the files in <code class="language-plaintext highlighter-rouge">~/Documents/waver</code>,
+but by default it isn’t doing anything to them at all.
+You can see what it thinks by invoking <code class="language-plaintext highlighter-rouge">git status</code>.
+If you have files that have changed,
+Git will display them (in red, in my terminal).
+For example, when I run <code class="language-plaintext highlighter-rouge">git status</code> in the
+directory for my website, it tells me</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+        modified:   _site/blog.html
+        modified:   _site/feed.xml
+        modified:   _site/sitemap.xml
+</code></pre></div></div>
+
+<p>Git tracks changes based on “commits,”
+but in order for something to be committed
+Git needs to know that you want to commit it.
+That’s the business of the <code class="language-plaintext highlighter-rouge">git add &lt;file&gt;</code> comment above.
+If we were to do <code class="language-plaintext highlighter-rouge">git add _site/blog.html</code>,
+we would be telling Git to prepare to commit
+the changes we made to the <code class="language-plaintext highlighter-rouge">_site/blog.html</code> file.
+To actually commit the changes from there we would do
+<code class="language-plaintext highlighter-rouge">git commit</code>.
+But! Don’t actually do <code class="language-plaintext highlighter-rouge">git commit</code>.
+I prefer <code class="language-plaintext highlighter-rouge">git commit -m "&lt;message&gt;"</code>.
+Git commits require a little blurb from you about the changes,
+and I find it much more convenient to just write that message
+on the command line.</p>
+
+<p>Now Git knows about our changes locally.
+If we’re working with a remote repository, say on GitHub,
+we still need to update that repository.
+To do that we invoke <code class="language-plaintext highlighter-rouge">git push</code>.
+If you started the repository with <code class="language-plaintext highlighter-rouge">git init</code>,
+you may need to setup GitHub (or whatever it is)
+to track the repository you created. 
+GitHub has nice instructions for this.
+To update our local repository with changes from the remote repository,
+we would do <code class="language-plaintext highlighter-rouge">git pull</code>.</p>
+
+<p>Those are all the commands I use daily.
+I didn’t talk about Gits “branching” model,
+which is worth learning a bit about.
+I don’t know that I have anything cogent to say about it,
+so maybe I’ll stop here.</p>
+
+
+    </div>
+  </body>
+</html>

@@ -1533,9 +1533,12 @@ A Digression	_site/2019/07/13/A-Digression.html	/^      <h1>A Digression<\/h1>$/
 A Digression	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/A-Digression.html">A Digression<\/a><\/h2>$/;"	i
 A Mathematical Postcard	_site/2021/06/09/A-Mathematical-Postcard.html	/^      <h1>A Mathematical Postcard<\/h1>$/;"	h
 A Mathematical Postcard	_site/blog.html	/^    <h2><a href="\/2021\/06\/09\/A-Mathematical-Postcard.html">A Mathematical Postcard<\/a><\/h2/;"	i
+A Nice Coincidence	_site/2021/07/19/A-Nice-Coincidence.html	/^      <h1>A Nice Coincidence<\/h1>$/;"	h
+A Nice Coincidence	_site/blog.html	/^    <h2><a href="\/2021\/07\/19\/A-Nice-Coincidence.html">A Nice Coincidence<\/a><\/h2>$/;"	i
 A Sheafy Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^      <h1>A Sheafy Adjunction<\/h1>$/;"	h
 A Sheafy Adjunction	_site/blog.html	/^    <h2><a href="\/2020\/07\/26\/A-Sheafy-Adjunction.html">A Sheafy Adjunction<\/a><\/h2>$/;"	i
 A parallel example	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## A parallel example$/;"	s
+A parallel example	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="a-parallel-example">A parallel example<\/h2>$/;"	i
 A pseudo-Anosov braid example	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## A pseudo-Anosov braid example$/;"	s
 A pseudo-Anosov braid example	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="a-pseudo-anosov-braid-example">A pseudo-Anosov braid example<\/h2>$/;"	i
 About page	_site/about.html	/^      <h1 id="about-page">About page<\/h1>$/;"	h
@@ -1546,6 +1549,8 @@ An Equivalent Definition of Equivalence of Categories	_posts/2020-08-02-The-Axio
 An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	i
 Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Background on graphs of groups$/;"	s
 Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
+Boundaries Of Free Splittings	_site/2021/07/25/Boundaries-of-free-splittings.html	/^      <h1>Boundaries Of Free Splittings<\/h1>$/;"	h
+Boundaries Of Free Splittings	_site/blog.html	/^    <h2><a href="\/2021\/07\/25\/Boundaries-of-free-splittings.html">Boundaries Of Free Splittin/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
 CAT(0) Free-by-Cyclic Groups	_site/2019/09/06/Choo-Choo.html	/^<h3 id="cat0-free-by-cyclic-groups">CAT(0) Free-by-Cyclic Groups<\/h3>$/;"	j
 CTs	_site/Research.html	/^<div id="CTs" style="display: none">$/;"	I
@@ -1617,7 +1622,9 @@ The Algebraic Cotangent Space Agrees With the Usual One	_site/2020/07/10/Two-App
 The Axiom Of Choice Is False For Manifolds	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^      <h1>The Axiom Of Choice Is False For Manifolds<\/h1>$/;"	h
 The Axiom Of Choice Is False For Manifolds	_site/blog.html	/^    <h2><a href="\/2020\/08\/02\/The-Axiom-of-Choice-is-False-for-Manifolds.html">The Axiom Of C/;"	i
 The Baire space	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Baire space$/;"	s
+The Baire space	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-baire-space">The Baire space<\/h2>$/;"	i
 The Bowditch boundary	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Bowditch boundary$/;"	s
+The Bowditch boundary	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-bowditch-boundary">The Bowditch boundary<\/h2>$/;"	i
 The Category Of Graphs	_site/2019/06/29/The-Category-of-Graphs.html	/^      <h1>The Category Of Graphs<\/h1>$/;"	h
 The Category Of Graphs	_site/blog.html	/^    <h2><a href="\/2019\/06\/29\/The-Category-of-Graphs.html">The Category Of Graphs<\/a><\/h2>$/;"	i
 The Counit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Counit of the Adjunction$/;"	S	section:Sheaves
@@ -1625,6 +1632,7 @@ The Counit of the Adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id=
 The Farey Graph	_site/2021/06/27/The-Farey-graph.html	/^      <h1>The Farey Graph<\/h1>$/;"	h
 The Farey Graph	_site/blog.html	/^    <h2><a href="\/2021\/06\/27\/The-Farey-graph.html">The Farey Graph<\/a><\/h2>$/;"	i
 The Gromov boundary of $$T$$	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^## The Gromov boundary of $$T$\$$/;"	s
+The Gromov boundary of \\(T\\)	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-gromov-boundary-of-t">The Gromov boundary of \\(T\\)<\/h2>$/;"	i
 The Train Track Algorithm For Graphs Of Groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^      <h1>The Train Track Algorithm For Graphs Of Groups<\/h1>$/;"	h
 The Train Track Algorithm For Graphs Of Groups	_site/blog.html	/^    <h2><a href="\/2020\/12\/21\/The-Train-Track-Algorithm-for-Graphs-of-Groups.html">The Train /;"	i
 The Unit of the Adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^### The Unit of the Adjunction$/;"	S	section:Sheaves
@@ -1650,6 +1658,7 @@ Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
+a-parallel-example	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="a-parallel-example">A parallel example<\/h2>$/;"	I
 a-pseudo-anosov-braid-example	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="a-pseudo-anosov-braid-example">A pseudo-Anosov braid example<\/h2>$/;"	I
 a:active	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
 a:hover	_site/assets/css/style.css	/^a:active, a:hover { outline-width: 0; }$/;"	s
@@ -1740,6 +1749,7 @@ input	_site/assets/css/style.css	/^button, input, select, textarea { font: inher
 input	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 kbd	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, monospace; \/* 1 *\/ font-size: 1em; \/* 2 *\/ }$/;"	s
 layout: post	_posts/2021-06-21-Geometric-group-theory-without-boundaries.md	/^layout: post$/;"	s
+layout: post	_posts/2021-09-28-Git-for-a-certain-kind-of-mathematician.md	/^layout: post$/;"	s
 legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ color: inherit; \/* 2 *\/ display: table; \/* 1 *\/ m/;"	s
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
@@ -1825,7 +1835,10 @@ th	_site/assets/css/style.css	/^td, th { padding: 0; }$/;"	s
 the-action-of-operatornamesl_2mathbbz	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	I
 the-algebraic-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space">The Algebraic Cotangent Space<\/h2>$/;"	I
 the-algebraic-cotangent-space-agrees-with-the-usual-one	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-algebraic-cotangent-space-agrees-with-the-usual-one">The Algebraic Cotangent Space A/;"	I
+the-baire-space	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-baire-space">The Baire space<\/h2>$/;"	I
+the-bowditch-boundary	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-bowditch-boundary">The Bowditch boundary<\/h2>$/;"	I
 the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
+the-gromov-boundary-of-t	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-gromov-boundary-of-t">The Gromov boundary of \\(T\\)<\/h2>$/;"	I
 the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
 the-theorem-and-the-counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	I
 the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I

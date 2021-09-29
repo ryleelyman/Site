@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-25T22:45:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Boundaries Of Free Splittings</title><link href="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html" rel="alternate" type="text/html" title="Boundaries Of Free Splittings" /><published>2021-07-25T00:00:00-04:00</published><updated>2021-07-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/25/Boundaries-of-free-splittings</id><content type="html" xml:base="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html">&lt;p&gt;The other day on Twitter I asked whether it might be the case that a non-proper
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-28T20:27:15-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Git For A Certain Kind Of Mathematician</title><link href="http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician.html" rel="alternate" type="text/html" title="Git For A Certain Kind Of Mathematician" /><published>2021-09-28T00:00:00-04:00</published><updated>2021-09-28T00:00:00-04:00</updated><id>http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician</id><content type="html" xml:base="http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician.html">&lt;p&gt;As a mathematician,
+I collaborate with other mathematicians on papers.
+I’ve used Overleaf, emailing the paper back and forth,
+and taking turns in Dropbox as my mode of collaboration.
+I &lt;em&gt;haven’t&lt;/em&gt; collaborated using Git, but I sure would like to.
+The purpose of this post is for mathematicians
+like for example my younger self,
+who are familiar with the command line
+and curious about Git as a tool,
+and for whatever reason don’t have the patience for something like “Git for Poets.”
+I explain Git just enough to get you started on a simple project,
+and hopefully enough so that you can start
+Googling things you’re unfamiliar with.
+I’m not an expert, and I expect my inexpertise to show.&lt;/p&gt;
+
+&lt;p&gt;Let’s start. There are two ways I typically start.
+The first way is 
+that I have files on my computer that I would like to use Git on.
+So I would open a command line,
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; over to where those files are (say &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;) and invoke
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;.
+This starts a new Git repository in the folder you’re in.&lt;/p&gt;
+
+&lt;p&gt;The other way is some Git repository already exists
+(probably on GitHub)
+and I would like to work on those files.
+In that case I would find the URL of that repository,
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; to the directory where I would like to put my copy of the repository,
+and invoke
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone &amp;lt;url&amp;gt;&lt;/code&gt;.
+This automatically creates a new folder with the contents of the repository,
+so if I was cloning &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ryleelyman/waver&lt;/code&gt; on GitHub, for instance,
+and I wanted it to end up in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;,
+I would run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone https://github.com/ryleelyman/waver.git&lt;/code&gt; 
+in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Now Git is paying attention to the files in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;,
+but by default it isn’t doing anything to them at all.
+You can see what it thinks by invoking &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt;.
+If you have files that have changed,
+Git will display them (in red, in my terminal).
+For example, when I run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt; in the
+directory for my website, it tells me&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Changes not staged for commit:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to update what will be committed)
+  (use &quot;git restore &amp;lt;file&amp;gt;...&quot; to discard changes in working directory)
+        modified:   _site/blog.html
+        modified:   _site/feed.xml
+        modified:   _site/sitemap.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Git tracks changes based on “commits,”
+but in order for something to be committed
+Git needs to know that you want to commit it.
+That’s the business of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add &amp;lt;file&amp;gt;&lt;/code&gt; comment above.
+If we were to do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add _site/blog.html&lt;/code&gt;,
+we would be telling Git to prepare to commit
+the changes we made to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site/blog.html&lt;/code&gt; file.
+To actually commit the changes from there we would do
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;.
+But! Don’t actually do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;.
+I prefer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;&amp;lt;message&amp;gt;&quot;&lt;/code&gt;.
+Git commits require a little blurb from you about the changes,
+and I find it much more convenient to just write that message
+on the command line.&lt;/p&gt;
+
+&lt;p&gt;Now Git knows about our changes locally.
+If we’re working with a remote repository, say on GitHub,
+we still need to update that repository.
+To do that we invoke &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;.
+If you started the repository with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;,
+you may need to setup GitHub (or whatever it is)
+to track the repository you created. 
+GitHub has nice instructions for this.
+To update our local repository with changes from the remote repository,
+we would do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Those are all the commands I use daily.
+I didn’t talk about Gits “branching” model,
+which is worth learning a bit about.
+I don’t know that I have anything cogent to say about it,
+so maybe I’ll stop here.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a mathematician, I collaborate with other mathematicians on papers. I’ve used Overleaf, emailing the paper back and forth, and taking turns in Dropbox as my mode of collaboration. I haven’t collaborated using Git, but I sure would like to. The purpose of this post is for mathematicians like for example my younger self, who are familiar with the command line and curious about Git as a tool, and for whatever reason don’t have the patience for something like “Git for Poets.” I explain Git just enough to get you started on a simple project, and hopefully enough so that you can start Googling things you’re unfamiliar with. I’m not an expert, and I expect my inexpertise to show.</summary></entry><entry><title type="html">Boundaries Of Free Splittings</title><link href="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html" rel="alternate" type="text/html" title="Boundaries Of Free Splittings" /><published>2021-07-25T00:00:00-04:00</published><updated>2021-07-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/25/Boundaries-of-free-splittings</id><content type="html" xml:base="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html">&lt;p&gt;The other day on Twitter I asked whether it might be the case that a non-proper
 hyperbolic metric space might still have locally compact Gromov boundary.
 I was particularly interested in the case of a simplicial tree
 equipped with the path metric where each edge has length \(1\)
@@ -54,10 +135,10 @@ Therefore \(\partial_\infty T\) has a basis of clopen sets.
 To show that every compact subset has empty interior,
 it suffices to show that our basic clopen sets are never compact.
 To see this, continue \(J\) until you reach a vertex of infinite valence,
-giving us a new finite geodesic segment \(J'\).
-Write \(U_J \setminus U_{J'}\) as a finite disjoint union of basic open sets,
-and \(U_{J'}\) as the infinite disjoint union of the \(U_{J''}\),
-where \(J''\) is one edge longer than \(J'\).
+giving us a new finite geodesic segment \(J&apos;\).
+Write \(U_J \setminus U_{J&apos;}\) as a finite disjoint union of basic open sets,
+and \(U_{J&apos;}\) as the infinite disjoint union of the \(U_{J&apos;&apos;}\),
+where \(J&apos;&apos;\) is one edge longer than \(J&apos;\).
 The result is an open cover of \(U_J\) with no finite subcover.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-bowditch-boundary&quot;&gt;The Bowditch boundary&lt;/h2&gt;
@@ -212,8 +293,8 @@ for every point \(y \in Y\) there is a point \(x \in X\) such that \(d_Y(y,f(x))
 &lt;p&gt;Väisälä proves the following theorem.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; Let \(X\) and \(Y\) be length spaces and \(f\colon X \to Y\) a quasi-isometric embedding.
-If \(Y\) is \(\delta\)-hyperbolic, then \(X\) is \(\delta'\)-hyperbolic
-for some \(\delta'\) depending only on \(\delta\) and the quasi-isometry constants for \(f\).&lt;/p&gt;
+If \(Y\) is \(\delta\)-hyperbolic, then \(X\) is \(\delta&apos;\)-hyperbolic
+for some \(\delta&apos;\) depending only on \(\delta\) and the quasi-isometry constants for \(f\).&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;He then observes that the theorem is not true if one does not assume that \(X\) is a length space.
@@ -401,7 +482,24 @@ That is, if \(r = \frac ab\) is positive and \(\frac cd\) is adjacent to \(\frac
 then \(\frac cd\) is also positive.
 By swapping the roles of \(r\) and \(s\) if necessary, we may assume that \(ad - bc = 1\).
 Since we assume that \(a\), \(b\), and \(d\) are positive integers, then we must have \(c \ge 0\)
-in order to satisfy \(ad -bc = 1\).&lt;/p&gt;</content><author><name></name></author><summary type="html">The Farey graph, or Farey diagram, is an object that appears in many guises throughout math. For me, it appears several times as a complex related to the outer automorphism group of a free group of rank two, but it has connections to things like continued fractions as well. The purpose of this post is introduce the Farey graph and prove a couple of basic properties of it.</summary></entry><entry><title type="html">Free Actions On Real Trees</title><link href="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html" rel="alternate" type="text/html" title="Free Actions On Real Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-actions-on-real-trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
+in order to satisfy \(ad -bc = 1\).&lt;/p&gt;</content><author><name></name></author><summary type="html">The Farey graph, or Farey diagram, is an object that appears in many guises throughout math. For me, it appears several times as a complex related to the outer automorphism group of a free group of rank two, but it has connections to things like continued fractions as well. The purpose of this post is introduce the Farey graph and prove a couple of basic properties of it.</summary></entry><entry><title type="html">Geometric Group Theory Without Boundaries</title><link href="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html" rel="alternate" type="text/html" title="Geometric Group Theory Without Boundaries" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html">&lt;p&gt;Along with &lt;a href=&quot;https://www.dpmms.cam.ac.uk/~mcr59/&quot;&gt;Macarena Arenas&lt;/a&gt;, &lt;a href=&quot;https://www.math.mcgill.ca/sdouba/&quot;&gt;Sami Douba&lt;/a&gt; and &lt;a href=&quot;https://mast.queensu.ca/~abdul/&quot;&gt;Abdul Zalloum&lt;/a&gt;,
+I am organizing a virtual “summer school” that began today and will run until July 2.
+More info is available on the &lt;a href=&quot;https://sites.google.com/view/ggtwbii/&quot;&gt;summer school website&lt;/a&gt;.
+This is the second iteration of the summer school!
+I spoke in the first iteration; the purpose of this post is to house links to the notes,
+recordings and exercises for the mini-course I gave.&lt;/p&gt;
+
+&lt;p&gt;I gave three lectures in this summer school on Bass and Serre’s theory
+of graphs of groups and groups acting on trees.&lt;/p&gt;
+
+&lt;p&gt;Here are notes (with the annotations I added live)
+for the lectures, as well as links to recordings of the lectures.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lecture 1 &lt;a href=&quot;/assets/pdfs/GGTWB1.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB1.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=6-x5g2p0u3s&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lecture 2 &lt;a href=&quot;/assets/pdfs/GGTWB2.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB2.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=opilmxidthY&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Lecture 3 &lt;a href=&quot;/assets/pdfs/GGTWB3.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB3.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=LVPoa7sgMnc&quot;&gt;YouTube&lt;/a&gt;.
+&lt;a href=&quot;/assets/pdfs/GGTWBexercises.pdf&quot;&gt;Here&lt;/a&gt; are some suggested exercises.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry><entry><title type="html">Free Actions On Real Trees</title><link href="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html" rel="alternate" type="text/html" title="Free Actions On Real Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-actions-on-real-trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
 with a free action on a &lt;em&gt;real tree&lt;/em&gt; is a free product of free abelian and surface groups.
 The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing
 free actions of such groups on real trees.&lt;/p&gt;
@@ -469,7 +567,7 @@ to just imagine the closed geodesic case and think of a general measured geodesi
 as being a sort of generalization or “limit” of this picture.
 Thurston has a cute picture in his notes on the geometry and topology of 3-manifolds, see below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/geodesiclamination.png&quot; alt=&quot;Thurston's picture of a geodesic lamination&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/geodesiclamination.png&quot; alt=&quot;Thurston&apos;s picture of a geodesic lamination&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Anyway, let \((\mathscr{L},\mu)\) be a measured geodesic lamination.
 We can lift it to a \(\pi_1(S)\)-invariant measured geodesic lamination \((\tilde{\mathscr{L}},\tilde\mu)\)
@@ -479,15 +577,15 @@ construction of a real tree &lt;em&gt;dual&lt;/em&gt; to \((\tilde{\mathscr{L}},
 Since \((\tilde{\mathscr{L}},\tilde\mu)\) is \(\pi_1(S)\)-invariant,
 we will obtain an action of \(\pi_1(S)\) by isometries on the dual real tree.
 Let \(C\) be the set of complementary components of \(\tilde S\setminus \tilde{\mathscr{L}}\).
-Given components \(c\) and \(c'\),
-let \(\gamma\) be a path with one endpoint in \(c\) and the other in \(c'\)
+Given components \(c\) and \(c&apos;\),
+let \(\gamma\) be a path with one endpoint in \(c\) and the other in \(c&apos;\)
 such that \(\gamma\) is transverse to \(\tilde{\mathscr{L}}\) and intersects each leaf of \(\tilde{\mathscr{L}}\)
 at most once.
-For example, given a point \(x\) in \(c\) and \(y\) in \(c'\),
+For example, given a point \(x\) in \(c\) and \(y\) in \(c&apos;\),
 the path \(\gamma\) could be the unique geodesic from \(x\) to \(y\).
 Define&lt;/p&gt;
 
-\[d(c,c') = \int_\gamma d\tilde\mu.\]
+\[d(c,c&apos;) = \int_\gamma d\tilde\mu.\]
 
 &lt;p&gt;Morgan and Shalen show that this defines a well-defined distance function on \(C\),
 and that this distance satisfies a \(0\)-hyperbolicity condition,
@@ -571,24 +669,7 @@ or it stabilizes a unique vertex of \(Y\), in which case \(g\) is conjugate to a
 In this latter case, \(g\) preserves a copy of \(S\) or \(T\) 
 and one checks that it acts as an element of \(A\) or \(B\).
 But since the actions of \(A\) and \(B\) were free, it follows that if \(g\) is nontrivial, then it acts freely.
-\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Geometric Group Theory Without Boundaries</title><link href="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html" rel="alternate" type="text/html" title="Geometric Group Theory Without Boundaries" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html">&lt;p&gt;Along with &lt;a href=&quot;https://www.dpmms.cam.ac.uk/~mcr59/&quot;&gt;Macarena Arenas&lt;/a&gt;, &lt;a href=&quot;https://www.math.mcgill.ca/sdouba/&quot;&gt;Sami Douba&lt;/a&gt; and &lt;a href=&quot;https://mast.queensu.ca/~abdul/&quot;&gt;Abdul Zalloum&lt;/a&gt;,
-I am organizing a virtual “summer school” that began today and will run until July 2.
-More info is available on the &lt;a href=&quot;https://sites.google.com/view/ggtwbii/&quot;&gt;summer school website&lt;/a&gt;.
-This is the second iteration of the summer school!
-I spoke in the first iteration; the purpose of this post is to house links to the notes,
-recordings and exercises for the mini-course I gave.&lt;/p&gt;
-
-&lt;p&gt;I gave three lectures in this summer school on Bass and Serre’s theory
-of graphs of groups and groups acting on trees.&lt;/p&gt;
-
-&lt;p&gt;Here are notes (with the annotations I added live)
-for the lectures, as well as links to recordings of the lectures.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Lecture 1 &lt;a href=&quot;/assets/pdfs/GGTWB1.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB1.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=6-x5g2p0u3s&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Lecture 2 &lt;a href=&quot;/assets/pdfs/GGTWB2.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB2.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=opilmxidthY&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Lecture 3 &lt;a href=&quot;/assets/pdfs/GGTWB3.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB3.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=LVPoa7sgMnc&quot;&gt;YouTube&lt;/a&gt;.
-&lt;a href=&quot;/assets/pdfs/GGTWBexercises.pdf&quot;&gt;Here&lt;/a&gt; are some suggested exercises.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
+\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
 Here’s a short post about something cute that came up in my research this week.&lt;/p&gt;
 
 &lt;p&gt;Aside from &lt;a href=&quot;https://www.ncngt.org&quot;&gt;NCNGT&lt;/a&gt;, which has been very lovely,
@@ -813,26 +894,4 @@ Vogtmann’s proof involves a careful understanding of the combinatorics of (exp
 in the spine of Outer Space (for a free group).
 I’m in the early stages of working on generalizing her result to free products of finite and cyclic groups.
 The general strategy of the proof will follow hers,
-but already I am seeing that the presence of collapse Whitehead moves will require their own analysis to handle.&lt;/p&gt;</content><author><name></name></author><summary type="html">I submitted a “mathematical postcard” (see below) to the Nearly Carbon Neutral Geometric Topology conference. The purpose of this post is to share the postcard and offer a little more context and explanation for it. I’m also giving a talk in said conference, but I’ll talk about that in a separate post.</summary></entry><entry><title type="html">Notes On Orbifolds</title><link href="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html" rel="alternate" type="text/html" title="Notes On Orbifolds" /><published>2021-03-14T00:00:00-05:00</published><updated>2021-03-14T00:00:00-05:00</updated><id>http://localhost:4000/2021/03/14/Notes-on-Orbifolds</id><content type="html" xml:base="http://localhost:4000/2021/03/14/Notes-on-Orbifolds.html">&lt;p&gt;The purpose of this post is to share some &lt;a href=&quot;/assets/pdfs/orbifoldnotes.pdf&quot;&gt;talk notes&lt;/a&gt; I made on orbifolds
-and graphs of groups as étale groupoids.&lt;/p&gt;
-
-&lt;p&gt;The talk comes out of joint work in progress with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Tyrone Ghaswala&lt;/a&gt;.
-It starts with us realizing that some representations of the braid group
-into the automorphism group of a free group that each of us knew how to obtain by different methods
-were really the same representation.
-We thought that there ought to be some way to reconcile these two representations topologically
-by working with the mapping class group of certain 2-dimensional orbifolds.&lt;/p&gt;
-
-&lt;p&gt;From there things got complicated: we discovered that there is a good amount of contention about what
-a map of an orbifold even is.
-The consensus, outside of low-dimensional topology, seems to be to work with étale groupoids,
-rather than deal with orbifolds in terms of local charts.
-This has the advantage of making ineffective orbifolds easier.
-To wit, see the complications in the paper &lt;a href=&quot;https://arxiv.org/pdf/1606.04439.pdf&quot;&gt;Atlases for Ineffective Orbifolds&lt;/a&gt; by Pronk, Scull and Tommasini.&lt;/p&gt;
-
-&lt;p&gt;Within low-dimensional topology, it’s usually thought that the mapping class group
-of a 2-dimensional orbifold whose underlying space is a finite-type surface 
-and whose singular set is a finite collection of points
-is the subgroup of the mapping class group of the surface where the singular set is marked
-preserving the singular points of a given order.
-One goal of our project is to reconcile these two points of view.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to share some talk notes I made on orbifolds and graphs of groups as étale groupoids.</summary></entry></feed>
+but already I am seeing that the presence of collapse Whitehead moves will require their own analysis to handle.&lt;/p&gt;</content><author><name></name></author><summary type="html">I submitted a “mathematical postcard” (see below) to the Nearly Carbon Neutral Geometric Topology conference. The purpose of this post is to share the postcard and offer a little more context and explanation for it. I’m also giving a talk in said conference, but I’ll talk about that in a separate post.</summary></entry></feed>
