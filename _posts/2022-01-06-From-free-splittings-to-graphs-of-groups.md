@@ -16,14 +16,14 @@ The structure of a *graph of groups with trivial edge groups* on $$G$$
 is the assignment, for each vertex $$v$$ of $$G$$, of a group $$\mathcal{G}_v$$.
 We write $$\mathcal{G}$$ for the graph of groups.
 Associated to $$\mathcal{G}$$ we can form a *graph of spaces* $$X_{\mathcal{G}}$$ à la Scott and Wall.
-For each vertex $$v$$ of $$G$$, take a CW complex $$X_v$$ with one vertex $$\operatorname{st}ar_v$$
+For each vertex $$v$$ of $$G$$, take a CW complex $$X_v$$ with one vertex $$\star_v$$
 that is a $$K(\mathcal{G}_v,1)$$.
 The space $$X_{\mathcal{G}}$$ is formed from the disjoint union of these CW complexes
 by adding, for each edge $$e$$ of $$G$$ with initial vertex $$v$$ and terminal vertex $$w$$,
-an edge connecting $$\operatorname{st}ar_v$$ to $$\operatorname{st}ar_w$$.
+an edge connecting $$\star_v$$ to $$\star_w$$.
 There is a natural "retraction" $$r\colon X_{\mathcal{G}} \to G$$ 
 that collapses each $$K(\mathcal{G}_v,1)$$
-to the vertex $$\operatorname{st}ar_v$$.
+to the vertex $$\star_v$$.
 
 The *fundamental group of the graph of groups $$\mathcal{G}$$*
 is the fundamental group of the graph of spaces $$X_{\mathcal{G}}$$.
@@ -36,7 +36,7 @@ $$\gamma = e'_1g_1e_2g_2\ldots e_kg_ke'_{k+1},$$
 where $$e'_1$$ and $$e'_{k+1}$$ are terminal and initial segments 
 of oriented edges $$e_1$$ and $$e_{k+1}$$ of $$G$$,
 respectively, where $$e_2,\ldots,e_k$$ are oriented edges of $$G$$,
-where $$g_i$$ for $$1 \le i \le k$$ is an element of $$\mathcal{G}_{v_i} = \pi_1(X_{v_i},\operatorname{st}ar_{v_i})$$,
+where $$g_i$$ for $$1 \le i \le k$$ is an element of $$\mathcal{G}_{v_i} = \pi_1(X_{v_i},\star_{v_i})$$,
 and where $$v_i$$ is the terminal vertex of the edge $$e_i$$ 
 and the initial vertex of the edge $$e_{i+1}$$.
 Notice that this notion makes sense without reference to $$X_{\mathcal{G}}$$.
@@ -121,7 +121,7 @@ if, as usual, there is a map $$g\colon \mathcal{G} \to \mathcal{G}$$
 such that $$gf$$ and $$fg$$ are each homotopic to the identity map.
 
 It is not too hard to see that each map $$f\colon \mathcal{G} \to \mathcal{G}$$
-is homotopic to one that sends the vertices $$\operatorname{st}ar_v$$ of $$X_{\mathcal{G}}$$
+is homotopic to one that sends the vertices $$\star_v$$ of $$X_{\mathcal{G}}$$
 to vertices of $$X_{\mathcal{G}}$$
 and further sends edges of $$G \subset X_{\mathcal{G}}$$
 to (possibly trivial) edge paths in $$\mathcal{G}$$.
