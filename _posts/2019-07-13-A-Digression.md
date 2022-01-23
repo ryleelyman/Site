@@ -14,7 +14,7 @@ A *set,* naively, is just a way to collect a bunch of objects (called *elements*
 together. Since a set only cares about membership or lack thereof, duplicate
 elements are ignored. When we're explicit about them, a set is typically
 denoted as a list of elements (thought of as unordered), surrounded by curly braces.
-So as sets, $$\{1,2,3,3,5\} = \{1,2,3\}$$. A set comprises its elements, nothing more,
+So as sets, $$\{1,2,3,3,5\} = \{1,2,3,5\}$$. A set comprises its elements, nothing more,
 nothing less. Thus, maps or functions $$f$$ between sets $$X$$ and $$Y$$ are just
 assignments: to each element $$x$$ in $$X$$, we assign a (unique) element $$f(x)$$
 of $$Y$$. 
