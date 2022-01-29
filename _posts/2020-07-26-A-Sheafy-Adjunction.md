@@ -85,7 +85,7 @@ The latter is slightly more complicated.
 Recall that if $$\mathscr{F}$$ is a sheaf on $$Y$$,
 there is a space $$F$$ equipped with a local homeomorphism $$\rho \colon F \to Y$$.
 The sheaf $$\mathscr{F}$$ is the sheaf of local sections of $$\rho$$;
-$$F$$ is called the *espace étale* for the sheaf $$\mathscr{F}$$.
+$$F$$ is called the *espace étalé* for the sheaf $$\mathscr{F}$$.
 The set of points of $$F$$ above $$y \in Y$$ is the *stalk* $$\mathscr{F}_y$$.
 
 As usual, a section $$s\colon U \to F$$ of the projection $$\rho \colon F \to X$$
@@ -180,7 +180,7 @@ This is in fact true, since taking the stalk at $$x$$ is functorial.
 ### The Counit of the Adjunction
 
 Now suppose that $$\mathscr{G}$$ is a sheaf on $$X$$.
-Let $$\pi_\ast G$$ denote the *espace étale* over $$Y$$ for the sheaf $$\pi_\ast\mathscr{G}$$.
+Let $$\pi_\ast G$$ denote the *espace étalé* over $$Y$$ for the sheaf $$\pi_\ast\mathscr{G}$$.
 
 A section $$s \colon V \to \pi^{-1}\pi_\ast G$$
 is a tuple $$(s_{\pi(x)})_{x \in V}$$ taking values in $$\pi_\ast\mathscr{G}_{\pi(x)}$$
