@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rylee Lyman | Home
+title: Rylee Alanza Lyman | Home
 math: false
 ---
 <div class="sidebar">
