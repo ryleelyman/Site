@@ -11,6 +11,7 @@ group :jekyll_plugins do
     gem "nokogiri", ">= 1.12.5"
     gem "addressable", ">= 2.8.0"
     gem "rexml", ">= 3.2.5"
+    gem "commonmarker", ">= 0.23.4"
 end
 
 # gem "rails"
