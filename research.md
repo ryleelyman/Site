@@ -9,15 +9,43 @@ math: true
 
 ## Publications and Preprints
 
-- **Train track maps and CTs on graphs of groups**   
-Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848).   
+- **CTs for free products**   
+Available [here][CTs for free products].   
 <a onclick="displayabs('CTs')">Abstract</a>
 <div id="CTs" style="display: none">
 <blockquote>
-In this paper we develop the theory of train track maps on graphs of groups. We
-prove the existence of CTs representing outer automorphisms of free products.
-We generalize an index inequality due to Feighn-Handel to the graph of groups
-setting, sharpening a result of Martino.
+The fundamental group of a finite graph of groups with trivial edge groups is a free product.
+We are interested in those outer automorphisms of such a free product
+that permute the conjugacy classes of the vertex groups.
+We show that in particular cases of interest,
+such as where the vertex groups are themselves finite free products of finite and cyclic groups,
+given such an outer automorphism,
+after passing to a positive power, the outer automorphism
+is represented by a particularly nice kind of relative train track map called a CT.
+CTs were first introduced by Feighn and Handel
+for outer automorphisms of free groups.
+We develop the theory of attracting laminations for
+and principal automorphisms of free products.
+We prove that outer automorphisms of free products satisfy an index inequality
+reminiscent of a result of Gaboriau, Jaeger, Levitt and Lustig
+and sharpening a result of Martino.
+Finally, we prove a result reminiscent of a result of Culler
+on the fixed subgroup of an automorphism of a free product
+whose outer class has finite order.
+</blockquote>
+</div>
+- **Train track maps on graphs of groups**   
+Available [here][Train tracks on graphs of groups].   
+<a onclick="displayabs('TrainTracks')">Abstract</a>
+<div id="TrainTracks" style="display: none">
+<blockquote>
+In this paper we develop the theory of train track maps on graphs of groups.
+Expanding a definition of Bass, we define a notion of a map of a graph of groups,
+and of a homotopy equivalence.
+We prove that under one of two technical hypotheses,
+any homotopy equivalence of a graph of groups may be represented by a relative train track map.
+The first applies in particular to graphs of groups with finite edge groups,
+while the second applies in particular to certain generalized Baumslag–Solitar groups.
 </blockquote>
 </div>
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
@@ -128,3 +156,5 @@ setting, sharpening a result of Martino.
 [Danny]: http://math.uchicago.edu/~dannyc/
 [Lvzhou]: http://math.uchicago.edu/~lzchen/
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
+[CTs for free products]: {{ "assets/pdfs/CTsForFreeProducts.pdf" | relative_url }}
+[Train tracks on graphs of groups]: {{ "assets/pdfs/TrainTrackMapsonGraphsofGroups.pdf" | relative_url }}

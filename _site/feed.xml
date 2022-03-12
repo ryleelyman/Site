@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-06T16:36:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">From Free Splittings To Graphs Of Groups</title><link href="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html" rel="alternate" type="text/html" title="From Free Splittings To Graphs Of Groups" /><published>2022-01-06T00:00:00-05:00</published><updated>2022-01-06T00:00:00-05:00</updated><id>http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html">&lt;p&gt;In the previous post, we defined &lt;em&gt;free splittings&lt;/em&gt; for a group \(F\).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-12T16:09:00-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">From Free Splittings To Graphs Of Groups</title><link href="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html" rel="alternate" type="text/html" title="From Free Splittings To Graphs Of Groups" /><published>2022-01-06T00:00:00-05:00</published><updated>2022-01-06T00:00:00-05:00</updated><id>http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html">&lt;p&gt;In the previous post, we defined &lt;em&gt;free splittings&lt;/em&gt; for a group \(F\).
 The quotient of a free splitting \(T\) of \(F\) by the action of \(F\)
 is a &lt;em&gt;graph of groups with trivial edge groups.&lt;/em&gt;
 The purpose of this post is to introduce &lt;em&gt;maps&lt;/em&gt; of graphs of groups with trivial edge groups
@@ -12,14 +12,14 @@ The structure of a &lt;em&gt;graph of groups with trivial edge groups&lt;/em&gt;
 is the assignment, for each vertex \(v\) of \(G\), of a group \(\mathcal{G}_v\).
 We write \(\mathcal{G}\) for the graph of groups.
 Associated to \(\mathcal{G}\) we can form a &lt;em&gt;graph of spaces&lt;/em&gt; \(X_{\mathcal{G}}\) à la Scott and Wall.
-For each vertex \(v\) of \(G\), take a CW complex \(X_v\) with one vertex \(\operatorname{st}ar_v\)
+For each vertex \(v\) of \(G\), take a CW complex \(X_v\) with one vertex \(\star_v\)
 that is a \(K(\mathcal{G}_v,1)\).
 The space \(X_{\mathcal{G}}\) is formed from the disjoint union of these CW complexes
 by adding, for each edge \(e\) of \(G\) with initial vertex \(v\) and terminal vertex \(w\),
-an edge connecting \(\operatorname{st}ar_v\) to \(\operatorname{st}ar_w\).
+an edge connecting \(\star_v\) to \(\star_w\).
 There is a natural “retraction” \(r\colon X_{\mathcal{G}} \to G\) 
 that collapses each \(K(\mathcal{G}_v,1)\)
-to the vertex \(\operatorname{st}ar_v\).&lt;/p&gt;
+to the vertex \(\star_v\).&lt;/p&gt;
 
 &lt;p&gt;The &lt;em&gt;fundamental group of the graph of groups \(\mathcal{G}\)&lt;/em&gt;
 is the fundamental group of the graph of spaces \(X_{\mathcal{G}}\).
@@ -32,7 +32,7 @@ and further to an &lt;em&gt;edge path in \(\mathcal{G}\)&lt;/em&gt; of the form&
 &lt;p&gt;where \(e&apos;_1\) and \(e&apos;_{k+1}\) are terminal and initial segments 
 of oriented edges \(e_1\) and \(e_{k+1}\) of \(G\),
 respectively, where \(e_2,\ldots,e_k\) are oriented edges of \(G\),
-where \(g_i\) for \(1 \le i \le k\) is an element of \(\mathcal{G}_{v_i} = \pi_1(X_{v_i},\operatorname{st}ar_{v_i})\),
+where \(g_i\) for \(1 \le i \le k\) is an element of \(\mathcal{G}_{v_i} = \pi_1(X_{v_i},\star_{v_i})\),
 and where \(v_i\) is the terminal vertex of the edge \(e_i\) 
 and the initial vertex of the edge \(e_{i+1}\).
 Notice that this notion makes sense without reference to \(X_{\mathcal{G}}\).
@@ -117,7 +117,7 @@ if, as usual, there is a map \(g\colon \mathcal{G} \to \mathcal{G}\)
 such that \(gf\) and \(fg\) are each homotopic to the identity map.&lt;/p&gt;
 
 &lt;p&gt;It is not too hard to see that each map \(f\colon \mathcal{G} \to \mathcal{G}\)
-is homotopic to one that sends the vertices \(\operatorname{st}ar_v\) of \(X_{\mathcal{G}}\)
+is homotopic to one that sends the vertices \(\star_v\) of \(X_{\mathcal{G}}\)
 to vertices of \(X_{\mathcal{G}}\)
 and further sends edges of \(G \subset X_{\mathcal{G}}\)
 to (possibly trivial) edge paths in \(\mathcal{G}\).&lt;/p&gt;
