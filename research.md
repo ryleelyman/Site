@@ -10,7 +10,7 @@ math: true
 ## Publications and Preprints
 
 - **CTs for free products**   
-Available [here][CTs for free products].   
+*Submitted.* Available [here][CTs for free products].   
 <a onclick="displayabs('CTs')">Abstract</a>
 <div id="CTs" style="display: none">
 <blockquote>
@@ -35,7 +35,7 @@ whose outer class has finite order.
 </blockquote>
 </div>
 - **Train track maps on graphs of groups**   
-Available [here][Train tracks on graphs of groups].   
+*Submitted.* Available [here][Train tracks on graphs of groups].   
 <a onclick="displayabs('TrainTracks')">Abstract</a>
 <div id="TrainTracks" style="display: none">
 <blockquote>
