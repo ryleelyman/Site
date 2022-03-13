@@ -10,8 +10,9 @@ math: true
 ## Publications and Preprints
 
 - **CTs for free products**   
-*Submitted.* Available [here][CTs for free products].   
-<a onclick="displayabs('CTs')">Abstract</a>
+Available [here][CTs for free products].
+<a onclick="displayabs('CTs')">Abstract</a>   
+*Submitted.* 
 <div id="CTs" style="display: none">
 <blockquote>
 The fundamental group of a finite graph of groups with trivial edge groups is a free product.
@@ -35,8 +36,9 @@ whose outer class has finite order.
 </blockquote>
 </div>
 - **Train track maps on graphs of groups**   
-*Submitted.* Available [here][Train tracks on graphs of groups].   
-<a onclick="displayabs('TrainTracks')">Abstract</a>
+Available [here][Train tracks on graphs of groups].
+<a onclick="displayabs('TrainTracks')">Abstract</a>   
+*Submitted.* 
 <div id="TrainTracks" style="display: none">
 <blockquote>
 In this paper we develop the theory of train track maps on graphs of groups.
@@ -49,9 +51,10 @@ while the second applies in particular to certain generalized Baumslag–Solitar
 </blockquote>
 </div>
  - **Extensions of hyperbolic groups have locally uniform exponential growth**  
- (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas]) *Submitted.*   
- Available at [arXiv:2012.14880](https://arxiv.org/abs/2012.14880).  
- <a onclick="displayabs('extensions')">Abstract</a>
+ (with [Robert Kropholler][Rob] and [Thomas Ng][Thomas])   
+ Available at [arXiv:2012.14880](https://arxiv.org/abs/2012.14880).
+ <a onclick="displayabs('extensions')">Abstract</a>   
+ *Submitted.*
  <div id="extensions" style="display: none">
   <blockquote>
    We introduce a quantitative characterization of subgroup alternatives
@@ -72,9 +75,10 @@ while the second applies in particular to certain generalized Baumslag–Solitar
 
 
  - **Folding-like techniques for CAT(0) cube complexes**  
- (with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob]) *Submitted.*   
- Available at [arXiv:2011.05374](https://arxiv.org/abs/2011.05374).   
- <a onclick="displayabs('folding')">Abstract</a>
+ (with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob])    
+ Available at [arXiv:2011.05374](https://arxiv.org/abs/2011.05374).
+ <a onclick="displayabs('folding')">Abstract</a>   
+ *Math. Proc. Camb. Philos. Soc.*   
  <div id="folding" style="display: none">
   <blockquote>
    In a seminal paper,
@@ -90,8 +94,9 @@ while the second applies in particular to certain generalized Baumslag–Solitar
  </div>
 
  - **Some new CAT(0) free-by-cyclic groups**  
-*Accepted.* Available at [arXiv:1909.03097](http://arXiv.org/abs/1909.03097).  
-<a onclick="displayabs('newCAT0')">Abstract</a>
+ Available at [arXiv:1909.03097](http://arXiv.org/abs/1909.03097).
+<a onclick="displayabs('newCAT0')">Abstract</a>   
+ *Mich. Math. J.*   
 <div id="newCAT0" style="display: none">
   <blockquote>
     We show the existence
@@ -106,9 +111,10 @@ while the second applies in particular to certain generalized Baumslag–Solitar
 </div>
 
  - **Nielsen realization for infinite-type surfaces**  
-(with [Santana Afton][Santana], [Danny Calegari][Danny] and [Lvzhou Chen][Lvzhou])
-*Accepted.* Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).  
-<a onclick="displayabs('nielsenrealization')">Abstract</a>
+(with [Santana Afton][Santana], [Danny Calegari][Danny] and [Lvzhou Chen][Lvzhou])   
+Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).
+<a onclick="displayabs('nielsenrealization')">Abstract</a>   
+*Proc. Amer. Math. Soc.* 149 (2021), 1791–1799   
 <div id="nielsenrealization" style="display: none">
   <blockquote>
     Given a finite subgroup G of the mapping class group of a surface S,
@@ -126,8 +132,9 @@ while the second applies in particular to certain generalized Baumslag–Solitar
 </div>
 
  - **Train Tracks on Graphs of Groups and Outer Automorphisms of Hyperbolic Groups**  
- *PhD Thesis.* Available at: [arXiv:2005.00164](http:///arxiv.org/abs/2005.00164).  
- <a onclick="displayabs('thesis')">Abstract</a>
+ Available at: [arXiv:2005.00164](http:///arxiv.org/abs/2005.00164).
+ <a onclick="displayabs('thesis')">Abstract</a>   
+ *PhD Thesis.*
  <div id="thesis" style="display: none">
     <blockquote>
       Stallings remarked that an outer automorphism of a free group
