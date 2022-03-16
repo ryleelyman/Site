@@ -9,6 +9,15 @@ math: true
 
 ## Publications and Preprints
 
+- **Lipschitz metric isometries between Outer Spaces of virtually free groups**   
+Available [here][Lipschitz metric isometries].
+<a onclick="displayabs('Lipschitz')">Abstract</a>   
+*Submitted.*   
+<div id="Lipschitz" style="display: none">
+<blockquote>
+Dowdall and Taylor observed that given a finite-index subgroup of a free group, taking covers induces an embedding from the Outer Space of the free group to the Outer Space of the subgroup, that this embedding is an isometry with respect to the (asymmetric) Lipschitz metric, and that the embedding sends folding paths to folding paths. The purpose of this note is to extend this result to virtually free groups. We further extend a result Francaviglia and Martino, proving the existence of “candidates” for the Lipschitz distance between points in the Outer Space of the virtually free group. Additionally we identify a deformation retraction of the spine of the Outer Space for the virtually free group with the space considered by Krstic and Vogtmann.
+</blockquote>
+</div>
 - **CTs for free products**   
 Available [here][CTs for free products].
 <a onclick="displayabs('CTs')">Abstract</a>   
@@ -165,3 +174,4 @@ Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).
 [CV]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
 [CTs for free products]: {{ "assets/pdfs/CTsForFreeProducts.pdf" | relative_url }}
 [Train tracks on graphs of groups]: {{ "assets/pdfs/TrainTrackMapsonGraphsofGroups.pdf" | relative_url }}
+[Lipschitz metric isometries]: {{ "assets/pdfs/LipschitzMetricEmbeddings.pdf" | relative_url }}
