@@ -1594,6 +1594,7 @@ Laminations	_posts/2021-12-29-More-on-Free-Splittings.md	/^## Laminations$/;"	s
 Laminations	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="laminations">Laminations<\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
+Lipschitz	_site/Research.html	/^<div id="Lipschitz" style="display: none">$/;"	I
 Maps of graphs of groups with trivial edge groups	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^## Maps of graphs of groups with trivial edge groups$/;"	s
 Maps of graphs of groups with trivial edge groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="maps-of-graphs-of-groups-with-trivial-edge-groups">Maps of graphs of groups with trivial/;"	i
 More On Free Splittings	_site/2021/12/29/More-on-Free-Splittings.html	/^      <h1>More On Free Splittings<\/h1>$/;"	h
@@ -1617,6 +1618,7 @@ Outreach	_site/service.html	/^      <h1 id="outreach">Outreach<\/h1>$/;"	h
 Outreach	outreach.md	/^# Outreach$/;"	c
 Outreach	service.md	/^# Outreach$/;"	c
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
+Properties of the tree in the quotient	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## Properties of the tree in the quotient$/;"	s
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^      <h1>Pullbacks And Intersections<\/h1>$/;"	h
@@ -1627,6 +1629,7 @@ Rutgers University	_site/teaching.html	/^<h2 id="rutgers-university">Rutgers Uni
 Rutgers University	teaching.md	/^## Rutgers University$/;"	s	chapter:Teaching
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
+Shelters	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## Shelters$/;"	s
 Surface groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Surface groups act freely on real trees$/;"	s
 Surface groups act freely on real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="surface-groups-act-freely-on-real-trees">Surface groups act freely on real trees<\/h2>$/;"	i
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
@@ -1669,6 +1672,7 @@ The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 The observer's topology	_posts/2021-12-29-More-on-Free-Splittings.md	/^## The observer's topology$/;"	s
 The observer’s topology	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-observers-topology">The observer’s topology<\/h2>$/;"	i
+The quotient graph of groups	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## The quotient graph of groups$/;"	s
 The theorem and the counterexample	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^## The theorem and the counterexample$/;"	s
 The theorem and the counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
@@ -1802,6 +1806,7 @@ math: true	_posts/2021-07-19-A-Nice-Coincidence.md	/^math: true$/;"	s
 math: true	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^math: true$/;"	s
 math: true	_posts/2021-12-29-More-on-Free-Splittings.md	/^math: true$/;"	s
 math: true	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^math: true$/;"	s
+math: true	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I

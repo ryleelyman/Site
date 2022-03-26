@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-16T14:52:22-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">From Free Splittings To Graphs Of Groups</title><link href="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html" rel="alternate" type="text/html" title="From Free Splittings To Graphs Of Groups" /><published>2022-01-06T00:00:00-05:00</published><updated>2022-01-06T00:00:00-05:00</updated><id>http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html">&lt;p&gt;In the previous post, we defined &lt;em&gt;free splittings&lt;/em&gt; for a group \(F\).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-26T13:05:54-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Shelters In Graphs Of Groups</title><link href="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html" rel="alternate" type="text/html" title="Shelters In Graphs Of Groups" /><published>2022-03-26T00:00:00-04:00</published><updated>2022-03-26T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html">&lt;p&gt;Let’s fix a group \(G\) that acts cocompactly on a tree \(T\).
+&lt;a href=&quot;https://arxiv.org/abs/math/0107008&quot;&gt;Forester&lt;/a&gt; introduced the notion of a &lt;em&gt;deformation&lt;/em&gt; of the tree \(T\)
+and &lt;a href=&quot;https://arxiv.org/abs/math/0605545&quot;&gt;Guirardel and Levitt&lt;/a&gt; studied the &lt;em&gt;deformation space&lt;/em&gt;
+\(\mathscr{D}\) consisting of trees obtainable from \(T\) by a finite sequence of deformations.
+Usually we assume \(G\) to be finitely generated,
+but it’s not clear to me how often this assumption is necessary.
+Maybe that’ll be a topic for another blog post.
+In this post I want to discuss the notion of a &lt;em&gt;shelter,&lt;/em&gt;
+which Guirardel and Levitt (and also &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;Clay&lt;/a&gt;) 
+use to construct a deformation retraction of \(\mathscr{D}\) (or its simplicial spine)
+onto a smaller, often finite-dimensional, space.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-quotient-graph-of-groups&quot;&gt;The quotient graph of groups&lt;/h2&gt;
+&lt;p&gt;Given a group \(G\) acting on a graph \(\Gamma\),
+there is a notion of a &lt;em&gt;quotient graph of groups,&lt;/em&gt; 
+which I’d like to describe once and for all here.
+Let me remind you that a &lt;em&gt;graph of groups&lt;/em&gt; 
+is a graph, which I’ll call \(\mathcal{G}\),
+together with an assignment of groups \(\mathcal{G}_v\) and \(\mathcal{G}_e\)
+to each vertex \(v\) and edge \(e\) of \(\mathcal{G}\),
+along with injective homomorphisms \(\iota_e \colon \mathcal{G}_e \to \mathcal{G}_v\)
+whenever \(v\) is the terminal vertex of the oriented edge \(e\).&lt;/p&gt;
+
+&lt;p&gt;Anyway, suppose we have \(G\) acting on \(\Gamma\).
+I want this action to be essentially combinatorial,
+in the sense that we can think of \(\Gamma\) as having a set of vertices and a set of edges,
+and \(G\) permutes the elements of those sets preserving adjacency.
+Making this precise is surprisingly exhausting 
+(“fix a homeomorphism between each closed edge…”), so I won’t.
+By \(G\)-equivariantly subdividing certain orbits of edges,
+we may suppose that the action is &lt;em&gt;without inversions in edges,&lt;/em&gt;
+which means that if a group element preserves an edge \(e\) of \(\Gamma\),
+then it fixes each vertex incident to \(e\).
+The advantage of this condition is that the quotient \(G\backslash\Gamma\)
+then inherits the structure of a graph, call it \(\mathcal{G}\).
+To make \(\mathcal{G}\) into a graph of groups, we need groups and homomorphisms.&lt;/p&gt;
+
+&lt;p&gt;So fix connected subgraphs \(S_0 \subset S_1 \subset \Gamma\)
+with the property that the natural projection \(p\colon \Gamma \to \mathcal{G}\)
+restricts to a bijection on the set of vertices of \(S_0\)
+and a bijection on the set of edges of \(S_1\).
+In other words, \(S_1\) is a &lt;em&gt;fundamental domain&lt;/em&gt; for the action of \(G\) on \(\Gamma\),
+and if we assume \(S_0\) is a minimal subgraph of \(S_1\) with the defining property,
+it follows that \(S_0\) projects to a &lt;em&gt;spanning tree&lt;/em&gt; of \(\mathcal{G}\).
+For a vertex \(v\) and an edge \(e\) of \(\mathcal{G}\), 
+write \(\tilde v\) and \(\tilde e\) for its unique preimage in \(S_0\) and \(S_1\) respectively.
+For each oriented edge \(e\) of \(\mathcal{G}\),
+choose a group element \(g_e \in G\)
+with the following property:
+if \(x\) is the terminal vertex of \(\tilde e\) and \(p(x) = v\),
+we have that \(g_e.x = \tilde v\).
+Furthermore, if \(x = \tilde v\), choose \(g_e = 1\).
+The groups \(\mathcal{G}_v\) and \(\mathcal{G}_e\)
+are the stabilizers in \(G\) of \(\tilde v\) and \(\tilde e\) respectively,
+and the injective homomorphism \(\iota_e \colon \mathcal{G}_e \to \mathcal{G}_v\)
+is the restriction of the map \(h \mapsto g_e h g_e^{-1}\) to \(\mathcal{G}_e\).&lt;/p&gt;
+
+&lt;h2 id=&quot;properties-of-the-tree-in-the-quotient&quot;&gt;Properties of the tree in the quotient&lt;/h2&gt;
+&lt;p&gt;Let’s return to the situation of our group \(G\) acting cocompactly on a tree \(T\).
+Then the quotient graph of groups \(\mathcal{G}\) is finite and connected.
+We assume the action is &lt;em&gt;minimal,&lt;/em&gt;
+in the sense that there is no \(G\)-invariant subtree.
+In the quotient graph of groups \(\mathcal{G}\),
+this is equivalent to the condition that no valence-one vertex \(v\)
+has the property that the incident edge-to-vertex group inclusion is surjective.
+We also assume that \(T\) has no &lt;em&gt;subdivision vertices,&lt;/em&gt;
+i.e. that a valence-two vertex of \(T\) has the property
+that the incident edges are in the same \(G\)-orbit.
+In the quotient graph of groups \(\mathcal{G}\),
+this is equivalent to the condition that no valence-two vertex \(v\)
+has the property that both incident edge-to-vertex group inclusions are surjective.&lt;/p&gt;
+
+&lt;p&gt;A general fact about automorphisms of simplicial trees
+(in fact, isometries of real trees)
+is that each automorphism (isometry) is either &lt;em&gt;elliptic,&lt;/em&gt;
+i.e. fixes a point of the tree
+or &lt;em&gt;hyperbolic&lt;/em&gt;
+i.e. there is an embedded copy of \(\mathbb{R}\) called the &lt;em&gt;axis&lt;/em&gt; in the tree
+that is preserved by the automorphism (isometry) and along which
+the automorphism (isometry) acts by translation.&lt;/p&gt;
+
+&lt;p&gt;An edge \(\tilde e\) of \(T\) is &lt;em&gt;collapsible&lt;/em&gt; if collapsing each edge in its orbit to a point
+does not change the partition of elements of \(G\) into hyperbolic and elliptic elements.
+Equivalently, the \(G\)-orbit of \(\tilde e\) must not contain the axis of a hyperbolic element.
+In the quotient graph of groups, we must have that the endpoints of \(p(\tilde e) = e\)
+are distinct and that at least one of the edge-to-vertex group inclusions is surjective.
+If \(\tilde e\) is collapsible, collapsing each edge in its orbit to a point
+yields a new tree \(T&apos;\) in the same deformation space as \(T\).
+In &lt;a href=&quot;https://arxiv.org/abs/2102.02848&quot;&gt;my paper&lt;/a&gt;, I describe this as a &lt;em&gt;collapse map&lt;/em&gt;
+of the quotient graphs of groups which is a &lt;em&gt;homotopy equivalence.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A tree \(T\) is &lt;em&gt;reduced&lt;/em&gt; if is has no collapsible edges.
+In the quotient graph of groups,
+this says that if some edge-to-vertex group inclusion 
+\(\iota_e\colon \mathcal{G}_e \to \mathcal{G}_v\) is surjective,
+then the edge \(e\) forms a loop.
+Every cocompact \(G\)-tree \(T\) may be made reduced by a finite sequence of collapse maps.&lt;/p&gt;
+
+&lt;h2 id=&quot;shelters&quot;&gt;Shelters&lt;/h2&gt;
+&lt;p&gt;An edge \(\tilde e\) in a tree \(T\) is &lt;em&gt;surviving&lt;/em&gt;
+if there is a reduced tree \(T&apos;\) and a product of collapse maps \(T \to T&apos;\)
+with the property that the edge \(\tilde e\) is not collapsed.
+The deformation retraction mentioned in the first paragraph
+consists of those trees all of whose edges are surviving.
+For the reader familiar with Culler–Vogtmann Outer Space,
+it’s not hard to see that a tree in Outer Space has the property that every edge is surviving
+if and only if the quotient graph has no separating edges.
+The concept of a &lt;em&gt;shelter&lt;/em&gt; generalizes this “no separating edges” condition.&lt;/p&gt;
+
+&lt;p&gt;Let \(\mathcal{G}\) be the quotient graph of groups.
+Label each half-edge of \(\mathcal{G}\) by \(=\) or \(\neq\)
+according to whether the corresponding edge-to-vertex group inclusion
+is surjective or non-surjective, respectively.
+An embedded segment or circle \(\gamma\) in \(\mathcal{G}\) is a &lt;em&gt;shelter&lt;/em&gt;
+if it satisfies one of the following properties:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(\gamma\) is a segment with \(\ne\) at each of its endpoints
+and \(=\) otherwise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(\gamma\) is a circle with two \(=\) labels at all of its vertices 
+with the possible exception of one.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(\gamma\) is a circle, and there is an orientation of \(\gamma\) such that
+all positively oriented edges have \(=\) at their endpoints.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Clay has a nice picture as Figure 1 in &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;his paper&lt;/a&gt;.
+Clay proves the following as Proposition 1.13 of &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;his paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; An edge \(\tilde e\) of \(T\) is surviving if and only if
+\(p(\tilde e)\) is contained in a shelter.&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s fix a group \(G\) that acts cocompactly on a tree \(T\). Forester introduced the notion of a deformation of the tree \(T\) and Guirardel and Levitt studied the deformation space \(\mathscr{D}\) consisting of trees obtainable from \(T\) by a finite sequence of deformations. Usually we assume \(G\) to be finitely generated, but it’s not clear to me how often this assumption is necessary. Maybe that’ll be a topic for another blog post. In this post I want to discuss the notion of a shelter, which Guirardel and Levitt (and also Clay) use to construct a deformation retraction of \(\mathscr{D}\) (or its simplicial spine) onto a smaller, often finite-dimensional, space.</summary></entry><entry><title type="html">From Free Splittings To Graphs Of Groups</title><link href="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html" rel="alternate" type="text/html" title="From Free Splittings To Graphs Of Groups" /><published>2022-01-06T00:00:00-05:00</published><updated>2022-01-06T00:00:00-05:00</updated><id>http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/01/06/From-free-splittings-to-graphs-of-groups.html">&lt;p&gt;In the previous post, we defined &lt;em&gt;free splittings&lt;/em&gt; for a group \(F\).
 The quotient of a free splitting \(T\) of \(F\) by the action of \(F\)
 is a &lt;em&gt;graph of groups with trivial edge groups.&lt;/em&gt;
 The purpose of this post is to introduce &lt;em&gt;maps&lt;/em&gt; of graphs of groups with trivial edge groups
@@ -1051,87 +1186,4 @@ or it stabilizes a unique vertex of \(Y\), in which case \(g\) is conjugate to a
 In this latter case, \(g\) preserves a copy of \(S\) or \(T\) 
 and one checks that it acts as an element of \(A\) or \(B\).
 But since the actions of \(A\) and \(B\) were free, it follows that if \(g\) is nontrivial, then it acts freely.
-\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry><entry><title type="html">Pullbacks And Intersections</title><link href="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html" rel="alternate" type="text/html" title="Pullbacks And Intersections" /><published>2021-06-17T00:00:00-04:00</published><updated>2021-06-17T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/17/Pullbacks-and-Intersections</id><content type="html" xml:base="http://localhost:4000/2021/06/17/Pullbacks-and-Intersections.html">&lt;p&gt;Sometimes a pullback square is an intersection!
-Here’s a short post about something cute that came up in my research this week.&lt;/p&gt;
-
-&lt;p&gt;Aside from &lt;a href=&quot;https://www.ncngt.org&quot;&gt;NCNGT&lt;/a&gt;, which has been very lovely,
-my math this week has been carefully walking through a small side proposition
-in a paper I’m working on with &lt;a href=&quot;http://cirget.math.uqam.ca/~tyghaswala/&quot;&gt;Ty Ghaswala&lt;/a&gt;.
-The idea is that graphs of groups come with a notion of a covering space due to Bass,
-and étale groupoids come with their own notion of covering spaces
-(for us, we’re following the definition in Bridson–Haefliger),
-and given that you can construct an étale groupoid associated to any graph of groups,
-I wanted to reconcile the two notions.
-The proof ends up being a story of very careful bookkeeping;
-I spent much more of this week than I expected trying to gently pin down what goes where
-and why and balance the sudden explosion of notation it seemed to require—not the most fun,
-but so it goes. And then right at the very end I had this delightful little puzzle. Let me tell you about it.&lt;/p&gt;
-
-&lt;p&gt;So I happened to be staring at the following commutative diagram of groups and homomorphisms,
-all of which are injective in the particular case I was concerned with&lt;/p&gt;
-
-\[\require{AMScd}\begin{CD}
-  \mathscr{L}_{\hat e} @&amp;gt;f_{\hat e}&amp;gt;&amp;gt; \mathscr{G}_e \\
-  @V\iota_{\hat e}VV @VV\operatorname{ad}(\delta_{\hat e})\iota_eV \\
-  \mathscr{L}_w @&amp;gt;f_w&amp;gt;&amp;gt; \mathscr{G}_v.
-\end{CD}\]
-
-&lt;p&gt;It’s not really important what these groups &lt;em&gt;are,&lt;/em&gt;
-but in case you’re curious this is a commutative diagram associated to a morphism of graphs of groups—in
-my particular case, a covering map.&lt;/p&gt;
-
-&lt;p&gt;Anyway, I wanted to know, is the image of \(\mathscr{L}_e\) under these maps
-equal to the intersection \(f_w(\mathscr{G}_w) \cap \operatorname{ad}(\delta_{\hat e})\iota_e(\mathscr{G}_e)\)?
-Since the situation is pretty general, I wondered if there was maybe a universal property argument:
-like, if in the situation above, the square is always a &lt;em&gt;pullback square,&lt;/em&gt;
-then maybe we would be able to show that the two subgroups above were equal.&lt;/p&gt;
-
-&lt;p&gt;It turns out that I had it kind of backwards:
-Given injective homomorphisms \(f\colon H \to G\) and \(g\colon K \to G\), the &lt;em&gt;pullback&lt;/em&gt;
-\(H\times_G K\) is (up to unique isomorphism) the intersection \(f(H) \cap g(K)\).
-Recall that the pullback
-is characterized by the following universal property:
-it fits in the following commutative diagram&lt;/p&gt;
-
-\[\begin{CD}
-  H\times_G K @&amp;gt;\pi_2&amp;gt;&amp;gt; K \\
-  @V\pi_1VV @VVgV \\
-  H @&amp;gt;f&amp;gt;&amp;gt; G,
-\end{CD}\]
-
-&lt;p&gt;and is universal for this property in the sense that given a group \(L\)
-fitting into the commutative diagram&lt;/p&gt;
-
-\[\begin{CD}
-  L @&amp;gt;p_2&amp;gt;&amp;gt; K \\
-  @Vp_1VV @VVgV \\
-  H @&amp;gt;f&amp;gt;&amp;gt; G
-\end{CD}\]
-
-&lt;p&gt;there is a unique homomorphism \(q\colon L \to H\times_GK\) such that
-\(\pi_2q = p_2\) and \(\pi_1q = p_1.\)
-(If there was justice and not MathJax in this world, I’d draw the full commutative diagram I’m alluding to here.)&lt;/p&gt;
-
-&lt;p&gt;So! Assuming \(f\) and \(g\) are injective, let’s prove that \(H\times_GK\) is the intersection
-\(f(H)\cap g(K)\).
-This is not hard: first observe that the intersection admits maps \(\pi_1 \colon f(H)\cap g(K) \to H\)
-and \(\pi_2\colon f(H)\cap g(K) \to K\):
-\(\pi_1\) takes \(g \in f(H)\cap g(K)\), recognizes we can write it as \(f(\hat g)\)
-for a unique \(\hat g\) in \(H\), and sends \(g\) to \(\hat g\).
-Injectivity of \(f\) assures that this really defines a well-defined homomorphism,
-while general properties of functions assure that \(\pi_1\) is injective.
-The compositions \(f\pi_1\) and \(g\pi_2\) are the natural inclusion \(\iota\colon f(H)\cap g(K) \to G\).
-The map \(\pi_2\) is defined similarly.
-Next observe that any group \(L\) fitting into the commutative diagram above
-clearly maps into \(f(H)\cap g(K)\), in other words,
-the map \(fp_1 = gp_2\) factor through a map \(q\colon L \to f(H)\cap g(K)\) as \(\iota q\).
-From here it’s not hard to argue that in fact \(\pi_1q = p_1\) and \(\pi_2q = p_2\); I’ll leave it to you.&lt;/p&gt;
-
-&lt;p&gt;Even though in my particular situation I had the universals backwards,
-I did find this realization clarifying:
-it showed that to prove my result,
-I needed to show that \(\mathscr{L}_e\) way up above has the universal property of the pullback,
-for which it suffices to argue that given an element in the intersection
-\(f_w(\mathscr{L}_w) \cap \operatorname{ad}(\delta_{\hat e})\iota_e(\mathscr{G}_e)\),
-we can pull it back (as it were) and show that it really comes from an element of \(\mathscr{L}_e\).
-This turned out to be true thanks to an extra property my situation enjoys!&lt;/p&gt;</content><author><name></name></author><summary type="html">Sometimes a pullback square is an intersection! Here’s a short post about something cute that came up in my research this week.</summary></entry></feed>
+\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry></feed>
