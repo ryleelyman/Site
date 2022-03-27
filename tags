@@ -1551,6 +1551,7 @@ An Equivalent Definition of Equivalence of Categories	_posts/2020-08-02-The-Axio
 An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	i
 Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Background on graphs of groups$/;"	s
 Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
+Blowing up ideal edges	_posts/2022-03-27-Ideal-edges.md	/^## Blowing up ideal edges$/;"	s
 Boundaries Of Free Splittings	_site/2021/07/25/Boundaries-of-free-splittings.html	/^      <h1>Boundaries Of Free Splittings<\/h1>$/;"	h
 Boundaries Of Free Splittings	_site/blog.html	/^    <h2><a href="\/2021\/07\/25\/Boundaries-of-free-splittings.html">Boundaries Of Free Splittin/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
@@ -1562,6 +1563,7 @@ Category Theory Day One	_site/2020/02/16/Category-Theory-Day-One.html	/^      <h
 Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Category-Theory-Day-One.html">Category Theory Day One<\/a><\/h2/;"	i
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
+Directions	_posts/2022-03-27-Ideal-edges.md	/^## Directions$/;"	s
 Edges belong to two triangles	_posts/2021-06-27-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
 Edges belong to two triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	i
 Edges do not cross	_posts/2021-06-27-The-Farey-graph.md	/^## Edges do not cross$/;"	s
@@ -1590,6 +1592,7 @@ Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/2021/07/01/Gromov-hyperbo
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/blog.html	/^    <h2><a href="\/2021\/07\/01\/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">Gromov H/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
+Ideal edges	_posts/2022-03-27-Ideal-edges.md	/^## Ideal edges$/;"	s
 Laminations	_posts/2021-12-29-More-on-Free-Splittings.md	/^## Laminations$/;"	s
 Laminations	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="laminations">Laminations<\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
@@ -1807,6 +1810,7 @@ math: true	_posts/2021-07-25-Boundaries-of-free-splittings.md	/^math: true$/;"	s
 math: true	_posts/2021-12-29-More-on-Free-Splittings.md	/^math: true$/;"	s
 math: true	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^math: true$/;"	s
 math: true	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^math: true$/;"	s
+math: true	_posts/2022-03-27-Ideal-edges.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I

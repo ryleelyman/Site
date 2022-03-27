@@ -10,7 +10,7 @@ but it has connections to things like continued fractions as well.
 The purpose of this post is introduce the Farey graph
 and prove a couple of basic properties of it.
 
-![The first four layer of the Farey graph](/assets/img/FareyGraph.png)
+![The first four layers of the Farey graph](/assets/img/FareyGraph.png)
 
 The Farey graph has as vertices all rational numbers
 expressed as fractions $$\frac{p}{q}$$ in lowest terms with $$q \ge 0$$,

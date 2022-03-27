@@ -1,4 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-26T13:05:54-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Shelters In Graphs Of Groups</title><link href="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html" rel="alternate" type="text/html" title="Shelters In Graphs Of Groups" /><published>2022-03-26T00:00:00-04:00</published><updated>2022-03-26T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html">&lt;p&gt;Let’s fix a group \(G\) that acts cocompactly on a tree \(T\).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-27T15:49:31-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Ideal Edges</title><link href="http://localhost:4000/2022/03/27/Ideal-edges.html" rel="alternate" type="text/html" title="Ideal Edges" /><published>2022-03-27T00:00:00-04:00</published><updated>2022-03-27T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/27/Ideal-edges</id><content type="html" xml:base="http://localhost:4000/2022/03/27/Ideal-edges.html">&lt;p&gt;Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\).
+In the &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;previous post&lt;/a&gt; we defined what it meant for an edge of \(T\) 
+to be &lt;em&gt;surviving&lt;/em&gt; or &lt;em&gt;collapsible.&lt;/em&gt;
+Collapsing orbits of collapsible edges in \(T\) yields
+a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse.
+Two trees \(T\) and \(T&apos;\) are in the same &lt;em&gt;deformation space&lt;/em&gt;
+if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\).
+The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\)
+all of whose edges are surviving
+is partially ordered under the operation of forest collapse,
+and this partial order contains minimal elements, which are &lt;em&gt;reduced&lt;/em&gt; trees.
+To study this poset, or its geometric realization \(L_T(G)\),
+it would be convenient to understand all trees collapsing onto a given reduced tree.
+This is captured in the idea of an &lt;em&gt;ideal edge,&lt;/em&gt;
+which I’d like to describe in this post.
+The idea of an ideal edge goes back to Culler and Vogtmann’s
+&lt;a href=&quot;https://marc-culler.info/static/home/papers/OuterSpace.pdf&quot;&gt;original paper&lt;/a&gt; on Outer Space;
+the treatment here is adapted from a paper of &lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;Krstić and Vogtmann&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Again we will work in the quotient graph of groups \(\mathcal{G}\),
+the construction of which we described in the &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;previous post&lt;/a&gt;.
+We assume that \(\mathcal{G}\) is finite and connected,
+and that if a vertex \(v\) has valence less than 3,
+then at least one of the edge-to-vertex group inclusions 
+\(\iota_e\colon\mathcal{G}_e \to \mathcal{G}_v\) is not surjective.
+In tree language this says that \(T\) is minimal and has no subdivision vertices.
+The graph of groups \(\mathcal{G}\) is &lt;em&gt;marked.&lt;/em&gt;
+If we fix a tree \(T\) in the deformation space
+and identify \(G\) with the fundamental group of its quotient graph of groups \(\mathbb{G}\),
+we may think of the marking as a &lt;em&gt;homotopy equivalence&lt;/em&gt; in the sense of &lt;a href=&quot;https://arxiv.org/abs/2102.02848&quot;&gt;my paper&lt;/a&gt;
+\(\sigma\colon \mathbb{G} \to \mathcal{G}\).&lt;/p&gt;
+
+&lt;h2 id=&quot;directions&quot;&gt;Directions&lt;/h2&gt;
+&lt;p&gt;Let \(v\) be a vertex of \(\mathcal{G}\).
+Let \(\operatorname{st}(v)\) be the set of oriented edges of \(\mathcal{G}\) 
+with initial vertex \(v\).
+The set of &lt;em&gt;directions&lt;/em&gt; at \(v\), denoted \(D_v\), is the set&lt;/p&gt;
+
+\[\coprod_{e \in \operatorname{st}(v)} \mathcal{G}_v/\iota_e(\mathcal{G}_e) \times \{e\}.\]
+
+&lt;p&gt;The group \(\mathcal{G}_v\) acts on \(D_v\) on the left,
+and under the identification of \(\mathcal{G}\) with the quotient graph of groups of \(T\),
+if \(\tilde v\) is a lift of \(v\) to \(T\),
+there is a \(\mathcal{G}_v\)-equivariant bijection 
+between \(D_v\) and the set \(\operatorname{st}(\tilde v)\).&lt;/p&gt;
+
+&lt;p&gt;Suppose \(T&apos;\) is a tree such that collapsing the orbit of an edge \(\tilde e\) incident to \(v\)
+yields a tree equivariantly homeomorphic to \(T\).
+If we suppose that \(T&apos;\) is minimal, has no subdivision vertices
+and that every edge of \(T&apos;\) is surviving,
+we can make the following observations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(\tilde e\) separates \(\operatorname{st}(\tilde v)\) into two components,
+each of which has at least two edges, since \(T&apos;\) is minimal
+and has no subdivision vertices.&lt;/li&gt;
+  &lt;li&gt;The stabilizer of \(\tilde e\) is a subgroup of the stabilizer of \(\tilde v\)
+and is equal to the stabilizer of the new vertex \(\tilde w\).
+If an edge in \(\operatorname{st}(\tilde v)\) now has initial vertex \(\tilde w\),
+so does every edge in its \(\operatorname{stab}(\tilde e)\)-orbit and no others.&lt;/li&gt;
+  &lt;li&gt;Since \(\tilde e\) is surviving, another edge incident to \(\tilde w\) must be collapsible;
+in other words \(\operatorname{stab}(\tilde e) = \operatorname{stab}(\tilde e&apos;)\)
+for some edge \(\tilde e&apos;\) with initial vertex \(\tilde w\).
+For the edge \(\tilde e&apos;\) to be collapsible,
+we need that its terminal vertex is not in the orbit of \(\tilde w\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Furthermore conversely, if we have a subset of \(\operatorname{st}(\tilde v)\)
+satisfying the above three properties,
+we can “blow up” the tree \(T\), inserting a new edge orbit \(\tilde e\).&lt;/p&gt;
+
+&lt;h2 id=&quot;ideal-edges&quot;&gt;Ideal edges&lt;/h2&gt;
+&lt;p&gt;The idea of an ideal edge in \(\mathcal{G}\) is designed to capture the above observations.
+To wit, an &lt;em&gt;ideal edge&lt;/em&gt; based at a vertex \(v\) is a subset \(\alpha \subset D_v\)
+that is required to satisfy the following conditions.
+Let \(\mathcal{G}_\alpha\) be the subgroup of \(\mathcal{G}_v\)
+generated by the subgroups \(g\iota_e(\mathcal{G}_e)g^{-1}\)
+for each direction \((g\iota_e(\mathcal{G}_e),e)\) contained in \(\alpha\).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There are at least two directions in \(\alpha\) and at least two directions not in \(\alpha\).&lt;/li&gt;
+  &lt;li&gt;If \((g\iota_e(\mathcal{G}_e),e) \in \alpha\),
+then the intersection \(\mathcal{G}_v(g\iota_e(\mathcal{G}_e),e) \cap \alpha\) equals
+\(\mathcal{G}_\alpha(g\iota_e(\mathcal{G}_e),e)\).&lt;/li&gt;
+  &lt;li&gt;The subgroup \(\mathcal{G}_\alpha\) is equal to \(g\iota_e(\mathcal{G}_e)g^{-1}\)
+for some direction \((g\iota_e(\mathcal{G}_e),e) \in \alpha\)
+and no direction with underlying oriented edge \(\bar e\) is in \(\alpha\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We will say an oriented edge \(e \in \alpha\) if there is some direction
+in \(\alpha\) with underlying oriented edge \(e\).
+Notice that it follows from the conditions that \(\alpha\) contains at least two oriented edges.
+Let \(D(\alpha)\) be the set of oriented edges supporting a direction
+satisfying the third item above.
+If \(\mathcal{G}\) is reduced and \(\alpha\) is an ideal edge 
+satisfying \(\mathcal{G}_\alpha = \mathcal{G}_v\),
+then \(D_v - \alpha\) is also an ideal edge.
+The first item in the definition is clear.
+The second says that for each oriented edge \(e \in \operatorname{st}(v)\),
+either all directions with underlying oriented edge \(e\) are in \(\alpha\) or none are,
+which is also true of \(D_v - \alpha\).
+Since \(\mathcal{G}\) is reduced, some and hence every edge \(e \in D(\alpha)\)
+must form a loop based at \(v\) (for otherwise we could collapse \(e\)),
+so we have \(\bar e \in D(D_v - \alpha)\).
+We call \(D_v - \alpha\) the &lt;em&gt;inverse&lt;/em&gt; of \(\alpha\).
+Two ideal edges \(\alpha\) and \(\alpha&apos;\) are &lt;em&gt;equivalent&lt;/em&gt;
+if there exists \(g \in \mathcal{G}_v\) such that \(g.\alpha = \alpha&apos;\).&lt;/p&gt;
+
+&lt;p&gt;An ideal edge \(\alpha\) based at \(v\) is &lt;em&gt;contained in&lt;/em&gt; an ideal edge \(\beta\)
+if there exists \(g \in \mathcal{G}_v\)
+such that \(g.\alpha \subset \beta\).
+If \(\alpha\) and \(\beta\) are based at \(v\),
+the ideal edges are &lt;em&gt;disjoint&lt;/em&gt; if \(g.\alpha \cap \beta = \varnothing\) 
+for all $g \in \mathcal{G}_v\(.
+If\)\alpha\(and\)\beta\(are based at different vertices, then they are disjoint.
+We say\)\alpha\(and\)\beta$$ are &lt;em&gt;compatible&lt;/em&gt;
+if one is properly contained in the other or if they are disjoint and not inverse.&lt;/p&gt;
+
+&lt;h2 id=&quot;blowing-up-ideal-edges&quot;&gt;Blowing up ideal edges&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/idealedge.jpeg&quot; alt=&quot;Blowing up an ideal edge in a graph of groups&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let \(\alpha\) be an ideal edge of the marked graph of groups \(\tau = (\mathcal{G},\sigma)\).
+We construct a new marked graph of groups \(\tau^\alpha = (\mathcal{G}^\alpha,\sigma^\alpha)\)
+by &lt;em&gt;blowing up&lt;/em&gt; \(\alpha\) as follows.
+The vertices and edges of \(\mathcal{G}^\alpha\) 
+are the same as the vertices and edges of \(\mathcal{G}\)
+with one new vertex \(v_\alpha\) and one new edge \(\alpha\);
+the other vertices and edges are &lt;em&gt;old.&lt;/em&gt;
+The old vertex and edge groups are equal to what they are in \(\mathcal{G}\).
+We have \(\mathcal{G}^\alpha_{v_\alpha} = \mathcal{G}_\alpha = \mathcal{G}^\alpha_\alpha\).
+The new edge \(\alpha\) begins at \(v_\alpha\) and ends at \(v\).
+If \(e\) is an old oriented edge in \(\alpha\),
+then \(e\) now has initial vertex \(v_\alpha\)
+and the inclusion \(\iota_e\colon \mathcal{G}^\alpha_e \to \mathcal{G}^\alpha_\alpha\)
+is obtained from \(\iota_e\colon \mathcal{G}_e \to \mathcal{G}_v\)
+by recalling that we have \(g\iota_e(\mathcal{G_e})g^{-1} \le \mathcal{G}_\alpha\)
+for some \(g \in \mathcal{G}_v\).
+Note that there is a choice here of group element \(g\);
+differing choices will yield &lt;em&gt;equivalent&lt;/em&gt; markings in a sense that I won’t make precise here.
+All other oriented edges have their initial vertices and edge-to-vertex group inclusions unchanged.
+There is a &lt;em&gt;collapse map&lt;/em&gt; \(\mathcal{G}^\alpha \to \mathcal{G}\)
+defined by collapsing the edge \(\alpha\) and then “twisting” the edges incident to \(v_\alpha\)
+by the corresponding choice of group element \(g \in \mathcal{G}_v\).
+We’ll describe maps of general graphs of groups in another post.
+Choose a homotopy inverse \(f\colon \mathcal{G} \to \mathcal{G}^\alpha\)
+and define \(\sigma^\alpha = f\sigma\).&lt;/p&gt;
+
+&lt;p&gt;Observe that if \(\beta\) is disjoint from (and not inverse to)
+or properly included in \(\alpha\),
+then \(\beta\) may be regarded as an ideal edge of \(\mathcal{G}^\alpha\).
+If \(\alpha\) are disjoint and not inverse, it’s not hard to see that
+\((\tau^\alpha)^\beta = (\tau^\beta)^\alpha\).&lt;/p&gt;
+
+&lt;p&gt;An &lt;em&gt;oriented ideal forest&lt;/em&gt; in a marked graph of groups \(\tau\)
+is a collection of equivalence classes \(\{\alpha_1,\ldots,\alpha_k\}\)
+of ideal edges in \(\tau\) that are pairwise compatible.
+The ideal edges in an oriented ideal forest are partially ordered under inclusion.
+By repeatedly blowing up maximal elements of this partial order,
+we obtain a marked graph of groups \(\tau^{\alpha_1,\ldots,\alpha_k}\).
+Because each ideal edge \(\alpha\) in a reduced marked graph of groups \(\tau\)
+has an oriented edge in \(D(\alpha)\),
+it follows that each edge of \(\tau^{\alpha_1,\ldots,\alpha_k}\) is surviving.&lt;/p&gt;
+
+&lt;p&gt;A pair of ideal edges \(\alpha\) and \(\beta\) are &lt;em&gt;pre-compatible&lt;/em&gt;
+if they are compatible, or \(\alpha\) is invertible with inverse \(\bar\alpha\)
+and \(\bar\alpha\) is included in \(\beta\).
+It follows that \(\beta\) is invertible and that \(\bar\beta\) is included in \(\alpha\).
+An &lt;em&gt;ideal forest&lt;/em&gt; is a collection of pairwise pre-compatible ideal edges
+containing the inverse of each of its invertible elements.
+We can complete each oriented ideal forest \(\Phi\) to an ideal forest \(\Phi^\pm\) by adding
+the inverses of each of its invertible elements.
+Krstić and Vogtmann prove for graphs of finite groups
+as Lemma 5.7 of &lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;their paper&lt;/a&gt;
+that if \(\Phi^\pm = \Psi^\pm\) as ideal forests
+in a reduced marked graph of groups \(\tau\),
+we have \(\tau^\Phi = \tau^\Psi\) as marked graphs of groups.
+Again for graphs of finite groups,
+Krstić and Vogtmann prove as Proposition 5.9 that the poset of marked graphs of groups in \(L_T(G)\)
+collapsing to a reduced marked graph of groups \(\tau\) 
+is isomorphic to the poset of ideal forests in \(\tau\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\). In the previous post we defined what it meant for an edge of \(T\) to be surviving or collapsible. Collapsing orbits of collapsible edges in \(T\) yields a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse. Two trees \(T\) and \(T&apos;\) are in the same deformation space if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\). The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\) all of whose edges are surviving is partially ordered under the operation of forest collapse, and this partial order contains minimal elements, which are reduced trees. To study this poset, or its geometric realization \(L_T(G)\), it would be convenient to understand all trees collapsing onto a given reduced tree. This is captured in the idea of an ideal edge, which I’d like to describe in this post. The idea of an ideal edge goes back to Culler and Vogtmann’s original paper on Outer Space; the treatment here is adapted from a paper of Krstić and Vogtmann.</summary></entry><entry><title type="html">Shelters In Graphs Of Groups</title><link href="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html" rel="alternate" type="text/html" title="Shelters In Graphs Of Groups" /><published>2022-03-26T00:00:00-04:00</published><updated>2022-03-26T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html">&lt;p&gt;Let’s fix a group \(G\) that acts cocompactly on a tree \(T\).
 &lt;a href=&quot;https://arxiv.org/abs/math/0107008&quot;&gt;Forester&lt;/a&gt; introduced the notion of a &lt;em&gt;deformation&lt;/em&gt; of the tree \(T\)
 and &lt;a href=&quot;https://arxiv.org/abs/math/0605545&quot;&gt;Guirardel and Levitt&lt;/a&gt; studied the &lt;em&gt;deformation space&lt;/em&gt;
 \(\mathscr{D}\) consisting of trees obtainable from \(T\) by a finite sequence of deformations.
@@ -853,7 +1033,7 @@ but it has connections to things like continued fractions as well.
 The purpose of this post is introduce the Farey graph
 and prove a couple of basic properties of it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/FareyGraph.png&quot; alt=&quot;The first four layer of the Farey graph&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/FareyGraph.png&quot; alt=&quot;The first four layers of the Farey graph&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The Farey graph has as vertices all rational numbers
 expressed as fractions \(\frac{p}{q}\) in lowest terms with \(q \ge 0\),
@@ -1016,174 +1196,4 @@ for the lectures, as well as links to recordings of the lectures.&lt;/p&gt;
   &lt;li&gt;Lecture 2 &lt;a href=&quot;/assets/pdfs/GGTWB2.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB2.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=opilmxidthY&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Lecture 3 &lt;a href=&quot;/assets/pdfs/GGTWB3.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB3.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=LVPoa7sgMnc&quot;&gt;YouTube&lt;/a&gt;.
 &lt;a href=&quot;/assets/pdfs/GGTWBexercises.pdf&quot;&gt;Here&lt;/a&gt; are some suggested exercises.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry><entry><title type="html">Free Actions On Real Trees</title><link href="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html" rel="alternate" type="text/html" title="Free Actions On Real Trees" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Free-actions-on-real-trees</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Free-actions-on-real-trees.html">&lt;p&gt;A famous theorem of Rips says that a finitely generated group
-with a free action on a &lt;em&gt;real tree&lt;/em&gt; is a free product of free abelian and surface groups.
-The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing
-free actions of such groups on real trees.&lt;/p&gt;
-
-&lt;p&gt;Let us begin by defining real trees.
-An &lt;em&gt;arc&lt;/em&gt; in a space \(X\) is an embedding \(\gamma\colon [a,b] \to X\)
-of a closed interval of \(\mathbb{R}\) in \(X\).
-If \((X,d)\) is a metric space,
-an arc in \(X\) is a &lt;em&gt;geodesic&lt;/em&gt; if the embedding is an isometric embedding—that is,
-for all \(s\) and \(t\) in \([a,b]\), we have&lt;/p&gt;
-
-\[d(\gamma(s),\gamma(t)) = |t - s|.\]
-
-&lt;p&gt;A &lt;em&gt;real tree&lt;/em&gt; or an \(\mathbb{R}\)&lt;em&gt;-tree&lt;/em&gt; is a metric space \((T,d)\)
-in which every two points are joined by a unique arc,
-and this arc is the image of a geodesic.&lt;/p&gt;
-
-&lt;h2 id=&quot;examples-of-real-trees&quot;&gt;Examples of real trees&lt;/h2&gt;
-
-&lt;p&gt;Let’s see a couple of examples of real trees.
-As a first example,
-\(\mathbb{R}\) is a real tree.
-If \(X\) is a simply connected simplicial complex of dimension \(1\),
-that is, a &lt;em&gt;simplicial tree,&lt;/em&gt;
-we can define a metric on \(X\)
-by declaring each edge of \(X\) to be isometric to an interval of \(\mathbb{R}\) of length \(1\),
-and then giving \(X\) the metric where the distance between two points is the length of a shortest path between them.
-In this metric, \(X\) becomes a real tree.
-The metric topology is in general strictly coarser than the simplicial topology.
-This means the “identity” map from the simplicial complex \(X\) to the metric space \(X\) is continuous,
-but its inverse need not be continuous.&lt;/p&gt;
-
-&lt;h2 id=&quot;free-abelian-groups-act-freely-on-real-trees&quot;&gt;Free abelian groups act freely on real trees&lt;/h2&gt;
-
-&lt;p&gt;It’s not hard to construct free actions of finitely generated free abelian groups on real trees,
-in fact the word “tree” is somewhat obfuscating:
-the real tree in question is the real line \(\mathbb{R}\).
-Let \(a_1,\dotsc,a_n\) be a basis for \(\mathbb{Z}^n\).
-Have each \(a_i\) act by translation on \(\mathbb{R}\) by some distance \(t_i\).
-If the \(t_i\) are not rationally related, then the resulting action of \(\mathbb{Z}^n\) is free.
-It also has &lt;em&gt;dense orbits,&lt;/em&gt; a property of some other actions of groups on real trees
-that I struggled to visualize—I find this simpler example helpful in that regard!&lt;/p&gt;
-
-&lt;h2 id=&quot;surface-groups-act-freely-on-real-trees&quot;&gt;Surface groups act freely on real trees&lt;/h2&gt;
-
-&lt;p&gt;The following is admittedly more complicated.
-Let \(S\) be a surface equipped with a complete Riemannian metric of constant sectional curvature \(-1\).
-A &lt;em&gt;measured geodesic lamination&lt;/em&gt; \((\mathscr{L},\mu)\) on \(S\)
-is a closed subset \(\mathscr{L} \subset S\) (the &lt;em&gt;lamination&lt;/em&gt;) which decomposes as a disjoint union of
-complete geodesics (called &lt;em&gt;leaves&lt;/em&gt;)
-together with a &lt;em&gt;transverse measure&lt;/em&gt; \(\mu\).
-This is an assignment, for each arc \(c\) transverse to \(\mathscr{L}\),
-of a Radon measure \(\mu|_c\) with support equal to \(c \cap \mathscr{L}\)
-that is invariant under homotopy transverse to \(\mathscr{L}\).&lt;/p&gt;
-
-&lt;p&gt;That’s a bit of a mouthful, sorry!
-A simple example of a measured geodesic lamination is just a closed geodesic \(\gamma\) on \(S\),
-where the transverse measure simply counts the points of intersections of arcs \(c\) with \(\gamma\).
-Notice that even if an arc \(c\) transverse to \(\gamma\) is homotopic to an arc with fewer points of intersection,
-this homotopy cannot be performed transverse to \(\gamma\), so the measure is really homotopy invariant.
-There are measured geodesic laminations with stranger properties
-than those that come from closed geodesics,
-but I think it can be helpful when trying to picture things involving geodesic laminations,
-to just imagine the closed geodesic case and think of a general measured geodesic lamination
-as being a sort of generalization or “limit” of this picture.
-Thurston has a cute picture in his notes on the geometry and topology of 3-manifolds, see below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/geodesiclamination.png&quot; alt=&quot;Thurston&apos;s picture of a geodesic lamination&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyway, let \((\mathscr{L},\mu)\) be a measured geodesic lamination.
-We can lift it to a \(\pi_1(S)\)-invariant measured geodesic lamination \((\tilde{\mathscr{L}},\tilde\mu)\)
-on the universal cover \(\tilde S\) of \(S\).
-I will describe &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/004093839190002L&quot;&gt;Morgan and Shalen’s&lt;/a&gt;
-construction of a real tree &lt;em&gt;dual&lt;/em&gt; to \((\tilde{\mathscr{L}},\tilde\mu)\).
-Since \((\tilde{\mathscr{L}},\tilde\mu)\) is \(\pi_1(S)\)-invariant,
-we will obtain an action of \(\pi_1(S)\) by isometries on the dual real tree.
-Let \(C\) be the set of complementary components of \(\tilde S\setminus \tilde{\mathscr{L}}\).
-Given components \(c\) and \(c&apos;\),
-let \(\gamma\) be a path with one endpoint in \(c\) and the other in \(c&apos;\)
-such that \(\gamma\) is transverse to \(\tilde{\mathscr{L}}\) and intersects each leaf of \(\tilde{\mathscr{L}}\)
-at most once.
-For example, given a point \(x\) in \(c\) and \(y\) in \(c&apos;\),
-the path \(\gamma\) could be the unique geodesic from \(x\) to \(y\).
-Define&lt;/p&gt;
-
-\[d(c,c&apos;) = \int_\gamma d\tilde\mu.\]
-
-&lt;p&gt;Morgan and Shalen show that this defines a well-defined distance function on \(C\),
-and that this distance satisfies a \(0\)-hyperbolicity condition,
-therefore there is a real tree \(T\) equipped with an isometric embedding \(C \to T\)
-such that \(T\) is the smallest subtree containing the image of \(C\).
-This tree \(T\) is unique up to unique isometry,
-so in particular the action of \(\pi_1(S)\) on \(C\) extends to an action on \(T\).&lt;/p&gt;
-
-&lt;p&gt;Let us return to our example of a measured geodesic lamination \((\mathscr{L},\mu)\),
-where \(\mathscr{L}\) was a closed geodesic \(\gamma\)
-and the transverse measure \(\mu\) counted intersection points.
-Thinking of \(\gamma\) as an element of \(\pi_1(S)\),
-the lamination \(\tilde{\mathscr{L}}\) has a leaf for each conjugate of \(\gamma\) in \(\pi_1(S)\),
-and each leaf separates \(\tilde S\) into two components.
-The minimal intersection number for a path joining the complementary components is \(1\),
-so adjacent components are at distance one in \(T\).
-In fact, if you know a little Bass–Serre theory,
-the dual tree turns out to be exactly the Bass–Serre tree for the one-edge splitting of \(\pi_1(S)\)
-with edge group \(\langle\gamma\rangle\), where each edge has been assigned length \(1\)!
-Notice that the action of \(\pi_1(S)\) on this particular tree is &lt;em&gt;not&lt;/em&gt; free.&lt;/p&gt;
-
-&lt;p&gt;Morgan and Shalen show that the stabilizer of a point \(p\) in \(T\) under the action of \(\pi_1(S)\)
-is the stabilizer of the corresponding component of \(\tilde S \setminus \tilde{\mathscr{L}}\) if
-\(p\) is in the image of \(C\), and is the stabilizer of a leaf of \(\mathscr{L}\) otherwise.
-Their key result (which they prove with a Baire Category Theorem argument!)
-is the following.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; If \(S\) is a closed hyperbolic surface that is not the connect sum of three projective planes,
-there is a measured geodesic lamination \((\mathscr{L},\mu)\) on \(S\)
-all of whose leaves and complementary components are simply connected.&lt;/p&gt;
-
-&lt;p&gt;It follows that the action of \(\pi_1(S)\) on the dual tree \(T\) is free.
-Morgan and Shalen also prove algebraically that if \(S\) &lt;em&gt;is&lt;/em&gt; the connect sum of three projective planes,
-then \(\pi_1(S)\) cannot act freely on a real tree.&lt;/p&gt;
-
-&lt;h2 id=&quot;free-products-of-groups-acting-freely&quot;&gt;Free products of groups acting freely&lt;/h2&gt;
-
-&lt;p&gt;In the remainder of this post,
-we will prove the following theorem.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; If \(A\) and \(B\) are groups acting freely on real trees \(S\) and \(T\),
-then there is a real tree \(X\) on which the free product \(A*B\) acts freely.&lt;/p&gt;
-
-&lt;p&gt;If \(G\) is a finitely generated group,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Grushko_theorem&quot;&gt;Grushko’s theorem&lt;/a&gt;
-says that the number of factors in any free product decomposition of \(G\) is finite,
-so applying the theorem inductively provides examples of free actions
-of finitely generated free products of free abelian and surface groups.
-(Provided, of course, that none of the surfaces in question are the projective plane,
-the Klein bottle, or the connect sum of three projective planes.)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; The free product \(G = A*B\) acts on a (simplicial) tree \(Y\)
-with two orbits of vertices and one orbit of edges with trivial edge stabilizers.
-By the orbit stabilizer theorem, the tree has the following description.
-The vertex set is the union of the sets of cosets of \(A\) and \(B\) in \(G\),
-and the edge set is the set of elements of \(G\).
-The edge labeled \(g\) connects the vertices labeled \(gA\) and \(gB\).
-Choose points \(s \in S\) and \(t \in T\).
-The real tree \(X\) will be constructed in the following way.
-We replace vertices of \(Y\) with copies of \(S\) or \(T\), corresponding to whether
-the vertex corresponded to a coset of \(A\) or \(B\), respectively,
-gluing the edges of \(Y\) so that one endpoint lies in a copy of \(S\) and the other in a copy of \(T\).&lt;/p&gt;
-
-&lt;p&gt;Explicitly the space \(X\) is the quotient of the disjoint union \(G\times S \sqcup G \times T \sqcup G\times [0,1]\)
-by the following relations, where \(g \in G\), \(x \in S\), \(y \in T\), \(a \in A\) and \(b \in B\):&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;\((ga,x) \sim (g,a.x)\),&lt;/li&gt;
-  &lt;li&gt;\((gb,y) \sim (g,b.y)\),&lt;/li&gt;
-  &lt;li&gt;\((g,0) \sim (g,s)\) and&lt;/li&gt;
-  &lt;li&gt;\((g,1) \sim (g,t)\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One checks that the relations imply that there is a copy of \(S\) for each coset \(gA\) in \(G\),
-a copy of \(T\) for each coset \(gB\) in \(G\),
-and an edge \([0,1]\) for each element of \(G\).
-Since \(Y\) was a tree, \(X\) will be a real tree.
-The multiplication in the labels of the disjoint union yields an action of \(G\) on \(X\) by isometries.
-There is a natural equivariant map \(X \to Y\) that collapses each copy of \(S\) and each copy of \(T\) to a point.
-Each element \(g\) of \(G\) either acts freely on \(Y\) (in which case it must act freely on \(X\)),
-or it stabilizes a unique vertex of \(Y\), in which case \(g\) is conjugate to an element of \(A\) or \(B\).
-In this latter case, \(g\) preserves a copy of \(S\) or \(T\) 
-and one checks that it acts as an element of \(A\) or \(B\).
-But since the actions of \(A\) and \(B\) were free, it follows that if \(g\) is nontrivial, then it acts freely.
-\(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">A famous theorem of Rips says that a finitely generated group with a free action on a real tree is a free product of free abelian and surface groups. The purpose of this blog post is to introduce real trees and illustrate this theorem by constructing free actions of such groups on real trees.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry></feed>
