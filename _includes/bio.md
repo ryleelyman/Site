@@ -9,10 +9,11 @@ tropical geometry, orbifolds, cube complexes, etc.
 Curriculum Vitae: [PDF]
 
 I earned my PhD in Mathematics from [Tufts University](https://math.tufts.edu),
-where my advisor was [Kim Ruane](http://www.tufts.edu/~kruane01/).
+where my advisor was [Kim Ruane](https://math.tufts.edu/people/faculty/kim-ruane).
 I am a postdoc at
 [Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
-My mentor at Rutgers is Lee Mosher.
+My mentor at Rutgers is [Lee Mosher](https://www.newark.rutgers.edu/about-us/have-you-met-rutgers-newark/lee-mosher).
+In the fall I will be an NSF Postdoctoral Fellow, still at Rutgers–Newark.
 
 My email address is <rylee.lyman@rutgers.edu>.  
 
