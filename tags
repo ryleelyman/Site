@@ -1632,10 +1632,12 @@ Outreach	service.md	/^# Outreach$/;"	c
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t
 Properties of the tree in the quotient	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## Properties of the tree in the quotient$/;"	s
 Properties of the tree in the quotient	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="properties-of-the-tree-in-the-quotient">Properties of the tree in the quotient<\/h2>$/;"	i
+Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Publications and Preprints	research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^      <h1>Pullbacks And Intersections<\/h1>$/;"	h
 Pullbacks And Intersections	_site/blog.html	/^    <h2><a href="\/2021\/06\/17\/Pullbacks-and-Intersections.html">Pullbacks And Intersections<\//;"	i
+Research	Research.md	/^# Research$/;"	c
 Research	_data/navigation.yml	/^- name: Research$/;"	p
 Research	_site/research.html	/^      <h1 id="research">Research<\/h1>$/;"	h
 Research	research.md	/^# Research$/;"	c
@@ -1807,6 +1809,7 @@ main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, f
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 maps-of-graphs-of-groups-with-trivial-edge-groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="maps-of-graphs-of-groups-with-trivial-edge-groups">Maps of graphs of groups with trivial/;"	I
 mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$/;"	s
+math: true	Research.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I
