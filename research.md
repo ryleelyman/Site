@@ -10,7 +10,7 @@ math: true
 ## Publications and Preprints
 
 - **Lipschitz metric isometries between Outer Spaces of virtually free groups**   
-Available at [arXiv:2203.09008](https://arxiv.org/abs/2203.09008)
+Available at [arXiv:2203.09008](https://arxiv.org/abs/2203.09008).
 <a onclick="displayabs('Lipschitz')">Abstract</a>   
 *Submitted.*   
 <div id="Lipschitz" style="display: none">
@@ -19,7 +19,7 @@ Dowdall and Taylor observed that given a finite-index subgroup of a free group, 
 </blockquote>
 </div>
 - **CTs for free products**   
-Available at [arXiv:2203.08868](https://arxiv.org/abs/2203.08868)
+Available at [arXiv:2203.08868](https://arxiv.org/abs/2203.08868).
 <a onclick="displayabs('CTs')">Abstract</a>   
 *Submitted.* 
 <div id="CTs" style="display: none">
@@ -45,7 +45,7 @@ whose outer class has finite order.
 </blockquote>
 </div>
 - **Train track maps on graphs of groups**   
-Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848)
+Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848).
 <a onclick="displayabs('TrainTracks')">Abstract</a>   
 *Submitted.* 
 <div id="TrainTracks" style="display: none">
