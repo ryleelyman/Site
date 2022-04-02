@@ -111,7 +111,7 @@ if there exists $$g \in \mathcal{G}_v$$
 such that $$g.\alpha \subset \beta$$.
 If $$\alpha$$ and $$\beta$$ are based at $$v$$,
 the ideal edges are *disjoint* if $$g.\alpha \cap \beta = \varnothing$$ 
-for all $g \in \mathcal{G}_v$$.
+for all $$g \in \mathcal{G}_v$$.
 If $$\alpha$$ and $$\beta$$ are based at different vertices, then they are disjoint.
 We say $$\alpha$$ and $$\beta$$ are *compatible*
 if one is properly contained in the other or if they are disjoint and not inverse.
