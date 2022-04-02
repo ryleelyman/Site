@@ -8,7 +8,7 @@ to construct new graphs of groups.
 To prove that (the reduced spine of) Outer Space for a virtually free group
 is contractible, [Krstić and Vogtmann][equivariant outer space]
 define what is essentially a combinatorial analogue of a non-singular Morse function
-on Outer Space and show that for well-chosen function,
+on Outer Space and show that for a well-chosen function,
 the set of minimal vertices of the complex is actually the star of a single reduced marked graph of groups,
 which is contractible.
 A key tool to that end is the *star graph,*
