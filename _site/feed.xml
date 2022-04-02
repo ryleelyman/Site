@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-27T15:49:31-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Ideal Edges</title><link href="http://localhost:4000/2022/03/27/Ideal-edges.html" rel="alternate" type="text/html" title="Ideal Edges" /><published>2022-03-27T00:00:00-04:00</published><updated>2022-03-27T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/27/Ideal-edges</id><content type="html" xml:base="http://localhost:4000/2022/03/27/Ideal-edges.html">&lt;p&gt;Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-02T12:58:35-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Star Graph</title><link href="http://localhost:4000/2022/04/02/The-star-graph.html" rel="alternate" type="text/html" title="The Star Graph" /><published>2022-04-02T00:00:00-04:00</published><updated>2022-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2022/04/02/The-star-graph</id><content type="html" xml:base="http://localhost:4000/2022/04/02/The-star-graph.html">&lt;p&gt;In an &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;earlier post&lt;/a&gt; we introduced the concept of an &lt;em&gt;ideal edge&lt;/em&gt;
+in a graph of groups and described how to &lt;em&gt;blow up&lt;/em&gt; ideal edges
+to construct new graphs of groups.
+To prove that (the reduced spine of) Outer Space for a virtually free group
+is contractible, &lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;Krstić and Vogtmann&lt;/a&gt;
+define what is essentially a combinatorial analogue of a non-singular Morse function
+on Outer Space and show that for well-chosen function,
+the set of minimal vertices of the complex is actually the star of a single reduced marked graph of groups,
+which is contractible.
+A key tool to that end is the &lt;em&gt;star graph,&lt;/em&gt;
+and the purpose of this post is to describe the star graph (for conjugacy classes)
+in a virtually free group and describe its usefulness.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-reduced-spine-of-outer-space&quot;&gt;The reduced spine of Outer Space&lt;/h2&gt;
+
+&lt;p&gt;Before we describe the star graph, let’s define the complex we’re working with.
+Given a virtually (non-abelian, to keep things interesting) free group \(F\),
+we’ll call the reduced spine of Outer Space \(L(F)\).
+In tree language, a vertex of \(L(F)\)
+is an action of \(F\) on a simplicial tree \(T\) with finite stabilizers and finite quotient
+with the property that every edge of \(T\) is &lt;em&gt;surviving,&lt;/em&gt; see &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;the post on shelters&lt;/a&gt;
+for a definition.
+Two tree actions \(T\) and \(T&apos;\) are &lt;em&gt;equivalent&lt;/em&gt; if there is an equivariant homeomorphism between them.
+The set of equivalence classes is partially ordered under &lt;em&gt;forest collapse,&lt;/em&gt;
+and the &lt;em&gt;reduced spine of Outer Space&lt;/em&gt; is the geometric realization of this poset.&lt;/p&gt;
+
+&lt;p&gt;In graphs of groups language, 
+a vertex of \(L(F)\) is a finite graph of finite groups \(\mathcal{G}\)
+which is a union of &lt;em&gt;shelters&lt;/em&gt;
+together with a &lt;em&gt;marking,&lt;/em&gt; which we can think of as an identification of \(\pi_1(\mathcal{G})\) with \(F\),
+well-defined up to inner automorphism,
+or as a &lt;em&gt;homotopy equivalence&lt;/em&gt; in the sense of &lt;a href=&quot;https://arxiv.org/abs/2102.02848&quot;&gt;my paper&lt;/a&gt;
+\(\sigma\colon \mathbb{G} \to \mathcal{G}\)
+from a fixed graph of finite groups \(\mathbb{G}\).
+Two marked graphs of groups \(\tau = (\mathcal{G},\sigma)\) and \(\tau&apos; = (\mathcal{G}&apos;,\sigma&apos;)\)
+are &lt;em&gt;equivalent&lt;/em&gt; if there is an isomorphism of graphs of groups
+\(h \colon \mathcal{G} \to \mathcal{G}&apos;\) such that \(h\sigma\) is homotopic to \(\sigma&apos;\).
+There is also a notion of &lt;em&gt;forest collapse&lt;/em&gt; in graphs of groups,
+which partially orders the set of equivalence classes of marked graphs of groups.
+A marked graph of groups \(\tau = (\mathcal{G},\sigma)\) is &lt;em&gt;reduced&lt;/em&gt; if it is minimal in this partial order.
+The complex \(L(F)\) is the geometric realization of this poset.
+We will adopt the graphs of groups language in this post.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-norm&quot;&gt;The norm&lt;/h2&gt;
+
+&lt;p&gt;Let \(\tau = (\mathcal{G},\sigma)\) be a marked graph of groups in \(L(F)\),
+and let \(W\) be a finite set of infinite order elements of \(F\).
+These elements are hyperbolic in some and hence every tree action in \(L(F)\),
+so we may measure \(\ell(w)\), their hyperbolic translation length,
+and we define a &lt;em&gt;norm&lt;/em&gt; on \(\tau\) as&lt;/p&gt;
+
+\[\|\tau\| = \sum_{w \in W} \ell(w).\]
+
+&lt;p&gt;We can represent each conjugacy class \(\sigma_\sharp(w)\) in \(\pi_1(\mathcal{G})\)
+as a cyclically reduced graph-of-groups &lt;em&gt;edge path&lt;/em&gt;&lt;/p&gt;
+
+\[\gamma_w = g_0e_1g_1\ldots e_kg_k.\]
+
+&lt;p&gt;We have \(\ell(w) = k\), the number of edges in \(\gamma_w\).
+Recall that for each vertex \(v\) of \(\mathcal{G}\) we have the set of &lt;em&gt;directions at \(v\)&lt;/em&gt;&lt;/p&gt;
+
+\[D_v = \coprod_{e\in\operatorname{st}(v)} \mathcal{G}_v/\iota_e(\mathcal{G}_e) \times \{e\}.\]
+
+&lt;p&gt;There is an obvious left action of \(\mathcal{G}_v\) on \(D_v\)
+which descends to an action on the set of pairs of directions at \(v\).
+A &lt;em&gt;turn&lt;/em&gt; is an orbit under this action.
+A turn is &lt;em&gt;degenerate&lt;/em&gt; if every pair of directions representing it are identical
+and is &lt;em&gt;nondegenerate&lt;/em&gt; otherwise.
+The vertex group elements of the path \(\gamma_w\) are not quite well-defined
+if the edge groups of \(\mathcal{G}\) are nontrivial,
+but the &lt;em&gt;turns&lt;/em&gt; \([\{(\iota_{\bar e_i}(\mathcal{G}_{\bar e_i}),\bar e_i),
+(g_i\iota_{e_{i+1}}(\mathcal{G}_{e_{i+1}}),e_{i+1})\}]\)
+for \(1 \le i \le k-1\) and \([\{(g_k^{-1}\iota_{\bar e_k}(\mathcal{G}_{e_k}),e_k),
+(g_0\iota_{e_1}(\mathcal{G}_{e_1}),e_1)\}]\)
+are well-defined.
+We say that \(\gamma_w\) &lt;em&gt;crosses&lt;/em&gt; these turns, which are nondegenerate
+because \(\gamma_w\) is cyclically reduced.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-star-graph&quot;&gt;The star graph&lt;/h2&gt;
+
+&lt;p&gt;We define the &lt;em&gt;star graph&lt;/em&gt; of a marked graph of groups \(\tau = (\mathcal{G},\sigma)\)
+with respect to \(W\).
+Its vertex set is the union of the sets \(D_v\) as \(v\) varies over the vertices of \(\mathcal{G}\).
+For each turn crossed by some \(\gamma_w\),
+the star graph contains \(|\mathcal{G}_v|\) edges,
+each one connecting a pair of directions representing this turn.
+Since the turns crossed by \(\gamma_w\) are nondegenerate, the star graph contains no loop edges.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/stargraph.jpeg&quot; alt=&quot;A star graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above example we have&lt;/p&gt;
+
+\[F = C_4*_{C_2} C_4 * C_3 = \langle s, t, u \mid s^4 = t^4 = u^3 = 1,\ s^2 = t^2 \rangle,\]
+
+&lt;p&gt;and the marked graph of groups \(\tau = (\mathcal{G},\sigma)\) is the “obvious”
+graph of groups presentation of \(F\).
+There are three vertices with vertex groups \(\langle s\rangle\),
+\(\langle t\rangle\) and \(\langle u\rangle\).
+There are two edges \(a\) and \(b\).
+The vertex \(v\) with vertex group \(\langle t\rangle\) has valence two;
+both \(a\) and \(b\) are incident to it in the positive orientation.
+The edge \(a\) connects \(v\) to the vertex with vertex group \(\langle s\rangle\)
+and has \(C_2\) edge group, while \(b\) has trivial edge group.
+The set \(W\) is the singleton \(\{stu^2t^2\}\).
+The star graph of of \(\tau\) with respect to \(W\)
+has eleven vertices.
+The component corresponding to \(\langle s\rangle\) has two vertices,
+and there are four edges corresponding to the turns in the orbit 
+\([\{(\langle s^2\rangle,\bar a),(s\langle s^2\rangle,\bar a)\}]\).
+The component corresponding to \(\langle u\rangle\) has three vertices,
+and there are three edges corresponding to the turns in the orbit
+\([\{(1,\bar b),(u^2,\bar b)\}]\).
+The component corresponding to the vertex \(v\) has six vertices,
+two for directions with underlying oriented edge \(a\) and two with underlying oriented edge \(b\).
+This subgraph of the star graph is complete bipartite
+corresponding to the turns in the orbits
+\([\{(\langle t^2\rangle,a),(t,b)\}]\) and \([\{(1,b),(\langle t^2\rangle,a)\}]\).&lt;/p&gt;
+
+&lt;p&gt;We can compute the norm of \(\tau\) from the star graph by summing up&lt;/p&gt;
+
+\[\|\tau\| = \frac{1}{2}\sum_{v \in \mathcal{G}}\sum_{d \in D_v} 
+\frac{\operatorname{valence}(d)}{|\mathcal{G}_v|}.\]
+
+&lt;p&gt;So in this example we see that we have \(\|\tau\| = 4\).&lt;/p&gt;
+
+&lt;h2 id=&quot;dot-product-and-absolute-value&quot;&gt;Dot product and absolute value&lt;/h2&gt;
+
+&lt;p&gt;Following Culler and Vogtmann,
+given subsets \(S\) and \(T\) of the vertex set of a graph,
+define the &lt;em&gt;dot product&lt;/em&gt; \(S\cdot T\) to be the number of (unoriented) edges in the graph
+with one vertex in \(S\) and the other in \(T\).
+The &lt;em&gt;absolute value&lt;/em&gt; \(|S|\) of \(S\)  is the dot product of \(S\) with its complement.
+An &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;&lt;em&gt;ideal edge&lt;/em&gt;&lt;/a&gt; \(\alpha\) is in particular a subset of the vertex set of the star graph,
+so we may compute \(|\alpha|\).
+If \(\alpha&apos; = g.\alpha\) under the action of \(\mathcal{G}_v\) on \(D_v\),
+then \(|\alpha| = |\alpha&apos;|\).
+Similarly a direction \(d \in D_v\) is a singleton subset of the vertex set of the star graph
+and we may compute \(|d| = |\{d\}|\).
+If \(d&apos; = g.d\), then \(|d| = |d&apos;|\).
+Put another way, the absolute value of \(d\) is a property of the underlying oriented edge \(e\)
+and we may sometimes write \(|e|\) for \(|d|\).&lt;/p&gt;
+
+&lt;p&gt;In the above example, the ideal edge \(\alpha = \{(\langle t^2\rangle,a),(t,b),(t^3,b)\}\)
+has absolute value \(|\alpha| = 4\),
+while the direction \(d = (\langle t^2\rangle,a)\) also has absolute value \(4\).
+Both \(d\) and \(\alpha\) have edge group isomorphic to \(C_2\),
+so we have&lt;/p&gt;
+
+\[\frac{|d|}{|\mathcal{G}_a|} = \frac{|\alpha|}{|\mathcal{G}_\alpha|} = 2.\]
+
+&lt;p&gt;If we blow up the ideal edge \(\alpha\) obtaining \(\tau^\alpha = (\mathcal{G}^\alpha,\sigma^\alpha)\),
+the original \(\gamma_w\) was \(as\bar atb u^2\bar b t^2\) and
+the new \(\gamma_w\) is \(as\bar ab tu^2t^{-1}\bar b \bar\alpha t\alpha t^2\),
+which has \(2\) more edges.
+If we then collapse the collapsible edge \(a\) corresponding to the direction \(d \in D(\alpha)\)
+to obtain \(\tau^\alpha_a\),
+the new \(\gamma_w\) is \(sbtu^2t^{-1}\bar b\bar\alpha t\alpha s^2\),
+which has \(2\) fewer edges.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blowupanddown.jpeg&quot; alt=&quot;The marked graphs of groups obtained by blowing up and then collapsing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This illustrates a general principal:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proposition&lt;/strong&gt; (Krstić–Vogtmann). If \(\Phi = \{\alpha_1,\ldots,\alpha_k\}\)
+is a set of pairwise compatible ideal edges in a reduced marked graph of groups \(\tau = (\mathcal{G},\sigma)\)
+and \(\{e_1,\ldots,e_k\}\) are a set of oriented edges in \(\mathcal{G}\) which form a forest in
+\(\tau^{\alpha_1,\ldots,\alpha_k}\), we have&lt;/p&gt;
+
+\[\|\tau^{\alpha_1,\ldots,\alpha_k}_{e_1,\ldots,e_k}\| = \|\tau\| 
++ \sum_{i=1}^k \frac{|\alpha_i|}{|\mathcal{G}_{\alpha_i}|} - \sum_{i=1}^k \frac{|e_i|}{|\mathcal{G}_{e_i}|}.\]
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;star&lt;/em&gt; of a reduced marked graph of groups \(\tau\) is the set of marked graphs of groups \(\tau&apos;\)
+which collapse onto \(\tau\).
+The &lt;em&gt;ball of radius \(r\)&lt;/em&gt; is the union of the stars of reduced marked graphs of groups \(\tau\)
+with \(\|\tau\| \le r\).
+What Krstić–Vogtmann show is that 
+as long as the ball of radius \(r&apos; &amp;lt; r\) is nonempty,
+the ball of radius \(r\) deformation retracts onto the ball of radius \(r&apos;\).
+They show that for well-chosen \(W\), there is a single reduced marked graph of groups
+of minimal norm, thus proving that \(L\) is contractible.
+To do both of these steps, they make extensive use of the star graph to analyze
+the effect of blowing up and collapsing edges in marked graphs of groups.&lt;/p&gt;</content><author><name></name></author><summary type="html">In an earlier post we introduced the concept of an ideal edge in a graph of groups and described how to blow up ideal edges to construct new graphs of groups. To prove that (the reduced spine of) Outer Space for a virtually free group is contractible, Krstić and Vogtmann define what is essentially a combinatorial analogue of a non-singular Morse function on Outer Space and show that for well-chosen function, the set of minimal vertices of the complex is actually the star of a single reduced marked graph of groups, which is contractible. A key tool to that end is the star graph, and the purpose of this post is to describe the star graph (for conjugacy classes) in a virtually free group and describe its usefulness.</summary></entry><entry><title type="html">A Virtually Free Observation</title><link href="http://localhost:4000/2022/03/29/A-virtually-free-observation.html" rel="alternate" type="text/html" title="A Virtually Free Observation" /><published>2022-03-29T00:00:00-04:00</published><updated>2022-03-29T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/29/A-virtually-free-observation</id><content type="html" xml:base="http://localhost:4000/2022/03/29/A-virtually-free-observation.html">&lt;p&gt;&lt;a href=&quot;https://www.ams.org/journals/tran/1997-349-11/S0002-9947-97-01699-1/S0002-9947-97-01699-1.pdf&quot;&gt;Martin Pettet&lt;/a&gt; characterized which virtually free groups
+have finite outer automorphism group.
+&lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;Krstić and Vogtmann&lt;/a&gt; studied what I’ll call
+the “spine of reduced Outer Space” for a virtually free group
+and gave a formula for computing its dimension.
+I want to point out that the dimension of this complex can be arbitrarily big
+even when the virtually free group has finite outer automorphism group,
+so this post will be given to understanding a particular example.&lt;/p&gt;
+
+&lt;p&gt;Pettet’s full conditions are somewhat technical.
+Recall that a theorem of Karrass, Pietrowski and Solitar
+characterizes the finitely generated virtually free groups
+as those groups which are the fundamental group of a finite graph of finite groups.
+To get a clean statement about those virtually free groups \(G\)
+for which \(\operatorname{Out}(G)\) is finite,
+Pettet needs to allow valence-one vertices of the corresponding graph of groups to have
+finite-by-(infinite cyclic) vertex groups.
+It should be possible to translate his statement into a statement
+purely about graphs of finite groups,
+where certain “lollipop” subgraphs are allowed special behavior
+but I haven’t thought enough about how to go about doing that.&lt;/p&gt;
+
+&lt;p&gt;We’ll restrict ourselves to finite trees of finite groups \(\mathcal{G}\).
+In Pettet’s language, such a graph of groups \(\mathcal{G}\) is &lt;em&gt;irreducible&lt;/em&gt;
+if no edge-to-vertex group inclusion is surjective.
+In the language we have been developing over the past couple posts,
+I would prefer to say that \(\mathcal{G}\) is &lt;em&gt;reduced,&lt;/em&gt;
+since it is not possible to collapse an edge of \(\mathcal{G}\)
+without either changing the fundamental group of the graph of groups 
+or introducing an infinite vertex group.
+The following is a sufficient (but not necessary) condition for \(\operatorname{Out}(\pi_1(\mathcal{G}))\)
+to be finite.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each oriented edge \(e \in \mathcal{G}\),
+the normalizer of \(\iota_e(\mathcal{G}_e)\) in \(\pi_1(\mathcal{G})\) is finite.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The graph of groups I have in mind is the following:
+the underlying graph is a tree with \(n-1\) leaves and only one non-leaf vertex.
+The vertex groups are all the symmetric group on 3 letters, \(S_3\),
+and the edge groups are all cyclic of order 2.
+The fundamental group of this graph of groups 
+is the amalgamated free product of \(n\) copies of \(S_3\) with a cyclic  group of order 2 amalgamated,
+so has presentation&lt;/p&gt;
+
+\[\langle a_1,\ldots, a_n,t : a_1^3 = \cdots = a_n^3 = t^2 = 1,\ ta_it^{-1} = a_i^{-1} \rangle.\]
+
+&lt;p&gt;In terms of this presentation, each \(\iota_e(\mathcal{G}_e)\) is the cyclic group \(\langle t\rangle\).
+This subgroup is its own normalizer in \(\pi_1(\mathcal{G})\).
+Perhaps the easiest way to see this is to note that the fixed-point set of \(t\)
+on the Bass–Serre tree of \(\mathcal{G}\) is finite:
+it includes one whole fundamental domain of the action but can go no further.
+Since the normalizer preserves the fixed-point set, it must be finite.
+Therefore the sufficient condition of Pettet mentioned above applies,
+and we conclude \(\operatorname{Out}(\pi_1(\mathcal{G}))\) is finite.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, \(\mathcal{G}\) contains &lt;em&gt;ideal edges&lt;/em&gt; in the sense of the previous post.
+The idea is that given any subset (including all) 
+of the \(n-1\) oriented edges incident to the center vertex,
+we can create a new graph of groups by pulling those edges away from the center vertex
+and attach them to a new vertex whose vertex group will be cyclic of order 2.
+Nothing prevents us from continuing this process
+until the resulting graph of groups \(\mathcal{G}&apos;\)
+has all interior vertices trivalent with \(C_2\) vertex group,
+all leaf vertices with \(S_3\) vertex group,
+and all edge groups \(C_2\).
+At this stage, an Euler characteristic argument shows that \(\mathcal{G}&apos;\) has \(n-2\) vertices 
+with \(C_2\) vertex group,
+while \(\mathcal{G}\) had none.
+A chain of \(n-2\) edge collapses recovering \(\mathcal{G}\) from \(\mathcal{G}&apos;\)
+shows that the complex studied by Krstić and Vogtmann has dimension at least (and in fact equal to) \(n-2\).
+Thus  we have shown that Krstić and Vogtmann’s complex
+can overestimate the &lt;em&gt;virtual cohomological dimension&lt;/em&gt;
+of \(\operatorname{Out}(\pi_1(\mathcal{G}))\) by an arbitrary amount,
+since the virtual cohomological dimension of a finite group is zero.&lt;/p&gt;</content><author><name></name></author><summary type="html">Martin Pettet characterized which virtually free groups have finite outer automorphism group. Krstić and Vogtmann studied what I’ll call the “spine of reduced Outer Space” for a virtually free group and gave a formula for computing its dimension. I want to point out that the dimension of this complex can be arbitrarily big even when the virtually free group has finite outer automorphism group, so this post will be given to understanding a particular example.</summary></entry><entry><title type="html">Ideal Edges</title><link href="http://localhost:4000/2022/03/27/Ideal-edges.html" rel="alternate" type="text/html" title="Ideal Edges" /><published>2022-03-27T00:00:00-04:00</published><updated>2022-03-27T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/27/Ideal-edges</id><content type="html" xml:base="http://localhost:4000/2022/03/27/Ideal-edges.html">&lt;p&gt;Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\).
 In the &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;previous post&lt;/a&gt; we defined what it meant for an edge of \(T\) 
 to be &lt;em&gt;surviving&lt;/em&gt; or &lt;em&gt;collapsible.&lt;/em&gt;
 Collapsing orbits of collapsible edges in \(T\) yields
@@ -1025,175 +1283,4 @@ Then we have&lt;/p&gt;
 so no uniform choice of \(\delta\) makes the inequality
 \((x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta\) hold.
 The problem, roughly, is that the quasi-isometry condition cannot see the “kink” in the space \(X\),
-while the \(\delta\)-hyperbolicity condition, at least for this family of triangles, can.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry><entry><title type="html">The Farey Graph</title><link href="http://localhost:4000/2021/06/27/The-Farey-graph.html" rel="alternate" type="text/html" title="The Farey Graph" /><published>2021-06-27T00:00:00-04:00</published><updated>2021-06-27T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/27/The-Farey-graph</id><content type="html" xml:base="http://localhost:4000/2021/06/27/The-Farey-graph.html">&lt;p&gt;The Farey graph, or Farey diagram,
-is an object that appears in many guises throughout math.
-For me, it appears several times as a complex related to
-the outer automorphism group of a free group of rank two,
-but it has connections to things like continued fractions as well.
-The purpose of this post is introduce the Farey graph
-and prove a couple of basic properties of it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/FareyGraph.png&quot; alt=&quot;The first four layers of the Farey graph&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The Farey graph has as vertices all rational numbers
-expressed as fractions \(\frac{p}{q}\) in lowest terms with \(q \ge 0\),
-together with a vertex for \(\frac{1}{0}\).
-Two vertices \(\frac{a}{b}\) and \(\frac{c}{d}\) span an edge
-when the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d \end{pmatrix}\) has determinant \(\pm 1\).
-Above is a picture; thanks to StackExchange user &lt;a href=&quot;https://tex.stackexchange.com/a/165845/212812&quot;&gt;marchetto&lt;/a&gt;
-for the TikZ code for producing the Farey diagram, to which I mainly added numbers.
-I’d like to demonstrate that the visual properties of the Farey graph hold:
-namely, that every edge belongs to exactly two triangles,
-and that edges do not cross.&lt;/p&gt;
-
-&lt;h2 id=&quot;edges-belong-to-two-triangles&quot;&gt;Edges belong to two triangles&lt;/h2&gt;
-
-&lt;p&gt;In this section we will show that every edge of the Farey graph belongs to two triangles.
-The key tool will be a lemma I learned from
-&lt;a href=&quot;http://pi.math.cornell.edu/~hatcher/TN/TNch1.pdf&quot;&gt;Allen Hatcher’s &lt;em&gt;Topology of Numbers&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; Suppose \(a\) and \(b\) are integers with no common divisor.
-If one integral solution of \(ay - bx = n\) is \((x,y) = (c,d)\),
-then the general integral solution is \((x,y) = (c + ka, d + kb)\) for integer \(k\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Consider a general solution \((x,y)\).
-Given our known solution \((c,d)\), we see that \(a(y-d) - b(x -c) = n - n = 0\).
-Since \(a\) and \(b\) have no common factors, it follows that \(a\) divides \(x-c\) and \(b\) divides \(y-d\).
-In fact, we have \(a(y-d) = abk = b(x-c)\), from which the result follows. \(\blacksquare\)&lt;/p&gt;
-
-&lt;p&gt;A variant on the proof shows that if \(ac - bd = -n\), then the general integral solution for
-\(ax - by = n\) is \((ka - c,kb - d)\).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Proposition.&lt;/strong&gt; Suppose that \(\frac ab\) and \(\frac cd\) are in the Farey graph,
-and that \(ad &amp;gt; bc\). If \(\frac xy\) is adjacent to both \(\frac ab\) and \(\frac bc\),
-then \(\frac xy = \frac{a\pm c}{b\pm d}\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
-Suppose \(\frac ab\) and \(\frac cd\) are as in the statement.
-Now suppose \(\frac xy\) is adjacent to both \(\frac ab\) and \(\frac cd\).
-Suppose first for definiteness that \(ay - bx = 1\).
-By the lemma, we have that \((x,y) = (ka + c, kb + d)\) for some integer \(k\).
-By assumption, we have \(cy - dx = \pm 1\), so the lemma shows that \((x,y) = (\ell c \mp a,\ell d \mp b)\)
-for some integer \(\ell.\)
-Therefore we have \(a(k \pm 1) = (\ell - 1)c\) and \(b(k \pm 1) = (\ell-1)d\),
-from which it follows that \((k \pm 1)(\ell - 1)(ad - bc) = 0\).
-Therefore either \(k = \mp 1\) or \(\ell = 1\),
-both of which imply \((x,y) = (c \mp a,d \mp b)\).
-If instead we have \(ay-bx = -1\), then the conclusion is the same.
-We of course have \(\frac{c \mp a}{d \mp b} = \frac{a \pm c}{b \pm d}\). \(\blacksquare\)&lt;/p&gt;
-
-&lt;h2 id=&quot;the-action-of-operatornamesl_2mathbbz&quot;&gt;The action of \(\operatorname{SL}_2(\mathbb{Z})\)&lt;/h2&gt;
-
-&lt;p&gt;In this section we analyze the action of \(\operatorname{SL}_2(\mathbb{Z})\) on the Farey diagram,
-proving that it is transitive on edges and triangles.&lt;/p&gt;
-
-&lt;p&gt;First let us define the action of \(\operatorname{SL}_2(\mathbb{Z})\) on the Farey diagram.
-The action of \(\operatorname{SL}_2(\mathbb{Z})\) on \(\mathbb{Z}^2\)
-restricts to an action on the vertex set of the Farey diagram.
-Indeed, \(a\) and \(b\) are relatively prime if and only if there exists integers \(x\) and \(y\)
-such that \(ax + by = 1\)
-if and only if \((a,b)\) is the first column of a matrix in \(\operatorname{SL}_2(\mathbb{Z})\)
-if and only if there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) taking \((1,0)\) to \((a,b)\).
-In terms of fractions, if \(z = \frac{p}{q}\) is a vertex of the Farey diagram,
-then the action of \(\begin{pmatrix} a &amp;amp; b \\ c &amp;amp; d \end{pmatrix}\) sends \(z\) to&lt;/p&gt;
-
-\[\frac{az + b}{cz + d} = \frac{ap + bq}{cp + dq}.\]
-
-&lt;p&gt;This action preserves adjacency: the reader is encouraged to figure out why.
-Indeed, the action is transitive on edges:
-can you show that if \(\frac ab\) and \(\frac cd\) are adjacent in the diagram,
-there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) sending the edge between \(\frac 01\) and \(\frac 10\)
-to the edge between \(\frac ab\) and \(\frac cd\)?&lt;/p&gt;
-
-&lt;p&gt;Finally, put a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cyclic_order&quot;&gt;cyclic order&lt;/a&gt; on the vertex set of the Farey diagram
-by taking the cyclic order induced by the linear order on \(\mathbb{Q} \cup \{\infty\}\).
-That is, given three distinct elements \(p\), \(q\) and \(r\) in \(\mathbb{Q}\cup\infty\),
-say \((p,q,r)\) is &lt;em&gt;cyclically ordered&lt;/em&gt; if
-\(a &amp;lt; b &amp;lt; c\) or \(b &amp;lt; c &amp;lt; a\) or \(c &amp;lt; a &amp;lt; b\) holds.
-For example \((\infty,-2,0)\) is cyclically ordered.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Proposition.&lt;/strong&gt; Suppose \(p\), \(q\) and \(r\) are the vertices of a triangle in the Farey diagram and that
-\((p,q,r)\) is cyclically ordered.
-Then there is an element of \(\operatorname{SL}_2(\mathbb{Z})\) sending \((0,1,\infty)\) to \((p,q,r)\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt;
-Suppose \(p = \frac cd\) and \(r = \frac ab\).
-Because \(p\) and \(r\) are adjacent in the Farey diagram,
-the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d \end{pmatrix}\) has determinant \(\pm 1\).&lt;/p&gt;
-
-&lt;p&gt;Assume first that \(ad-bc = 1\), i.e. that \(p &amp;lt; r\).
-Then the claim is that \(q = \frac{a+c}{b+d}\),
-which is the image of \(\frac 11\) under the matrix \(\begin{pmatrix} a &amp;amp; c \\ b &amp;amp; d\end{pmatrix}\).
-In other words, the claim is that \((p,\frac{a-c}{b-d},r)\) is not circularly ordered,
-for which we need to show that \(p&amp;lt;\frac{a-c}{b-d}&amp;lt;r\) is false.
-Assume first that \(b-d\) is nonnegative.
-Then \(ad &amp;gt; bc\) implies \(ab - ad &amp;lt; ab - bc\), which implies \(\frac ab &amp;lt; \frac{a-c}{b-d}\), and the claim follows.
-Next assume that \(b-d\) is negative.
-Then \(ad &amp;gt; bc\) implies that \(ad - dc &amp;gt; bc - dc\), which implies \(\frac{a-c}{b-d} &amp;lt; \frac cd\),
-and the claim follows (Note that we assume that \(d\) is nonnegative.)&lt;/p&gt;
-
-&lt;p&gt;Next assume that \(ad - bc = -1\), i.e. that \(r &amp;lt; p\).
-Then the claim is that \(q = \frac{a-c}{b-d}\),
-which is the image of \(\frac 11\) under the matrix \(\begin{pmatrix} a &amp;amp; - c \\ b &amp;amp; -d\end{pmatrix}\)
-in \(\operatorname{SL}_2(\mathbb{Z})\).
-In other words, the claim is that \((p,\frac{a+c}{b+d},r)\) is not circularly ordered,
-for which we need to show that it neither \(\frac{a+c}{b+d} &amp;lt; r &amp;lt; p\) nor \(r &amp;lt; p &amp;lt; \frac{a+c}{b+d}\) holds.
-In fact, \(ad &amp;lt; bc\) implies \(ab + bc &amp;gt; ab + ad\) holds, which implies \(\frac{a+c}{b+d} &amp;gt; \frac ab\).
-But, \(ad &amp;lt; bc\) implies that \(ad + dc &amp;lt; bc + dc\), which implies that \(\frac{a+c}{b+d} &amp;lt; \frac cd\),
-and the claim follows. \(\blacksquare\)&lt;/p&gt;
-
-&lt;p&gt;In fact, the proof above shows that the matrix in \(\operatorname{SL}_2(\mathbb{Z})\)
-is unique up to multiplication of all the entries by \(-1\).
-This corresponds to the matrix \(\begin{pmatrix} -1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{pmatrix}\),
-which generates the &lt;em&gt;center&lt;/em&gt; of \(\operatorname{SL}_2(\mathbb{Z})\).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; The stabilizer of a triangle is isomorphic to \(C_3 \times C_2 \cong C_6\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;An explicit generator for the cyclic group of order \(6\) stabilizing the triangle spanned by \((0,1,\infty)\)
-is \(\begin{pmatrix} 1 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}\).&lt;/p&gt;
-
-&lt;p&gt;The proposition also yields an element of \(\operatorname{SL}_2(\mathbb{Z})\) interchanging \(0\) and \(\infty\):
-this element is \(\begin{pmatrix} 0 &amp;amp; -1 \\ 1 &amp;amp; 0 \end{pmatrix}\).
-This element is unique up to multiplication by \(-1\) and has order \(4\), so we have proven the following.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Corollary.&lt;/strong&gt; The stabilizer of an edge is isomorphic to \(C_4\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;edges-do-not-cross&quot;&gt;Edges do not cross&lt;/h2&gt;
-
-&lt;p&gt;We finish this post by proving that edges of the Farey diagram do not cross,
-in the sense that if \(p\) and \(q\) are adjacent and \(r\) and \(s\) are adjacent
-and \(p\), \(q\), \(r\) and \(s\) are all distinct,
-then if \((p,r,q)\) is cyclically ordered, then \((p,s,q)\) is also cyclically ordered.
-By results in the previous section, we may assume \(p = 0\) and \(q = \infty\).
-That is, if \(r = \frac ab\) is positive and \(\frac cd\) is adjacent to \(\frac ab\),
-then \(\frac cd\) is also positive.
-By swapping the roles of \(r\) and \(s\) if necessary, we may assume that \(ad - bc = 1\).
-Since we assume that \(a\), \(b\), and \(d\) are positive integers, then we must have \(c \ge 0\)
-in order to satisfy \(ad -bc = 1\).&lt;/p&gt;</content><author><name></name></author><summary type="html">The Farey graph, or Farey diagram, is an object that appears in many guises throughout math. For me, it appears several times as a complex related to the outer automorphism group of a free group of rank two, but it has connections to things like continued fractions as well. The purpose of this post is introduce the Farey graph and prove a couple of basic properties of it.</summary></entry><entry><title type="html">Geometric Group Theory Without Boundaries</title><link href="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html" rel="alternate" type="text/html" title="Geometric Group Theory Without Boundaries" /><published>2021-06-21T00:00:00-04:00</published><updated>2021-06-21T00:00:00-04:00</updated><id>http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries</id><content type="html" xml:base="http://localhost:4000/2021/06/21/Geometric-group-theory-without-boundaries.html">&lt;p&gt;Along with &lt;a href=&quot;https://www.dpmms.cam.ac.uk/~mcr59/&quot;&gt;Macarena Arenas&lt;/a&gt;, &lt;a href=&quot;https://www.math.mcgill.ca/sdouba/&quot;&gt;Sami Douba&lt;/a&gt; and &lt;a href=&quot;https://mast.queensu.ca/~abdul/&quot;&gt;Abdul Zalloum&lt;/a&gt;,
-I am organizing a virtual “summer school” that began today and will run until July 2.
-More info is available on the &lt;a href=&quot;https://sites.google.com/view/ggtwbii/&quot;&gt;summer school website&lt;/a&gt;.
-This is the second iteration of the summer school!
-I spoke in the first iteration; the purpose of this post is to house links to the notes,
-recordings and exercises for the mini-course I gave.&lt;/p&gt;
-
-&lt;p&gt;I gave three lectures in this summer school on Bass and Serre’s theory
-of graphs of groups and groups acting on trees.&lt;/p&gt;
-
-&lt;p&gt;Here are notes (with the annotations I added live)
-for the lectures, as well as links to recordings of the lectures.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Lecture 1 &lt;a href=&quot;/assets/pdfs/GGTWB1.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB1.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=6-x5g2p0u3s&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Lecture 2 &lt;a href=&quot;/assets/pdfs/GGTWB2.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB2.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=opilmxidthY&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Lecture 3 &lt;a href=&quot;/assets/pdfs/GGTWB3.pdf&quot;&gt;PDF&lt;/a&gt;, &lt;a href=&quot;/assets/pdfs/GGTWB3.note&quot;&gt;Notability&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=LVPoa7sgMnc&quot;&gt;YouTube&lt;/a&gt;.
-&lt;a href=&quot;/assets/pdfs/GGTWBexercises.pdf&quot;&gt;Here&lt;/a&gt; are some suggested exercises.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Along with Macarena Arenas, Sami Douba and Abdul Zalloum, I am organizing a virtual “summer school” that began today and will run until July 2. More info is available on the summer school website. This is the second iteration of the summer school! I spoke in the first iteration; the purpose of this post is to house links to the notes, recordings and exercises for the mini-course I gave.</summary></entry></feed>
+while the \(\delta\)-hyperbolicity condition, at least for this family of triangles, can.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry></feed>

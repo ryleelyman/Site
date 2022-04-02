@@ -1552,6 +1552,7 @@ An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom
 Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Background on graphs of groups$/;"	s
 Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
 Blowing up ideal edges	_posts/2022-03-27-Ideal-edges.md	/^## Blowing up ideal edges$/;"	s
+Blowing up ideal edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="blowing-up-ideal-edges">Blowing up ideal edges<\/h2>$/;"	i
 Boundaries Of Free Splittings	_site/2021/07/25/Boundaries-of-free-splittings.html	/^      <h1>Boundaries Of Free Splittings<\/h1>$/;"	h
 Boundaries Of Free Splittings	_site/blog.html	/^    <h2><a href="\/2021\/07\/25\/Boundaries-of-free-splittings.html">Boundaries Of Free Splittin/;"	i
 CAT(0) Free-by-Cyclic Groups	_posts/2019-09-06-Choo-Choo.md	/^### CAT(0) Free-by-Cyclic Groups$/;"	S	section:math: true
@@ -1564,6 +1565,8 @@ Category Theory Day One	_site/blog.html	/^    <h2><a href="\/2020\/02\/16\/Categ
 Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
 Directions	_posts/2022-03-27-Ideal-edges.md	/^## Directions$/;"	s
+Directions	_site/2022/03/27/Ideal-edges.html	/^<h2 id="directions">Directions<\/h2>$/;"	i
+Dot product and absolute value	_posts/2022-04-02-The-star-graph.md	/^## Dot product and absolute value$/;"	s
 Edges belong to two triangles	_posts/2021-06-27-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
 Edges belong to two triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	i
 Edges do not cross	_posts/2021-06-27-The-Farey-graph.md	/^## Edges do not cross$/;"	s
@@ -1592,7 +1595,10 @@ Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/2021/07/01/Gromov-hyperbo
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/blog.html	/^    <h2><a href="\/2021\/07\/01\/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">Gromov H/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
+Ideal Edges	_site/2022/03/27/Ideal-edges.html	/^      <h1>Ideal Edges<\/h1>$/;"	h
+Ideal Edges	_site/blog.html	/^    <h2><a href="\/2022\/03\/27\/Ideal-edges.html">Ideal Edges<\/a><\/h2>$/;"	i
 Ideal edges	_posts/2022-03-27-Ideal-edges.md	/^## Ideal edges$/;"	s
+Ideal edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="ideal-edges">Ideal edges<\/h2>$/;"	i
 Laminations	_posts/2021-12-29-More-on-Free-Splittings.md	/^## Laminations$/;"	s
 Laminations	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="laminations">Laminations<\/h2>$/;"	i
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
@@ -1622,6 +1628,7 @@ Outreach	outreach.md	/^# Outreach$/;"	c
 Outreach	service.md	/^# Outreach$/;"	c
 PhD Candidate	assets/text/bio.md	/^#### PhD Candidate  $/;"	t	section:---
 Properties of the tree in the quotient	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## Properties of the tree in the quotient$/;"	s
+Properties of the tree in the quotient	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="properties-of-the-tree-in-the-quotient">Properties of the tree in the quotient<\/h2>$/;"	i
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Publications and Preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	i
 Pullbacks And Intersections	_site/2021/06/17/Pullbacks-and-Intersections.html	/^      <h1>Pullbacks And Intersections<\/h1>$/;"	h
@@ -1633,6 +1640,9 @@ Rutgers University	teaching.md	/^## Rutgers University$/;"	s	chapter:Teaching
 Sheaves	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## Sheaves$/;"	s
 Sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	i
 Shelters	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## Shelters$/;"	s
+Shelters	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="shelters">Shelters<\/h2>$/;"	i
+Shelters In Graphs Of Groups	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^      <h1>Shelters In Graphs Of Groups<\/h1>$/;"	h
+Shelters In Graphs Of Groups	_site/blog.html	/^    <h2><a href="\/2022\/03\/26\/Shelters-in-graphs-of-groups.html">Shelters In Graphs Of Groups/;"	i
 Surface groups act freely on real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Surface groups act freely on real trees$/;"	s
 Surface groups act freely on real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="surface-groups-act-freely-on-real-trees">Surface groups act freely on real trees<\/h2>$/;"	i
 Teaching	_site/teaching.html	/^      <h1 id="teaching">Teaching<\/h1>$/;"	h
@@ -1673,9 +1683,13 @@ The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-27-The-Farey-
 The action of \\(\\operatorname{SL}_2(\\mathbb{Z})\\)	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	i
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
+The norm	_posts/2022-04-02-The-star-graph.md	/^## The norm$/;"	s
 The observer's topology	_posts/2021-12-29-More-on-Free-Splittings.md	/^## The observer's topology$/;"	s
 The observer’s topology	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-observers-topology">The observer’s topology<\/h2>$/;"	i
 The quotient graph of groups	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## The quotient graph of groups$/;"	s
+The quotient graph of groups	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="the-quotient-graph-of-groups">The quotient graph of groups<\/h2>$/;"	i
+The reduced spine of Outer Space	_posts/2022-04-02-The-star-graph.md	/^## The reduced spine of Outer Space$/;"	s
+The star graph	_posts/2022-04-02-The-star-graph.md	/^## The star graph$/;"	s
 The theorem and the counterexample	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^## The theorem and the counterexample$/;"	s
 The theorem and the counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
@@ -1687,6 +1701,7 @@ Tufts University	_site/teaching.html	/^<h2 id="tufts-university">Tufts Universit
 Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
+Wrapping up	_posts/2022-04-02-The-star-graph.md	/^## Wrapping up$/;"	s
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
@@ -1709,6 +1724,7 @@ b	_site/assets/css/style.css	/^b, strong { font-weight: bolder; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: inherit; }$/;"	s
 background-on-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	I
 blockquote	_site/assets/css/style.css	/^blockquote { margin: 0; }$/;"	s
+blowing-up-ideal-edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="blowing-up-ideal-edges">Blowing up ideal edges<\/h2>$/;"	I
 body	_site/assets/css/style.css	/^body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,/;"	s
 body	_site/assets/css/style.css	/^body { margin: 0; }$/;"	s
 body	_site/assets/css/styles.css	/^body { max-width: calc(var(--measure) * 1.5); background-color: var(--darkbg); margin: 0 auto; f/;"	s
@@ -1730,6 +1746,7 @@ details	_site/assets/css/style.css	/^article, aside, details, figcaption, figure
 details summary	_site/assets/css/style.css	/^details summary { cursor: pointer; }$/;"	s
 details:not([open] ) > *:not(summary)	_site/assets/css/style.css	/^details:not([open]) > *:not(summary) { display: none !important; }$/;"	s
 dfn	_site/assets/css/style.css	/^dfn { font-style: italic; }$/;"	s
+directions	_site/2022/03/27/Ideal-edges.html	/^<h2 id="directions">Directions<\/h2>$/;"	I
 div	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 edges-belong-to-two-triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	I
 edges-do-not-cross	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-do-not-cross">Edges do not cross<\/h2>$/;"	I
@@ -1777,6 +1794,7 @@ hr::before	_site/assets/css/style.css	/^hr::before, .rule::before { display: tab
 html	_site/assets/css/style.css	/^html { font-family: sans-serif; \/* 1 *\/ -ms-text-size-adjust: 100%; \/* 2 *\/ -webkit-text-siz/;"	s
 html	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 html[type="button"]	_site/assets/css/style.css	/^button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; \/* /;"	s
+ideal-edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="ideal-edges">Ideal edges<\/h2>$/;"	I
 img	_site/assets/css/style.css	/^img { border-style: none; }$/;"	s
 input	_site/assets/css/style.css	/^button, input { \/* 1 *\/ overflow: visible; }$/;"	s
 input	_site/assets/css/style.css	/^button, input, select, textarea { font: inherit; \/* 1 *\/ margin: 0; \/* 2 *\/ }$/;"	s
@@ -1811,6 +1829,8 @@ math: true	_posts/2021-12-29-More-on-Free-Splittings.md	/^math: true$/;"	s
 math: true	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^math: true$/;"	s
 math: true	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^math: true$/;"	s
 math: true	_posts/2022-03-27-Ideal-edges.md	/^math: true$/;"	s
+math: true	_posts/2022-03-29-A-virtually-free-observation.md	/^math: true$/;"	s
+math: true	_posts/2022-04-02-The-star-graph.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I
@@ -1836,6 +1856,7 @@ pre	_site/assets/css/style.css	/^code, kbd, pre, samp { font-family: monospace, 
 pre	_site/assets/css/style.css	/^pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, "Liberation Mono/;"	s
 progress	_site/assets/css/style.css	/^audio, canvas, progress, video { display: inline-block; }$/;"	s
 progress	_site/assets/css/style.css	/^progress { vertical-align: baseline; }$/;"	s
+properties-of-the-tree-in-the-quotient	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="properties-of-the-tree-in-the-quotient">Properties of the tree in the quotient<\/h2>$/;"	I
 publications-and-preprints	_site/Research.html	/^<h2 id="publications-and-preprints">Publications and Preprints<\/h2>$/;"	I
 published: true	_posts/2019-06-22-Hello-World.md	/^published: true$/;"	s
 published: true	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^published: true$/;"	s
@@ -1852,6 +1873,7 @@ select	_site/assets/css/style.css	/^button, input, select, textarea { font: inhe
 select	_site/assets/css/style.css	/^button, select { \/* 1 *\/ text-transform: none; }$/;"	s
 select	_site/assets/css/style.css	/^input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit/;"	s
 sheaves	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="sheaves">Sheaves<\/h2>$/;"	I
+shelters	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="shelters">Shelters<\/h2>$/;"	I
 small	_site/assets/css/style.css	/^small { font-size: 80%; }$/;"	s
 small	_site/assets/css/style.css	/^small { font-size: 90%; }$/;"	s
 strong	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
@@ -1885,6 +1907,7 @@ the-gromov-boundary-of-t	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<
 the-gromov-boundary-of-t	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-gromov-boundary-of-t">The Gromov boundary of \\(T\\)<\/h2>$/;"	I
 the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
 the-observers-topology	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-observers-topology">The observer’s topology<\/h2>$/;"	I
+the-quotient-graph-of-groups	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="the-quotient-graph-of-groups">The quotient graph of groups<\/h2>$/;"	I
 the-theorem-and-the-counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	I
 the-unit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-unit-of-the-adjunction">The Unit of the Adjunction<\/h3>$/;"	I
 the-usual-cotangent-space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^<h2 id="the-usual-cotangent-space">The Usual Cotangent Space<\/h2>$/;"	I

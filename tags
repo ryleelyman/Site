@@ -1566,6 +1566,7 @@ Choo Choo	_site/2019/09/06/Choo-Choo.html	/^      <h1>Choo Choo<\/h1>$/;"	h
 Choo Choo	_site/blog.html	/^    <h2><a href="\/2019\/09\/06\/Choo-Choo.html">Choo Choo<\/a><\/h2>$/;"	i
 Directions	_posts/2022-03-27-Ideal-edges.md	/^## Directions$/;"	s
 Directions	_site/2022/03/27/Ideal-edges.html	/^<h2 id="directions">Directions<\/h2>$/;"	i
+Dot product and absolute value	_posts/2022-04-02-The-star-graph.md	/^## Dot product and absolute value$/;"	s
 Edges belong to two triangles	_posts/2021-06-27-The-Farey-graph.md	/^## Edges belong to two triangles$/;"	s
 Edges belong to two triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	i
 Edges do not cross	_posts/2021-06-27-The-Farey-graph.md	/^## Edges do not cross$/;"	s
@@ -1682,10 +1683,13 @@ The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-27-The-Farey-
 The action of \\(\\operatorname{SL}_2(\\mathbb{Z})\\)	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	i
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
+The norm	_posts/2022-04-02-The-star-graph.md	/^## The norm$/;"	s
 The observer's topology	_posts/2021-12-29-More-on-Free-Splittings.md	/^## The observer's topology$/;"	s
 The observer’s topology	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-observers-topology">The observer’s topology<\/h2>$/;"	i
 The quotient graph of groups	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^## The quotient graph of groups$/;"	s
 The quotient graph of groups	_site/2022/03/26/Shelters-in-graphs-of-groups.html	/^<h2 id="the-quotient-graph-of-groups">The quotient graph of groups<\/h2>$/;"	i
+The reduced spine of Outer Space	_posts/2022-04-02-The-star-graph.md	/^## The reduced spine of Outer Space$/;"	s
+The star graph	_posts/2022-04-02-The-star-graph.md	/^## The star graph$/;"	s
 The theorem and the counterexample	_posts/2021-07-01-Gromov-hyperbolicity-for-arbitrary-metric-spaces.md	/^## The theorem and the counterexample$/;"	s
 The theorem and the counterexample	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^<h2 id="the-theorem-and-the-counterexample">The theorem and the counterexample<\/h2>$/;"	i
 Train Tracks	_posts/2019-09-06-Choo-Choo.md	/^### Train Tracks$/;"	S	section:math: true
@@ -1697,6 +1701,7 @@ Tufts University	_site/teaching.html	/^<h2 id="tufts-university">Tufts Universit
 Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
+Wrapping up	_posts/2022-04-02-The-star-graph.md	/^## Wrapping up$/;"	s
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
 a	_site/assets/css/style.css	/^a { color: #0366d6; text-decoration: none; }$/;"	s
 a	_site/assets/css/styles.css	/^a { text-decoration: none; color: var(--brightfg); font-family: var(--sans); font-weight: bold; /;"	s
@@ -1825,6 +1830,7 @@ math: true	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^math:
 math: true	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^math: true$/;"	s
 math: true	_posts/2022-03-27-Ideal-edges.md	/^math: true$/;"	s
 math: true	_posts/2022-03-29-A-virtually-free-observation.md	/^math: true$/;"	s
+math: true	_posts/2022-04-02-The-star-graph.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I
