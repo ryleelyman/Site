@@ -82,7 +82,9 @@ and that if the map $$f\colon \Gamma \to R$$ factors through a graph $$\Theta$$,
 then the star graph of $$\Gamma$$ is a subgraph of the star graph of $$\Theta$$.
 Although we are working with a different notion of the star graph,
 the broad-strokes outline of the proof carries over to our graph of groups setting!
+If you'd like to know more, you can read the paper [here][Whitehead].
 
+[Whitehead]: {{ "assets/pdfs/Whitehead.pdf" | relative_url }}
 [BFH]: https://arxiv.org/abs/2009.10052
 [HeusenerWeidmann]: https://www.degruyter.com/document/doi/10.1515/jgth-2018-0118/html?lang=en
 [The Star Graph]: {% link _posts/2022-04-02-The-star-graph.md %}
