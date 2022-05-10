@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-10T14:07:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">The Star Graph</title><link href="http://localhost:4000/2022/04/02/The-star-graph.html" rel="alternate" type="text/html" title="The Star Graph" /><published>2022-04-02T00:00:00-04:00</published><updated>2022-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2022/04/02/The-star-graph</id><content type="html" xml:base="http://localhost:4000/2022/04/02/The-star-graph.html">&lt;p&gt;In an &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;earlier post&lt;/a&gt; we introduced the concept of an &lt;em&gt;ideal edge&lt;/em&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-10T15:14:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Cut Vertex Lemma</title><link href="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html" rel="alternate" type="text/html" title="A Cut Vertex Lemma" /><published>2022-05-10T00:00:00-04:00</published><updated>2022-05-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html">&lt;p&gt;Building on ideas from the previous post regarding the star graph,
+I wrote a short paper generalizing a classical lemma of Whitehead.
+The purpose of this post is to describe Whitehead’s lemma and my generalization.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;/2022/04/02/The-star-graph.html&quot;&gt;previous post&lt;/a&gt;, we met the star graph
+associated to a collection of conjugacy classes of elements
+of a virtually free group.
+It should be reasonably clear that one can extend
+the notion of a star graph to conjugacy classes of elements
+of a group that acts cocompactly on a tree.
+What is perhaps less obvious is that one can also extend this notion
+to convex-cocompact subgroups of groups acting on trees,
+where a subgroup is &lt;em&gt;convex-cocompact&lt;/em&gt; if it acts cocompactly on its minimal subtree.
+This generalization is due to &lt;a href=&quot;https://arxiv.org/abs/2009.10052&quot;&gt;Bestvina, Feighn and Handel&lt;/a&gt; in the case of free groups.&lt;/p&gt;
+
+&lt;p&gt;The idea is the following.
+A classical observation of Stallings says that 
+any finitely generated subgroup \(H\) of a free group \(G\)
+may be represented by an immersion of a finite graph \(\Gamma\) into a rose \(R\),
+that is a graph with one vertex \(w\) and \(n\) edges, where \(n\) is the rank of \(G\).
+The set of directions \(D_w\) is the set of oriented edges of \(R\).
+Cut each edge of \(\Gamma\) at its midpoint,
+observe that the half-edge left over crosses a direction of \(R\)
+and attach, in the star graph of \(\Gamma\),
+the half-edge to the vertex corresponding to the given direction in \(D_w\).
+Thus we get a bipartite graph with one vertex for each vertex of \(\Gamma\)
+and one vertex for each direction in \(D_w\).
+A pair of directions are connected by a path of length two in this star graph
+if and only if the corresponding &lt;a href=&quot;/2022/04/02/The-star-graph.html&quot;&gt;turn&lt;/a&gt; 
+is in the image of the map on turns associated to the immersion \(\Gamma \to R\).&lt;/p&gt;
+
+&lt;p&gt;This idea generalizes readily to \(G\) the fundamental group of a graph of groups \(\mathbb{G}\).
+A subgroup of \(G\) is convex-cocompact if and only if it may be represented as an immersion
+of a finite connected graph of groups \(f\colon \mathcal{G} \to \mathbb{G}\).
+The set of directions we have met before.
+Rather than snipping edges at midpoints in \(\mathcal{G}\),
+we essentially do this in the Bass–Serre tree.
+If \(v\) is a vertex of \(\mathcal{G}\) mapping to a vertex \(w\) in \(\mathbb{G}\),
+we attach \(|\mathbb{G}_w : f_v(\mathcal{G}_v)|\) copies of this &lt;em&gt;piece&lt;/em&gt;
+of the Bass–Serre tree,
+where the \(gf_v(\mathcal{G}_v)\) copy attaches an edge corresponding to a direction \(d\) in \(D_v\)
+to the vertex corresponding to the direction \(g.D_vf(d)\) in \(D_w\).&lt;/p&gt;
+
+&lt;p&gt;Suppose there exists \(\mathcal{G}&apos;\) a graph of groups with fundamental group \(G\) and one edge
+with the property that \(\mathcal{G}&apos;\) may be obtained from a graph of groups
+&lt;a href=&quot;/2022/01/06/From-free-splittings-to-graphs-of-groups.html&quot;&gt;homotopy equivalent&lt;/a&gt; to \(\mathbb{G}\) by collapsing edges.
+Anyway, say that a conjugacy class of an element or convex-cocompact subgroup of \(G\) is &lt;em&gt;simple&lt;/em&gt;
+if there is such a graph of groups \(\mathcal{G}&apos;\) with the property that our element or subgroup
+is conjugate into a vertex group in \(\mathcal{G}&apos;\).
+For free groups thought of as fundamental groups of ordinary graphs,
+it’s not hard to see that an element or finitely generated (hence convex-cocompact) subgroup
+is simple if and only if it is contained in a proper free factor of the free group.&lt;/p&gt;
+
+&lt;p&gt;The main result of my paper is that if we have a &lt;em&gt;jointly&lt;/em&gt; simple collection \(C\) of conjugacy classes
+of elements or convex-cocompact subgroups of \(G\)
+(i.e. the same \(\mathcal{G}&apos;\) works for all members of \(C\) at once)
+then the star graph of \(C\) is either disconnected or has a cut vertex.&lt;/p&gt;
+
+&lt;p&gt;“Ahh but Rylee,” you say astutely, paying far too much attention, “Isn’t the star graph already disconnected
+if \(\mathbb{G}\) has more than one vertex?”
+To which I have to concede that you are correct and explain my usage further.
+The star graph is a union of graphs \(\Gamma_w\) as \(w\) varies over the vertices of \(\mathbb{G}\),
+where \(\Gamma_w\) contains all the vertices corresponding to directions in \(D_w\).
+We say that the star graph is disconnected if some \(\Gamma_w\) is disconnected,
+and that it has a cut vertex if each \(\Gamma_w\) is connected and there is some direction \(d \in D_w\),
+the removal of which disconnects \(\Gamma_w\).&lt;/p&gt;
+
+&lt;p&gt;The proof is very much inspired by a paper of &lt;a href=&quot;https://www.degruyter.com/document/doi/10.1515/jgth-2018-0118/html?lang=en&quot;&gt;Heusener and Weidmann&lt;/a&gt;,
+which gives a proof of the classical Whitehead lemma for free groups using Stallings folds.
+The idea is that if a collection of conjugacy classes is simple,
+there is a graph which folds onto the rose with a single fold
+(their term is “almost rose”)
+in which these conjugacy classes may be read,
+in the sense that the immersion \(f\colon \Gamma \to R\) factors through the almost rose.
+They prove that (their version of) the star graph of an almost rose has a cut vertex
+and that if the map \(f\colon \Gamma \to R\) factors through a graph \(\Theta\),
+then the star graph of \(\Gamma\) is a subgraph of the star graph of \(\Theta\).
+Although we are working with a different notion of the star graph,
+the broad-strokes outline of the proof carries over to our graph of groups setting!&lt;/p&gt;</content><author><name></name></author><summary type="html">Building on ideas from the previous post regarding the star graph, I wrote a short paper generalizing a classical lemma of Whitehead. The purpose of this post is to describe Whitehead’s lemma and my generalization.</summary></entry><entry><title type="html">The Star Graph</title><link href="http://localhost:4000/2022/04/02/The-star-graph.html" rel="alternate" type="text/html" title="The Star Graph" /><published>2022-04-02T00:00:00-04:00</published><updated>2022-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2022/04/02/The-star-graph</id><content type="html" xml:base="http://localhost:4000/2022/04/02/The-star-graph.html">&lt;p&gt;In an &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;earlier post&lt;/a&gt; we introduced the concept of an &lt;em&gt;ideal edge&lt;/em&gt;
 in a graph of groups and described how to &lt;em&gt;blow up&lt;/em&gt; ideal edges
 to construct new graphs of groups.
 To prove that (the reduced spine of) Outer Space for a virtually free group
@@ -1175,112 +1253,4 @@ on the Bass–Serre tree for the graph of groups is acylindrical (in fact, you c
 satisfy the Farrell–Jones conjecture,
 the theorem above implies that irreducible high-dimensional graph manifold groups
 satisfy the Farrell–Jones conjecture!
-Not bad for no real work, eh?&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day I “proved” the Farrell–Jones conjecture for a family of groups. The word “proved” is in quotes because actually there was nothing to prove, I just happened to be primed to notice that all the conditions were already there. The purpose of this post is to tell you the story of how this came to be and give the sketch of the proof that requires zero input from me.</summary></entry><entry><title type="html">Gromov Hyperbolicity For Arbitrary Metric Spaces</title><link href="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html" rel="alternate" type="text/html" title="Gromov Hyperbolicity For Arbitrary Metric Spaces" /><published>2021-07-01T00:00:00-04:00</published><updated>2021-07-01T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces</id><content type="html" xml:base="http://localhost:4000/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">&lt;p&gt;Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces.
-However, it is only a quasi-isometry invariant for geodesic metric spaces.
-I learned this from a
-&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0723086905000113?via%3Dihub&quot;&gt;paper of Väisälä&lt;/a&gt;.
-The purpose of this post is to understand the counterexample he gives.
-I also define Gromov hyperbolicity and quasi-isometry in this post,
-which might make it useful for future reference.
-The reader already familiar with Gromov hyperbolicity and quasi-isometries
-might wish to skip ahead to the heading below.&lt;/p&gt;
-
-&lt;p&gt;Let \((X,d)\) be a metric space.
-We say that \(X\) is a &lt;em&gt;length space&lt;/em&gt; if the distance between any two points \(x\) and \(y\) in \(X\)
-is equal to the infimum of the length of a path joining them.
-A &lt;em&gt;geodesic&lt;/em&gt; in \(X\) is a path \(\gamma\colon [a,b] \to X\) from a closed interval \([a,b] \subset \mathbb{R}\)
-such that \(d(\gamma(s),\gamma(t)) = |s-t|\) for all \(s\) and \(t\) in the interval \([a,b]\).
-We say that \(X\) is a &lt;em&gt;geodesic&lt;/em&gt; metric space if any two points can be joined by a geodesic.
-Geodesic metric spaces are length spaces but not necessarily conversely.&lt;/p&gt;
-
-&lt;p&gt;Gromov’s original definition of hyperbolicity of \(X\) is the following.
-Given points \(x\), \(y\) and \(z\) in \(X\), define the &lt;em&gt;Gromov product&lt;/em&gt;
-of \(x\) and \(y\) with respect to \(z\) to be the quantity&lt;/p&gt;
-
-\[(x,y)_z = \frac{1}{2}\left(d(x,z) + d(y,z) - d(x,y)\right).\]
-
-&lt;p&gt;Then we say that \(X\) is &lt;em&gt;\(\delta\)-hyperbolic&lt;/em&gt; if there exists some \(\delta \ge 0\)
-with the property that for any four points \(x\), \(y\), \(z\) and \(w\) in \(X\),
-we have&lt;/p&gt;
-
-\[(x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta.\]
-
-&lt;p&gt;Let’s try and make sense of this.
-The intuition for the Gromov product is the following.
-A &lt;em&gt;tripod&lt;/em&gt; is a metric tree with four vertices, three of which are leaves and one of which has valence three.
-Given any triple of points \(x\), \(y\) and \(z\) in a metric space,
-you should convince yourself that we can always construct a tripod
-with leaves \(\hat x\), \(\hat y\) and \(\hat z\) such that we have&lt;/p&gt;
-
-\[d(x,y) = d(\hat x,\hat y),\quad d(x,z) = d(\hat x,\hat z),\quad\text{and}\quad d(y,z) = d(\hat y,\hat z).\]
-
-&lt;p&gt;In this situation, the Gromov product \((x,y)_z\)
-is equal to the distance from \(\hat z\) to the center vertex of the tripod.
-To make sense of the hyperbolicity condition,
-let’s continue to think about trees,
-only in this case assume that \(X\) itself is a metric tree.
-Then in this case it’s not too hard to argue that the hyperbolicity condition holds with \(\delta = 0\);
-a picture illustrating the general case is below.
-Thus one way to think of \(\delta\)-hyperbolicity is to think that from the point of view of any point \(w \in X\),
-triangles in \(X\) look like triangles in trees, up to an error of \(\delta\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/GromovProduct.jpeg&quot; alt=&quot;Trees are $$0$$-hyperbolic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If \(X\) is a geodesic metric space, there are other conditions equivalent to this one
-that are more directly about the geometry of, e.g. triangles in \(X\).
-I’ve been collecting as many of these conditions as the community will give me
-in a &lt;a href=&quot;https://mathoverflow.net/q/396359/135175&quot;&gt;MathOverflow post&lt;/a&gt;.
-Eventually I expect to make a blog post or several about the various definitions.&lt;/p&gt;
-
-&lt;p&gt;Given metric spaces \((X,d_X)\) and \((Y,d_Y)\) and constants \(K \ge 1\) and \(C \ge 0\),
-a &lt;em&gt;\((K,C)\)-quasi-isometric embedding&lt;/em&gt; is a function \(f\colon X \to Y\)
-(it need not be continuous)
-such that for all points \(x\) and \(y\) in \(X\), the following inequality holds&lt;/p&gt;
-
-\[\frac 1Kd_X(x,y) - C \le d_Y(f(x),f(y)) \le Kd_X(x,y) + C.\]
-
-&lt;p&gt;So we see that \(f\) is allowed to distort distances by a bounded multiplicative and additive amount.
-A &lt;em&gt;\((K,C)\)-quasi-isometry&lt;/em&gt; is a \((K,C)\)-quasi-isometric embedding with the additional property that
-for every point \(y \in Y\) there is a point \(x \in X\) such that \(d_Y(y,f(x)) \le C\).&lt;/p&gt;
-
-&lt;h2 id=&quot;the-theorem-and-the-counterexample&quot;&gt;The theorem and the counterexample&lt;/h2&gt;
-
-&lt;p&gt;Väisälä proves the following theorem.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Theorem&lt;/strong&gt; Let \(X\) and \(Y\) be length spaces and \(f\colon X \to Y\) a quasi-isometric embedding.
-If \(Y\) is \(\delta\)-hyperbolic, then \(X\) is \(\delta&apos;\)-hyperbolic
-for some \(\delta&apos;\) depending only on \(\delta\) and the quasi-isometry constants for \(f\).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;He then observes that the theorem is not true if one does not assume that \(X\) is a length space.
-Here is the counterexample.
-The hyperbolic space \(Y\) is the real line \(\mathbb{R}\) with the standard metric.
-(Recall that \(\mathbb{R}\) is a real tree, and thus \(0\)-hyperbolic.)
-The space \(X\) is the graph of the absolute value function \(\{(x,y) \in \mathbb{R}^2 : y = |x| \}\)
-with the Euclidean metric.
-The claim is that the map \(f\colon X \to Y\) defined as \(f(x,y) = x\) is a quasi-isometric embedding,
-but that \(X\) is not hyperbolic.&lt;/p&gt;
-
-&lt;p&gt;First we show that \(f\) is a quasi-isometric embedding.
-Indeed, it is clear that given \(\vec x\) and \(\vec y\) in \(X\),
-we have \(d_Y(f(\vec x),f(\vec y)) \le d_X(\vec x,\vec y)\).
-On the other hand, note that \(d_X(\vec x,\vec y)\) is furthest from \(d_Y(f(\vec x),f(\vec y))\)
-when \(\vec x\) and \(\vec y\) are in the same quadrant, where we have
-\(d_X(\vec x,\vec y) = \sqrt{2}d_Y(f(\vec x),f(\vec y))\).
-Thus the map \(f\) is a \((\sqrt 2,0)\)-quasi-isometric embedding, in fact a \((\sqrt 2,0)\)-quasi-isometry.&lt;/p&gt;
-
-&lt;p&gt;Finally we show that \(X\) is not hyperbolic.
-Consider the four points \(x = (0,0)\), \(y = (-2t,2t)\), \(z = (2t,2t)\) and \(w = (t,t)\).
-Then we have&lt;/p&gt;
-
-\[(x,z)_w = \frac 12\left(\sqrt 2t + \sqrt 2t - 2\sqrt 2t\right) = 0,\]
-
-\[(x,y)_w = \frac 12\left(\sqrt 2t + 2\sqrt 5t - 2\sqrt 2t\right) \approx 1.53t\]
-
-\[(y,z)_w = \frac 12\left(2\sqrt 5t + \sqrt 2t - 4t\right) \approx 0.94t\]
-
-&lt;p&gt;But observe that as \(t \to \infty\), we have that \((x,y)_w\) and \((y,z)_w\) tend to \(\infty\),
-so no uniform choice of \(\delta\) makes the inequality
-\((x,z)_w \ge \min\{(x,y)_w,(y,z)_w\} - \delta\) hold.
-The problem, roughly, is that the quasi-isometry condition cannot see the “kink” in the space \(X\),
-while the \(\delta\)-hyperbolicity condition, at least for this family of triangles, can.&lt;/p&gt;</content><author><name></name></author><summary type="html">Gromov’s original definition of Gromov hyperbolicity makes sense for arbitrary metric spaces. However, it is only a quasi-isometry invariant for geodesic metric spaces. I learned this from a paper of Väisälä. The purpose of this post is to understand the counterexample he gives. I also define Gromov hyperbolicity and quasi-isometry in this post, which might make it useful for future reference. The reader already familiar with Gromov hyperbolicity and quasi-isometries might wish to skip ahead to the heading below.</summary></entry></feed>
+Not bad for no real work, eh?&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day I “proved” the Farrell–Jones conjecture for a family of groups. The word “proved” is in quotes because actually there was nothing to prove, I just happened to be primed to notice that all the conditions were already there. The purpose of this post is to tell you the story of how this came to be and give the sketch of the proof that requires zero input from me.</summary></entry></feed>

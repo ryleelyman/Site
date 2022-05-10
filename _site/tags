@@ -1709,6 +1709,7 @@ Tufts University	_site/teaching.html	/^<h2 id="tufts-university">Tufts Universit
 Tufts University	teaching.md	/^## Tufts University$/;"	s	chapter:Teaching
 Two Approaches To The Cotangent Space	_site/2020/07/10/Two-Approaches-to-the-Cotangent-Space.html	/^      <h1>Two Approaches To The Cotangent Space<\/h1>$/;"	h
 Two Approaches To The Cotangent Space	_site/blog.html	/^    <h2><a href="\/2020\/07\/10\/Two-Approaches-to-the-Cotangent-Space.html">Two Approaches To T/;"	i
+Whitehead	_site/Research.html	/^<div id="Whitehead" style="display: none">$/;"	I
 Wrapping up	_posts/2022-04-02-The-star-graph.md	/^## Wrapping up$/;"	s
 Wrapping up	_site/2022/04/02/The-star-graph.html	/^<h2 id="wrapping-up">Wrapping up<\/h2>$/;"	i
 a	_site/assets/css/style.css	/^a { background-color: transparent; \/* 1 *\/ }$/;"	s
@@ -1841,6 +1842,7 @@ math: true	_posts/2022-03-26-Shelters-in-graphs-of-groups.md	/^math: true$/;"	s
 math: true	_posts/2022-03-27-Ideal-edges.md	/^math: true$/;"	s
 math: true	_posts/2022-03-29-A-virtually-free-observation.md	/^math: true$/;"	s
 math: true	_posts/2022-04-02-The-star-graph.md	/^math: true$/;"	s
+math: true	_posts/2022-05-10-A-Cut-Vertex-Lemma.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I
