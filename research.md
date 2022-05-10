@@ -9,13 +9,37 @@ math: true
 
 ## Publications and Preprints
 
+- **On Whitehead's cut vertex lemma**   
+Available [here][Whitehead cut vertex].
+<a onclick="displayabs('Whitehead')">Abstract</a>   
+<div id="Whitehead" style="display: none">
+<blockquote>
+One version of Whitehead's famous cut vertex lemma says that if an element of a free group
+is part of a free basis, then a certain graph associated to its conjugacy class
+that we call the star graph
+is either disconnected or has a cut vertex.
+We state and prove a version of this lemma for conjugacy classes of elements
+and convex-cocompact subgroups of groups acting cocompactly on trees
+with finitely generated edge stabilizers.
+</blockquote>
+</div>
 - **Lipschitz metric isometries between Outer Spaces of virtually free groups**   
 Available at [arXiv:2203.09008](https://arxiv.org/abs/2203.09008).
 <a onclick="displayabs('Lipschitz')">Abstract</a>   
 *Submitted.*   
 <div id="Lipschitz" style="display: none">
 <blockquote>
-Dowdall and Taylor observed that given a finite-index subgroup of a free group, taking covers induces an embedding from the Outer Space of the free group to the Outer Space of the subgroup, that this embedding is an isometry with respect to the (asymmetric) Lipschitz metric, and that the embedding sends folding paths to folding paths. The purpose of this note is to extend this result to virtually free groups. We further extend a result Francaviglia and Martino, proving the existence of “candidates” for the Lipschitz distance between points in the Outer Space of the virtually free group. Additionally we identify a deformation retraction of the spine of the Outer Space for the virtually free group with the space considered by Krstic and Vogtmann.
+Dowdall and Taylor observed that given a finite-index subgroup of a free group,
+taking covers induces an embedding 
+from the Outer Space of the free group to the Outer Space of the subgroup,
+that this embedding is an isometry with respect to the (asymmetric) Lipschitz metric,
+and that the embedding sends folding paths to folding paths.
+The purpose of this note is to extend this result to virtually free groups.
+We further extend a result Francaviglia and Martino,
+proving the existence of “candidates” for the Lipschitz distance 
+between points in the Outer Space of the virtually free group.
+Additionally we identify a deformation retraction of the spine 
+of the Outer Space for the virtually free group with the space considered by Krstic and Vogtmann.
 </blockquote>
 </div>
 - **CTs for free products**   
@@ -175,3 +199,4 @@ Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).
 [CTs for free products]: {{ "assets/pdfs/CTsForFreeProducts.pdf" | relative_url }}
 [Train tracks on graphs of groups]: {{ "assets/pdfs/TrainTrackMapsonGraphsofGroups.pdf" | relative_url }}
 [Lipschitz metric isometries]: {{ "assets/pdfs/LipschitzMetricEmbeddings.pdf" | relative_url }}
+[Whitehead cut vertex]: {{ "assets/pdfs/Whitehead.pdf" | relative_url }}
