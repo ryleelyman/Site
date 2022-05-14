@@ -1592,10 +1592,14 @@ Geometric Group Theory Without Boundaries	_site/2021/06/21/Geometric-group-theor
 Geometric Group Theory Without Boundaries	_site/blog.html	/^    <h2><a href="\/2021\/06\/21\/Geometric-group-theory-without-boundaries.html">Geometric Group/;"	i
 Git For A Certain Kind Of Mathematician	_site/2021/09/28/Git-for-a-certain-kind-of-mathematician.html	/^      <h1>Git For A Certain Kind Of Mathematician<\/h1>$/;"	h
 Git For A Certain Kind Of Mathematician	_site/blog.html	/^    <h2><a href="\/2021\/09\/28\/Git-for-a-certain-kind-of-mathematician.html">Git For A Certain/;"	i
+Graphs of groups as étale groupoids	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^## Graphs of groups as étale groupoids$/;"	s
+Graphs of groups as étale groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Graphs of groups as étale groupoids$/;"	s
 Graphs of groups with trivial edge groups	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^## Graphs of groups with trivial edge groups$/;"	s
 Graphs of groups with trivial edge groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="graphs-of-groups-with-trivial-edge-groups">Graphs of groups with trivial edge groups<\/h/;"	i
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^      <h1>Gromov Hyperbolicity For Arbitrary Metric Spaces<\/h1>$/;"	h
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/blog.html	/^    <h2><a href="\/2021\/07\/01\/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">Gromov H/;"	i
+Groupoids	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^## Groupoids$/;"	s
+Groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Groupoids$/;"	s
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Ideal Edges	_site/2022/03/27/Ideal-edges.html	/^      <h1>Ideal Edges<\/h1>$/;"	h
@@ -1843,6 +1847,8 @@ math: true	_posts/2022-03-27-Ideal-edges.md	/^math: true$/;"	s
 math: true	_posts/2022-03-29-A-virtually-free-observation.md	/^math: true$/;"	s
 math: true	_posts/2022-04-02-The-star-graph.md	/^math: true$/;"	s
 math: true	_posts/2022-05-10-A-Cut-Vertex-Lemma.md	/^math: true$/;"	s
+math: true	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^math: true$/;"	s
+math: true	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I

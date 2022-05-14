@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-10T15:14:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">A Cut Vertex Lemma</title><link href="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html" rel="alternate" type="text/html" title="A Cut Vertex Lemma" /><published>2022-05-10T00:00:00-04:00</published><updated>2022-05-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html">&lt;p&gt;Building on ideas from the previous post regarding the star graph,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-14T14:08:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
+Time to rectify this situation.
+The purpose of this post is to explain how to see graphs of groups as étale groupoids.
+In a later post I’d like to explore the notion of maps between étale groupoids.&lt;/p&gt;
+
+&lt;h2 id=&quot;groupoids&quot;&gt;Groupoids&lt;/h2&gt;
+
+&lt;p&gt;A &lt;em&gt;groupoid&lt;/em&gt; is a small category \(\mathcal{G}\) in which all arrows are invertible.
+Thus there are two sets, \(\mathcal{G}_0\) and \(\mathcal{G}_1\) of objects and arrows respectively,
+and several structure maps:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(\alpha\), \(\omega\colon \mathcal{G}_1 \to \mathcal{G}_0\) sending an arrow \(f\colon x \to y\)
+to its &lt;em&gt;source&lt;/em&gt; \(x\) and &lt;em&gt;target&lt;/em&gt; \(y\) respectively.&lt;/li&gt;
+  &lt;li&gt;An injection \(\iota\colon \mathcal{G}_0 \to \mathcal{G}_1\) sending an object \(x\) to the identity arrow
+\(1_x\colon x \to x\).&lt;/li&gt;
+  &lt;li&gt;An inversion map \((\cdot)^{-1}\colon \mathcal{G}_1 \to \mathcal{G}_1\)
+sending an arrow \(f\colon x \to y\) to its inverse \(f^{-1}\colon y \to x\).&lt;/li&gt;
+  &lt;li&gt;A multiplication map \(\circ\colon \mathcal{G}_1 \times_{\mathcal{G}_0} \mathcal{G}_1 \to \mathcal{G}_1\)
+sending a pair of arrows \(f\) and \(g\) with \(\alpha(f) = \omega(g)\) to their composite
+\(g\circ f = gf\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The maps are required to satisfy certain identities saying,
+for instance, that composition is associative.
+A &lt;em&gt;topological groupoid&lt;/em&gt; is a groupoid equipped with a topology on \(\mathcal{G}_0\) and \(\mathcal{G}_1\)
+making all the structure maps continuous.
+A topological groupoid is &lt;em&gt;étale&lt;/em&gt; if \(\alpha\) and \(\omega\) are étale maps, i.e. local homeomorphisms.&lt;/p&gt;
+
+&lt;p&gt;Given an étale groupoid and a point \(x \in \mathcal{G}_0\),
+its &lt;em&gt;orbit&lt;/em&gt; is the set&lt;/p&gt;
+
+\[\mathcal{G}\cdot x = \{ y \in \mathcal{G}_0 : \exists f\colon x \to y\}.\]
+
+&lt;p&gt;The orbits partition \(\mathcal{G}_0\) and the &lt;em&gt;space of orbits&lt;/em&gt; \(\mathcal{G}_1\backslash\mathcal{G}_0\)
+is the quotient space given the quotient topology.
+We may also define the &lt;em&gt;isotropy group&lt;/em&gt; \(\mathcal{G}_x\) as&lt;/p&gt;
+
+\[\mathcal{G}_x = \{ f \in \mathcal{G}_1 : \alpha(f) = \omega(f) = x \}.\]
+
+&lt;p&gt;Since \(\mathcal{G}\) is étale, it turns out that \(\mathcal{G}_x\) is discrete as a subspace of \(\mathcal{G}_1\).&lt;/p&gt;
+
+&lt;h2 id=&quot;graphs-of-groups-as-étale-groupoids&quot;&gt;Graphs of groups as étale groupoids&lt;/h2&gt;
+
+&lt;p&gt;I think I’ve mentioned how orbifolds may be thought of as étale groupoids.
+Indeed, Haefliger describes this in Chapter III.\(\mathcal{G}\) of 
+&lt;a href=&quot;https://www.maths.ed.ac.uk/~v1ranick/papers/bridsonhaefligerx.pdf&quot;&gt;Metric Spaces of Nonpositive Curvature&lt;/a&gt;.
+(Incidentally, I like to cheekily use the citation command “TheBible” for that book,
+even though my research has called for citing it less frequently than I originally expected.)
+What is maybe less well-known (although Haefliger also covers this)
+is how to view a graph of groups (or more generally a &lt;em&gt;complex&lt;/em&gt; of groups) as an étale groupoid.
+I’ll describe how to do this for &lt;em&gt;effective&lt;/em&gt; graphs of groups,
+where the construction is a little slicker,
+although one could give a “hands-on” construction in the general case without too much difficulty.&lt;/p&gt;
+
+&lt;p&gt;Let us set notation. A &lt;em&gt;graph of groups&lt;/em&gt; \((\Gamma,\mathscr{G})\) is a connected graph \(\Gamma\)
+together with an assignment of groups \(\mathscr{G}_v\) and \(\mathscr{G}_e\) to each vertex \(v\) and edge \(e\)
+of \(\Gamma\).
+When the oriented edge \(e\) has initial vertex \(v\),
+we require the existence of an injective homomorphism \(\mathscr{G}_e \to \mathscr{G}_v\).&lt;/p&gt;
+
+&lt;p&gt;Given a vertex \(v\), write \(\operatorname{st}(v)\) for the set of oriented edges \(e\) with initial vertex \(v\).
+Let \(\tau(e)\) denote the terminal vertex of the oriented edge \(e\).
+Let \(\widetilde{\operatorname{st}}(v)\) be the quotient of the disjoint union&lt;/p&gt;
+
+\[\coprod_{e\in\operatorname{st}(v)} \mathscr{G}_v/\iota_e(\mathscr{G}_e) \times (e \setminus \tau(e))\]
+
+&lt;p&gt;by the equivalence relation that identifies the initial vertex of all of these oriented edges.
+(To make the resulting groupoid étale, we need to remove the terminal vertices.)
+Call the identified vertex \(v\).
+There is a natural action of \(\mathscr{G}_v\) on \(\widetilde{\operatorname{st}}(v)\) by multiplication in the labels.
+This action fixes \(v\).&lt;/p&gt;
+
+&lt;p&gt;A graph of groups is &lt;em&gt;effective&lt;/em&gt; if only the family of trivial subgroups of each \(\mathscr{G}_v\)
+satisfies the following conditions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For each vertex $v$, we have a normal subgroup \(N_v\le \mathscr{G}_v\).&lt;/li&gt;
+  &lt;li&gt;For each edge \(e\) of \(\Gamma\) with initial vertex \(v\) and terminal vertex \(w\),
+there is a subgroup \(N_e\) of \(\mathscr{G}_e\) such that \(\iota_e(N_e) = N_v\) and \(\iota_{\bar e}(N_e) = N_w\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let \(\mathcal{G}_0\) be the disjoint union of the spaces \(\widetilde{\operatorname{st}}(v)\)
+as \(v\) varies over the vertices of \(\Gamma\).
+Each element of each \(\mathscr{G}_v\) acts as a homeomorphism of an open neighborhood of \(\mathcal{G}_0\).
+The orientation reversal of the interior of an oriented edge \(e\mapsto \bar e\)
+also defines a homeomorphism of an open neighborhood of \(\mathcal{G}_0\) for each pair of lifts
+of the interiors of \(e\) and \(\bar e\) to \(\mathcal{G}_0\).
+We may consider the &lt;em&gt;pseudogroup&lt;/em&gt; generated by these local homeomorphisms.&lt;/p&gt;
+
+&lt;p&gt;Briefly, the &lt;em&gt;pseudogroup generated&lt;/em&gt; by a collection of homeomorphisms \(f\colon U \to V\) 
+of open subsets of a topological space \(X\)
+(such that the unions of the \(U\) cover \(X\))
+is the smallest collection of homeomorphisms containing the given collection 
+and satisfying the following properties.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The restriction of a homeomorphism \(f\colon U \to V\) in the collection
+to an open subset of \(U\) is in the collection.&lt;/li&gt;
+  &lt;li&gt;The composition \(gf\) of any two elements \(f\colon U \to V\) and \(g \colon V \to W\)
+in the collection
+is in the collection (note the domain of \(g\)).&lt;/li&gt;
+  &lt;li&gt;The inverse of any homeomorphism in the collection is in the collection.&lt;/li&gt;
+  &lt;li&gt;If \(f\colon U \to V\) is a homeomorphism with the property that
+there is an open cover \(\{U_i\}\) of \(U\) such that \(f|_{U_i}\) is in the collection for each \(i\),
+then \(f\) is in the collection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The space of arrows \(\mathcal{G}_1\) is the space of &lt;em&gt;germs&lt;/em&gt; of elements of the pseudogroup.
+A &lt;em&gt;germ&lt;/em&gt; of a homeomorphism \(f\colon U \to V\) at a point \(x \in U\)
+is its equivalence class under the equivalence relation of agreement under restriction to a neighborhood of \(x\).
+The germ therefore has a well-defined &lt;em&gt;source&lt;/em&gt; \(\alpha(f) = x\)
+and &lt;em&gt;target&lt;/em&gt; \(\omega(f) = f(x)\).
+We give \(\mathcal{G}_1\) the &lt;em&gt;germ topology:&lt;/em&gt; a basis for this topology is given by sets of the form \(U_f\),
+where \(f\colon U \to V\) is a homeomorphism and \(U_f\) 
+consists of the germs of \(f\) at the various points of \(U\).&lt;/p&gt;
+
+&lt;p&gt;To bring things down to earth, if you chase through the definitions,
+you see that if \(v\) is a vertex of \(\Gamma\) thought of as a point of \(\mathcal{G}_0\),
+then \(\mathcal{G}_v = \mathscr{G}_v\).
+The point \(v\) is equal to its orbit \(\mathcal{G}\cdot v\).
+If \(x\) is a point in the interior of an edge \(e\),
+then \(x\) determines an orbit in \(\mathcal{G}_0\) comprising all those points 
+in each \(\widetilde{\operatorname{st}}(v)\)
+of the form \((g\iota_e(\mathscr{G}_e), x) \subset \mathscr{G}_v/\iota_e(\mathscr{G}_e)\times e \setminus \tau(e)\)
+where \(e\) is allowed to occur in either orientation.
+Put another way, we have \(\Gamma = \mathcal{G}_1\backslash\mathcal{G}_0\).
+The isotropy group \(\mathcal{G}_x\) is isomorphic to \(\mathscr{G}_e\).&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s been a while since I talked about étale groupoids! Time to rectify this situation. The purpose of this post is to explain how to see graphs of groups as étale groupoids. In a later post I’d like to explore the notion of maps between étale groupoids.</summary></entry><entry><title type="html">A Cut Vertex Lemma</title><link href="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html" rel="alternate" type="text/html" title="A Cut Vertex Lemma" /><published>2022-05-10T00:00:00-04:00</published><updated>2022-05-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html">&lt;p&gt;Building on ideas from the previous post regarding the star graph,
 I wrote a short paper generalizing a classical lemma of Whitehead.
 The purpose of this post is to describe Whitehead’s lemma and my generalization.&lt;/p&gt;
 
@@ -76,7 +200,8 @@ They prove that (their version of) the star graph of an almost rose has a cut ve
 and that if the map \(f\colon \Gamma \to R\) factors through a graph \(\Theta\),
 then the star graph of \(\Gamma\) is a subgraph of the star graph of \(\Theta\).
 Although we are working with a different notion of the star graph,
-the broad-strokes outline of the proof carries over to our graph of groups setting!&lt;/p&gt;</content><author><name></name></author><summary type="html">Building on ideas from the previous post regarding the star graph, I wrote a short paper generalizing a classical lemma of Whitehead. The purpose of this post is to describe Whitehead’s lemma and my generalization.</summary></entry><entry><title type="html">The Star Graph</title><link href="http://localhost:4000/2022/04/02/The-star-graph.html" rel="alternate" type="text/html" title="The Star Graph" /><published>2022-04-02T00:00:00-04:00</published><updated>2022-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2022/04/02/The-star-graph</id><content type="html" xml:base="http://localhost:4000/2022/04/02/The-star-graph.html">&lt;p&gt;In an &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;earlier post&lt;/a&gt; we introduced the concept of an &lt;em&gt;ideal edge&lt;/em&gt;
+the broad-strokes outline of the proof carries over to our graph of groups setting!
+If you’d like to know more, you can read the paper &lt;a href=&quot;/assets/pdfs/Whitehead.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Building on ideas from the previous post regarding the star graph, I wrote a short paper generalizing a classical lemma of Whitehead. The purpose of this post is to describe Whitehead’s lemma and my generalization.</summary></entry><entry><title type="html">The Star Graph</title><link href="http://localhost:4000/2022/04/02/The-star-graph.html" rel="alternate" type="text/html" title="The Star Graph" /><published>2022-04-02T00:00:00-04:00</published><updated>2022-04-02T00:00:00-04:00</updated><id>http://localhost:4000/2022/04/02/The-star-graph</id><content type="html" xml:base="http://localhost:4000/2022/04/02/The-star-graph.html">&lt;p&gt;In an &lt;a href=&quot;/2022/03/27/Ideal-edges.html&quot;&gt;earlier post&lt;/a&gt; we introduced the concept of an &lt;em&gt;ideal edge&lt;/em&gt;
 in a graph of groups and described how to &lt;em&gt;blow up&lt;/em&gt; ideal edges
 to construct new graphs of groups.
 To prove that (the reduced spine of) Outer Space for a virtually free group
@@ -1213,44 +1338,4 @@ The subspace of sequences which are eventually constant is countable and dense.
 The subspace of sequences which are &lt;em&gt;not&lt;/em&gt; eventually constant is
 &lt;a href=&quot;https://math.stackexchange.com/a/254381/447318&quot;&gt;homeomorphic to the Baire space&lt;/a&gt;.
 This is more or less what is happening here: we add countably many points to
-our non-locally compact Gromov boundary to get the compact Bowditch boundary.&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day on Twitter I asked whether it might be the case that a non-proper hyperbolic metric space might still have locally compact Gromov boundary. I was particularly interested in the case of a simplicial tree equipped with the path metric where each edge has length \(1\) with some vertices of infinite valence. The answer in this case is no. Instead, the boundary of such a tree is homeomorphic to the Baire space \(\mathbb{N}^\mathbb{N}\). In this post I’ll talk through why this is the case. There is also a notion of a Bowditch boundary for a tree with vertices of infinite valence. I’d like to show that the Bowditch boundary of such a tree is a Cantor set.</summary></entry><entry><title type="html">A Nice Coincidence</title><link href="http://localhost:4000/2021/07/19/A-Nice-Coincidence.html" rel="alternate" type="text/html" title="A Nice Coincidence" /><published>2021-07-19T00:00:00-04:00</published><updated>2021-07-19T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/19/A-Nice-Coincidence</id><content type="html" xml:base="http://localhost:4000/2021/07/19/A-Nice-Coincidence.html">&lt;p&gt;The other day I “proved” the Farrell–Jones conjecture for a family of groups.
-The word “proved” is in quotes because actually there was nothing to prove,
-I just happened to be primed to notice that all the conditions were already there.
-The purpose of this post is to tell you the story of how this came to be
-and give the sketch of the proof that requires zero input from me.&lt;/p&gt;
-
-&lt;p&gt;Here is the story.
-The first full week of July,
-I attended &lt;a href=&quot;https://homepages.warwick.ac.uk/~masmbe/Charney/&quot;&gt;Ruth Charney’s birthday conference&lt;/a&gt;.
-It was wonderful to be around people doing math in person again!
-At this conference, Mladen Bestvina gave a talk about the Farrell–Jones conjecture
-for (virtually torsion-free) hyperbolic-by-cyclic groups.
-I don’t fully understand the statement of the conjecture,
-which says that certain assembly maps (?) in \(K\)-theory (??) or \(L\)-theory (???) are isomorphisms.
-However, I did learn a useful tool for proving the Farrell–Jones conjecture,
-a relatively recent (as in 2017) theorem due to Knopf:
-if a (countable) group \(G\) acts acylindrically (without inversions) on a (simplicial) tree 
-and the vertex stabilizers satisfy the Farrell–Jones conjecture, then so does \(G\).
-Here &lt;em&gt;acylindrically&lt;/em&gt; means that there exists \(K \ge 0\) such that the stabilizer
-of any geodesic segment of length \(K\) is finite.&lt;/p&gt;
-
-&lt;p&gt;One of the things I worked on this past week after coming back was my first review for zbMath.
-The paper I reviewed studied high-dimensional graph manifolds,
-which were introduced by Figerio, Lafont and Sisto.
-A high-dimensional graph manifold is made of &lt;em&gt;pieces,&lt;/em&gt;
-each piece is a product of a torus and
-a finite-volume hyperbolic manifold with toric cusps,
-and the pieces are glued together by cutting off the cusps
-into torus boundary components and gluing the tori.
-As such, the fundamental group of a high-dimensional graph manifold is naturally
-the fundamental group of a graph of groups
-whose vertex groups are the pieces and whose edge groups are \(\mathbb{Z}^{n-1}\).
-Figerio, Lafont and Sisto prove that the high-dimensional graph manifold is
-what’s called &lt;em&gt;irreducible&lt;/em&gt; if and only if the action of the fundamental group
-on the Bass–Serre tree for the graph of groups is acylindrical (in fact, you can take \(K\) to be \(3\)).&lt;/p&gt;
-
-&lt;p&gt;Since CAT(0) groups (in particular, the fundamental groups of the pieces)
-satisfy the Farrell–Jones conjecture,
-the theorem above implies that irreducible high-dimensional graph manifold groups
-satisfy the Farrell–Jones conjecture!
-Not bad for no real work, eh?&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day I “proved” the Farrell–Jones conjecture for a family of groups. The word “proved” is in quotes because actually there was nothing to prove, I just happened to be primed to notice that all the conditions were already there. The purpose of this post is to tell you the story of how this came to be and give the sketch of the proof that requires zero input from me.</summary></entry></feed>
+our non-locally compact Gromov boundary to get the compact Bowditch boundary.&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day on Twitter I asked whether it might be the case that a non-proper hyperbolic metric space might still have locally compact Gromov boundary. I was particularly interested in the case of a simplicial tree equipped with the path metric where each edge has length \(1\) with some vertices of infinite valence. The answer in this case is no. Instead, the boundary of such a tree is homeomorphic to the Baire space \(\mathbb{N}^\mathbb{N}\). In this post I’ll talk through why this is the case. There is also a notion of a Bowditch boundary for a tree with vertices of infinite valence. I’d like to show that the Bowditch boundary of such a tree is a Cantor set.</summary></entry></feed>

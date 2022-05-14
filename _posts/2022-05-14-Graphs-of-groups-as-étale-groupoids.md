@@ -1,0 +1,125 @@
+---
+layout: post
+math: true
+---
+It's been a while since I talked about étale groupoids!
+Time to rectify this situation.
+The purpose of this post is to explain how to see graphs of groups as étale groupoids.
+In a later post I'd like to explore the notion of maps between étale groupoids.
+
+## Groupoids
+
+A *groupoid* is a small category $$\mathcal{G}$$ in which all arrows are invertible.
+Thus there are two sets, $$\mathcal{G}_0$$ and $$\mathcal{G}_1$$ of objects and arrows respectively,
+and several structure maps:
+- $$\alpha$$, $$\omega\colon \mathcal{G}_1 \to \mathcal{G}_0$$ sending an arrow $$f\colon x \to y$$
+to its *source* $$x$$ and *target* $$y$$ respectively.
+- An injection $$\iota\colon \mathcal{G}_0 \to \mathcal{G}_1$$ sending an object $$x$$ to the identity arrow
+$$1_x\colon x \to x$$.
+- An inversion map $$(\cdot)^{-1}\colon \mathcal{G}_1 \to \mathcal{G}_1$$
+sending an arrow $$f\colon x \to y$$ to its inverse $$f^{-1}\colon y \to x$$.
+- A multiplication map $$\circ\colon \mathcal{G}_1 \times_{\mathcal{G}_0} \mathcal{G}_1 \to \mathcal{G}_1$$
+sending a pair of arrows $$f$$ and $$g$$ with $$\alpha(f) = \omega(g)$$ to their composite
+$$g\circ f = gf$$.
+
+The maps are required to satisfy certain identities saying,
+for instance, that composition is associative.
+A *topological groupoid* is a groupoid equipped with a topology on $$\mathcal{G}_0$$ and $$\mathcal{G}_1$$
+making all the structure maps continuous.
+A topological groupoid is *étale* if $$\alpha$$ and $$\omega$$ are étale maps, i.e. local homeomorphisms.
+
+Given an étale groupoid and a point $$x \in \mathcal{G}_0$$,
+its *orbit* is the set 
+
+$$\mathcal{G}\cdot x = \{ y \in \mathcal{G}_0 : \exists f\colon x \to y\}.$$
+
+The orbits partition $$\mathcal{G}_0$$ and the *space of orbits* $$\mathcal{G}_1\backslash\mathcal{G}_0$$
+is the quotient space given the quotient topology.
+We may also define the *isotropy group* $$\mathcal{G}_x$$ as
+
+$$\mathcal{G}_x = \{ f \in \mathcal{G}_1 : \alpha(f) = \omega(f) = x \}.$$
+
+Since $$\mathcal{G}$$ is étale, it turns out that $$\mathcal{G}_x$$ is discrete as a subspace of $$\mathcal{G}_1$$.
+
+## Graphs of groups as étale groupoids
+
+I think I've mentioned how orbifolds may be thought of as étale groupoids.
+Indeed, Haefliger describes this in Chapter III.$$\mathcal{G}$$ of 
+[Metric Spaces of Nonpositive Curvature][TheBible].
+(Incidentally, I like to cheekily use the citation command "TheBible" for that book,
+even though my research has called for citing it less frequently than I originally expected.)
+What is maybe less well-known (although Haefliger also covers this)
+is how to view a graph of groups (or more generally a *complex* of groups) as an étale groupoid.
+I'll describe how to do this for *effective* graphs of groups,
+where the construction is a little slicker,
+although one could give a "hands-on" construction in the general case without too much difficulty.
+
+Let us set notation. A *graph of groups* $$(\Gamma,\mathscr{G})$$ is a connected graph $$\Gamma$$
+together with an assignment of groups $$\mathscr{G}_v$$ and $$\mathscr{G}_e$$ to each vertex $$v$$ and edge $$e$$
+of $$\Gamma$$.
+When the oriented edge $$e$$ has initial vertex $$v$$,
+we require the existence of an injective homomorphism $$\mathscr{G}_e \to \mathscr{G}_v$$.
+
+Given a vertex $$v$$, write $$\operatorname{st}(v)$$ for the set of oriented edges $$e$$ with initial vertex $$v$$.
+Let $$\tau(e)$$ denote the terminal vertex of the oriented edge $$e$$.
+Let $$\widetilde{\operatorname{st}}(v)$$ be the quotient of the disjoint union
+
+$$ \coprod_{e\in\operatorname{st}(v)} \mathscr{G}_v/\iota_e(\mathscr{G}_e) \times (e \setminus \tau(e))$$
+
+by the equivalence relation that identifies the initial vertex of all of these oriented edges.
+(To make the resulting groupoid étale, we need to remove the terminal vertices.)
+Call the identified vertex $$v$$.
+There is a natural action of $$\mathscr{G}_v$$ on $$\widetilde{\operatorname{st}}(v)$$ by multiplication in the labels.
+This action fixes $$v$$.
+
+A graph of groups is *effective* if only the family of trivial subgroups of each $$\mathscr{G}_v$$
+satisfies the following conditions:
+- For each vertex $v$, we have a normal subgroup $$N_v\le \mathscr{G}_v$$.
+- For each edge $$e$$ of $$\Gamma$$ with initial vertex $$v$$ and terminal vertex $$w$$,
+there is a subgroup $$N_e$$ of $$\mathscr{G}_e$$ such that $$\iota_e(N_e) = N_v$$ and $$\iota_{\bar e}(N_e) = N_w$$.
+
+Let $$\mathcal{G}_0$$ be the disjoint union of the spaces $$\widetilde{\operatorname{st}}(v)$$
+as $$v$$ varies over the vertices of $$\Gamma$$.
+Each element of each $$\mathscr{G}_v$$ acts as a homeomorphism of an open neighborhood of $$\mathcal{G}_0$$.
+The orientation reversal of the interior of an oriented edge $$e\mapsto \bar e$$
+also defines a homeomorphism of an open neighborhood of $$\mathcal{G}_0$$ for each pair of lifts
+of the interiors of $$e$$ and $$\bar e$$ to $$\mathcal{G}_0$$.
+We may consider the *pseudogroup* generated by these local homeomorphisms.
+
+Briefly, the *pseudogroup generated* by a collection of homeomorphisms $$f\colon U \to V$$ 
+of open subsets of a topological space $$X$$
+(such that the unions of the $$U$$ cover $$X$$)
+is the smallest collection of homeomorphisms containing the given collection 
+and satisfying the following properties.
+- The restriction of a homeomorphism $$f\colon U \to V$$ in the collection
+to an open subset of $$U$$ is in the collection.
+- The composition $$gf$$ of any two elements $$f\colon U \to V$$ and $$g \colon V \to W$$
+in the collection
+is in the collection (note the domain of $$g$$).
+- The inverse of any homeomorphism in the collection is in the collection.
+- If $$f\colon U \to V$$ is a homeomorphism with the property that
+there is an open cover $$\{U_i\}$$ of $$U$$ such that $$f|_{U_i}$$ is in the collection for each $$i$$,
+then $$f$$ is in the collection.
+
+The space of arrows $$\mathcal{G}_1$$ is the space of *germs* of elements of the pseudogroup.
+A *germ* of a homeomorphism $$f\colon U \to V$$ at a point $$x \in U$$
+is its equivalence class under the equivalence relation of agreement under restriction to a neighborhood of $$x$$.
+The germ therefore has a well-defined *source* $$\alpha(f) = x$$
+and *target* $$\omega(f) = f(x)$$.
+We give $$\mathcal{G}_1$$ the *germ topology:* a basis for this topology is given by sets of the form $$U_f$$,
+where $$f\colon U \to V$$ is a homeomorphism and $$U_f$$ 
+consists of the germs of $$f$$ at the various points of $$U$$.
+
+To bring things down to earth, if you chase through the definitions,
+you see that if $$v$$ is a vertex of $$\Gamma$$ thought of as a point of $$\mathcal{G}_0$$,
+then $$\mathcal{G}_v = \mathscr{G}_v$$.
+The point $$v$$ is equal to its orbit $$\mathcal{G}\cdot v$$.
+If $$x$$ is a point in the interior of an edge $$e$$,
+then $$x$$ determines an orbit in $$\mathcal{G}_0$$ comprising all those points 
+in each $$\widetilde{\operatorname{st}}(v)$$
+of the form $$(g\iota_e(\mathscr{G}_e), x) \subset \mathscr{G}_v/\iota_e(\mathscr{G}_e)\times e \setminus \tau(e)$$
+where $$e$$ is allowed to occur in either orientation.
+Put another way, we have $$\Gamma = \mathcal{G}_1\backslash\mathcal{G}_0$$.
+The isotropy group $$\mathcal{G}_x$$ is isomorphic to $$\mathscr{G}_e$$.
+
+[TheBible]: https://www.maths.ed.ac.uk/~v1ranick/papers/bridsonhaefligerx.pdf
