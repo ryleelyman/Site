@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-15T20:31:14-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-15T21:48:30-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">More Maps: Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/More-Maps-Lerman's-Critique.html" rel="alternate" type="text/html" title="More Maps: Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/More-Maps:-Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/More-Maps-Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
+by arguing that there is a problem with gluing maps.
+The purpose of this blog post is to try to digest this critique.
+We follow the notation set up in the previous two blog posts.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s critique takes place in the realm of bibundles,
+but as we saw in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+it’s possible to translate from the bibundles point of view to the generalized maps point of view.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s bibundles \(X\) and \(Y\) are from \(S^1\), 
+thought of as a groupoid with only identity arrows,
+to \(C_2\), thought of as a groupoid with one object.
+If you chase through the definitions,
+you see that a bibundle is thus a principal \(C_2\) bundle over \(S^1\).
+There are two: the trivial bundle \(S^1\times C_2\)
+and the nontrivial bundle which is \(S^1\) double covering itself.
+Call the former \(X\) and the latter \(Y\).
+The former bundle has a global section and so ought to be represented by an honest functor \(S^1 \to C_2\).
+There is only one such functor, sending every object of \(S^1\) to the unique object of \(C_2\)
+and sending all the arrows to the identity.&lt;/p&gt;
+
+&lt;p&gt;For the nontrivial bundle \(Y\),
+we can choose contractible open neighborhoods \(U_1\) and \(U_2\) which cover \(S^1\)
+and on which there exist local sections \(s_1\) and \(s_2\).
+The groupoid \((S^1)^{\mathcal{U}}\) has space of objects the disjoint copy of two open intervals in \(\mathbb{R}\)
+and space of arrows of the form
+\((1_x)_{j,i} \colon x_i \to x_j\) for \(x \in U_i \cap U_j\).
+Topologically this space of arrows is a copy of the object space (for the identity arrows)
+together with two copies of the intersection \(U_1 \cap U_2\) (which is disconnected),
+one for arrows of the form \((1_x)_{1,2}\) and another for the arrows \((1_x)_{2,1}\).&lt;/p&gt;
+
+&lt;p&gt;Aha! Think about the definition of these local sections:
+on one component of the intersection \(U_1\cap U_2\), the sections agree,
+while on the other, they differ by the action of \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/circlebundle.jpeg&quot; alt=&quot;The nontrivial bundle with its local sections&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In other words, if we chase through the construction given in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+we see that the resulting functor \((S^2)^{\mathcal{U}} \to C_2\)
+sends all identity arrows to the identity arrow of \(C_2\) (as they must be sent),
+and for \(x\) in the first component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the identity,
+while for all \(x\) in the second component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the nontrivial arrow in \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;It’s clear in bibundle land that these are the two isomorphism classes of maps from \(S^1\) to \(C_2\),
+and I think I buy in generalized map land that any generalized map will be one of these two as well.&lt;/p&gt;
+
+&lt;p&gt;The complaint, if I understand it, is this:
+we can also define the functor associated to the trivial bundle on the open cover \(\mathcal{U}\).
+If you restrict either of these functors to either \(U_1\) or \(U_2\),
+you get the same map: since \(U_1\) and \(U_2\) are contractible, the only principal \(C_2\)-bundles
+over \(U_1\) and \(U_2\) are trivial.
+This is slightly less clear in generalized maps land:
+you could imagine cutting up an open interval into a couple pieces and having some of the
+identifying arrows on the overlaps map to the nontrivial arrow in \(C_2\).
+The point, though, is that you can undo this difference with a natural transformation,
+essentially because the subintervals you slice into only overlap their neighbors once,
+not twice as in the example above.&lt;/p&gt;
+
+&lt;p&gt;I think this is a serious issue:
+imagine having only the functors from \(U_1\) and \(U_2\) to \(C_2\).
+There’s only one choice of functor and only one generalized map.
+Nevertheless, when you try to glue these maps together to give you a new map from \(S^1\) to \(C_2\),
+you find that there are &lt;em&gt;two&lt;/em&gt; possible maps!
+What’s worse, since \(U_1\) and \(U_2\) don’t see the arrows on the overlaps,
+there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry><entry><title type="html">Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/Lerman's-Critique.html" rel="alternate" type="text/html" title="Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
+by arguing that there is a problem with gluing maps.
+The purpose of this blog post is to try to digest this critique.
+We follow the notation set up in the previous two blog posts.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s critique takes place in the realm of bibundles,
+but as we saw in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+it’s possible to translate from the bibundles point of view to the generalized maps point of view.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s bibundles \(X\) and \(Y\) are from \(S^1\), 
+thought of as a groupoid with only identity arrows,
+to \(C_2\), thought of as a groupoid with one object.
+If you chase through the definitions,
+you see that a bibundle is thus a principal \(C_2\) bundle over \(S^1\).
+There are two: the trivial bundle \(S^1\times C_2\)
+and the nontrivial bundle which is \(S^1\) double covering itself.
+Call the former \(X\) and the latter \(Y\).
+The former bundle has a global section and so ought to be represented by an honest functor \(S^1 \to C_2\).
+There is only one such functor, sending every object of \(S^1\) to the unique object of \(C_2\)
+and sending all the arrows to the identity.&lt;/p&gt;
+
+&lt;p&gt;For the nontrivial bundle \(Y\),
+we can choose contractible open neighborhoods \(U_1\) and \(U_2\) which cover \(S^1\)
+and on which there exist local sections \(s_1\) and \(s_2\).
+The groupoid \((S^1)^{\mathcal{U}}\) has space of objects the disjoint copy of two open intervals in \(\mathbb{R}\)
+and space of arrows of the form
+\((1_x)_{j,i} \colon x_i \to x_j\) for \(x \in U_i \cap U_j\).
+Topologically this space of arrows is a copy of the object space (for the identity arrows)
+together with two copies of the intersection \(U_1 \cap U_2\) (which is disconnected),
+one for arrows of the form \((1_x)_{1,2}\) and another for the arrows \((1_x)_{2,1}\).&lt;/p&gt;
+
+&lt;p&gt;Aha! Think about the definition of these local sections:
+on one component of the intersection \(U_1\cap U_2\), the sections agree,
+while on the other, they differ by the action of \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/circlebundle.jpeg&quot; alt=&quot;The nontrivial bundle with its local sections&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In other words, if we chase through the construction given in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+we see that the resulting functor \((S^2)^{\mathcal{U}} \to C_2\)
+sends all identity arrows to the identity arrow of \(C_2\) (as they must be sent),
+and for \(x\) in the first component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the identity,
+while for all \(x\) in the second component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the nontrivial arrow in \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;It’s clear in bibundle land that these are the two isomorphism classes of maps from \(S^1\) to \(C_2\),
+and I think I buy in generalized map land that any generalized map will be one of these two as well.&lt;/p&gt;
+
+&lt;p&gt;The complaint, if I understand it, is this:
+we can also define the functor associated to the trivial bundle on the open cover \(\mathcal{U}\).
+If you restrict either of these functors to either \(U_1\) or \(U_2\),
+you get the same map: since \(U_1\) and \(U_2\) are contractible, the only principal \(C_2\)-bundles
+over \(U_1\) and \(U_2\) are trivial.
+This is slightly less clear in generalized maps land:
+you could imagine cutting up an open interval into a couple pieces and having some of the
+identifying arrows on the overlaps map to the nontrivial arrow in \(C_2\).
+The point, though, is that you can undo this difference with a natural transformation,
+essentially because the subintervals you slice into only overlap their neighbors once,
+not twice as in the example above.&lt;/p&gt;
+
+&lt;p&gt;I think this is a serious issue:
+imagine having only the functors from \(U_1\) and \(U_2\) to \(C_2\).
+There’s only one choice of functor and only one generalized map.
+Nevertheless, when you try to glue these maps together to give you a new map from \(S^1\) to \(C_2\),
+you find that there are &lt;em&gt;two&lt;/em&gt; possible maps!
+What’s worse, since \(U_1\) and \(U_2\) don’t see the arrows on the overlaps,
+there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
 We follow the notation for étale groupoids established in the &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;last post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
@@ -109,7 +241,7 @@ Two groupoids \(\mathcal{G}\) and \(\mathcal{H}\) are &lt;em&gt;Morita equivalen
 and equivalences \(\mathcal{K} \to \mathcal{G}\) and \(\mathcal{K} \to \mathcal{H}\).
 Morita equivalent groupoids become isomorphic in Moerdijk’s localization.&lt;/p&gt;
 
-&lt;h2 id=&quot;maps-using-cover-groupoids&quot;&gt;Maps using cover groupoids&lt;/h2&gt;
+&lt;h2 id=&quot;maps-using-refinement-groupoids&quot;&gt;Maps using refinement groupoids&lt;/h2&gt;
 
 &lt;p&gt;More concretely, I prefer the following approach.
 A &lt;em&gt;map&lt;/em&gt; of étale groupoids \(f\colon \mathcal{G} \to \mathcal{H}\) is a functor
@@ -1324,225 +1456,4 @@ is that&lt;/p&gt;
 to guarantee the existence of \(k &amp;gt; 0\) independent of the choice of lift \(\tilde f\)
 such that if \(D\tilde f^k\) has a periodic direction,
 then that direction is fixed.
-As already noted, we may simplify up to isogredience by assuming that the identity is periodic.&lt;/p&gt;</content><author><name></name></author><summary type="html">In the previous post, we defined free splittings for a group \(F\). The quotient of a free splitting \(T\) of \(F\) by the action of \(F\) is a graph of groups with trivial edge groups. The purpose of this post is to introduce maps of graphs of groups with trivial edge groups and explore lifting maps of the quotient graph of groups to twisted equivariant maps of the tree \(T\).</summary></entry><entry><title type="html">More On Free Splittings</title><link href="http://localhost:4000/2021/12/29/More-on-Free-Splittings.html" rel="alternate" type="text/html" title="More On Free Splittings" /><published>2021-12-29T00:00:00-05:00</published><updated>2021-12-29T00:00:00-05:00</updated><id>http://localhost:4000/2021/12/29/More-on-Free-Splittings</id><content type="html" xml:base="http://localhost:4000/2021/12/29/More-on-Free-Splittings.html">&lt;p&gt;Let \(F\) be a group.
-A &lt;em&gt;free splitting&lt;/em&gt; of \(F\) is a simplicial tree \(T\)
-equipped with an \(F\)-action
-such that edge stabilizers are trivial.
-I’ve been thinking a lot about free splittings;
-here are some of my musings.
-There isn’t really a punch line here,
-but since it was clarifying to write this, I may as well post it.&lt;/p&gt;
-
-&lt;p&gt;We are interested in free splittings where there are finitely many orbits of edges
-and some vertex has infinite stabilizer.
-In this case, Bass–Serre theory shows that \(F\)
-is a free product of the form&lt;/p&gt;
-
-\[F = A_1*\cdots*A_n*F_k\]
-
-&lt;p&gt;where the \(A_i\) are countable groups
-(at least one of which is infinite)
-and \(F_k\) is a free group of finite rank \(k\).&lt;/p&gt;
-
-&lt;h2 id=&quot;the-gromov-boundary-of-t&quot;&gt;The Gromov boundary of \(T\)&lt;/h2&gt;
-
-&lt;p&gt;Fix a basepoint \(p \in T\).
-A &lt;em&gt;geodesic ray&lt;/em&gt; in \(T\) based at \(p\)
-is a proper embedding \(\xi\colon [0,\infty) \to T\)
-such that \(\xi(0) = p\).
-We are really interested in the image of \(\xi\) more than the map.
-Similarly we have &lt;em&gt;geodesics;&lt;/em&gt; embeddings \([0,1] \to T\).
-Every path in \(T\) is homotopic rel endpoints to a unique geodesic or to a constant map.
-Let \(\partial_\infty T\) denote the set of geodesic rays in \(T\) based at \(p\).
-This is the &lt;em&gt;Gromov boundary&lt;/em&gt; of \(T\).
-We may topologize \(T \cup \partial_\infty T\) by giving \(T\) the usual topology
-and defining basic open neighborhoods of boundary points in the following way.
-Given a boundary point \(\xi\), the basic open neighborhood is determined by a finite subpath
-\(\gamma\) of the ray \(\xi\);
-the basic open set \(N(\gamma)\) consists of those points \(x \in T \cup \partial_\infty T\)
-such that the geodesic from \(p\) to \(x\) contains \(\gamma\).
-In &lt;a href=&quot;/blog/2021-07-25-Boundaries-of-free-splittings.html&quot;&gt;July&lt;/a&gt;, we showed that in our situation,
-if all the groups \(A_i\) are countable and one is countably infinite,
-then the Gromov boundary of \(T\) is homeomorphic (in the subspace topology) to the Baire space.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-observers-topology&quot;&gt;The observer’s topology&lt;/h2&gt;
-
-&lt;p&gt;We may give \(T \cup \partial_\infty T\) a different topology
-that makes it into a compact space:
-this is the &lt;em&gt;observer’s topology,&lt;/em&gt; coined by &lt;a href=&quot;https://projecteuclid.org/journals/illinois-journal-of-mathematics/volume-51/issue-3/Non-unique-ergodicity-observers-topology-and-the-dual-algebraic-lamination/10.1215/ijm/1258131109.full&quot;&gt;Coulbois, Hilion and Lustig&lt;/a&gt;.
-Let \(x \in T\) be a point.
-A &lt;em&gt;half-tree&lt;/em&gt; based at \(x\) is a component of \(T \setminus \{x\}\).
-A subbasis for the observer’s topology on \(T \cup \partial_\infty T\) 
-is given by the set of half-trees;
-where we say a boundary point \(\xi \in \partial_\infty T\) belongs to a half-tree
-if the corresponding geodesic ray has infinite intersection with the half-tree.
-In our situation, where the groups \(A_i\) are countable,
-the tree \(T\) has countably many edges, so has a countable dense subset.
-Since every point supports at most countably many half-trees,
-it follows that the observer’s topology on \(T \cup \partial_\infty T\) is second countable.
-Thus it makes sense to talk about the topology in terms of convergent sequences:
-a sequence \(\{x_n\} \in T \cup \partial_\infty T\) converges to a point \(x\)
-if for every point \(y \ne x\),
-the points \(x_n\) belong to the same half-tree at \(y\) as \(x\) for \(n\) sufficiently large.&lt;/p&gt;
-
-&lt;p&gt;Coulbois, Hilion and Lustig show that \(T \cup \partial_\infty T\) is compact in the observer’s topology.
-Here is their argument:
-suppose \(\{x_n\}\) is a sequence,
-and let \(\{U_i\}\) be a countable set of half-trees 
-generating the topology on \(T \cup \partial_\infty T\)
-For each \(U_i\), we may, after passing to a subsequence,
-assume that \(x_n\) either belongs to \(U_i\) or not for \(n\) large.
-Now note that the intersection of (the images of) two (distinct)
-geodesics or geodesic rays based at \(p\)
-is either a point or a geodesic.
-Let \(\gamma_n\) denote the geodesic or geodesic ray from \(p\) to \(x_n\),
-and consider the geodesic&lt;/p&gt;
-
-\[I_k = \bigcap_{m \ge k} \gamma_m.\]
-
-&lt;p&gt;Observe that \(I_k \subset I_{k+1}\), so&lt;/p&gt;
-
-\[\overline{\bigcup_k I_k}\]
-
-&lt;p&gt;is a geodesic or geodesic ray; let its endpoint be \(x\).
-We will show that our subsequence \(\{x_n\}\) converges to \(x\).
-Suppose for \(n \ge N\) we have that \(x_n \notin U_i\).
-Then for any finite collection of such \(x_n\),
-the subtree spanned by the collection is entirely outside \(U_i\),
-since the (closed) complement of a half-tree is convex.
-The nearest point to \(p\) belongs to this spanning subtree,
-so inductively this shows that the endpoint of \(I_k\) is outside \(U_i\) for large \(k\).
-It follows that \(x \notin U_i\). 
-Therefore if \(x \in U_i\), then infinitely many,
-and thus all but finitely many of the \(x_n\) belong to \(U_i\),
-showing that the sequence \(\{x_n\}\) converges to \(x\).&lt;/p&gt;
-
-&lt;p&gt;Next we would like to show that the topology induced on \(\partial_\infty T\)
-agrees with the one above.
-Suppose \(\{x_n\}\) converges to \(\xi \in \partial_\infty T\) in the observer’s topology,
-so for any point \(y \in T\),
-the points \(x_n\) belong to the same half-tree at \(y\) as \(\xi\) for \(n\) large.
-Taking the points \(y\) to be on the geodesic ray \(\xi\)
-shows that the geodesic or geodesic ray from \(p\) to \(x_n\)
-must contain any finite subpath of \(\xi\) for \(n\) large.
-If conversely the geodesic or geodesic ray from \(p\) to \(x_n\)
-contains any finite subpath of \(\xi\) for \(n\) sufficiently large,
-then if the intersection of the ray \(\xi\) with a given half-tree is infinite,
-we may take a finite subpath \(\gamma\) so large that it ends inside the half-tree.
-If the geodesic or geodesic ray from \(p\) to \(x_n\) contains \(\gamma\),
-then since \(T\) is a tree, we conclude that \(x_n\) belongs to the half-tree.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-bowditch-boundary-of-t&quot;&gt;The Bowditch Boundary of \(T\)&lt;/h2&gt;
-
-&lt;p&gt;It’s not hard to see that if \(x \in T\) is a point of finite valence,
-(i.e. either a vertex of finite valence or a point in the interior of an edge)
-then there is a basic open set containing \(x\) that contains only points of finite valence.
-If we write \(V_\infty(T)\) for the set of vertices of infinite valence,
-this argument shows that \(\partial T = \partial_\infty T \cup V_\infty(T)\)
-is closed in the observer’s topology,
-hence it is compact.
-This is the &lt;em&gt;Bowditch boundary&lt;/em&gt; of \(T\).
-In fact, we showed in &lt;a href=&quot;/blog/2021-07-25-Boundaries-of-free-splittings.html&quot;&gt;July&lt;/a&gt; that \(\partial T\) is a Cantor set;
-one might think of the points \(V_\infty(T)\) as being akin to the rational points
-of the standard middle-thirds Cantor set.&lt;/p&gt;
-
-&lt;h2 id=&quot;laminations&quot;&gt;Laminations&lt;/h2&gt;
-
-&lt;p&gt;Consider the space&lt;/p&gt;
-
-\[\tilde{\mathcal{B}}(T) = ((\partial T \times \partial T)\setminus \Delta )/ \mathbb{Z}/2\mathbb{Z}\]
-
-&lt;p&gt;where \(\Delta\) is the diagonal and \(\mathbb{Z}/2\mathbb{Z}\) acts by interchanging the coordinates.
-Thus \(\tilde{\mathcal{B}}(T)\) is the space of unordered pairs of points
-in the Bowditch boundary of \(T\).
-The diagonal action of \(F\) on \(\partial T\) extends to an action on \(\tilde{\mathcal{B}}(T)\).
-A &lt;em&gt;lamination&lt;/em&gt; is an \(F\)-invariant closed subset of \(\tilde{\mathcal{B}}(T)\).&lt;/p&gt;
-
-&lt;p&gt;Given a point \(\xi \in \partial_\infty T\), there is a lamination \(\Lambda(\xi)\)
-called the &lt;em&gt;limit set&lt;/em&gt; of \(\xi\) defined as follows.
-A point \((\alpha,\omega) \in \tilde{\mathcal{B}}(T)\) belongs to \(\Lambda(\xi)\)
-if (possibly after swapping \(\alpha\) and \(\omega\)),
-there is a sequence \(\{g_n\}\) of elements of \(F\)
-such that the sequence \(\{g_n.p\}\) converges to \(\alpha\)
-and the sequence \(\{g_n.\xi\}\) converges to \(\omega\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Let \(F\) be a group. A free splitting of \(F\) is a simplicial tree \(T\) equipped with an \(F\)-action such that edge stabilizers are trivial. I’ve been thinking a lot about free splittings; here are some of my musings. There isn’t really a punch line here, but since it was clarifying to write this, I may as well post it.</summary></entry><entry><title type="html">Git For A Certain Kind Of Mathematician</title><link href="http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician.html" rel="alternate" type="text/html" title="Git For A Certain Kind Of Mathematician" /><published>2021-09-28T00:00:00-04:00</published><updated>2021-09-28T00:00:00-04:00</updated><id>http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician</id><content type="html" xml:base="http://localhost:4000/2021/09/28/Git-for-a-certain-kind-of-mathematician.html">&lt;p&gt;As a mathematician,
-I collaborate with other mathematicians on papers.
-I’ve used Overleaf, emailing the paper back and forth,
-and taking turns in Dropbox as my mode of collaboration.
-I &lt;em&gt;haven’t&lt;/em&gt; collaborated using Git, but I sure would like to.
-The purpose of this post is for mathematicians
-like for example my younger self,
-who are familiar with the command line
-and curious about Git as a tool,
-and for whatever reason don’t have the patience for something like “Git for Poets.”
-I explain Git just enough to get you started on a simple project,
-and hopefully enough so that you can start
-Googling things you’re unfamiliar with.
-I’m not an expert, and I expect my inexpertise to show.&lt;/p&gt;
-
-&lt;p&gt;Let’s start. There are two ways I typically start.
-The first way is 
-that I have files on my computer that I would like to use Git on.
-So I would open a command line,
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; over to where those files are (say &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;) and invoke
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;.
-This starts a new Git repository in the folder you’re in.&lt;/p&gt;
-
-&lt;p&gt;The other way is some Git repository already exists
-(probably on GitHub)
-and I would like to work on those files.
-In that case I would find the URL of that repository,
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; to the directory where I would like to put my copy of the repository,
-and invoke
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone &amp;lt;url&amp;gt;&lt;/code&gt;.
-This automatically creates a new folder with the contents of the repository,
-so if I was cloning &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ryleelyman/waver&lt;/code&gt; on GitHub, for instance,
-and I wanted it to end up in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;,
-I would run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone https://github.com/ryleelyman/waver.git&lt;/code&gt; 
-in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;Now Git is paying attention to the files in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Documents/waver&lt;/code&gt;,
-but by default it isn’t doing anything to them at all.
-You can see what it thinks by invoking &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt;.
-If you have files that have changed,
-Git will display them (in red, in my terminal).
-For example, when I run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git status&lt;/code&gt; in the
-directory for my website, it tells me&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Changes not staged for commit:
-  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to update what will be committed)
-  (use &quot;git restore &amp;lt;file&amp;gt;...&quot; to discard changes in working directory)
-        modified:   _site/blog.html
-        modified:   _site/feed.xml
-        modified:   _site/sitemap.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Git tracks changes based on “commits,”
-but in order for something to be committed
-Git needs to know that you want to commit it.
-That’s the business of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add &amp;lt;file&amp;gt;&lt;/code&gt; comment above.
-If we were to do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add _site/blog.html&lt;/code&gt;,
-we would be telling Git to prepare to commit
-the changes we made to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_site/blog.html&lt;/code&gt; file.
-To actually commit the changes from there we would do
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;.
-But! Don’t actually do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit&lt;/code&gt;.
-I prefer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;&amp;lt;message&amp;gt;&quot;&lt;/code&gt;.
-Git commits require a little blurb from you about the changes,
-and I find it much more convenient to just write that message
-on the command line.&lt;/p&gt;
-
-&lt;p&gt;Now Git knows about our changes locally.
-If we’re working with a remote repository, say on GitHub,
-we still need to update that repository.
-To do that we invoke &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;.
-If you started the repository with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;,
-you may need to setup GitHub (or whatever it is)
-to track the repository you created. 
-GitHub has nice instructions for this.
-To update our local repository with changes from the remote repository,
-we would do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Those are all the commands I use daily.
-I didn’t talk about Gits “branching” model,
-which is worth learning a bit about.
-I don’t know that I have anything cogent to say about it,
-so maybe I’ll stop here.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a mathematician, I collaborate with other mathematicians on papers. I’ve used Overleaf, emailing the paper back and forth, and taking turns in Dropbox as my mode of collaboration. I haven’t collaborated using Git, but I sure would like to. The purpose of this post is for mathematicians like for example my younger self, who are familiar with the command line and curious about Git as a tool, and for whatever reason don’t have the patience for something like “Git for Poets.” I explain Git just enough to get you started on a simple project, and hopefully enough so that you can start Googling things you’re unfamiliar with. I’m not an expert, and I expect my inexpertise to show.</summary></entry></feed>
+As already noted, we may simplify up to isogredience by assuming that the identity is periodic.&lt;/p&gt;</content><author><name></name></author><summary type="html">In the previous post, we defined free splittings for a group \(F\). The quotient of a free splitting \(T\) of \(F\) by the action of \(F\) is a graph of groups with trivial edge groups. The purpose of this post is to introduce maps of graphs of groups with trivial edge groups and explore lifting maps of the quotient graph of groups to twisted equivariant maps of the tree \(T\).</summary></entry></feed>

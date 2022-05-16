@@ -113,7 +113,7 @@ Two groupoids $$\mathcal{G}$$ and $$\mathcal{H}$$ are *Morita equivalent* if the
 and equivalences $$\mathcal{K} \to \mathcal{G}$$ and $$\mathcal{K} \to \mathcal{H}$$.
 Morita equivalent groupoids become isomorphic in Moerdijk's localization.
 
-## Maps using cover groupoids
+## Maps using refinement groupoids
 
 More concretely, I prefer the following approach.
 A *map* of étale groupoids $$f\colon \mathcal{G} \to \mathcal{H}$$ is a functor
