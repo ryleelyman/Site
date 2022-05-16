@@ -279,8 +279,8 @@ Therefore we have a bibundle $$X^{\mathcal{U}} \colon \mathcal{G}^{\mathcal{U}} 
 
 The bibundle $$X^{\mathcal{U}}$$ has a global section $$p_i \mapsto (p_i,s_i(p))$$.
 If $$(p_i,x)$$ is another point of $$X^{\mathcal{U}}$$,
-since $$X^{\mathcal{U}} \times_{\mathal{H}_0} \mathcal{H}_1$$ is homeomorphic to
-$$X^{\mathcal{U}}\times_{\mathcal{G}^{\mathcal{U}_0} X^{\mathcal{U}}$$,
+since $$X^{\mathcal{U}} \times_{\mathcal{H}_0} \mathcal{H}_1$$ is homeomorphic to
+$$X^{\mathcal{U}}\times_{\mathcal{G}^{\mathcal{U}}_0} X^{\mathcal{U}}$$,
 there exists a unique arrow $$h \in \mathcal{H}_1$$ such that $$(p_i,x) = (p_i,s_i(p)).h$$.
 We claim the map $$(p_i,x) \mapsto (p_i,h)$$
 from $$X^{\mathcal{U}}$$ to
