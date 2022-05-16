@@ -1,4 +1,257 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-14T14:08:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-14T21:27:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Maps-of-%C3%89tale-Groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Maps-of-%C3%89tale-Groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Maps-of-%C3%89tale-Groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
+I’d also like to explore a critique of Lerman
+explaining why it is problematic to identify maps that differ by a natural transformation.&lt;/p&gt;
+
+&lt;p&gt;We follow the notation for étale groupoids established in the &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;last post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
+
+&lt;p&gt;If \(\mathcal{G}\) and \(\mathcal{H}\) are étale groupoids,
+which are in particular &lt;em&gt;categories,&lt;/em&gt; a natural class of maps of étale groupoids to consider would be
+the &lt;em&gt;continuous functors.&lt;/em&gt;
+A functor \(f\colon \mathcal{G} \to \mathcal{H}\) is a pair of maps
+\(f_0\colon \mathcal{G}_0 \to \mathcal{H}_0\) and \(f_1\colon \mathcal{G}_1 \to \mathcal{H}_1\)
+that commute with the various structure maps.
+So for example we have \(\alpha f_1 = f_0 \alpha\) and \(\omega f_1 = f_0 \omega\).&lt;/p&gt;
+
+&lt;h2 id=&quot;example-refinement-groupoids&quot;&gt;Example: Refinement groupoids&lt;/h2&gt;
+
+&lt;p&gt;Given an étale groupoid \(\mathcal{G}\) and an open cover 
+\(\mathcal{U} = \{ U_i \}_{i \in I}\) of \(\mathcal{G}_0\),
+we construct a &lt;em&gt;refinement groupoid&lt;/em&gt; \(\mathcal{G}^{\mathcal{U}}\) and a functor
+\(\pi^{\mathcal{U}}\colon \mathcal{G}^{\mathcal{U}} \to \mathcal{G}\).
+The space of objects is the disjoint union \(\coprod_{i\in I} U_i\).
+For \(x \in U_i\), write the corresponding object of \(\mathcal{G}^{\mathcal{U}}\) as \(x_i\).
+The space of arrows \(\mathcal{G}^{\mathcal{U}}_1\) is the set&lt;/p&gt;
+
+\[\{f_{j,i} \colon x_i \to y_j : f\colon x \to y \in \mathcal{G}_1\}.\]
+
+&lt;p&gt;A basic open set for the topology on \(\mathcal{G}^{\mathcal{U}}_1\) is of the form \(V_{j,i}\)
+where \(V\subset \mathcal{G}_1\) is an open set
+and \(V_{j,i} = \{f_{j,i} \colon f \in V\}\).
+The functor \(\pi^{\mathcal{U}}\) is defined on objects as \(\pi^{\mathcal{U}}_0(x_i) = x\)
+and \(\pi^{\mathcal{U}}_1(f_{j,i}) = f\).&lt;/p&gt;
+
+&lt;p&gt;Like all functors, \(\pi^{\mathcal{U}}\) induces a continuous map of orbit spaces
+\(\overline{\pi^{\mathcal{U}}}\colon \mathcal{G}^{\mathcal{U}}_1\backslash\mathcal{G}^{\mathcal{U}}_0 
+\to \mathcal{G}_1\backslash\mathcal{G}_0\)
+and for each point \(x \in \mathcal{G}^{\mathcal{U}}_0\), a homomorphism of isotropy groups
+\(\pi^{\mathcal{U}}_x \colon \mathcal{G}^{\mathcal{U}}_x \to \mathcal{G}_{\pi^{\mathcal{U}}_0(x)}\).
+The functor \(\pi^{\mathcal{U}}\) is an &lt;em&gt;equivalence&lt;/em&gt; in the sense that
+the map \(\pi_0^{\mathcal{U}}\) is étale, the map \(\overline{\pi^{\mathcal{U}}}\) is a homeomorphism
+and each \(\pi^{\mathcal{U}}_x\) is an isomorphism.&lt;/p&gt;
+
+&lt;p&gt;One can show that in fact \(\pi^{\mathcal{U}}\)
+is an &lt;em&gt;equivalence of categories&lt;/em&gt; in the sense that it is &lt;em&gt;full, faithful&lt;/em&gt; and &lt;em&gt;essentially surjective.&lt;/em&gt;
+Here &lt;em&gt;full&lt;/em&gt; and &lt;em&gt;faithful&lt;/em&gt; refer to the fact that for every pair of objects \(x\) and \(y\)
+in \(\mathcal{G}^{\mathcal{U}}\), the map of sets&lt;/p&gt;
+
+\[\{f\colon x \to y\} \to \{f\colon \pi^{\mathcal{U}}_0(x) \to \pi^{\mathcal{U}}_0(y)\}\]
+
+&lt;p&gt;is surjective and injective, respectively.
+(This is packaged up in the fact that the map of orbit spaces is injective and that the maps on isotropy groups
+are isomorphisms.)
+&lt;em&gt;Essentially surjective&lt;/em&gt; means that every object in \(\mathcal{G}\) is isomorphic
+to an object in the image of \(\pi^{\mathcal{U}}\).
+(This is packaged up in the fact that the map of orbit spaces is surjective.)
+You should probably think of the étale condition on \(\pi^{\mathcal{U}}_0\)
+as being the extra sauce that distinguishes a continuous bijection from a homeomorphism.&lt;/p&gt;
+
+&lt;p&gt;Notice, however, that \(\pi^{\mathcal{U}}\) typically fails to have an inverse functor,
+even up to natural transformation (about which more in a second).
+I talked a little about this failure &lt;a href=&quot;/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html&quot;&gt;a long time ago&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Suppose the open cover \(\mathcal{V} = \{V_j\}_{j \in J}\) is a refinement of the open cover \(\mathcal{U}\),
+in the sense that for each \(j \in J\),
+there exists \(i \in I\) such that \(V_j \subset U_i\).
+A choice for each \(j\) of \(\varphi(j) \in I\) with this property
+defines a &lt;em&gt;refinement function&lt;/em&gt; \(\varphi \colon J \to I\).
+Associated to the choice of \(\varphi\), there is a continuous functor 
+\(\pi^{\varphi}\colon \mathcal{G}^{\mathcal{V}} \to \mathcal{G}^{\mathcal{U}}\)
+defined on objects as \(\pi^\varphi(x_j) = x_{\varphi(j)}\) and on arrows as
+\(\pi^{\varphi}(f_{j,i}) = f_{\varphi(j),\varphi(i)}\).
+This functor is also an equivalence and satisfies \(\pi^{\mathcal{U}}\pi^\varphi = \pi^{\mathcal{V}}\).&lt;/p&gt;
+
+&lt;h2 id=&quot;natural-transformations&quot;&gt;Natural transformations&lt;/h2&gt;
+
+&lt;p&gt;A &lt;em&gt;natural transformation&lt;/em&gt; \(\eta\colon \phi \Rightarrow \psi\) of (continuous) functors
+\(\phi\), \(\psi\colon \mathcal{G} \to \mathcal{H}\) is a continuous map
+\(\eta\colon \mathcal{G}_0 \to \mathcal{H}_1\) such that for each arrow \(f\colon x \to y\)
+in \(\mathcal{G}\), we have \(\eta(y)\circ \phi(f) = \psi(f) \circ \eta(x)\).
+(There’s a commutative square I’m deciding to omit. 
+Drawing it yourself when demonstrating naturality is very instructive.)
+Notice that because all arrows in groupoids are invertible,
+\(\eta\) is automatically a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Given two refinement functions \(\varphi\), \(\varphi&apos;\colon J \to I\),
+there is a natural transformation \(\eta\colon \pi^{\varphi} \Rightarrow \pi^{\varphi&apos;}\)
+defined as \(\eta(x_j) = (1_x)_{\varphi&apos;(j),\varphi(j)}\).
+It’s not too hard to see that this is continuous because the assignment \(x \mapsto 1_x\) is continuous,
+and for each arrow \(f_{j,i} \colon x_i \to y_j\) in \(\mathcal{G}^{\mathcal{V}}\)
+the following diagram commutes&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+    x_{\varphi(i)} @&amp;gt;{(1_x)_{\varphi&apos;(i),\varphi(i)}}&amp;gt;&amp;gt; x_{\varphi&apos;(i)} \\
+    @VV{f_{\varphi(j),\varphi(i)}}V @VV{f_{\varphi&apos;(j),\varphi&apos;(i)}}V \\
+    y_{\varphi(j)} @&amp;gt;{(1_y)_{\varphi&apos;(j),\varphi(j)}}&amp;gt;&amp;gt; y_{\varphi&apos;(j)}
+\end{CD}\]
+
+&lt;p&gt;because \(1_yf = f 1_x\).&lt;/p&gt;
+
+&lt;h2 id=&quot;localizing&quot;&gt;Localizing&lt;/h2&gt;
+
+&lt;p&gt;Given a category \(C\) with a class of arrows \(W\) satisfying &lt;a href=&quot;https://ncatlab.org/nlab/show/calculus+of+fractions&quot;&gt;certain conditions&lt;/a&gt;
+satisfied by the class of equivalences of étale groupoids
+one can construct a (relatively nice) category \(C[W^{-1}]\)
+in which the arrows are &lt;em&gt;spans&lt;/em&gt; of the form \(\begin{CD}x @&amp;lt;w&amp;lt;&amp;lt; y @&amp;gt;f&amp;gt;&amp;gt; z\end{CD}\),
+where \(w \in W\).
+Moerdijk constructed this localization for étale groupoids
+after first identifying two functors if they differ by a natural transformation.
+A &lt;em&gt;generalized map&lt;/em&gt; of étale groupoids is a map of this form.
+Two groupoids \(\mathcal{G}\) and \(\mathcal{H}\) are &lt;em&gt;Morita equivalent&lt;/em&gt; if there is a groupoid \(\mathcal{K}\)
+and equivalences \(\mathcal{K} \to \mathcal{G}\) and \(\mathcal{K} \to \mathcal{H}\).
+Morita equivalent groupoids become isomorphic in Moerdijk’s localization.&lt;/p&gt;
+
+&lt;h2 id=&quot;maps-using-cover-groupoids&quot;&gt;Maps using cover groupoids&lt;/h2&gt;
+
+&lt;p&gt;More concretely, I prefer the following approach.
+A &lt;em&gt;map&lt;/em&gt; of étale groupoids \(f\colon \mathcal{G} \to \mathcal{H}\) is a functor
+\(\mathcal{f}^{\mathcal{U}} \colon \mathcal{G}^{\mathcal{U}} \to \mathcal{H}\),
+where \(\mathcal{G}^{\mathcal{U}}\) is a refinement groupoid of \(\mathcal{G}\).
+Two functors \(\phi\colon \mathcal{G}^{\mathcal{U}} \to \mathcal{H}\) 
+and \(\psi\colon \mathcal{G}^{\mathcal{V}} \to \mathcal{H}\)
+&lt;em&gt;define the same generalized map&lt;/em&gt; if there exists a common refinement 
+\(\mathcal{W}\) of \(\mathcal{U}\) and \(\mathcal{V}\)
+such that for some (and hence any) choice of refinement functions \(\varphi\colon \mathcal{W} \to \mathcal{U}\)
+and \(\varphi&apos;\colon \mathcal{W} \to \mathcal{V}\),
+the following diagram commutes up to a natural transformation 
+\(\eta\colon \phi\pi^{\varphi} \Rightarrow \psi\pi^{\varphi&apos;}\)&lt;/p&gt;
+
+\[\begin{CD}
+\mathcal{G}^{\mathcal{W}} @&amp;gt;\pi^\varphi&amp;gt;&amp;gt; \mathcal{G}^{\mathcal{U}} \\
+@VV\pi^{\varphi&apos;}V  @VV\phi V \\
+\mathcal{G}^{\mathcal{V}} @&amp;gt;\psi&amp;gt;&amp;gt; \mathcal{H}.
+\end{CD}\]
+
+&lt;p&gt;Given maps \(f\colon \mathcal{G} \to \mathcal{H}\) and \(g\colon \mathcal{H} \to \mathcal{K}\)
+represented by functors \(f^{\mathcal{U}}\) and \(g^{\mathcal{V}}\),
+write \(\mathcal{V} = \{V_j\}_{j\in J}\) and let \(\mathcal{W} = \{W_i\}_{i\in I}\) be a refinement
+of \(\mathcal{U}\) with the property that there is a function \(\theta\colon I \to J\)
+such that \(f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(W_i) \subset V_{\theta(i)}\)
+for all \(i \in I\), where 
+\(\pi^{\mathcal{U},\mathcal{W}}\colon \mathcal{G}^{\mathcal{W}} \to \mathcal{G}^{\mathcal{U}}\) 
+is some choice of refinement functor.
+There is a functor \(f^{\mathcal{V},\mathcal{W}}\colon \mathcal{G}^{\mathcal{W}}\to\mathcal{H}^{\mathcal{V}}\)
+defined on objects as&lt;/p&gt;
+
+\[f^{\mathcal{V},\mathcal{W}}(x_i) = (f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(x_i))_{\theta(i)}\]
+
+&lt;p&gt;and on arrows as&lt;/p&gt;
+
+\[f^{\mathcal{V},\mathcal{W}}(f_{j,i}) =
+(f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(f_{j,i}))_{\theta(j),\theta(i)}.\]
+
+&lt;p&gt;We define the composite map \(gf\colon \mathcal{G} \to \mathcal{K}\) to be the map represented by the functor
+\(g^{\mathcal{V}}f^{\mathcal{V},\mathcal{W}} \colon \mathcal{G}^{\mathcal{W}} \to \mathcal{K}\).
+It is perhaps not immediately obvious that this composition is well-defined and associative,
+but we assure the reader that it is and that the reader probably does not want to read a demonstration.&lt;/p&gt;
+
+&lt;p&gt;One can check more or less by hand that every span in the sense above
+defines a generalized map in our sense and conversely
+so that the category of étale groupoids where the arrows are our generalized maps
+coincides with Moerdijk’s.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibundles&quot;&gt;Bibundles&lt;/h2&gt;
+
+&lt;p&gt;To me, the less-familiar approach is to use &lt;em&gt;bibundles.&lt;/em&gt;
+In this section I follow &lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman’s article&lt;/a&gt;.
+We begin as follows.
+A &lt;em&gt;right action&lt;/em&gt; of an étale groupoid \(\mathcal{G}\) on a space \(x\)
+is the following data:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a map \(a \colon X \to \mathcal{G}_0\) called the &lt;em&gt;anchor&lt;/em&gt; and&lt;/li&gt;
+  &lt;li&gt;a map&lt;/li&gt;
+&lt;/ul&gt;
+
+\[X \times_{\mathcal{G}_0} \mathcal{G}_1 = \{(x,f) \in X \times \mathcal{G}_1 : a(x) = \omega(f)\} 
+\to X, \qquad (x,f) \mapsto x.f\]
+
+&lt;p&gt;called the &lt;em&gt;action&lt;/em&gt; such that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(a(x.f) = \alpha(f)\) for all \(x\) and \(f\) for which \(x.f\) is defined&lt;/li&gt;
+  &lt;li&gt;\((x.f).g = x.(fg)\) when appropriate and&lt;/li&gt;
+  &lt;li&gt;\(x.1_{a(x)} = x\) for all \(x \in X\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is similarly a definition of a &lt;em&gt;left&lt;/em&gt; action of a groupoid on a space.&lt;/p&gt;
+
+&lt;p&gt;If \(X\) is equipped with a right action of an étale groupoid \(\mathcal{G}\),
+we say that \(X\) is a &lt;em&gt;principal (right) \(\mathcal{G}\)-bundle over B&lt;/em&gt;
+if there is an open surjection \(\pi\colon X \to B\) such that&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(\pi(x.f) = \pi(x)\) for all \((x,f) \in X\times_{\mathcal{G}_0} \mathcal{G}_1\)—we
+describe this by saying that \(\pi\) is &lt;em&gt;\(\mathcal{G}\)-invariant,&lt;/em&gt; and&lt;/li&gt;
+  &lt;li&gt;the map \((x,f) \mapsto (x,x.f)\) is a homeomorphism
+\(X\times_{\mathcal{G}_0}\mathcal{G}_1 \to X \times_B X\);
+in other words \(\mathcal{G}\) acts freely and transitively on the fibers of \(\pi\colon X \to B\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Given an étale groupoid \(\mathcal{G}\), the target map \(\omega\colon \mathcal{G}_1 \to \mathcal{G}_0\)
+makes \(\mathcal{G}_1\) into a right principal \(\mathcal{G}\)-bundle,
+where the action of \(\mathcal{G}\) is right-multiplication 
+and the anchor is \(\alpha\colon \mathcal{G}_1 \to \mathcal{G}_0\).&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;bibundle&lt;/em&gt; from \(\mathcal{G}\) to \(\mathcal{H}\)
+is a space \(X\) together with \(a_L \colon X \to \mathcal{G}_0\) and \(a_R \colon X \to \mathcal{H}_0\)
+such that the following properties hold.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There is a left action of \(\mathcal{G}\) on \(X\) with respect to the anchor \(a_L\)
+and a right action of \(\mathcal{H}\) on \(X\) with respect to the anchor \(a_R\).
+These actions commute.&lt;/li&gt;
+  &lt;li&gt;The map \(a_L \colon X \to \mathcal{G}_0\) makes \(X\) a principal \(\mathcal{H}\)-bundle.&lt;/li&gt;
+  &lt;li&gt;The map \(a_R\) is \(\mathcal{G}\)-invariant in the sense that \(a_R(g.x) = a_R(x)\) for all \((g,x)\)
+for which \(g.x\) is defined.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two bibundles \(X,Y \colon \mathcal{G} \to \mathcal{H}\) are &lt;em&gt;isomorphic&lt;/em&gt;
+if there is a \(\mathcal{G}\)–\(\mathcal{H}\)-equivariant homeomorphism \(\eta\colon X \to Y\),
+i.e. \(\eta(g.x.f) = g.\eta(x).f\) for all triples for which the actions are defined.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibundles-defined-by-functors&quot;&gt;Bibundles defined by functors&lt;/h2&gt;
+
+&lt;p&gt;Given a functor \(\phi \colon \mathcal{G} \to \mathcal{H}\), there is a bibundle \(X_\phi\)
+where&lt;/p&gt;
+
+\[X_\phi = \{ (x,f) \in \mathcal{G}_0 \times \mathcal{H}_1 : \phi_0(x) = \omega(f)\}\]
+
+&lt;p&gt;and \(B\) is \(\mathcal{G}_0\). The right action of \(\mathcal{H}\) is the restriction of the obvious action
+on the product \(\mathcal{G}_0 \times \mathcal{H}_1\).
+In other words, \((x,f).h = (x,fh)\).
+The left action of \(\mathcal{G}\) over the anchor \((x,f) \mapsto x\)
+is defined by \(g.(x,f) = (\omega(g),\phi_1(g)h)\).
+It is clear that the actions commute,
+and that the map \(a_R\) defined by \((x,f) \mapsto \alpha(f)\) is \(\mathcal{G}\)-invariant,
+since \(a_R(g.(x,f)) = \alpha(\phi_1(g)f) = \alpha(f)\).&lt;/p&gt;
+
+&lt;p&gt;Let us check that \((x,f) \mapsto x\) makes \(X_\phi\) into a principal \(\mathcal{H}\)-bundle.
+The projection \((x,f) \mapsto x\) is certainly an open surjection which is \(\mathcal{H}\)-invariant.
+Consider the map \(((x,f),g) \mapsto ((x,f),(x,fg))\)
+from \(X_\phi \times_{\mathcal{H}_0}\mathcal{H}_1 \to X_\phi \times_{\mathcal{G}_0} X_\phi\).
+We claim that this is a homeomorphism,
+indeed that the map \(((x,f),(x,g)) \mapsto ((x,f),f^{-1}g)\) is a continuous inverse.
+To see that this is well-defined notice that
+the multiplication \(f^{-1}g\) is defined, since \(\phi_0(x) = \omega(f) = \omega(g)\).&lt;/p&gt;
+
+&lt;p&gt;Bibundles may be composed (I’ll neglect to mention &lt;em&gt;how&lt;/em&gt;),
+but the composition is only associative up to isomorphism of bibundles.
+If one thinks of isomorphisms between bibundles as being akin to natural transformations
+(indeed, naturally isomorphic functors have isomorphic associated bibundles),
+then the category of étale groupoids with arrows bibundles is what’s called a &lt;em&gt;weak&lt;/em&gt; \(2\)-category.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-equivalence-of-the-two-approaches&quot;&gt;The equivalence of the two approaches&lt;/h2&gt;
+
+&lt;p&gt;This post is already quite long, but I wanted to explain how to see that bibundles
+give rise to generalized maps in our sense.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to explore two or three notions of a map between étale groupoids. I’d also like to explore a critique of Lerman explaining why it is problematic to identify maps that differ by a natural transformation.</summary></entry><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
 Time to rectify this situation.
 The purpose of this post is to explain how to see graphs of groups as étale groupoids.
 In a later post I’d like to explore the notion of maps between étale groupoids.&lt;/p&gt;
@@ -1237,105 +1490,4 @@ we would do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g
 I didn’t talk about Gits “branching” model,
 which is worth learning a bit about.
 I don’t know that I have anything cogent to say about it,
-so maybe I’ll stop here.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a mathematician, I collaborate with other mathematicians on papers. I’ve used Overleaf, emailing the paper back and forth, and taking turns in Dropbox as my mode of collaboration. I haven’t collaborated using Git, but I sure would like to. The purpose of this post is for mathematicians like for example my younger self, who are familiar with the command line and curious about Git as a tool, and for whatever reason don’t have the patience for something like “Git for Poets.” I explain Git just enough to get you started on a simple project, and hopefully enough so that you can start Googling things you’re unfamiliar with. I’m not an expert, and I expect my inexpertise to show.</summary></entry><entry><title type="html">Boundaries Of Free Splittings</title><link href="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html" rel="alternate" type="text/html" title="Boundaries Of Free Splittings" /><published>2021-07-25T00:00:00-04:00</published><updated>2021-07-25T00:00:00-04:00</updated><id>http://localhost:4000/2021/07/25/Boundaries-of-free-splittings</id><content type="html" xml:base="http://localhost:4000/2021/07/25/Boundaries-of-free-splittings.html">&lt;p&gt;The other day on Twitter I asked whether it might be the case that a non-proper
-hyperbolic metric space might still have locally compact Gromov boundary.
-I was particularly interested in the case of a simplicial tree
-equipped with the path metric where each edge has length \(1\)
-with some vertices of infinite valence.
-The answer in this case is &lt;em&gt;no.&lt;/em&gt;
-Instead, the boundary of such a tree is homeomorphic to the &lt;em&gt;Baire space&lt;/em&gt; \(\mathbb{N}^\mathbb{N}\).
-In this post I’ll talk through why this is the case.
-There is also a notion of a &lt;em&gt;Bowditch boundary&lt;/em&gt; for a tree with vertices of infinite valence.
-I’d like to show that the Bowditch boundary of such a tree is a Cantor set.&lt;/p&gt;
-
-&lt;p&gt;The trees we are interested in are Bass–Serre trees associated to free splittings of countable groups
-with the property that some vertex group is infinite.
-Let \(T\) be such a tree.
-Then \(T\) admits a cocompact group action, has countably infinitely many edges
-and has a vertex of countably infinite valence.
-We can give \(T\) the structure of a metric space by considering the path metric
-where each edge is assigned length \(1\).
-The “identity map” from \(T\) as a simplicial complex to \(T\) as a metric space
-is continuous, but its inverse is not.
-The property that \(T\) admits a cocompact group action
-implies that any geodesic ray (isometric embedding of \(\mathbb{R}_{\ge 0}\))
-passes through infinitely many vertices of infinite valence.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-gromov-boundary-of-t&quot;&gt;The Gromov boundary of \(T\)&lt;/h2&gt;
-&lt;p&gt;Fix a point \(p\) in \(T\).
-The Gromov boundary \(\partial_\infty T\) of \(T\) is the set of geodesic rays in \(T\) beginning at \(p\).
-(It turns out that the Gromov boundary is independent of the choice of basepoint.)
-Let \(J\) be a (finite) geodesic segment in \(T\) beginning at \(p\).
-A basic open set \(U_J\) for the topology on \(\partial_\infty T\)
-is given by the set of geodesic rays that contain \(J\) as a subpath.
-I’ll leave it to show you that the intersection of basic open sets is either empty or another basic open set.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-baire-space&quot;&gt;The Baire space&lt;/h2&gt;
-&lt;p&gt;The Baire space \(\mathbb{N}^\mathbb{N}\) is homeomorphic to the irrational numbers.
-A theorem of Alexandrov and Urysohn says that
-the Baire space is characterized up to homeomorphism by the following properties.
-It is a (nonempty) &lt;em&gt;Polish space,&lt;/em&gt; meaning it is &lt;em&gt;separable&lt;/em&gt; and &lt;em&gt;completely metrizable.&lt;/em&gt;
-It is &lt;em&gt;zero-dimensional,&lt;/em&gt; meaning it has a basis of clopen sets.
-Finally, every compact subset has empty interior.&lt;/p&gt;
-
-&lt;p&gt;To show that the Gromov boundary of \(T\) is homeomorphic to the Baire space,
-we will verify these properties.
-It is completely metrizable by general theory.
-There are countably infinitely many finite geodesic segments in \(T\) beginning at \(p\)
-(one for each vertex of \(T\)),
-so \(\partial_\infty T\) is second countable, and in particular separable.
-A basic closed set of \(\partial_\infty T\) is given by the set of those geodesic rays
-that do &lt;em&gt;not&lt;/em&gt; contain a geodesic segment \(J\) as a subpath.
-It’s not hard to find a collection of geodesic segments such that any geodesic ray
-that does not contain any of these geodesic segments as a subpath must contain \(J\) as a subpath.
-I’ll leave the details to you.
-Therefore \(\partial_\infty T\) has a basis of clopen sets.
-To show that every compact subset has empty interior,
-it suffices to show that our basic clopen sets are never compact.
-To see this, continue \(J\) until you reach a vertex of infinite valence,
-giving us a new finite geodesic segment \(J&apos;\).
-Write \(U_J \setminus U_{J&apos;}\) as a finite disjoint union of basic open sets,
-and \(U_{J&apos;}\) as the infinite disjoint union of the \(U_{J&apos;&apos;}\),
-where \(J&apos;&apos;\) is one edge longer than \(J&apos;\).
-The result is an open cover of \(U_J\) with no finite subcover.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-bowditch-boundary&quot;&gt;The Bowditch boundary&lt;/h2&gt;
-&lt;p&gt;The &lt;em&gt;Bowditch boundary&lt;/em&gt; of \(T\) is the set \(\partial T = \partial_\infty T \cup V_\infty(T)\),
-where \(V_\infty(T)\) denotes the set of vertices of \(T\) with infinite valence.
-The Bowditch boundary carries with it the &lt;em&gt;observer’s topology,&lt;/em&gt; which we now describe.
-Given two points \(q\) and \(r\) in \(T\), the &lt;em&gt;direction of \(r\) at \(q\)&lt;/em&gt; is the component of \(T\setminus \{q\}\)
-that contains \(r\).
-We continue to think of points of \(\partial_\infty T\) as geodesic rays based at \(p\);
-for convenience suppose that \(p\) is either in the interior of an edge or a vertex with finite valence.
-We may additionally think of a point \(v \in V_\infty(T)\)
-as being represented by the geodesic segment from \(p\) to \(v\).
-We say that a point of \(\partial T\) belongs to a direction if the
-corresponding geodesic starting at \(p\) is contained in the direction.
-The set of directions in \(T\) forms a subbasis for the observer’s topology on \(\partial T\);
-thus a basic open set is given by a finite intersection of directions of \(T\).
-Put another way, a basic open set is given by the set of those geodesics based at \(p\)
-that avoid a given finite subset of \(T\).
-We can always take this finite set to be a set of vertices or midpoints of edges,
-so the observer’s topology is second countable.&lt;/p&gt;
-
-&lt;p&gt;We’d like to show that the Bowditch boundary of \(T\) is a Cantor set.
-It is clear that \(\partial T\) has no isolated points.
-It is compact and Hausdorff by general theory.
-Thus it suffices to show that our basis elements are clopen.
-We will show that our open basic open sets are compact.
-Indeed, let \(U\) be a basic open set determined by the finite set of points \(\{z_1,\dotsc,z_n\} \subset T\),
-and let \(\{U_{\alpha}\}_{\alpha\in I}\) be an open cover of \(U\) by basic open sets,
-which are determined by finite sets of points containing \(\{z_1,\dotsc, z_n\}\) as a subset.
-Take \(U_\alpha \in I\).
-Then there are finitely many points \(z_{n+1},\dotsc,z_{n+k}\) determining \(U_\alpha\) and contained in \(U\).
-For each \(z_{n+i}\) for \(i\) satisfying \(1 \le i \le k\), we can find \(\alpha_i \in I\)
-such that \(U_{\alpha_i}\) contains \(z_{n+i}\).
-Then \(U_\alpha,U_{\alpha_1},\dotsc,U_{\alpha_k}\) is a finite subcover of \(U\).&lt;/p&gt;
-
-&lt;h2 id=&quot;a-parallel-example&quot;&gt;A parallel example&lt;/h2&gt;
-&lt;p&gt;Let the Cantor space be \(\{0,1\}^{\mathbb{N}}\).
-The subspace of sequences which are eventually constant is countable and dense.
-The subspace of sequences which are &lt;em&gt;not&lt;/em&gt; eventually constant is
-&lt;a href=&quot;https://math.stackexchange.com/a/254381/447318&quot;&gt;homeomorphic to the Baire space&lt;/a&gt;.
-This is more or less what is happening here: we add countably many points to
-our non-locally compact Gromov boundary to get the compact Bowditch boundary.&lt;/p&gt;</content><author><name></name></author><summary type="html">The other day on Twitter I asked whether it might be the case that a non-proper hyperbolic metric space might still have locally compact Gromov boundary. I was particularly interested in the case of a simplicial tree equipped with the path metric where each edge has length \(1\) with some vertices of infinite valence. The answer in this case is no. Instead, the boundary of such a tree is homeomorphic to the Baire space \(\mathbb{N}^\mathbb{N}\). In this post I’ll talk through why this is the case. There is also a notion of a Bowditch boundary for a tree with vertices of infinite valence. I’d like to show that the Bowditch boundary of such a tree is a Cantor set.</summary></entry></feed>
+so maybe I’ll stop here.&lt;/p&gt;</content><author><name></name></author><summary type="html">As a mathematician, I collaborate with other mathematicians on papers. I’ve used Overleaf, emailing the paper back and forth, and taking turns in Dropbox as my mode of collaboration. I haven’t collaborated using Git, but I sure would like to. The purpose of this post is for mathematicians like for example my younger self, who are familiar with the command line and curious about Git as a tool, and for whatever reason don’t have the patience for something like “Git for Poets.” I explain Git just enough to get you started on a simple project, and hopefully enough so that you can start Googling things you’re unfamiliar with. I’m not an expert, and I expect my inexpertise to show.</summary></entry></feed>

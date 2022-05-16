@@ -1529,6 +1529,8 @@
 ::-webkit-search-cancel-button	_site/assets/css/style.css	/^[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -web/;"	s
 ::-webkit-search-decoration	_site/assets/css/style.css	/^[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -web/;"	s
 :root	_site/assets/css/styles.css	/^:root { --measure: 60ch; --brightfg: #B7526A; --brightbg: #F8F9BD; --dullbg: #E1DCEA; --darkbg: /;"	s
+A Cut Vertex Lemma	_site/2022/05/10/A-Cut-Vertex-Lemma.html	/^      <h1>A Cut Vertex Lemma<\/h1>$/;"	h
+A Cut Vertex Lemma	_site/blog.html	/^    <h2><a href="\/2022\/05\/10\/A-Cut-Vertex-Lemma.html">A Cut Vertex Lemma<\/a><\/h2>$/;"	i
 A Digression	_site/2019/07/13/A-Digression.html	/^      <h1>A Digression<\/h1>$/;"	h
 A Digression	_site/blog.html	/^    <h2><a href="\/2019\/07\/13\/A-Digression.html">A Digression<\/a><\/h2>$/;"	i
 A Mathematical Postcard	_site/2021/06/09/A-Mathematical-Postcard.html	/^      <h1>A Mathematical Postcard<\/h1>$/;"	h
@@ -1553,6 +1555,14 @@ An Equivalent Definition of Equivalence of Categories	_posts/2020-08-02-The-Axio
 An Equivalent Definition of Equivalence of Categories	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="an-equivalent-definition-of-equivalence-of-categories">An Equivalent Definition of Equiv/;"	i
 Background on graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Background on graphs of groups$/;"	s
 Background on graphs of groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	i
+Bibundles	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Bibundles$/;"	s
+Bibundles	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Bibundles$/;"	s
+Bibundles	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Bibundles$/;"	s
+Bibundles	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="bibundles">Bibundles<\/h2>$/;"	i
+Bibundles defined by functors	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Bibundles defined by functors$/;"	s
+Bibundles defined by functors	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Bibundles defined by functors$/;"	s
+Bibundles defined by functors	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Bibundles defined by functors$/;"	s
+Bibundles defined by functors	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="bibundles-defined-by-functors">Bibundles defined by functors<\/h2>$/;"	i
 Blowing up ideal edges	_posts/2022-03-27-Ideal-edges.md	/^## Blowing up ideal edges$/;"	s
 Blowing up ideal edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="blowing-up-ideal-edges">Blowing up ideal edges<\/h2>$/;"	i
 Boundaries Of Free Splittings	_site/2021/07/25/Boundaries-of-free-splittings.html	/^      <h1>Boundaries Of Free Splittings<\/h1>$/;"	h
@@ -1576,6 +1586,10 @@ Edges do not cross	_posts/2021-06-27-The-Farey-graph.md	/^## Edges do not cross$
 Edges do not cross	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-do-not-cross">Edges do not cross<\/h2>$/;"	i
 Every Epimorphism Splits	_posts/2020-08-02-The-Axiom-of-Choice-is-False-for-Manifolds.md	/^## Every Epimorphism Splits$/;"	s
 Every Epimorphism Splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	i
+Example: Refinement groupoids	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Example: Refinement groupoids$/;"	s
+Example: Refinement groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Example: Refinement groupoids$/;"	s
+Example: Refinement groupoids	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Example: Refinement groupoids$/;"	s
+Example: Refinement groupoids	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="example-refinement-groupoids">Example: Refinement groupoids<\/h2>$/;"	i
 Examples of real trees	_posts/2021-06-21-Free-actions-on-real-trees.md	/^## Examples of real trees$/;"	s
 Examples of real trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="examples-of-real-trees">Examples of real trees<\/h2>$/;"	i
 Free Actions On Real Trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^      <h1>Free Actions On Real Trees<\/h1>$/;"	h
@@ -1586,20 +1600,26 @@ Free products of groups acting freely	_posts/2021-06-21-Free-actions-on-real-tre
 Free products of groups acting freely	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-products-of-groups-acting-freely">Free products of groups acting freely<\/h2>$/;"	i
 From Free Splittings To Graphs Of Groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^      <h1>From Free Splittings To Graphs Of Groups<\/h1>$/;"	h
 From Free Splittings To Graphs Of Groups	_site/blog.html	/^    <h2><a href="\/2022\/01\/06\/From-free-splittings-to-graphs-of-groups.html">From Free Splitt/;"	i
+Functors	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Functors$/;"	s
 Functors	_posts/2020-02-16-Category-Theory-Day-One.md	/^## Functors$/;"	s
+Functors	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Functors$/;"	s
+Functors	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Functors$/;"	s
 Functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
+Functors	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="functors">Functors<\/h2>$/;"	i
 Geometric Group Theory Without Boundaries	_site/2021/06/21/Geometric-group-theory-without-boundaries.html	/^      <h1>Geometric Group Theory Without Boundaries<\/h1>$/;"	h
 Geometric Group Theory Without Boundaries	_site/blog.html	/^    <h2><a href="\/2021\/06\/21\/Geometric-group-theory-without-boundaries.html">Geometric Group/;"	i
 Git For A Certain Kind Of Mathematician	_site/2021/09/28/Git-for-a-certain-kind-of-mathematician.html	/^      <h1>Git For A Certain Kind Of Mathematician<\/h1>$/;"	h
 Git For A Certain Kind Of Mathematician	_site/blog.html	/^    <h2><a href="\/2021\/09\/28\/Git-for-a-certain-kind-of-mathematician.html">Git For A Certain/;"	i
+Graphs Of Groups As Étale Groupoids	_site/2022/05/14/Graphs-of-groups-as-étale-groupoids.html	/^      <h1>Graphs Of Groups As Étale Groupoids<\/h1>$/;"	h
+Graphs Of Groups As Étale Groupoids	_site/blog.html	/^    <h2><a href="\/2022\/05\/14\/Graphs-of-groups-as-%C3%A9tale-groupoids.html">Graphs Of Groups/;"	i
 Graphs of groups as étale groupoids	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^## Graphs of groups as étale groupoids$/;"	s
-Graphs of groups as étale groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Graphs of groups as étale groupoids$/;"	s
+Graphs of groups as étale groupoids	_site/2022/05/14/Graphs-of-groups-as-étale-groupoids.html	/^<h2 id="graphs-of-groups-as-étale-groupoids">Graphs of groups as étale groupoids<\/h2>$/;"	i
 Graphs of groups with trivial edge groups	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^## Graphs of groups with trivial edge groups$/;"	s
 Graphs of groups with trivial edge groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="graphs-of-groups-with-trivial-edge-groups">Graphs of groups with trivial edge groups<\/h/;"	i
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/2021/07/01/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html	/^      <h1>Gromov Hyperbolicity For Arbitrary Metric Spaces<\/h1>$/;"	h
 Gromov Hyperbolicity For Arbitrary Metric Spaces	_site/blog.html	/^    <h2><a href="\/2021\/07\/01\/Gromov-hyperbolicity-for-arbitrary-metric-spaces.html">Gromov H/;"	i
 Groupoids	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^## Groupoids$/;"	s
-Groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Groupoids$/;"	s
+Groupoids	_site/2022/05/14/Graphs-of-groups-as-étale-groupoids.html	/^<h2 id="groupoids">Groupoids<\/h2>$/;"	i
 Hello World	_site/2019/06/22/Hello-World.html	/^      <h1>Hello World<\/h1>$/;"	h
 Hello World	_site/blog.html	/^    <h2><a href="\/2019\/06\/22\/Hello-World.html">Hello World<\/a><\/h2>$/;"	i
 Ideal Edges	_site/2022/03/27/Ideal-edges.html	/^      <h1>Ideal Edges<\/h1>$/;"	h
@@ -1611,8 +1631,18 @@ Laminations	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="laminations"
 Latest Posts	_site/blog.html	/^      <h1>Latest Posts<\/h1>$/;"	h
 Latest Posts	blog.html	/^<h1>Latest Posts<\/h1>$/;"	h
 Lipschitz	_site/Research.html	/^<div id="Lipschitz" style="display: none">$/;"	I
+Localizing	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Localizing$/;"	s
+Localizing	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Localizing$/;"	s
+Localizing	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Localizing$/;"	s
+Localizing	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="localizing">Localizing<\/h2>$/;"	i
+Maps Of Étale Groupoids	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^      <h1>Maps Of Étale Groupoids<\/h1>$/;"	h
+Maps Of Étale Groupoids	_site/blog.html	/^    <h2><a href="\/2022\/05\/14\/Maps-of-%C3%89tale-Groupoids.html">Maps Of Étale Groupoids<\/a/;"	i
 Maps of graphs of groups with trivial edge groups	_posts/2022-01-06-From-free-splittings-to-graphs-of-groups.md	/^## Maps of graphs of groups with trivial edge groups$/;"	s
 Maps of graphs of groups with trivial edge groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="maps-of-graphs-of-groups-with-trivial-edge-groups">Maps of graphs of groups with trivial/;"	i
+Maps using cover groupoids	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Maps using cover groupoids$/;"	s
+Maps using cover groupoids	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Maps using cover groupoids$/;"	s
+Maps using cover groupoids	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Maps using cover groupoids$/;"	s
+Maps using cover groupoids	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="maps-using-cover-groupoids">Maps using cover groupoids<\/h2>$/;"	i
 More On Free Splittings	_site/2021/12/29/More-on-Free-Splittings.html	/^      <h1>More On Free Splittings<\/h1>$/;"	h
 More On Free Splittings	_site/blog.html	/^    <h2><a href="\/2021\/12\/29\/More-on-Free-Splittings.html">More On Free Splittings<\/a><\/h2/;"	i
 Morphisms and maps of graphs of groups	_posts/2020-12-21-The-Train-Track-Algorithm-for-Graphs-of-Groups.md	/^## Morphisms and maps of graphs of groups$/;"	s
@@ -1621,6 +1651,10 @@ My latest point of confusion	_posts/2022-01-06-From-free-splittings-to-graphs-of
 My latest point of confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	i
 Natural Transformations	_posts/2020-02-16-Category-Theory-Day-One.md	/^### Natural Transformations$/;"	S	section:Functors
 Natural Transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	j
+Natural transformations	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## Natural transformations $/;"	s
+Natural transformations	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## Natural transformations $/;"	s
+Natural transformations	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## Natural transformations $/;"	s
+Natural transformations	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="natural-transformations">Natural transformations<\/h2>$/;"	i
 Nielsen Realization	_site/2021/06/12/Nielsen-Realization.html	/^      <h1>Nielsen Realization<\/h1>$/;"	h
 Nielsen Realization	_site/blog.html	/^    <h2><a href="\/2021\/06\/12\/Nielsen-Realization.html">Nielsen Realization<\/a><\/h2>$/;"	i
 Notes On Orbifolds	_site/2021/03/14/Notes-on-Orbifolds.html	/^      <h1>Notes On Orbifolds<\/h1>$/;"	h
@@ -1690,6 +1724,10 @@ The Yoneda Lemma	_posts/2020-02-16-Category-Theory-Day-One.md	/^### The Yoneda L
 The Yoneda Lemma	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="the-yoneda-lemma">The Yoneda Lemma<\/h3>$/;"	j
 The action of $$\\operatorname{SL}_2(\\mathbb{Z})$$	_posts/2021-06-27-The-Farey-graph.md	/^## The action of $$\\operatorname{SL}_2(\\mathbb{Z})$\$$/;"	s
 The action of \\(\\operatorname{SL}_2(\\mathbb{Z})\\)	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="the-action-of-operatornamesl_2mathbbz">The action of \\(\\operatorname{SL}_2(\\mathbb{Z}/;"	i
+The equivalence of the two approaches	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^## The equivalence of the two approaches$/;"	s
+The equivalence of the two approaches	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^## The equivalence of the two approaches$/;"	s
+The equivalence of the two approaches	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^## The equivalence of the two approaches$/;"	s
+The equivalence of the two approaches	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="the-equivalence-of-the-two-approaches">The equivalence of the two approaches<\/h2>$/;"	i
 The inverse image--pushforward adjunction	_posts/2020-07-26-A-Sheafy-Adjunction.md	/^## The inverse image--pushforward adjunction$/;"	s
 The inverse image–pushforward adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	i
 The norm	_posts/2022-04-02-The-star-graph.md	/^## The norm$/;"	s
@@ -1737,6 +1775,8 @@ b	_site/assets/css/style.css	/^b, strong { font-weight: 600; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: bolder; }$/;"	s
 b	_site/assets/css/style.css	/^b, strong { font-weight: inherit; }$/;"	s
 background-on-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="background-on-graphs-of-groups">Background on graphs of groups<\/h2>$/;"	I
+bibundles	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="bibundles">Bibundles<\/h2>$/;"	I
+bibundles-defined-by-functors	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="bibundles-defined-by-functors">Bibundles defined by functors<\/h2>$/;"	I
 blockquote	_site/assets/css/style.css	/^blockquote { margin: 0; }$/;"	s
 blowing-up-ideal-edges	_site/2022/03/27/Ideal-edges.html	/^<h2 id="blowing-up-ideal-edges">Blowing up ideal edges<\/h2>$/;"	I
 body	_site/assets/css/style.css	/^body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,/;"	s
@@ -1766,6 +1806,7 @@ dot-product-and-absolute-value	_site/2022/04/02/The-star-graph.html	/^<h2 id="do
 edges-belong-to-two-triangles	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-belong-to-two-triangles">Edges belong to two triangles<\/h2>$/;"	I
 edges-do-not-cross	_site/2021/06/27/The-Farey-graph.html	/^<h2 id="edges-do-not-cross">Edges do not cross<\/h2>$/;"	I
 every-epimorphism-splits	_site/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html	/^<h2 id="every-epimorphism-splits">Every Epimorphism Splits<\/h2>$/;"	I
+example-refinement-groupoids	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="example-refinement-groupoids">Example: Refinement groupoids<\/h2>$/;"	I
 examples-of-real-trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="examples-of-real-trees">Examples of real trees<\/h2>$/;"	I
 extensions	_site/Research.html	/^<div id="extensions" style="display: none">$/;"	I
 fieldset	_site/assets/css/style.css	/^fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }$/;"	s
@@ -1778,7 +1819,10 @@ footer	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-
 free-abelian-groups-act-freely-on-real-trees	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-abelian-groups-act-freely-on-real-trees">Free abelian groups act freely on real tre/;"	I
 free-products-of-groups-acting-freely	_site/2021/06/21/Free-actions-on-real-trees.html	/^<h2 id="free-products-of-groups-acting-freely">Free products of groups acting freely<\/h2>$/;"	I
 functors	_site/2020/02/16/Category-Theory-Day-One.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
+functors	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="functors">Functors<\/h2>$/;"	I
+graphs-of-groups-as-étale-groupoids	_site/2022/05/14/Graphs-of-groups-as-étale-groupoids.html	/^<h2 id="graphs-of-groups-as-étale-groupoids">Graphs of groups as étale groupoids<\/h2>$/;"	I
 graphs-of-groups-with-trivial-edge-groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="graphs-of-groups-with-trivial-edge-groups">Graphs of groups with trivial edge groups<\/h/;"	I
+groupoids	_site/2022/05/14/Graphs-of-groups-as-étale-groupoids.html	/^<h2 id="groupoids">Groupoids<\/h2>$/;"	I
 h1	_site/assets/css/style.css	/^h1 { font-size: 2em; margin: 0.67em 0; }$/;"	s
 h1	_site/assets/css/style.css	/^h1 { font-size: 32px; font-weight: 600; }$/;"	s
 h1	_site/assets/css/style.css	/^h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0; }$/;"	s
@@ -1819,15 +1863,18 @@ laminations	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="laminations"
 layout: post	_posts/2021-06-21-Geometric-group-theory-without-boundaries.md	/^layout: post$/;"	s
 layout: post	_posts/2021-09-28-Git-for-a-certain-kind-of-mathematician.md	/^layout: post$/;"	s
 legend	_site/assets/css/style.css	/^legend { box-sizing: border-box; \/* 1 *\/ color: inherit; \/* 2 *\/ display: table; \/* 1 *\/ m/;"	s
+localizing	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="localizing">Localizing<\/h2>$/;"	I
 main	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 main	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 maps-of-graphs-of-groups-with-trivial-edge-groups	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="maps-of-graphs-of-groups-with-trivial-edge-groups">Maps of graphs of groups with trivial/;"	I
+maps-using-cover-groupoids	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="maps-using-cover-groupoids">Maps using cover groupoids<\/h2>$/;"	I
 mark	_site/assets/css/style.css	/^mark { background-color: #ff0; color: #000; }$/;"	s
 math: false	_posts/2021-03-14-Notes-on-Orbifolds.md	/^math: false$/;"	s
 math: false	index.md	/^math: false$/;"	s
 math: false	outreach.md	/^math: false$/;"	s
 math: false	service.md	/^math: false$/;"	s
 math: false	teaching.md	/^math: false$/;"	s
+math: true	/Users/rylee/2022-05-15-Maps-of-étale-groupoids.md	/^math: true$/;"	s
 math: true	Research.md	/^math: true$/;"	s
 math: true	_posts/2019-06-29-The-Category-of-Graphs.md	/^math: true$/;"	s
 math: true	_posts/2019-07-13-A-Digression.md	/^math: true$/;"	s
@@ -1849,10 +1896,12 @@ math: true	_posts/2022-04-02-The-star-graph.md	/^math: true$/;"	s
 math: true	_posts/2022-05-10-A-Cut-Vertex-Lemma.md	/^math: true$/;"	s
 math: true	_posts/2022-05-14-Graphs-of-groups-as-étale-groupoids.md	/^math: true$/;"	s
 math: true	_posts/2022-05-14-Maps-of-Étale-Groupoids.md	/^math: true$/;"	s
+math: true	_posts/2022-05-15-Maps-of-étale-groupoids.md	/^math: true$/;"	s
 menu	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 morphisms-and-maps-of-graphs-of-groups	_site/2020/12/21/The-Train-Track-Algorithm-for-Graphs-of-Groups.html	/^<h2 id="morphisms-and-maps-of-graphs-of-groups">Morphisms and maps of graphs of groups<\/h2>$/;"	I
 my-latest-point-of-confusion	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.html	/^<h2 id="my-latest-point-of-confusion">My latest point of confusion<\/h2>$/;"	I
 natural-transformations	_site/2020/02/16/Category-Theory-Day-One.html	/^<h3 id="natural-transformations">Natural Transformations<\/h3>$/;"	I
+natural-transformations	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="natural-transformations">Natural transformations<\/h2>$/;"	I
 nav	_site/assets/css/style.css	/^article, aside, details, figcaption, figure, footer, header, main, menu, nav, section { \/* 1 *\//;"	s
 nav	_site/assets/css/styles.css	/^html, div, header, nav, main, footer { max-width: none; }$/;"	s
 nav	_site/assets/css/styles.css	/^nav { text-align: right; }$/;"	s
@@ -1921,6 +1970,7 @@ the-bassserre-tree	_site/2022/01/06/From-free-splittings-to-graphs-of-groups.htm
 the-bowditch-boundary	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-bowditch-boundary">The Bowditch boundary<\/h2>$/;"	I
 the-bowditch-boundary-of-t	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-bowditch-boundary-of-t">The Bowditch Boundary of \\(T\\)<\/h2>$/;"	I
 the-counit-of-the-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h3 id="the-counit-of-the-adjunction">The Counit of the Adjunction<\/h3>$/;"	I
+the-equivalence-of-the-two-approaches	_site/2022/05/14/Maps-of-Étale-Groupoids.html	/^<h2 id="the-equivalence-of-the-two-approaches">The equivalence of the two approaches<\/h2>$/;"	I
 the-gromov-boundary-of-t	_site/2021/07/25/Boundaries-of-free-splittings.html	/^<h2 id="the-gromov-boundary-of-t">The Gromov boundary of \\(T\\)<\/h2>$/;"	I
 the-gromov-boundary-of-t	_site/2021/12/29/More-on-Free-Splittings.html	/^<h2 id="the-gromov-boundary-of-t">The Gromov boundary of \\(T\\)<\/h2>$/;"	I
 the-inverse-imagepushforward-adjunction	_site/2020/07/26/A-Sheafy-Adjunction.html	/^<h2 id="the-inverse-imagepushforward-adjunction">The inverse image–pushforward adjunction<\/h2/;"	I
