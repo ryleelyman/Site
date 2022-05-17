@@ -10,8 +10,9 @@ math: true
 ## Publications and Preprints
 
 - **On Whitehead's cut vertex lemma**   
-Available [here][Whitehead cut vertex].
+Available at [arXiv:2205.06071](https://arxiv.org/abs/2205.06071).
 <a onclick="displayabs('Whitehead')">Abstract</a>   
+*Submitted.*
 <div id="Whitehead" style="display: none">
 <blockquote>
 One version of Whitehead's famous cut vertex lemma says that if an element of a free group
