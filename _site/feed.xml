@@ -1,119 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-16T22:56:32-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 2: Descent</title><link href="http://localhost:4000/2022/05/16/Pursued-by-Stacks-2-Descent.html" rel="alternate" type="text/html" title="Pursued By Stacks 2: Descent" /><published>2022-05-16T00:00:00-04:00</published><updated>2022-05-16T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/16/Pursued-by-Stacks-2:-Descent</id><content type="html" xml:base="http://localhost:4000/2022/05/16/Pursued-by-Stacks-2-Descent.html">&lt;p&gt;A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions.
-The stacks we’re interested in are &lt;em&gt;geometric&lt;/em&gt; stacks, so this won’t be the last post on stacks,
-but with any luck we’ll see the definition in this post.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-17T22:10:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 3: We Need A Lemma</title><link href="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html" rel="alternate" type="text/html" title="Pursued By Stacks 3: We Need A Lemma" /><published>2022-05-17T00:00:00-04:00</published><updated>2022-05-17T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/17/Pursued-by-Stacks-3:-We-Need-A-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html">&lt;p&gt;In the previous two posts we met stacks for the first time.
+We’d like to know what a &lt;em&gt;geometric&lt;/em&gt; or &lt;em&gt;Artin&lt;/em&gt; stack over \(\mathbf{Top}\) is,
+since these are the stacks that correspond to, e.g. graphs of groups.
+To get there, I’m told, Yoneda lemma (sorry sorry).&lt;/p&gt;
 
-&lt;p&gt;Let \(\mathsf{C}\) be a category fibered in groupoids over \(\mathbf{Top}\).
-We say an object \(\xi \in \mathsf{C}\) is &lt;em&gt;over&lt;/em&gt; a space \(X\)
-if \(\pi(\xi) = X\).
-Both Lerman and Fantechi adopt the following convention:
-for every continuous map \(f\colon Y \to X\) and every object \(\xi\) over \(X\),
-we choose a lift \(f_\xi \colon f^*\xi \to \xi\)
-that we call “the” pullback of \(\xi\) along \(f\).&lt;/p&gt;
+&lt;p&gt;If you’re trying to follow who I’m following,
+we’re back to &lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt;,
+for no particular reason other than I find it helpful to bounce.&lt;/p&gt;
 
-&lt;p&gt;Notice that if we had another choice \(f&apos;\colon \xi&apos; \to \xi\) of pullback,
-then in \(\mathbf{Top}\) we have the following rather silly commutative diagram&lt;/p&gt;
+&lt;h2 id=&quot;the-2-yoneda-lemma&quot;&gt;The 2-Yoneda lemma&lt;/h2&gt;
+
+&lt;p&gt;The 2-Yoneda lemma works for categories fibered in groupoids over any category,
+but to keep things hopefully slightly clearer I will continue to speak of our base category
+as \(\mathbf{Top}\).
+Given a space \(X\), there is a category fibered in groupoids over \(\mathbf{Top}\),
+namely the &lt;em&gt;slice category&lt;/em&gt; \(\mathbf{Top}/X = \underline{X}\).
+The objects of \(\underline{X}\) are maps with codomain \(X\)
+and arrows are maps of the domains making the diagram below commute&lt;/p&gt;
 
 \[\require{AMScd}\begin{CD}
+Y @&amp;gt;f&amp;gt;&amp;gt; Z \\
+@VVV @VVV \\
+X @= X
+\end{CD}\]
+
+&lt;p&gt;where the vertical maps are the defining maps of the objects.
+The projection \(\underline{X} \to \mathbf{Top}\) sends an object, which is a map \(Y \to X\)
+to its domain \(Y\),
+and sends an arrow to the corresponding map of domains.
+Notationally, this category is very frustrating to work with,
+since both objects and arrows are maps, and we’ll want to use a single map as both.
+Lerman solves this problem with the power of TikZ, which we don’t have here in blog land.
+I will attempt to solve this by referring to objects of \(\underline{X}\)
+by their domain when I can,
+and saving the maps for referring to arrows.
+Thus, for example, if \(F\) is a functor with domain \(\underline{X}\),
+after specifying that I am considering \(f\colon Y \to X\),
+I will write \(F(Y)\) the image of \(f\colon Y \to X\) under \(F\),
+and write \(F(f)\) for the image of the arrow that is secretly the following diagram&lt;/p&gt;
+
+\[\begin{CD}
 Y @&amp;gt;f&amp;gt;&amp;gt; X \\
-@| @| \\
-Y @&amp;gt;f&amp;gt;&amp;gt; X,
+@VfVV @V1_XVV \\
+X @= X.
 \end{CD}\]
 
-&lt;p&gt;so by the second item in the definition of a category fibered in groupoids,
-there are unique maps \(g\colon f^*\xi \to \xi&apos;\) and \(g&apos;\colon \xi&apos; \to f^*\xi\)
-such that, for example, the following diagram commutes&lt;/p&gt;
+&lt;p&gt;You see? Clear as mud.&lt;/p&gt;
+
+&lt;p&gt;The Pasting Lemma from general topology, essentially,
+tells us that \(\underline{X}\) is actually a stack.
+(Given a map to \(X\) defined on an open cover of a space \(Y\)
+with isomorphisms between double intersections 
+satisfying the cocycle condition on triple intersections,
+there is certainly a map \(Y \to X\), so every descent datum is effective.
+What’s more, an isomorphism over \(X\) between \(Y\) and \(Y&apos;\) is definitely
+determined by its restriction to an open cover, so isomorphisms form a sheaf.)
+We don’t need that at the moment, but it will be useful later.&lt;/p&gt;
+
+&lt;p&gt;Recall that natural transformations (necessarily isomorphisms)
+between maps (functors) of categories fibered in groupoids
+make the collection (ack, is it a set??)
+of maps \(F\colon \mathsf{C} \to \mathsf{D}\) into a category (necessarily a groupoid)
+called \(\operatorname{Hom}(\mathsf{C},\mathsf{D})\).
+Similarly, given a category fibered in groupoids \(\mathsf{D}\)
+and a space \(X\), there is a category \(\mathsf{D}(X)\)
+comprising all those objects \(\xi \in \mathsf{D}\) with \(\pi(\xi) = X\),
+where arrows are arrows \(f\colon \xi \to \xi&apos;\) in \(\mathsf{D}\)
+with the property that \(\pi(f) = 1_X\).
+Ahh, this latter category is probably not small in general,
+but maybe there are standard(?) tricks you can do to show it is equivalent to a small category.&lt;/p&gt;
+
+&lt;p&gt;Anyway:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; (The 2-Yoneda Lemma)
+ The functor 
+ \(\operatorname{よ}\colon \operatorname{Hom}(\underline{X},\mathsf{D}) \to \mathsf{D}(X)\)
+ defined on objects (functors) as 
+ \((F\colon \underline{X} \to \mathsf{D}) \mapsto F(1_X\colon X \to X)\)
+ and on arrows (natural transformations) as
+ \((\alpha\colon F \Rightarrow G) \mapsto (\alpha(1_X)\colon F(1_X) \to G(1_X))\)
+ is an equivalence of categories.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In more words, the functor \(\operatorname{よ}\) sends a functor \(F\) to its
+action on the map \(1_X \colon X \to X\) in \(\underline{X}\)
+and sends a natural transformation \(\alpha\) between functors \(F\) and \(G\)
+to its action on the map \(1_X \colon X \to X\),
+which happens to be (by the definition of a natural transformation)
+an arrow from \(F(1_X)\) to \(G(1_X)\).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; &lt;br /&gt;
+First notice that \(\operatorname{よ}(F)\) is definitely an object over \(X\),
+since maps of categories fibered in groupoids preserve the projection to \(\mathbf{Top}\).
+Similarly, since natural transformations are over the identity of \(\mathbf{Top}\),
+\(\operatorname{よ}(\alpha)\) is definitely over \(1_X\).
+Therefore the map is well-defined.&lt;/p&gt;
+
+&lt;p&gt;Next observe that
+\(\operatorname{よ}(1_F \colon F \Rightarrow F) = 1_F(1_X) \colon F(1_X) \to F(1_X)\)
+is in fact the identity arrow of \(1_X \colon X \to X\).&lt;/p&gt;
+
+&lt;p&gt;Now suppose that we have \(\alpha\colon F \Rightarrow G\) and \(\beta\colon G \Rightarrow H\).
+We have&lt;/p&gt;
+
+\[\operatorname{よ}(\beta\alpha) = (\beta\alpha)(1_X) 
+= \beta(1_X)\alpha(1_X) = \operatorname{よ}(\beta)\operatorname{よ}(\alpha)\]
+
+&lt;p&gt;so \(\operatorname{よ}\) is indeed a functor.&lt;/p&gt;
+
+&lt;p&gt;To show that \(\operatorname{よ}\) is an equivalence of categories we will show that
+it is full, faithful and essentially surjective.
+Suppose \(F\) and \(G\) are functors \(\underline{X} \to \mathsf{D}\).
+Write \(X\) for the object \(1_X \colon X \to X\) in \(\underline{X}\), and
+write \(F(X) = \xi\) and \(G(X) = \xi&apos;\).
+Given a map of spaces \(f\colon Y \to X\),
+there is by the definition of categories fibered in groupoids,
+a unique isomorphism \(\sigma_{F,f}\colon F(Y) \to f^*\xi\) 
+with the property that the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+F(Y) @&amp;gt;F(f)&amp;gt;&amp;gt; \xi \\
+@V\sigma_{F,f}VV @| \\
+f^*\xi @&amp;gt;f_\xi&amp;gt;&amp;gt; \xi.
+\end{CD}\]
+
+&lt;p&gt;There is also the pullback isomorphism \(f^*a\colon f^*\xi \to f^*\xi&apos;\).
+We define the action of our putative natural transformation \(\alpha\colon F \Rightarrow G\)
+as \(\alpha(Y) = \sigma_{G,f}^{-1}\circ f^*a\circ\sigma_{F,f}\).
+Given another map \(g\colon Z \to X\) and an arrow \(h \colon Y \to Z\) in \(\underline{X}\),
+we trace the naturality square:&lt;/p&gt;
+
+\[\begin{CD}
+F(Y) @&amp;gt;\sigma_{G,f}^{-1}\circ f^*a\circ\sigma_{F,f}&amp;gt;&amp;gt; G(Y) \\
+@VF(h)VV @VG(h)VV \\
+F(Z) @&amp;gt;\sigma_{G,g}^{-1}\circ g^*a\circ\sigma_{F,g}&amp;gt;&amp;gt; G(Z).
+\end{CD}\]
+
+&lt;p&gt;We claim that both paths around the square fit into the 
+unlabeled vertical arrow in the following diagram
+to make it commute&lt;/p&gt;
+
+\[\begin{CD}
+F(Y) @&amp;gt;aF(f)&amp;gt;&amp;gt; \xi&apos; \\
+@VVV @| \\
+G(Z) @&amp;gt;G(g)&amp;gt;&amp;gt; \xi&apos;.
+\end{CD}\]
+
+&lt;p&gt;Indeed, we have&lt;/p&gt;
+
+\[\begin{gather*}aF(f) = af_\xi\sigma_{F,f} = f_{\xi&apos;}f^*a\sigma_{F,f} 
+= G(f)\sigma_{G,f}^{-1} f^*a \sigma_{F,f} \\
+= G(g) \circ G(h) \sigma_{G,f}^{-1} f^*a \sigma_{F,f}.
+\end{gather*}\]
+
+&lt;p&gt;But on the other hand, we also have&lt;/p&gt;
+
+\[\begin{gather*}
+aF(f) = a F(g)F(h) = ag_\xi \sigma_{F,g} F(h) = g_{\xi&apos;} g^*a \sigma_{F,g} F(h) \\
+= G(g) \circ \sigma_{G,g}^{-1} g^*a \sigma_{F,g} F(h).
+\end{gather*}\]
+
+&lt;p&gt;The argument is summarized in the following rather pretty commutative diagram.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/cfgdiagram.jpeg&quot; alt=&quot;The argument above summarized in diagram form&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It follows by properties of categories fibered in groupoids that the naturality square commutes.
+This proves that \(\operatorname{よ}\) is full.
+In fact it is faithful as well, since the arrow \(\alpha(Y)\) 
+is uniquely determined by \(Y\) (really \(f\colon Y \to X\)) and \(a\).&lt;/p&gt;
+
+&lt;p&gt;To complete the proof, we show essential surjectivity.
+Suppose \(\xi\) is an object over \(X\) in \(\mathsf{D}\).
+We need to show that there is a functor \(F \colon \underline{X} \to \mathsf{D}\)
+and an isomorphism \(\xi \to \operatorname{よ}(F) = F(X)\).
+We will do one better:
+define \(F(X) = \xi\) and given a map \(f\colon Y \to X\), define \(F(Y) = f^*\xi\).
+Given an arrow \(h \colon Y \to Z\) over \(X\), (where again we have \(g\colon Z \to X\))
+there is by the definition of a category fibered in groupoids
+a unique arrow \(F(h) \colon f^*\xi \to g^*\xi\)
+making the following diagram commute&lt;/p&gt;
 
 \[\begin{CD}
 f^*\xi @&amp;gt;f_\xi&amp;gt;&amp;gt; \xi \\
-@VgVV @| \\
-\xi&apos; @&amp;gt;f&apos;&amp;gt;&amp;gt; \xi.
+@VF(h)VV @| \\
+g^*\xi @&amp;gt;g_\xi&amp;gt;&amp;gt; \xi
 \end{CD}\]
 
-&lt;p&gt;It’s not hard to see that \(g\) and \(g&apos;\) are therefore inverse isomorphisms.
-By the way, if \(f\) is the identity of \(X\), we see that this argument implies that
-the category of objects above \(X\) is a groupoid: every arrow is an isomorphism.
-Hence the name, I suppose.
-In fact, if \(f\colon Y \to X\) is a continuous map
-and \(\alpha\colon \xi \to \xi&apos;\) is an arrow (necessarily an isomorphism)
-of objects over \(X\), a clever application of the second item again shows that
-there is a unique isomorphism \(f^*\alpha\colon f^*\xi \to f^*\xi&apos;\)
-such that the following diagram commutes&lt;/p&gt;
-
-\[\begin{CD}
-f^*\xi @&amp;gt;f_\xi&amp;gt;&amp;gt; \xi \\
-@VVf^*\alpha V @VV\alpha V \\
-f^*\xi&apos; @&amp;gt;f_{\xi&apos;}&amp;gt;&amp;gt; \xi&apos;.
-\end{CD}\]
-
-&lt;p&gt;Notice as well that we do not require (and probably cannot in general)
-that \(g^*f^*\xi = (fg)^*\xi\), merely that they are canonically isomorphic.&lt;/p&gt;
-
-&lt;h2 id=&quot;descent-data&quot;&gt;Descent data&lt;/h2&gt;
-
-&lt;p&gt;The idea of descent is that given, say, a vector bundle defined 
-open set by open set on a space \(X\)
-satisfying certain gluing conditions,
-this data &lt;em&gt;descends&lt;/em&gt; to a vector bundle on \(X\).&lt;/p&gt;
-
-&lt;p&gt;More formally, let \(\mathcal{U} = \{U_i\}_{i\in I}\) be an open cover of \(X\),
-and for each \(i\), let \(\iota_i \colon U_i \to X\) be the inclusion.
-We have inclusions \(\iota_{ji}\colon (U_j \cap U_i) \to U_j\)
-and \(\iota_{ij}\colon (U_j \cap U_i) \to U_i\) for each double intersection
-and \(\iota^i_{ijk}\), \(\iota^j_{ijk}\) and \(\iota^k_{ijk}\) for inclusions from the triple
-intersection \(U_i \cap U_j \cap U_k\) to the various double intersections,
-where the superscript indicates the omitted subscript in the target of the inclusion.
-A &lt;em&gt;descent datum&lt;/em&gt; for \(\mathsf{C}\) over \(X\) is the following.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;An object \(\xi_i\) over \(U_i\) for each \(i\).&lt;/li&gt;
-  &lt;li&gt;For each pair \(i\) and \(j\), an isomorphism 
-\(\alpha_{ji} \colon \iota_{ij}^*\xi_i \to \iota_{ji}^*\xi_j\)
-in the fiber over \(U_i \cap U_j\).&lt;/li&gt;
-  &lt;li&gt;The isomorphisms above satisfy the &lt;em&gt;cocycle condition&lt;/em&gt;
-(so named for reasons of Čech cohomology probably, so way over my head)&lt;/li&gt;
-&lt;/ul&gt;
-
-\[(\iota_{ijk}^j)^*\alpha_{ki} = (\iota_{ijk}^i)^*\alpha_{kj} \circ (\iota_{ijk}^k)^*\alpha_{ji}\]
-
-&lt;p&gt;The descent datum is &lt;em&gt;effective&lt;/em&gt; if there exists an object \(\xi\) over \(X\)
-with isomorphisms \(\alpha_i \colon \iota_i^*\xi \to \xi_i\) in the fiber over \(U_i\)
-with the property that \(\alpha_{ji} = \iota_{ji}^*\alpha_j\circ (\iota_{ij}^*\alpha_i)^{-1}\).&lt;/p&gt;
-
-&lt;p&gt;In plainer words, a &lt;em&gt;descent datum&lt;/em&gt; is that open set by open set construction 
-of something you’d like to exist in \(\mathsf{C}\),
-and saying that the descent datum is &lt;em&gt;effective&lt;/em&gt; says that the wished-for object really exists
-and is moreover obtained by gluing together it patch by patch.&lt;/p&gt;
-
-&lt;p&gt;Finally, we say that &lt;em&gt;isomorphisms are a sheaf&lt;/em&gt; for \(\mathsf{C}\) if,
-roughly, isomorphisms between elements of \(\mathsf{C}\) over any space \(X\)
-are determined uniquely by their restriction to any open cover of \(X\).
-More formally,
-we require that for any space \(X\), 
-every pair of objects \(\xi\) and \(\xi&apos;\) in the fiber over \(X\),
-every open cover \(\{U_i\}_{i \in I}\) of \(X\)
-and every collection of isomorphisms \(\alpha_i\colon \iota_i^*\xi \to \iota_i^*\xi&apos;\)
-with the property that \(\iota_{ij}^*\alpha_i = \iota_{ji}^*\alpha_j\)
-on \(U_i \cap U_j\),
-there exists a unique isomorphism \(\alpha\colon \xi \to \xi&apos;\)
-such that \(\iota_i^*\alpha = \alpha_i\).&lt;/p&gt;
-
-&lt;p&gt;Our category fibered in groupoids \(\mathsf{C}\) is a &lt;em&gt;stack&lt;/em&gt;
-if isomorphisms are a sheaf and every descent datum is effective.&lt;/p&gt;
-
-&lt;p&gt;A map of stacks \(\mathsf{C} \to \mathsf{D}\) over \(\mathbf{Top}\) is a functor
-\(F\colon \mathsf{C} \to \mathsf{D}\) with the property that
-\(\pi F = \pi\), where we abuse notation by writing both \(\pi\colon \mathsf{C} \to \mathbf{Top}\)
-and \(\pi\colon \mathsf{D} \to \mathbf{Top}\).
-A &lt;em&gt;natural transformation&lt;/em&gt; of maps \(F\), \(G\colon \mathsf{C} \to \mathsf{D}\)
-is a natural transformation \(\eta\colon F \Rightarrow G\)
-with the property that for each \(\xi \in \mathsf{C}\),
-we have \(\pi(\eta_\xi) = 1_{\pi(\xi)}\).
-Notice that because \(F\xi\) and \(G\xi\) are in the fiber over \(\pi(\xi)\),
-the map \(\eta_\xi\) is automatically an isomorphism,
-so all natural transformations are natural isomorphisms.
-An &lt;em&gt;isomorphism&lt;/em&gt; of stacks is an equivalence of categories over \(\mathbf{Top}\),
-i.e. \(F\colon \mathsf{C} \to \mathsf{D}\) is full, faithful and essentially surjective.
-Since we love the &lt;a href=&quot;/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html&quot;&gt;axiom of choice&lt;/a&gt; around here,
-this is equivalent to the existence of an inverse functor up to natural isomorphism.&lt;/p&gt;</content><author><name></name></author><summary type="html">A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions. The stacks we’re interested in are geometric stacks, so this won’t be the last post on stacks, but with any luck we’ll see the definition in this post.</summary></entry><entry><title type="html">Pursued By Stacks 1: Cfgs</title><link href="http://localhost:4000/2022/05/16/Pursued-by-Stacks-1-CFGs.html" rel="alternate" type="text/html" title="Pursued By Stacks 1: Cfgs" /><published>2022-05-16T00:00:00-04:00</published><updated>2022-05-16T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/16/Pursued-by-Stacks-1:-CFGs</id><content type="html" xml:base="http://localhost:4000/2022/05/16/Pursued-by-Stacks-1-CFGs.html">&lt;p&gt;I’ve spent the past couple years on and off understanding how to think of graphs of groups
+&lt;p&gt;over the map \(h\colon Y \to Z\).
+Functoriality of \(F\) follows by uniqueness.
+Thus \(\xi\) is &lt;em&gt;equal&lt;/em&gt; to the image of \(1_X\colon X \to X\) under some functor,
+hence certainly isomorphic to it. \(\blacksquare\)&lt;/p&gt;</content><author><name></name></author><summary type="html">In the previous two posts we met stacks for the first time. We’d like to know what a geometric or Artin stack over \(\mathbf{Top}\) is, since these are the stacks that correspond to, e.g. graphs of groups. To get there, I’m told, Yoneda lemma (sorry sorry).</summary></entry><entry><title type="html">Pursued By Stacks 1: Cfgs</title><link href="http://localhost:4000/2022/05/16/Pursued-by-Stacks-1-CFGs.html" rel="alternate" type="text/html" title="Pursued By Stacks 1: Cfgs" /><published>2022-05-16T00:00:00-04:00</published><updated>2022-05-16T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/16/Pursued-by-Stacks-1:-CFGs</id><content type="html" xml:base="http://localhost:4000/2022/05/16/Pursued-by-Stacks-1-CFGs.html">&lt;p&gt;I’ve spent the past couple years on and off understanding how to think of graphs of groups
 and orbifolds as (being represented by) étale groupoids.
 In view of &lt;a href=&quot;/2022/05/15/More-Maps-Lerman&apos;s-Critique.html&quot;&gt;Lerman’s critique&lt;/a&gt;, to which his answer is the category of geometric stacks over manifolds,
 I thought it might be relevant to try and understand what a stack is.
@@ -257,7 +333,122 @@ Therefore define \(\tilde g\) as&lt;/p&gt;
 
 &lt;p&gt;It is clear that \(\tilde g\) is a bundle map making the relevant diagram commute
 and that conversely \(\tilde g\) is the only definition we could have made.
-Therefore \(\mathsf{Vect}_r\) defines a category fibered in groupoids over \(\mathbf{Top}\).&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve spent the past couple years on and off understanding how to think of graphs of groups and orbifolds as (being represented by) étale groupoids. In view of Lerman’s critique, to which his answer is the category of geometric stacks over manifolds, I thought it might be relevant to try and understand what a stack is. This is the first in what will likely be several posts towards understanding the definition of a stack; this one is focused on the concept of a category fibered in groupoids.</summary></entry><entry><title type="html">More Maps: Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/More-Maps-Lerman's-Critique.html" rel="alternate" type="text/html" title="More Maps: Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/More-Maps:-Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/More-Maps-Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
+Therefore \(\mathsf{Vect}_r\) defines a category fibered in groupoids over \(\mathbf{Top}\).&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve spent the past couple years on and off understanding how to think of graphs of groups and orbifolds as (being represented by) étale groupoids. In view of Lerman’s critique, to which his answer is the category of geometric stacks over manifolds, I thought it might be relevant to try and understand what a stack is. This is the first in what will likely be several posts towards understanding the definition of a stack; this one is focused on the concept of a category fibered in groupoids.</summary></entry><entry><title type="html">Pursued By Stacks 2: Descent</title><link href="http://localhost:4000/2022/05/16/Pursued-by-Stacks-2-Descent.html" rel="alternate" type="text/html" title="Pursued By Stacks 2: Descent" /><published>2022-05-16T00:00:00-04:00</published><updated>2022-05-16T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/16/Pursued-by-Stacks-2:-Descent</id><content type="html" xml:base="http://localhost:4000/2022/05/16/Pursued-by-Stacks-2-Descent.html">&lt;p&gt;A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions.
+The stacks we’re interested in are &lt;em&gt;geometric&lt;/em&gt; stacks, so this won’t be the last post on stacks,
+but with any luck we’ll see the definition in this post.&lt;/p&gt;
+
+&lt;p&gt;Let \(\mathsf{C}\) be a category fibered in groupoids over \(\mathbf{Top}\).
+We say an object \(\xi \in \mathsf{C}\) is &lt;em&gt;over&lt;/em&gt; a space \(X\)
+if \(\pi(\xi) = X\).
+Both Lerman and Fantechi adopt the following convention:
+for every continuous map \(f\colon Y \to X\) and every object \(\xi\) over \(X\),
+we choose a lift \(f_\xi \colon f^*\xi \to \xi\)
+that we call “the” pullback of \(\xi\) along \(f\).&lt;/p&gt;
+
+&lt;p&gt;Notice that if we had another choice \(f&apos;\colon \xi&apos; \to \xi\) of pullback,
+then in \(\mathbf{Top}\) we have the following rather silly commutative diagram&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+Y @&amp;gt;f&amp;gt;&amp;gt; X \\
+@| @| \\
+Y @&amp;gt;f&amp;gt;&amp;gt; X,
+\end{CD}\]
+
+&lt;p&gt;so by the second item in the definition of a category fibered in groupoids,
+there are unique maps \(g\colon f^*\xi \to \xi&apos;\) and \(g&apos;\colon \xi&apos; \to f^*\xi\)
+such that, for example, the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+f^*\xi @&amp;gt;f_\xi&amp;gt;&amp;gt; \xi \\
+@VgVV @| \\
+\xi&apos; @&amp;gt;f&apos;&amp;gt;&amp;gt; \xi.
+\end{CD}\]
+
+&lt;p&gt;It’s not hard to see that \(g\) and \(g&apos;\) are therefore inverse isomorphisms.
+By the way, if \(f\) is the identity of \(X\), we see that this argument implies that
+the category of objects above \(X\) is a groupoid: every arrow is an isomorphism.
+Hence the name, I suppose.
+In fact, if \(f\colon Y \to X\) is a continuous map
+and \(\alpha\colon \xi \to \xi&apos;\) is an arrow (necessarily an isomorphism)
+of objects over \(X\), a clever application of the second item again shows that
+there is a unique isomorphism \(f^*\alpha\colon f^*\xi \to f^*\xi&apos;\)
+such that the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+f^*\xi @&amp;gt;f_\xi&amp;gt;&amp;gt; \xi \\
+@VVf^*\alpha V @VV\alpha V \\
+f^*\xi&apos; @&amp;gt;f_{\xi&apos;}&amp;gt;&amp;gt; \xi&apos;.
+\end{CD}\]
+
+&lt;p&gt;Notice as well that we do not require (and probably cannot in general)
+that \(g^*f^*\xi = (fg)^*\xi\), merely that they are canonically isomorphic.&lt;/p&gt;
+
+&lt;h2 id=&quot;descent-data&quot;&gt;Descent data&lt;/h2&gt;
+
+&lt;p&gt;The idea of descent is that given, say, a vector bundle defined 
+open set by open set on a space \(X\)
+satisfying certain gluing conditions,
+this data &lt;em&gt;descends&lt;/em&gt; to a vector bundle on \(X\).&lt;/p&gt;
+
+&lt;p&gt;More formally, let \(\mathcal{U} = \{U_i\}_{i\in I}\) be an open cover of \(X\),
+and for each \(i\), let \(\iota_i \colon U_i \to X\) be the inclusion.
+We have inclusions \(\iota_{ji}\colon (U_j \cap U_i) \to U_j\)
+and \(\iota_{ij}\colon (U_j \cap U_i) \to U_i\) for each double intersection
+and \(\iota^i_{ijk}\), \(\iota^j_{ijk}\) and \(\iota^k_{ijk}\) for inclusions from the triple
+intersection \(U_i \cap U_j \cap U_k\) to the various double intersections,
+where the superscript indicates the omitted subscript in the target of the inclusion.
+A &lt;em&gt;descent datum&lt;/em&gt; for \(\mathsf{C}\) over \(X\) is the following.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;An object \(\xi_i\) over \(U_i\) for each \(i\).&lt;/li&gt;
+  &lt;li&gt;For each pair \(i\) and \(j\), an isomorphism 
+\(\alpha_{ji} \colon \iota_{ij}^*\xi_i \to \iota_{ji}^*\xi_j\)
+in the fiber over \(U_i \cap U_j\).&lt;/li&gt;
+  &lt;li&gt;The isomorphisms above satisfy the &lt;em&gt;cocycle condition&lt;/em&gt;
+(so named for reasons of Čech cohomology probably, so way over my head)&lt;/li&gt;
+&lt;/ul&gt;
+
+\[(\iota_{ijk}^j)^*\alpha_{ki} = (\iota_{ijk}^i)^*\alpha_{kj} \circ (\iota_{ijk}^k)^*\alpha_{ji}\]
+
+&lt;p&gt;The descent datum is &lt;em&gt;effective&lt;/em&gt; if there exists an object \(\xi\) over \(X\)
+with isomorphisms \(\alpha_i \colon \iota_i^*\xi \to \xi_i\) in the fiber over \(U_i\)
+with the property that \(\alpha_{ji} = \iota_{ji}^*\alpha_j\circ (\iota_{ij}^*\alpha_i)^{-1}\).&lt;/p&gt;
+
+&lt;p&gt;In plainer words, a &lt;em&gt;descent datum&lt;/em&gt; is that open set by open set construction 
+of something you’d like to exist in \(\mathsf{C}\),
+and saying that the descent datum is &lt;em&gt;effective&lt;/em&gt; says that the wished-for object really exists
+and is moreover obtained by gluing together it patch by patch.&lt;/p&gt;
+
+&lt;p&gt;Finally, we say that &lt;em&gt;isomorphisms are a sheaf&lt;/em&gt; for \(\mathsf{C}\) if,
+roughly, isomorphisms between elements of \(\mathsf{C}\) over any space \(X\)
+are determined uniquely by their restriction to any open cover of \(X\).
+More formally,
+we require that for any space \(X\), 
+every pair of objects \(\xi\) and \(\xi&apos;\) in the fiber over \(X\),
+every open cover \(\{U_i\}_{i \in I}\) of \(X\)
+and every collection of isomorphisms \(\alpha_i\colon \iota_i^*\xi \to \iota_i^*\xi&apos;\)
+with the property that \(\iota_{ij}^*\alpha_i = \iota_{ji}^*\alpha_j\)
+on \(U_i \cap U_j\),
+there exists a unique isomorphism \(\alpha\colon \xi \to \xi&apos;\)
+such that \(\iota_i^*\alpha = \alpha_i\).&lt;/p&gt;
+
+&lt;p&gt;Our category fibered in groupoids \(\mathsf{C}\) is a &lt;em&gt;stack&lt;/em&gt;
+if isomorphisms are a sheaf and every descent datum is effective.&lt;/p&gt;
+
+&lt;p&gt;A map of stacks \(\mathsf{C} \to \mathsf{D}\) over \(\mathbf{Top}\) is a functor
+\(F\colon \mathsf{C} \to \mathsf{D}\) with the property that
+\(\pi F = \pi\), where we abuse notation by writing both \(\pi\colon \mathsf{C} \to \mathbf{Top}\)
+and \(\pi\colon \mathsf{D} \to \mathbf{Top}\).
+A &lt;em&gt;natural transformation&lt;/em&gt; of maps \(F\), \(G\colon \mathsf{C} \to \mathsf{D}\)
+is a natural transformation \(\eta\colon F \Rightarrow G\)
+with the property that for each \(\xi \in \mathsf{C}\),
+we have \(\pi(\eta_\xi) = 1_{\pi(\xi)}\).
+Notice that because \(F\xi\) and \(G\xi\) are in the fiber over \(\pi(\xi)\),
+the map \(\eta_\xi\) is automatically an isomorphism,
+so all natural transformations are natural isomorphisms.
+An &lt;em&gt;isomorphism&lt;/em&gt; of stacks is an equivalence of categories over \(\mathbf{Top}\),
+i.e. \(F\colon \mathsf{C} \to \mathsf{D}\) is full, faithful and essentially surjective.
+Since we love the &lt;a href=&quot;/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html&quot;&gt;axiom of choice&lt;/a&gt; around here,
+this is equivalent to the existence of an inverse functor up to natural isomorphism.&lt;/p&gt;</content><author><name></name></author><summary type="html">A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions. The stacks we’re interested in are geometric stacks, so this won’t be the last post on stacks, but with any luck we’ll see the definition in this post.</summary></entry><entry><title type="html">More Maps: Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/More-Maps-Lerman's-Critique.html" rel="alternate" type="text/html" title="More Maps: Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/More-Maps:-Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/More-Maps-Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
 by arguing that there is a problem with gluing maps.
 The purpose of this blog post is to try to digest this critique.
 We follow the notation set up in the previous two blog posts.&lt;/p&gt;
@@ -1272,139 +1463,4 @@ we have \(\tau^\Phi = \tau^\Psi\) as marked graphs of groups.
 Again for graphs of finite groups,
 Krstić and Vogtmann prove as Proposition 5.9 that the poset of marked graphs of groups in \(L_T(G)\)
 collapsing to a reduced marked graph of groups \(\tau\) 
-is isomorphic to the poset of ideal forests in \(\tau\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\). In the previous post we defined what it meant for an edge of \(T\) to be surviving or collapsible. Collapsing orbits of collapsible edges in \(T\) yields a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse. Two trees \(T\) and \(T&apos;\) are in the same deformation space if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\). The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\) all of whose edges are surviving is partially ordered under the operation of forest collapse, and this partial order contains minimal elements, which are reduced trees. To study this poset, or its geometric realization \(L_T(G)\), it would be convenient to understand all trees collapsing onto a given reduced tree. This is captured in the idea of an ideal edge, which I’d like to describe in this post. The idea of an ideal edge goes back to Culler and Vogtmann’s original paper on Outer Space; the treatment here is adapted from a paper of Krstić and Vogtmann.</summary></entry><entry><title type="html">Shelters In Graphs Of Groups</title><link href="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html" rel="alternate" type="text/html" title="Shelters In Graphs Of Groups" /><published>2022-03-26T00:00:00-04:00</published><updated>2022-03-26T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups</id><content type="html" xml:base="http://localhost:4000/2022/03/26/Shelters-in-graphs-of-groups.html">&lt;p&gt;Let’s fix a group \(G\) that acts cocompactly on a tree \(T\).
-&lt;a href=&quot;https://arxiv.org/abs/math/0107008&quot;&gt;Forester&lt;/a&gt; introduced the notion of a &lt;em&gt;deformation&lt;/em&gt; of the tree \(T\)
-and &lt;a href=&quot;https://arxiv.org/abs/math/0605545&quot;&gt;Guirardel and Levitt&lt;/a&gt; studied the &lt;em&gt;deformation space&lt;/em&gt;
-\(\mathscr{D}\) consisting of trees obtainable from \(T\) by a finite sequence of deformations.
-Usually we assume \(G\) to be finitely generated,
-but it’s not clear to me how often this assumption is necessary.
-Maybe that’ll be a topic for another blog post.
-In this post I want to discuss the notion of a &lt;em&gt;shelter,&lt;/em&gt;
-which Guirardel and Levitt (and also &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;Clay&lt;/a&gt;) 
-use to construct a deformation retraction of \(\mathscr{D}\) (or its simplicial spine)
-onto a smaller, often finite-dimensional, space.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-quotient-graph-of-groups&quot;&gt;The quotient graph of groups&lt;/h2&gt;
-&lt;p&gt;Given a group \(G\) acting on a graph \(\Gamma\),
-there is a notion of a &lt;em&gt;quotient graph of groups,&lt;/em&gt; 
-which I’d like to describe once and for all here.
-Let me remind you that a &lt;em&gt;graph of groups&lt;/em&gt; 
-is a graph, which I’ll call \(\mathcal{G}\),
-together with an assignment of groups \(\mathcal{G}_v\) and \(\mathcal{G}_e\)
-to each vertex \(v\) and edge \(e\) of \(\mathcal{G}\),
-along with injective homomorphisms \(\iota_e \colon \mathcal{G}_e \to \mathcal{G}_v\)
-whenever \(v\) is the terminal vertex of the oriented edge \(e\).&lt;/p&gt;
-
-&lt;p&gt;Anyway, suppose we have \(G\) acting on \(\Gamma\).
-I want this action to be essentially combinatorial,
-in the sense that we can think of \(\Gamma\) as having a set of vertices and a set of edges,
-and \(G\) permutes the elements of those sets preserving adjacency.
-Making this precise is surprisingly exhausting 
-(“fix a homeomorphism between each closed edge…”), so I won’t.
-By \(G\)-equivariantly subdividing certain orbits of edges,
-we may suppose that the action is &lt;em&gt;without inversions in edges,&lt;/em&gt;
-which means that if a group element preserves an edge \(e\) of \(\Gamma\),
-then it fixes each vertex incident to \(e\).
-The advantage of this condition is that the quotient \(G\backslash\Gamma\)
-then inherits the structure of a graph, call it \(\mathcal{G}\).
-To make \(\mathcal{G}\) into a graph of groups, we need groups and homomorphisms.&lt;/p&gt;
-
-&lt;p&gt;So fix connected subgraphs \(S_0 \subset S_1 \subset \Gamma\)
-with the property that the natural projection \(p\colon \Gamma \to \mathcal{G}\)
-restricts to a bijection on the set of vertices of \(S_0\)
-and a bijection on the set of edges of \(S_1\).
-In other words, \(S_1\) is a &lt;em&gt;fundamental domain&lt;/em&gt; for the action of \(G\) on \(\Gamma\),
-and if we assume \(S_0\) is a minimal subgraph of \(S_1\) with the defining property,
-it follows that \(S_0\) projects to a &lt;em&gt;spanning tree&lt;/em&gt; of \(\mathcal{G}\).
-For a vertex \(v\) and an edge \(e\) of \(\mathcal{G}\), 
-write \(\tilde v\) and \(\tilde e\) for its unique preimage in \(S_0\) and \(S_1\) respectively.
-For each oriented edge \(e\) of \(\mathcal{G}\),
-choose a group element \(g_e \in G\)
-with the following property:
-if \(x\) is the terminal vertex of \(\tilde e\) and \(p(x) = v\),
-we have that \(g_e.x = \tilde v\).
-Furthermore, if \(x = \tilde v\), choose \(g_e = 1\).
-The groups \(\mathcal{G}_v\) and \(\mathcal{G}_e\)
-are the stabilizers in \(G\) of \(\tilde v\) and \(\tilde e\) respectively,
-and the injective homomorphism \(\iota_e \colon \mathcal{G}_e \to \mathcal{G}_v\)
-is the restriction of the map \(h \mapsto g_e h g_e^{-1}\) to \(\mathcal{G}_e\).&lt;/p&gt;
-
-&lt;h2 id=&quot;properties-of-the-tree-in-the-quotient&quot;&gt;Properties of the tree in the quotient&lt;/h2&gt;
-&lt;p&gt;Let’s return to the situation of our group \(G\) acting cocompactly on a tree \(T\).
-Then the quotient graph of groups \(\mathcal{G}\) is finite and connected.
-We assume the action is &lt;em&gt;minimal,&lt;/em&gt;
-in the sense that there is no \(G\)-invariant subtree.
-In the quotient graph of groups \(\mathcal{G}\),
-this is equivalent to the condition that no valence-one vertex \(v\)
-has the property that the incident edge-to-vertex group inclusion is surjective.
-We also assume that \(T\) has no &lt;em&gt;subdivision vertices,&lt;/em&gt;
-i.e. that a valence-two vertex of \(T\) has the property
-that the incident edges are in the same \(G\)-orbit.
-In the quotient graph of groups \(\mathcal{G}\),
-this is equivalent to the condition that no valence-two vertex \(v\)
-has the property that both incident edge-to-vertex group inclusions are surjective.&lt;/p&gt;
-
-&lt;p&gt;A general fact about automorphisms of simplicial trees
-(in fact, isometries of real trees)
-is that each automorphism (isometry) is either &lt;em&gt;elliptic,&lt;/em&gt;
-i.e. fixes a point of the tree
-or &lt;em&gt;hyperbolic&lt;/em&gt;
-i.e. there is an embedded copy of \(\mathbb{R}\) called the &lt;em&gt;axis&lt;/em&gt; in the tree
-that is preserved by the automorphism (isometry) and along which
-the automorphism (isometry) acts by translation.&lt;/p&gt;
-
-&lt;p&gt;An edge \(\tilde e\) of \(T\) is &lt;em&gt;collapsible&lt;/em&gt; if collapsing each edge in its orbit to a point
-does not change the partition of elements of \(G\) into hyperbolic and elliptic elements.
-Equivalently, the \(G\)-orbit of \(\tilde e\) must not contain the axis of a hyperbolic element.
-In the quotient graph of groups, we must have that the endpoints of \(p(\tilde e) = e\)
-are distinct and that at least one of the edge-to-vertex group inclusions is surjective.
-If \(\tilde e\) is collapsible, collapsing each edge in its orbit to a point
-yields a new tree \(T&apos;\) in the same deformation space as \(T\).
-In &lt;a href=&quot;https://arxiv.org/abs/2102.02848&quot;&gt;my paper&lt;/a&gt;, I describe this as a &lt;em&gt;collapse map&lt;/em&gt;
-of the quotient graphs of groups which is a &lt;em&gt;homotopy equivalence.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A tree \(T\) is &lt;em&gt;reduced&lt;/em&gt; if is has no collapsible edges.
-In the quotient graph of groups,
-this says that if some edge-to-vertex group inclusion 
-\(\iota_e\colon \mathcal{G}_e \to \mathcal{G}_v\) is surjective,
-then the edge \(e\) forms a loop.
-Every cocompact \(G\)-tree \(T\) may be made reduced by a finite sequence of collapse maps.&lt;/p&gt;
-
-&lt;h2 id=&quot;shelters&quot;&gt;Shelters&lt;/h2&gt;
-&lt;p&gt;An edge \(\tilde e\) in a tree \(T\) is &lt;em&gt;surviving&lt;/em&gt;
-if there is a reduced tree \(T&apos;\) and a product of collapse maps \(T \to T&apos;\)
-with the property that the edge \(\tilde e\) is not collapsed.
-The deformation retraction mentioned in the first paragraph
-consists of those trees all of whose edges are surviving.
-For the reader familiar with Culler–Vogtmann Outer Space,
-it’s not hard to see that a tree in Outer Space has the property that every edge is surviving
-if and only if the quotient graph has no separating edges.
-The concept of a &lt;em&gt;shelter&lt;/em&gt; generalizes this “no separating edges” condition.&lt;/p&gt;
-
-&lt;p&gt;Let \(\mathcal{G}\) be the quotient graph of groups.
-Label each half-edge of \(\mathcal{G}\) by \(=\) or \(\neq\)
-according to whether the corresponding edge-to-vertex group inclusion
-is surjective or non-surjective, respectively.
-An embedded segment or circle \(\gamma\) in \(\mathcal{G}\) is a &lt;em&gt;shelter&lt;/em&gt;
-if it satisfies one of the following properties:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;\(\gamma\) is a segment with \(\ne\) at each of its endpoints
-and \(=\) otherwise.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;\(\gamma\) is a circle with two \(=\) labels at all of its vertices 
-with the possible exception of one.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;\(\gamma\) is a circle, and there is an orientation of \(\gamma\) such that
-all positively oriented edges have \(=\) at their endpoints.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Clay has a nice picture as Figure 1 in &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;his paper&lt;/a&gt;.
-Clay proves the following as Proposition 1.13 of &lt;a href=&quot;https://mattclay.hosted.uark.edu/Papers/def.pdf&quot;&gt;his paper&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; An edge \(\tilde e\) of \(T\) is surviving if and only if
-\(p(\tilde e)\) is contained in a shelter.&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s fix a group \(G\) that acts cocompactly on a tree \(T\). Forester introduced the notion of a deformation of the tree \(T\) and Guirardel and Levitt studied the deformation space \(\mathscr{D}\) consisting of trees obtainable from \(T\) by a finite sequence of deformations. Usually we assume \(G\) to be finitely generated, but it’s not clear to me how often this assumption is necessary. Maybe that’ll be a topic for another blog post. In this post I want to discuss the notion of a shelter, which Guirardel and Levitt (and also Clay) use to construct a deformation retraction of \(\mathscr{D}\) (or its simplicial spine) onto a smaller, often finite-dimensional, space.</summary></entry></feed>
+is isomorphic to the poset of ideal forests in \(\tau\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\). In the previous post we defined what it meant for an edge of \(T\) to be surviving or collapsible. Collapsing orbits of collapsible edges in \(T\) yields a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse. Two trees \(T\) and \(T&apos;\) are in the same deformation space if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\). The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\) all of whose edges are surviving is partially ordered under the operation of forest collapse, and this partial order contains minimal elements, which are reduced trees. To study this poset, or its geometric realization \(L_T(G)\), it would be convenient to understand all trees collapsing onto a given reduced tree. This is captured in the idea of an ideal edge, which I’d like to describe in this post. The idea of an ideal edge goes back to Culler and Vogtmann’s original paper on Outer Space; the treatment here is adapted from a paper of Krstić and Vogtmann.</summary></entry></feed>
