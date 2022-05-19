@@ -7,17 +7,25 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/02cf1a6/
+Atlases	_posts/2022-05-18-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Atlases$/;"	s
+Atlases	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Atlases$/;"	s
 Categories fibered in groupoids	_posts/2022-05-16-Pursued-by-Stacks-I:-CFGs.md	/^## Categories fibered in groupoids$/;"	s
 Categories fibered in groupoids	_posts/2022-05-16-Pursued-by-Stacks.md	/^## Categories fibered in groupoids$/;"	s
 Descent data	_posts/2022-05-16-Pursued-by-Stacks-2:-Descent.md	/^## Descent data$/;"	s
+Example: $$\\mathsf{B}\\mathcal{G}$$	_posts/2022-05-18-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Example: $$\\mathsf{B}\\mathcal{G}$\$$/;"	s
+Example: $$\\mathsf{B}\\mathcal{G}$$	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Example: $$\\mathsf{B}\\mathcal{G}$\$$/;"	s
 Example: Vector bundles of constant rank	_posts/2022-05-16-Pursued-by-Stacks-I:-CFGs.md	/^## Example: Vector bundles of constant rank$/;"	s
 Example: Vector bundles of constant rank	_posts/2022-05-16-Pursued-by-Stacks.md	/^## Example: Vector bundles of constant rank$/;"	s
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Research	Research.md	/^# Research$/;"	c
 The 2-Yoneda lemma	_posts/2022-05-17-Pursued-by-Stacks-3:-We-Need-A-Lemma.md	/^## The 2-Yoneda lemma$/;"	s
+The universal property	_posts/2022-05-18-Pursued-by-Stacks-4:-Fiber-Products.md	/^## The universal property$/;"	s
 math: true	Research.md	/^math: true$/;"	s
 math: true	_posts/2022-05-15-More-Maps:-Lerman's-Critique.md	/^math: true$/;"	s
 math: true	_posts/2022-05-16-Pursued-by-Stacks-2:-Descent.md	/^math: true$/;"	s
 math: true	_posts/2022-05-16-Pursued-by-Stacks-I:-CFGs.md	/^math: true$/;"	s
 math: true	_posts/2022-05-16-Pursued-by-Stacks.md	/^math: true$/;"	s
 math: true	_posts/2022-05-17-Pursued-by-Stacks-3:-We-Need-A-Lemma.md	/^math: true$/;"	s
+math: true	_posts/2022-05-18-Pursued-by-Stacks-4:-Fiber-Products.md	/^math: true$/;"	s
+math: true	_posts/2022-05-18-Pursued-by-Stacks-5:-Topological-Stacks.md	/^math: true$/;"	s
+math: true	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^math: true$/;"	s

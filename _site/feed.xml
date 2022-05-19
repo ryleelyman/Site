@@ -1,4 +1,326 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-17T22:10:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 3: We Need A Lemma</title><link href="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html" rel="alternate" type="text/html" title="Pursued By Stacks 3: We Need A Lemma" /><published>2022-05-17T00:00:00-04:00</published><updated>2022-05-17T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/17/Pursued-by-Stacks-3:-We-Need-A-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html">&lt;p&gt;In the previous two posts we met stacks for the first time.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-19T15:50:28-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 5: Topological Stacks</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html" rel="alternate" type="text/html" title="Pursued By Stacks 5: Topological Stacks" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-5:-Topological-Stacks</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html">&lt;p&gt;The purpose of this post is to single out the &lt;em&gt;topological&lt;/em&gt; (or &lt;em&gt;geometric&lt;/em&gt; or &lt;em&gt;Artin&lt;/em&gt;) stacks.&lt;/p&gt;
+
+&lt;h2 id=&quot;atlases&quot;&gt;Atlases&lt;/h2&gt;
+&lt;p&gt;We will say that a stack over \(\mathbf{Top}\) “is a space” if it is isomorphic as a stack
+to \(\underline{X}\) for some topological space \(X\).
+Following Lerman, we will in fact just drop the underline,
+thinking of \(X\) as the stack \(\underline{X}\).&lt;/p&gt;
+
+&lt;p&gt;An &lt;em&gt;atlas&lt;/em&gt; for a stack \(\mathsf{D}\) is a space \(X\)
+and a map \(p\colon X \to \mathsf{D}\)
+such that for any map \(f\colon Y \to \mathsf{D}\) of a space into \(\mathsf{D}\),
+the fiber product \(Y \times_{\mathsf{D}} X\) is a space
+and the map \(\pi_1 \colon Y \times_{\mathsf{D}} X \to Y\)
+is an open surjection which admits local sections.&lt;/p&gt;
+
+&lt;p&gt;Apparently it is common to say in the literature 
+that the map \(X \to \mathsf{D}\) is &lt;em&gt;representable.&lt;/em&gt;
+We say that \(\mathsf{D}\) is a &lt;em&gt;topological stack&lt;/em&gt; if it has an atlas.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-mathsfbmathcalg&quot;&gt;Example: \(\mathsf{B}\mathcal{G}\)&lt;/h2&gt;
+
+&lt;p&gt;Let \(\mathcal{G}\) be a topological groupoid,
+and let \(\mathsf{B}\mathcal{G}\) be the category of principal \(\mathcal{G}\)-bundles
+and \(\mathcal{G}\)-equivariant maps.
+&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; shows that \(\mathsf{B}\mathcal{G}\) is fibered in groupoids over \(\mathbf{Top}\);
+well, strictly speaking he is talking about Lie groupoids, but the argument works just fine
+for spaces and topological groupoids.
+In fact it is a stack: just as, you might think,
+given a topological group \(G\) and a principal \(G\)-bundle on an open cover of a space \(X\)
+with gluing data, you can glue up to form a principal \(G\)-bundle on \(X\),
+you can do the same for groupoids,
+and moreover isomorphisms form a sheaf.&lt;/p&gt;
+
+&lt;p&gt;Given a topological groupoid \(\mathcal{G}\),
+we claim that the map \(p\colon \mathcal{G}_0 \to \mathsf{B}\mathcal{G}\)
+defined (by the 2-Yoneda lemma) by 
+the principal \(\mathcal{G}\)-bundle \(\omega\colon \mathcal{G}_1 \to \mathcal{G}_0\)
+is an atlas.&lt;/p&gt;
+
+&lt;p&gt;So given any space \(Y\) and a map \(E\colon Y \to \mathsf{B}\mathcal{G}\), 
+we need to show that \(Y\times_{\mathsf{B}\mathcal{G}} \mathcal{G}_0\)
+is a space.
+First, note that by the 2-Yoneda lemma,
+the functor \(E\) is determined by a principal \(\mathcal{G}\)-bundle \(E \to Y\).
+Given a map \(g\colon Z \to Y\), the bundle \(E(g)\) is canonically isomorphic
+to the pullback \(g^*E\), so to ease notation, we will assume 
+that it is actually equal to \(g^*E\).
+Similarly given \(f\colon Z \to \mathcal{G}_0\), we will assume
+the bundle \(p(f)\) is \(f^*\mathcal{G}_1\).
+Thus an object of the fiber product over a space \(Z\) is a triple
+\((g,f,\beta)\)
+where \(g\colon Z \to Y\) and \(f\colon Z \to \mathcal{G}_0\) are maps of spaces
+and \(\beta\colon g^*E \to f^*\mathcal{G}_1\) is a \(\mathcal{G}\)-equivariant map of bundles,
+hence an isomorphism.&lt;/p&gt;
+
+&lt;p&gt;Recall that&lt;/p&gt;
+
+\[f^*\mathcal{G}_1 = \{(z,h) \in Z \times \mathcal{G}_1 : f(z) = \omega(h) \}.\]
+
+&lt;p&gt;The map \(z \mapsto (z,1_{f(z)})\) defines a global section \(\sigma\) of this bundle.
+We claim that the isomorphism \(\beta^{-1}\colon f^*\mathcal{G}_1 \to g^*E\)
+is determined uniquely by the image of \(\sigma\).
+Indeed, given \(\beta^{-1}(\sigma(z)) = (z,e)\),
+we must have \(\beta^{-1}(z,h) = \beta^{-1}(\sigma(z).h) = (z,e).h\),
+for all appropriate \(h \in \mathcal{G}_1\),
+so fiber by fiber the bundle map \(\beta^{-1}\) 
+is determined by the point \(\beta^{-1}(\sigma(z))\).
+This gives us a map \(\tau\colon Z \to E\) 
+defined as \(z \mapsto e\) such that \(\pi \tau = g\),
+where \(\pi\colon E \to Y\) is the defining map of the principal bundle \(E\).
+Notice that the anchor map of, for instance, \(g^*E\) is
+\((z,e) \mapsto a(e)\), where \(a \colon E \to \mathcal{G}_0\) is the anchor map.
+We have&lt;/p&gt;
+
+\[f = f\pi\sigma = \omega f_{\mathcal{G}_1} \sigma 
+= \alpha (\cdot)^{-1} f_{\mathcal{G}_1} \sigma = \alpha f_{\mathcal{G}_1}\sigma,\]
+
+&lt;p&gt;since \(\sigma(z) = (z,1_{f(z)})\). But then&lt;/p&gt;
+
+\[\alpha f_{\mathcal{G}_1\sigma} = a g_E \beta^{-1} \sigma,\]
+
+&lt;p&gt;since the isomorphism \(\beta\) intertwines the actions and thus preserves anchor maps.
+Finally,&lt;/p&gt;
+
+\[a g_E \beta^{-1} \sigma = a \tau.\]
+
+&lt;p&gt;Conversely, given any map \(\tau \colon Z \to E\), 
+we reconstruct \((g,f,\beta)\) as follows: the map \(g \colon Z \to Y\) is \(\pi\tau\),
+the map \(f\) is \(a\tau\),
+Finally we need a map \(\beta \colon g^*E \to f^*\mathcal{G}_1\).
+By definition we have&lt;/p&gt;
+
+\[g^*E = \{(z,e) \in Z\times E : \pi\tau(z) = \pi(e) \} \quad\text{and}\quad
+f^*\mathcal{G}_1 = \{(z,h) \in Z \times \mathcal{G}_1 : a\tau(z) = \omega(h) \}.\]
+
+&lt;p&gt;Define \(\beta(z,\tau(z)) = (z,1_{a\tau(z)})\) and extend equivariantly.
+It is clear that these constructions are mutually inverse,
+and we conclude that objects of the 2-fiber product are (isomorphic to) maps of spaces to \(E\).&lt;/p&gt;
+
+&lt;p&gt;Now for arrows! Suppose we have an arrow \((u,v)\colon (g_1,f_1,\beta_1) \to (g_2,f_2,\beta_2)\)
+over a map of spaces \(h\colon Z_1 \to Z_2\).
+This is a pair of maps \(u\colon Z_1 \to Z_2\) and \(v\colon Z_1 \to Z_2\)
+with the property that the following diagrams commute&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+Z_1 @&amp;gt;g_1&amp;gt;&amp;gt; Y \\
+@VVuV @| \\
+Z_2 @&amp;gt;g_2&amp;gt;&amp;gt; Y
+\end{CD}\qquad\begin{CD}
+Z_1 @&amp;gt;f_1&amp;gt;&amp;gt; \mathcal{G}_0 \\
+@VVvV @| \\
+Z_2 @&amp;gt;f_2&amp;gt;&amp;gt; \mathcal{G}_0
+\end{CD}\qquad \begin{CD}
+g_1^*E @&amp;gt;\beta_1&amp;gt;&amp;gt; f_1^*\mathcal{G}_1 \\
+@VV\tilde uV @VV\tilde vV \\
+g_2^*E @&amp;gt;\beta_2&amp;gt;&amp;gt; f_2^*\mathcal{G}_1,
+\end{CD}\]
+
+&lt;p&gt;where \(\tilde u\) and \(\tilde v\) are the unique \(\mathcal{G}\)-equivariant maps
+satisfying \((g_1)_E = (g_2)_E \tilde u\) 
+and \((f_1)_{\mathcal{G}_1} = (f_2)_{\mathcal{G}_1}\tilde v\).
+But because each \(\beta_i\) is over the identity map of \(Z_i\),
+we conclude that in fact \(u = v\).
+We have&lt;/p&gt;
+
+\[\tau_1\pi_1 = (g_1)_E \beta_1^{-1} = (g_2)_E \tilde u \beta_1^{-1}
+= (g_2)_E \beta_2^{-1}\tilde v = \tau_2\pi_2 \tilde v = \tau_2 u \pi_1,\]
+
+&lt;p&gt;so because \(\pi_1\) is an epimorphism, we conclude \(\tau_1 = \tau_2 u\).
+Finally, because, for instance, \((g_1)_E(z,\tau_1(z).h) = \tau_1(z).h\)
+and \((g_2)_E(z,\tau_2(z).h) = \tau_2(z).h\),
+we must have \(\tilde u(z,\tau_1(z).h) = (u(z),\tau_2u(z)) = (u(z),\tau_1(z))\)
+and similarly \(\tilde v(z,1_{a\tau_1(z)}) = (v(z),1_{a\tau_2(u(z))}) = (v(z),1_{a\tau_1(z)})\).&lt;/p&gt;
+
+&lt;p&gt;Conversely, given \(u \colon Z_1 \to Z_2\) such that \(\tau_1 = \tau_2u\),
+observe that \(g_1 = \pi\tau_1 = \pi\tau_2 u = g_2u\)
+and \(f_2 = a\tau_1 = a\tau_2 u = f_2u\).
+We have, for any \(z \in Z_1\) and appropriate \(h \in \mathcal{G}_1\),&lt;/p&gt;
+
+\[\begin{gather*}
+\tilde v \beta_1(z,\tau_1(z).h) = \tilde v(z,h) = (v(z),h)  = (u(z),h) \\
+= \beta_2(u(z),\tau_2u(z).h) = \beta_2(u(z),\tau_1(z).h) = \beta_2\tilde u(z,\tau_1(z).h).
+\end{gather*}\]
+
+&lt;p&gt;Therefore arrows in the 2-fiber product are (isomorphic to) maps in \(\underline{E}\),
+and we conclude that the 2-fiber product is the space \(E\).
+The map \(\pi\colon E \to Y\) is an open surjection which admits local sections
+because \(E\) is a principal \(\mathcal{G}\)-bundle.
+Therefore the map \(p\colon \mathcal{G}_0 \to \mathsf{B}\mathcal{G}\) is an atlas.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to single out the topological (or geometric or Artin) stacks.</summary></entry><entry><title type="html">Pursued By Stacks 4: Fiber Products</title><link href="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html" rel="alternate" type="text/html" title="Pursued By Stacks 4: Fiber Products" /><published>2022-05-18T00:00:00-04:00</published><updated>2022-05-18T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/18/Pursued-by-Stacks-4:-Fiber-Products</id><content type="html" xml:base="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html">&lt;p&gt;Okay, we’re closing in on the definition of a geometric stack over \(\mathbf{Top}\).
+Actually, the nLab tells me such stacks are called &lt;em&gt;topological,&lt;/em&gt; so I’ll try and say that.
+But! Before we get there, we need the construction 
+of the 2-fiber product of categories fibered in groupoids over \(\mathbf{Top}\).
+The purpose of this post is to discuss this construction, which I think is adorable.
+I cannot shake the feeling that I’ve talked through the 2-fiber product of categories
+before, but I have no idea where or why I might have done this
+except possibly the last time I tried to learn about stacks.&lt;/p&gt;
+
+&lt;p&gt;Friends of the blog &lt;a href=&quot;/2021/06/17/Pullbacks-and-Intersections.html&quot;&gt;will recall&lt;/a&gt; the categorical definition of a pullback.
+This notion makes sense for categories (after all, categories assemble into a category),
+but because of the existence of natural transformations, the universal property looks
+a little bit different.
+Namely, suppose we have three categories \(\mathsf{C}\), \(\mathsf{D}\) and \(\mathsf{E}\)
+and two functors \(F\colon \mathsf{C} \to \mathsf{E}\) and \(G\colon \mathsf{D} \to \mathsf{E}\).
+The &lt;em&gt;2-fiber product&lt;/em&gt; \(\mathsf{C}\times_{\mathsf{E}} \mathsf{D}\) makes the following diagram
+commute&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+\mathsf{C}\times_{\mathsf{E}}\mathsf{D} @&amp;gt;\pi_1&amp;gt;&amp;gt; \mathsf{C} \\
+@V\pi_2VV @VFVV \\
+\mathsf{D} @&amp;gt;G&amp;gt;&amp;gt; \mathsf{E}
+\end{CD}\]
+
+&lt;p&gt;up to natural isomorphism \(\eta\colon F\pi_1 \Rightarrow G\pi_2\)
+and is &lt;em&gt;universal&lt;/em&gt; for this property in the following slightly complicated sense.
+Given any category \(\mathsf{X}\), maps \(H\colon \mathsf{X} \to \mathsf{C}\)
+and \(K\colon \mathsf{X} \to \mathsf{D}\)
+with a natural isomorphism \(\epsilon \colon FH \Rightarrow GK\),
+there is a functor \(P\colon\mathsf{X} \to \mathsf{C}\times_{\mathsf{E}}\mathsf{D}\)
+and natural isomorphisms \(\alpha\colon H \Rightarrow \pi_1P\) 
+and \(\beta\colon K\Rightarrow \pi_2P\)
+with the property that \((G\beta)^{-1} \circ \eta P \circ F\alpha = \epsilon\).
+This is summarized in the following diagram.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2pullback.jpeg&quot; alt=&quot;The 2-pullback diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given another functor \(Q\colon \mathsf{X} \to \mathsf{C}\times_{\mathsf{E}}\mathsf{D}\)
+and natural isomorphisms \(\gamma\colon H\Rightarrow \pi_1Q\)
+and \(\delta\colon K \Rightarrow \pi_2Q\) as above,
+there exists a unique natural isomorphism \(\lambda \colon P \Rightarrow Q\)
+with the property that \(\pi_1\lambda \colon \pi_1P \Rightarrow \pi_1Q\)
+equals \(\gamma\circ\alpha^{-1}\) and \(\pi_2\lambda = \delta\circ\beta^{-1}\).&lt;/p&gt;
+
+&lt;p&gt;In the case of categories fibered in groupoids over \(\mathbf{Top}\),
+the 2-fiber product has the following definition.
+Objects of \(\mathsf{C}\times_{\mathsf{E}} \mathsf{D}\) are triples
+\((c,d,\alpha)\), where \(c \in \mathsf{C}\) and \(d \in \mathsf{D}\) are objects
+over the same space \(X\)
+and \(\alpha\colon F(c) \to G(d)\) is an arrow over the identity map of \(X\).
+Arrows of \(\mathsf{C}\times_{\mathsf{E}}\mathsf{D}\) are pairs of arrows
+\(u\colon c_1 \to c_2\) and \(v\colon d_1 \to d_2\)
+over the same map of spaces \(f\colon X \to Y\)
+with the property that the following diagram commutes in \(\mathsf{E}\)&lt;/p&gt;
+
+\[\begin{CD}
+F(c_1) @&amp;gt;\alpha_1&amp;gt;&amp;gt; G(d_1) \\
+@VVF(u)V @VVG(v)V \\
+F(c_2) @&amp;gt;\alpha_2&amp;gt;&amp;gt; G(d_2).
+\end{CD}\]
+
+&lt;p&gt;There is an obvious functor \(\pi\colon \mathsf{C}\times_{\mathsf{E}}\mathsf{D} \to \mathbf{Top}\)
+sending an object \((c,d,\alpha)\) to the space \(X\) that \(c\) and \(d\) are over
+and sending an arrow \((u,v)\) to the map \(f\colon X \to Y\) that \(u\) and \(v\) are over.
+We’d like to show that \(\mathsf{C}\times_{\mathsf{E}}\mathsf{D}\) is fibered in groupoids.
+Given an object \(\xi = (c,d,\alpha)\) over \(X\) and a map \(f\colon Y \to X\),
+we need a “pullback” \(f^*\xi\) over \(Y\).
+It would be simplest to define \(f^*\xi = (f^*c,f^*d,f^*\alpha)\),
+but we don’t necessarily have \(f^*F(c) = F(f^*c)\), 
+merely that they are canonically isomorphic via an isomorphism 
+\(\sigma_{F,f}\colon F(f^*c) \to f^*F(c)\)
+such that \(F(f_c) = f_{F(c)} \sigma_{F,f}\).
+So we will in fact define \(f^\xi = (f^*c, f^*d, \sigma_{G,f}^{-1} f^*\alpha \sigma_{F,f})\).
+The map \(f_\xi \colon f^*\xi \to \xi\)
+is the map \((f_c,f_d)\). We check&lt;/p&gt;
+
+\[\alpha F(f_c) = \alpha f_{F(c)} \sigma_{F,f} = f_{G(d)} f^*\alpha \sigma_{F,f} 
+= G(f_d) \sigma_{G,f}^{-1} f^*\alpha \sigma_{F,f},\]
+
+&lt;p&gt;so this really does give a map \(f_\xi \colon f^*\xi \to \xi\).&lt;/p&gt;
+
+&lt;p&gt;Given a pair of arrows \((u_1,v_1)\colon (c_1,d_1,\alpha_1) \to (c,d,\alpha)\)
+and \((u_2,v_2)\colon (c_2,d_2,\alpha_2) \to (c,d,\alpha)\)
+over maps \(f \colon Y \to X\) and \(g\colon Z \to X\)
+such that there exists a map of spaces \(h\colon Y \to Z\) with \(gh = f\),
+we need a unique pair of maps \(h_{\mathsf{C}}\colon c_1 \to c_2\) and 
+\(h_{\mathsf{D}}\colon d_1 \to d_2\)
+such that the relevant diagram commutes.
+But observe that because \(u_1\) and \(u_2\) are over \(f\) and \(g\),
+there does exist a unique map \(h_{\mathsf{C}}\colon c_1 \to c_2\)
+and similarly a unique map \(h_{\mathsf{D}}\colon d_1 \to d_2\) lifting the diagram \(gh = f\).
+We need to check that the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+F(c_1) @&amp;gt;\alpha_1&amp;gt;&amp;gt; G(d_1) \\
+@VVF(h_{\mathsf{C}})V @VVG(h_{\mathsf{D}})V \\
+F(c_2) @&amp;gt;\alpha_2&amp;gt;&amp;gt; G(d_2).
+\end{CD}\]
+
+&lt;p&gt;We will show this by the strategy from the last post:
+fitting both paths around the square into the vertical arrow in the following diagram&lt;/p&gt;
+
+\[\begin{CD}
+F(c_1) @&amp;gt;\alpha F(u_1)&amp;gt;&amp;gt; G(d) \\
+@VVV @| \\
+G(d_2) @&amp;gt;G(v_2)&amp;gt;&amp;gt; G(d);
+\end{CD}\]
+
+&lt;p&gt;uniqueness then assures equality of the paths around the square.
+We have&lt;/p&gt;
+
+\[\alpha F(u_1) = G(v_1)\alpha_1 = G(v_2)G(h_{\mathsf{D}})\alpha_1.\]
+
+&lt;p&gt;On the other hand we have&lt;/p&gt;
+
+\[\alpha F(u_1) = \alpha F(u_2)F(h_{\mathsf{C}}) = G(v_2) \alpha_2 F(h_{\mathsf{C}}),\]
+
+&lt;p&gt;how satisfying! This shows that the 2-fiber product really is fibered in groupoids.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, we have obvious projections \(\mathsf{C}\times_{\mathsf{E}}\mathsf{D}\)
+to \(\mathsf{C}\) and \(\mathsf{D}\).
+Call these \(\pi_1\) and \(\pi_2\).
+We do not quite have \(F\pi_1 = G\pi_2\),
+merely that there is a natural isomorphism \(\eta\colon F\pi_1 \Rightarrow G\pi_2\)
+defined by \(\eta(c,d,\alpha) = \alpha\)! Adorable, right?
+Showing that \(\eta\) really is natural is cute, but I’ll leave it to you.&lt;/p&gt;
+
+&lt;p&gt;By the way, are you still thinking vector bundles? I know I am;
+it’s helpful to pretend that there really is a projection from \(\xi \in \mathsf{C}\)
+down to the space \(X\) it is over.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-universal-property&quot;&gt;The universal property&lt;/h2&gt;
+
+&lt;p&gt;I’d like to conclude this post by showing that the fiber product 
+really has its universal property.
+Given a category \(\mathsf{X}\) fibered in groupoids over \(\mathbf{Top}\)
+with functors \(H \colon \mathsf{X} \to \mathsf{C}\) and \(K\colon \mathsf{X} \to \mathsf{D}\)
+and a natural isomorphism \(\epsilon\colon FH \Rightarrow GK\),
+the obvious functor \(P\) to \(\mathsf{C}\times_{\mathsf{E}}\mathsf{D}\)
+is defined on objects as \(x \mapsto (H(x),K(x),\epsilon(x))\)
+and on arrows \((u\colon x \to y) \mapsto (H(u),K(u))\).
+Naturality of \(\epsilon\) assures that this is really a functor.
+In this case, the isomorphisms \(\alpha\colon H \Rightarrow \pi_1P\) 
+and \(\beta\colon K \Rightarrow \pi_2P\)
+are the identity: these diagrams commute on the nose.
+Now suppose we have another functor 
+\(Q\colon \mathsf{X} \to \mathsf{C}\times_{\mathsf{E}}\mathsf{D}\)
+and natural isomorphisms \(\gamma \colon H \Rightarrow \pi_1Q\)
+and \(\delta\colon K \Rightarrow \pi_2Q\).
+Define \(\lambda \colon P \Rightarrow Q\) by the rule
+\(\lambda(x) = (\gamma(x),\delta(x))\colon (H(x),K(x),\epsilon(x)) \to Q(x)\).
+We write \(Q(x) = (c,d,\alpha)\). We need the following diagram to commute&lt;/p&gt;
+
+\[\begin{CD}
+FH(x) @&amp;gt;\epsilon(x)&amp;gt;&amp;gt; GK(x) \\
+@VVF\gamma(x)V @VVG\delta(x)V \\
+F(c) @&amp;gt;\alpha&amp;gt;&amp;gt; G(d).
+\end{CD}\]
+
+&lt;p&gt;But this is exactly the condition at \(x\) for the equality
+\((G\delta)^{-1}\eta Q F\gamma = \epsilon\),
+so \(\lambda(x)\) really defines an arrow.
+Given an arrow \(u\colon x \to y\) in \(\mathsf{X}\),
+we need to check naturality:&lt;/p&gt;
+
+\[\begin{CD}
+(H(x),K(x),\epsilon(x)) @&amp;gt;\lambda(x)&amp;gt;&amp;gt; Q(x) \\
+@VV(H(u),K(u))V @VVQ(u)V \\
+(H(y),K(y),\epsilon(y)) @&amp;gt;\lambda(y)&amp;gt;&amp;gt; Q(y).
+\end{CD}\]
+
+&lt;p&gt;This is true in each factor, for example in \(\mathsf{C}\) we have
+\(\pi_1 Q(u) \gamma(x) = \gamma(y) H(u)\).
+Therefore both paths around the square give equal arrows.
+It is clear from the construction that \(\lambda\) is unique.&lt;/p&gt;</content><author><name></name></author><summary type="html">Okay, we’re closing in on the definition of a geometric stack over \(\mathbf{Top}\). Actually, the nLab tells me such stacks are called topological, so I’ll try and say that. But! Before we get there, we need the construction of the 2-fiber product of categories fibered in groupoids over \(\mathbf{Top}\). The purpose of this post is to discuss this construction, which I think is adorable. I cannot shake the feeling that I’ve talked through the 2-fiber product of categories before, but I have no idea where or why I might have done this except possibly the last time I tried to learn about stacks.</summary></entry><entry><title type="html">Pursued By Stacks 3: We Need A Lemma</title><link href="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html" rel="alternate" type="text/html" title="Pursued By Stacks 3: We Need A Lemma" /><published>2022-05-17T00:00:00-04:00</published><updated>2022-05-17T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/17/Pursued-by-Stacks-3:-We-Need-A-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html">&lt;p&gt;In the previous two posts we met stacks for the first time.
 We’d like to know what a &lt;em&gt;geometric&lt;/em&gt; or &lt;em&gt;Artin&lt;/em&gt; stack over \(\mathbf{Top}\) is,
 since these are the stacks that correspond to, e.g. graphs of groups.
 To get there, I’m told, Yoneda lemma (sorry sorry).&lt;/p&gt;
@@ -448,73 +770,7 @@ so all natural transformations are natural isomorphisms.
 An &lt;em&gt;isomorphism&lt;/em&gt; of stacks is an equivalence of categories over \(\mathbf{Top}\),
 i.e. \(F\colon \mathsf{C} \to \mathsf{D}\) is full, faithful and essentially surjective.
 Since we love the &lt;a href=&quot;/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html&quot;&gt;axiom of choice&lt;/a&gt; around here,
-this is equivalent to the existence of an inverse functor up to natural isomorphism.&lt;/p&gt;</content><author><name></name></author><summary type="html">A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions. The stacks we’re interested in are geometric stacks, so this won’t be the last post on stacks, but with any luck we’ll see the definition in this post.</summary></entry><entry><title type="html">More Maps: Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/More-Maps-Lerman's-Critique.html" rel="alternate" type="text/html" title="More Maps: Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/More-Maps:-Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/More-Maps-Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
-by arguing that there is a problem with gluing maps.
-The purpose of this blog post is to try to digest this critique.
-We follow the notation set up in the previous two blog posts.&lt;/p&gt;
-
-&lt;p&gt;Lerman’s critique takes place in the realm of bibundles,
-but as we saw in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
-it’s possible to translate from the bibundles point of view to the generalized maps point of view.&lt;/p&gt;
-
-&lt;p&gt;Lerman’s bibundles \(X\) and \(Y\) are from \(S^1\), 
-thought of as a groupoid with only identity arrows,
-to \(C_2\), thought of as a groupoid with one object.
-If you chase through the definitions,
-you see that a bibundle is thus a principal \(C_2\) bundle over \(S^1\).
-There are two: the trivial bundle \(S^1\times C_2\)
-and the nontrivial bundle which is \(S^1\) double covering itself.
-Call the former \(X\) and the latter \(Y\).
-The former bundle has a global section and so ought to be represented by an honest functor \(S^1 \to C_2\).
-There is only one such functor, sending every object of \(S^1\) to the unique object of \(C_2\)
-and sending all the arrows to the identity.&lt;/p&gt;
-
-&lt;p&gt;For the nontrivial bundle \(Y\),
-we can choose contractible open neighborhoods \(U_1\) and \(U_2\) which cover \(S^1\)
-and on which there exist local sections \(s_1\) and \(s_2\).
-The groupoid \((S^1)^{\mathcal{U}}\) has space of objects the disjoint copy of two open intervals in \(\mathbb{R}\)
-and space of arrows of the form
-\((1_x)_{j,i} \colon x_i \to x_j\) for \(x \in U_i \cap U_j\).
-Topologically this space of arrows is a copy of the object space (for the identity arrows)
-together with two copies of the intersection \(U_1 \cap U_2\) (which is disconnected),
-one for arrows of the form \((1_x)_{1,2}\) and another for the arrows \((1_x)_{2,1}\).&lt;/p&gt;
-
-&lt;p&gt;Aha! Think about the definition of these local sections:
-on one component of the intersection \(U_1\cap U_2\), the sections agree,
-while on the other, they differ by the action of \(C_2\).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/circlebundle.jpeg&quot; alt=&quot;The nontrivial bundle with its local sections&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In other words, if we chase through the construction given in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
-we see that the resulting functor \((S^2)^{\mathcal{U}} \to C_2\)
-sends all identity arrows to the identity arrow of \(C_2\) (as they must be sent),
-and for \(x\) in the first component of \(U_1 \cap U_2\),
-the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the identity,
-while for all \(x\) in the second component of \(U_1 \cap U_2\),
-the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the nontrivial arrow in \(C_2\).&lt;/p&gt;
-
-&lt;p&gt;It’s clear in bibundle land that these are the two isomorphism classes of maps from \(S^1\) to \(C_2\),
-and I think I buy in generalized map land that any generalized map will be one of these two as well.&lt;/p&gt;
-
-&lt;p&gt;The complaint, if I understand it, is this:
-we can also define the functor associated to the trivial bundle on the open cover \(\mathcal{U}\).
-If you restrict either of these functors to either \(U_1\) or \(U_2\),
-you get the same map: since \(U_1\) and \(U_2\) are contractible, the only principal \(C_2\)-bundles
-over \(U_1\) and \(U_2\) are trivial.
-This is slightly less clear in generalized maps land:
-you could imagine cutting up an open interval into a couple pieces and having some of the
-identifying arrows on the overlaps map to the nontrivial arrow in \(C_2\).
-The point, though, is that you can undo this difference with a natural transformation,
-essentially because the subintervals you slice into only overlap their neighbors once,
-not twice as in the example above.&lt;/p&gt;
-
-&lt;p&gt;I think this is a serious issue:
-imagine having only the functors from \(U_1\) and \(U_2\) to \(C_2\).
-There’s only one choice of functor and only one generalized map.
-Nevertheless, when you try to glue these maps together to give you a new map from \(S^1\) to \(C_2\),
-you find that there are &lt;em&gt;two&lt;/em&gt; possible maps!
-What’s worse, since \(U_1\) and \(U_2\) don’t see the arrows on the overlaps,
-there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
+this is equivalent to the existence of an inverse functor up to natural isomorphism.&lt;/p&gt;</content><author><name></name></author><summary type="html">A stack, so I’m told, is a category fibered in groupoids satisfying some extra conditions. The stacks we’re interested in are geometric stacks, so this won’t be the last post on stacks, but with any luck we’ll see the definition in this post.</summary></entry><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
 We follow the notation for étale groupoids established in the &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;last post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
@@ -822,7 +1078,73 @@ On the other hand,&lt;/p&gt;
 
 \[(f_{k,j}g_{j,i}) . (x_i, s_i(x)) = (z_k,s_k(z)) .\phi_1(f_{k,j}g_{j,i})\]
 
-&lt;p&gt;so since the left action is associative, \(\phi_1\) indeed defines a functor! Cute.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to explore two or three notions of a map between étale groupoids. We follow the notation for étale groupoids established in the last post.</summary></entry><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
+&lt;p&gt;so since the left action is associative, \(\phi_1\) indeed defines a functor! Cute.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to explore two or three notions of a map between étale groupoids. We follow the notation for étale groupoids established in the last post.</summary></entry><entry><title type="html">More Maps: Lerman’s Critique</title><link href="http://localhost:4000/2022/05/15/More-Maps-Lerman's-Critique.html" rel="alternate" type="text/html" title="More Maps: Lerman’s Critique" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/More-Maps:-Lerman&apos;s-Critique</id><content type="html" xml:base="http://localhost:4000/2022/05/15/More-Maps-Lerman&apos;s-Critique.html">&lt;p&gt;&lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; critiques the category of étale groupoids with arrows generalized maps
+by arguing that there is a problem with gluing maps.
+The purpose of this blog post is to try to digest this critique.
+We follow the notation set up in the previous two blog posts.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s critique takes place in the realm of bibundles,
+but as we saw in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+it’s possible to translate from the bibundles point of view to the generalized maps point of view.&lt;/p&gt;
+
+&lt;p&gt;Lerman’s bibundles \(X\) and \(Y\) are from \(S^1\), 
+thought of as a groupoid with only identity arrows,
+to \(C_2\), thought of as a groupoid with one object.
+If you chase through the definitions,
+you see that a bibundle is thus a principal \(C_2\) bundle over \(S^1\).
+There are two: the trivial bundle \(S^1\times C_2\)
+and the nontrivial bundle which is \(S^1\) double covering itself.
+Call the former \(X\) and the latter \(Y\).
+The former bundle has a global section and so ought to be represented by an honest functor \(S^1 \to C_2\).
+There is only one such functor, sending every object of \(S^1\) to the unique object of \(C_2\)
+and sending all the arrows to the identity.&lt;/p&gt;
+
+&lt;p&gt;For the nontrivial bundle \(Y\),
+we can choose contractible open neighborhoods \(U_1\) and \(U_2\) which cover \(S^1\)
+and on which there exist local sections \(s_1\) and \(s_2\).
+The groupoid \((S^1)^{\mathcal{U}}\) has space of objects the disjoint copy of two open intervals in \(\mathbb{R}\)
+and space of arrows of the form
+\((1_x)_{j,i} \colon x_i \to x_j\) for \(x \in U_i \cap U_j\).
+Topologically this space of arrows is a copy of the object space (for the identity arrows)
+together with two copies of the intersection \(U_1 \cap U_2\) (which is disconnected),
+one for arrows of the form \((1_x)_{1,2}\) and another for the arrows \((1_x)_{2,1}\).&lt;/p&gt;
+
+&lt;p&gt;Aha! Think about the definition of these local sections:
+on one component of the intersection \(U_1\cap U_2\), the sections agree,
+while on the other, they differ by the action of \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/circlebundle.jpeg&quot; alt=&quot;The nontrivial bundle with its local sections&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In other words, if we chase through the construction given in the &lt;a href=&quot;/2022/05/15/Maps-of-%C3%A9tale-groupoids.html&quot;&gt;previous post&lt;/a&gt;,
+we see that the resulting functor \((S^2)^{\mathcal{U}} \to C_2\)
+sends all identity arrows to the identity arrow of \(C_2\) (as they must be sent),
+and for \(x\) in the first component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the identity,
+while for all \(x\) in the second component of \(U_1 \cap U_2\),
+the arrows \((1_x)_{1,2}\) and \((1_x)_{2,1}\) are sent to the nontrivial arrow in \(C_2\).&lt;/p&gt;
+
+&lt;p&gt;It’s clear in bibundle land that these are the two isomorphism classes of maps from \(S^1\) to \(C_2\),
+and I think I buy in generalized map land that any generalized map will be one of these two as well.&lt;/p&gt;
+
+&lt;p&gt;The complaint, if I understand it, is this:
+we can also define the functor associated to the trivial bundle on the open cover \(\mathcal{U}\).
+If you restrict either of these functors to either \(U_1\) or \(U_2\),
+you get the same map: since \(U_1\) and \(U_2\) are contractible, the only principal \(C_2\)-bundles
+over \(U_1\) and \(U_2\) are trivial.
+This is slightly less clear in generalized maps land:
+you could imagine cutting up an open interval into a couple pieces and having some of the
+identifying arrows on the overlaps map to the nontrivial arrow in \(C_2\).
+The point, though, is that you can undo this difference with a natural transformation,
+essentially because the subintervals you slice into only overlap their neighbors once,
+not twice as in the example above.&lt;/p&gt;
+
+&lt;p&gt;I think this is a serious issue:
+imagine having only the functors from \(U_1\) and \(U_2\) to \(C_2\).
+There’s only one choice of functor and only one generalized map.
+Nevertheless, when you try to glue these maps together to give you a new map from \(S^1\) to \(C_2\),
+you find that there are &lt;em&gt;two&lt;/em&gt; possible maps!
+What’s worse, since \(U_1\) and \(U_2\) don’t see the arrows on the overlaps,
+there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
 Time to rectify this situation.
 The purpose of this post is to explain how to see graphs of groups as étale groupoids.
 In a later post I’d like to explore the notion of maps between étale groupoids.&lt;/p&gt;
@@ -1208,259 +1530,4 @@ the ball of radius \(r\) deformation retracts onto the ball of radius \(r&apos;\
 They show that for well-chosen \(W\), there is a single reduced marked graph of groups
 of minimal norm, thus proving that \(L\) is contractible.
 To do both of these steps, they make extensive use of the star graph to analyze
-the effect of blowing up and collapsing edges in marked graphs of groups.&lt;/p&gt;</content><author><name></name></author><summary type="html">In an earlier post we introduced the concept of an ideal edge in a graph of groups and described how to blow up ideal edges to construct new graphs of groups. To prove that (the reduced spine of) Outer Space for a virtually free group is contractible, Krstić and Vogtmann define what is essentially a combinatorial analogue of a non-singular Morse function on Outer Space and show that for a well-chosen function, the set of minimal vertices of the complex is actually the star of a single reduced marked graph of groups, which is contractible. A key tool to that end is the star graph, and the purpose of this post is to describe the star graph (for conjugacy classes) in a virtually free group and describe its usefulness.</summary></entry><entry><title type="html">A Virtually Free Observation</title><link href="http://localhost:4000/2022/03/29/A-virtually-free-observation.html" rel="alternate" type="text/html" title="A Virtually Free Observation" /><published>2022-03-29T00:00:00-04:00</published><updated>2022-03-29T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/29/A-virtually-free-observation</id><content type="html" xml:base="http://localhost:4000/2022/03/29/A-virtually-free-observation.html">&lt;p&gt;&lt;a href=&quot;https://www.ams.org/journals/tran/1997-349-11/S0002-9947-97-01699-1/S0002-9947-97-01699-1.pdf&quot;&gt;Martin Pettet&lt;/a&gt; characterized which virtually free groups
-have finite outer automorphism group.
-&lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;Krstić and Vogtmann&lt;/a&gt; studied what I’ll call
-the “spine of reduced Outer Space” for a virtually free group
-and gave a formula for computing its dimension.
-I want to point out that the dimension of this complex can be arbitrarily big
-even when the virtually free group has finite outer automorphism group,
-so this post will be given to understanding a particular example.&lt;/p&gt;
-
-&lt;p&gt;Pettet’s full conditions are somewhat technical.
-Recall that a theorem of Karrass, Pietrowski and Solitar
-characterizes the finitely generated virtually free groups
-as those groups which are the fundamental group of a finite graph of finite groups.
-To get a clean statement about those virtually free groups \(G\)
-for which \(\operatorname{Out}(G)\) is finite,
-Pettet needs to allow valence-one vertices of the corresponding graph of groups to have
-finite-by-(infinite cyclic) vertex groups.
-It should be possible to translate his statement into a statement
-purely about graphs of finite groups,
-where certain “lollipop” subgraphs are allowed special behavior
-but I haven’t thought enough about how to go about doing that.&lt;/p&gt;
-
-&lt;p&gt;We’ll restrict ourselves to finite trees of finite groups \(\mathcal{G}\).
-In Pettet’s language, such a graph of groups \(\mathcal{G}\) is &lt;em&gt;irreducible&lt;/em&gt;
-if no edge-to-vertex group inclusion is surjective.
-In the language we have been developing over the past couple posts,
-I would prefer to say that \(\mathcal{G}\) is &lt;em&gt;reduced,&lt;/em&gt;
-since it is not possible to collapse an edge of \(\mathcal{G}\)
-without either changing the fundamental group of the graph of groups 
-or introducing an infinite vertex group.
-The following is a sufficient (but not necessary) condition for \(\operatorname{Out}(\pi_1(\mathcal{G}))\)
-to be finite.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For each oriented edge \(e \in \mathcal{G}\),
-the normalizer of \(\iota_e(\mathcal{G}_e)\) in \(\pi_1(\mathcal{G})\) is finite.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The graph of groups I have in mind is the following:
-the underlying graph is a tree with \(n-1\) leaves and only one non-leaf vertex.
-The vertex groups are all the symmetric group on 3 letters, \(S_3\),
-and the edge groups are all cyclic of order 2.
-The fundamental group of this graph of groups 
-is the amalgamated free product of \(n\) copies of \(S_3\) with a cyclic  group of order 2 amalgamated,
-so has presentation&lt;/p&gt;
-
-\[\langle a_1,\ldots, a_n,t : a_1^3 = \cdots = a_n^3 = t^2 = 1,\ ta_it^{-1} = a_i^{-1} \rangle.\]
-
-&lt;p&gt;In terms of this presentation, each \(\iota_e(\mathcal{G}_e)\) is the cyclic group \(\langle t\rangle\).
-This subgroup is its own normalizer in \(\pi_1(\mathcal{G})\).
-Perhaps the easiest way to see this is to note that the fixed-point set of \(t\)
-on the Bass–Serre tree of \(\mathcal{G}\) is finite:
-it includes one whole fundamental domain of the action but can go no further.
-Since the normalizer preserves the fixed-point set, it must be finite.
-Therefore the sufficient condition of Pettet mentioned above applies,
-and we conclude \(\operatorname{Out}(\pi_1(\mathcal{G}))\) is finite.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, \(\mathcal{G}\) contains &lt;em&gt;ideal edges&lt;/em&gt; in the sense of the previous post.
-The idea is that given any subset (including all) 
-of the \(n-1\) oriented edges incident to the center vertex,
-we can create a new graph of groups by pulling those edges away from the center vertex
-and attach them to a new vertex whose vertex group will be cyclic of order 2.
-Nothing prevents us from continuing this process
-until the resulting graph of groups \(\mathcal{G}&apos;\)
-has all interior vertices trivalent with \(C_2\) vertex group,
-all leaf vertices with \(S_3\) vertex group,
-and all edge groups \(C_2\).
-At this stage, an Euler characteristic argument shows that \(\mathcal{G}&apos;\) has \(n-2\) vertices 
-with \(C_2\) vertex group,
-while \(\mathcal{G}\) had none.
-A chain of \(n-2\) edge collapses recovering \(\mathcal{G}\) from \(\mathcal{G}&apos;\)
-shows that the complex studied by Krstić and Vogtmann has dimension at least (and in fact equal to) \(n-2\).
-Thus  we have shown that Krstić and Vogtmann’s complex
-can overestimate the &lt;em&gt;virtual cohomological dimension&lt;/em&gt;
-of \(\operatorname{Out}(\pi_1(\mathcal{G}))\) by an arbitrary amount,
-since the virtual cohomological dimension of a finite group is zero.&lt;/p&gt;</content><author><name></name></author><summary type="html">Martin Pettet characterized which virtually free groups have finite outer automorphism group. Krstić and Vogtmann studied what I’ll call the “spine of reduced Outer Space” for a virtually free group and gave a formula for computing its dimension. I want to point out that the dimension of this complex can be arbitrarily big even when the virtually free group has finite outer automorphism group, so this post will be given to understanding a particular example.</summary></entry><entry><title type="html">Ideal Edges</title><link href="http://localhost:4000/2022/03/27/Ideal-edges.html" rel="alternate" type="text/html" title="Ideal Edges" /><published>2022-03-27T00:00:00-04:00</published><updated>2022-03-27T00:00:00-04:00</updated><id>http://localhost:4000/2022/03/27/Ideal-edges</id><content type="html" xml:base="http://localhost:4000/2022/03/27/Ideal-edges.html">&lt;p&gt;Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\).
-In the &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;previous post&lt;/a&gt; we defined what it meant for an edge of \(T\) 
-to be &lt;em&gt;surviving&lt;/em&gt; or &lt;em&gt;collapsible.&lt;/em&gt;
-Collapsing orbits of collapsible edges in \(T\) yields
-a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse.
-Two trees \(T\) and \(T&apos;\) are in the same &lt;em&gt;deformation space&lt;/em&gt;
-if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\).
-The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\)
-all of whose edges are surviving
-is partially ordered under the operation of forest collapse,
-and this partial order contains minimal elements, which are &lt;em&gt;reduced&lt;/em&gt; trees.
-To study this poset, or its geometric realization \(L_T(G)\),
-it would be convenient to understand all trees collapsing onto a given reduced tree.
-This is captured in the idea of an &lt;em&gt;ideal edge,&lt;/em&gt;
-which I’d like to describe in this post.
-The idea of an ideal edge goes back to Culler and Vogtmann’s
-&lt;a href=&quot;https://marc-culler.info/static/home/papers/OuterSpace.pdf&quot;&gt;original paper&lt;/a&gt; on Outer Space;
-the treatment here is adapted from a paper of &lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;Krstić and Vogtmann&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Again we will work in the quotient graph of groups \(\mathcal{G}\),
-the construction of which we described in the &lt;a href=&quot;/2022/03/26/Shelters-in-graphs-of-groups.html&quot;&gt;previous post&lt;/a&gt;.
-We assume that \(\mathcal{G}\) is finite and connected,
-and that if a vertex \(v\) has valence less than 3,
-then at least one of the edge-to-vertex group inclusions 
-\(\iota_e\colon\mathcal{G}_e \to \mathcal{G}_v\) is not surjective.
-In tree language this says that \(T\) is minimal and has no subdivision vertices.
-The graph of groups \(\mathcal{G}\) is &lt;em&gt;marked.&lt;/em&gt;
-If we fix a tree \(T\) in the deformation space
-and identify \(G\) with the fundamental group of its quotient graph of groups \(\mathbb{G}\),
-we may think of the marking as a &lt;em&gt;homotopy equivalence&lt;/em&gt; in the sense of &lt;a href=&quot;https://arxiv.org/abs/2102.02848&quot;&gt;my paper&lt;/a&gt;
-\(\sigma\colon \mathbb{G} \to \mathcal{G}\).&lt;/p&gt;
-
-&lt;h2 id=&quot;directions&quot;&gt;Directions&lt;/h2&gt;
-&lt;p&gt;Let \(v\) be a vertex of \(\mathcal{G}\).
-Let \(\operatorname{st}(v)\) be the set of oriented edges of \(\mathcal{G}\) 
-with initial vertex \(v\).
-The set of &lt;em&gt;directions&lt;/em&gt; at \(v\), denoted \(D_v\), is the set&lt;/p&gt;
-
-\[\coprod_{e \in \operatorname{st}(v)} \mathcal{G}_v/\iota_e(\mathcal{G}_e) \times \{e\}.\]
-
-&lt;p&gt;The group \(\mathcal{G}_v\) acts on \(D_v\) on the left,
-and under the identification of \(\mathcal{G}\) with the quotient graph of groups of \(T\),
-if \(\tilde v\) is a lift of \(v\) to \(T\),
-there is a \(\mathcal{G}_v\)-equivariant bijection 
-between \(D_v\) and the set \(\operatorname{st}(\tilde v)\).&lt;/p&gt;
-
-&lt;p&gt;Suppose \(T&apos;\) is a tree such that collapsing the orbit of an edge \(\tilde e\) incident to \(v\)
-yields a tree equivariantly homeomorphic to \(T\).
-If we suppose that \(T&apos;\) is minimal, has no subdivision vertices
-and that every edge of \(T&apos;\) is surviving,
-we can make the following observations:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;\(\tilde e\) separates \(\operatorname{st}(\tilde v)\) into two components,
-each of which has at least two edges, since \(T&apos;\) is minimal
-and has no subdivision vertices.&lt;/li&gt;
-  &lt;li&gt;The stabilizer of \(\tilde e\) is a subgroup of the stabilizer of \(\tilde v\)
-and is equal to the stabilizer of the new vertex \(\tilde w\).
-If an edge in \(\operatorname{st}(\tilde v)\) now has initial vertex \(\tilde w\),
-so does every edge in its \(\operatorname{stab}(\tilde e)\)-orbit and no others.&lt;/li&gt;
-  &lt;li&gt;Since \(\tilde e\) is surviving, another edge incident to \(\tilde w\) must be collapsible;
-in other words \(\operatorname{stab}(\tilde e) = \operatorname{stab}(\tilde e&apos;)\)
-for some edge \(\tilde e&apos;\) with initial vertex \(\tilde w\).
-For the edge \(\tilde e&apos;\) to be collapsible,
-we need that its terminal vertex is not in the orbit of \(\tilde w\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Furthermore conversely, if we have a subset of \(\operatorname{st}(\tilde v)\)
-satisfying the above three properties,
-we can “blow up” the tree \(T\), inserting a new edge orbit \(\tilde e\).&lt;/p&gt;
-
-&lt;h2 id=&quot;ideal-edges&quot;&gt;Ideal edges&lt;/h2&gt;
-&lt;p&gt;The idea of an ideal edge in \(\mathcal{G}\) is designed to capture the above observations.
-To wit, an &lt;em&gt;ideal edge&lt;/em&gt; based at a vertex \(v\) is a subset \(\alpha \subset D_v\)
-that is required to satisfy the following conditions.
-Let \(\mathcal{G}_\alpha\) be the subgroup of \(\mathcal{G}_v\)
-generated by the subgroups \(g\iota_e(\mathcal{G}_e)g^{-1}\)
-for each direction \((g\iota_e(\mathcal{G}_e),e)\) contained in \(\alpha\).&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There are at least two directions in \(\alpha\) and at least two directions not in \(\alpha\).&lt;/li&gt;
-  &lt;li&gt;If \((g\iota_e(\mathcal{G}_e),e) \in \alpha\),
-then the intersection \(\mathcal{G}_v(g\iota_e(\mathcal{G}_e),e) \cap \alpha\) equals
-\(\mathcal{G}_\alpha(g\iota_e(\mathcal{G}_e),e)\).&lt;/li&gt;
-  &lt;li&gt;The subgroup \(\mathcal{G}_\alpha\) is equal to \(g\iota_e(\mathcal{G}_e)g^{-1}\)
-for some direction \((g\iota_e(\mathcal{G}_e),e) \in \alpha\)
-and no direction with underlying oriented edge \(\bar e\) is in \(\alpha\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We will say an oriented edge \(e \in \alpha\) if there is some direction
-in \(\alpha\) with underlying oriented edge \(e\).
-Notice that it follows from the conditions that \(\alpha\) contains at least two oriented edges.
-Let \(D(\alpha)\) be the set of oriented edges supporting a direction
-satisfying the third item above.
-If \(\mathcal{G}\) is reduced and \(\alpha\) is an ideal edge 
-satisfying \(\mathcal{G}_\alpha = \mathcal{G}_v\),
-then \(D_v - \alpha\) is also an ideal edge.
-The first item in the definition is clear.
-The second says that for each oriented edge \(e \in \operatorname{st}(v)\),
-either all directions with underlying oriented edge \(e\) are in \(\alpha\) or none are,
-which is also true of \(D_v - \alpha\).
-Since \(\mathcal{G}\) is reduced, some and hence every edge \(e \in D(\alpha)\)
-must form a loop based at \(v\) (for otherwise we could collapse \(e\)),
-so we have \(\bar e \in D(D_v - \alpha)\).
-We call \(D_v - \alpha\) the &lt;em&gt;inverse&lt;/em&gt; of \(\alpha\).
-Two ideal edges \(\alpha\) and \(\alpha&apos;\) are &lt;em&gt;equivalent&lt;/em&gt;
-if there exists \(g \in \mathcal{G}_v\) such that \(g.\alpha = \alpha&apos;\).&lt;/p&gt;
-
-&lt;p&gt;An ideal edge \(\alpha\) based at \(v\) is &lt;em&gt;contained in&lt;/em&gt; an ideal edge \(\beta\)
-if there exists \(g \in \mathcal{G}_v\)
-such that \(g.\alpha \subset \beta\).
-If \(\alpha\) and \(\beta\) are based at \(v\),
-the ideal edges are &lt;em&gt;disjoint&lt;/em&gt; if \(g.\alpha \cap \beta = \varnothing\) 
-for all \(g \in \mathcal{G}_v\).
-If \(\alpha\) and \(\beta\) are based at different vertices, then they are disjoint.
-We say \(\alpha\) and \(\beta\) are &lt;em&gt;compatible&lt;/em&gt;
-if one is properly contained in the other or if they are disjoint and not inverse.&lt;/p&gt;
-
-&lt;h2 id=&quot;blowing-up-ideal-edges&quot;&gt;Blowing up ideal edges&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/idealedge.jpeg&quot; alt=&quot;Blowing up an ideal edge in a graph of groups&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Let \(\alpha\) be an ideal edge of the marked graph of groups \(\tau = (\mathcal{G},\sigma)\).
-We construct a new marked graph of groups \(\tau^\alpha = (\mathcal{G}^\alpha,\sigma^\alpha)\)
-by &lt;em&gt;blowing up&lt;/em&gt; \(\alpha\) as follows.
-The vertices and edges of \(\mathcal{G}^\alpha\) 
-are the same as the vertices and edges of \(\mathcal{G}\)
-with one new vertex \(v_\alpha\) and one new edge \(\alpha\);
-the other vertices and edges are &lt;em&gt;old.&lt;/em&gt;
-The old vertex and edge groups are equal to what they are in \(\mathcal{G}\).
-We have \(\mathcal{G}^\alpha_{v_\alpha} = \mathcal{G}_\alpha = \mathcal{G}^\alpha_\alpha\).
-The new edge \(\alpha\) begins at \(v_\alpha\) and ends at \(v\).
-If \(e\) is an old oriented edge in \(\alpha\),
-then \(e\) now has initial vertex \(v_\alpha\)
-and the inclusion \(\iota_e\colon \mathcal{G}^\alpha_e \to \mathcal{G}^\alpha_\alpha\)
-is obtained from \(\iota_e\colon \mathcal{G}_e \to \mathcal{G}_v\)
-by recalling that we have \(g\iota_e(\mathcal{G_e})g^{-1} \le \mathcal{G}_\alpha\)
-for some \(g \in \mathcal{G}_v\).
-Note that there is a choice here of group element \(g\);
-differing choices will yield &lt;em&gt;equivalent&lt;/em&gt; markings in a sense that I won’t make precise here.
-All other oriented edges have their initial vertices and edge-to-vertex group inclusions unchanged.
-There is a &lt;em&gt;collapse map&lt;/em&gt; \(\mathcal{G}^\alpha \to \mathcal{G}\)
-defined by collapsing the edge \(\alpha\) and then “twisting” the edges incident to \(v_\alpha\)
-by the corresponding choice of group element \(g \in \mathcal{G}_v\).
-We’ll describe maps of general graphs of groups in another post.
-Choose a homotopy inverse \(f\colon \mathcal{G} \to \mathcal{G}^\alpha\)
-and define \(\sigma^\alpha = f\sigma\).&lt;/p&gt;
-
-&lt;p&gt;Observe that if \(\beta\) is disjoint from (and not inverse to)
-or properly included in \(\alpha\),
-then \(\beta\) may be regarded as an ideal edge of \(\mathcal{G}^\alpha\).
-If \(\alpha\) are disjoint and not inverse, it’s not hard to see that
-\((\tau^\alpha)^\beta = (\tau^\beta)^\alpha\).&lt;/p&gt;
-
-&lt;p&gt;An &lt;em&gt;oriented ideal forest&lt;/em&gt; in a marked graph of groups \(\tau\)
-is a collection of equivalence classes \(\{\alpha_1,\ldots,\alpha_k\}\)
-of ideal edges in \(\tau\) that are pairwise compatible.
-The ideal edges in an oriented ideal forest are partially ordered under inclusion.
-By repeatedly blowing up maximal elements of this partial order,
-we obtain a marked graph of groups \(\tau^{\alpha_1,\ldots,\alpha_k}\).
-Because each ideal edge \(\alpha\) in a reduced marked graph of groups \(\tau\)
-has an oriented edge in \(D(\alpha)\),
-it follows that each edge of \(\tau^{\alpha_1,\ldots,\alpha_k}\) is surviving.&lt;/p&gt;
-
-&lt;p&gt;A pair of ideal edges \(\alpha\) and \(\beta\) are &lt;em&gt;pre-compatible&lt;/em&gt;
-if they are compatible, or \(\alpha\) is invertible with inverse \(\bar\alpha\)
-and \(\bar\alpha\) is included in \(\beta\).
-It follows that \(\beta\) is invertible and that \(\bar\beta\) is included in \(\alpha\).
-An &lt;em&gt;ideal forest&lt;/em&gt; is a collection of pairwise pre-compatible ideal edges
-containing the inverse of each of its invertible elements.
-We can complete each oriented ideal forest \(\Phi\) to an ideal forest \(\Phi^\pm\) by adding
-the inverses of each of its invertible elements.
-Krstić and Vogtmann prove for graphs of finite groups
-as Lemma 5.7 of &lt;a href=&quot;https://www.researchgate.net/publication/226534036_Equivariant_outer_space_and_automorphisms_of_free-by-finite_groups/link/5762c70508aee61395bef5dc/download&quot;&gt;their paper&lt;/a&gt;
-that if \(\Phi^\pm = \Psi^\pm\) as ideal forests
-in a reduced marked graph of groups \(\tau\),
-we have \(\tau^\Phi = \tau^\Psi\) as marked graphs of groups.
-Again for graphs of finite groups,
-Krstić and Vogtmann prove as Proposition 5.9 that the poset of marked graphs of groups in \(L_T(G)\)
-collapsing to a reduced marked graph of groups \(\tau\) 
-is isomorphic to the poset of ideal forests in \(\tau\).&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s once again fix a group \(G\) that acts cocompactly on a tree \(T\). In the previous post we defined what it meant for an edge of \(T\) to be surviving or collapsible. Collapsing orbits of collapsible edges in \(T\) yields a new tree \(T&apos;\) which we say is obtained from \(T\) by forest collapse. Two trees \(T\) and \(T&apos;\) are in the same deformation space if there are \(G\)-equivariant maps \(T \to T&apos;\) and \(T&apos; \to T\). The set of \(G\)-equivariant homeomorphism classes of trees in the same deformation space as \(T\) all of whose edges are surviving is partially ordered under the operation of forest collapse, and this partial order contains minimal elements, which are reduced trees. To study this poset, or its geometric realization \(L_T(G)\), it would be convenient to understand all trees collapsing onto a given reduced tree. This is captured in the idea of an ideal edge, which I’d like to describe in this post. The idea of an ideal edge goes back to Culler and Vogtmann’s original paper on Outer Space; the treatment here is adapted from a paper of Krstić and Vogtmann.</summary></entry></feed>
+the effect of blowing up and collapsing edges in marked graphs of groups.&lt;/p&gt;</content><author><name></name></author><summary type="html">In an earlier post we introduced the concept of an ideal edge in a graph of groups and described how to blow up ideal edges to construct new graphs of groups. To prove that (the reduced spine of) Outer Space for a virtually free group is contractible, Krstić and Vogtmann define what is essentially a combinatorial analogue of a non-singular Morse function on Outer Space and show that for a well-chosen function, the set of minimal vertices of the complex is actually the star of a single reduced marked graph of groups, which is contractible. A key tool to that end is the star graph, and the purpose of this post is to describe the star graph (for conjugacy classes) in a virtually free group and describe its usefulness.</summary></entry></feed>
