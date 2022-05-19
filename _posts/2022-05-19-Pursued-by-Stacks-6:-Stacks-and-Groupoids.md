@@ -38,7 +38,7 @@ Therefore, it suffices to produce maps of stacks for our structure maps.
 
 We take source and target maps of $$\mathcal{G}$$ to be the two projections
 from $$X\times_{\mathsf{D}} X$$ to $$X$$.
-In more words, $$(X,Y,f) \mapsto X$$ and $$(X,Y,f) \mapsto Y$$.
+In more words, $$(x,y,f) \mapsto X$$ and $$(x,y,f) \mapsto Y$$.
 Note that the diagram
 
 $$\require{AMScd}\begin{CD}
@@ -56,11 +56,11 @@ The multiplication map
 
 $$m\colon (X\times_{\mathsf{D}}X)\times_X(X\times_{\mathsf{D}}X) \to X \times_{\mathsf{D}} X$$
 
-is defined on objects as $$((X,Y,f),(Y,Z,g) = (X,Z,gf)$$.
+is defined on objects as $$((x,y,f),(y,z,g) = (x,z,gf)$$.
 This multiplication is associative because composition of arrows in $$\mathsf{D}$$ is associative.
 The inversion map $$(\cdot)^{-1}$$ is given on objects as
 
-$$(X,Y,f)^{-1} = (Y,X,f^{-1}).$$
+$$(x,y,f)^{-1} = (y,x,f^{-1}).$$
 
 So far we have not used any of the stack properties, 
 merely that the category is fibered in groupoids.
