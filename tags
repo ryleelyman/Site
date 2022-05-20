@@ -7,6 +7,8 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/02cf1a6/
+A digression: pseudofunctors	_posts/2022-05-19-Pursued-by-Stacks-7:-Appendix.md	/^## A digression: pseudofunctors$/;"	s
+A loose end from part six	_posts/2022-05-19-Pursued-by-Stacks-7:-Appendix.md	/^## A loose end from part six$/;"	s
 Atlases	_posts/2022-05-18-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Atlases$/;"	s
 Atlases	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Atlases$/;"	s
 Categories fibered in groupoids	_posts/2022-05-16-Pursued-by-Stacks-I:-CFGs.md	/^## Categories fibered in groupoids$/;"	s
@@ -16,6 +18,8 @@ Example: $$\\mathsf{B}\\mathcal{G}$$	_posts/2022-05-18-Pursued-by-Stacks-5:-Topo
 Example: $$\\mathsf{B}\\mathcal{G}$$	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^## Example: $$\\mathsf{B}\\mathcal{G}$\$$/;"	s
 Example: Vector bundles of constant rank	_posts/2022-05-16-Pursued-by-Stacks-I:-CFGs.md	/^## Example: Vector bundles of constant rank$/;"	s
 Example: Vector bundles of constant rank	_posts/2022-05-16-Pursued-by-Stacks.md	/^## Example: Vector bundles of constant rank$/;"	s
+Pseudonaturality in $$\\mathsf{D}$$	_posts/2022-05-19-Pursued-by-Stacks-7:-Appendix.md	/^## Pseudonaturality in $$\\mathsf{D}$\$$/;"	s
+Pseudonaturality in $$\\underline{X}$$	_posts/2022-05-19-Pursued-by-Stacks-7:-Appendix.md	/^## Pseudonaturality in $$\\underline{X}$\$$/;"	s
 Publications and Preprints	Research.md	/^## Publications and Preprints$/;"	s	chapter:Research
 Research	Research.md	/^# Research$/;"	c
 The 2-Yoneda lemma	_posts/2022-05-17-Pursued-by-Stacks-3:-We-Need-A-Lemma.md	/^## The 2-Yoneda lemma$/;"	s
@@ -30,3 +34,4 @@ math: true	_posts/2022-05-18-Pursued-by-Stacks-4:-Fiber-Products.md	/^math: true
 math: true	_posts/2022-05-18-Pursued-by-Stacks-5:-Topological-Stacks.md	/^math: true$/;"	s
 math: true	_posts/2022-05-19-Pursued-by-Stacks-5:-Topological-Stacks.md	/^math: true$/;"	s
 math: true	_posts/2022-05-19-Pursued-by-Stacks-6:-Stacks-and-Groupoids.md	/^math: true$/;"	s
+math: true	_posts/2022-05-19-Pursued-by-Stacks-7:-Appendix.md	/^math: true$/;"	s

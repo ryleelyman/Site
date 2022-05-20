@@ -1,198 +1,342 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-19T18:27:09-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 6: Stacks And Groupoids</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-6-Stacks-and-Groupoids.html" rel="alternate" type="text/html" title="Pursued By Stacks 6: Stacks And Groupoids" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-6:-Stacks-and-Groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-6-Stacks-and-Groupoids.html">&lt;p&gt;In writing this post, I started to see what’s kind of cool about stacks:
-you can treat them almost as if they were spaces
-in the sense that, as you’ll see, objects of a stack \(\mathsf{D}\) over a space \(Y\)
-are the same thing as maps of stacks \(Y \to \mathsf{D}\),
-just like the situation of \(\underline{X}\) for a space \(X\).
-The difference is that \(\mathsf{D}\) may have many isomorphisms &lt;em&gt;stacked&lt;/em&gt; over 
-\(Y \to \mathsf{D}\)
-while \(\underline{X}\) has only the identity of \(Y\).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-20T15:46:45-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 7: Appendix</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html" rel="alternate" type="text/html" title="Pursued By Stacks 7: Appendix" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-7:-Appendix</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html">&lt;p&gt;This post is, strictly speaking, a follow up to &lt;a href=&quot;/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html&quot;&gt;part three&lt;/a&gt; of my series on stacks,
+on the 2-Yoneda lemma.
+The classical Yoneda lemma has built into it a naturality statement,
+while our 2-Yoneda lemma proved essentially only the fact of the isomorphism.
+Let’s fix that.&lt;/p&gt;
 
-&lt;p&gt;In what might be the final post on stacks for a while,
-I’d like to show that every topological stack is isomorphic to
-\(\mathsf{B}\mathcal{G}\) for some topological groupoid \(\mathcal{G}\).
-We could then say that, for instance, a graph of groups
-is any stack isomorphic to \(\mathsf{B}\mathcal{G}\),
-where \(\mathcal{G}\) is the étale groupoid we constructed &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;in a previous post&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; (The 2-Yoneda Lemma)
+ The functor 
+ \(\operatorname{よ}\colon \operatorname{Hom}(\underline{X},\mathsf{D}) \to \mathsf{D}(X)\)
+ defined on objects as \((F\colon \underline{X} \to \mathsf{D}) \mapsto F(1_X)\)
+ and on arrows as \((\alpha\colon F \Rightarrow G) \mapsto \alpha(1_X)\)
+ is an equivalence of categories which is pseudonatural in both arguments.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Suppose \(\mathsf{D}\) is a topological stack
-with an atlas \(p\colon X \to \mathsf{D}\).
-We claim that \(X \times_{\mathsf{D}} X\) 
-(which is a space since \(X\) is an atlas)
-is a space of arrows for a groupoid \(\mathcal{G}\) with space of objects \(X\).
-That finished,
-we will construct an isomorphism \(\psi\colon \mathsf{D} \to \mathsf{B}\mathcal{G}\).&lt;/p&gt;
+&lt;p&gt;We have proved all but the (pseudo)-naturality statement,
+which is a little convoluted for the following reason.
+You see, typically you think of the Yoneda lemma as being about, for instance,
+natural transformations from the hom-set functor 
+\(\mathsf{C}(\underline{X},\cdot)\) to a functor \(F\).
+Now, \(\underline{X}\) is &lt;em&gt;not&lt;/em&gt; the functor \(\mathbf{Top}(X,\cdot)\),
+but rather the functor \(\mathbf{Top}(\cdot,X)\) which we think of as being valued not in sets,
+but in categories (groupoids, actually),
+where the category is the rather uninteresting discrete category
+comprising an object for each map \(Y \to X\) and only the identity arrows.
+Given a map \(h \colon Y \to Z\), 
+we get a functor \(h^*\colon \underline{X}(Z) \to \underline{X}(Y)\) 
+given by \(h^*(g\colon Z \to X) = gh \colon Y \to X\).
+This is actually a functor 
+(I say, just because I can anticipate that I’m about to write down a not-quite-a-functor).
+The only natural transformation between functors is the identity.&lt;/p&gt;
 
-&lt;p&gt;Thus we are in search of structure maps for our groupoid.
-By the 2-Yoneda lemma, 
-if \(X\) and \(Y\) are spaces, any map of stacks \(X \to Y\)
-is determined up to natural isomorphism by an object of \(\underline{Y}\) over \(X\);
-in other words, a continuous map \(f\colon X \to Y\).
-But because the fiber of \(\underline{Y}\) comprises only the identity arrow,
-this map \(f\) is in fact unique.
-Therefore, it suffices to produce maps of stacks for our structure maps.&lt;/p&gt;
+&lt;p&gt;Anyway, the point is, we should be expecting to suddenly start thinking of
+an arbitrary category fibered in groupoids \(\mathsf{D}\) as a &lt;em&gt;contravariant&lt;/em&gt; functor
+from \(\mathsf{Top}\) to the category of categories (groupoids, actually),
+where the category is \(\mathsf{D}(Y)\).
+Given a map \(h \colon Y \to Z\),
+we should get a functor \(h^*\colon \mathsf{D}(Z) \to \mathsf{D}(Y)\)
+given by \(h^*(\xi) = h^*\xi\)
+and we do, actually. The problem, which we mumbled something about earlier,
+is that given \(g \colon X \to Y\), we don’t necessarily have \(g^*h^*\xi = (hg)^*\xi\),
+merely that they’re canonically isomorphic.
+In other words, the operation \((\cdot)^*\) is not a contravariant functor,
+just one up to canonical isomorphism.
+I super don’t actually want to learn what a pseudofunctor is, but I guess that’s what this is.&lt;/p&gt;
 
-&lt;p&gt;We take source and target maps of \(\mathcal{G}\) to be the two projections
-from \(X\times_{\mathsf{D}} X\) to \(X\).
-In more words, \((X,Y,f) \mapsto X\) and \((X,Y,f) \mapsto Y\).
-Note that the diagram&lt;/p&gt;
+&lt;h2 id=&quot;a-digression-pseudofunctors&quot;&gt;A digression: pseudofunctors&lt;/h2&gt;
+
+&lt;p&gt;Let’s go slowly: for each object \(X\) in \(\mathbf{Top}\) 
+we have an object in the category of groupoids, namely the groupoid \(\mathsf{D}(X)\).
+If we think of the hom-set \(\mathbf{Top}(X,Y)\) as a discrete groupoid,
+we get a &lt;em&gt;covariant&lt;/em&gt; functor defined &lt;em&gt;contravariantly&lt;/em&gt; on objects (which are maps!) 
+as \((f\colon X\to Y) \mapsto f^*\colon \mathsf{D}(Y) \to \mathsf{D}(X)\).
+We saw that this is in fact a functor, since given \(\alpha \colon \xi \to \xi&apos;\),
+there is a unique arrow \(f^*\alpha \colon f^*\xi \to f^*\xi&apos;\).
+The arrows of the category \(\mathbf{Top}(X,Y)\) are the identity natural isomorphism,
+which must go to the identity natural transformation of \(f^*\).
+Now, I think we’ve insisted that \(1_X^*\xi = \xi\), 
+and indeed if you pull back a bundle along the identity map, 
+I think it’s fair to say that you get the same bundle.
+This is secretly good, because it lets us ignore isomorphisms involving the identity,
+since they are equalities.
+Now for the hard part. Given \(f\colon X \to Y\) and \(g \colon Y \to Z\),
+by the defining property of a category fibered in groupoids, 
+for each \(\xi \in \mathsf{D}(Z)\),
+there is a unique isomorphism \(\eta{f,g}(\xi)\) making the following diagram commute&lt;/p&gt;
 
 \[\require{AMScd}\begin{CD}
-X @&amp;gt;1_X&amp;gt;&amp;gt; X \\
-@VV1_XV @VVpV \\
-X @&amp;gt;p&amp;gt;&amp;gt; \mathsf{D}
+f^*g^*\xi @&amp;gt;g_{\xi}f_{g^*\xi}&amp;gt;&amp;gt; \xi \\
+@VV\eta{f,g}(\xi)V @| \\
+(gf)^*\xi @&amp;gt;(gf)_{\xi}&amp;gt;&amp;gt; \xi.
 \end{CD}\]
 
-&lt;p&gt;commutes (on the nose),
-so there is a map \(X \to X\times_{\mathsf{D}} X\).
-If you chase through the definition of maps to the 2-fiber product,
-you see that on objects the map is \(Y \mapsto (Y,Y,1_Y)\).&lt;/p&gt;
+&lt;p&gt;Notice that given an arrow \(\alpha\colon \xi \to \xi&apos;\),
+the following diagram commutes&lt;/p&gt;
 
-&lt;p&gt;The multiplication map&lt;/p&gt;
+\[\begin{CD}
+f^*g^*\xi @&amp;gt;\eta_{f,g}(\xi)&amp;gt;&amp;gt; (gf)^*\xi \\
+@VVf^*g^*\alpha V @VV(gf)^*\alpha V \\
+f^*g^*\xi&apos; @&amp;gt;\eta_{f,g}(\xi&apos;)&amp;gt;&amp;gt; (gf)^*\xi&apos;.
+\end{CD}\]
 
-\[m\colon (X\times_{\mathsf{D}}X)\times_X(X\times_{\mathsf{D}}X) \to X \times_{\mathsf{D}} X\]
+&lt;p&gt;This is because of the defining property of categories fibered in groupoids:
+both paths around the square make the following diagram commute&lt;/p&gt;
 
-&lt;p&gt;is defined on objects as \(((X,Y,f),(Y,Z,g) = (X,Z,gf)\).
-This multiplication is associative because composition of arrows in \(\mathsf{D}\) is associative.
-The inversion map \((\cdot)^{-1}\) is given on objects as&lt;/p&gt;
+\[\begin{CD}
+f^*g^*\xi @&amp;gt;\alpha g_\xi f_{g^*\xi}&amp;gt;&amp;gt; \xi&apos; \\
+@VVV @| \\
+(gf)^*\xi&apos; @&amp;gt;(gf)_{\xi&apos;}&amp;gt;&amp;gt; \xi&apos;;
+\end{CD}\]
 
-\[(X,Y,f)^{-1} = (Y,X,f^{-1}).\]
+&lt;p&gt;indeed we calculate&lt;/p&gt;
 
-&lt;p&gt;So far we have not used any of the stack properties, 
-merely that the category is fibered in groupoids.
-(I cannot help myself: if the category were merely fibered in categories, 
-whatever that might mean, we would end up with a category which is not a groupoid.)&lt;/p&gt;
+\[\alpha g_\xi f_{g^*\xi} = g_{\xi&apos;} g^*\alpha f_{g^*\xi} = g_{\xi&apos;} f_{g^*\xi&apos;} f^*g^*\alpha
+= (gf)_{\xi&apos;} \eta_{f,g}(\xi&apos;) f^*g^*\alpha\]
 
-&lt;p&gt;Now we define \(\psi\colon \mathsf{D} \to \mathsf{B}\mathcal{G}\).
-This means that to each object of \(\mathsf{D}\) over a space \(Y\),
-we need to produce a principal \(\mathcal{G}\)-bundle over \(Y\).&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
 
-&lt;p&gt;Recall that by the 2-Yoneda lemma an object of \(\mathsf{D}\) over \(Y\)
-is the same thing as a map of stacks \(f\colon Y \to \mathsf{D}\).
-Since \(X\) is an atlas, the fiber product \(Y \times_{\mathsf{D}} X\) is a space
-and the map \(Y\times_{\mathsf{D}} X \to Y\) is an open surjection which admits local sections.
-We let the projection \(Y\times_{\mathsf{D}} X \to X\) be the anchor map
-for the right action of \(\mathcal{G}\) defined on objects as&lt;/p&gt;
+\[\alpha g_\xi f_{g^*\xi} = \alpha (gf)_\xi \eta_{f,g}(\xi) 
+= (gf)_{\xi&apos;} (gf)^*\alpha \eta_{f,g}(\xi).\]
+
+&lt;p&gt;My source (nLab, gulp) suggests that the isomorphism \(\eta_{f,g}\) 
+should be natural in \(f\) and \(g\).
+Notice that if \(f \ne f&apos;\), then there are no natural transformations (isomorphisms)
+\(f^* \Rightarrow f&apos;^*\).
+On the other hand, a family of arrows \(\alpha(\xi) \colon f^*\xi \to f^*\xi\),
+define a natural isomorphism \(\alpha \colon f^*\Rightarrow f^*\)
+if for each \(\beta \colon \xi \to \xi&apos;\) in the fiber over \(\mathsf{Y}\), we have
+\(\alpha(\xi&apos;)f^*\beta = f^*\beta\alpha(\xi)\).
+Naturality in \(f\), then, is the statement that given \(\alpha\colon f^* \Rightarrow f^*\),
+the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+f^*g^*\xi @&amp;gt;\eta_{f,g}(\xi)&amp;gt;&amp;gt; (gf)^*\xi \\
+@VV\alpha(g^*\xi)V @VVV \\
+f^*g^*\xi @&amp;gt;\eta_{f,g}(\xi)&amp;gt;&amp;gt; (gf)^*\xi
+\end{CD}\]
+
+&lt;p&gt;which can only hold if the righthand arrow is 
+\(\eta_{f,g}(\xi)\alpha(g^*\xi)\eta_{f,g}(\xi)^{-1}\),
+and indeed, I see no other sensible way to define an arrow \((gf)^*\xi \to (gf)^*\xi\)
+out of one from \(f^*\xi \to f^*\xi\).
+Naturality in \(g\) should be similarly silly; I’ll leave it to you.&lt;/p&gt;
+
+&lt;p&gt;Since function composition is strictly associative (phew)
+we just need to check that the following diagram commutes for each \(\xi \in \mathsf{D}(W)\)
+and each triple of maps \(f\colon X \to Y\), \(g\colon Y \to Z\) and \(h\colon Z \to W\)&lt;/p&gt;
+
+\[\begin{CD}
+f^*g^*h^*\xi @&amp;gt;f^*(\eta_{g,h}(\xi))&amp;gt;&amp;gt; f^*(hg)^* \xi \\
+@VV\eta_{f,g}(h^*\xi)V @VV\eta_{f,gh}(\xi)V \\
+(gf)^*h^*\xi @&amp;gt;\eta_{gf,h}(\xi)&amp;gt;&amp;gt; (hgf)^*\xi.
+\end{CD}\]
+
+&lt;p&gt;This will use our only trick: consider the diagram&lt;/p&gt;
+
+\[\begin{CD}
+f^*g^*h^*\xi @&amp;gt;h_{\xi}g_{h^*\xi}f_{g^*h^*\xi}&amp;gt;&amp;gt; \xi \\
+@VVV @| \\
+(hgf)^*\xi @&amp;gt;(hgf)_\xi&amp;gt;&amp;gt; \xi.
+\end{CD}\]
+
+&lt;p&gt;We calculate:&lt;/p&gt;
+
+\[h_\xi g_{h^*\xi} f_{g^*h^*\xi} = (hg)_\xi \eta_{g,h}(\xi) f_{g^*h^*\xi}
+= (hg)_\xi f_{(hg)^*\xi} f^*(\eta_{g,h}(\xi)) = (hgf)_\xi \eta_{f,gh}(\xi) f^*(\eta_{g,h}(\xi))\]
+
+&lt;p&gt;and&lt;/p&gt;
+
+\[h_\xi g_{h^*\xi} f_{g^*h^*\xi} = h_\xi (gf)_{h^*\xi} \eta_{f,g}(h^*\xi)
+= (hgf)_\xi \eta_{gf,h}(\xi) \eta_{f,g}(h^*\xi).\]
+
+&lt;p&gt;Therefore by the defining property of categories fibered in groupoids,
+we have the coherence of the associating isomorphism.
+The argument above is summarized in the commuting cube below,
+where the unlabeled arrows are the “obvious” ones, for instance \(h_\xi \colon h^*\xi \to \xi\).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/2naturality.jpeg&quot; alt=&quot;The commuting cube demonstrating the coherence of isomorphisms.&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pseudonaturality-in-underlinex&quot;&gt;Pseudonaturality in \(\underline{X}\)&lt;/h2&gt;
+
+&lt;p&gt;Okay enough about pseudofunctors.
+We already saw in a previous post that functors \(\underline{Y} \to \underline{X}\)
+are maps \(f\colon Y \to X\).
+(Indeed, the proof uses the first part of the 2-Yoneda lemma.)
+Such a functor gives us a functor 
+\(f^*\colon \operatorname{Hom}(\underline{X},\mathsf{D}) 
+\to \operatorname{Hom}(\underline{Y},\mathsf{D})\)
+defined on objects (functors)
+as \(f^*F = Ff\) and on arrows (natural transformations)
+as \(f^*(\alpha \colon F \Rightarrow G) = \alpha f \colon Ff \Rightarrow Gf\).
+On the other side of the equation,
+we have the functor \(f^*\colon \mathsf{D}(X) \to \mathsf{D}(Y)\)
+defined extensively above.
+Pseudonaturality in \(X\) then is the claim that the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+\operatorname{Hom}(\underline{X},\mathsf{D}) @&amp;gt;\operatorname{よ}_X&amp;gt;&amp;gt; \mathsf{D}(X) \\
+@VVf^*V @VVf^*V \\
+\operatorname{Hom}(\underline{Y},\mathsf{D}) @&amp;gt;\operatorname{よ}_Y&amp;gt;&amp;gt; \mathsf{D}(Y).
+\end{CD}\]
+
+&lt;p&gt;up to a natural transformation.
+And indeed, if \(F(1_X) = \xi \in \mathsf{D}(X)\), we have
+\(f^*\operatorname{よ}_X(F) = f^*\xi\)
+and \(\operatorname{よ}_Y(f^*F) = (f^*F)(1_Y) = F(f\colon Y \to X)\).
+Now, recall from &lt;a href=&quot;/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html&quot;&gt;part three&lt;/a&gt; that we write \(F(Y)\), since \(f\colon Y \to X\) is understood
+and we’d like to consider the arrow \(F(f) \colon F(Y) \to \xi\).
+By the definition of categories fibered in groupoids, there is a unique isomorphism
+\(\sigma_{F,f}\colon F(Y) \to f^*\xi\) satisfying \(f_\xi \sigma_{F,f} = F(f)\).
+We claim that \(\sigma_{F,f}\) defines a natural transformation making the diagram above commute.
+This is the claim that for every natural transformation \(\alpha\colon F\Rightarrow G\)
+in \(\operatorname{Hom}(\underline{X},\mathsf{D})\),
+the following diagram commutes in \(\mathsf{D}(Y)\):&lt;/p&gt;
+
+\[\begin{CD}
+\operatorname{よ}_Y(f^*F) @&amp;gt;\sigma_{F,f}&amp;gt;&amp;gt; f^*\operatorname{よ}_X(F) \\
+@VV\operatorname{よ}_Y(f^*\alpha)V @VVf^*\operatorname{よ}_X(\alpha)V \\
+ \operatorname{よ}_Y(f^*G) @&amp;gt;\sigma_{G,f}&amp;gt;&amp;gt; f^*\operatorname{よ}_X(G).
+\end{CD}\]
+
+&lt;p&gt;Unwound slightly, if we write \(G(X) = \xi&apos;\) and \(\alpha \colon \xi \to \xi&apos;\),
+this is the same diagram as&lt;/p&gt;
+
+\[\begin{CD}
+F(Y) @&amp;gt;\sigma_{F,f}&amp;gt;&amp;gt; f^*\xi \\
+@VV\alpha(Y)V @VVf^*\alpha V \\
+G(Y) @&amp;gt;\sigma_{F,f}&amp;gt;&amp;gt; f^*\xi&apos;.
+\end{CD}\]
+
+&lt;p&gt;The commutativity of this diagram uses our only trick, 
+namely the unique way of filling this diagram:&lt;/p&gt;
+
+\[\begin{CD}
+F(Y) @&amp;gt;\alpha F(f)&amp;gt;&amp;gt; \xi&apos; \\
+@VVV @| \\
+f^*\xi&apos; @&amp;gt;f_{\xi&apos;}&amp;gt;&amp;gt; \xi&apos;.
+\end{CD}\]
+
+&lt;p&gt;We check&lt;/p&gt;
+
+\[\alpha F(f) = \alpha f_\xi \sigma_{F,f} = f_{\xi&apos;} f^*\alpha \sigma_{F,f}\]
+
+&lt;p&gt;and&lt;/p&gt;
+
+\[\alpha F(f) =  G(f)\alpha(Y) = f_{\xi&apos;} \sigma_{G,f} \alpha(Y).\]
+
+&lt;h2 id=&quot;a-loose-end-from-part-six&quot;&gt;A loose end from part six&lt;/h2&gt;
+
+&lt;p&gt;I think this proves a claim from &lt;a href=&quot;/2022/05/19/Pursued-by-Stacks-6-Stacks-and-Groupoids.html&quot;&gt;part six&lt;/a&gt;. 
+Let’s test it out.
+An object \(\xi \in \mathsf{D}(Y)\) is a map \(f\colon \underline{Y} \to \mathsf{D}\).
+Similarly \(\xi&apos; \in \mathsf{D}(X)\) is a map \(g\colon \underline{X} \to \mathsf{D}\).
+An arrow \(\tilde h \colon \xi \to \xi&apos;\) over a map \(h\colon Y \to X\)
+should be the map \(h \colon Y \to X\) together with a natural transformation
+\(\alpha\colon f \Rightarrow gh\).&lt;/p&gt;
+
+&lt;p&gt;Let me write things a little more like the above. 
+So we have \(\xi \in \mathsf{D}(Y)\) 
+equal under \(\operatorname{よ}_Y\) to \(F\colon \underline{Y} \to \mathsf{D}\),
+and similarly \(\xi&apos; = \operatorname{よ}_X(G)\).
+We have the functor \(\mathsf{D}(h) = h^*\colon \mathsf{D}(X) \to \mathsf{D}(Y)\)
+which corresponds up to natural transformation to precomposition by \(h\colon Y \to X\).
+There is a unique isomorphism \(\beta\) making the following diagram commute&lt;/p&gt;
+
+\[\begin{CD}
+\xi @&amp;gt;\tilde h&amp;gt;&amp;gt; \xi&apos; \\
+@VV\beta V @| \\
+h^*\xi&apos; @&amp;gt;h_{\xi&apos;}&amp;gt;&amp;gt; \xi&apos; \\
+@AA\sigma_{G,h}A @| \\
+Gh(1_Y) @&amp;gt;G(h)&amp;gt;&amp;gt; \xi&apos;
+\end{CD}\]
+
+&lt;p&gt;We claim that \(\sigma_{G,h}^{-1}\beta\) comes from (or defines) a unique natural transformation
+\(\alpha \colon F \Rightarrow Gh\) 
+(we write \(Gh\) to avoid confusion with the functor \(h^*\)).
+At an object \(k \colon Z \to Y\) of \(\underline{Y}\),
+define \(\alpha(Z) = \sigma_{G,hk}^{-1} \eta_{k,h}(\xi&apos;) k^*\beta \sigma_{F,k}\),
+where \(\eta_{k,h}(\xi&apos;) \colon k^*h^*\xi&apos; \to (hk)^*\xi&apos;\) 
+is the isomorphism defined in the previous section.
+Given another object \(\ell \colon W \to Y\) and an arrow \(m \colon Z \to W\),
+we need the following diagram to commute&lt;/p&gt;
+
+\[\begin{CD}
+F(Z) @&amp;gt;\alpha(Z)&amp;gt;&amp;gt; Gh(Z) \\
+@VVF(m)V @VVGh(m)V \\
+F(W) @&amp;gt;\alpha(W)&amp;gt;&amp;gt; Gh(W).
+\end{CD}\]
+
+&lt;p&gt;Let’s try putting both paths around the square into the diagram&lt;/p&gt;
+
+\[\begin{CD}
+F(Z) @&amp;gt;\tilde h F(k)&amp;gt;&amp;gt; \xi&apos; \\
+@VVV @| \\
+Gh(W) @&amp;gt;G(h)Gh(\ell)&amp;gt;&amp;gt; \xi&apos;.
+\end{CD}\]
+
+&lt;p&gt;We calculate&lt;/p&gt;
 
 \[\begin{gather*}
-(Y\times_{\mathsf{D}} X)\times_X(X\times_{\mathsf{D}}X) \to Y \times_{\mathsf{D}} X \\
-((y,x_2,f),(x_1,x_2,g)) \mapsto (y,x_1,g^{-1}f).
+G(h)Gh(\ell)Gh(m) \alpha(Z) = G(h)Gh(k)\alpha(Z) = G(hk)\alpha(Z) \\
+= (hk)_{\xi&apos;} \sigma_{G,hk} \alpha(Z) = (hk)_{\xi&apos;} \eta_{k,h}(\xi&apos;) k^*\beta \sigma_{F,k} \\
+= h_{\xi&apos;}k_{h^*\xi&apos;} k^*\beta \sigma_{F,k} = h_{\xi&apos;} \beta k_\xi \sigma_{F,k}
+= h_{\xi&apos;}\beta F(k) = \tilde h F(k)
 \end{gather*}\]
 
-&lt;p&gt;(This disagrees with &lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; but is the correct definition for a &lt;em&gt;right&lt;/em&gt; action.)&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
 
-&lt;p&gt;The map&lt;/p&gt;
+\[\begin{gather*}
+G(h)Gh(\ell)\alpha(W)F(m) = G(h\ell)\alpha(W)F(m) = (h\ell)_{\xi&apos;}\sigma_{G,h\ell}\alpha(W)F(m) \\
+= (h\ell)_{\xi&apos;} \eta_{\ell,h}(\xi&apos;) \ell^*\beta \sigma_{F,\ell} F(m)
+= h_{\xi&apos;}\ell_{h^*\xi&apos;} \ell^*\beta \sigma_{F,\ell} F(m) \\
+= h_{\xi&apos;}\beta \ell_\xi \sigma_{F,\ell} F(m) = h_{\xi&apos;} \beta F(\ell)F(m) = h_{\xi&apos;}\beta F(k)
+= \tilde h F(k).
+\end{gather*}\]
 
-\[(Y\times_{\mathsf{D}}X)\times_X\mathcal{G}_1 
-\to (Y\times_{\mathsf{D}}X)\times_Y(Y\times_{\mathsf{D}}X)\]
+&lt;p&gt;The argument is summarized in the following interesting commutative diagram.&lt;/p&gt;
 
-&lt;p&gt;defined by&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/2naturality2.jpeg&quot; alt=&quot;The argument above in commutative diagram form&quot; /&gt;&lt;/p&gt;
 
-\[((y,x_2,f),(x_1,x_2,g)) \mapsto ((y,x_2,f),(y,x_1,g^{-1}f))\]
+&lt;p&gt;Conversely it is clear that given such an \(\alpha \colon F \Rightarrow Gh\), 
+we get a map \(\tilde h \colon \xi \to \xi&apos;\)
+defined by \(G(h)\alpha(Y)\).&lt;/p&gt;
 
-&lt;p&gt;is clearly (the action on objects of) an isomorphism of stacks,
-so the action of \(\mathcal{G}\) on \((Y\times_{\mathsf{D}}X)\) is free and transitive.
-Thus we define \(\psi(f\colon M \to \mathsf{D})\) to be the principal \(\mathcal{G}\)-bundle
-\(Y \times_{\mathsf{D}}X \to Y\).&lt;/p&gt;
+&lt;h2 id=&quot;pseudonaturality-in-mathsfd&quot;&gt;Pseudonaturality in \(\mathsf{D}\)&lt;/h2&gt;
 
-&lt;p&gt;Now, if an object of \(\mathsf{D}\) over a space \(Y\) is a map \(f\colon Y \to \mathsf{D}\)
-and an object of \(\mathsf{D}\) over a space \(Z\) is a map \(g \colon Z \to \mathsf{D}\),
-then an arrow of \(\mathsf{D}\) over the map \(h \colon Y \to Z\)
-should in fact be the map \(h \colon Y \to Z\) making the diagram&lt;/p&gt;
-
-\[\begin{CD}
-Y @&amp;gt;f&amp;gt;&amp;gt; \mathsf{D} \\
-@VVhV @| \\
-Z @&amp;gt;g&amp;gt;&amp;gt; \mathsf{D}
-\end{CD}\]
-
-&lt;p&gt;commute—at least, up to a specified natural isomorphism \(\eta\colon f \Rightarrow gh\).
-I think this is a missing naturality statement in the 2-Yoneda lemma,
-so expect an appendix.
-If we believe that for now, let’s continue.&lt;/p&gt;
-
-&lt;p&gt;Now notice that we get a commutative diagram&lt;/p&gt;
-
-\[\begin{CD}
-Y \times_{\mathsf{D}} X @&amp;gt;&amp;gt;&amp;gt; X \\
-@VVh\pi V @VVpV \\
-Z @&amp;gt;g&amp;gt;&amp;gt; \mathsf{D}
-\end{CD}\]
-
-&lt;p&gt;up to the composite natural transformation \(\epsilon\eta\)
-(where \(\epsilon\) is the defining natural transformation for the fiber product
-\(Y\times_{\mathsf{D}} X\)).
-Therefore by the universal property of the 2-fiber product,
-we get a map \(\tilde h\colon Y\times_{\mathsf{D}}X \to Z\times_{\mathsf{D}}X\)
-such that the following diagram commutes&lt;/p&gt;
+&lt;p&gt;Now suppose we have a map of categories fibered in groupoids 
+\(f\colon \mathsf{C} \to \mathsf{D}\).
+This is by definition a functor \(f\colon \mathsf{C} \to \mathsf{D}\)
+such that \(\pi f = \pi\).
+For each \(\xi \in \mathsf{C}(X)\), we get an object \(f(\xi) \in \mathsf{D}(X)\),
+and for each arrow \(\alpha \colon \xi \to \xi&apos;\) in the fiber, 
+we get an arrow \(f(\alpha)\colon f(\xi) \to f(\xi&apos;)\) in the fiber.
+In other words, we get a functor \(f|_X \colon \mathsf{C}(X) \to \mathsf{D}(X)\).
+Given a functor \(F\colon \underline{X} \to \mathsf{C}\), postcomposition with \(f\)
+yields a functor \(f_*F = fF \colon \underline{X} \to \mathsf{D}\).
+Similarly given a natural transformation \(\alpha\colon F\Rightarrow G\),
+we get \(f_*\alpha \colon f_*F\Rightarrow f_*G\).
+Pseudonaturality in \(\mathsf{D}\) is the claim that the following diagram commutes&lt;/p&gt;
 
 \[\begin{CD}
-Y\times_{\mathsf{D}}X @&amp;gt;\tilde h&amp;gt;&amp;gt; Z\times_{\mathsf{D}}X \\
-@VV\pi V @VV\pi V \\
-Y @&amp;gt;h&amp;gt;&amp;gt; Z
+\operatorname{Hom}(\underline{X},\mathsf{C}) @&amp;gt;\operatorname{よ}_{\mathsf{C}}&amp;gt;&amp;gt; \mathsf{C}(X) \\
+@VVf_*V @VVf|_XV \\
+\operatorname{Hom}(\underline{X},\mathsf{D}) @&amp;gt;\operatorname{よ}_{\mathsf{D}}&amp;gt;&amp;gt; \mathsf{D}(X)
 \end{CD}\]
 
-&lt;p&gt;up to a natural isomorphism, which must be the identity,
-because every object in the diagram is a space.
-Specifically, chasing through the map as described when we considered 2-fiber products,
-on objects we have
-\(\tilde h(y,x,f) = (h(y),x,f)\).
-It is clear from this definition that \(\tilde h\) is \(\mathcal{G}\)-equivariant,
-and that \(\psi\) is functorial and fully faithful.
-We still haven’t used that \(\mathsf{D}\) is a stack!&lt;/p&gt;
+&lt;p&gt;up to a natural transformation.
+And indeed, if we write \(F(1_X) = \xi\), \(G(1_X) = \xi&apos;\)
+and \(\alpha(1_X) = \alpha \colon \xi \to \xi&apos;\), we actually have&lt;/p&gt;
 
-&lt;p&gt;To complete the proof, we need to show that \(\psi\) is essentially surjective.
-First, we show it for \(\mathcal{G}\)-bundles with a global section.
-By an argument I think I failed to give—if so, sorry—such a bundle
-is (canonically isomorphic to) 
-the pullback bundle \(f^*\mathcal{G}_1\) by a map \(f\colon Y \to X\).
-Now, given such a map \(f\colon Y \to X\),
-notice that the silly diagram&lt;/p&gt;
+\[f|_X\operatorname{よ}_{\mathsf{C}}(F) = f|_X(\xi) = f(\xi) = f_*F(1_X) 
+= \operatorname{よ}_{\mathsf{D}}(f_*F)\]
 
-\[\begin{CD}
-Y @&amp;gt;pf&amp;gt;&amp;gt; \mathsf{D} \\
-@VVfV @| \\
-X @&amp;gt;p&amp;gt;&amp;gt; \mathsf{D}
-\end{CD}\]
+&lt;p&gt;and&lt;/p&gt;
 
-&lt;p&gt;commutes on the nose, so certainly up to natural transformation.
-The bundle \(\psi(pf)\) is \(Y\times_{\mathsf{D}}X\) over \(Y\),
-which has an equivariant map \(\psi(f)\) to \(\mathcal{G}_1\)
-and hence an isomorphism \(Y\times_{\mathsf{D}}X \cong f^*\mathcal{G}_1\).
-Therefore \(Y\times_{\mathsf{D}}X\) has a global section \(\sigma\)
-with the property, if you chase it through,
-that \(\pi_2\sigma \colon Y\times_{\mathsf{D}}X \to X\) is \(k\).&lt;/p&gt;
+\[f|_X\operatorname{よ}_{\mathsf{C}}(\alpha) = f|_X(\alpha) = f(\alpha) = f_*\alpha(1_X)
+= \operatorname{よ}_{\mathsf{D}}(f_*\alpha),\]
 
-&lt;p&gt;Similarly, if we have a commuting diagram of spaces&lt;/p&gt;
-
-\[\begin{CD}
-Y @&amp;gt;f&amp;gt;&amp;gt; X \\
-@VVhV @| \\
-Z @&amp;gt;g&amp;gt;&amp;gt; X
-\end{CD}\]
-
-&lt;p&gt;then composing with \(p\colon X \to \mathsf{D}\) yields a commuting map of stacks,
-i.e. a map between the bundles \(\psi(f)\) and \(\psi(g)\).
-This map is (isomorphic to) \(\tilde h\colon f^*\mathcal{G}_1 \to g^*\mathcal{G}_1\).
-Therefore the full subcategory of \(\mathsf{B}\mathcal{G}\)
-spanned by the bundles which have global sections is in the image of \(\psi\).&lt;/p&gt;
-
-&lt;p&gt;Now suppose \(E\) is a principal \(\mathcal{G}\)-bundle over a space \(Y\).
-Then \(Y\) has an open cover \(\mathcal{U} = \{U_i\}_{i\in I}\)
-with the property that each \(\iota_i^*E\) has a global section.
-The pullbacks of intersections define a descent datum for this open cover,
-which lives in the image of \(\psi\).
-Thus since \(\mathsf{D}\) is a stack, the descent datum is effective,
-giving us an element \(\xi\) of \(\mathsf{D}\).
-By functoriality of \(\mathsf{D}\) and since isomorphisms form a sheaf,
-we conclude that \(\psi(\xi)\) is isomorphic to \(E\),
-showing that \(\psi\) is essentially surjective.&lt;/p&gt;
-
-&lt;p&gt;Let us remark that atlases are super not unique,
-but that if we have two atlases \(p\colon X \to \mathsf{D}\) and \(q\colon Y \to \mathsf{D}\)
-we can construct a bibundle \(P = X\times_{\mathsf{D}} Y\)
-which is principal for both resulting groupoids.
-Therefore the bibundle is invertible.
-Put another way, the groupoids are equivalent.&lt;/p&gt;</content><author><name></name></author><summary type="html">In writing this post, I started to see what’s kind of cool about stacks: you can treat them almost as if they were spaces in the sense that, as you’ll see, objects of a stack \(\mathsf{D}\) over a space \(Y\) are the same thing as maps of stacks \(Y \to \mathsf{D}\), just like the situation of \(\underline{X}\) for a space \(X\). The difference is that \(\mathsf{D}\) may have many isomorphisms stacked over \(Y \to \mathsf{D}\) while \(\underline{X}\) has only the identity of \(Y\).</summary></entry><entry><title type="html">Pursued By Stacks 5: Topological Stacks</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html" rel="alternate" type="text/html" title="Pursued By Stacks 5: Topological Stacks" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-5:-Topological-Stacks</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html">&lt;p&gt;The purpose of this post is to single out the &lt;em&gt;topological&lt;/em&gt; (or &lt;em&gt;geometric&lt;/em&gt; or &lt;em&gt;Artin&lt;/em&gt;) stacks.&lt;/p&gt;
+&lt;p&gt;so the diagram actually commutes on the nose.&lt;/p&gt;</content><author><name></name></author><summary type="html">This post is, strictly speaking, a follow up to part three of my series on stacks, on the 2-Yoneda lemma. The classical Yoneda lemma has built into it a naturality statement, while our 2-Yoneda lemma proved essentially only the fact of the isomorphism. Let’s fix that.</summary></entry><entry><title type="html">Pursued By Stacks 5: Topological Stacks</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html" rel="alternate" type="text/html" title="Pursued By Stacks 5: Topological Stacks" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-5:-Topological-Stacks</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-5-Topological-Stacks.html">&lt;p&gt;The purpose of this post is to single out the &lt;em&gt;topological&lt;/em&gt; (or &lt;em&gt;geometric&lt;/em&gt; or &lt;em&gt;Artin&lt;/em&gt;) stacks.&lt;/p&gt;
 
 &lt;h2 id=&quot;atlases&quot;&gt;Atlases&lt;/h2&gt;
 &lt;p&gt;We will say that a stack over \(\mathbf{Top}\) “is a space” if it is isomorphic as a stack
@@ -340,7 +484,201 @@ We have, for any \(z \in Z_1\) and appropriate \(h \in \mathcal{G}_1\),&lt;/p&gt
 and we conclude that the 2-fiber product is the space \(E\).
 The map \(\pi\colon E \to Y\) is an open surjection which admits local sections
 because \(E\) is a principal \(\mathcal{G}\)-bundle.
-Therefore the map \(p\colon \mathcal{G}_0 \to \mathsf{B}\mathcal{G}\) is an atlas.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to single out the topological (or geometric or Artin) stacks.</summary></entry><entry><title type="html">Pursued By Stacks 4: Fiber Products</title><link href="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html" rel="alternate" type="text/html" title="Pursued By Stacks 4: Fiber Products" /><published>2022-05-18T00:00:00-04:00</published><updated>2022-05-18T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/18/Pursued-by-Stacks-4:-Fiber-Products</id><content type="html" xml:base="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html">&lt;p&gt;Okay, we’re closing in on the definition of a geometric stack over \(\mathbf{Top}\).
+Therefore the map \(p\colon \mathcal{G}_0 \to \mathsf{B}\mathcal{G}\) is an atlas.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to single out the topological (or geometric or Artin) stacks.</summary></entry><entry><title type="html">Pursued By Stacks 6: Stacks And Groupoids</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-6-Stacks-and-Groupoids.html" rel="alternate" type="text/html" title="Pursued By Stacks 6: Stacks And Groupoids" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-6:-Stacks-and-Groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-6-Stacks-and-Groupoids.html">&lt;p&gt;In writing this post, I started to see what’s kind of cool about stacks:
+you can treat them almost as if they were spaces
+in the sense that, as you’ll see, objects of a stack \(\mathsf{D}\) over a space \(Y\)
+are the same thing as maps of stacks \(Y \to \mathsf{D}\),
+just like the situation of \(\underline{X}\) for a space \(X\).
+The difference is that \(\mathsf{D}\) may have many isomorphisms &lt;em&gt;stacked&lt;/em&gt; over 
+\(Y \to \mathsf{D}\)
+while \(\underline{X}\) has only the identity of \(Y\).&lt;/p&gt;
+
+&lt;p&gt;In what might be the final post on stacks for a while,
+I’d like to show that every topological stack is isomorphic to
+\(\mathsf{B}\mathcal{G}\) for some topological groupoid \(\mathcal{G}\).
+We could then say that, for instance, a graph of groups
+is any stack isomorphic to \(\mathsf{B}\mathcal{G}\),
+where \(\mathcal{G}\) is the étale groupoid we constructed &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;in a previous post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Suppose \(\mathsf{D}\) is a topological stack
+with an atlas \(p\colon X \to \mathsf{D}\).
+We claim that \(X \times_{\mathsf{D}} X\) 
+(which is a space since \(X\) is an atlas)
+is a space of arrows for a groupoid \(\mathcal{G}\) with space of objects \(X\).
+That finished,
+we will construct an isomorphism \(\psi\colon \mathsf{D} \to \mathsf{B}\mathcal{G}\).&lt;/p&gt;
+
+&lt;p&gt;Thus we are in search of structure maps for our groupoid.
+By the 2-Yoneda lemma, 
+if \(X\) and \(Y\) are spaces, any map of stacks \(X \to Y\)
+is determined up to natural isomorphism by an object of \(\underline{Y}\) over \(X\);
+in other words, a continuous map \(f\colon X \to Y\).
+But because the fiber of \(\underline{Y}\) comprises only the identity arrow,
+this map \(f\) is in fact unique.
+Therefore, it suffices to produce maps of stacks for our structure maps.&lt;/p&gt;
+
+&lt;p&gt;We take source and target maps of \(\mathcal{G}\) to be the two projections
+from \(X\times_{\mathsf{D}} X\) to \(X\).
+In more words, \((x,y,f) \mapsto X\) and \((x,y,f) \mapsto Y\).
+Note that the diagram&lt;/p&gt;
+
+\[\require{AMScd}\begin{CD}
+X @&amp;gt;1_X&amp;gt;&amp;gt; X \\
+@VV1_XV @VVpV \\
+X @&amp;gt;p&amp;gt;&amp;gt; \mathsf{D}
+\end{CD}\]
+
+&lt;p&gt;commutes (on the nose),
+so there is a map \(X \to X\times_{\mathsf{D}} X\).
+If you chase through the definition of maps to the 2-fiber product,
+you see that on objects the map is \(Y \mapsto (Y,Y,1_Y)\).&lt;/p&gt;
+
+&lt;p&gt;The multiplication map&lt;/p&gt;
+
+\[m\colon (X\times_{\mathsf{D}}X)\times_X(X\times_{\mathsf{D}}X) \to X \times_{\mathsf{D}} X\]
+
+&lt;p&gt;is defined on objects as \(((x,y,f),(y,z,g) = (x,z,gf)\).
+This multiplication is associative because composition of arrows in \(\mathsf{D}\) is associative.
+The inversion map \((\cdot)^{-1}\) is given on objects as&lt;/p&gt;
+
+\[(x,y,f)^{-1} = (y,x,f^{-1}).\]
+
+&lt;p&gt;So far we have not used any of the stack properties, 
+merely that the category is fibered in groupoids.
+(I cannot help myself: if the category were merely fibered in categories, 
+whatever that might mean, we would end up with a category which is not a groupoid.)&lt;/p&gt;
+
+&lt;p&gt;Now we define \(\psi\colon \mathsf{D} \to \mathsf{B}\mathcal{G}\).
+This means that to each object of \(\mathsf{D}\) over a space \(Y\),
+we need to produce a principal \(\mathcal{G}\)-bundle over \(Y\).&lt;/p&gt;
+
+&lt;p&gt;Recall that by the 2-Yoneda lemma an object of \(\mathsf{D}\) over \(Y\)
+is the same thing as a map of stacks \(f\colon Y \to \mathsf{D}\).
+Since \(X\) is an atlas, the fiber product \(Y \times_{\mathsf{D}} X\) is a space
+and the map \(Y\times_{\mathsf{D}} X \to Y\) is an open surjection which admits local sections.
+We let the projection \(Y\times_{\mathsf{D}} X \to X\) be the anchor map
+for the right action of \(\mathcal{G}\) defined on objects as&lt;/p&gt;
+
+\[\begin{gather*}
+(Y\times_{\mathsf{D}} X)\times_X(X\times_{\mathsf{D}}X) \to Y \times_{\mathsf{D}} X \\
+((y,x_2,f),(x_1,x_2,g)) \mapsto (y,x_1,g^{-1}f).
+\end{gather*}\]
+
+&lt;p&gt;(This disagrees with &lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman&lt;/a&gt; but is the correct definition for a &lt;em&gt;right&lt;/em&gt; action.)&lt;/p&gt;
+
+&lt;p&gt;The map&lt;/p&gt;
+
+\[(Y\times_{\mathsf{D}}X)\times_X\mathcal{G}_1 
+\to (Y\times_{\mathsf{D}}X)\times_Y(Y\times_{\mathsf{D}}X)\]
+
+&lt;p&gt;defined by&lt;/p&gt;
+
+\[((y,x_2,f),(x_1,x_2,g)) \mapsto ((y,x_2,f),(y,x_1,g^{-1}f))\]
+
+&lt;p&gt;is clearly (the action on objects of) an isomorphism of stacks,
+so the action of \(\mathcal{G}\) on \((Y\times_{\mathsf{D}}X)\) is free and transitive.
+Thus we define \(\psi(f\colon M \to \mathsf{D})\) to be the principal \(\mathcal{G}\)-bundle
+\(Y \times_{\mathsf{D}}X \to Y\).&lt;/p&gt;
+
+&lt;p&gt;Now, if an object of \(\mathsf{D}\) over a space \(Y\) is a map \(f\colon Y \to \mathsf{D}\)
+and an object of \(\mathsf{D}\) over a space \(Z\) is a map \(g \colon Z \to \mathsf{D}\),
+then an arrow of \(\mathsf{D}\) over the map \(h \colon Y \to Z\)
+should in fact be the map \(h \colon Y \to Z\) making the diagram&lt;/p&gt;
+
+\[\begin{CD}
+Y @&amp;gt;f&amp;gt;&amp;gt; \mathsf{D} \\
+@VVhV @| \\
+Z @&amp;gt;g&amp;gt;&amp;gt; \mathsf{D}
+\end{CD}\]
+
+&lt;p&gt;commute—at least, up to a specified natural isomorphism \(\eta\colon f \Rightarrow gh\).
+I think this is a missing naturality statement in the 2-Yoneda lemma,
+so expect an appendix.
+If we believe that for now, let’s continue.&lt;/p&gt;
+
+&lt;p&gt;Now notice that we get a commutative diagram&lt;/p&gt;
+
+\[\begin{CD}
+Y \times_{\mathsf{D}} X @&amp;gt;&amp;gt;&amp;gt; X \\
+@VVh\pi V @VVpV \\
+Z @&amp;gt;g&amp;gt;&amp;gt; \mathsf{D}
+\end{CD}\]
+
+&lt;p&gt;up to the composite natural transformation \(\epsilon\eta\)
+(where \(\epsilon\) is the defining natural transformation for the fiber product
+\(Y\times_{\mathsf{D}} X\)).
+Therefore by the universal property of the 2-fiber product,
+we get a map \(\tilde h\colon Y\times_{\mathsf{D}}X \to Z\times_{\mathsf{D}}X\)
+such that the following diagram commutes&lt;/p&gt;
+
+\[\begin{CD}
+Y\times_{\mathsf{D}}X @&amp;gt;\tilde h&amp;gt;&amp;gt; Z\times_{\mathsf{D}}X \\
+@VV\pi V @VV\pi V \\
+Y @&amp;gt;h&amp;gt;&amp;gt; Z
+\end{CD}\]
+
+&lt;p&gt;up to a natural isomorphism, which must be the identity,
+because every object in the diagram is a space.
+Specifically, chasing through the map as described when we considered 2-fiber products,
+on objects we have
+\(\tilde h(y,x,f) = (h(y),x,f)\).
+It is clear from this definition that \(\tilde h\) is \(\mathcal{G}\)-equivariant,
+and that \(\psi\) is functorial and fully faithful.
+We still haven’t used that \(\mathsf{D}\) is a stack!&lt;/p&gt;
+
+&lt;p&gt;To complete the proof, we need to show that \(\psi\) is essentially surjective.
+First, we show it for \(\mathcal{G}\)-bundles with a global section.
+By an argument I think I failed to give—if so, sorry—such a bundle
+is (canonically isomorphic to) 
+the pullback bundle \(f^*\mathcal{G}_1\) by a map \(f\colon Y \to X\).
+Now, given such a map \(f\colon Y \to X\),
+notice that the silly diagram&lt;/p&gt;
+
+\[\begin{CD}
+Y @&amp;gt;pf&amp;gt;&amp;gt; \mathsf{D} \\
+@VVfV @| \\
+X @&amp;gt;p&amp;gt;&amp;gt; \mathsf{D}
+\end{CD}\]
+
+&lt;p&gt;commutes on the nose, so certainly up to natural transformation.
+The bundle \(\psi(pf)\) is \(Y\times_{\mathsf{D}}X\) over \(Y\),
+which has an equivariant map \(\psi(f)\) to \(\mathcal{G}_1\)
+and hence an isomorphism \(Y\times_{\mathsf{D}}X \cong f^*\mathcal{G}_1\).
+Therefore \(Y\times_{\mathsf{D}}X\) has a global section \(\sigma\)
+with the property, if you chase it through,
+that \(\pi_2\sigma \colon Y\times_{\mathsf{D}}X \to X\) is \(k\).&lt;/p&gt;
+
+&lt;p&gt;Similarly, if we have a commuting diagram of spaces&lt;/p&gt;
+
+\[\begin{CD}
+Y @&amp;gt;f&amp;gt;&amp;gt; X \\
+@VVhV @| \\
+Z @&amp;gt;g&amp;gt;&amp;gt; X
+\end{CD}\]
+
+&lt;p&gt;then composing with \(p\colon X \to \mathsf{D}\) yields a commuting map of stacks,
+i.e. a map between the bundles \(\psi(f)\) and \(\psi(g)\).
+This map is (isomorphic to) \(\tilde h\colon f^*\mathcal{G}_1 \to g^*\mathcal{G}_1\).
+Therefore the full subcategory of \(\mathsf{B}\mathcal{G}\)
+spanned by the bundles which have global sections is in the image of \(\psi\).&lt;/p&gt;
+
+&lt;p&gt;Now suppose \(E\) is a principal \(\mathcal{G}\)-bundle over a space \(Y\).
+Then \(Y\) has an open cover \(\mathcal{U} = \{U_i\}_{i\in I}\)
+with the property that each \(\iota_i^*E\) has a global section.
+The pullbacks of intersections define a descent datum for this open cover,
+which lives in the image of \(\psi\).
+Thus since \(\mathsf{D}\) is a stack, the descent datum is effective,
+giving us an element \(\xi\) of \(\mathsf{D}\).
+By functoriality of \(\mathsf{D}\) and since isomorphisms form a sheaf,
+we conclude that \(\psi(\xi)\) is isomorphic to \(E\),
+showing that \(\psi\) is essentially surjective.&lt;/p&gt;
+
+&lt;p&gt;Let us remark that atlases are super not unique,
+but that if we have two atlases \(p\colon X \to \mathsf{D}\) and \(q\colon Y \to \mathsf{D}\)
+we can construct a bibundle \(P = X\times_{\mathsf{D}} Y\)
+which is principal for both resulting groupoids.
+Therefore the bibundle is invertible.
+Put another way, the groupoids are equivalent.&lt;/p&gt;</content><author><name></name></author><summary type="html">In writing this post, I started to see what’s kind of cool about stacks: you can treat them almost as if they were spaces in the sense that, as you’ll see, objects of a stack \(\mathsf{D}\) over a space \(Y\) are the same thing as maps of stacks \(Y \to \mathsf{D}\), just like the situation of \(\underline{X}\) for a space \(X\). The difference is that \(\mathsf{D}\) may have many isomorphisms stacked over \(Y \to \mathsf{D}\) while \(\underline{X}\) has only the identity of \(Y\).</summary></entry><entry><title type="html">Pursued By Stacks 4: Fiber Products</title><link href="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html" rel="alternate" type="text/html" title="Pursued By Stacks 4: Fiber Products" /><published>2022-05-18T00:00:00-04:00</published><updated>2022-05-18T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/18/Pursued-by-Stacks-4:-Fiber-Products</id><content type="html" xml:base="http://localhost:4000/2022/05/18/Pursued-by-Stacks-4-Fiber-Products.html">&lt;p&gt;Okay, we’re closing in on the definition of a geometric stack over \(\mathbf{Top}\).
 Actually, the nLab tells me such stacks are called &lt;em&gt;topological,&lt;/em&gt; so I’ll try and say that.
 But! Before we get there, we need the construction 
 of the 2-fiber product of categories fibered in groupoids over \(\mathbf{Top}\).
@@ -1462,83 +1800,4 @@ in each \(\widetilde{\operatorname{st}}(v)\)
 of the form \((g\iota_e(\mathscr{G}_e), x) \subset \mathscr{G}_v/\iota_e(\mathscr{G}_e)\times e \setminus \tau(e)\)
 where \(e\) is allowed to occur in either orientation.
 Put another way, we have \(\Gamma = \mathcal{G}_1\backslash\mathcal{G}_0\).
-The isotropy group \(\mathcal{G}_x\) is isomorphic to \(\mathscr{G}_e\).&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s been a while since I talked about étale groupoids! Time to rectify this situation. The purpose of this post is to explain how to see graphs of groups as étale groupoids. In a later post I’d like to explore the notion of maps between étale groupoids.</summary></entry><entry><title type="html">A Cut Vertex Lemma</title><link href="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html" rel="alternate" type="text/html" title="A Cut Vertex Lemma" /><published>2022-05-10T00:00:00-04:00</published><updated>2022-05-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma</id><content type="html" xml:base="http://localhost:4000/2022/05/10/A-Cut-Vertex-Lemma.html">&lt;p&gt;Building on ideas from the previous post regarding the star graph,
-I wrote a short paper generalizing a classical lemma of Whitehead.
-The purpose of this post is to describe Whitehead’s lemma and my generalization.&lt;/p&gt;
-
-&lt;p&gt;In the &lt;a href=&quot;/2022/04/02/The-star-graph.html&quot;&gt;previous post&lt;/a&gt;, we met the star graph
-associated to a collection of conjugacy classes of elements
-of a virtually free group.
-It should be reasonably clear that one can extend
-the notion of a star graph to conjugacy classes of elements
-of a group that acts cocompactly on a tree.
-What is perhaps less obvious is that one can also extend this notion
-to convex-cocompact subgroups of groups acting on trees,
-where a subgroup is &lt;em&gt;convex-cocompact&lt;/em&gt; if it acts cocompactly on its minimal subtree.
-This generalization is due to &lt;a href=&quot;https://arxiv.org/abs/2009.10052&quot;&gt;Bestvina, Feighn and Handel&lt;/a&gt; in the case of free groups.&lt;/p&gt;
-
-&lt;p&gt;The idea is the following.
-A classical observation of Stallings says that 
-any finitely generated subgroup \(H\) of a free group \(G\)
-may be represented by an immersion of a finite graph \(\Gamma\) into a rose \(R\),
-that is a graph with one vertex \(w\) and \(n\) edges, where \(n\) is the rank of \(G\).
-The set of directions \(D_w\) is the set of oriented edges of \(R\).
-Cut each edge of \(\Gamma\) at its midpoint,
-observe that the half-edge left over crosses a direction of \(R\)
-and attach, in the star graph of \(\Gamma\),
-the half-edge to the vertex corresponding to the given direction in \(D_w\).
-Thus we get a bipartite graph with one vertex for each vertex of \(\Gamma\)
-and one vertex for each direction in \(D_w\).
-A pair of directions are connected by a path of length two in this star graph
-if and only if the corresponding &lt;a href=&quot;/2022/04/02/The-star-graph.html&quot;&gt;turn&lt;/a&gt; 
-is in the image of the map on turns associated to the immersion \(\Gamma \to R\).&lt;/p&gt;
-
-&lt;p&gt;This idea generalizes readily to \(G\) the fundamental group of a graph of groups \(\mathbb{G}\).
-A subgroup of \(G\) is convex-cocompact if and only if it may be represented as an immersion
-of a finite connected graph of groups \(f\colon \mathcal{G} \to \mathbb{G}\).
-The set of directions we have met before.
-Rather than snipping edges at midpoints in \(\mathcal{G}\),
-we essentially do this in the Bass–Serre tree.
-If \(v\) is a vertex of \(\mathcal{G}\) mapping to a vertex \(w\) in \(\mathbb{G}\),
-we attach \(|\mathbb{G}_w : f_v(\mathcal{G}_v)|\) copies of this &lt;em&gt;piece&lt;/em&gt;
-of the Bass–Serre tree,
-where the \(gf_v(\mathcal{G}_v)\) copy attaches an edge corresponding to a direction \(d\) in \(D_v\)
-to the vertex corresponding to the direction \(g.D_vf(d)\) in \(D_w\).&lt;/p&gt;
-
-&lt;p&gt;Suppose there exists \(\mathcal{G}&apos;\) a graph of groups with fundamental group \(G\) and one edge
-with the property that \(\mathcal{G}&apos;\) may be obtained from a graph of groups
-&lt;a href=&quot;/2022/01/06/From-free-splittings-to-graphs-of-groups.html&quot;&gt;homotopy equivalent&lt;/a&gt; to \(\mathbb{G}\) by collapsing edges.
-Anyway, say that a conjugacy class of an element or convex-cocompact subgroup of \(G\) is &lt;em&gt;simple&lt;/em&gt;
-if there is such a graph of groups \(\mathcal{G}&apos;\) with the property that our element or subgroup
-is conjugate into a vertex group in \(\mathcal{G}&apos;\).
-For free groups thought of as fundamental groups of ordinary graphs,
-it’s not hard to see that an element or finitely generated (hence convex-cocompact) subgroup
-is simple if and only if it is contained in a proper free factor of the free group.&lt;/p&gt;
-
-&lt;p&gt;The main result of my paper is that if we have a &lt;em&gt;jointly&lt;/em&gt; simple collection \(C\) of conjugacy classes
-of elements or convex-cocompact subgroups of \(G\)
-(i.e. the same \(\mathcal{G}&apos;\) works for all members of \(C\) at once)
-then the star graph of \(C\) is either disconnected or has a cut vertex.&lt;/p&gt;
-
-&lt;p&gt;“Ahh but Rylee,” you say astutely, paying far too much attention, “Isn’t the star graph already disconnected
-if \(\mathbb{G}\) has more than one vertex?”
-To which I have to concede that you are correct and explain my usage further.
-The star graph is a union of graphs \(\Gamma_w\) as \(w\) varies over the vertices of \(\mathbb{G}\),
-where \(\Gamma_w\) contains all the vertices corresponding to directions in \(D_w\).
-We say that the star graph is disconnected if some \(\Gamma_w\) is disconnected,
-and that it has a cut vertex if each \(\Gamma_w\) is connected and there is some direction \(d \in D_w\),
-the removal of which disconnects \(\Gamma_w\).&lt;/p&gt;
-
-&lt;p&gt;The proof is very much inspired by a paper of &lt;a href=&quot;https://www.degruyter.com/document/doi/10.1515/jgth-2018-0118/html?lang=en&quot;&gt;Heusener and Weidmann&lt;/a&gt;,
-which gives a proof of the classical Whitehead lemma for free groups using Stallings folds.
-The idea is that if a collection of conjugacy classes is simple,
-there is a graph which folds onto the rose with a single fold
-(their term is “almost rose”)
-in which these conjugacy classes may be read,
-in the sense that the immersion \(f\colon \Gamma \to R\) factors through the almost rose.
-They prove that (their version of) the star graph of an almost rose has a cut vertex
-and that if the map \(f\colon \Gamma \to R\) factors through a graph \(\Theta\),
-then the star graph of \(\Gamma\) is a subgraph of the star graph of \(\Theta\).
-Although we are working with a different notion of the star graph,
-the broad-strokes outline of the proof carries over to our graph of groups setting!
-If you’d like to know more, you can read the paper &lt;a href=&quot;/assets/pdfs/Whitehead.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Building on ideas from the previous post regarding the star graph, I wrote a short paper generalizing a classical lemma of Whitehead. The purpose of this post is to describe Whitehead’s lemma and my generalization.</summary></entry></feed>
+The isotropy group \(\mathcal{G}_x\) is isomorphic to \(\mathscr{G}_e\).&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s been a while since I talked about étale groupoids! Time to rectify this situation. The purpose of this post is to explain how to see graphs of groups as étale groupoids. In a later post I’d like to explore the notion of maps between étale groupoids.</summary></entry></feed>
