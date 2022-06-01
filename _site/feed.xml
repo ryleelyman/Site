@@ -1,4 +1,232 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-20T15:46:45-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Pursued By Stacks 7: Appendix</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html" rel="alternate" type="text/html" title="Pursued By Stacks 7: Appendix" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-7:-Appendix</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html">&lt;p&gt;This post is, strictly speaking, a follow up to &lt;a href=&quot;/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html&quot;&gt;part three&lt;/a&gt; of my series on stacks,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-01T09:59:12-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">You Can Shoot Me</title><link href="http://localhost:4000/2022/06/01/You-can-shoot-me.html" rel="alternate" type="text/html" title="You Can Shoot Me" /><published>2022-06-01T00:00:00-04:00</published><updated>2022-06-01T00:00:00-04:00</updated><id>http://localhost:4000/2022/06/01/You-can-shoot-me</id><content type="html" xml:base="http://localhost:4000/2022/06/01/You-can-shoot-me.html">&lt;p&gt;“This I promise:” writes Ravi Vakil in the first chapter of
+his notes on algebraic geometry,
+“if I use the word ‘topoi’, you can shoot me.”
+I guess you can shoot me,
+because the purpose of this post is to cement
+for myself
+what on earth a topos is and why I should care about them.&lt;/p&gt;
+
+&lt;p&gt;You might be wondering how we got here.
+Me too, as it happens.
+I’ve been playing around with topological stacks
+since the big push a couple weeks ago.
+In order to write down some homotopy theory for stacks
+(following &lt;a href=&quot;https://arxiv.org/abs/math/0503247&quot;&gt;Noohi&lt;/a&gt;, roughly)
+I wanted to know some basic categorical constructions for topological stacks.
+Something I noticed (I wrote “pretty quickly”, but it’s been A Ride)
+was that I was unable to prove that an infinite product of topological stacks was again topological.
+This is mildly embarrassing because the category of topological spaces
+certainly has all products,
+and you &lt;em&gt;need&lt;/em&gt; arbitrary (small, of course always small) 
+products in order to prove the existence of arbitrary limits.&lt;/p&gt;
+
+&lt;p&gt;Anyway, somehow right around then I discovered the thesis of &lt;a href=&quot;https://math.gmu.edu/~dcarched/Thesis_David_Carchedi.pdf&quot;&gt;David Carchedi&lt;/a&gt;,
+which solves two problems with the category of topological stacks in one fell swoop.
+The former problem is the lack of products already alluded to.
+The existence of these together with 2-fiber products
+implies the existence of all (small, of course always small) 2- or weak limits.&lt;/p&gt;
+
+&lt;h2 id=&quot;convenience-of-categories&quot;&gt;Convenience of categories&lt;/h2&gt;
+
+&lt;p&gt;The other problem it solves is the following:
+a category \(\mathsf{C}\) with (binary) products is called &lt;em&gt;cartesian closed&lt;/em&gt;
+if for any pair of objects \(c\) and \(d\) in \(\mathsf{C}\),
+there is &lt;em&gt;mapping object&lt;/em&gt; \([c,d]\) or \(d^c\) with the property that for all \(e \in \mathsf{C}\),
+we have an isomorphism&lt;/p&gt;
+
+\[\mathsf{C}(e,d^c) \cong \mathsf{C}(e\times c,d)\]
+
+&lt;p&gt;which is natural in all three variables.&lt;/p&gt;
+
+&lt;p&gt;Given a pair of spaces \(X\) and \(Y\), (say Hausdorff because I always think about Hausdorff spaces)
+one can always form a space \(Y^X\) whose points are maps \(X \to Y\)
+given the compact–open topology
+(we love the compact–open topology around here; maybe it deserves its own post someday).
+The problem is that the natural isomorphism above may not exist.&lt;/p&gt;
+
+&lt;p&gt;One classical solution, usually attributed to Steenrod,
+is to forget about &lt;em&gt;all&lt;/em&gt; topological spaces and instead focus on the &lt;em&gt;compactly generated (Hausdorff)&lt;/em&gt; spaces,
+see the &lt;a href=&quot;/2022/06/01/Adjoints.html&quot;&gt;last post&lt;/a&gt; for more about them.
+In fact, braver souls than I impose only a &lt;em&gt;weak&lt;/em&gt; Hausdorff condition.
+It turns out that when \(X\) and \(Y\) are compactly generated,
+\(k(Y^X)\) satisfies the natural isomorphism,
+where we have to remember that \(X \times Z\) in \(\mathsf{CGHaus}\) is \(k(X\times Z)\).&lt;/p&gt;</content><author><name></name></author><summary type="html">“This I promise:” writes Ravi Vakil in the first chapter of his notes on algebraic geometry, “if I use the word ‘topoi’, you can shoot me.” I guess you can shoot me, because the purpose of this post is to cement for myself what on earth a topos is and why I should care about them.</summary></entry><entry><title type="html">Adjoints</title><link href="http://localhost:4000/2022/06/01/Adjoints.html" rel="alternate" type="text/html" title="Adjoints" /><published>2022-06-01T00:00:00-04:00</published><updated>2022-06-01T00:00:00-04:00</updated><id>http://localhost:4000/2022/06/01/Adjoints</id><content type="html" xml:base="http://localhost:4000/2022/06/01/Adjoints.html">&lt;p&gt;I realized I haven’t, to my knowledge, talked about adjoint functors yet!
+Let’s do that now,
+and introduce &lt;em&gt;compactly generated&lt;/em&gt; topological spaces in the process.&lt;/p&gt;
+
+&lt;h2 id=&quot;adjoint-functors&quot;&gt;Adjoint functors&lt;/h2&gt;
+
+&lt;p&gt;A pair of functors \(F\colon \mathsf{C} \to \mathsf{D}\) and \(G\colon \mathsf{D} \to \mathsf{C}\) 
+are an &lt;em&gt;adjoint pair,&lt;/em&gt;
+or more accurately, \(F\) is &lt;em&gt;left adjoint&lt;/em&gt; to \(G\)
+and \(G\) is &lt;em&gt;right adjoint&lt;/em&gt; to \(F\), written \(F \dashv G\),
+if there is an isomorphism&lt;/p&gt;
+
+\[\mathsf{D}(Fc,d) \cong \mathsf{C}(c,Gd)\]
+
+&lt;p&gt;natural in \(c\) and \(d\).&lt;/p&gt;
+
+&lt;p&gt;For example, let \(\mathsf{C}\) be the category of sets \(\mathsf{Set}\)
+and \(\mathsf{D}\) the category of groups \(\mathsf{Grp}\).
+Since every group is in particular a set,
+and every homomorphism in particular a function,
+we have a functor \(U\colon \mathsf{Grp} \to \mathsf{Set}\).
+On the other side we have a functor \(F\colon \mathsf{Set} \to \mathsf{Grp}\)
+that sends a set \(X\) to the free group on that set \(F(X)\).
+The claimed isomorphism&lt;/p&gt;
+
+\[\mathsf{Grp}(FX,G) \cong \mathsf{Set}(X,UG)\]
+
+&lt;p&gt;says that homomorphisms from the free group on a set \(X\) to a group \(G\)
+are in one-to-one correspondence with set maps from \(X\) to the set \(G\).
+This is the universal property of the free group!
+I can imagine it being a good idea to trace out what naturality is asserting here;
+you should try it.&lt;/p&gt;
+
+&lt;p&gt;Another example is \(\iota \dashv (\cdot)^{\operatorname{ab}}\),
+where \(\iota\colon \mathsf{Ab} \to \mathsf{Grp}\) is the inclusion
+of the category of abelian groups into the category of groups
+and \((\cdot)^{\operatorname{ab}}\colon \mathsf{Grp} \to \mathsf{Ab}\)
+sends a group to its &lt;em&gt;abelianization.&lt;/em&gt;
+Here the claimed isomorphism&lt;/p&gt;
+
+\[\mathsf{Ab}(G^{\operatorname{ab}},A) \cong \mathsf{Grp}(G,\iota A)\]
+
+&lt;p&gt;says that homomorphisms from the abelianization of \(G\) to an abelian group \(A\)
+are in one-to-one correspondence with homomorphisms from \(G\) to \(A\).&lt;/p&gt;
+
+&lt;p&gt;It can be particularly illuminating to plug the same object 
+into one side of the equation and see what happens to the identity on the other side.
+A silly example is if we let \(G = \iota A\).
+On the lefthand side of the equation we have for every abelian group \(A\)
+a special homomorphism \(\epsilon_A \colon (\iota A)^{\operatorname{ab}} \to A\);
+this turns out to be the isomorphism identifying the abelianization of an abelian group \(A\) with itself.
+This homomorphism, if you trace it out,
+turns out to be natural in \(A\); we call it the &lt;em&gt;counit&lt;/em&gt; of the adjunction.
+A less silly example is if we let \(A = G^{\operatorname{ab}}\).
+Then on the righthand side of the equation we have for every group \(G\)
+a special homomorphism \(\eta_G \colon G \to \iota(G^{\operatorname{ab}})\).
+This is the homomorphism from \(G\) to its abelianization;
+it turns out to be natural in \(G\) and we call it the &lt;em&gt;unit&lt;/em&gt; of the adjunction.&lt;/p&gt;
+
+&lt;p&gt;For our free group example, the unit sends a set \(X\) to its image inside \(FX\)
+and the counit is the map from the free group on the underlying set of a group \(G\)
+to the group \(G\) that takes a word generated by elements of the group \(G\) and evaluates 
+it as an element of the group \(G\).&lt;/p&gt;
+
+&lt;p&gt;Zooming out, if we return to the general setting \(F \dashv G\),
+we always have \(\eta\colon 1_{\mathsf{C}} \Rightarrow GF\)
+and \(\epsilon\colon FG \Rightarrow 1_{\mathsf{D}}\),
+and it turns out these natural transformations satisfy the following two identities
+called the &lt;em&gt;triangle identities&lt;/em&gt;&lt;/p&gt;
+
+\[(\epsilon F) \cdot (F\eta) = 1_{F}\quad\text{and}\quad (G\epsilon)\cdot (\eta G) = 1_{G}.\]
+
+&lt;p&gt;For the free \(\dashv\) forgetful adjunction,
+the first identity says that if you take the map \(FX \to FUFX\) defined 
+on sets by sending \(X\) to its image in \(UFX\) and then extending to the free groups on these sets,
+and then follow it with the map \(FUFX \to FX\) that recognizes a word in \(UFX\) as an element of \(FX\),
+you get the identity of the free group on \(X\), which seems believable.
+The second identity says that if you start with a group \(G\),
+the map \(UG \to UFUG\) that sends an element \(g \in G\) to that element thought of as a word in \(FUG\),
+and then apply the map \(UFUG \to UG\) that is the underlying set map of the homomorphism \(FUG \to G\)
+that recognizes a word in \(G\) as an element of \(G\), you get the identity of \(UG\),
+also believable.&lt;/p&gt;
+
+&lt;p&gt;Anyway, it turns out that for a pair of functors \(F\colon \mathsf{C} \to \mathsf{D}\)
+and \(G\colon \mathsf{D} \to \mathsf{C}\),
+the existence of the natural transformations \(\eta\colon 1_{\mathsf{C}} \Rightarrow GF\)
+and \(\epsilon\colon FG \Rightarrow 1_{\mathsf{D}}\) satisfying the triangle identities
+is equivalent to having an adjunction.&lt;/p&gt;
+
+&lt;h2 id=&quot;reflective-and-coreflective-subcategories&quot;&gt;Reflective and coreflective subcategories&lt;/h2&gt;
+
+&lt;p&gt;The example of abelianization is an example of something the nLab delightfully called &lt;a href=&quot;https://ncatlab.org/nlab/show/completion&quot;&gt;-ification&lt;/a&gt;,
+or did back in 2019.
+The idea is we have a full subcategory \(\mathsf{Ab}\) of \(\mathsf{Grp}\)
+(every homomorphism of abelian groups qua groups is a homomorphism of abelian groups)
+and the inclusion \(\iota\) has a left adjoint.
+The unit of the adjunction is a morphism in the larger category from an object to its “reflection” 
+in the smaller category.&lt;/p&gt;
+
+&lt;p&gt;The dual notion, when the inclusion has a &lt;em&gt;right&lt;/em&gt; adjoint,
+is a &lt;em&gt;coreflective&lt;/em&gt; subcategory.
+An example of this, that I’d like to explain partially for myself,
+is the inclusion of compactly generated spaces into all spaces.
+A Hausdorff space \(Y\) is &lt;em&gt;compactly generated,&lt;/em&gt; in one formulation,
+if it is the direct limit (or colimit, if you prefer) of all of its compact subspaces.
+By the definition of the direct limit,
+this says that a map \(Y \to X\) is continuous if and only if 
+its restriction to every compact (necessarily Hausdorff) subspace is continuous.
+Since the image of a compact Hausdorff space \(K\) in \(Y\) is compact Hausdorff,
+this is equivalent to saying the following.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A map \(Y \to X\) is continuous if and only if
+for every map from a compact Hausdorff space \(K\) to \(Y\),
+the composition \(K \to Y \to X\) is continuous.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This latter statement is more appropriately the defintion of a compactly generated space if we don’t assume
+\(Y\) to be Hausdorff.
+We will, though, because I like Hausdorff spaces.&lt;/p&gt;
+
+&lt;p&gt;The category \(\mathsf{CGHaus}\) is a full subcategory of \(\mathsf{Haus}\),
+the category of Hausdorff topological spaces and continuous functions.
+In fact it is a coreflective subcategory:
+the right adjoint of the inclusion \(\iota\) is the functor \(k\) which sends a space \(X\)
+to \(kX\), the direct limit of all of its compact subspaces.
+Let’s check that this is really a functor:
+given a map \(f\colon X \to Y\),
+the restriction of \(f\) to any subspace is continuous,
+and the image of a compact subset of \(X\) is a compact subset of \(Y\),
+so the restrictions \(f|_K\) assemble into a map \(kf\colon kX \to kY\).
+It’s not hard to check that this construction respects function composition
+and sends the identity of \(X\) to the identity of \(kX\).
+So we have \(\iota\colon \mathsf{CGHaus} \to \mathsf{Haus}\) and \(k\colon\mathsf{Haus} \to \mathsf{CGHaus}\).
+The adjunction is the claim that we have&lt;/p&gt;
+
+\[\mathsf{Haus}(\iota X,Y) \cong \mathsf{CGHaus}(X,kY).\]
+
+&lt;p&gt;In other words, there is a (natural) bijection between maps 
+from a compactly generated Hausdorff space \(X\) to a Hausdorff space \(Y\)
+and maps from \(X\) to \(kY\).
+This is true: 
+given a map \(f\colon X \to Y\) and a compact subset \(K\) of \(X\),
+the restriction \(f|_K\) has image a compact subspace of \(Y\),
+which we may continue into \(kY\).
+These maps glue up to give a map from the direct limit of all compact subspaces of \(X\) to \(kY\).
+Since \(X\) is compactly generated Hausdorff,
+it is the direct limit of its compact subsets,
+so what we have shown is that the map \(f\) &lt;em&gt;factors through&lt;/em&gt; the map \(\epsilon_Y\colon kY \to Y\)
+defined by the universal property of the direct limit.
+It is clear that this process is surjective,
+and it is injective as well: if \(f \ne g\), since \(X\) is the direct limit of all of its compact subsets,
+we can find a compact subspace on which \(f\) and \(g\) disagree,
+so their images in \(kY\) disagree, so the maps \(\tilde f \colon X \to kY\) and \(\tilde g\colon X \to kY\)
+disagree.&lt;/p&gt;
+
+&lt;h2 id=&quot;rapl&quot;&gt;RAPL&lt;/h2&gt;
+
+&lt;p&gt;I want to finish out this blog post with one of the coolest applications of adjoint functors:
+“Right Adjoints Preserve Limits” and dually “Left Adjoints Preserve Colimits”.
+What this says, supposing I have an adjoint pair \(F \dashv G\)
+between \(\mathsf{C}\) and \(\mathsf{D}\),
+is that \(\varprojlim_i Gd_i = G(\varprojlim_i d_i)\)
+and \(\varinjlim_i Fc_i = F(\varinjlim_i c_i)\).
+So if I have a diagram whose limit I want to compute in \(\mathsf{C}\) which comes from \(\mathsf{D}\)
+via \(G\),
+I can compute its limit in \(\mathsf{D}\) and then apply \(G\), and I’ll get what I want.&lt;/p&gt;
+
+&lt;p&gt;Let’s bring it down to earth.
+One thing this says is that the free product of two free groups \(FX\) and \(FY\)
+is the free group on their disjoint union \(FX * FY = F(X\amalg Y)\).
+Another thing this says is that the underlying set of the product of two groups \(G\) and \(H\)
+is the product of \(G\) and \(H\) as sets.&lt;/p&gt;
+
+&lt;p&gt;For compactly generated Hausdorff spaces,
+this says that the product of \(kX\) and \(kY\) is \(k(X\times Y)\),
+but that (for instance) their disjoint union is already compactly generated Hausdorff.&lt;/p&gt;</content><author><name></name></author><summary type="html">I realized I haven’t, to my knowledge, talked about adjoint functors yet! Let’s do that now, and introduce compactly generated topological spaces in the process.</summary></entry><entry><title type="html">Pursued By Stacks 7: Appendix</title><link href="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html" rel="alternate" type="text/html" title="Pursued By Stacks 7: Appendix" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/19/Pursued-by-Stacks-7:-Appendix</id><content type="html" xml:base="http://localhost:4000/2022/05/19/Pursued-by-Stacks-7-Appendix.html">&lt;p&gt;This post is, strictly speaking, a follow up to &lt;a href=&quot;/2022/05/17/Pursued-by-Stacks-3-We-Need-A-Lemma.html&quot;&gt;part three&lt;/a&gt; of my series on stacks,
 on the 2-Yoneda lemma.
 The classical Yoneda lemma has built into it a naturality statement,
 while our 2-Yoneda lemma proved essentially only the fact of the isomorphism.
@@ -1368,436 +1596,4 @@ There’s only one choice of functor and only one generalized map.
 Nevertheless, when you try to glue these maps together to give you a new map from \(S^1\) to \(C_2\),
 you find that there are &lt;em&gt;two&lt;/em&gt; possible maps!
 What’s worse, since \(U_1\) and \(U_2\) don’t see the arrows on the overlaps,
-there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry><entry><title type="html">Maps Of Étale Groupoids</title><link href="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Maps Of Étale Groupoids" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/15/Maps-of-%C3%A9tale-groupoids.html">&lt;p&gt;The purpose of this post is to explore two or three notions of a &lt;em&gt;map&lt;/em&gt; between étale groupoids.
-We follow the notation for étale groupoids established in the &lt;a href=&quot;/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html&quot;&gt;last post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;functors&quot;&gt;Functors&lt;/h2&gt;
-
-&lt;p&gt;If \(\mathcal{G}\) and \(\mathcal{H}\) are étale groupoids,
-which are in particular &lt;em&gt;categories,&lt;/em&gt; a natural class of maps of étale groupoids to consider would be
-the &lt;em&gt;continuous functors.&lt;/em&gt;
-A functor \(f\colon \mathcal{G} \to \mathcal{H}\) is a pair of maps
-\(f_0\colon \mathcal{G}_0 \to \mathcal{H}_0\) and \(f_1\colon \mathcal{G}_1 \to \mathcal{H}_1\)
-that commute with the various structure maps.
-So for example we have \(\alpha f_1 = f_0 \alpha\) and \(\omega f_1 = f_0 \omega\).&lt;/p&gt;
-
-&lt;h2 id=&quot;example-refinement-groupoids&quot;&gt;Example: Refinement groupoids&lt;/h2&gt;
-
-&lt;p&gt;Given an étale groupoid \(\mathcal{G}\) and an open cover 
-\(\mathcal{U} = \{ U_i \}_{i \in I}\) of \(\mathcal{G}_0\),
-we construct a &lt;em&gt;refinement groupoid&lt;/em&gt; \(\mathcal{G}^{\mathcal{U}}\) and a functor
-\(\pi^{\mathcal{U}}\colon \mathcal{G}^{\mathcal{U}} \to \mathcal{G}\).
-The space of objects is the disjoint union \(\coprod_{i\in I} U_i\).
-For \(x \in U_i\), write the corresponding object of \(\mathcal{G}^{\mathcal{U}}\) as \(x_i\).
-The space of arrows \(\mathcal{G}^{\mathcal{U}}_1\) is the set&lt;/p&gt;
-
-\[\{f_{j,i} \colon x_i \to y_j : f\colon x \to y \in \mathcal{G}_1\}.\]
-
-&lt;p&gt;A basic open set for the topology on \(\mathcal{G}^{\mathcal{U}}_1\) is of the form \(V_{j,i}\)
-where \(V\subset \mathcal{G}_1\) is an open set
-and \(V_{j,i} = \{f_{j,i} \colon f \in V\}\).
-The functor \(\pi^{\mathcal{U}}\) is defined on objects as \(\pi^{\mathcal{U}}_0(x_i) = x\)
-and \(\pi^{\mathcal{U}}_1(f_{j,i}) = f\).&lt;/p&gt;
-
-&lt;p&gt;Like all functors, \(\pi^{\mathcal{U}}\) induces a continuous map of orbit spaces
-\(\overline{\pi^{\mathcal{U}}}\colon \mathcal{G}^{\mathcal{U}}_1\backslash\mathcal{G}^{\mathcal{U}}_0 
-\to \mathcal{G}_1\backslash\mathcal{G}_0\)
-and for each point \(x \in \mathcal{G}^{\mathcal{U}}_0\), a homomorphism of isotropy groups
-\(\pi^{\mathcal{U}}_x \colon \mathcal{G}^{\mathcal{U}}_x \to \mathcal{G}_{\pi^{\mathcal{U}}_0(x)}\).
-The functor \(\pi^{\mathcal{U}}\) is an &lt;em&gt;equivalence&lt;/em&gt; in the sense that
-the map \(\pi_0^{\mathcal{U}}\) is étale, the map \(\overline{\pi^{\mathcal{U}}}\) is a homeomorphism
-and each \(\pi^{\mathcal{U}}_x\) is an isomorphism.&lt;/p&gt;
-
-&lt;p&gt;One can show that in fact \(\pi^{\mathcal{U}}\)
-is an &lt;em&gt;equivalence of categories&lt;/em&gt; in the sense that it is &lt;em&gt;full, faithful&lt;/em&gt; and &lt;em&gt;essentially surjective.&lt;/em&gt;
-Here &lt;em&gt;full&lt;/em&gt; and &lt;em&gt;faithful&lt;/em&gt; refer to the fact that for every pair of objects \(x\) and \(y\)
-in \(\mathcal{G}^{\mathcal{U}}\), the map of sets&lt;/p&gt;
-
-\[\{f\colon x \to y\} \to \{f\colon \pi^{\mathcal{U}}_0(x) \to \pi^{\mathcal{U}}_0(y)\}\]
-
-&lt;p&gt;is surjective and injective, respectively.
-(This is packaged up in the fact that the map of orbit spaces is injective and that the maps on isotropy groups
-are isomorphisms.)
-&lt;em&gt;Essentially surjective&lt;/em&gt; means that every object in \(\mathcal{G}\) is isomorphic
-to an object in the image of \(\pi^{\mathcal{U}}\).
-(This is packaged up in the fact that the map of orbit spaces is surjective.)
-You should probably think of the étale condition on \(\pi^{\mathcal{U}}_0\)
-as being the extra sauce that distinguishes a continuous bijection from a homeomorphism.&lt;/p&gt;
-
-&lt;p&gt;Notice, however, that \(\pi^{\mathcal{U}}\) typically fails to have an inverse functor,
-even up to natural transformation (about which more in a second).
-I talked a little about this failure &lt;a href=&quot;/2020/08/02/The-Axiom-of-Choice-is-False-for-Manifolds.html&quot;&gt;a long time ago&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Suppose the open cover \(\mathcal{V} = \{V_j\}_{j \in J}\) is a refinement of the open cover \(\mathcal{U}\),
-in the sense that for each \(j \in J\),
-there exists \(i \in I\) such that \(V_j \subset U_i\).
-A choice for each \(j\) of \(\varphi(j) \in I\) with this property
-defines a &lt;em&gt;refinement function&lt;/em&gt; \(\varphi \colon J \to I\).
-Associated to the choice of \(\varphi\), there is a continuous functor 
-\(\pi^{\varphi}\colon \mathcal{G}^{\mathcal{V}} \to \mathcal{G}^{\mathcal{U}}\)
-defined on objects as \(\pi^\varphi(x_j) = x_{\varphi(j)}\) and on arrows as
-\(\pi^{\varphi}(f_{j,i}) = f_{\varphi(j),\varphi(i)}\).
-This functor is also an equivalence and satisfies \(\pi^{\mathcal{U}}\pi^\varphi = \pi^{\mathcal{V}}\).&lt;/p&gt;
-
-&lt;h2 id=&quot;natural-transformations&quot;&gt;Natural transformations&lt;/h2&gt;
-
-&lt;p&gt;A &lt;em&gt;natural transformation&lt;/em&gt; \(\eta\colon \phi \Rightarrow \psi\) of (continuous) functors
-\(\phi\), \(\psi\colon \mathcal{G} \to \mathcal{H}\) is a continuous map
-\(\eta\colon \mathcal{G}_0 \to \mathcal{H}_1\) such that for each arrow \(f\colon x \to y\)
-in \(\mathcal{G}\), we have \(\eta(y)\circ \phi(f) = \psi(f) \circ \eta(x)\).
-(There’s a commutative square I’m deciding to omit. 
-Drawing it yourself when demonstrating naturality is very instructive.)
-Notice that because all arrows in groupoids are invertible,
-\(\eta\) is automatically a &lt;em&gt;natural isomorphism.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Given two refinement functions \(\varphi\), \(\varphi&apos;\colon J \to I\),
-there is a natural transformation \(\eta\colon \pi^{\varphi} \Rightarrow \pi^{\varphi&apos;}\)
-defined as \(\eta(x_j) = (1_x)_{\varphi&apos;(j),\varphi(j)}\).
-It’s not too hard to see that this is continuous because the assignment \(x \mapsto 1_x\) is continuous,
-and for each arrow \(f_{j,i} \colon x_i \to y_j\) in \(\mathcal{G}^{\mathcal{V}}\)
-the following diagram commutes&lt;/p&gt;
-
-\[\require{AMScd}\begin{CD}
-    x_{\varphi(i)} @&amp;gt;{(1_x)_{\varphi&apos;(i),\varphi(i)}}&amp;gt;&amp;gt; x_{\varphi&apos;(i)} \\
-    @VV{f_{\varphi(j),\varphi(i)}}V @VV{f_{\varphi&apos;(j),\varphi&apos;(i)}}V \\
-    y_{\varphi(j)} @&amp;gt;{(1_y)_{\varphi&apos;(j),\varphi(j)}}&amp;gt;&amp;gt; y_{\varphi&apos;(j)}
-\end{CD}\]
-
-&lt;p&gt;because \(1_yf = f 1_x\).&lt;/p&gt;
-
-&lt;h2 id=&quot;localizing&quot;&gt;Localizing&lt;/h2&gt;
-
-&lt;p&gt;Given a category \(C\) with a class of arrows \(W\) satisfying &lt;a href=&quot;https://ncatlab.org/nlab/show/calculus+of+fractions&quot;&gt;certain conditions&lt;/a&gt;
-satisfied by the class of equivalences of étale groupoids
-one can construct a (relatively nice) category \(C[W^{-1}]\)
-in which the arrows are &lt;em&gt;spans&lt;/em&gt; of the form \(\begin{CD}x @&amp;lt;w&amp;lt;&amp;lt; y @&amp;gt;f&amp;gt;&amp;gt; z\end{CD}\),
-where \(w \in W\).
-Moerdijk constructed this localization for étale groupoids
-after first identifying two functors if they differ by a natural transformation.
-A &lt;em&gt;generalized map&lt;/em&gt; of étale groupoids is a map of this form.
-Two groupoids \(\mathcal{G}\) and \(\mathcal{H}\) are &lt;em&gt;Morita equivalent&lt;/em&gt; if there is a groupoid \(\mathcal{K}\)
-and equivalences \(\mathcal{K} \to \mathcal{G}\) and \(\mathcal{K} \to \mathcal{H}\).
-Morita equivalent groupoids become isomorphic in Moerdijk’s localization.&lt;/p&gt;
-
-&lt;h2 id=&quot;maps-using-refinement-groupoids&quot;&gt;Maps using refinement groupoids&lt;/h2&gt;
-
-&lt;p&gt;More concretely, I prefer the following approach.
-A &lt;em&gt;map&lt;/em&gt; of étale groupoids \(f\colon \mathcal{G} \to \mathcal{H}\) is a functor
-\(\mathcal{f}^{\mathcal{U}} \colon \mathcal{G}^{\mathcal{U}} \to \mathcal{H}\),
-where \(\mathcal{G}^{\mathcal{U}}\) is a refinement groupoid of \(\mathcal{G}\).
-Two functors \(\phi\colon \mathcal{G}^{\mathcal{U}} \to \mathcal{H}\) 
-and \(\psi\colon \mathcal{G}^{\mathcal{V}} \to \mathcal{H}\)
-&lt;em&gt;define the same generalized map&lt;/em&gt; if there exists a common refinement 
-\(\mathcal{W}\) of \(\mathcal{U}\) and \(\mathcal{V}\)
-such that for some (and hence any) choice of refinement functions \(\varphi\colon \mathcal{W} \to \mathcal{U}\)
-and \(\varphi&apos;\colon \mathcal{W} \to \mathcal{V}\),
-the following diagram commutes up to a natural transformation 
-\(\eta\colon \phi\pi^{\varphi} \Rightarrow \psi\pi^{\varphi&apos;}\)&lt;/p&gt;
-
-\[\begin{CD}
-\mathcal{G}^{\mathcal{W}} @&amp;gt;\pi^\varphi&amp;gt;&amp;gt; \mathcal{G}^{\mathcal{U}} \\
-@VV\pi^{\varphi&apos;}V  @VV\phi V \\
-\mathcal{G}^{\mathcal{V}} @&amp;gt;\psi&amp;gt;&amp;gt; \mathcal{H}.
-\end{CD}\]
-
-&lt;p&gt;Given maps \(f\colon \mathcal{G} \to \mathcal{H}\) and \(g\colon \mathcal{H} \to \mathcal{K}\)
-represented by functors \(f^{\mathcal{U}}\) and \(g^{\mathcal{V}}\),
-write \(\mathcal{V} = \{V_j\}_{j\in J}\) and let \(\mathcal{W} = \{W_i\}_{i\in I}\) be a refinement
-of \(\mathcal{U}\) with the property that there is a function \(\theta\colon I \to J\)
-such that \(f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(W_i) \subset V_{\theta(i)}\)
-for all \(i \in I\), where 
-\(\pi^{\mathcal{U},\mathcal{W}}\colon \mathcal{G}^{\mathcal{W}} \to \mathcal{G}^{\mathcal{U}}\) 
-is some choice of refinement functor.
-There is a functor \(f^{\mathcal{V},\mathcal{W}}\colon \mathcal{G}^{\mathcal{W}}\to\mathcal{H}^{\mathcal{V}}\)
-defined on objects as&lt;/p&gt;
-
-\[f^{\mathcal{V},\mathcal{W}}(x_i) = (f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(x_i))_{\theta(i)}\]
-
-&lt;p&gt;and on arrows as&lt;/p&gt;
-
-\[f^{\mathcal{V},\mathcal{W}}(f_{j,i}) =
-(f^{\mathcal{U}}\pi^{\mathcal{U},\mathcal{W}}(f_{j,i}))_{\theta(j),\theta(i)}.\]
-
-&lt;p&gt;We define the composite map \(gf\colon \mathcal{G} \to \mathcal{K}\) to be the map represented by the functor
-\(g^{\mathcal{V}}f^{\mathcal{V},\mathcal{W}} \colon \mathcal{G}^{\mathcal{W}} \to \mathcal{K}\).
-It is perhaps not immediately obvious that this composition is well-defined and associative,
-but we assure the reader that it is and that the reader probably does not want to read a demonstration.&lt;/p&gt;
-
-&lt;p&gt;One can check more or less by hand that every span in the sense above
-defines a generalized map in our sense and conversely
-so that the category of étale groupoids where the arrows are our generalized maps
-coincides with Moerdijk’s.&lt;/p&gt;
-
-&lt;h2 id=&quot;bibundles&quot;&gt;Bibundles&lt;/h2&gt;
-
-&lt;p&gt;To me, the less-familiar approach is to use &lt;em&gt;bibundles.&lt;/em&gt;
-In this section I follow &lt;a href=&quot;https://ems.press/content/serial-article-files/6839&quot;&gt;Lerman’s article&lt;/a&gt;.
-We begin as follows.
-A &lt;em&gt;right action&lt;/em&gt; of an étale groupoid \(\mathcal{G}\) on a space \(x\)
-is the following data:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a map \(a \colon X \to \mathcal{G}_0\) called the &lt;em&gt;anchor&lt;/em&gt; and&lt;/li&gt;
-  &lt;li&gt;a map&lt;/li&gt;
-&lt;/ul&gt;
-
-\[X \times_{\mathcal{G}_0} \mathcal{G}_1 = \{(x,f) \in X \times \mathcal{G}_1 : a(x) = \omega(f)\} 
-\to X, \qquad (x,f) \mapsto x.f\]
-
-&lt;p&gt;called the &lt;em&gt;action&lt;/em&gt; such that&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;\(a(x.f) = \alpha(f)\) for all \(x\) and \(f\) for which \(x.f\) is defined&lt;/li&gt;
-  &lt;li&gt;\((x.f).g = x.(fg)\) when appropriate and&lt;/li&gt;
-  &lt;li&gt;\(x.1_{a(x)} = x\) for all \(x \in X\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is similarly a definition of a &lt;em&gt;left&lt;/em&gt; action of a groupoid on a space.&lt;/p&gt;
-
-&lt;p&gt;If \(X\) is equipped with a right action of an étale groupoid \(\mathcal{G}\),
-we say that \(X\) is a &lt;em&gt;principal (right) \(\mathcal{G}\)-bundle over B&lt;/em&gt;
-if there is an open surjection \(\pi\colon X \to B\) such that the following hold.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;For each \(b \in B\), there exists a neighborhood \(U\) of \(b\) and a &lt;em&gt;section&lt;/em&gt;
-\(s\colon U \to X\) such that \(\pi s = 1_U\). 
-(In the case of orbifolds where we’re working with smooth manifolds,
-the existence of local sections is guaranteed by the property that \(\pi\)
-is a &lt;em&gt;submersion.&lt;/em&gt;
-In general there are open surjections which do not admit local sections,
-so I think we have to build this into the theory.)&lt;/li&gt;
-  &lt;li&gt;We have \(\pi(x.f) = \pi(x)\) for all \((x,f) \in X\times_{\mathcal{G}_0} \mathcal{G}_1\)—we
-describe this by saying that \(\pi\) is &lt;em&gt;\(\mathcal{G}\)-invariant.&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;The map \((x,f) \mapsto (x,x.f)\) is a homeomorphism
-\(X\times_{\mathcal{G}_0}\mathcal{G}_1 \to X \times_B X\);
-in other words \(\mathcal{G}\) acts freely and transitively on the fibers of \(\pi\colon X \to B\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Given an étale groupoid \(\mathcal{G}\), the target map \(\omega\colon \mathcal{G}_1 \to \mathcal{G}_0\)
-makes \(\mathcal{G}_1\) into a right principal \(\mathcal{G}\)-bundle,
-where the action of \(\mathcal{G}\) is right-multiplication 
-and the anchor is \(\alpha\colon \mathcal{G}_1 \to \mathcal{G}_0\).&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;bibundle&lt;/em&gt; from \(\mathcal{G}\) to \(\mathcal{H}\)
-is a space \(X\) together with \(a_L \colon X \to \mathcal{G}_0\) and \(a_R \colon X \to \mathcal{H}_0\)
-such that the following properties hold.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;There is a left action of \(\mathcal{G}\) on \(X\) with respect to the anchor \(a_L\)
-and a right action of \(\mathcal{H}\) on \(X\) with respect to the anchor \(a_R\).
-These actions commute.&lt;/li&gt;
-  &lt;li&gt;The map \(a_L \colon X \to \mathcal{G}_0\) makes \(X\) a principal \(\mathcal{H}\)-bundle.&lt;/li&gt;
-  &lt;li&gt;The map \(a_R\) is \(\mathcal{G}\)-invariant in the sense that \(a_R(g.x) = a_R(x)\) for all \((g,x)\)
-for which \(g.x\) is defined.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two bibundles \(X,Y \colon \mathcal{G} \to \mathcal{H}\) are &lt;em&gt;isomorphic&lt;/em&gt;
-if there is a \(\mathcal{G}\)–\(\mathcal{H}\)-equivariant homeomorphism \(\eta\colon X \to Y\),
-i.e. \(\eta(g.x.f) = g.\eta(x).f\) for all triples for which the actions are defined.&lt;/p&gt;
-
-&lt;h2 id=&quot;bibundles-defined-by-functors&quot;&gt;Bibundles defined by functors&lt;/h2&gt;
-
-&lt;p&gt;Given a functor \(\phi \colon \mathcal{G} \to \mathcal{H}\), there is a bibundle \(X_\phi\)
-where&lt;/p&gt;
-
-\[X_\phi = \{ (x,f) \in \mathcal{G}_0 \times \mathcal{H}_1 : \phi_0(x) = \omega(f)\}\]
-
-&lt;p&gt;and \(B\) is \(\mathcal{G}_0\). The right action of \(\mathcal{H}\) is the restriction of the obvious action
-on the product \(\mathcal{G}_0 \times \mathcal{H}_1\).
-In other words, \((x,f).h = (x,fh)\).
-The left action of \(\mathcal{G}\) over the anchor \((x,f) \mapsto x\)
-is defined by \(g.(x,f) = (\omega(g),\phi_1(g)h)\).
-It is clear that the actions commute,
-and that the map \(a_R\) defined by \((x,f) \mapsto \alpha(f)\) is \(\mathcal{G}\)-invariant,
-since \(a_R(g.(x,f)) = \alpha(\phi_1(g)f) = \alpha(f)\).&lt;/p&gt;
-
-&lt;p&gt;Let us check that \((x,f) \mapsto x\) makes \(X_\phi\) into a principal \(\mathcal{H}\)-bundle.
-The projection \((x,f) \mapsto x\) is certainly an open surjection which is \(\mathcal{H}\)-invariant.
-Consider the map \(((x,f),g) \mapsto ((x,f),(x,fg))\)
-from \(X_\phi \times_{\mathcal{H}_0}\mathcal{H}_1 \to X_\phi \times_{\mathcal{G}_0} X_\phi\).
-We claim that this is a homeomorphism,
-indeed that the map \(((x,f),(x,g)) \mapsto ((x,f),f^{-1}g)\) is a continuous inverse.
-To see that this is well-defined notice that
-the multiplication \(f^{-1}g\) is defined, since \(\phi_0(x) = \omega(f) = \omega(g)\).&lt;/p&gt;
-
-&lt;p&gt;Bibundles may be composed (I’ll neglect to mention &lt;em&gt;how&lt;/em&gt;),
-but the composition is only associative up to isomorphism of bibundles.
-If one thinks of isomorphisms between bibundles as being akin to natural transformations
-(indeed, naturally isomorphic functors have isomorphic associated bibundles),
-then the category of étale groupoids with arrows bibundles is what’s called a &lt;em&gt;weak&lt;/em&gt; \(2\)-category.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-equivalence-of-the-two-approaches&quot;&gt;The equivalence of the two approaches&lt;/h2&gt;
-
-&lt;p&gt;This post is already quite long, but I wanted to explain how to see that bibundles
-give rise to generalized maps in our sense.
-So let \(X \colon \mathcal{G} \to \mathcal{H}\) be a bibundle.
-For each \(p \in \mathcal{G}_0\), there is a local section \(s_p\colon U_p \to X\)
-defined on a neighborhood of \(p\).
-Consider the open cover \(\mathcal{U} = \{U_p\}_{p \in \mathcal{G}_0}\) of \(\mathcal{G}_0\),
-and the space&lt;/p&gt;
-
-\[X^{\mathcal{U}} = \mathcal{G}^{\mathcal{U}}_0 \times_{\mathcal{G}_0} X
-= \{ (p_i,x) \in \mathcal{G}^{\mathcal{U}}_0 \times X : p = a_L(x) \}\]
-
-&lt;p&gt;We claim that map \((p_i,x) \mapsto p_i\) makes \(X^{\mathcal{U}}\) into a principal \(\mathcal{H}\)-bundle,
-where the anchor is \((p_i,x) \mapsto a_R(x)\) and the action is \((p_i,x).h = (p_i,x.h)\). 
-Notice that \(p = a_L(x.h) = a_L(x)\) since \(X\) is \(\mathcal{H}\)-principal, so this is well-defined,
-and clearly \(\mathcal{H}\)-invariant.
-Now consider the map \(((p_i,x),h) \mapsto ((p_i,x),(p_i,x.h))\).
-Since \((x,h) \mapsto (x,x.h)\) is a homeomorphism, this map will also be a homeomorphism,
-proving the claim.&lt;/p&gt;
-
-&lt;p&gt;There is a left action of \(\mathcal{G}^{\mathcal{U}}\) on \(X^{\mathcal{U}}\)
-where the anchor is \((p_i,x) \mapsto p_i\) and the action is \(g_{j,i}.(p_i,x) = (\omega(g_{j,i}),g.x)\). 
-By the definition of the left action of \(\mathcal{G}\) on \(X\), this is well-defined.
-It is clear that the left and right actions commute; we have already shown that \(X^{\mathcal{U}}\)
-is \(\mathcal{H}\)-principal,
-and we have \((\omega(g_{j,i}),g.x) \mapsto a_R(g.x) = a_R (x)\), so the right anchor is left invariant.
-Therefore we have a bibundle \(X^{\mathcal{U}} \colon \mathcal{G}^{\mathcal{U}} \to \mathcal{H}\).&lt;/p&gt;
-
-&lt;p&gt;The bibundle \(X^{\mathcal{U}}\) has a global section \(p_i \mapsto (p_i,s_i(p))\).
-If \((p_i,x)\) is another point of \(X^{\mathcal{U}}\),
-since \(X^{\mathcal{U}} \times_{\mathcal{H}_0} \mathcal{H}_1\) is homeomorphic to
-\(X^{\mathcal{U}}\times_{\mathcal{G}^{\mathcal{U}}_0} X^{\mathcal{U}}\),
-there exists a unique arrow \(h \in \mathcal{H}_1\) such that \((p_i,x) = (p_i,s_i(p)).h\).
-We claim the map \((p_i,x) \mapsto (p_i,h)\)
-from \(X^{\mathcal{U}}\) to&lt;/p&gt;
-
-\[\{ (p_i,h) \in \mathcal{G}^{\mathcal{U}}_0\times \mathcal{H}_1 : a_R(s_i(p)) = \omega(h) \}\]
-
-&lt;p&gt;is a homeomorphism. Indeed, the map \((p_i,h) \mapsto (p_i,s_i(p).h)\) is its inverse.
-We claim that the rule \(\phi_0(p_i) = a_R(s_i(p))\) defines the action on objects of a functor
-\(\mathcal{G}^{\mathcal{U}} \to \mathcal{H}\).
-The action on arrows sends \(g_{j,i} \colon x_i \to y_j\) to the unique arrow \(\phi_1(g_{j,i})\) such that
-\(g_{j,i} . (x_i, s_i(x)) = (y_j, s_j(y)).\phi_1(g_{j,i})\).
-Given \(f_{k,j} \colon y_j \to z_k\), notice that&lt;/p&gt;
-
-\[f_{k,j} . g_{j,i} . (x_i, s_i(x)) = f_{k,j} . (y_j, s_j(y)). \phi_1(g_{j,i}) 
-= (z_k, s_k(z)) . \phi_1(f_{k,j}) . \phi_1(g_{j,i})\]
-
-&lt;p&gt;since the left and right actions commute.
-On the other hand,&lt;/p&gt;
-
-\[(f_{k,j}g_{j,i}) . (x_i, s_i(x)) = (z_k,s_k(z)) .\phi_1(f_{k,j}g_{j,i})\]
-
-&lt;p&gt;so since the left action is associative, \(\phi_1\) indeed defines a functor! Cute.&lt;/p&gt;</content><author><name></name></author><summary type="html">The purpose of this post is to explore two or three notions of a map between étale groupoids. We follow the notation for étale groupoids established in the last post.</summary></entry><entry><title type="html">Graphs Of Groups As Étale Groupoids</title><link href="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html" rel="alternate" type="text/html" title="Graphs Of Groups As Étale Groupoids" /><published>2022-05-14T00:00:00-04:00</published><updated>2022-05-14T00:00:00-04:00</updated><id>http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids</id><content type="html" xml:base="http://localhost:4000/2022/05/14/Graphs-of-groups-as-%C3%A9tale-groupoids.html">&lt;p&gt;It’s been a while since I talked about étale groupoids!
-Time to rectify this situation.
-The purpose of this post is to explain how to see graphs of groups as étale groupoids.
-In a later post I’d like to explore the notion of maps between étale groupoids.&lt;/p&gt;
-
-&lt;h2 id=&quot;groupoids&quot;&gt;Groupoids&lt;/h2&gt;
-
-&lt;p&gt;A &lt;em&gt;groupoid&lt;/em&gt; is a small category \(\mathcal{G}\) in which all arrows are invertible.
-Thus there are two sets, \(\mathcal{G}_0\) and \(\mathcal{G}_1\) of objects and arrows respectively,
-and several structure maps:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;\(\alpha\), \(\omega\colon \mathcal{G}_1 \to \mathcal{G}_0\) sending an arrow \(f\colon x \to y\)
-to its &lt;em&gt;source&lt;/em&gt; \(x\) and &lt;em&gt;target&lt;/em&gt; \(y\) respectively.&lt;/li&gt;
-  &lt;li&gt;An injection \(\iota\colon \mathcal{G}_0 \to \mathcal{G}_1\) sending an object \(x\) to the identity arrow
-\(1_x\colon x \to x\).&lt;/li&gt;
-  &lt;li&gt;An inversion map \((\cdot)^{-1}\colon \mathcal{G}_1 \to \mathcal{G}_1\)
-sending an arrow \(f\colon x \to y\) to its inverse \(f^{-1}\colon y \to x\).&lt;/li&gt;
-  &lt;li&gt;A multiplication map \(\circ\colon \mathcal{G}_1 \times_{\mathcal{G}_0} \mathcal{G}_1 \to \mathcal{G}_1\)
-sending a pair of arrows \(f\) and \(g\) with \(\alpha(f) = \omega(g)\) to their composite
-\(g\circ f = gf\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The maps are required to satisfy certain identities saying,
-for instance, that composition is associative.
-A &lt;em&gt;topological groupoid&lt;/em&gt; is a groupoid equipped with a topology on \(\mathcal{G}_0\) and \(\mathcal{G}_1\)
-making all the structure maps continuous.
-A topological groupoid is &lt;em&gt;étale&lt;/em&gt; if \(\alpha\) and \(\omega\) are étale maps, i.e. local homeomorphisms.&lt;/p&gt;
-
-&lt;p&gt;Given an étale groupoid and a point \(x \in \mathcal{G}_0\),
-its &lt;em&gt;orbit&lt;/em&gt; is the set&lt;/p&gt;
-
-\[\mathcal{G}\cdot x = \{ y \in \mathcal{G}_0 : \exists f\colon x \to y\}.\]
-
-&lt;p&gt;The orbits partition \(\mathcal{G}_0\) and the &lt;em&gt;space of orbits&lt;/em&gt; \(\mathcal{G}_1\backslash\mathcal{G}_0\)
-is the quotient space given the quotient topology.
-We may also define the &lt;em&gt;isotropy group&lt;/em&gt; \(\mathcal{G}_x\) as&lt;/p&gt;
-
-\[\mathcal{G}_x = \{ f \in \mathcal{G}_1 : \alpha(f) = \omega(f) = x \}.\]
-
-&lt;p&gt;Since \(\mathcal{G}\) is étale, it turns out that \(\mathcal{G}_x\) is discrete as a subspace of \(\mathcal{G}_1\).&lt;/p&gt;
-
-&lt;h2 id=&quot;graphs-of-groups-as-étale-groupoids&quot;&gt;Graphs of groups as étale groupoids&lt;/h2&gt;
-
-&lt;p&gt;I think I’ve mentioned how orbifolds may be thought of as étale groupoids.
-Indeed, Haefliger describes this in Chapter III.\(\mathcal{G}\) of 
-&lt;a href=&quot;https://www.maths.ed.ac.uk/~v1ranick/papers/bridsonhaefligerx.pdf&quot;&gt;Metric Spaces of Nonpositive Curvature&lt;/a&gt;.
-(Incidentally, I like to cheekily use the citation command “TheBible” for that book,
-even though my research has called for citing it less frequently than I originally expected.)
-What is maybe less well-known (although Haefliger also covers this)
-is how to view a graph of groups (or more generally a &lt;em&gt;complex&lt;/em&gt; of groups) as an étale groupoid.
-I’ll describe how to do this for &lt;em&gt;effective&lt;/em&gt; graphs of groups,
-where the construction is a little slicker,
-although one could give a “hands-on” construction in the general case without too much difficulty.&lt;/p&gt;
-
-&lt;p&gt;Let us set notation. A &lt;em&gt;graph of groups&lt;/em&gt; \((\Gamma,\mathscr{G})\) is a connected graph \(\Gamma\)
-together with an assignment of groups \(\mathscr{G}_v\) and \(\mathscr{G}_e\) to each vertex \(v\) and edge \(e\)
-of \(\Gamma\).
-When the oriented edge \(e\) has initial vertex \(v\),
-we require the existence of an injective homomorphism \(\mathscr{G}_e \to \mathscr{G}_v\).&lt;/p&gt;
-
-&lt;p&gt;Given a vertex \(v\), write \(\operatorname{st}(v)\) for the set of oriented edges \(e\) with initial vertex \(v\).
-Let \(\tau(e)\) denote the terminal vertex of the oriented edge \(e\).
-Let \(\widetilde{\operatorname{st}}(v)\) be the quotient of the disjoint union&lt;/p&gt;
-
-\[\coprod_{e\in\operatorname{st}(v)} \mathscr{G}_v/\iota_e(\mathscr{G}_e) \times (e \setminus \tau(e))\]
-
-&lt;p&gt;by the equivalence relation that identifies the initial vertex of all of these oriented edges.
-(To make the resulting groupoid étale, we need to remove the terminal vertices.)
-Call the identified vertex \(v\).
-There is a natural action of \(\mathscr{G}_v\) on \(\widetilde{\operatorname{st}}(v)\) by multiplication in the labels.
-This action fixes \(v\).&lt;/p&gt;
-
-&lt;p&gt;A graph of groups is &lt;em&gt;effective&lt;/em&gt; if only the family of trivial subgroups of each \(\mathscr{G}_v\)
-satisfies the following conditions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;For each vertex $v$, we have a normal subgroup \(N_v\le \mathscr{G}_v\).&lt;/li&gt;
-  &lt;li&gt;For each edge \(e\) of \(\Gamma\) with initial vertex \(v\) and terminal vertex \(w\),
-there is a subgroup \(N_e\) of \(\mathscr{G}_e\) such that \(\iota_e(N_e) = N_v\) and \(\iota_{\bar e}(N_e) = N_w\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let \(\mathcal{G}_0\) be the disjoint union of the spaces \(\widetilde{\operatorname{st}}(v)\)
-as \(v\) varies over the vertices of \(\Gamma\).
-Each element of each \(\mathscr{G}_v\) acts as a homeomorphism of an open neighborhood of \(\mathcal{G}_0\).
-The orientation reversal of the interior of an oriented edge \(e\mapsto \bar e\)
-also defines a homeomorphism of an open neighborhood of \(\mathcal{G}_0\) for each pair of lifts
-of the interiors of \(e\) and \(\bar e\) to \(\mathcal{G}_0\).
-We may consider the &lt;em&gt;pseudogroup&lt;/em&gt; generated by these local homeomorphisms.&lt;/p&gt;
-
-&lt;p&gt;Briefly, the &lt;em&gt;pseudogroup generated&lt;/em&gt; by a collection of homeomorphisms \(f\colon U \to V\) 
-of open subsets of a topological space \(X\)
-(such that the unions of the \(U\) cover \(X\))
-is the smallest collection of homeomorphisms containing the given collection 
-and satisfying the following properties.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The restriction of a homeomorphism \(f\colon U \to V\) in the collection
-to an open subset of \(U\) is in the collection.&lt;/li&gt;
-  &lt;li&gt;The composition \(gf\) of any two elements \(f\colon U \to V\) and \(g \colon V \to W\)
-in the collection
-is in the collection (note the domain of \(g\)).&lt;/li&gt;
-  &lt;li&gt;The inverse of any homeomorphism in the collection is in the collection.&lt;/li&gt;
-  &lt;li&gt;If \(f\colon U \to V\) is a homeomorphism with the property that
-there is an open cover \(\{U_i\}\) of \(U\) such that \(f|_{U_i}\) is in the collection for each \(i\),
-then \(f\) is in the collection.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The space of arrows \(\mathcal{G}_1\) is the space of &lt;em&gt;germs&lt;/em&gt; of elements of the pseudogroup.
-A &lt;em&gt;germ&lt;/em&gt; of a homeomorphism \(f\colon U \to V\) at a point \(x \in U\)
-is its equivalence class under the equivalence relation of agreement under restriction to a neighborhood of \(x\).
-The germ therefore has a well-defined &lt;em&gt;source&lt;/em&gt; \(\alpha(f) = x\)
-and &lt;em&gt;target&lt;/em&gt; \(\omega(f) = f(x)\).
-We give \(\mathcal{G}_1\) the &lt;em&gt;germ topology:&lt;/em&gt; a basis for this topology is given by sets of the form \(U_f\),
-where \(f\colon U \to V\) is a homeomorphism and \(U_f\) 
-consists of the germs of \(f\) at the various points of \(U\).&lt;/p&gt;
-
-&lt;p&gt;To bring things down to earth, if you chase through the definitions,
-you see that if \(v\) is a vertex of \(\Gamma\) thought of as a point of \(\mathcal{G}_0\),
-then \(\mathcal{G}_v = \mathscr{G}_v\).
-The point \(v\) is equal to its orbit \(\mathcal{G}\cdot v\).
-If \(x\) is a point in the interior of an edge \(e\),
-then \(x\) determines an orbit in \(\mathcal{G}_0\) comprising all those points 
-in each \(\widetilde{\operatorname{st}}(v)\)
-of the form \((g\iota_e(\mathscr{G}_e), x) \subset \mathscr{G}_v/\iota_e(\mathscr{G}_e)\times e \setminus \tau(e)\)
-where \(e\) is allowed to occur in either orientation.
-Put another way, we have \(\Gamma = \mathcal{G}_1\backslash\mathcal{G}_0\).
-The isotropy group \(\mathcal{G}_x\) is isomorphic to \(\mathscr{G}_e\).&lt;/p&gt;</content><author><name></name></author><summary type="html">It’s been a while since I talked about étale groupoids! Time to rectify this situation. The purpose of this post is to explain how to see graphs of groups as étale groupoids. In a later post I’d like to explore the notion of maps between étale groupoids.</summary></entry></feed>
+there’s &lt;em&gt;no way&lt;/em&gt; to tell from the restriction which of the two maps you’re trying to end up with!&lt;/p&gt;</content><author><name></name></author><summary type="html">Lerman critiques the category of étale groupoids with arrows generalized maps by arguing that there is a problem with gluing maps. The purpose of this blog post is to try to digest this critique. We follow the notation set up in the previous two blog posts.</summary></entry></feed>
