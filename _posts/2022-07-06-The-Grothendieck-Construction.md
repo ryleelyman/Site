@@ -6,7 +6,7 @@ I think that right after you learn the Yoneda lemma,
 the Grothendieck construction might be one of the most surprisingly useful
 techniques in basic category theory.
 The purpose of this post is to introduce the Grothendieck construction
-and illustrate two situations where it might be useful that came up for me.
+and illustrate a situation where it came up for me.
 
 Let $$\mathsf{C}$$ be a category and $$F\colon \mathsf{C} \to \mathsf{Cat}$$
 a functor to the category of small categories.
