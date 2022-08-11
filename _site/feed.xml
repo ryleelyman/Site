@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-10T21:10:20-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Groups As Metric Spaces</title><link href="http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces.html" rel="alternate" type="text/html" title="Groups As Metric Spaces" /><published>2022-08-10T00:00:00-04:00</published><updated>2022-08-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces</id><content type="html" xml:base="http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces.html">&lt;p&gt;A week ago I attended &lt;a href=&quot;http://ianbiringer.net/bigmcg.html&quot;&gt;Big Mapping Class Groups at BC&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-10T23:08:59-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ryleelyman.github.io</title><subtitle>Website / Blog</subtitle><entry><title type="html">Groups As Metric Spaces</title><link href="http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces.html" rel="alternate" type="text/html" title="Groups As Metric Spaces" /><published>2022-08-10T00:00:00-04:00</published><updated>2022-08-10T00:00:00-04:00</updated><id>http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces</id><content type="html" xml:base="http://localhost:4000/2022/08/10/Groups-as-Metric-Spaces.html">&lt;p&gt;A week ago I attended &lt;a href=&quot;http://ianbiringer.net/bigmcg.html&quot;&gt;Big Mapping Class Groups at BC&lt;/a&gt;,
 a workshop where participants, myself included,
 presented on papers about mapping class groups of infinite-type surfaces that we did not write.
 I’d like to spend a couple of posts talking about the paper I was assigned,
@@ -18,11 +18,11 @@ Every element \(g\) of \(G\) can be written as&lt;/p&gt;
 \[g = s_1 s_2 \ldots s_n\]
 
 &lt;p&gt;where each \(s_i\) belongs to \(S\),
-and we define the &lt;em&gt;word length&lt;/em&gt; \(||g||\) of \(g\) to be the minimal \(n\) possible.
+and we define the &lt;em&gt;word length&lt;/em&gt; \(\|g\|\) of \(g\) to be the minimal \(n\) possible.
 By convention, the length of the identity element is zero.
 This yields a &lt;em&gt;word metric&lt;/em&gt; on \(G\), where the distance \(d_S\) between \(g\) and \(h\) is&lt;/p&gt;
 
-\[d_S(g,h) = ||g^{-1}h||.\]
+\[d_S(g,h) = \|g^{-1}h\|.\]
 
 &lt;p&gt;A good exercise is to prove that \(d_S\) &lt;em&gt;is&lt;/em&gt; a metric
 (i.e. it’s symmetric, nonnegative, nonzero if \(g \ne h\), and satisfies the triangle inequality)
@@ -95,7 +95,7 @@ they have a countable dense subset and admit a complete metric inducing the topo
 &lt;p&gt;&lt;a href=&quot;http://homepages.math.uic.edu/~rosendal/&quot;&gt;Christian Rosendal&lt;/a&gt;
 proposed a framework for large-scale geometry of Polish groups.
 A subspace \(A\) of a Polish group \(G\) is called &lt;em&gt;coarsely bounded&lt;/em&gt;
-if every &lt;em&gt;compatible&lt;/em&gt; (i.e.~inducing the topology) 
+if every &lt;em&gt;compatible&lt;/em&gt; (i.e. inducing the topology) 
 left-invariant metric \(d\) on \(G\) gives \(A\) finite &lt;em&gt;diameter,&lt;/em&gt;
 in the sense that the supremum&lt;/p&gt;
 

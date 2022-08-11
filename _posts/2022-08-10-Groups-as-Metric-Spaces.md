@@ -23,11 +23,11 @@ Every element $$g$$ of $$G$$ can be written as
 $$g = s_1 s_2 \ldots s_n$$
 
 where each $$s_i$$ belongs to $$S$$,
-and we define the *word length* $$||g||$$ of $$g$$ to be the minimal $$n$$ possible.
+and we define the *word length* $$\|g\|$$ of $$g$$ to be the minimal $$n$$ possible.
 By convention, the length of the identity element is zero.
 This yields a *word metric* on $$G$$, where the distance $$d_S$$ between $$g$$ and $$h$$ is
 
-$$d_S(g,h) = ||g^{-1}h||.$$
+$$d_S(g,h) = \|g^{-1}h\|.$$
 
 A good exercise is to prove that $$d_S$$ *is* a metric
 (i.e. it's symmetric, nonnegative, nonzero if $$g \ne h$$, and satisfies the triangle inequality)
@@ -98,7 +98,7 @@ they have a countable dense subset and admit a complete metric inducing the topo
 [Christian Rosendal](http://homepages.math.uic.edu/~rosendal/)
 proposed a framework for large-scale geometry of Polish groups.
 A subspace $$A$$ of a Polish group $$G$$ is called *coarsely bounded*
-if every *compatible* (i.e.~inducing the topology) 
+if every *compatible* (i.e. inducing the topology) 
 left-invariant metric $$d$$ on $$G$$ gives $$A$$ finite *diameter,*
 in the sense that the supremum
 
