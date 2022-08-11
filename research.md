@@ -112,7 +112,7 @@ while the second applies in particular to certain generalized Baumslag–Solitar
  (with [Michael Ben-Zvi][Benzvi] and [Robert Kropholler][Rob])    
  Available at [arXiv:2011.05374](https://arxiv.org/abs/2011.05374).
  <a onclick="displayabs('folding')">Abstract</a>   
- *Math. Proc. Camb. Philos. Soc.*   
+ *Math. Proc. Camb. Philos. Soc.* 173(1) (2022), 227-238. 
  <div id="folding" style="display: none">
   <blockquote>
    In a seminal paper,

@@ -1,4 +1,4 @@
-**Postdoc**  
+**NSF Postdoctoral Fellow**  
 Department of Mathematics  
 [Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science)
 
@@ -13,7 +13,6 @@ where my advisor was [Kim Ruane](https://math.tufts.edu/people/faculty/kim-ruane
 I am a postdoc at
 [Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
 My mentor at Rutgers is [Lee Mosher](https://www.newark.rutgers.edu/about-us/have-you-met-rutgers-newark/lee-mosher).
-In the fall I will be an NSF Postdoctoral Fellow, still at Rutgers–Newark.
 
 My email address is <rylee.lyman@rutgers.edu>.  
 
