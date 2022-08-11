@@ -99,7 +99,17 @@ write $$\prec$$ for the partial order.
 Using Zorn's lemma and compactness, Mann and Rafi prove
 that the poset of equivalence classes admits maximal elements,
 and they write $$\mathcal{M}(\Sigma)$$ for the set of maximal equivalence classes.
-We close with a precise statement.
+
+![An infinite-type surface with three maximal ends, two accumulated by genus and two accumulated by punctures](/assets/img/infinitetypesurface.jpeg)
+
+In the above figure, we have an infinite-type surface with an infinite number of
+isolated planar ends (drawn as "hyperbolic cusps" across the top)
+which accumulate to two of the three maximal ends,
+which are drawn larger in the figure than the others.
+One end (on the right) is accumulated by both genus and isolated planar ends,
+another (on the left) only by isolated planar ends, and a third (on the bottom) only by genus.
+
+We close with a precise statement of Mann–Rafi's result.
 
 > **Proposition 4.7** (Mann–Rafi)
 For each $$\xi \in \operatorname{Ends}(\Sigma)$$,
