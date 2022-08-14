@@ -1,4 +1,5 @@
 ---
+title: 'Self-Similar End Spaces'
 layout: post
 math: true
 ---
