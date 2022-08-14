@@ -8,7 +8,7 @@ This is the third post in a series on
 Katie Mann and Kasra Rafi's paper
 [Large-scale geometry of big mapping class groups](https://arxiv.org/abs/1912.10914).
 In the previous post we explored an obstruction to coarse boundedness,
-while in this one we will introduce a sufficient conditions for $$\operatorname{Map}(\Sigma)$$
+while in this one we will introduce a sufficient condition for $$\operatorname{Map}(\Sigma)$$
 to be coarsely bounded.
 This post includes proofs that closely follow those in the paper,
 which while elementary, get a little involved.
