@@ -134,7 +134,7 @@ is nondisplaceable for the reason that it contains all the isotopy classes of
 essential simple closed curves of $$\Sigma$$ that are non-separating,
 and homeomorphisms send non-separating curves to non-separating curves.
 
-As another example, suppose $$\Sigma$$ has finitely many maximal ends,
+As another example, suppose $$\Sigma$$ has at least three but finitely many maximal ends,
 in the sense of the preorder introduced in the [previous post].
 Then any finite-type subsurface which separates each maximal end from each other is nondisplaceable.
 As an example, the subsurface indicated in the figure below
