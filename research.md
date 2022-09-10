@@ -9,10 +9,28 @@ math: true
 
 ## Publications and Preprints
 
+- **A family of CAT(0) outer automorphism groups of free products**   
+Available [here](/assets/pdfs/CAT0ABZ.pdf).
+<a onclick="displayabs('CAT0ABZ')">Abstract</a>   
+<div id="CAT0ABZ" style="display: none">
+<blockquote>
+Consider the free product of two nontrivial finite groups with an infinite cyclic group.
+We prove that the 2-dimensional spine of Outer Space for this free product
+supports an equivariant CAT(0) metric with infinitely many ends.
+The outer automorphism group of this free product is thus relatively hyperbolic.
+In the special case that both finite groups are cyclic of order two,
+we show that the outer automorphism group is virtually a certain Coxeter group,
+and that the spine of Outer Space may be identified with its Davis–Moussong complex.
+These outer automorphism groups thus exhibit behavior extremely different from
+outer automorphism groups of free groups,
+and conjecturally, from other outer automorphism groups of free products
+of finite and cyclic groups.
+</blockquote>
+</div>
 - **On Whitehead's cut vertex lemma**   
 Available at [arXiv:2205.06071](https://arxiv.org/abs/2205.06071).
 <a onclick="displayabs('Whitehead')">Abstract</a>   
-*Submitted.*
+*Journal of Group Theory.*
 <div id="Whitehead" style="display: none">
 <blockquote>
 One version of Whitehead's famous cut vertex lemma says that if an element of a free group
