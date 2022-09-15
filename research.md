@@ -30,7 +30,7 @@ of finite and cyclic groups.
 - **On Whitehead's cut vertex lemma**   
 Available at [arXiv:2205.06071](https://arxiv.org/abs/2205.06071).
 <a onclick="displayabs('Whitehead')">Abstract</a>   
-*Journal of Group Theory.*
+*J. Group Theory.*
 <div id="Whitehead" style="display: none">
 <blockquote>
 One version of Whitehead's famous cut vertex lemma says that if an element of a free group
@@ -90,7 +90,7 @@ whose outer class has finite order.
 - **Train track maps on graphs of groups**   
 Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848).
 <a onclick="displayabs('TrainTracks')">Abstract</a>   
-*Submitted.* 
+*Groups, Geom. Dyn.* 
 <div id="TrainTracks" style="display: none">
 <blockquote>
 In this paper we develop the theory of train track maps on graphs of groups.
