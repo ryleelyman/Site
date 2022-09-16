@@ -10,8 +10,9 @@ math: true
 ## Publications and Preprints
 
 - **A family of CAT(0) outer automorphism groups of free products**   
-Available [here](/assets/pdfs/CAT0ABZ.pdf).
-<a onclick="displayabs('CAT0ABZ')">Abstract</a>   
+Available at [arXiv:2209.04711](https://arxiv.org/abs/2209.04711).
+<a onclick="displayabs('CAT0ABZ')">Abstract</a>    
+*Submitted.*
 <div id="CAT0ABZ" style="display: none">
 <blockquote>
 Consider the free product of two nontrivial finite groups with an infinite cyclic group.
