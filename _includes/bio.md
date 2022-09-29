@@ -16,4 +16,11 @@ My mentor at Rutgers is [Lee Mosher](https://www.newark.rutgers.edu/about-us/hav
 
 My email address is <rylee.lyman@rutgers.edu>.  
 
+Some places I'll be soon:
+ - CRM Semester in Geometric Group Theory
+ - [YGGT XI](https://www.uni-muenster.de/GGT/YGGT/)
+ - AIM SQuaRE
+ - Redbud Topology Conference
+ - [WiGGD 2023](https://math.ou.edu/~jing/wiggd2023/)
+
 [pdf]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
