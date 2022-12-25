@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 math: false
 ---
 Happy holidays!
