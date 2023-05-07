@@ -9,6 +9,25 @@ math: true
 
 ## Publications and Preprints
 
+- **One-endedness of outer automorphism groups of free products of finite and cyclic groups**   
+Available [here][OneEnded].
+<a onclick="displayabs('OneEnded')">Abstract</a>    
+<div id="OneEnded" style="display: none">
+<blockquote>
+In a previous paper, we showed that the group of outer automorphisms of the free product
+of two nontrivial finite groups with an infinite cyclic group has infinitely many ends,
+despite being of virtual cohomological dimension two.
+The main result of this paper is that aside from this exception,
+having virtual cohomological dimension at least two implies the outer automorphism group
+of a free product of finite and cyclic groups is one ended.
+As a corollary, the outer automorphism groups of the free product of four finite groups
+or the free product of a single finite group with a free group of rank two are
+virtual duality groups of diimension two, in contrast with the above example.
+We also prove that groups in this family are semistable at infinity (or at each end).
+Our proof is inspired by methods of Vogtmann, applied to a complex first studied
+in another guise by Krstić and Vogtmann.
+</blockquote>
+</div>
 - **A family of CAT(0) outer automorphism groups of free products**   
 Available at [arXiv:2209.04711](https://arxiv.org/abs/2209.04711).
 <a onclick="displayabs('CAT0ABZ')">Abstract</a>    
@@ -220,3 +239,4 @@ Available at: [arXiv:2002.09760](http://arxiv.org/abs/2002.09760).
 [Train tracks on graphs of groups]: {{ "assets/pdfs/TrainTrackMapsonGraphsofGroups.pdf" | relative_url }}
 [Lipschitz metric isometries]: {{ "assets/pdfs/LipschitzMetricEmbeddings.pdf" | relative_url }}
 [Whitehead cut vertex]: {{ "assets/pdfs/Whitehead.pdf" | relative_url }}
+[OneEnded]: {{ "assets/pdfs/OneEnded.pdf" | relative_url }}
