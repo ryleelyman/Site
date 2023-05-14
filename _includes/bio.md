@@ -19,11 +19,9 @@ My email address is <rylee.lyman@rutgers.edu>.
 
 Some places I'll be soon:
  - [CRM Semester in Geometric Group Theory](https://www.crmath.ca/en/activities/#/type/activity/id/3827)
- - AIM SQuaRE
- - [Spring Topology and Dynamics Conference](https://sites.rhodes.edu/stdc) (virtual)
- - AMS Spring Sectionals: [Southeastern](https://www.ams.org/meetings/sectional/2298_deadlines.html) and [Central](https://www.ams.org/meetings/sectional/2308_program_ss2.html)
- - [Redbud Topology Conference](https://redbud.math.ou.edu/spring-2023/)
  - [WiGGD 2023](https://math.ou.edu/~jing/wiggd2023/)
+ - [AMS Fall Sectional: Eastern](https://www.ams.org/meetings/sectional/2302_special.html)
  - [AIM Workshop on free-by-cyclic groups](https://aimath.org/workshops/upcoming/freebycyclic/)
+ - AIM SQuaRE
 
 [pdf]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}

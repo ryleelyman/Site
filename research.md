@@ -10,7 +10,7 @@ math: true
 ## Publications and Preprints
 
 - **One-endedness of outer automorphism groups of free products of finite and cyclic groups**   
-Available [here][OneEnded].
+Available at [arXiv:2305.04986](https://arxiv.org/abs/2305.04986).
 <a onclick="displayabs('OneEnded')">Abstract</a>    
 <div id="OneEnded" style="display: none">
 <blockquote>
@@ -110,7 +110,7 @@ whose outer class has finite order.
 - **Train track maps on graphs of groups**   
 Available at [arXiv:2102.02848](https://arxiv.org/abs/2102.02848).
 <a onclick="displayabs('TrainTracks')">Abstract</a>   
-*Groups, Geom. Dyn.* 
+*Groups, Geom. Dyn.* 16 (2022), no. 4, pp. 1389-1422
 <div id="TrainTracks" style="display: none">
 <blockquote>
 In this paper we develop the theory of train track maps on graphs of groups.
