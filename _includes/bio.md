@@ -23,5 +23,8 @@ Some places I'll be soon:
  - [AMS Fall Sectional: Eastern](https://www.ams.org/meetings/sectional/2302_special.html)
  - [AIM Workshop on free-by-cyclic groups](https://aimath.org/workshops/upcoming/freebycyclic/)
  - AIM SQuaRE
+ 
+ Maybe you came to my website looking for [nonmathematical stuff?][nonmath]
 
 [pdf]: {{ "assets/pdfs/Lyman.pdf" | relative_url }}
+[nonmath]: {{ "alanza.html" | relative_url }}
