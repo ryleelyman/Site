@@ -168,7 +168,7 @@ while the second applies in particular to certain generalized Baumslag–Solitar
  - **Some new CAT(0) free-by-cyclic groups**  
  Available at [arXiv:1909.03097](http://arXiv.org/abs/1909.03097).
 <a onclick="displayabs('newCAT0')">Abstract</a>   
- *Mich. Math. J.*   
+ *Mich. Math. J.* 73 (2023), 621--630   
 <div id="newCAT0" style="display: none">
   <blockquote>
     We show the existence
