@@ -1,8 +1,14 @@
 github: [metadata]
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-org
 
 defaults:
   -

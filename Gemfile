@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gem "jekyll"
+gem "jekyll", ">= 3.0.0"
+gem 'jekyll-org', git: 'https://github.com/eggcaker/jekyll-org', branch: 'master'
+gem "org-ruby"
 gem "kramdown", ">= 2.3.1"
 
 group :jekyll_plugins do
@@ -14,6 +16,6 @@ group :jekyll_plugins do
     gem "commonmarker", ">= 0.23.4"
 end
 
-# gem "rails"
-
 gem "webrick", "~> 1.7"
+
+gem "pygments.rb", "~> 2.4"
