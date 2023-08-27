@@ -1,7 +1,7 @@
 <head>
   {{ $sass := resources.Get "sass/main.scss" }}
   {{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="all" />
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
 {{ with .Params.math }}
 {{ partial "partials/header/katex.html" . }}
 {{ end }}
