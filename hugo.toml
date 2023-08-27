@@ -1,4 +1,4 @@
-baseURL = 'https://ryleealanza.org/'
+baseURL = '//ryleealanza.org/'
 languageCode = 'en-us'
 title = 'Rylee Alanza Lyman'
 theme = 'alanza'
