@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <html>
+    {{- partial "head.html" . }}
+    <body>
+      <div class="maindiv" id="content">
+        <div class="navdiv">
+          <div class="sidebar-l">
+            <div>
+              <div class="headline">
+	              <a href="/">Rylee Alanza Lyman</a>
+              </div>
+              <div>
+	              <nav>
+                  {{ $key := .RelPermalink }}
+                  {{ range .Site.Params.navigation }}
+                  <div class="navbutton">
+                    <a href="{{ index . 1 }}">{{ index . 0 }}</a>
+                  </div>
+                  {{ end }}
+	              </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Page not found.</h2>
+      </div>
+    </body>
+  </html>
+  

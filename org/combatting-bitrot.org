@@ -1,0 +1,39 @@
+#+OPTIONS: toc:nil
+#+BEGIN_EXPORT html
+---
+title: "Combatting bitrot"
+math: false
+date: 2023-08-27T08:57:00-04:00
+---
+#+END_EXPORT
+#+TITLE: Combatting Bitrot
+#+LAYOUT: post
+#+MATH: false
+
+This is just a small note that I've changed the backend organization
+of this website around.
+You might notice old links are likely dead, for which I'm sorry.
+Whereas previously it was built with Jekyll,
+we're now using Hugo.
+Jekyll itself, which is built on Ruby,
+has been pretty good to me.
+I was able to do the design work on this website over the course
+of maybe about a week in summer 2019;
+writing blog posts in Markdown and now Org mode was simple.
+
+What was less good to me are Jekyll's dependencies
+and the Ruby language.
+Somehow I ended up more or less stuck on Ruby 2.7,
+while security notifications advising me to update "Gems",
+Ruby's idea of packages
+to versions that required a newer version of Ruby.
+
+Having fought with my computer enough trying to get Ruby configured locally
+to build my site,
+I decided this latest round of security vulnerabilities
+warranted something more drastic.
+So, we switched to Hugo, which is built on Go.
+I don't speak Go at the moment, but it's a simple language
+with an uncomplicated setup arc on macos.
+
+Anyway, the last hurdle will be getting CI/CD set up!

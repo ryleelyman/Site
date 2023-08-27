@@ -61,7 +61,7 @@ param = 0
 lambda = 0.25 * (1 + math.sqrt(13) + math.sqrt(2 * (math.sqrt(13) - 1)))
 crit = 1 / lambda
 function transform(x)
-  if x&lt;= crit then return 1 - lambda * x else return lambda * x - 1 end
+  if <= crit then return 1 - lambda * x else return lambda * x - 1 end
 end
 
 function do_tick(i)
