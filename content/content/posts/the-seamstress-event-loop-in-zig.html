@@ -1,0 +1,731 @@
+---
+title: "The Seamstress Event Loop in Zig"
+date: 2023-06-21T18:20:37-04:00
+---
+<p>
+I've been working on <a href="https://github.com/ryleelyman/seamstress">a program called <b>seamstress</b></a> for the past couple of months.
+I think it's in a pretty good spot, even if it's early days.
+The program is heavily inspired by <a href="https://github.com/monome/norns">monome's norns</a>, specifically its <b>matron</b> program,
+which embeds the <a href="https://www.lua.org">Lua</a> programming language to speak with monome's grid and arc controllers,
+MIDI, OSC, a screen, the norns' keys and encoders, and so forth.
+One big difference between seamstress and matron is, besides the fact that
+seamstress is designed for desktops/laptops rather than a purpose-built device,
+is that seamstress is written in <a href="https://ziglang.org">Zig</a>, a young C-like programming language.
+The purpose of this post is to describe seamstress's event loop.
+</p>
+
+<p>
+By the way, since Zig is likely to change,
+I'm writing this in June 2023, with a development version of Zig version 0.11.0.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2c244df">1. Roll your own linked list</a>
+<ul>
+<li><a href="#orgf5f5603">1.1. Nodes</a></li>
+<li><a href="#orgd31ffe8">1.2. Queues</a></li>
+<li><a href="#org42ea8fe">1.3. Failing to push to a queue</a></li>
+<li><a href="#org6d4546b">1.4. Allocating memory in Zig</a></li>
+</ul>
+</li>
+<li><a href="#org2aa498f">2. An event loop</a></li>
+<li><a href="#orgfaa75d8">3. Seamstress's event loop</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2c244df" class="outline-2">
+<h2 id="org2c244df"><span class="section-number-2">1.</span> Roll your own linked list</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf5f5603" class="outline-3">
+<h3 id="orgf5f5603"><span class="section-number-3">1.1.</span> Nodes</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A <a href="https://en.wikipedia.org/wiki/Linked_list">linked list</a> is a standard data structure where elements of the list
+know who comes before and after them and the list itself
+knows who is at the start and the end.
+It's easy enough to roll your own linked list, so let's do it.
+Strictly speaking, one does not need to do this;
+Zig's standard library has things like <code>std.TailQueue</code> which work great.
+But it's not too hard (she says having spent an afternoon hashing out precisely how to do it),
+and it feels good to know what goes into things like this.
+So let's define a <b>node</b> in a linked list.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+  const Node = struct {
+      next: ?*Node,
+      prev: ?*Node,
+      data: *Data,
+  };
+  {{< /highlight >}}
+</div>
+
+<p>
+Okay hi, hello, welcome to Zig. Let's talk through it.
+So we're declaring a new <code>struct</code> type called <code>Node</code>.
+Because we don't plan on altering the type itself,
+we mark it <code>const</code> (as opposed to <code>var</code>).
+This <code>struct</code> has three <i>fields,</i> <code>next</code>, <code>prev</code> and <code>data</code>.
+The <code>data</code> field is a <i>pointer</i> to a struct with type <code>Data</code>.
+We haven't yet defined <code>Data</code>, but that's okay.
+Okay and pointers?
+It's funny, I grew up reading my dad's C programming language books,
+but many powerful programming languages don't have a concept of a pointer;
+pointers are messy.
+The idea is that the pointer is <b>not</b> the object itself,
+but a little thing that says "hi, you can <b>find</b> what you're looking for at this memory address."
+Zig has pointers.
+</p>
+
+<p>
+The usefulness of pointers becomes clear when we consider the <code>next</code> and <code>prev</code> fields:
+forgetting about the <code>?</code> for a moment, notice that they're of type <code>Node</code> themselves!
+So we <b>have</b> to use a pointer here, otherwise a <code>Node</code> would have to contain a <code>Node</code>
+which contains a <code>Node</code> etc. etc.
+Okay anyway the <code>?</code> says that our <code>Node</code> entries are allowed to be <code>null</code>,
+that is, <b>not</b> to point to something valid.
+(Notice that this implies that the <code>data</code> entry must always be valid! That's amazing!)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd31ffe8" class="outline-3">
+<h3 id="orgd31ffe8"><span class="section-number-3">1.2.</span> Queues</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Cool, so far so good.
+Let's put nodes into a queue&#x2026; literally:
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+const Queue = struct {
+    const Node = struct {
+        next: ?*Node,
+        prev: ?*Node,
+        data: *Data,
+    };
+    head: ?*Node,
+    tail: ?*Node,
+    size: usize,
+};
+  {{< /highlight >}}
+</div>
+
+<p>
+If you know a little C, we did something a bit surprising:
+we put the definition of a <code>Node</code> <b>inside</b> the definition of <code>Queue</code>.
+Zig lets you do this; it effectively "namespaces" <code>Node</code>, which is maybe neither here nor there,
+so that's all I'll say about it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42ea8fe" class="outline-3">
+<h3 id="org42ea8fe"><span class="section-number-3">1.3.</span> Failing to push to a queue</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Okay so a queue has a head and a tail, which may be null, and a size,
+which is a <code>usize</code> (an unsigned integer type appropriate for, well, sizes).
+How should we interact with it? let's write some functions.
+Zig lets us put them <b>inside</b> of <code>Queue</code> too, but I'll present them by themselves.
+Okay warning, for, like, exposition purposes, I'm giving you <b>incorrect code</b> here.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+fn push(self: *Queue, data: Data) void {
+    var new_node = Node{
+        .next = null,
+        .prev = null,
+        .data = data,
+    };
+    if (self.tail) |n| {
+        self.tail = &amp;new_node;
+        n.next = &amp;new_node;
+        new_node.prev = n;
+    } else {
+        std.debug.assert(self.size == 0);
+        self.tail = &amp;new_node;
+        self.head = &amp;new_node;
+    }
+    self.size += 1;
+}
+    {{< /highlight >}}
+</div>
+
+<p>
+In fact, while this looks beguilingly like correct code,
+it won't compile, and not just because we haven't defined the <code>Data</code> type!
+I'll get to that in a moment. First let's make sense of more Zig syntax.
+</p>
+
+<p>
+We declare a function with the <code>fn</code> keyword.
+This function is named <code>push</code> and it takes in two arguments:
+<code>self</code>, which is a pointer to a <code>Queue</code>, and <code>data</code>, which is some <code>Data</code>.
+The function returns <code>void</code>, i.e. it gives you nothing back.
+We declare variables with the <code>var</code> keyword.
+We're making <code>new_node</code> a struct object of type <code>Node</code>
+and assigning to its fields by accessing them with the dot syntax.
+(Shortly we'll meet another way to declare elements of struct type.)
+The if statement has an interesting <code>|n|</code> bit after it.
+The point is that <code>self.tail</code> is allowed to be <code>null</code>.
+We say <code>if</code> it's <b>not</b> null, then give us what it is,
+and capture that in a new (<code>const</code>) variable <code>n</code>.
+Since <code>self.tail</code> expects to be a pointer to a node and not a node,
+we assign to it the <b>address</b> or <b>reference</b> of <code>new_node</code> by using the <code>&amp;</code> operator, like in C.
+So you should read the <code>if</code> statement as saying
+"if <code>self.tail</code> is not null, we assign the reference of <code>new_node</code> to it,
+we set the <code>next</code> field of the old tail, i.e. <code>n</code>, to <code>new_node</code> (or its address)
+and set the <code>prev</code> field of the new node to <code>n</code>."
+If not, the <code>else</code> statement says "well first of all, the size had better be zero or we're bailing,
+and if so we set the head <b>and</b> tail of <code>self</code> to our new node."
+Finally in either case we add one to the size of our queue.
+</p>
+</div>
+
+<div id="outline-container-org0534988" class="outline-4">
+<h4 id="org0534988"><span class="section-number-4">1.3.1.</span> Testing our failing code</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+So what goes wrong?
+The immediate problem that the compiler will complain to you about
+is that <code>data</code> the function argument and <code>.data</code> the field are of different types:
+one is a <code>Data</code> and the other is a <code>*Data</code>.
+You can try and sneak around this in various ways,
+but there's really a problem lurking in the background that the following test should reveal.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+test {
+    var queue = Queue{
+        .head = null,
+        .tail = null,
+        .size = 0,
+    };
+    var i: u8 = 0;
+    while (i &lt; 100) : (i += 1) {
+        queue.push(i);
+    }
+    try std.testing.expect(queue.size == 100);
+    i = 0;
+    var node = queue.head;
+    while (i &lt; 100) : (i += 1) {
+        try std.testing.expect(node.?.data.* == i);
+        node = node.?.next;
+    }
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+(To make this test work on your code you'll need to find some way to fix the compiler error above
+and replace <code>Data</code> by the <code>u8</code> type.)
+First of all, it's neat that Zig builds in a testing framework like this.
+Anyway, I won't explain this test in detail,
+beyond the line that will fail without bigger fixes:
+</p>
+
+<p>
+<code>try std.testing.expect(node.?.data.* == i);</code>.
+</p>
+
+<p>
+Don't worry about the <code>try</code>; we'll meet it later.
+The <code>.?</code> "unwraps" the possibility for <code>node</code> to be <code>null</code>
+and gives an error if it is null.
+It's similar to the <code>if</code> we saw above, but, like, more compact and also
+probably should only be used if we <b>should</b> fail if the result is <code>null</code>.
+The <code>.*</code> "dereferences" the pointer and gives us the value of what it points to,
+rather than the pointer itself.
+So we're essentially expecting that the ith element of our linked list
+should have <code>.data</code> field <code>i</code>, which is reasonable,
+given that that's what we pushed previously!
+But&#x2026; it's not. This test fails.
+I'd like to tell you my hypothesis about why.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c7ddd7" class="outline-4">
+<h4 id="org4c7ddd7"><span class="section-number-4">1.3.2.</span> The stack vs. the heap</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+One way to imagine how a program executes is the "call stack".
+A program pushes function calls and so forth onto the stack
+and the CPU pops things off of the stack and executes them.
+Declaring variables can work like this too;
+the CPU assigns some memory to the variable
+and it lives until it goes out of "scope".
+For example, in our test, the variable <code>i</code> lives during the whole <code>test</code> block.
+If we declared a <code>const</code> or <code>var</code> <b>inside</b> of the <code>while</code> loop,
+it would be born anew each iteration and die each time we reach the closing brace.
+And this is really the problem:
+when we call <code>queue.push(i)</code> (which is, to my knowledge, equivalent to calling
+<code>Queue.push(&amp;queue, i)</code>)
+the variable <code>new_node</code> <b>dies</b> at the end of the function call.
+Its memory is no longer guaranteed to represent what we want it to.
+</p>
+
+<p>
+So we need a way of creating <code>Node</code> objects that live longer than the scope of <code>push</code>.
+This means that we have to ask the computer for memory that we're going to hold onto!
+Memory like this is often referred to as "heap allocated" (as opposed to "stack allocated").
+Memory from the heap continues to belong to the program until it exits,
+so it's the responsibility of the program to let go of it when its no longer needed,
+otherwise we say a program "leaks" memory.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6d4546b" class="outline-3">
+<h3 id="org6d4546b"><span class="section-number-3">1.4.</span> Allocating memory in Zig</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+In C, it's very easy to leak memory; just call <code>malloc</code> (short for <b>memory</b> <b>allocation</b>,
+but I like to imagine a little devil, "mal" meaning bad, named <code>malloc</code>) without
+later calling <code>free</code>.
+In Zig, it's still possible to leak memory, but the language will try to help you out.
+First of all, we need to <b>choose</b> an allocator, which is of type <code>std.mem.Allocator</code>.
+Zig gives you several choices;
+maybe the best one for most purposes is the "general purpose allocator".
+Let's grab it.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+var allocator: std.mem.Allocator = undefined;
+
+pub fn main() void {
+    var general_allocator = std.heap.GeneralPurposeAllocator(.{}) {};
+    allocator = general_allocator.allocator();
+    defer _ = general_allocator.deinit();
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+It's possible that this is an anti-pattern:
+I've declared my allocator as if it were a <code>static</code> variable in C.
+It's not initialized until we enter <code>main</code>, where we grab it in two stages.
+In seamstress, I then tend to pass the allocator to other source files in their init functions.
+</p>
+
+<p>
+Anyway, so much for the allocator.
+We'll often call <code>allocator.alloc()</code> to make many copies of something
+(the Zig word is "slices"), or <code>allocator.create()</code>
+to create single objects.
+</p>
+</div>
+
+<div id="outline-container-org9ce69d7" class="outline-4">
+<h4 id="org9ce69d7"><span class="section-number-4">1.4.1.</span> Correctly pushing to a queue</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Let's correct our <code>push</code> function so that it allocates a Node from the heap instead.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+fn push(self: *Queue, data: *u8) !void {
+    var new_node = try allocator.create(Queue.Node);
+    new_node.next = null;
+    new_node.prev = null;
+    new_node.data = data;
+    if (self.tail) |n| {
+        self.tail = new_node;
+        n.next = new_node;
+        new_node.prev = n;
+    } else {
+        std.debug.assert(self.size == 0);
+        self.tail = new_node;
+        self.head = new_node;
+    }
+    self.size += 1;
+}
+
+test {
+    allocator = std.testing.allocator;
+    var queue = .{
+        .head = null,
+        .tail = null,
+        .size = 0,
+    };
+    var i: u8 = 0;
+    while (i &lt; 100) : (i += 1) {
+        var j = try allocator.create(u8);
+        j.* = i;
+        try queue.push(j);
+    }
+    try std.testing.expect(queue.size == 100);
+    i = 0;
+    var node = queue.head;
+    while (i &lt; 100) : (i += 1) {
+        try std.testing.expect(node.?.data.* == i);
+        node = node.?.next;
+    }
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+Now technically this test passes,
+(provided you replace references to <code>Data</code> types with <code>u8</code>)
+but it yells at us for leaking memory right and left,
+and rightly so: we have 100 little <code>u8</code> variables and 100 bigger <code>Node</code> variables
+just sort of hanging out on the heap when we end the program.
+</p>
+
+<p>
+Notice as well that we had to make a change to our functions call-signature:
+by adding the <code>!</code> we're acknowledging that our function <b>may</b> return an <code>error</code> type:
+that's also why we have <code>try</code> in front of <code>allocator.create</code>:
+memory allocation may fail!
+That's a fact of life, and Zig rightly forces you to acknowledge it.
+The <code>try</code> statement says "attempt to do the following function;
+if we get an error back, just chuck it further up the chain."
+Instead of <code>try</code> we could write <code>catch</code> and handle the error in the function itself.
+I'd rather seamstress just fail if it can't allocate memory,
+so I don't do this.
+</p>
+
+<p>
+So let's correct the leak by providing a <code>pop</code> function.
+I'll return to acting as though we've defined a <code>Data</code> type that maybe comes with
+<code>new</code> and <code>deinit</code> methods.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+fn pop(self: *Queue) ?*Data {
+    if (self.head) |n| {
+        const data = n.data;
+        self.head = n.next;
+        allocator.destroy(n);
+        if (self.size == 1) self.tail = null;
+        self.size -= 1;
+        return data;
+    } else {
+        std.debug.assert(self.size == 0);
+        return null;
+    }
+}
+
+test {
+    var queue = .{
+        .head = null,
+        .tail = null,
+        .size = 0,
+    };
+    allocator = std.testing.allocator;
+    var i: u8 = 0;
+    while (i &lt; 100) : (i += 1) {
+        var datum = Data.new(i);
+        try queue.push(datum);
+    }
+    i = 0;
+    while (i &lt; 100) : (i += 1) {
+        const datum = queue.pop();
+        std.testing.expect(datum != null);
+        std.testing.expect(datum.?.i == i);
+        datum.deinit();
+    }
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+Obviously this "test" is missing some scaffolding to make it actually work,
+but hopefully it gets across the idea.
+The <code>pop()</code> function removes from the head of the queue provided the queue has size at least one.
+Once it's done, it calls <code>destroy()</code> on the node that we got,
+so we don't leak memory from zombie <code>Node</code> objects.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2aa498f" class="outline-2">
+<h2 id="org2aa498f"><span class="section-number-2">2.</span> An event loop</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Seamstress, like many programs that interface with devices from the outside world,
+spends a lot of its time waiting for something to happen.
+The main loop might at firsst look something like this:
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+pub fn loop() !void {
+    while (!quit) {
+        if (queue.size == 0) continue;
+        const data = queue.pop();
+        if (data) |d| try handle(d);
+    }
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+There are two things wrong with this.
+The first is that seamstress will run at 100% CPU with this model
+even when there are no events in the queue;
+it's burning those cycles repeatedly checking the size of the queue.
+The other thing is that in order for this event handling model to make sense,
+we need something to deliver events to us.
+If we're stuck in the event loop,
+the only way for something else to happen is if it happens <b>in another thread.</b>
+Multi-threading is very fun, but it also creates the possibility for bad behavior:
+what should happen, for example,
+if multiple threads try to push to the queue at the same time?
+Or what if I try to pull the only event from the queue while someone else tries to push to it,
+who controls how the <code>size</code> parameter ends up?
+</p>
+
+<p>
+Zig's standard library helps us solve both of those problems:
+we'll go back to our <code>Queue</code> struct and add two new fields.
+I'll also take this time to put our <code>push</code> and <code>pop</code> methods inside the <code>Queue</code> struct.
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+var quit = false;
+var allocator: std.mem.Allocator = undefined;
+var queue: Queue = undefined;
+
+const Queue = struct {
+    const Node = {
+        next: ?*Node,
+        prev: ?*Node,
+        data: *Data,
+    };
+    head: ?*Node,
+    tail: ?*Node,
+    size: usize,
+    lock: std.Thread.Mutex,
+    cond: std.Thread.Condition,
+    fn push(self: *Queue, data: *Data) void {
+        var new_node = allocator.create(Node);
+        new_node.prev = null;
+        new_node.next = null;
+        new_node.data = data;
+        if (self.tail) |n| {
+            self.tail = new_node;
+            n.next = new_node;
+            new_node.prev = n;
+        } else {
+            std.debug.assert(self.size == 0);
+            self.tail = new_node;
+            self.head = new_node;
+        }
+        self.size += 1;
+    }
+    fn pop(self: *Queue) ?*Data {
+        if (self.head) |n| {
+            const data = n.data;
+            self.head = n.next;
+            allocator.destroy(n);
+            if (self.size == 1) self.tail = null;
+            self.size -= 1;
+            return data;
+        } else {
+            std.debug.assert(self.size == 0);
+            return null;
+        }
+    }
+}
+
+pub fn post(data: *Data) !void {
+    queue.lock.lock();
+    try queue.push(event);
+    queue.cond.signal();
+    queue.lock.unlock();
+}
+
+pub fn loop() !void {    
+    while (!quit) {
+        queue.lock.lock();
+        while (queue.size == 0) {
+            if (quit) break;
+            queue.cond.wait(&amp;queue.lock);
+        }
+        const data = queue.pop();
+        queue.lock.unlock();
+        if (data) |d| try handle(d);
+    }
+}
+  {{< /highlight >}}
+</div>
+
+<p>
+This code is better for threading and better for our CPU.
+Now while the queue has size zero,
+we <code>wait()</code>, releasing the lock and sleeping until some other thread
+calls <code>signal()</code> on our <code>cond</code>.
+Code in other files doesn't call <code>push()</code> or <code>pop()</code> directly,
+but instead should add to the queue with <code>post()</code> and our main thread
+will handle events in <code>loop()</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfaa75d8" class="outline-2">
+<h2 id="orgfaa75d8"><span class="section-number-2">3.</span> Seamstress's event loop</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The above works fine,
+but it kind of bothered me that <code>push()</code>, and hence <code>post()</code>,
+required a <code>try</code>, and it reminded me that allocating memory can be slow.
+Moreover, if the event loop falls behind to such an extent
+that the queue is bigger than some reasonably small number,
+it's likely that the program is doing something pretty bad;
+we should try to avoid this.
+</p>
+
+<p>
+The solution I hit upon was to <b>preallocate</b> a pool of 1000 <code>Node</code> and <code>Data</code> objects
+and keep them recirculating while the program runs.
+This also has a nice added side-effect:
+rather than having to define a <code>new()</code> method for creating pointers to <code>Data</code> objects,
+<code>post()</code> can simply accept a <b>statically-allocated</b> <code>Data</code> object,
+which the program then sets the <b>value</b> of the <code>Data</code> pointer to.
+The <code>post()</code> and <code>loop()</code> functions as above work just the same,
+although we can remove the <code>!</code> and <code>try</code> from <code>post()</code> as it no longer errors
+since there's no memory allocation happening.
+The code around the <code>Queue</code> struct now looks like this:
+</p>
+
+<div class="org-src-container">
+  {{< highlight zig >}}
+const Queue = struct {
+    const Node = struct{
+        next: ?*Node,
+        prev: ?*Node,
+        data: *Data,
+    };
+    read_head: ?*Node,
+    read_tail: ?*Node,
+    read_size: usize,
+    write_head: ?*Node,
+    write_tail: ?*Node,
+    write_size: usize,
+    lock: std.Thread.Mutex,
+    cond: std.Thread.Condition,
+    inline fn get_new(self: *Queue) *Node {
+        var node = self.write_head orelse {
+            @setCold(true);
+            std.debug.assert(self.write_size == 0);
+            std.debug.print("no nodes free!\n", .{});
+            unreachable;
+        };
+        self.write_head = node.next;
+        node.next = null;
+        node.prev = null;
+        self.write_size -= 1;
+        return node;
+    }
+    inline fn return_to_pool(self: *Queue, node: *Node) void {
+        if (self.write_tail) |n| {
+            self.write_tail = node;
+            n.next = node;
+            node.prev = n;
+        } else {
+            @setCold(true);
+            std.debug.assert(self.write_size == 0);
+            self.write_head = node;
+            self.write_tail = node;
+        }
+        self.write_size += 1;
+    }
+    fn push(self: *Queue, data: Data) void {
+        var new_node = self.get_new();
+        new_node.data.* = data;
+        if (self.read_tail) |n| {
+            self.read_tail = new_node;
+            n.next = new_node;
+            new_node.prev = n;
+        } else {
+            std.debug.assert(self.read_size == 0);
+            self.read_tail = new_node;
+            self.read_head = new_node;
+        }
+        self.read_size += 1;
+    }
+    fn pop(self: *Queue) ?*Data {
+        if (self.read_head) |n| {
+            const data = n.data;
+            self.read_head = n.next;
+            self.return_to_pool(n);
+            if (self.read_size == 1) self.read_tail = null;
+            self.read_size -= 1;
+            return data;
+        } else {
+            std.debug.assert(self.read_size == 0);
+            return null;
+        }
+    }
+    fn deinit(self: *Queue) void {
+        // assumes the read queue is empty
+        var node = self.write_head;
+        while (node) |n| {
+            node = n.next;
+            allocator.destroy(n.data);
+            allocator.destroy(n);
+        }
+    }
+}
+
+pub fn init(alloc_ptr: std.mem.Allocator) !void {
+    allocator = alloc_ptr;
+    queue = .{
+        .read_head = null,
+        .read_tail = null,
+        .read_size = 0,
+        .write_tail = null,
+        .write_head = null,
+        .write_size = 0,
+        .cond = .{},
+        .lock = .{},
+    };
+    var i: u16 = 0;
+    while (i &lt; 1000) : (i += 1) {
+        var node = try allocator.create(Queue.Node);
+        var data = try allocator.create(Data);
+        data.* = undefined;
+        node.* = .{ ev = data, .next = null, .prev = null };
+        queue.return_to_pool(node);
+    }
+}
+  {{< /highlight >}}
+</pre>
+</div>
+
+<p>
+Let me explain two pieces: <code>@setCold</code> is, as I understand it,
+essentially an instruction to the optimizer that the block of code containing it
+should be called very rarely.
+Indeed, if we're <b>out</b> of <code>Node</code> objects, I want the program to fail,
+hence why I put the keyword <code>unreachable</code> there.
+Similarly, adding the <b>first</b> node to the pool of available nodes should happen only once
+in a correctly functioning run of seamstress,
+so optimizing so that branch is often ignored feels right.
+</p>
+
+<p>
+I'm very happy with how this structure is working for me in seamstress at the moment.
+You can check for yourself the full contents of <code>events.zig</code> at <a href="https://github.com/ryleelyman/seamstress">GitHub</a>.
+</p>
+</div>
+</div>
