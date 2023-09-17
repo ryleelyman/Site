@@ -19,10 +19,12 @@ My email address is <rylee.lyman@rutgers.edu>.
 
 
 Some places I'll be soon:
- - [CRM Semester in Geometric Group Theory](https://www.crmath.ca/en/activities/#/type/activity/id/3827)
- - [WiGGD 2023](https://math.ou.edu/~jing/wiggd2023/)
- - [AMS Fall Sectional: Eastern](https://www.ams.org/meetings/sectional/2302_special.html)
+ - [Diverse Aspects of Groups, Geometry and Dynamics](https://www.groups-and-spaces.kit.edu/758.php)
+ - [AWM Research Symposium](https://awm-math.org/meetings/awm-research-symposium/)
  - [AIM Workshop on free-by-cyclic groups](https://aimath.org/workshops/upcoming/freebycyclic/)
+ - [Groups Logic and Dynamics at Rutgers](https://sites.math.rutgers.edu/~fc327/GLaDF2023/index.html)
+ - [Mentoring in the Mathematical Sciences](https://sites.google.com/view/minms/home)
+ - [Joint Mathematics Meetings](https://www.jointmathematicsmeetings.org/meetings/national/jmm2024/2300_program.html)
  - AIM SQuaRE
  
  Maybe you came to my website looking for [nonmathematical stuff?]({{< ref "alanza.md" >}})
