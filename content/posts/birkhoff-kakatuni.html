@@ -1,0 +1,442 @@
+---
+title: "The Birkhoff–Kakatuni theorem"
+math: true
+date: 2023-11-09T12:37:00-04:00
+---
+<p>
+The purpose of this post is to explore a little a very cool
+metrization theorem for topological groups.
+(By the way, for some reason I felt like aiming this post
+a bit lower than some of my others.)
+It’s a fun bit of general topology,
+which I’m partial to:
+topology was the first subject
+where I really felt like math was something I could love doing.
+For a while some of my internet handles were references to the Urysohn lemma,
+a beautiful result that will come up here for us.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge71c06a">1. Background</a></li>
+<li><a href="#org2fdfe8f">2. The conditions of the theorem are necessary</a></li>
+<li><a href="#org39150f8">3. The Urysohn lemma</a>
+<ul>
+<li><a href="#org399e280">3.1. Proof of the Urysohn lemma</a></li>
+<li><a href="#orgf191782">3.2. What if we had a continuous function?</a></li>
+</ul>
+</li>
+<li><a href="#orgd19a0ee">4. The necessary conditions are sufficient</a></li>
+</ul>
+</div>
+</div>
+
+<p>
+Anyway, here’s the statement of the theorem:
+</p>
+
+<blockquote>
+<p>
+<b>Theorem</b> (Birkhoff, Kakatuni). Suppose \(G\) is a topological group.
+Then \(G\) is metrizable—and in fact admits a left-invariant metric—if and only if
+\(G\) is Hausdorff and first countable.
+</p>
+</blockquote>
+
+
+<div id="outline-container-orge71c06a" class="outline-2">
+<h2 id="orge71c06a"><span class="section-number-2">1.</span> Background</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Let’s unpack that a lot.
+Groups and topological spaces I assume you know.
+(By the way, if you don’t
+and you’d like to be invited a little further into these blog posts,
+feel free to shoot me an email!)
+A <i>topological group</i> is simply a group \(G\)
+which is at the same time a topological space
+and for which the operations of multiplication
+(i.e. the function \(G \times G \to G\) sending \((g,h)\) to \(gh\))
+and inversion
+(the map \(G \to G\) sending \(g\) to \(g^{-1}\))
+are continuous.
+</p>
+
+<p>
+A <i>metric</i> on a set \(X\) is a function \(d\colon X \times X \to \mathbb{R}\)
+which satisfies the following rules:
+</p>
+<ul class="org-ul">
+<li>(Positive Definite) We have that \(d(x,y) \ge 0\) for all points \(x\) and \(y\) in \(X\),
+and if \(d(x,y) = 0\), then we conclude that \(x = y\).</li>
+<li>(Symmetric) \(d(x,y) = d(y,x)\).</li>
+<li>(Triangle Inequality) For all \(x\), \(y\) and \(z\) in \(X\),
+the “length of the third side”, that is, \(d(x, z)\)
+is not more than the sum of the lengths of the first two. In symbols,
+\(d(x, z) \le d(x, y) + d(y, z)\).</li>
+</ul>
+
+<p>
+If \(d\) is a metric on \(X\), we can define the metric “ball” of radius \(r > 0\)
+about a point \(x\). This is the set
+\[
+  B_r(x) = \{ y \in X : d(x,y) < r \}
+\]
+of points in \(X\) at distance strictly smaller than \(r\) from \(x\).
+A metric generates a <i>topology</i> on \(X\) by the rule that a set \(U \subset X\)
+is open when it has the property that
+for each point \(x \in U\), there exists \(\epsilon > 0\) such that
+\(U\) contains \(B_\epsilon(x)\).
+In other words, if \(x\) is a point of \(U\),
+then \(U\) actually contains all the points sufficiently close to \(x\) as well.
+Put more succinctly, we say that the metric balls form a <i>basis</i>
+for the topology on \(X\).
+</p>
+
+<p>
+A topological space \(X\) is <i>metrizable</i> if there exists a metric
+(which is not uniquely determined)
+on the set \(X\) for which metric balls form a basis for the <i>given</i> topology on \(X\).
+In other words, the metric topology and the original topology are the same.
+So while a <i>metric</i> space comes equipped with a metric—it’s part of the data—a
+<i>metrizable</i> space does not.
+So while the classes of metric and metrizable spaces are the same,
+somehow the latter are more mysterious.
+</p>
+
+<p>
+For groups \(G\), a metric \(d\colon G \times G \to \mathbb{R}\) is
+<i>left invariant</i> if it is, uhh, left invariant under the (left) action of \(G\) on itself.
+That is, for all \(g\), \(x\) and \(y \in G\), we have
+\(d(gx, gy) = d(x, y)\).
+Geometrically, one can phrase this as saying that
+the left action of \(G\) on itself is by <i>isometries,</i>
+metrically rigid motions.
+</p>
+
+<p>
+As a geometric group theorist, I love thinking about groups as
+symmetries of geometric objects:
+concretely what this means is that if I have a group \(G\),
+I’m going to want a metric space \(X\) and an action of \(G\)
+on the space \(X\) by isometries to go with it.
+A left-invariant metric on \(G\) itself provides me with just such an \(X\),
+namely \(G\) itself.
+</p>
+
+<p>
+We’re already at the point where we can make a cute observation about the theorem:
+<i>a priori</i> one might think that there exist groups which are
+metrizable as topological spaces,
+but for which it’s not possible to find such a metric
+which actually agrees with the group structure—that is, is left invariant.
+Not so, says the Birkhoff–Kakatuni theorem!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2fdfe8f" class="outline-2">
+<h2 id="org2fdfe8f"><span class="section-number-2">2.</span> The conditions of the theorem are necessary</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Here’s another cute observation:
+if \(X\) is a metric space, then it is <i>Hausdorff,</i>
+which let me remind you, means that if \(x\) and \(y\) are distinct points of \(X\),
+then there exist open sets \(U\) and \(V\) containing \(x\) and \(y\) respectively,
+which are still disjoint.
+It requires you to mispronounce the name, but you might think that the points
+\(x\) and \(y\) are <b><b>housed</b></b> within \(U\) and \(V\), and disjointness
+says that these houses are <b><b>off</b></b> of each other—“housed off”.
+</p>
+
+<p>
+A topological space \(X\) is <i>first countable</i> if every point \(x\)
+has a countable neighborhood basis.
+That is, there is a collection of open sets \(U_n\) which we can index
+by the natural numbers
+such that if \(V\) is an open set containing \(x\),
+then \(V\) contains \(U_n\) for some \(n\).
+This condition is also necessary:
+Notice that if an open set \(V\) contains \(x\), then by the definition of the metric
+topology it contains \(B_\epsilon(x)\) for some sufficiently small \(\epsilon > 0\).
+But then there exists \(N \in \mathbb{N}\) so large that \(\frac{1}{N} < \epsilon\).
+Therefore \(V\) <i>also</i> contains \(B_{\frac{1}{N}}(x)\),
+and the collection of balls of radius \(\frac{1}{n}\)
+is already indexed by the natural numbers
+(sorry, for me zero is not a natural number).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39150f8" class="outline-2">
+<h2 id="org39150f8"><span class="section-number-2">3.</span> The Urysohn lemma</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I want to take a small diversion to state and prove the Urysohn Lemma,
+because I think it is so cute and it turns out to help us prove the theorem.
+</p>
+
+<blockquote>
+<p>
+<b><b>Lemma</b></b> (Urysohn).
+A topological space \(X\) is “normal” if and only if
+each pair of closed subsets of \(X\)
+is separated by a continuous function.
+</p>
+</blockquote>
+
+<p>
+Let’s make sense of the statement.
+A space \(X\) is <i>normal</i> (terrible name, but we’re stuck with it)
+if whenever \(A\) and \(B\) are disjoint closed subsets of \(X\),
+there exist open sets \(U \supset A\) and \(V \supset B\)
+which are still disjoint.
+In Hausdorff spaces, points are closed sets,
+so this is like amping up the definition of a Hausdorff space.
+</p>
+
+<p>
+Let’s make the quick observation that if \(X\) is normal,
+\(A \subset X\) is closed,
+and \(U \supset A\) is open,
+then we can squish in an open set \(V\) and a closed set \(B\) in there
+so that \(A \subset V \subset B \subset U\).
+Indeed, to see this, observe that \(X - U\) is closed,
+since \(U\) is open,
+and it is clearly disjoint from \(A\).
+By normality, there exist disjoint open neighborhoods \(V \supset A\)
+and \(W \supset X - U\), and the set \(B = X - W\) is a closed set
+fitting into the chain \(A \subset V \subset B \subset U\).
+</p>
+
+<p>
+Anyway, \(A\) and \(B\) are <i>separated by a continuous function</i>
+if there exists \(f\colon X \to [0,1]\) such that
+for all \(a \in A\), we have \(f(a) = 0\) and for all \(b \in B\),
+we have \(f(b) = 1\).
+Now <i>a priori</i> the condition of being separated by a continuous function
+is stronger than normality applied to \(A\) and \(B\),
+since it implies it
+(consider the preimages of the open intervals \((\frac{-1}{4},\frac{1}{4})\)
+and \((\frac{3}{4}, 1\frac{1}{4})\) as the required disjoint open sets)
+but is not implied by the normality hypothesis.
+</p>
+
+<p>
+That’s what’s so cool about Urysohn’s lemma!
+As if by magic, it produces a continuous real-valued function from thin air.
+Here’s how.
+</p>
+</div>
+
+<div id="outline-container-org399e280" class="outline-3">
+<h3 id="org399e280"><span class="section-number-3">3.1.</span> Proof of the Urysohn lemma</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+We proceed inductively on the “dyadic rationals” between zero and one:
+i.e. each fraction between 0 and 1 which can be put in lowest terms
+as \(\frac{k}{2^n}\). So \(0\) is \(\frac{0}{2^0}\), \(1\) is \(\frac{1}{2^0}\),
+and then there’s \(\frac{1}{2}\),
+then \(\frac{1}{2^2} = \frac{1}{4}\) and \(\frac{3}{2^2} = \frac{3}{4}\),
+and so on.
+The induction is on \(n\).
+The point is that at each step after the base case of \(n = 0\),
+between every two existing dyadic rationals,
+there is exactly one new one.
+</p>
+
+<p>
+Anyway, we inductively start with \(C(0) = A\)
+and \(U(1) = X - B\).
+Using the “quick observation” above,
+we fit in a pair of sets
+\(C(0) \subset U(\frac{1}{2}) \subset C(\frac{1}{2}) \subset U(1)\),
+where \(C(\frac{1}{2})\) is closed and \(U(\frac{1}{2})\) is open.
+Then we fit in \(U(\frac{1}{4})\) and \(C(\frac{1}{4})\) in between
+\(C(0)\) and \(U(\frac{1}{2})\),
+also \(U(\frac{3}{4})\) and \(C(\frac{3}{4})\) between
+\(C(\frac{1}{2})\) and \(U(1)\),
+and then so on and so forth.
+</p>
+
+<p>
+That’s a lot! What does it buy us?
+Well the idea is that we think of these nested sets
+<i>topographically</i> like level sets of a function \(f\),
+and then we click our heels together three times or something,
+and the wished-for function appears.
+</p>
+
+<p>
+In actual math, define a function
+\(f\colon X \to [0, 1]\) by the rule that
+\(f(x) = \inf \{ r : x \in U(r) \}\),
+and \(f(x) = 1\) if there is no \(r\) for which \(x \in U(r)\).
+Here of course \(\inf\) means <i>infimum</i>
+or greatest lower bound—think of it as being “like” the minimum,
+but allowing us to recognize that
+by using binary decimal expansion I can, for example,
+get closer and closer and closer to \(\frac{1}{3}\),
+even though \(\frac{1}{3}\) is not a dyadic rational number,
+and there will in general be some actual point \(x\)
+satisfying \(f(x) = \frac{1}{3}\).
+</p>
+
+<p>
+It’s pretty easy to show that \(f\) is continuous by playing the sets
+\(U(r)\) and \(C(r)\) off of each other cleverly,
+and it’s obvious that \(f(a) = 0\) for all \(a \in A\)
+and \(f(b) = 1\) for all \(b \in B\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf191782" class="outline-3">
+<h3 id="orgf191782"><span class="section-number-3">3.2.</span> What if we had a continuous function?</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Let’s start returning back to the setting of topological groups,
+and suppose that we had a left-invariant metric on \(G\).
+Then consider the function \(\|\cdot\|\colon G \to \mathbb{R}\)
+defined as \(\|g\| = d(1, g)\), where \(1\) denotes the identity of \(G\).
+</p>
+
+<p>
+This function has the properties that it is continuous,
+takes the value \(0\) only on \(1\),
+is symmetric in the sense that \(\|g^{-1}\| = \|g\|\)
+and is “submultiplicative” in the sense that
+\[
+\|gh\| = d(1, gh) \le d(1, g) + d(g, gh) = d(1, g) + d(1, h) = \|g\| + \|h\|.
+\]
+</p>
+
+<p>
+Such a <i>norm</i> on \(G\) would immediately yield a left-invariant metric
+on \(G\) by the rule that \(d(g, h) = \|g^{-1}h\|\).
+This metric would be continuous since \(\|\cdot\|\) was continuous.
+It will generate the topology,
+one can show,
+as soon as the norm balls form a neighborhood basis for \(1\):
+that is, a set \(U \subset G\) containing \(1\) is open
+if and only if it contains all \(g\) with \(\|g\| < \epsilon\)
+for \(\epsilon > 0\) sufficiently small.
+</p>
+
+<p>
+The idea for the rest of the proof will be to try and
+<i>construct</i> such a function.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd19a0ee" class="outline-2">
+<h2 id="orgd19a0ee"><span class="section-number-2">4.</span> The necessary conditions are sufficient</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Let’s start to prove the harder direction of the Birkhoff–Kakatuni theorem.
+Notice that because the inversion map \(g \mapsto g^{-1}\) is continuous,
+it is a homeomorphism.
+If \(U\) is a neighborhood of \(1\),
+then so is \(U^{-1}\)
+and \(U \cap U^{-1}\).
+This latter set is additionally <i>symmetric</i>
+in the sense that if \(g \in U \cap U^{-1}\), so is \(g^{-1}\).
+</p>
+
+<p>
+So let \(G = U_1 \supset U_2 \supset \cdots\)
+be a symmetric, countable neighborhood basis of \(1\).
+One exists after a little finagling
+by the previous observation and the assumption that \(G\) is first countable.
+Since \(G\) is Hausdorff, one can show that the intersection
+\(\bigcap_{n = 1}^\infty U_n\) is the single point \(\{1\}\).
+</p>
+
+<p>
+Notice that the left action of \(G\) on itself is by homeomorphisms,
+so if \(U\) is open in \(G\), so is \(gU\).
+Since the union of open sets is open,
+if \(U\) is open and \(A\) is any set in \(G\),
+the set \(AU = \{ ag : a \in A, g \in U \}\)
+is open,
+as is, for similar reasons, \(UA\).
+</p>
+
+<p>
+Since multiplication \(G \times G \to G\) is continuous,
+the preimage of the open neighborhood \(U_n\) of \(1\) under multiplication is open
+and contains \((1,1)\),
+and therefore contains \(U_m \times U_m\) for some \(m\).
+In other words, for each \(n\) there exists \(m\) such that
+\(U_m U_m \subset U_n\).
+Thus we can and will assume that given our neighborhood basis of the identity,
+we have that \(U_{n+1} U_{n+1} \subset U_n\).
+</p>
+
+<p>
+This lets us play the Urysohn game: let’s reindex so that
+what <i>was</i> \(U_n\) is now \(U_{\frac{1}{2^n}}\),
+and define \(U_{\frac{k}{2^n}}\) according to the binary expansion of \(\frac{k}{2^n}\).
+For example, \(\frac{5}{8} = \frac{1}{2} + \frac{1}{8}\),
+and we let \(U_{\frac{5}{8}} = U_{\frac{1}{8}} U_{\frac{1}{2}}\).
+Since groups are not always commutative (abelian),
+it’s important that we choose a convention for left versus right here,
+so we’ll say that we put the biggest denominators on the left.
+It’s pretty easy to show that as the dyadic rationals increase,
+the corresponding subsets get larger,
+using our hypothesis that
+\(U_{\frac{1}{2^{n+1}}} U_{\frac{1}{2^{n+1}}} \subset U_{\frac{1}{2^n}}\).
+</p>
+
+<p>
+This lets us define a function
+\(f\colon G \to [0,1]\).
+I’d like to try \(f(g) = \inf\{ \frac{k}{2^n} : g \in U_{\frac{k}{2^n}}\}\)
+if this set is nonempty, and \(f(g) = 1\) if not.
+Interestingly, this function, while likely continuous (we’ll show that in a second),
+is not <i>quite</i> good enough to be a norm.
+For one thing it’s no longer obviously symmetric,
+and submultiplicativity is also not obvious to me.
+</p>
+
+<p>
+Instead, apparently the standard trick is to consider the function
+\(F = 1 - f\).
+It has a unique maximum, namely, \(1\) at \(1\),
+the sets \(F^{-1}(1 - \frac{1}{2^n})\) form a neighborhood basis of \(1\),
+and the following mysterious property:
+</p>
+
+<ul class="org-ul">
+<li>For every \(\epsilon > 0\), there exists \(U \ni 1\) open such that
+for all \(x \in G\), we have \(|F(gx) - F(x)| \le \epsilon\)
+for all \(g \in U\).</li>
+</ul>
+
+<p>
+Despite me calling it mysterious, this property is not hard to prove:
+just let \(\frac{1}{2^n}\) be smaller than \(\epsilon\) and take \(U = U_{\frac{1}{2^n}}\).
+Then \(f(gx)\), one can show,
+is at most equal to the binary expansion of \(f(x)\) to the $n$th decimal place,
+plus \(\frac{1}{2^n}\).
+In other words, the error between \(F(gx)\) and \(F(x)\) is at most \(\frac{1}{2^n}\),
+because their first \(n-1\) binary digits agree.
+</p>
+
+<p>
+Anyway, just (“just”) define
+\(d\colon G \times G \to \mathbb{R}\) by the rule that
+\(d(g, h) = \sup_{x \in G} | F(g^{-1}x) - F(h^{-1}x) |\).
+(As usual \(\sup\) means <i>supremum,</i> or least upper bound.)
+It’s getting close to my bedtime,
+so I’ll let you verify that this gives a metric on \(G\)
+(not too hard),
+which is left invariant and generates the topology on \(G\).
+Pretty neat!
+</p>
+</div>
+</div>
