@@ -1,0 +1,259 @@
+---
+title: "The Stone representation theorem"
+math: true
+date: 2023-11-16T12:00:00-04:00
+---
+<p>
+The Stone representation theorem asserts
+a perhaps surprising connection between two interesting
+but for me initially unfamiliar objects.
+On the one hand we have (for me countable) <i>Boolean algebras</i>
+which have flavors of logic and algebra,
+and on the other we have compact Hausdorff topological spaces
+which are /totally disconnected/—the primary example is the Cantor set.
+(Here countability is countability of a basis of clopen—closed and open—sets.)
+I want to describe an idiosyncratic point of view on these objects
+coming from the study of surfaces.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org58d3d00">1. Boolean algebras</a>
+<ul>
+<li><a href="#org6f3ded4">1.1. Homomorphisms</a></li>
+<li><a href="#orga3adaaf">1.2. Maps to \(\mathsf{2}\)</a></li>
+</ul>
+</li>
+<li><a href="#org5dee93c">2. The associated Stone space</a>
+<ul>
+<li><a href="#org845470f">2.1. Stone spaces are compact, Hausdorff and totally disconnected</a></li>
+</ul>
+</li>
+<li><a href="#orgd8e7201">3. The point of the proof</a></li>
+<li><a href="#org55b8261">4. Surfaces!</a></li>
+</ul>
+</div>
+</div>
+
+<p>
+Anyway, here’s the statement of the theorem:
+</p>
+
+<blockquote>
+<p>
+<b>Theorem</b> (Stone) Let \(B\) be a Boolean algebra and \(S\) its associated Stone space.
+Then \(B\) is isomorphic to the algebra of clopen subsets of \(S\).
+</p>
+</blockquote>
+
+<p>
+There’s really some fun category-theoretic play at work here,
+but today I’m not interested in digging into that too deeply.
+Instead, let’s define what we’re talking about.
+</p>
+
+<div id="outline-container-org58d3d00" class="outline-2">
+<h2 id="org58d3d00"><span class="section-number-2">1.</span> Boolean algebras</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+A Boolean algebra is a set \(B\) equipped with two binary operations,
+\(\wedge\) and \(\vee\) called “meet” and “join” respectively.
+Both of them are associative and commutative
+(so \(a \wedge b = b \wedge a\) and no matter how I parenthesize the expression
+\(a \vee b \vee c\), I get the same result).
+Additionally there are two special elements \(0\) and \(1\) in \(B\)
+such that \(0\) is an identity for \(\vee\)—i.e. \(a \vee 0 = a\) for all \(a\)—and
+\(1\) is an identity for \(\wedge\).
+Furthermore, we have that \(a \vee (a \wedge b) = a\)
+and \(a \wedge (a \vee b) = a\) for all \(a\) and \(b\),
+and that \(\vee\) and \(\wedge\) distribute over each other
+(e.g. \(a \vee (b \wedge c) = (a \vee b) \wedge (a \vee c)\)).
+Finally, each element \(a \in B\) has a complement \(\lnot a\)
+with the property that \(a \vee \lnot a = 1\) and \(a \wedge \lnot a = 0\).
+</p>
+
+<p>
+Blegh, that’s a lot of algebra.
+Here’s a quick example: let \(X\) be your favorite set
+and \(B\) the collection of all subsets of \(X\).
+Then \(B\) is a Boolean algebra,
+where \(\vee = \cup\) is the operation of taking unions,
+\(\wedge = \cap\) is the operation of taking intersections,
+\(0 = \varnothing\) is the empty subset,
+\(1 = X\) is the whole set,
+and \(\lnot\) is the operation of taking set-theoretic complements.
+It would be a great exercise to verify all of the axioms (there are five that I’ve listed)
+if they aren’t clear to you.
+</p>
+</div>
+
+<div id="outline-container-org6f3ded4" class="outline-3">
+<h3 id="org6f3ded4"><span class="section-number-3">1.1.</span> Homomorphisms</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I’ve described for you a new kind of object, and a natural question
+for a mathematician to ask when faced with such a construction
+is “what are the maps?”
+They should preserve the structure in some way,
+so it would be reasonable to expect that if \(A\) and \(B\) are Boolean algebras,
+a homomorphism \(f\colon A \to B\) would preserve meets and joins
+in the sense that, e.g. \(f(a \vee b) = f(a) \vee f(b)\),
+and also preserve the special elements \(0\) and \(1\).
+It also would be reasonable to assume that \(f(\lnot a) = \lnot f(a)\),
+but this turns out to be a consequence of the other asusmptions and the axioms.
+</p>
+
+<p>
+The <i>category</i> (oh boy, here I go)
+of Boolean algebras and homomorphisms has an initial and a terminal object.
+The Boolean algebra with a single element \(\mathsf{1} = \{ 0 = 1\}\)
+is terminal; there is exactly one function (of sets)
+from any Boolean algebra to \(\mathsf{1}\),
+and it is clearly a homomorphism.
+The <i>initial</i> object is \(\mathsf{2} = \{ 0, 1\}\),
+the Boolean algebra with only two special elements and nothing else.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3adaaf" class="outline-3">
+<h3 id="orga3adaaf"><span class="section-number-3">1.2.</span> Maps to \(\mathsf{2}\)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Now if \(B\) is a Boolean algebra with at least two elements,
+then there are <i>no</i> maps <i>from</i> \(\mathsf{1}\),
+but there may be interesting maps <i>to</i> \(\mathsf{2}\).
+Indeed, suppose \(b \ne 0\) is an element of \(B\).
+We want to show that there exists a homomorphism \(f\colon B \to \mathsf{2}\)
+which sends \(b\) to \(1\).
+Say that an element \(a\) satisfies \(b \le a\)
+if \(b \wedge a = b\).
+If \(b \le a\), then note that our desired homomorphism
+would have to satisfy \(f(b) \wedge f(a) = f(b) = 1\).
+On the other hand, since \(1\) is the identity for \(\wedge\),
+we conclude that \(f(a) = 1\). Neat!
+</p>
+
+<p>
+Indeed, more generally if \(f(b) = f(c) = 1\),
+then \(f(b \wedge c) = f(b) \wedge f(c) = 1\)
+</p>
+
+<p>
+On the other hand, if there exists \(c\) and \(d\) such that \(c \vee d = b\),
+note that \(f(c) \vee f(d) = 1\), so since \(0\) is the identity for \(\vee\),
+we note that at least one of \(f(c)\) and \(f(d)\) must be \(1\).
+</p>
+
+<p>
+Now, of course, for every element \(b\) of \(B\), we must either have \(f(b) = 0\) or \(f(b) = 1\),
+and in fact either \(f(b) = 1\) or \(f(\lnot b) = 1\) in which case \(f(b) = 0\).
+Therefore, to complete our hoped-for \(f\) to an actual homomorphism,
+we must be able to make choices about the value of \(f(c)\) for every \(c \le b\)
+in some consistent way.
+It turns out that one can do this—assuming the Axiom of Choice.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5dee93c" class="outline-2">
+<h2 id="org5dee93c"><span class="section-number-2">2.</span> The associated Stone space</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+So, we’ve determined that there <i>are</i> interesting homomorphisms to \(\mathsf{2}\).
+It turns out the collection of <i>all</i> of them assemble into a <i>topological space.</i>
+Namely, let \(U_b = \{ f\colon B \to \mathsf{2} : f(b) = 1\}\),
+and declare this subset open.
+Notice that its complement is \(U_{\lnot b}\), which is also open,
+so these open sets are closed.
+More generally, we let a set \(U\) be open when it contains some \(U_b\).
+</p>
+
+<p>
+We call \(S = \{ f\colon B \to \mathsf{2} : f \text{ is a homomorphism}\}\)
+the <i>Stone space</i> associated to \(B\).
+</p>
+</div>
+
+<div id="outline-container-org845470f" class="outline-3">
+<h3 id="org845470f"><span class="section-number-3">2.1.</span> Stone spaces are compact, Hausdorff and totally disconnected</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+It is clear that if \(f\) and \(g\) are different points of \(S = S(B)\),
+then they disagree on some \(b \in B\),
+and so one is contained in \(U_b\), while the other is in \(U_{\lnot b}\);
+these are disjoint open sets containing \(f\) and \(g\),
+proving that \(S(B)\) is Hausdorff.
+</p>
+
+<p>
+Having a basis of clopen sets implies that \(S(B)\) is totally disconnected.
+Compactness is again the Axiom of Choice lurking in the background.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd8e7201" class="outline-2">
+<h2 id="orgd8e7201"><span class="section-number-2">3.</span> The point of the proof</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+is that if you start with \(B\), then consider the space \(S(B)\),
+it has an associated Boolean algebra, namely the algebra of clopen subsets.
+If one sends \(b\) to \(U_b\),
+one gets an isomorphism of Boolean algebras from \(B\)
+to the Boolean algebra of clopen subsets of \(S(B)\), proving the theorem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55b8261" class="outline-2">
+<h2 id="org55b8261"><span class="section-number-2">4.</span> Surfaces!</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Essentially because of the Stone representation theorem,
+we have that if \(E\) is a closed subset of the Cantor set,
+then \(E\) is the Stone space of some countable Boolean algebra \(B(E)\),
+and moreover the group of homeomorphisms of \(E\)
+and the group of isomorphisms of \(B(E)\) are naturally isomorphic.
+This is a neat consequence, since it says that
+\(\operatorname{Homeo}(E)\) is a “non-Archimedean Polish group”—if that means nothing to
+you, that’s fine, just think “automorphism group of some countable structure,
+e.g. a countable graph.”
+</p>
+
+<p>
+More generally, if \(F\) is a closed subset of \(E\),
+we can consider the group \(\operatorname{Homeo}(E,F)\)
+of homeomorphisms of \(E\) leaving the subset \(F\) invariant.
+Then \(F\) is a Stone space in its own right,
+and we obtain a map \(B(E) \to B(F)\)
+by the rule that a clopen subset of \(E\) yields by restriction a clopen subset of \(F\).
+Homeomorphisms that preserve \(f\) then yield automorphisms of \(B(E)\)
+which, under this restriction, <i>induce</i> automorphisms of \(B(F)\).
+</p>
+
+<p>
+Anyway, the Classification of Infinite-Type Surfaces says that
+a surface \(\Sigma\) of infinite type is determined up to homeomorphism
+by the following data:
+</p>
+
+<ul class="org-ul">
+<li>The <i>genus</i> of \(\Sigma\), which may be finite or infinite.</li>
+<li>The <i>end space</i> of \(\Sigma\), which is a closed subset of the Cantor set,
+and</li>
+<li>The <i>subspace of ends accumulated by genus,</i> which is a further closed subset,
+and which is nonempty if and only if the genus of \(\Sigma\) is infinite.</li>
+</ul>
+
+<p>
+Something I’m currently mumbling to myself about is the connection between
+separating simple closed curves on \(\Sigma\) and elements of \(B(E)\),
+where \(E\) is the end space of \(\Sigma\)…
+</p>
+</div>
+</div>

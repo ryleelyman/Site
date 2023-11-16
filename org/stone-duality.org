@@ -1,0 +1,176 @@
+#+OPTIONS: toc:nil
+#+BEGIN_EXPORT html
+---
+title: "The Stone representation theorem"
+math: true
+date: 2023-11-16T12:00:00-04:00
+---
+#+END_EXPORT
+#+TITLE: The Stone representation theorem
+#+LAYOUT: post
+#+MATH: true
+
+The Stone representation theorem asserts
+a perhaps surprising connection between two interesting
+but for me initially unfamiliar objects.
+On the one hand we have (for me countable) /Boolean algebras/
+which have flavors of logic and algebra,
+and on the other we have compact Hausdorff topological spaces
+which are /totally disconnected/—the primary example is the Cantor set.
+(Here countability is countability of a basis of clopen—closed and open—sets.)
+I want to describe an idiosyncratic point of view on these objects
+coming from the study of surfaces.
+
+#+TOC: headlines 2
+
+Anyway, here’s the statement of the theorem:
+
+#+BEGIN_QUOTE
+*Theorem* (Stone) Let $B$ be a Boolean algebra and $S$ its associated Stone space.
+Then $B$ is isomorphic to the algebra of clopen subsets of $S$.
+#+END_QUOTE
+
+There’s really some fun category-theoretic play at work here,
+but today I’m not interested in digging into that too deeply.
+Instead, let’s define what we’re talking about.
+
+* Boolean algebras
+A Boolean algebra is a set $B$ equipped with two binary operations,
+$\wedge$ and $\vee$ called “meet” and “join” respectively.
+Both of them are associative and commutative
+(so $a \wedge b = b \wedge a$ and no matter how I parenthesize the expression
+$a \vee b \vee c$, I get the same result).
+Additionally there are two special elements $0$ and $1$ in $B$
+such that $0$ is an identity for $\vee$—i.e. $a \vee 0 = a$ for all $a$—and
+$1$ is an identity for $\wedge$.
+Furthermore, we have that $a \vee (a \wedge b) = a$
+and $a \wedge (a \vee b) = a$ for all $a$ and $b$,
+and that $\vee$ and $\wedge$ distribute over each other
+(e.g. $a \vee (b \wedge c) = (a \vee b) \wedge (a \vee c)$).
+Finally, each element $a \in B$ has a complement $\lnot a$
+with the property that $a \vee \lnot a = 1$ and $a \wedge \lnot a = 0$.
+
+Blegh, that’s a lot of algebra.
+Here’s a quick example: let $X$ be your favorite set
+and $B$ the collection of all subsets of $X$.
+Then $B$ is a Boolean algebra,
+where $\vee = \cup$ is the operation of taking unions,
+$\wedge = \cap$ is the operation of taking intersections,
+$0 = \varnothing$ is the empty subset,
+$1 = X$ is the whole set,
+and $\lnot$ is the operation of taking set-theoretic complements.
+It would be a great exercise to verify all of the axioms (there are five that I’ve listed)
+if they aren’t clear to you.
+
+** Homomorphisms
+I’ve described for you a new kind of object, and a natural question
+for a mathematician to ask when faced with such a construction
+is “what are the maps?”
+They should preserve the structure in some way,
+so it would be reasonable to expect that if $A$ and $B$ are Boolean algebras,
+a homomorphism $f\colon A \to B$ would preserve meets and joins
+in the sense that, e.g. $f(a \vee b) = f(a) \vee f(b)$,
+and also preserve the special elements $0$ and $1$.
+It also would be reasonable to assume that $f(\lnot a) = \lnot f(a)$,
+but this turns out to be a consequence of the other asusmptions and the axioms.
+
+The /category/ (oh boy, here I go)
+of Boolean algebras and homomorphisms has an initial and a terminal object.
+The Boolean algebra with a single element $\mathsf{1} = \{ 0 = 1\}$
+is terminal; there is exactly one function (of sets)
+from any Boolean algebra to $\mathsf{1}$,
+and it is clearly a homomorphism.
+The /initial/ object is $\mathsf{2} = \{ 0, 1\}$,
+the Boolean algebra with only two special elements and nothing else.
+
+** Maps to $\mathsf{2}$
+Now if $B$ is a Boolean algebra with at least two elements,
+then there are /no/ maps /from/ $\mathsf{1}$,
+but there may be interesting maps /to/ $\mathsf{2}$.
+Indeed, suppose $b \ne 0$ is an element of $B$.
+We want to show that there exists a homomorphism $f\colon B \to \mathsf{2}$
+which sends $b$ to $1$.
+Say that an element $a$ satisfies $b \le a$
+if $b \wedge a = b$.
+If $b \le a$, then note that our desired homomorphism
+would have to satisfy $f(b) \wedge f(a) = f(b) = 1$.
+On the other hand, since $1$ is the identity for $\wedge$,
+we conclude that $f(a) = 1$. Neat!
+
+Indeed, more generally if $f(b) = f(c) = 1$,
+then $f(b \wedge c) = f(b) \wedge f(c) = 1$
+
+On the other hand, if there exists $c$ and $d$ such that $c \vee d = b$,
+note that $f(c) \vee f(d) = 1$, so since $0$ is the identity for $\vee$,
+we note that at least one of $f(c)$ and $f(d)$ must be $1$.
+
+Now, of course, for every element $b$ of $B$, we must either have $f(b) = 0$ or $f(b) = 1$,
+and in fact either $f(b) = 1$ or $f(\lnot b) = 1$ in which case $f(b) = 0$.
+Therefore, to complete our hoped-for $f$ to an actual homomorphism,
+we must be able to make choices about the value of $f(c)$ for every $c \le b$
+in some consistent way.
+It turns out that one can do this—assuming the Axiom of Choice.
+
+* The associated Stone space
+So, we’ve determined that there /are/ interesting homomorphisms to $\mathsf{2}$.
+It turns out the collection of /all/ of them assemble into a /topological space./
+Namely, let $U_b = \{ f\colon B \to \mathsf{2} : f(b) = 1\}$,
+and declare this subset open.
+Notice that its complement is $U_{\lnot b}$, which is also open,
+so these open sets are closed.
+More generally, we let a set $U$ be open when it contains some $U_b$.
+
+We call $S = \{ f\colon B \to \mathsf{2} : f \text{ is a homomorphism}\}$
+the /Stone space/ associated to $B$.
+
+** Stone spaces are compact, Hausdorff and totally disconnected
+It is clear that if $f$ and $g$ are different points of $S = S(B)$,
+then they disagree on some $b \in B$,
+and so one is contained in $U_b$, while the other is in $U_{\lnot b}$;
+these are disjoint open sets containing $f$ and $g$,
+proving that $S(B)$ is Hausdorff.
+
+Having a basis of clopen sets implies that $S(B)$ is totally disconnected.
+Compactness is again the Axiom of Choice lurking in the background.
+
+* The point of the proof
+is that if you start with $B$, then consider the space $S(B)$,
+it has an associated Boolean algebra, namely the algebra of clopen subsets.
+If one sends $b$ to $U_b$,
+one gets an isomorphism of Boolean algebras from $B$
+to the Boolean algebra of clopen subsets of $S(B)$, proving the theorem.
+
+* Surfaces!
+Essentially because of the Stone representation theorem,
+we have that if $E$ is a closed subset of the Cantor set,
+then $E$ is the Stone space of some countable Boolean algebra $B(E)$,
+and moreover the group of homeomorphisms of $E$
+and the group of isomorphisms of $B(E)$ are naturally isomorphic.
+This is a neat consequence, since it says that
+$\operatorname{Homeo}(E)$ is a “non-Archimedean Polish group”—if that means nothing to
+you, that’s fine, just think “automorphism group of some countable structure,
+e.g. a countable graph.”
+
+More generally, if $F$ is a closed subset of $E$,
+we can consider the group $\operatorname{Homeo}(E,F)$
+of homeomorphisms of $E$ leaving the subset $F$ invariant.
+Then $F$ is a Stone space in its own right,
+and we obtain a map $B(E) \to B(F)$
+by the rule that a clopen subset of $E$ yields by restriction a clopen subset of $F$.
+Homeomorphisms that preserve $f$ then yield automorphisms of $B(E)$
+which, under this restriction, /induce/ automorphisms of $B(F)$.
+
+Anyway, the Classification of Infinite-Type Surfaces says that
+a surface $\Sigma$ of infinite type is determined up to homeomorphism
+by the following data:
+
+- The /genus/ of $\Sigma$, which may be finite or infinite.
+- The /end space/ of $\Sigma$, which is a closed subset of the Cantor set,
+  and
+- The /subspace of ends accumulated by genus,/ which is a further closed subset,
+  and which is nonempty if and only if the genus of $\Sigma$ is infinite.
+
+Something I’m currently mumbling to myself about is the connection between
+separating simple closed curves on $\Sigma$ and elements of $B(E)$,
+where $E$ is the end space of $\Sigma$…
+
