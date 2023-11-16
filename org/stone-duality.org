@@ -16,7 +16,7 @@ but for me initially unfamiliar objects.
 On the one hand we have (for me countable) /Boolean algebras/
 which have flavors of logic and algebra,
 and on the other we have compact Hausdorff topological spaces
-which are /totally disconnected/—the primary example is the Cantor set.
+which are /totally disconnected/ – the primary example is the Cantor set.
 (Here countability is countability of a basis of clopen—closed and open—sets.)
 I want to describe an idiosyncratic point of view on these objects
 coming from the study of surfaces.
