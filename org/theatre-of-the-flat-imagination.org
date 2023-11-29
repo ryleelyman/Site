@@ -1,0 +1,173 @@
+#+OPTIONS: toc:nil
+#+BEGIN_EXPORT html
+---
+title: "William Hazard's Theatre of the Flat Imagination"
+math: false
+date: 2023-11-29T12:00:00-04:00
+---
+#+END_EXPORT
+#+TITLE: William Hazard's Theatre of the Flat Imagination
+#+LAYOUT: post
+
+I had the great pleasure of playing
+[[https://williamhazard.co][William Hazard's]] Theatre of the Flat Imagination Volume 2: Jack the Modernist
+on November 18th in Philadelphia
+together with [[https://dndrks.com][Dan Derks]] as /parens chat./
+The purpose of this post is to share the recording of the performance
+that Dan thoughtfully edited and to talk a little about the set we played.
+
+#+TOC: headlines 2
+
+Here is the video:
+
+#+BEGIN_EXPORT html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nDCAaxCHuxo?si=LJQof72fKRuU7LZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+#+END_EXPORT
+
+* Gear
+
+And here is a photo of the gear Dan and I used for the performance.
+
+#+BEGIN_EXPORT html
+{{< figure src="/img/jack-the-modernist.jpg" >}}
+#+END_EXPORT
+
+Dan's gear is nearer to you in the photo:
+they had two [[https://monome.org][monome]] norns sound computers,
+a monome grid,
+a [[https://16n-faderbank.github.io][16n midi controller]] and a laptop.
+Each norns was running a script they wrote:
+on one of them a revision of their script /cheat codes,/
+which is a deep and incredible sample mangler / looper among other things.
+You control cheat codes with a monome grid, which you can see lit up next to the norns.
+On the other norns they ran /kildareFX,/ a collection of audio effects
+they created in SuperCollider.
+The laptop routed audio from me + their norns and ran
+[[https://www.imaginando.pt/products/vs-visual-synthesizer][Visual Synthesizer,]] an audioreactive visuals plugin,
+the effects of which you can see in our part of the video.
+
+My gear is the remaining stuff in the photo:
+two more norns devices, two grids, and a monome arc.
+I wrote one of the scripts the norns were running,
+/xD2,/ which you can check out [[https://github.com/ryleelyman/xD2][on GitHub]] if you'd like.
+The other norns was running [[https://norns.community/tapedeck][tapedeck]], a collection of tape-style effects
+written by [[https://schollz.com][Zack Scholl]].
+
+** xD2
+
+Here's a little more about xD2:
+it's a multitimbral synthesizer script designed to be interacted with
+via two grids and an arc.
+(Use what you have, right?)
+There are six timbres available to you,
+three each using different "synth architectures".
+
+The first architecture is a light edit of my FM synth script, xD1.
+xD1 is based on the SuperCollider UGen FM7,
+which supports 6-operator FM using the DX7's "algorithms."
+On top of FM7, I added a pair of filters and a light saturation stage.
+
+The second architecture is an edit of a norns synth engine, Turns,
+originally written for my sequencer script Faeng.
+It's a more "traditional" 2-oscillator subtractive synth with some interesting quirks.
+One of the oscillators is a square or pulse waveform
+(based on a UGen I wrote called =PulsePTR=, based on oscillator code
+implementing the "Polynomial Transition Region" anti-aliasing technique
+originally written for a Max4Live synth called Poli by Peter McCulloch).
+Its little quirk is that it also can be FM'd (or strictly speaking, /phase/ modulated)
+by a sine wave with rational frequency ratios set by the user.
+
+The other Turns oscillator is a little more interesting.
+It also uses a UGen I wrote; this one is called =FormantTriPTR=,
+which again uses the Polynomial Transition Region anti-aliasing technique,
+but using an asymmetric triangle wave with "envelope time" and "frequency" decoupled,
+a technique I learned from [[https://www.whimsicalraps.com][Whimsical Raps's]] gorgeous Mangrove oscillator.
+To describe briefly, one can set a "formant" frequency which describes how fast
+or slow the waveform happens.
+When the formant frequency is /higher/ than the actual
+oscillator frequency, the oscillator rests in between waveforms,
+making a "thin" sound not unlike a thin pulse wave shape.
+In all settings, it's not possible (by design) for the waveform to reset while rising.
+Therefore if the rise time is longer than the period of the fundamental frequency,
+what you'll hear will be a frequency which is a /division/ of the original pitch
+according to the "utone" series:
+first half as fast, then a third, and so on,
+corresponding musically to certain (just intonation) intervals.
+The two oscillators can affect each other a little too.
+
+** Interaction
+
+I interacted with xD2 through the norns itself,
+as well as two grids and an arc.
+One of the grids was responsible for choosing which timbre was active
+and playing notes into it.
+Most of the grid's 128 buttons were imagined kind of like strings of a guitar:
+as you move horizontally to the right, the pitch increases a half-step at a time,
+like the frets of a guitar.
+Also like a guitar (with standard tuning, for the most part)
+as you move up a row, the pitch increases by a perfect fourth.
+I grew up playing the piano, so I decided to highlight the "black keys"
+on each "string".
+This helped me enormously in terms of staying in key with myself
+and having a little bit of intellectual knowledge of the notes I was playing.
+The arc, and the knobs on the norns, was in charge of altering timbral parameters.
+
+I also added, for the second grid, an interface to loop
+both parameter changes and notes played.
+This let me layer together multiple lines
+without having to be constantly playing them
+and without forcing Dan to use their script as a simple looper.
+
+* Performance
+
+It was really such a gift to perform with Dan.
+We chose the name /parens chat,/ which the video explains,
+refers to "a conversation in an oft-ignored space".
+In more words, it's the kind of (textual) conversation
+that you feel compelled to put between parentheses for one of many reasons,
+but paradoxically,
+the unimportance of the content is usually not one of those reasons.
+Of course, it's entirely possible to replicate the feeling of parens chat
+in a face-to-face conversation.
+
+Dan and I live in different cities,
+but they visited me in October
+and we had a chance to practice synchronously once before our show.
+After practicing I think we had a rough outline of the parameters we would play in
+for the show:
+My synthesizer would turn out to be the original of every sound playing,
+and Dan would use their cheat codes script
+to delay, mangle and reflect sounds back to me.
+I did have a way to loop patterns I played on my own,
+as I mentioned above,
+which had the positive effect of freeing both of us up a little—me from having to
+play every note in real time,
+and Dan from having to use their script as a looper.
+I will say it also had the negative effect of meaning I was often listening
+to the literal sounds I had created myself,
+rather than listening for the ways Dan was affecting them.
+
+Like when we practiced, the show was completely improvised.
+I had maybe two ideas that I wanted to try,
+but I was kind of deliberately unprepared for what the execution would be like.
+
+The section of the set I’m proudest of was the ending.
+After setting up some chunky chords,
+I was curious about what the chord sound would sound like if I played a higher note.
+You can see me throw my head back and grin when I do—it sounded fun!
+I ended up riffing in this major key, melodic
+earnest vibe for several minutes.
+In the moment I felt a little bad—surely the sounds I was producing
+were pretty shrill in the room.
+Dan has masterfully edited them to be less piercing in the recording.
+
+I’m kind of flabbergasted that what was essentially the second time
+playing music at all together,
+much less improvising,
+turned out so well?
+Hopefully you’ll hear more of /parens chat/ in the future.
+To that point,
+if you book shows or have connections to doing so within shouting distance
+of New York City,
+I’d be tickled pink to chat with you about playing.
+Consider that my “yop!”
