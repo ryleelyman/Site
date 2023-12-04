@@ -1,0 +1,246 @@
+---
+title: "Arranging rectangles: a proposal"
+date: 2023-12-03T12:00:00-04:00
+---
+
+<p>
+I've been dreaming up a way to replace <a href="https://github.com/ryleelyman/seamstress">seamstress</a>'s dependence on <a href="https://www.libsdl.org">SDL</a>
+for about a month now.
+My goals (which I'll describe below) are such that I'll be writing something new,
+a Zig library I'm calling <i>prism.</i>
+The purpose of this post is to put down in words some of the thoughts I have
+about how prism should feel to use.
+While my primary goal is to write something that maybe just I will find useful,
+since I'd like to reuse prism beyond just seamstress,
+it would be great to get your feedback (yes yours!) if you have any;
+feel free to shoot me an email.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1ee9b88">1. The goals</a></li>
+<li><a href="#org0e37e1f">2. Layout: putting boxes in boxes</a></li>
+<li><a href="#org4f53455">3. Example</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1ee9b88" class="outline-2">
+<h2 id="org1ee9b88"><span class="section-number-2">1.</span> The goals</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Here are the goals I have for prism.
+</p>
+
+<ol class="org-ol">
+<li>It should be first and foremost a Zig dependency for use in Zig projects.
+Since Zig makes it easy to export a C API, it's easy to dream bigger here.
+But since the main user of prism is me, I don't think starting with this in mind makes sense.</li>
+<li>It will be open source.</li>
+<li>It should provide a UI framework that runs on macOS, Linux and Windows.
+Again, it would be easy to dream bigger and attempt to run on phones or WebAssembly;
+I'm not interested in this, so it's a non-goal.</li>
+<li>Because seamstress's look and feel is not “native”,
+prism should allow customization of the “widgets” it makes use of.
+Indeed, for example seamstress currently allows defining “buttons” in a perhaps too-complex,
+but entirely freeform, at-runtime way,
+and this level of customization of look and feel—even to the level of allowing custom drawing—is a goal.</li>
+<li>That being said, prism should take advantage of OS frameworks to the extent that they’re available from Zig.
+This means that accessing Cocoa’s Objective-C API on macOS is doable but the latest Windows framework is probably not.</li>
+<li>I’m not sure there’s an item 6.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0e37e1f" class="outline-2">
+<h2 id="org0e37e1f"><span class="section-number-2">2.</span> Layout: putting boxes in boxes</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The fundamental building block for a piece of a window’s layout appears to be,
+for better or worse, the rectangle.
+I imagine prism as supporting both laying out objects somewhat automatically on a grid
+with hints to prism as to how to place things,
+and a more picky, “I want this to be at this pixel” behavior.
+To this end I’m imagining four fundamental ways of arranging things.
+These should be nestable more or less arbitrarily,
+and each one can either contain one (or possibly more) child arrangements,
+or child “widgets”—so things like buttons, sliders, images, animations, text.
+</p>
+
+<ol class="org-ol">
+<li>The first two ways enable a grid-style layout.
+<i>Horizontal</i> arranges its children horizontally.
+If its children do not take up the full horizontal width,
+the user should be able to specify the alignment of the children (left, right, center)
+and if some children do not take up the full height of the container,
+the user can specify their alignment (top, bottom, center).
+Spacing between children is configurable in pixels.
+Children of a Horizontal element are arranged in a row, horizontally.</li>
+<li><i>Vertical</i> is the same, but children of a Vertical element
+are arranged in a column, vertically.</li>
+<li><i>Box,</i> unlike Horizontal and Vertical, contains only a single child,
+but allows specifying its location.
+I imagine Box to be useful when you need granular control over the placement of an object.
+The dimensions of a Box should be specified.</li>
+<li>If only containing one thing feels a little limiting,
+I think the last primitive, <i>Stack,</i> should be useful.
+It allows stacking multiple children into the same rectangle.
+I suppose the size of this rectangle had better be specified by the Stack.</li>
+</ol>
+
+<p>
+All of these size specifications, if not otherwise, uhh, specified,
+should be either in pixels or as percentages.
+Since Horizontal and Vertical have margins,
+these percentages are of the remaining relevant dimension.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4f53455" class="outline-2">
+<h2 id="org4f53455"><span class="section-number-2">3.</span> Example</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Here is a sample layout, together with some Zig code.
+(At the time of this writing, the code won’t work! Prism is a work in progress!)
+The point is to illustrate how one might set up such a layout.
+</p>
+
+{{< figure src="/img/mock-window.jpeg" >}}
+
+{{< highlight zig "linenos=table" >}}
+// LayoutConfig provides `create` below with configuration options.
+pub const LayoutConfig = union(enum) {
+    pub const Amount = union(enum) {
+        pixels: f64,
+        fraction: f64,
+    };
+    
+    Horizontal: struct {
+        width: Amount,
+        height: Amount,
+        spacing_pixels: f64,
+        align_contents: enum { left, right, center } = .center,
+        align_children: enum { top, bottom, center } = .center,
+    },
+    Vertical: struct {
+        width: Amount,
+        height: Amount,
+        spacing_pixels: f64,
+        align_contents: enum { top, bottom, center } = .center,
+        align_children: enum { left, right, center } = .center,
+    },
+    Box: struct {
+        width: Amount,
+        height: Amount,
+        child_origin: struct {
+            x: Amount,
+            y: Amount,
+        },
+    },
+    Stack: struct {
+        width: Amount,
+        height: Amount,
+    },
+};
+// Here is the function signature I had in mind.
+pub fn create(config: LayoutConfig, children: anytype) !Layout;
+
+// And finally, here is the above example as a bunch of calls to `create`:
+const example_layout = try create(
+    // to put the thin column next to the column of rows,
+    // we use a Horizontal layout
+    .{ .Horizontal = .{
+        .width = .{ .fraction = 1.0 },
+        .height = .{ .fraction = 1.0 },
+        .spacing_pixels = 5.0,
+        // .align_contents = .center
+        // the above is unnecessary because we provided a default value.
+        .align_children = .top,
+    } },
+    .{
+        // we give children as a tuple of Layouts
+        // first the lefthand column
+        try create(
+            .{ .Vertical = .{
+                .width = .{ .fraction = 0.3 },
+                .height = .{ .fraction = 1.0 },
+                .spacing_pixels = 5.0,
+                .align_contents = .top,
+            } },
+            .{
+                // children, like the squiggles suggesting text,
+                // would go here!
+            },
+        ),
+        // next the righthand column of rows
+        try create(
+            .{ .Vertical = .{
+                .width = .{ .fraction = 0.7 },
+                .height = .{ .fraction = 1.0 },
+                .spacing_pixels = 3.0,
+            } },
+            .{
+                // there are three children,
+                // two of which are straightforward
+                try create(.{ .Horizontal = .{
+                    .width = .{ .fraction = 1.0 },
+                    .height = .{ .pixels = 100 },
+                    .spacing_pixels = 10.0,
+                    } }, .{
+                    // the shapes go here...
+                    },
+                ),
+                try create(.{ .Horizontal = .{
+                    .width = .{ .fraction = 1.0 },
+                    .height = .{ .pixels = 100 },
+                    .spacing_pixels = 5,
+                    } }, .{
+                    // the text goes here...
+                    },
+                ),
+                // in this call, the height parameter uses up all the
+                // remaining height
+                try create(.{ .Stack = .{
+                    .width = .{ .fraction = 1.0 },
+                    .height = .{ .fraction = 1.0 },
+                } }, .{
+                    // these children will be stacked on top of each other
+                    // from back to front
+                    try create(.{ .Box = .{
+                        .width = .{ .fraction = 1.0 },
+                        .height = .{ .fraction = 1.0 },
+                        .child_origin = .{
+                            .x = .{ .pixels = 0 },
+                            .y = .{ .pixels = 0 },
+                        },
+                    } }, .{
+                    // the image goes here...
+                    }),
+                    try create(.{ .Vertical = .{
+                        .width = .{ .fraction = 0.3 },
+                        .height = .{ .fraction = 1.0 },
+                        .spacing_pixels = 3.0,
+                    } }, .{
+                    // the circles go here...
+                    }),
+                    try create(.{ .Box = .{
+                        .width = .{ .fraction = 1.0 },
+                        .height = .{ .fraction = 1.0 },
+                        .child_origin = .{
+                            .x = .{ .fraction = 0.7 },
+                            .y = .{ .fraction = 0.6 },
+                        },
+                    } }, .{
+                    // the red rotated rectangle goes here...
+                    }),
+                }),
+            },
+        ),
+    },
+);
+{{< /highlight >}}
+</div>
+</div>
