@@ -1,0 +1,433 @@
+---
+title: "Meagreness"
+math: true
+date: 2023-12-15T12:00:00-04:00
+---
+
+<p>
+The purpose of this post is to try to get my head wrapped around
+a couple of “analytic” concepts:
+the Baire property, meagreness and so forth.
+I’ll attempt to give full definitions and proofs, since this is mostly for my reference.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1f1825e">1. Meagreness</a>
+<ul>
+<li><a href="#orgf7f52d0">1.1. The Baire category theorem</a></li>
+</ul>
+</li>
+<li><a href="#org8b41e2d">2. The property of Baire</a>
+<ul>
+<li><a href="#org3f865c3">2.1. Analytic sets</a></li>
+</ul>
+</li>
+<li><a href="#org253768e">3. Pettis’ Lemma</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1f1825e" class="outline-2">
+<h2 id="org1f1825e"><span class="section-number-2">1.</span> Meagreness</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Let \(X\) be a topological space.
+A subset \(N \subset X\) is <i>nowhere dense</i>
+when its closure \(\overline{N}\) has empty interior
+(the symbol for interior is typically something like \(N^o\).
+Unaccountably, I dislike this, so I will just write “interior” when I mean it.)
+More generally, we’ll say that \(M \subset X\) is <i>meagre</i>
+if there exist nowhere dense sets \(N_1,N_2,\ldots\)
+such that \(M \subset \bigcup_{n\in\mathbb{N}} N_n\).
+Meagreness (as the name implies) is a notion of smallness.
+A set is <i>non-meagre</i> when it is … not meagre, shocking.
+</p>
+
+<p>
+On the other side, say that a set \(R \subset X\) is <i>residual</i>
+if there are open, dense sets \(U_1,U_2,\ldots\) such that
+\(R \supset \bigcap_{n \in \mathbb{N}} U_n\).
+A little set-theoretic algebra should convince you
+that the residual sets are precisely the <i>comeagre</i> sets,
+i.e. the sets whose complement is meagre.
+</p>
+
+<p>
+If we consider the real line \(\mathbb{R}\) with the usual topology,
+we can see directly that the set of rational numbers \(\mathbb{Q}\),
+being a countable set of points,
+is meagre, so the <i>irrational</i> numbers are comeagre, hence residual.
+It seems intuitively obvious that it would be difficult to write
+a subset of \(\mathbb{R}\) containing a nonempty open interval
+as a countable union of nowhere dense sets,
+but <i>proving</i> this seems challenging.
+</p>
+
+<p>
+Fortunately, we have a tool that does this for us!
+</p>
+</div>
+
+<div id="outline-container-orgf7f52d0" class="outline-3">
+<h3 id="orgf7f52d0"><span class="section-number-3">1.1.</span> The Baire category theorem</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Subsets of \(X\) which are meagre are often said to be “of the first category”.
+I’m at this moment not 100% clear on whether “of the second category”
+means “non-meagre” or “comeagre”—I don’t particularly need to know either,
+but it goes to show you that terminology can be bad!
+We’ll avoid “first/second category” here.
+</p>
+
+<p>
+Anyway:
+</p>
+
+<blockquote>
+<p>
+<b>Theorem</b> (Baire category theorem).
+A nonempty space \(X\) is said to be a <i>Baire space</i> (not to be confused with <i>the</i> Baire space—yep, mathematicians are awful at names, sorry about it)
+if either of the following equivalent conditions are satisfied.
+</p>
+<ol class="org-ol">
+<li>Nonempty open sets are non-meagre.</li>
+<li>Residual sets are dense.</li>
+</ol>
+
+<p>
+Suppose that \(X\) is nonempty and completely metrizable.
+Then \(X\) is Baire.
+</p>
+</blockquote>
+
+<p>
+First let’s prove the equivalence of the two conditions.
+Suppose that residual sets are dense,
+but that \(U\) is open and meagre,
+say contained in \(\bigcup_{n\in\mathbb{N}} N_n\),
+where each \(N_n\) is nowhere dense.
+Now, saying that \(N_n\) is nowhere dense precisely says that
+\(V_n = X - N_n\) contains an open and dense set.
+So the intersection \(\bigcap_{n\in\mathbb{N}} V_n\) is residual,
+but this intersection is precisely \(X - \bigcup_{n \in \mathbb{N}} N_n\).
+Therefore if residual sets are dense, \(U\) must be empty.
+</p>
+
+<p>
+Conversely, if \(R\) is residual but not dense,
+since residual sets are comeagre,
+we have that the complement of \(R\) is meagre
+but contains a nonempty open set in its interior.
+</p>
+
+<p>
+Now suppose that \(X\) is completely metrizable,
+in fact, choose a complete metric \(d\) on \(X\) generating the topology,
+and suppose that \(U_1,U_2,\ldots\) are dense and open.
+To prove that any residual set is dense,
+it suffices to show that sets of the form \(\bigcap_{n\in\mathbb{N}} U_n\) are dense.
+Supposing such a set is <i>not</i> dense,
+there exists a point \(x\) with an open neighborhood \(V\)
+entirely contained in the complement.
+Notice that because each \(U_n\) is dense,
+\(x\) is a limit point of \(U_n\),
+so in particular \(V\) contains a point \(x_n\) of each \(U_n\).
+</p>
+
+<p>
+In fact, we can be slightly more clever:
+since \(V \cap U_1\) is open and nonempty by assumption
+and \(X\) is a metric space,
+it contains a ball \(B_1\) of some radius \(\epsilon_1 < 1\) centered at \(x_1\).
+But then \(B_1 \cap U_2\) is open and nonempty by the denseness of \(U_2\)
+applied to \(x_1\), so it contains a ball of some radius \(\epsilon_2 < \frac{1}{2}\)
+centered at some point \(x_2\),
+and we can continue so that for each \(n\), we have that \(B_n \cap U_{n+1}\)
+contains a ball of some radius \(\epsilon_n < \frac{1}{2^n}\) centered at some point \(x_n\).
+But the sequence \(\{x_n\}\) is clearly Cauchy by construction,
+so by the completeness of \(d\) it converges to some point \(x'\).
+This point \(x'\) is clearly contained in \(V\)
+but also in \(\bigcap_{n \in \mathbb{N}} U_n\),
+contradicting our assumption that our residual set was not dense.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8b41e2d" class="outline-2">
+<h2 id="org8b41e2d"><span class="section-number-2">2.</span> The property of Baire</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Neato! Okay so it gets worse: I mentioned offhand that there
+was, in addition to the concept of a Baire space,
+<i>the</i> Baire space, \(\mathbb{N}^\mathbb{N}\).
+We’re not done with Baire, sadly.
+Say that a subset \(A\) of \(X\) <i>has the Baire property</i>
+if we may write \(A\) as the symmetric difference \(A = U \triangle M\),
+where \(U\) is open and \(M\) is meagre.
+(The symmetric difference is surprisingly easy to describe in words
+and annoying to describe in symbols:
+if \(A\) and \(B\) are subsets of \(X\), their symmetric difference
+is just the set of points in \(A\) or \(B\) <i>but not both.</i>)
+Observe that \(A \triangle (A \triangle B)\) is the set of points in
+\(A\)—or those points that are in \(A\) or \(B\) but not both—but not both.
+Said less confusingly, if a point is in \(A\) <i>and</i> \(B\),
+then it is in \(A\) but not \(A \triangle B\) so it belongs to
+\(A \triangle (A \triangle B)\).
+Similarly if a point is in \(B\) but not \(A\),
+then it belongs to \(A \triangle (A \triangle B)\).
+Thus we may affectionately refer to \(A \triangle (A \triangle B)\)
+by its more common name, \(B\)!
+</p>
+
+<p>
+Okay, dizzying set-theoretic algebra aside,
+another way of phrasing the property of Baire
+is to say that \(A\) has the property of Baire
+if there exists an open set \(U\) such that \(A \triangle U\) is meagre.
+Thus open sets clearly have the property of Baire.
+Actually, so do closed sets:
+the point is that the boundary (closure minus interior)
+of any <i>open</i> set is nowhere dense;
+the proof is more set-theoretic trickery,
+but it’s not too hard so I’ll leave it to you.
+Therefore a closed set is either nowhere dense (hence meagre)
+or differs from its interior by a meagre set.
+Actually, this shows that the complement of a set with the property of Baire
+has it too: if \(A = U \triangle M\),
+it turns out that \(X - A\) is nothing but \((X - U) \triangle M\).
+</p>
+
+<p>
+Actually, countable unions of sets with the property of Baire have it too:
+say \(B_i = U_i \triangle M_i\).
+Write \(B = \bigcup_{i\in\mathbb{N}} B_i\),
+\(U = \bigcup_{i\in\mathbb{N}} U_i\)
+and \(M = \bigcup_{i \in \mathbb{N}} M_i\).
+It is clear that \(U\) is open and \(M\) is meagre.
+So consider \(M' = B \triangle U\).
+If \(x\) is a point of \(M'\) contained in \(B\),
+it must not be contained in \(U\), hence not in <i>any</i> \(U_i\),
+hence it is contained in some \(M_i\), hence in \(M\).
+Conversely, if \(x\) is a point of \(U\) not contained in \(B\),
+it is necessarily contained in some \(U_i\) but not in any \(B_i\),
+so in particular it must be contained in \(M_i\), hence in \(M\).
+Therefore \(B \triangle U\) is meagre, being a subset of a meagre set.
+</p>
+
+<p>
+Cool! If you know the words, you can sing along with me:
+sets with the property of Baire include all Borel sets
+and in fact form a $&sigma;$-algebra.
+</p>
+</div>
+
+<div id="outline-container-org3f865c3" class="outline-3">
+<h3 id="org3f865c3"><span class="section-number-3">2.1.</span> Analytic sets</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Now suppose that \(X\) is Polish
+and that \(A\) is the image of a Polish space \(Y\)
+under some continuous map \(f\colon Y \to X\).
+We say that \(A\) is <i>analytic.</i>
+We claim that \(A\) has the property of Baire.
+For this we need a lemma.
+</p>
+
+<blockquote>
+<p>
+<b>Lemma.</b> Suppose \(X\) is Polish and \(S\) is a subset.
+There exists a subset \(A \supset S\) having the property of Baire
+such that whenever \(Z \subset A - S\) has the Baire property,
+then \(Z\) is meagre.
+</p>
+</blockquote>
+
+<p>
+Indeed, recall that Polish spaces are second countable
+(consider open balls of rational radius centered at a countable dense subset),
+so let \(\mathscr{U} = \{ U_1, U_2, \ldots \}\) be a countable basis.
+Given \(S\), write
+</p>
+
+<p>
+\[ D(S) = \{x \in X : \text{ if } x \in U_i,\ U_i \cap S \text{ is non-meagre. }\} \]
+</p>
+
+<p>
+The complement of \(D(S)\) is the set of those points \(x \in X\)
+for which there exists \(U_i \in \mathscr{U}\) containing \(x\)
+such that \(U_i \cap S\) is meagre.
+That is, if \(X - D(S)\) contains \(x\), it actually contains some \(U_i\) containing it,
+so \(D(S)\) is closed.
+If we can show that \(S - D(S)\) is meagre,
+we will have shown that \(A = (S - D(S)) \cup D(S)\) has the Baire property.
+But \(S - D(S)\) is precisely the set of those \(S \cap U_i\)
+which are meagre, so by countability of \(\mathscr{U}\), \(S - D(S)\) is meagre.
+</p>
+
+<p>
+Suppose that \(Z \subset A - S\) has the property of Baire.
+Then \(Z = U \triangle M\) for some open set \(U\) and meagre set \(M\).
+The set \(U\) contains \(U_i\) because \(\mathscr{U}\) is a basis.
+The set \(U_i - Z\) is contained in \(M\)
+by the kind of silly dance we did in the previous section, so is meagre.
+It follows that \(U_i \cap S\) is meagre,
+being contained in \(U_i - Z\).
+But \(U_i \cap Z \ne \varnothing\) and \(Z \subset D(S)\) by construction,
+we conclude that \(U_i \cap S\) <i>cannot</i> be meagre by the definition of \(D(S)\).
+The lemma follows.
+</p>
+
+<p>
+Phew!
+</p>
+
+<p>
+Now let’s prove that if \(A\) is the image of a Polish space \(Y\) in \(X\),
+it has the Baire property!
+I’m following an exercise/proof Thomas Jech leaves
+for the reader in chapter 11 of <i>Set Theory.</i>
+Fix once and for all the following countable basis
+\(\mathscr{U}\) for \(Y\).
+We index \(\mathscr{U}\) by the (countable)
+collection of finite sequences of natural numbers.
+Fix a complete metric on \(Y\) inducing the topology.
+Begin with the empty sequence as all of \(Y\).
+Then inductively, to extend a sequence \(\alpha\) of length \(n\),
+choose a countable collection of points in \(U_\alpha\)
+and balls of radius at most \(\frac{1}{2^{n+1}}\) centered at these points
+so that \(U_\alpha\) is contained in the union of these balls.
+(This is possible because \(Y\) has a countable dense subset.)
+</p>
+
+<p>
+Given \(U_\alpha \in \mathscr{U}\), write \(A_\alpha\) for \(f(U_\alpha)\).
+By the lemma applied to \(S = A_\alpha\),
+there is a set \(B_\alpha\) having the property of Baire containing \(A_\alpha\)
+such that whenever \(Z\) is contained in \(B_\alpha - A_\alpha\) and has the Baire property,
+the set \(Z\) is meagre.
+Indeed, since \(\overline{A_\alpha}\) has the Baire property, being closed,
+we may (must, actually) fit \(B_\alpha\) between \(A_\alpha\) and \(\overline{A_\alpha}\).
+</p>
+
+<p>
+Write \(B = B_\varnothing\). then \(B\) has the Baire property,
+and it suffices to show that \(B - A\) is meagre,
+since sets with the property of Baire form a $&sigma;$-algebra
+containing the meagre sets.
+</p>
+
+<p>
+Now, notice that in \(Y\),
+each point \(y \in Y\) is the unique point of intersection of
+\[
+\{y\} = \bigcap_{n=0}^\infty U_{\omega |_n}
+\]
+where \(\omega \in \mathbb{N}^{\mathbb{N}}\) is some infinite sequence
+and \(\omega|_n\) is the sequence restricted to the first \(n\) elements.
+(This uses completeness!)
+Therefore we have the trivially true fact that
+\[
+Y = \bigcup_{\omega \in \mathbb{N}^{\mathbb{N}}} \bigcap_{n=0}^\infty U_{\omega |_n}.
+\]
+This silly dodge is called the <i>Suslin operation,</i>
+it’s often written \(\mathscr{A}\) when considered over
+sets indexed by finite sequences of naturals
+and perhaps surprisingly it turns out to be useful!
+Indeed, it is similarly obvious that
+\(A = \mathscr{A}\{ A_\alpha \}\)
+and \(A = \mathscr{A}\{ \overline{A_\alpha} \}\),
+so also true that \(A = \mathscr{A}\{ B_\alpha \}\).
+</p>
+
+<p>
+Therefore we have that
+\[
+B - A = B - \bigcup_{\omega\in\mathbb{N}^{\mathbb{N}}}\bigcap_{n=0}^\infty B_{\omega|_n}.
+\]
+We claim that this is a subset of
+\[
+\bigcup_{\alpha}\left(B_\alpha - \bigcup_{n\in\mathbb{N}} B_{\alpha,n}\right).
+\]
+Here by \(B_{\alpha,n}\) I mean the set obtained by appending \(n\) to the sequence \(\alpha\).
+Indeed, suppose \(x \in B\) is not an element of this latter set.
+This means that whenever \(x\) belongs to some \(B_\alpha\),
+there actually exists some \(n\) such that \(x\) belongs to \(B_{\alpha,n}\).
+But by induction, we conclude that \(x\) belongs to some
+\(\bigcap_{n = 0}^\infty B_{\omega|_n}\),
+so actually \(x\) doesn’t belong to the former set either, proving the claim.
+</p>
+
+<p>
+To complete the proof, it suffices to show that each set in this latter union is meagre.
+But this is clear, because each such set is sandwiched between
+\(A_\alpha\) and \(B_\alpha\), so is meagre by the lemma!
+(Indeed, each of these sets has the property of Baire,
+being part of the $&sigma;$-algebra generated by the \(B_\alpha\).)
+</p>
+
+<p>
+Therefore we conclude that \(A\) has the property of Baire.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org253768e" class="outline-2">
+<h2 id="org253768e"><span class="section-number-2">3.</span> Pettis’ Lemma</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+I want to conclude by proving a theorem of Pettis on topological groups.
+</p>
+
+<blockquote>
+<p>
+<b>Theorem</b> (Pettis’ Lemma).
+Suppose that \(G\) is a (Hausdorff) topological group which is a Baire space
+and that \(A\) is a non-meagre subset having the property of Baire.
+Then \(A^{-1} A\) is an identity neighborhood.
+</p>
+</blockquote>
+
+<p>
+Indeed, Pettis states and proves it for any set merely <i>containing</i>
+a non-meagre subset with the property of Baire.
+His proof is … well, it’s old.
+It took me all of yesterday to understand what he was saying,
+which is why I’m writing this post.
+But! It’s reasonably clear now. Let’s dive in.
+</p>
+
+<p>
+Since \(A\) has the property of Baire, we may write \(A = W \triangle M\),
+where \(W\) is open and \(M\) is meagre.
+Observe that \(W\) is nonempty because \(A\) was non-meagre.
+By continuity of the map \((g,h) \mapsto gh^{-1}\),
+we see that every identity neighborhood \(V\) contains an open identity neighborhood \(U\)
+such that \(UU^{-1} \subset V\).
+Since general open sets are left-translates of open identity neighborhoods,
+we have that \(W\) contains \(gUU^{-1}\) for some \(g \in G\).
+We claim that \(U \subset A^{-1} A\).
+Indeed, take \(h \in U\)
+and consider the residual set \(E_h = (G - M) \cap [(G - M)h^{-1}]\).
+Since \(G\) is a Baire space,
+so is the open set \(gUh^{-1}\), which therefore intersects \(E_h\),
+say in some element \(x\).
+We claim that both \(x\) and \(xh\) are in \(W \triangle M = A\),
+so that \(h\) is in \(A^{-1} A\).
+Indeed, since \(x \in E_h\), we see that neither \(x\) nor \(xh\) are in \(M\).
+Since \(h \in U\), the open set \(gUh^{-1}\) is in \(g U U^{-1} \subset W\),
+so we see that \(x\) and \(xh\) are in \(W\), hence in \(A\).
+</p>
+
+<blockquote>
+<p>
+<b>Corollary.</b> If \(A\) is an analytic and non-meagre subset of a Polish group \(G\),
+then \(A^{-1}A\) is an identity neighborhood.
+</p>
+</blockquote>
+</div>
+</div>
