@@ -138,3 +138,8 @@ nav {
   background-color: var(--brightbg);
   padding: calc(2em / 3) calc(2em / 3);
 }
+
+.page-item {
+    list-style-type: none;
+    display: inline;
+}
