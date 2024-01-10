@@ -139,7 +139,17 @@ nav {
   padding: calc(2em / 3) calc(2em / 3);
 }
 
+.pagination {
+    text-align: center;
+}
+
 .page-item {
     list-style-type: none;
-    display: inline;
+    display: inline-block;
+    padding: 0 calc(2em / 3);
+    background-color: var(--dullbg);
+}
+
+.page-item > * {
+    color: var(--darkfg);
 }

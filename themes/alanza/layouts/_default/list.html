@@ -1,6 +1,7 @@
 {{ define "main" }}
   <article>
     <section>
+      {{ template "_internal/pagination.html" . }}
       {{- .Content -}}
     </section>
     <section>

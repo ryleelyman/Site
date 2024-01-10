@@ -27,21 +27,18 @@ Our proof is inspired by methods of Vogtmann, applied to a complex first studied
 in another guise by Krstić and Vogtmann.
 {{< /abstract >}}
 
-- **A family of CAT(0) outer automorphism groups of free products**   
+- **When is the Outer Space of a free product CAT(0)?**   
 Available at [arXiv:2209.04711](https://arxiv.org/abs/2209.04711).
 {{< abs "CAT0ABZ" >}}Abstract{{< /abs >}}
 {{< abstract "CAT0ABZ" >}}
-Consider the free product of two nontrivial finite groups with an infinite cyclic group.
-We prove that the 2-dimensional spine of Outer Space for this free product
-supports an equivariant CAT(0) metric with infinitely many ends.
-The outer automorphism group of this free product is thus relatively hyperbolic.
-In the special case that both finite groups are cyclic of order two,
-we show that the outer automorphism group is virtually a certain Coxeter group,
-and that the spine of Outer Space may be identified with its Davis–Moussong complex.
-These outer automorphism groups thus exhibit behavior extremely different from
-outer automorphism groups of free groups,
-and conjecturally, from other outer automorphism groups of free products
-of finite and cyclic groups.
+Generalizing Culler and Vogtmann’s Outer Space for the free group, 
+Guirardel and Levitt construct an Outer Space for a free product of groups. 
+We completely characterize when this space (or really its simplicial spine) 
+supports an equivariant piecewise-Euclidean or piecewise-hyperbolic CAT(0) metric. 
+Our results are mostly negative, extending thesis work of Bridson and related to thesis work of Cunningham. 
+In particular, provided the dimension of the spine is at least three, it is never CAT(0). 
+Surprisingly, we exhibit one family of free products for which the Outer Space is two-dimensional 
+and _does_ support an equivariant CAT(0) metric. 
 {{< /abstract >}}
 
 - **On Whitehead's cut vertex lemma**   
