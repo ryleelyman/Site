@@ -1,5 +1,5 @@
 :root {
-  --measure: 60ch;
+  --measure: 75ch;
   --brightfg: #B7526A;
   --brightbg: #F8F9BD;
   --dullbg: #E1CCEE;
@@ -53,14 +53,10 @@ strong, {
 }
 
 body {
-  max-width: calc(var(--measure) * 1.5);
+  max-width: calc(var(--measure) * 1.2);
   background-color: var(--darkbg);
   margin: 0 auto;
   font-size: 16px;
-}
-
-.headshot {
-  max-width: 200px;
 }
 
 a {

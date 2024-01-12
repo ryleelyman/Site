@@ -1,30 +1,50 @@
-**NSF Postdoctoral Fellow**  
-Department of Mathematics  
-[Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science)
+Hi, I'm Rylee. I'm a polymath interested in math, music, synthesis, creative coding, etc.
 
-I like thinking about topics related to outer automorphisms of free groups and
-mapping classes of surface diffeomorphisms.
-I'm curious about geometric topology, geometric group theory, Teichmüller theory,
-tropical geometry, orbifolds, cube complexes, etc.    
-Curriculum Vitae: [PDF](/pdfs/Lyman.pdf)
+![Here is a picture of me](/img/headshot4.jpg)
 
+This is my personal _and_ academic website;
+I work at [Rutgers University–Newark](https://sasn.rutgers.edu/math-and-computer-science) where
+starting in Fall 2024, I’ll be an assistant professor in the math department.
+
+I have two email addresses;
+for academic things, please use <rylee.lyman@rutgers.edu>.
+Otherwise you’re welcome to write to <rylee.alanza@gmail.com>.
+You can find my CV [here](/pdf/Lyman.pdf).
+
+Mathematically, I’m interested in many things.
+My favorite topics are group actions on trees and outer automorphisms of such groups.
 I earned my PhD in Mathematics from [Tufts University](https://math.tufts.edu),
 where my advisor was [Kim Ruane](https://math.tufts.edu/people/faculty/kim-ruane).
-I am a postdoc at
-[Rutgers University–Newark](https://sasn.rutgers.edu/academics-admissions/academic-departments/mathematics-computer-science).
-My mentor at Rutgers is [Lee Mosher](https://www.newark.rutgers.edu/about-us/have-you-met-rutgers-newark/lee-mosher).
-In 2024, I will start as an assistant professor at Rutgers--Newark.
 
-My email address is <rylee.lyman@rutgers.edu>.
+I am the author of [seamstress](https://github.com/ryleelyman/seamstress),
+a [Lua](https://lua.org) scripting environment inspired by [monome](https://monome.org)’s [norns](https://github.com/monome/norns)
+written in [Zig](https://ziglang.org).
+Seamstress runs a user-supplied Lua script 
+(it also provides a Lua REPL and listens on a websocket for live-coding purposes)
+which defines its behavior in relation to music, visuals and data.
+Seamstress scripts may interact with other programs and devices (such as monome’s grid and arc)
+over MIDI or OSC.
+Currently seamstress, which is free software licenced under the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) 
+runs on macOS and Linux.
+I’m excited to push its capabilities further and welcome suggestions and collaboration.
 
+On January 28th, I'll be leading a workshop with [Dan Derks](https://dndrks.com/)
+at [The Firehouse](https://firehouseworcester.neocities.org) in Worcester, MA.
+More details and sign up [here](https://dndrks.com/firehouse.html).
 
-Some places I'll be soon:
- - [Diverse Aspects of Groups, Geometry and Dynamics](https://www.groups-and-spaces.kit.edu/758.php)
- - [AWM Research Symposium](https://awm-math.org/meetings/awm-research-symposium/)
- - [AIM Workshop on free-by-cyclic groups](https://aimath.org/workshops/upcoming/freebycyclic/)
- - [Groups Logic and Dynamics at Rutgers](https://sites.math.rutgers.edu/~fc327/GLaDF2023/index.html)
- - [Mentoring in the Mathematical Sciences](https://sites.google.com/view/minms/home)
- - [Joint Mathematics Meetings](https://www.jointmathematicsmeetings.org/meetings/national/jmm2024/2300_program.html)
- - AIM SQuaRE
+![flyer for workshop](/img/flyer-01-50.png)
+
+Also on January 28th at the Firehouse, I'll perform with Dan and [A. Campbell Payne](https://acampbellpayne.com).
+
+![flyer for show](/img/flyer-02-50.png)
  
- Maybe you came to my website looking for [nonmathematical stuff?]({{< ref "alanza.md" >}})
+In 2022, I recorded and released an album of pop songs as Alanza called [Learning to Run](https://alanza.bandcamp.com/album/learning-to-run).
+ 
+I believe in education as the practice of freedom.
+ 
+As applied to mathematics, I share [Federico Ardila-Mantilla](https://fardila.com)’s axioms:
+
+- **Axiom 1.** Mathematical talent is distributed equally among different groups, irrespective of geographic, demographic, and economic boundaries.
+- **Axiom 2.** Everyone can have joyful, meaningful, and empowering mathematical experiences.
+- **Axiom 3.** Mathematics is a powerful, malleable tool that can be shaped and used differently by various communities to serve their needs.
+- **Axiom 4.** Every student deserves to be treated with dignity and respect.
