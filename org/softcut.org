@@ -1,0 +1,167 @@
+#+OPTIONS: toc:nil
+#+BEGIN_EXPORT html
+---
+title: "Porting softcut"
+math: true
+date: 2024-01-20T15:00:00-05:00
+---
+#+END_EXPORT
+
+Last weekend I wrote C and Zig bindings for
+[[https://github.com/monome/softcut-lib][softcut]], a C++ buffer-manipulation library
+written by [[https://github.com/catfact][Ezra Buchla]].
+I also wrote a basic consumer of the library,
+=softcut-client=,
+which at least in theory runs on macOS, Linux and Windows—that being said,
+I’ve only taken it for a spin on my MacBook, so perhaps there are platform-specific
+things lurking in the code that I’m not aware of.
+Anyway, the purpose of this post is to chat a little about the program
+and the project of writing it. Somehow I decided to talk about pointers, too!
+
+# more
+
+#+TOC: headlines 2
+
+* =softcut-client=
+
+=softcut-client= is a strightforward port of Ezra’s client,
+which is written in C++, to Zig.
+Like that program, which is one of the signature components of [[https://monome.org][monome]]’s [[https://github.com/monome/norns][norns]],
+it communicates with other processes over OSC.
+Since laptops, unlike norns, are less standardized in their computing power,
+one can specify the number of voices one would like softcut to have at compile-time.
+Unlike Ezra’s client, which uses JACK,
+=softcut-client= uses [[http://libsound.io][libsoundio]],
+a C library which provides an abstraction over many common sound libraries and frameworks,
+including the native APIs for Windows and macOS,
+as well as JACK, ALSA and PulseAudio for Linux.
+
+In the end, it was this piece of the code, unsurprisingly,
+that had the most bugs to work out.
+JACK, from what little I gleaned from softcut’s source code,
+provides a neat abstraction where if you provide it input and output
+(source and sink) buffers of floats
+and tell it when they’re ready to go,
+it will handle the rest.
+=libsoundio= is a bit more involved.
+My biggest mistake using it was that in “recording” from the input
+into another buffer to feed to softcut,
+I was forgetting to advance my pointers.
+
+** Pointers
+
+Let me explain what that means a little more:
+a /pointer/ is a tricksy little progamming concept.
+All kinds of programs and programming languages have the concept of
+/variables,/ which hold a value and are backed, while the program runs,
+by some actual little bit of the computer’s /memory/
+(i.e. RAM, if that means anything to you).
+Por ejemplo, a /byte/ is 8 little “bits” of memory,
+each of which can be either on or off.
+In Zig, for instance, bytes are represented as variables of type =u8=,
+that is, unsigned 8-bit integers,
+by taking the eight bits as representing (on is 1, off is 0) an eight-digit binary number.
+The biggest possible 8-bit number is 11111111 in binary, or 255 in decimal.
+
+A /pointer/ is a variable which,
+rather than representing some bit of data important to your program,
+represents the /address/ or /location in memory/ of /another/ bit of data.
+Most operating systems today have 64-bit pointers,
+so can represent 2^64 = 18,446,744,073,709,551,616 different addresses.
+That’s a lot! but 64 bits is only 8 bytes.
+
+There are many reasons one might want to have a pointer to data
+rather than the data itself.
+For example, maybe the data itself is big;
+like say a large audio file.
+If you had to /copy/ that data around everywhere you wanted to use it,
+your program would spend most of its time doing that copy,
+which is inefficient both in time and space.
+Passing around an 8-bit /pointer/ to that data,
+though, is much more efficient.
+
+In =libsoundio=, one uses pointers
+because the library sets up the underlying audio backend
+to expect to read /from/ or write /to/ a certain location in memory.
+The library then provides you with a pointer to that location
+and then says “okay, go”.
+
+Another, more subtle reason is that audio data, particularly when it is in stereo,
+is sometimes /interleaved./
+That is, one sample of data for the left channel
+is followed immediately by one sample of data for the right channel,
+then another left sample, then another right sample, and so on.
+Rather than forcing the question of interleaved vs. non-interleaved,
+=libsoundio= provides you with a bunch of pointers and for each one a “step”
+that tells you how to “move” the pointer forward to find the address of the next sample.
+
+This process is sometimes called “pointer arithmetic”,
+and people smarter than I have very mixed feelings about it.
+Personally, I think it makes perfect sense for this application;
+if your audio samples are interleaved,
+then maybe one of the left-channel samples is at a certain address,
+and then the next sample is eight bytes further down the line.
+In other words, if $A$ is the address of our original sample,
+to find the address of the next sample, we simply look at address $A + 8$.
+Cute, right?
+
+* Zig bindings for a C++ library
+
+Softcut is written in C++,
+while my application is written in [[https://ziglang.org][Zig]].
+Zig is really fun, and it has builtin some ability to interoperate with C,
+a programming language that could be said to be C++’s predecessor.
+C++ can also interoperate with C,
+but Zig and C++ don’t get along as nicely.
+
+There are good reasons for this:
+C++ adds many features that are not present in C,
+like “objects” and “classes”.
+Zig is focussed on /correcting/ some of the issues that programmers have with C.
+(For context, C is perhaps the most ubiquitous programming language out there;
+it’s also one of the oldest programming languages that people still commonly write in.)
+Things like “objects” and “classes” are /out of scope/
+for the Zig language—which is not to say that one can’t mimic them
+or construct something that has those features—that’s
+one of the beauties of a language like Zig or like C;
+it gives you enough tools that you can create the rest yourself if you’d like.
+
+Anyway, in order to bridge the gap between C++ and Zig,
+I found it easiest to write a little C header file with a C++ /implementation./
+Although the next bit is not strictly necessary,
+I also wrote a little Zig file that “wraps” the C file,
+providing more idiomatic Zig code to the end-user (which in this case was me).
+
+For example, just by way of signing off,
+here’s how to start up the library in C, C++ and Zig.
+
+#+begin_export html
+  {{< highlight "c++" "linenos=table" >}}
+  // C++
+  #include "Softcut.h" // or "softcut/Softcut.h"
+  enum { NumVoices = 6 };
+
+  softcut::Softcut<NumVoices> softcut = softcut::Softcut<NumVoices>();
+  {{< /highlight >}}
+#+end_export
+
+#+begin_export html
+  {{< highlight c "linenos=table" >}}
+  // C
+  #define SOFTCUT_C_NUMVOICES 6
+  #include "softcut_c.h"
+
+  Softcut softcut = softcut_init();
+  {{< /highlight >}}
+#+end_export
+
+#+begin_export html
+  {{< highlight zig "linenos=table" >}}
+  // Zig
+  const SC = @import("softcut");
+  const NumVoices = 6;
+  const Softcut = SC.Softcut(NumVoices);
+
+  const softcut = try Softcut.init();
+  {{< /highlight >}}
+#+end_export
