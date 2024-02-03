@@ -1,0 +1,255 @@
+#+options: toc:nil
+#+begin_export html
+---
+title: "Delaunay triangulations"
+math: true
+date: 2024-02-02T13:00:00-05:00
+---
+#+end_export
+
+This is a post about a triangulation algorithm
+to support the creation and rendering of arbitrary 2D meshes
+in Zig and Metal.
+Triangulation is a pretty neat piece of math!
+
+But first, why?
+Off and on I’ve been working on [[https://github.com/rainbow-apps/prism][prism]],
+a Zig library that aims to support creation of native apps.
+At the moment it only does something interesting on macOS,
+since that’s the operating system I’m usually running,
+but eventually I’d like to include various configurations
+of macOS, Linux and Windows,
+along with Metal, OpenGL, Vulkan and D3D12 as graphics backends.
+The idea is that by breaking out this work as a library,
+I can reap the benefits in [[https://github.com/ryleelyman/seamstress][seamstress]]
+as well as any later projects I might dream up.
+
+# more
+
+#+TOC: headlines 2
+
+* The problem
+
+Do you ever forget that a thing can happen?
+Like, imagine a quadrilateral,
+a shape with four edges.
+I bet the shape you imagined had the property of being /convex,/
+i.e. if you drew the two diagonals of the quadrilateral,
+those diagonals would actually be on the /inside/ of the shape.
+Certainly this is true of my imagined quadrilateral.
+In fact, it takes me a minute to remember that I can imagine
+a shape that isn’t a rectangle or a parallelogram!
+
+But there are quadrilaterals that are not convex;
+a “dart” shape might be a good example.
+Or like, take your favorite triangle,
+pick a side and imagine “pushing it in” a little to form two new sides.
+That’s a perfectly good quadrilateral that won’t be convex.
+
+Now imagine you’re a computer trying to draw that quadrilateral all filled in.
+It’s funny how things that can go wrong in math
+often already go wrong very quickly.
+Like, there’s no bad way for a computer to draw a triangle,
+but shapes with four sides?
+Many ways to screw up.
+
+As I said, it’s pretty easy for computers to draw filled-in triangles,
+and any quadrilateral can be cut—using its diagonals—into two triangles
+in two ways.
+But! for a non-convex quadrilateral,
+there’s a /visually incorrect/ way of doing the cutting!
+In fact, there’s another way to screw up entirely!
+
+#+begin_export html
+{{< figure src="/img/badquads.jpeg" >}}
+#+end_export
+
+In the figure above, I’ve illustrated two ways things could go wrong.
+In the first one, the true “dart” shape is not drawn by the computer
+because we’ve chosen the wrong diagonal
+to cut the quadrilateral into triangles—the correct choice
+would be the diagonal which /is/ contained inside the dart shape.
+
+But in the second one, the computer chooses entirely the wrong triangles!
+Even though this quadrilateral /is/ convex,
+we’ve managed to draw a kind of folded shape instead,
+because the computer doesn’t know that the repeated edge
+has to be a diagonal of the shape and not one of the edges.
+
+For shapes that have more vertices,
+there are even more ways things can go wrong!
+Delaunay triangulation attempts to fix them.
+
+* Refining the problem
+
+Suppose we have a 2-dimensional shape with $n$ points;
+Let’s clarify what we want:
+mathematically, the shape is a polygon of some sort—let’s
+assume at first that we don’t allow the construction of any holes.
+Then the shape, topologically, is just a disc, a filled-in circle.
+Of course, /geometrically/ that’s very much not true,
+it’s got sides with straight edges and everything,
+but this is still a useful observation;
+here’s why:
+consider your favorite polygon.
+It’s got $n$ vertices (three, say, for a triangle),
+$n$ edges (right? if we order the vertices around the shape,
+there’s an edge from each vertex to the next one,
+which gives us $n - 1$ of the edges,
+and then there’s one final edge from the last vertex back to the first one),
+and $1$ face.
+There’s a cool topological property of two-dimensional shapes
+called the /Euler characteristic,/
+which we can compute by adding the vertices and faces
+and subtracting the edges:
+sometimes this is abbreviated symbolically as
+$\chi = V - E + F$.
+Anyway, doing this for a polygon gives us $n - n + 1 = 1$.
+The really neat thing here
+is that /the Euler characteristic is a topological property;/
+so anything that is /topologically/ a disc
+will have $V - E + F = 1$.
+So like, if you took a quadrilateral
+and /subdivided/ it by drawing in the diagonal contained inside of it,
+now we have $V = 4$, but $E = 5$ and $F = 2$,
+because we added one new edge and the one previous face now is two faces,
+and we see that $V - E + F = 4 - 5 + 2 = 1$ is still true.
+
+So. If we have $n$ points which we are declaring to be vertices
+in our shape,
+we might hope to be able to /compute/ the number of triangles
+our eventual triangulation will have.
+For quadrilaterals this is true:
+there will always be two triangles.
+But imagine adding a new vertex.
+If the new vertex is sort of “off to one side”,
+it makes sense to triangulate the resulting pentagonal shape
+with only three triangles—imagine
+triangulating a regular pentagon by drawing two “chords”
+from one vertex to the non-adjacent vertices.
+
+But there’s another situation:
+if one of the vertices is “inside” the other four,
+then we need /four/ triangles:
+like, imagine starting with a square
+and then declaring the point where the two diagonals cross to be a vertex.
+
+So again, convexity is a core issue here.
+There are kind of two approaches to solving this.
+For a general mishmash of vertices,
+i.e. if we /don’t/ assume that our vertices are sorted in some way,
+the choice to be non-convex seems pretty arbitrary.
+So in this case, let’s assume that the user wants
+the resulting shape to be more or less convex.
+
+* Delaunay triangulations
+
+In the case of convexity, there is a neat triangulation
+called the /Delaunay/ triangulation which we will produce.
+For a quadrilateral, the Delaunay triangulation could have
+as many as /three/ triangles:
+what’s at issue here is the /convex hull/ of the vertices,
+that is, the smallest convex shape that contains all of them.
+This shape could be a triangle (like it is for the dart)
+or a quadrilateral.
+We already know that we can triangulate a quadrilateral with two triangles,
+but if we put a vertex in the interior of a triangle,
+we have to split that triangle into /three/ to produce a triangulation
+with four vertices.
+
+The Euler characteristic is actually pretty useful here:
+Every /edge/ of the triangulation that is an edge of the convex hull
+belongs to /one/ triangle,
+while other edges belong to /two./
+Therefore if the convex hull of $n$ points has $m \le n$ vertices,
+there are $m$ edges that belong to exactly one triangle,
+and the /actual/ triangulation we will produce
+can be obtained from the convex polygon by dividing faces.
+
+** Circumcircles
+
+Here a useful tool we will need in order to determine how many triangles
+to add is the /Delaunay/ condition:
+given the three vertices of a triangle
+(a genuine triangle, not the vertices of a line),
+there is always a circle which meets those three points.
+This is the /circumcircle/ of the triangle.
+
+Anyway, a triangulation satisfies the /Delaunay condition/
+if no vertex of the triangulation lies /inside/
+the circumcircle determined by any other three points of the triangulation.
+
+While for points in /general position,/
+that is, no three of them lie on a line,
+Delaunay triangulations turn out to /exist,/
+they are sometimes not unique:
+this happens when four or more of the points lie on the same circle.
+
+Let’s try and see why this is the right condition
+by looking above: in the first of our “bad” cases,
+the larger triangle (mixed shading)
+actually contains the fourth vertex,
+so it’s certainly true that the /circumcircle/
+associated to this triangle would contain the other vertex.
+
+The second bad case is similar: it’s kind of hard to see
+with the way I’ve drawn it, but if you imagine keeping the folded shape
+but wiggling the “ears” of the fold,
+you can see that the circumcircles fail the Delaunay condition.
+
+** Finding Delaunay triangulations: the Bowyer–Watson algorithm
+
+So, given a set of $n$ vertices,
+how do we find a Delaunay triangulation for them?
+We’ll describe an algorithm due independently to Bowyer and Watson
+(the Wikipedia article notes that each of Bowyer and Watson
+devised the algorithm at basically the same time;
+they /both/ published their papers in the same 1981 issue of the same journal,
+which is a cute fact.)
+
+Start like this:
+given three vertices (in general position),
+the /only/ triangle that contains them
+is certainly Delaunay.
+Next we’ll attempt to add a vertex.
+Now, normally there would be two cases,
+according to whether the new vertex
+is inside or outside of the original triangle’s circumcircle.
+What’s more, if we were in the circumcircle
+but not in the interior of the triangle,
+we might have to find out which of the triangles
+we’d like to add should actually be added.
+
+So let’s cheat:
+/start with a triangle so big/ that every time we add a new vertex,
+it’s actually /inside that triangle./
+At the end we can /throw those vertices away/
+and we’ll have a perfectly good triangulation of the stuff inside.
+
+Turns out to be not so bad to find such a big triangle:
+it’s easy to find a rectangle that contains all the points
+(just find the maximum and minimum $x$ and $y$ coordinates),
+then give yourself a little more wiggle room if you’d like,
+and realize that you can compute the side lengths of an
+isosceles right triangle containing the square
+with the larger of the two side lengths of the rectangle…
+by using the Pythagorean theorem and a little geometry.
+
+/Anyway,/ we also need to know when a triangle
+contains a vertex in its circumcircle.
+Many ways to do that;
+one is using determinants.
+Fortunately I believe I’ve actually already written code to compute those
+using row reduction
+(as part of Advent of Code).
+
+That done, we proceed as follows:
+when adding a new vertex,
+we check the triangles in our previous triangulation
+to see which ones contain the new vertex in their circumcircle.
+These triangles will form some sort of polygon,
+which we retriangulate by adding the triangles
+formed by taking the newly added vertex and connecting it
+to each exterior edge of the polygon.
+Finally, when we’re done, we just throw away
+any triangle which contains a vertex from our original huge triangle.
