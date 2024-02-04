@@ -1,0 +1,311 @@
+#+options: toc:nil
+#+begin_export html
+---
+title: "Notes on notes of Shewchuk"
+math: true
+date: 2024-02-04T09:50:00-05:00
+---
+#+end_export
+
+After my last post, I tried and failed to implement
+the Bowyer–Watson algorithm. A picture of that failure is below—turns
+out plotting semi-random triangular meshes with random colors?
+Very pretty.
+Anyway, I was talking about my struggles with the algorithm on a Discord
+and [[http://dewb.org][Michael Dewberry]] kindly directed me to
+[[https://people.eecs.berkeley.edu/~jrs/meshpapers/delnotes.pdf][some notes by Jonathan Richard Shewchuk]].
+They’re /fantastic,/ and the purpose of this post,
+besides providing a place for me to put the link in case I lose it,
+is to do a little riffing.
+
+# more
+
+#+begin_export html
+{{< figure src="/img/fake-delaunay.png" >}}
+#+end_export
+
+#+TOC: headlines 2
+
+* Euler characteristic bounds the number of triangles
+
+I wanted to say something to the effect that the Euler characteristic—number
+of vertices minus number of edges plus number of faces (e.g. triangles)
+actually provides a /bound/ on the number of triangles in a triangulation
+of $n$ points, but I backed off from stating that last time.
+Shewchuk offhandedly provides the bound, so let’s derive it.
+
+First of all, we argued in the last post that for a triangulation of a disc,
+we have $\chi = V - E + F = 1$.
+We know $V = n$ and would like to know how big $E$ and $F$ can be.
+So let’s get to it. In a triangulation,
+each face is a triangle, naturally,
+and each triangle has three vertices and three edges,
+so naively we can say that $E \le 3F$.
+This is not an equality typically
+(unless $V = 3$, in which case we have exactly one triangle
+with three edges, right?)
+because triangles can and must /share edges./
+But think about it: can an edge be contained in more than two triangles?
+Well no: if it were, one of the triangles wouldn’t be able to “lie flat”;
+we would be triangulating something other than a topological disc.
+In fact, we can say something stronger:
+if we have $m$ /exterior/ vertices—i.e. vertices that are extremities
+of our topological disc,
+then we also have $m$ exterior /edges/ which are each contained in exactly
+/one/ triangle, and every /other/ edge is contained in exactly two triangles.
+Thus we can count $m + 2(E - m)$ triangles.
+Actually this is a huge /overcount/ because
+each triangle has three edges.
+So in fact we have $3F = m + 2(E - m)$.
+
+Let’s sum up.
+If we have $k$ interior vertices,
+We know that $V = m + k = n$,
+that $V - E + F = 1$
+and that $3F = m + 2(E - m)$.
+Substituting $E = V + F - 1$,
+we have that
+$3F = m + 2(V + F - 1 - m) = m + 2k + 2F - 2$,
+so we conclude that $F = m + 2k - 2$.
+Notice that we /have/ to have at least $3$ exterior vertices
+(assuming that we’re not looking at a vertex or a line),
+in which case $k = n - 3$,
+so we /always/ have $F \le 3 + 2(n - 3) - 2 = 2n - 5$,
+and therefore $E \le 3n - 6$.
+In fact, we have equality whenever the /convex hull/ of the $n$
+vertices is a single triangle with the rest of the vertices in the interior.
+So for example if $n = 3$, we have $2n - 5 = 6 - 5 = 1$ and
+$3n - 6 = 9 - 6 = 3$.
+
+* Parabolic lifting
+
+Do you remember parabolas from school?
+The function $y = x^2$?
+If you turn it upside down you get “gravity’s rainbow”
+(that is, the ideal trajectory of an object launched into the air
+and acted upon by gravity)
+as Thomas Pynchon put it.
+Parabolas are “convex” or “concave up” functions,
+in the sense that if you plot a parabola (that opens upward)
+and draw the straight line between any two points on the parabola,
+the graph of the function lies below that line.
+
+This observation is actually fantastically useful for us!
+Remember from the last post that for a vertex set,
+to produce the Delaunay triangulation,
+we would like for each triangle in the triangulation
+to have the property that /no/ other vertex
+lies within the circumcircle of that triangle.
+
+But how do we show that that’s the case?
+Let’s go /down/ a dimension
+(a surprisingly useful mathematical strategy!)
+and see what happens.
+So instead of triangles,
+let’s care about line segments.
+A “$1$-dimensional” triangulation,
+then, is just a way of connecting points on a line
+by segments so that the segments do not overlap.
+In other words,
+we would like that for each segment $\overline{AB}$ in our “triangulation”
+and any other point $C$,
+it is not the case that $C$ is in the "circumcircle"
+determined by $\overline{AB}$.
+Here a circumcircle is just the segment $\overline{AB}$ itself,
+and we're asking that $C$ is not between $A$ and $B$ on the line.
+
+That's easy enough to do that the parabola picture seems a little silly,
+but it /does/ work:
+if we apply the function $y = x^2$ to our points,
+we have that $C$ is between $A$ and $B$
+if and only if it lies /below/ the line
+determined by the points $(A, A^2)$ and $(B, B^2)$.
+
+The neat thing is that is true even when we go up a dimension!
+Here the function is $z = x^2 + y^2$,
+but the observation still holds:
+in two dimensions, a point $D$ is within the circumcircle
+of the triangle $\triangle ABC$
+if and only if it is /below/ the 2-dimensional plane
+determined by the image of the three points under the function
+$z = x^2 + y^2$!
+
+* Practical math
+
+So given three points of the form $(x, y, x^2 + y^2)$,
+we're looking to find an equation for the plane containing them,
+or even better, a function
+which will tell us (based on the sign of its output)
+whether a fourth point is above or below the plane they determine.
+
+A little linear algebra is useful here:
+in three dimensions,
+a plane is determined by any of its /normal vectors,/
+which point perpendicularly away from it:
+like, think of the plane as determined by the $x$ and $y$ axes;
+the $z$ axis would determine a normal vector.
+/Perpendicular/ here means this:
+if $\vec n$ is the normal vector
+and $\vec p$ is another point,
+that point will lie on the plane through the origin determined by $\vec n$
+if and only if the /dot product/ $\vec n \cdot \vec p$ is zero.
+
+If we write things out in coordinates,
+with $\vec n = (n_1, n_2, n_3)$ and $p = (p_1, p_2, p_3)$,
+then we're asking that $n_1 p_1 + n_2 p_2 + n_3 p_3 = 0$.
+
+But! our plane is probably not through the origin.
+Put another way, it's an /affine/ plane, rather than a linear one.
+But there's a fun trick we can play:
+move into a /fourth dimension./
+I'm sure I'll have much more to say about this trick another time,
+but here's a fun way to think of things.
+
+Again, before we think about four dimensions, let's go down to, like, one.
+
+A $1$-dimensional vector space is just the real line.
+An /affine/ $0$-dimensional subspace is a point on that line.
+Every (nonempty) vector space has a unique $0$-dimensional /linear/ subspace:
+the origin.
+In other words, if we require things to contain the origin,
+the zero,
+we actually aren't able to reason about /other points,/
+even though they're manifestly very useful.
+But there's a fix:
+put that line into a 2-dimensional vector space (a plane).
+For concreteness, let's do this
+so that it's the horizontal line $y = 1$.
+Now for every /point/ $p$ on that line,
+there's a unique /line/ in the plane
+that hits that point $p$ and also the origin.
+Explicitly, we've thought about $p$ as the point $(p,1)$
+and the line is the origin plus all those points $(x,y)$
+such that $x / y = p$.
+
+This is the basis of /projective/ geometry
+and there are so many fun things to say.
+Maybe I'll just confine myself to saying that
+all the /affine/ subspaces of a vector space $V$,
+say $\mathbb{R}^n$,
+are /linear/ subspaces of $V \oplus \mathbb{R}$,
+so $\mathbb{R}^{n+1}$,
+/plus/ an extra subspace "at infinity".
+So for our example of points on the line,
+we get an extra "point at infinity",
+which corresponds to the linear subspace of $\mathbb{R}^2$
+spanned by $(1, 0)$.
+This line is /parallel/ to the line $y = 1$,
+so only "meets" it "at infinity".
+Projective geometry is really so fun, but maybe I'll stop there with it.
+
+** Projective planes in $\mathbb{R}^4$
+
+So, where were we?
+Oh right, finding an equation for an affine plane in $\mathbb{R}^3$.
+Well, an affine plane
+is a /linear/ $3$-dimensional subspace of $\mathbb{R}^4$.
+If we started with three points in $\mathbb{R}^2$
+with coordinates $x$ and $y$,
+we get a $3$-dimensional subspace of $\mathbb{R}^4$
+spanned by vectors of the form $(x, y, x^2 + y^2, 1)$.
+
+A fourth point will lie /on/ the circle determined by the first three
+if and only if the set of four resulting vectors in $\mathbb{R}^4$
+is linearly dependent.
+What's more, we can extract more information:
+let's go down a dimension or two.
+Think about a pair of linearly independent vectors in $\mathbb{R}^2$.
+We can form the $2\times 2$ /matrix/
+with those vectors as columns.
+Like, for example $\vec x = (1,0)$ and $\vec y = (0,1)$.
+Notice that the square determined by these vectors has area
+equal to the (absolute value of the) /determinant/ of the matrix
+$\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$,
+which is $1 * 1 - 0 * 0 = 1$.
+In general, the area of the parallelogram
+spanned by two vectors $(a,b)$ and $(c,d)$
+is $|ad - bc|$.
+By /convention/ we say that these vectors are /positively oriented/
+if the determinant $ad - bc$ is positive.
+Thus we should list $\vec x$ before $\vec y$.
+
+Now suppose the plane spanned by our vectors is a
+linear subspace of $\mathbb{R}^3$.
+There is still a notion of determinant
+for $3\times 3$ (and in general $n\times n$) matrices,
+and we can notice that if our plane is the $xy$-plane in $\mathbb{R}^3$
+and our third vector is $\vec z = (0,0,z)$,
+the /determinant/ (which is more complicated to write out)
+of the $3\times 3$ matrix will be positive
+if and only if two things happen:
+one, the vectors spanning the plane are positively oriented,
+and two, $z > 0$.
+
+Zooming all the way back out,
+this tells us that the /sign/ of a $4\times 4$ determinant
+can tell us whether a fourth point is inside or outside of a circumcircle.
+
+Explicitly, the matrix in question is
+
+$\begin{pmatrix}
+a_x & b_x & c_x & d_x \\
+a_y & b_y & c_y & d_y \\
+a_x^2 + a_y^2 & b_x^2 + b_y^2 & c_x^2 + c_y^2 & d_x^2 + d_y^2 \\
+1 & 1 & 1 & 1
+\end{pmatrix}$
+
+But! There's a catch:
+we need to know that the points $A$, $B$ and $C$
+are in some sense positively oriented.
+What's that about, and can we detect that mathematically?
+Let's go down a dimension:
+pretend that $A$ is the origin.
+We said that the (positive) $x$-axis should come /before/
+the positive $y$-axis,
+because the determinant of $\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$
+is positive, while the determinant of
+$\begin{pmatrix}0 & 1\\ 1 & 0\end{pmatrix}$
+is negative.
+In fact, if we keep $A$ where it is at the origin,
+we see that this means walking around the triangle $\triangle ABC$
+from $A$ to $B$ to $C$
+is /counterclockwise/
+(assuming as usual that positive $x$ is to the right
+and positive $y$ is up.)
+
+In other words, this will be the case just when the determinant
+of the $2\times 2$ matrix
+$\begin{pmatrix}
+b_x - a_x & c_x - a_x \\
+b_y - a_y & c_y - a_y
+\end{pmatrix}$ is positive.
+But let's get a little galaxy-brained for a second:
+what if we don't like the subtraction there?
+Our affine triangle
+is a cross-section of a /linear/ parallelepiped
+(like a parallelogram but three-dimensional)
+spanned by the vectors $(a_x, a_y, 1)$ in $\mathbb{R}^3$.
+The vertices of this triangle
+are in counterclockwise order
+if and only if the determinant of the corresponding $3\times 3$
+matrix is positive!
+(Right? If the triangle was the points $(0,0)$, $(1,0)$ and $(0,1)$,
+then the parallelepiped goes from $(0,0,1)$ to $(1,0,1)$ to $(0,1,1)$,
+and an easy “expansion by minors” argument
+shows that the determinant of
+$\begin{pmatrix}0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & 1 \end{pmatrix}$
+is positive.)
+
+In other words,
+we may as well evaluate the $3\times 3$ determinant
+$\begin{pmatrix}
+a_x & b_x & c_x \\
+a_y & b_y & c_y \\
+1 & 1 & 1
+\end{pmatrix}$
+instead!
+
+I think this stuff is just so neat.
+
+
+
