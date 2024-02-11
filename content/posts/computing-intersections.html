@@ -1,0 +1,160 @@
+---
+title: "Computing intersections, projectively"
+math: true
+date: 2024-02-02T09:15:00-05:00
+---
+
+<p>
+This is a post about affine or projective geometry.
+It's also a post about intersections.
+Like, suppose you take two line segments
+and you want to ask: do these line segments intersect?
+And suppose you're a little obsessed with linear algebra.
+So let's use it if we can.
+</p>
+
+<p>
+As I mentioned in my last post,
+one useful aspect of the affine or projective perspective on geometry
+is that it turns <i>affine</i> subspaces,
+like points and lines that don't have to go through the origin,
+into <i>linear</i> subspaces
+of one larger dimension
+which <i>do</i> contain the origin
+and thus can be reasoned about and manipulated with matrices
+and the tools of linear algebra.
+</p>
+
+<p>
+The standard trick here is to imagine your “ambient” space,
+like the line, the plane, 3-dimensional space and so on,
+as <i>sitting inside</i> a space of dimension one higher
+as the collection of points with last coordinate equal to one.
+Like, if we’re thinking about the line to begin with,
+put it inside the Cartesian plane as the subspace \(y = 1\).
+an affine subspace of the line,
+like a point,
+yields (uniquely)
+a <i>linear</i> subspace of the plane of dimension one higher.
+So if points are zero-dimensional, we should be expecting
+a line through the origin—and indeed,
+for any point on the line \(y = 1\),
+like the point \((x,1)\), where \(x\) could be \(2\) or \(0\) or \(1,500,743\),
+there exists a unique line through the origin and that point.
+Reasoning about the point
+and its corresponding line are in some sense the same,
+provided you eventually look back at the slice \(y = 1\).
+</p>
+
+<p>
+Anyway, suppose we have two affine subspaces of, like, \(\mathbb{R}^n\)
+(so think two lines in the plane, for example).
+Let’s call them \(A\) and \(B\).
+They yield <i>linear</i> subspaces of \(\mathbb{R}^{n+1}\) as described above,
+and let’s call these linear subspaces \(A\) and \(B\).
+Now, something like a line segment is usually given to us as two points,
+right, like the line segment from \(A\) to \(B\).
+Or a plane (or a circle or a triangle in it) might be given to us as three points.
+The point is that the corresponding <i>vectors</i> in \(\mathbb{R}^{n+1}\)
+<i>span</i> the linear subspace.
+That is, if you have an affine line in \(\mathbb{R}^2\),
+say the one through the points \((3,1)\) and \((1,3)\),
+the corresponding <i>plane</i> in \(\mathbb{R}^{2+1}\)
+is made up of linear combinations of the vectors \((3,1,1)\) and \((1,3,1)\),
+and if you look at the collection of those linear combinations with last coordinate
+equal to \(1\), you’ll see the line you started with.
+</p>
+
+<p>
+Let’s take another line in the plane,
+like say the line through \((1,1)\) and \((3,3)\).
+We know ahead of time that these lines intersect
+(and in fact the line <i>segments</i> intersect)
+at the point \((2,2)\).
+But! we can use linear algebra to determine this point of intersection.
+Abstractly, like, by themselves, without reference to the plane or $2+1$-dimensional space,
+we have four vectors, so a $4$-dimensional space.
+We can <i>map</i> these four vectors back into $3$-dimensional space any way we’d like,
+but let’s say that the line \(A\) we want to map to <i>positively</i>
+while the line \(B\) we’ll map to <i>negatively.</i>
+Here’s why: if we do so, anything in the <i>intersection</i> of \(A\) and \(B\)
+will be sent to the origin, the vector that is all \(0\)!
+This mapping we can think of as a <i>matrix</i>
+and the set of vectors mapped to \(0\) as the “null space”
+or <i>solution space</i> of that matrix thought of as a system of linear equations.
+</p>
+
+<p>
+More concretely, I’m thinking of the matrix
+\(\begin{pmatrix}
+3 & 1 & -1 & -3 \\
+1 & 3 & -1 & -3 \\
+1 & 1 & -1 & -1 \\
+\end{pmatrix}\).
+This matrix, you’ll notice,
+has four columns and three rows.
+Each of the columns corresponds to one of our points
+(or really, the <i>vector</i> in $(2+1)$-dimensional space corresponding to that point)
+and the columns corresponding to the last two points
+(the second line we chose)
+are negative.
+If we think of an <i>abstract combination</i> of the four vectors
+\(\vec{a}_1\), \(\vec{a}_2\), \(\vec{b}_1\) and \(\vec{b}_2\),
+this matrix places those vectors into $(2+1)$-dimensional space
+by sending \(\vec{a}_1\) to the vector \((3,1,1)\),
+the vector \(\vec{b}_2\) to the vector \((-3,-3,-1)\) and so on.
+</p>
+
+<p>
+One way to find the <i>null space</i> of this matrix is to <i>row-reduce it</i>
+and then read off from the resulting entries
+relationships between the corresponding vectors.
+I won’t explain how to do that; row-reducing
+is meditative and best practiced “in the privacy of one’s home”
+as some mathematicians like to say.
+Anyway, you end up with this matrix
+\(\begin{pmatrix}
+1 & 0 & 0 & -1 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & -1 \\
+\end{pmatrix}\).
+Let’s <i>multiply</i> this matrix by a formal matrix like \((a_1, a_2, b_1, b_2)\)
+and set the result equal to zero.
+We get \((a_1 - b_2, a_2 - b_2, b_1 - b_2)\).
+For this to be zero,
+we conclude that \(a_1 = a_2 = b_1 = b_2\).
+In other words,
+an abstract 4-dimensional combination of our points
+gets <i>mapped to zero</i>
+by this matrix when it’s an <i>equal</i> combination of the four vectors.
+</p>
+
+<p>
+Since we’re not so interested in the abstract points,
+let’s actually combine our four actual vectors according to this recipe:
+we add \((3,1,1)\) to \((1,3,1)\) and \((1,1,1)\) and \((3,3,1)\)
+and we get \((8, 8, 4)\).
+This point is, of course, not on the subspace with last coordinate equal to \(1\),
+but we can restore that property by dividing through by that last coordinate, the \(4\).
+And voila! we get the point \((2,2,1)\), which is what we were expecting!
+</p>
+
+<p>
+You might be wondering what happens if we take two lines that <i>do not</i> intersect.
+The curious thing about this process
+is that the corresponding <i>linear</i> subspaces of \(\mathbb{R}^{2+1}\) <i>do</i> intersect,
+(because all linear subspaces of a vector space contain the origin).
+I encourage you to try it and see!
+</p>
+
+<p>
+Just to give you a hint,
+if you replace the line through \((3,1)\) and \((1,3)\)
+with the one through \((3,1)\) and \((5,3)\)
+(so this line is parallel to the one through \((1,1)\) and \((3,3)\)),
+the resulting matrix should be something like
+\(\begin{pmatrix}
+1 & 0 & 0 & 1 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 1 \\
+\end{pmatrix}\).</p>
