@@ -27,16 +27,6 @@ over MIDI or OSC.
 Currently seamstress, which is free software licenced under the [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) 
 runs on macOS and Linux.
 I’m excited to push its capabilities further and welcome suggestions and collaboration.
-
-On January 28th, I'll be leading a workshop with [Dan Derks](https://dndrks.com/)
-at [The Firehouse](https://firehouseworcester.neocities.org) in Worcester, MA.
-More details and sign up [here](https://dndrks.com/firehouse.html).
-
-![flyer for workshop](/img/flyer-01-50.png)
-
-Also on January 28th at the Firehouse, I'll perform with Dan and [A. Campbell Payne](https://acampbellpayne.com).
-
-![flyer for show](/img/flyer-02-50.png)
  
 In 2022, I recorded and released an album of pop songs as Alanza called [Learning to Run](https://alanza.bandcamp.com/album/learning-to-run).
  
