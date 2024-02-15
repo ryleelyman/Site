@@ -1,0 +1,168 @@
+#+options: toc:nil
+#+begin_export html
+---
+title: "Understanding curvature II: Gaussian curvature"
+math: true
+date: 2024-02-15T10:30:00-05:00
+---
+#+end_export
+
+The purpose of this post is to pick up where the last one left off:
+the story of curvature from a, like, “geometer’s geometer” standpoint.
+
+# more
+
+#+TOC: headlines 2
+
+* Surfaces in $\mathbb{R}^3$.
+Just as we can /parametrize/ curves $\gamma$ in $\mathbb{R}^2$,
+there is a notion of a /parametrized surface/ in $\mathbb{R}^3$.
+This is given by /three/ functions of /two/ variables,
+i.e. $(x(s,t), y(s,t), z(s,t))$.
+One common example is the graph of a function of two variables,
+i.e. $(x, y, f(x,y))$,
+like the function $z = x^2 + y^2$ that came up in an earlier post.
+Just as a parametric curve is a slight generalization
+of the graph of a function in $\mathbb{R}^2$,
+so too should you think of the notion of a parametric surface.
+
+There are also /implicit/ surfaces,
+like the surface of a sphere when defined as
+the set of points $(x,y,z)$ satisfying the equation
+$x^2 + y^2 + z^2 = 1$.
+We’ll use both freely and not attempt to worry about converting between them.
+There are, of course, plenty of pathological examples,
+but you should imagine the things one attempts to mean with this definition,
+like the surface of a donut,
+or the graph of $z = x^2 + y^2$.
+
+* Curvatures at a point
+For a smooth surface,
+i.e. similar to smooth curves like $y = x^2$
+or parametrized curves like $(\cos t, \sin t)$
+and implicit curves like $y^2 - x^2 = 1$,
+there is, rather than a tangent /line,/
+a whole /plane/ tangent to the surface at a point $p$.
+Now, for every curve on the surface through $p$,
+we have a tangent line, and one can think of
+the tangent plane as the plane containing,
+for every such curve,
+the tangent line at $p$.
+The fact that there is a unique such plane
+is baked into the idea for what it means for the surface to be smooth,
+essentially.
+
+** Normal lines
+Now, given a plane containing a point $p$ in three dimensional space,
+there is a unique line /normal/ to that plane through $p$.
+Like, if the plane is the $xy$-plane,
+the normal line is the $z$-axis:
+it’s perpendicular to every line contained in the plane.
+Mathematicians typically use a convention called the “right hand rule”
+for determining a /direction/ for this line,
+but it depends on a choice of /orientation/ of the plane,
+that is, of two ordered, oriented lines in the plane that cross at $p$.
+Going back to our previous example, maybe our lines are the $x$-axis
+and the $y$-axis.
+Anwyay, you’re supposed to imagine orienting your closed right hand
+with your thumb sticking up
+such that your fingers curl (counterclockwise!)
+from the direction of the first oriented line to the second.
+The direction that your thumb points is the orientation for the normal line.
+
+That is, in our situation we go $x$-axis, then $y$-axis and the $z$-axis
+is directed upwards.
+It’s just a convention, though—any choice will do,
+as long as it’s consistent.
+
+** Principal curvatures
+
+Anyway, back to curvature.
+So, given our tangent plane,
+we can choose any straight line in it through $p$
+and the normal line.
+This gives us a plane that /slices through/ the surface—and
+a plane curve, namely the intersection of this plane
+with the surface itself.
+Since any such slicing plane contains the normal vector,
+we can compute the signed curvature of the curve
+with respect to /that/ normal vector.
+
+In general, as we change the tangent line through $p$,
+the curvature changes.
+The /principal/ curvatures at $p$
+are the /maximum/ and /minimum/ signed curvatures at $p$.
+
+We can compute them for some simple surfaces.
+For the sphere $x^2 + y^2 + z^2 = 1$, the paraboloid $z = x^2 + y^2$
+and the hyperboloid $z^2 - x^2 - y^2 = 1$,
+for the special point where $x = y = 0$,
+since $z$ is really a function of $x^2 + y^2$,
+that is, because we have /rotational symmetry/
+all the curvatures will be equal; we computed them in the previous post.
+
+#+begin_export html
+{{< figure src="/img/curvature/saddle-surface.jpeg" >}}
+#+end_export
+
+For something like the saddle $z = x^2 - y^2$,
+we see different behavior at the origin:
+for the line $y = 0$, we end up looking at the function $z = x^2$,
+whose curvature we computed to be $-2$
+(negative, right, because we are curving towards the positive $z$ axis)
+last time.
+For the line $x = y$,
+the function itself is a line, with curvature $0$.
+For the line $x = 0$,
+we’re looking at the function $z = -y^2$,
+whose curvature is $+2$.
+It turns out the curvatures in the $x = 0$ and $y = 0$ lines are principal.
+
+** Gaussian curvature
+
+The /Gaussian curvature/ of a surface at the point $p$
+is the /product/ of the principal curvatures at the point.
+
+Gauss’s /Theorema egregium/ states that the Gaussian curvature of a surface,
+although it is /defined/ in terms of an embedding of that surface
+into three-dimensional space,
+is actually an /intrinsic/ property of the surface
+that does not change if the surface is not stretched.
+Moreover, even if the surface is stretched,
+the /sign/ of the Gaussian curvature should not change.
+Right? replacing $z = x^2 - y^2$ with $z = ax^2 - by^2$
+will still have negative curvature at $(0,0)$
+provided $a$ and $b$ have the same sign.
+
+* Manifolds in $\mathbb{R}^n$ in general
+
+In the general case, how would one go about defining curvature?
+As it turns out, there are several ways.
+For (smooth) manifolds embedded in $\mathbb{R}^n$,
+one way is to define the /sectional curvatures/
+of a point $p \in M$
+to be the /Gaussian curvatures/
+of any /tangent $2$-plane/ at that point.
+For a manifold of dimension $m > 2$,
+there are infinitely many tangent $2$-planes through any point,
+and hence many many sectional curvatures.
+If we believe Gauss's theorem,
+each of these Gaussian curvatures should be an intrinsic property
+of $M$, and hence should not change if we embed $M$ in $\mathbb{R}^n$
+differently without distorting the geometry of the embedding.
+
+There’s a way to make this precise with reference only to the manifold $M$
+and not to the space it is embedded into.
+As a kid (that is, when I was 21 and taking Riemannian geometry)
+I thought this was the neatest part of the subject—that you can do
+all of this fancy computation with just the manifold and not
+any space it is embedded into.
+
+Now, don’t get me wrong, I still think that’s extremely neat.
+But as a mathematician working geometrically with other spaces,
+I actually rarely meet a manifold that doesn’t come equipped
+with a way of embedding it (or its universal cover)
+into $\mathbb{R}^n$,
+and the manifolds which I /do/ think of sort of “by themselves”
+tend to have dimension at most three,
+so one can actually tend to reason about these things “by hand” a little more.

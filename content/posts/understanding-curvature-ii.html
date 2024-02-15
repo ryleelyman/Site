@@ -1,0 +1,227 @@
+---
+title: "Understanding curvature II: Gaussian curvature"
+math: true
+date: 2024-02-15T10:30:00-05:00
+---
+
+<p>
+The purpose of this post is to pick up where the last one left off:
+the story of curvature from a, like, “geometer’s geometer” standpoint.
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org42d19e1">1. Surfaces in \(\mathbb{R}^3\).</a></li>
+<li><a href="#org6e45570">2. Curvatures at a point</a>
+<ul>
+<li><a href="#org048d7c9">2.1. Normal lines</a></li>
+<li><a href="#orgc1bb85e">2.2. Principal curvatures</a></li>
+<li><a href="#orgad8b034">2.3. Gaussian curvature</a></li>
+</ul>
+</li>
+<li><a href="#org5df2dfe">3. Manifolds in \(\mathbb{R}^n\) in general</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org42d19e1" class="outline-2">
+<h2 id="org42d19e1"><span class="section-number-2">1.</span> Surfaces in \(\mathbb{R}^3\).</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Just as we can <i>parametrize</i> curves \(\gamma\) in \(\mathbb{R}^2\),
+there is a notion of a <i>parametrized surface</i> in \(\mathbb{R}^3\).
+This is given by <i>three</i> functions of <i>two</i> variables,
+i.e. \((x(s,t), y(s,t), z(s,t))\).
+One common example is the graph of a function of two variables,
+i.e. \((x, y, f(x,y))\),
+like the function \(z = x^2 + y^2\) that came up in an earlier post.
+Just as a parametric curve is a slight generalization
+of the graph of a function in \(\mathbb{R}^2\),
+so too should you think of the notion of a parametric surface.
+</p>
+
+<p>
+There are also <i>implicit</i> surfaces,
+like the surface of a sphere when defined as
+the set of points \((x,y,z)\) satisfying the equation
+\(x^2 + y^2 + z^2 = 1\).
+We’ll use both freely and not attempt to worry about converting between them.
+There are, of course, plenty of pathological examples,
+but you should imagine the things one attempts to mean with this definition,
+like the surface of a donut,
+or the graph of \(z = x^2 + y^2\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e45570" class="outline-2">
+<h2 id="org6e45570"><span class="section-number-2">2.</span> Curvatures at a point</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For a smooth surface,
+i.e. similar to smooth curves like \(y = x^2\)
+or parametrized curves like \((\cos t, \sin t)\)
+and implicit curves like \(y^2 - x^2 = 1\),
+there is, rather than a tangent <i>line,</i>
+a whole <i>plane</i> tangent to the surface at a point \(p\).
+Now, for every curve on the surface through \(p\),
+we have a tangent line, and one can think of
+the tangent plane as the plane containing,
+for every such curve,
+the tangent line at \(p\).
+The fact that there is a unique such plane
+is baked into the idea for what it means for the surface to be smooth,
+essentially.
+</p>
+</div>
+
+<div id="outline-container-org048d7c9" class="outline-3">
+<h3 id="org048d7c9"><span class="section-number-3">2.1.</span> Normal lines</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Now, given a plane containing a point \(p\) in three dimensional space,
+there is a unique line <i>normal</i> to that plane through \(p\).
+Like, if the plane is the $xy$-plane,
+the normal line is the $z$-axis:
+it’s perpendicular to every line contained in the plane.
+Mathematicians typically use a convention called the “right hand rule”
+for determining a <i>direction</i> for this line,
+but it depends on a choice of <i>orientation</i> of the plane,
+that is, of two ordered, oriented lines in the plane that cross at \(p\).
+Going back to our previous example, maybe our lines are the $x$-axis
+and the $y$-axis.
+Anwyay, you’re supposed to imagine orienting your closed right hand
+with your thumb sticking up
+such that your fingers curl (counterclockwise!)
+from the direction of the first oriented line to the second.
+The direction that your thumb points is the orientation for the normal line.
+</p>
+
+<p>
+That is, in our situation we go $x$-axis, then $y$-axis and the $z$-axis
+is directed upwards.
+It’s just a convention, though—any choice will do,
+as long as it’s consistent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc1bb85e" class="outline-3">
+<h3 id="orgc1bb85e"><span class="section-number-3">2.2.</span> Principal curvatures</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Anyway, back to curvature.
+So, given our tangent plane,
+we can choose any straight line in it through \(p\)
+and the normal line.
+This gives us a plane that <i>slices through</i> the surface—and
+a plane curve, namely the intersection of this plane
+with the surface itself.
+Since any such slicing plane contains the normal vector,
+we can compute the signed curvature of the curve
+with respect to <i>that</i> normal vector.
+</p>
+
+<p>
+In general, as we change the tangent line through \(p\),
+the curvature changes.
+The <i>principal</i> curvatures at \(p\)
+are the <i>maximum</i> and <i>minimum</i> signed curvatures at \(p\).
+</p>
+
+<p>
+We can compute them for some simple surfaces.
+For the sphere \(x^2 + y^2 + z^2 = 1\), the paraboloid \(z = x^2 + y^2\)
+and the hyperboloid \(z^2 - x^2 - y^2 = 1\),
+for the special point where \(x = y = 0\),
+since \(z\) is really a function of \(x^2 + y^2\),
+that is, because we have <i>rotational symmetry</i>
+all the curvatures will be equal; we computed them in the previous post.
+</p>
+
+{{< figure src="/img/curvature/saddle-surface.jpeg" >}}
+
+<p>
+For something like the saddle \(z = x^2 - y^2\),
+we see different behavior at the origin:
+for the line \(y = 0\), we end up looking at the function \(z = x^2\),
+whose curvature we computed to be \(-2\)
+(negative, right, because we are curving towards the positive \(z\) axis)
+last time.
+For the line \(x = y\),
+the function itself is a line, with curvature \(0\).
+For the line \(x = 0\),
+we’re looking at the function \(z = -y^2\),
+whose curvature is \(+2\).
+It turns out the curvatures in the \(x = 0\) and \(y = 0\) lines are principal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgad8b034" class="outline-3">
+<h3 id="orgad8b034"><span class="section-number-3">2.3.</span> Gaussian curvature</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+The <i>Gaussian curvature</i> of a surface at the point \(p\)
+is the <i>product</i> of the principal curvatures at the point.
+</p>
+
+<p>
+Gauss’s <i>Theorema egregium</i> states that the Gaussian curvature of a surface,
+although it is <i>defined</i> in terms of an embedding of that surface
+into three-dimensional space,
+is actually an <i>intrinsic</i> property of the surface
+that does not change if the surface is not stretched.
+Moreover, even if the surface is stretched,
+the <i>sign</i> of the Gaussian curvature should not change.
+Right? replacing \(z = x^2 - y^2\) with \(z = ax^2 - by^2\)
+will still have negative curvature at \((0,0)\)
+provided \(a\) and \(b\) have the same sign.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5df2dfe" class="outline-2">
+<h2 id="org5df2dfe"><span class="section-number-2">3.</span> Manifolds in \(\mathbb{R}^n\) in general</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+In the general case, how would one go about defining curvature?
+As it turns out, there are several ways.
+For (smooth) manifolds embedded in \(\mathbb{R}^n\),
+one way is to define the <i>sectional curvatures</i>
+of a point \(p \in M\)
+to be the <i>Gaussian curvatures</i>
+of any <i>tangent $2$-plane</i> at that point.
+For a manifold of dimension \(m > 2\),
+there are infinitely many tangent $2$-planes through any point,
+and hence many many sectional curvatures.
+If we believe Gauss's theorem,
+each of these Gaussian curvatures should be an intrinsic property
+of \(M\), and hence should not change if we embed \(M\) in \(\mathbb{R}^n\)
+differently without distorting the geometry of the embedding.
+</p>
+
+<p>
+There’s a way to make this precise with reference only to the manifold \(M\)
+and not to the space it is embedded into.
+As a kid (that is, when I was 21 and taking Riemannian geometry)
+I thought this was the neatest part of the subject—that you can do
+all of this fancy computation with just the manifold and not
+any space it is embedded into.
+</p>
+
+<p>
+Now, don’t get me wrong, I still think that’s extremely neat.
+But as a mathematician working geometrically with other spaces,
+I actually rarely meet a manifold that doesn’t come equipped
+with a way of embedding it (or its universal cover)
+into \(\mathbb{R}^n\),
+and the manifolds which I <i>do</i> think of sort of “by themselves”
+tend to have dimension at most three,
+so one can actually tend to reason about these things “by hand” a little more.
+</p>
+</div>
+</div>
