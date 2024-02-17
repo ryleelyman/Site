@@ -4,6 +4,11 @@
 title: "Meagreness"
 math: true
 date: 2023-12-16T12:00:00-04:00
+summary: >
+  The purpose of this post is to try to get my head wrapped around
+  a couple of “analytic” concepts:
+  the Baire property, meagreness and so forth.
+  I’ll attempt to give full definitions and proofs, since this is mostly for my reference.
 ---
 #+END_EXPORT
 

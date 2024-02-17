@@ -4,6 +4,12 @@
 title: "William Hazard's Theatre of the Flat Imagination"
 math: false
 date: 2023-11-29T12:00:00-04:00
+summary: >
+  I had the great pleasure of playing William Hazard's Theatre of the Flat Imagination Volume 2: Jack the Modernist
+  on November 18th in Philadelphia
+  together with Dan Derks as parens chat.
+  The purpose of this post is to share the recording of the performance
+  that Dan thoughtfully edited and to talk a little about the set we played.
 ---
 #+END_EXPORT
 #+TITLE: William Hazard's Theatre of the Flat Imagination
