@@ -1,7 +1,7 @@
 #+options: toc:nil
 #+begin_export html
 ---
-title: "For completeness: real numbers and Cartesian geometry"
+title: "For completeness: real numbers"
 date: 2024-04-20T10:40:00-04:00
 math: true
 summary: >
