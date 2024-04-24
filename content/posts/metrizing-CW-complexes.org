@@ -1,0 +1,246 @@
+---
+title: "Metrizing CW complexes"
+math: true
+date: 2024-04-24T09:24:00-04:00
+summary: >
+  A sad fact that every topologist should be surprised about at some point
+  in their career is that many apparently "nice" CW complexes
+  are not actually metrizable.
+  The purpose of this post is to introduce CW complexes and
+  talk about metrizing them.
+---
+
+A sad fact that every topologist should be surprised about
+at some point in their career is that many apparently “nice” CW complexes
+are not actually metrizable.
+The purpose of this post is to introduce CW complexes and
+talk about metrizing them.
+
+#+toc: headlines: 2
+
+* The $n$-sphere and $(n+1)$-disc
+Before we get to the definition of a CW complex,
+which I think is one of the neatest bits of “synthetic” topology out there,
+we need to meet the building blocks of CW complexes:
+the $n$-sphere and the $(n+1)$-disc.
+
+In calculus and linear algebra,
+we meet the spaces $\mathbb{R}^n$:
+starting with $\mathbb{R}$, the /real line,/
+which [[{{% ref "posts/for-completeness" %}}][we just talked about]],
+and then Cartesian products thereof.
+
+It’s always interesting to me to remember that $\mathbb{R}^n$
+with the Euclidean metric is just a /model/ of Euclidean geometry,
+a map and not the territory.
+Nothing in classical geometry required that every point in space
+be specified by a tuple of coordinates.
+
+Anyway, $\mathbb{R}^n$ comes equipped with the /Euclidean norm/ $\|\cdot\|$,
+defined as
+\[ \|\vec x\| = \sqrt{x_1^2 + \cdots + x_n^2}, \]
+where $\vec x$ denotes the coordinate tuple $(x_1,\ldots,x_n)$.
+
+The set of points $\vec x$ in $\mathbb{R}^{n+1}$
+satisfying $\|\vec x\| = 1$
+is the /unit $n$-sphere,/ $S^n$.
+There is a unit $0$-sphere in $\mathbb{R}$ comprising the points $1$ and $-1$,
+then a unit circle in $\mathbb{R}^2$,
+a unit $2$-sphere in $\mathbb{R}^3$,
+the brain-breaking /three-dimensional/ sphere in $\mathbb{R}^4$,
+and so on.
+If instead we ask that $\|\vec x \| \le 1$,
+we get the unit $(n+1)$-disc $D^{n+1}$ in $\mathbb{R}^{n+1}$.
+Thus for example the unit circle in $\mathbb{R}^2$ does not contain
+the points it surrounds,
+while the unit $2$-disc does.
+
+Every point of $D^{n+1}$ may be written as
+$t \vec x = (tx_0, \ldots, tx_n)$ with $t$ in $[0,1]$
+and $\vec x$ a point of the unit $n$-sphere.
+This representation is unique except for at the origin
+where any choice of $\vec x$ paired with $t = 0$ will do.
+* Metric spaces
+The spaces $\mathbb{R}^{n+1}$, $D^{n+1}$ and $S^n$ are examples of metric spaces.
+A /metric/ on a set $X$ is a function
+$d\colon X \times X \to \mathbb{R}$
+satisfying the following properties
+1. $d(x,y) \ge 0$ and $d(x,y) = 0$ implies that $x = y$.
+   Intuitively this makes sense: the “distance” between two points should be nonzero
+   when the points are different,
+   and a negative distance doesn’t make much sense.
+2. $d(x,y) = d(y,x)$.
+   This also makes sense: turning the ruler around shouldn’t change its measurement.
+   (There are interesting generalizations of the concept of a metric space where this doesn’t hold!
+   And intuitively there are arguments to be made against this axiom too:
+   for example, maybe as the crow flies it doesn’t matter whether you’re going from
+   point A to point B, but things like hills or a strong wind
+   could make it experientially easier to go one way than the other.)
+3. $d(x, z) \le d(x, y) + d(y, z)$.
+   This is known as the “triangle inequality” and is the most important of the axioms.
+   Maybe you remember from a geometry class that even the long side of a triangle
+   with straight line sides
+   is always shorter than the sum of the other two sides.
+   Intuitively you might think it’s faster to go straight to your destination
+   $z$ from home at $x$ than to detour through $y$—at worst $y$
+   could be “on the way” and then it wouldn’t take you any longer.
+
+The spaces above are metric spaces:
+the Euclidean /norm/ on $\mathbb{R}^{n+1}$
+yields a /metric/ $d \colon \mathbb{R}^{n+1} \times \mathbb{R}^{n+1} \to \mathbb{R}$
+defined as $d(\vec x,\vec y) = \| \vec x - \vec y\|$,
+where the subtraction is done “pointwise”.
+Since both $D^{n+1}$ and $S^{n}$ are /subsets/ of $\mathbb{R}^{n+1}$,
+/restricting/ the domain of definition of the metric
+yields a metric.
+This metric is slightly better for the disc than for the sphere,
+for the reason that the disc is /convex:/
+it contains the straight lines between any two points.
+Points on this straight line make the triangle inequality above an /equality,/
+for which mathematicians say that straight lines are /geodesic/ in $\mathbb{R}^{n+1}$.
+
+Anyway, because the sphere $S^{n}$ never contains a straight line,
+the Euclidean distance on $\mathbb{R}^{n+1}$ restricted to $S^{n}$
+is not geodesic.
+The /round metric,/ which I believe I mentioned [[{{% ref "posts/spaces-of-constant-curvature" %}}][a few posts ago]], corrects this problem.
+
+A metric space deserves the name “space” because it comes equipped with a /topology,/
+where the sets $B_{\epsilon}(x) = \{ y : d(x,y) < \epsilon \}$
+of points $y$ at distance less than $\epsilon$ from $x$ are declared “open”.
+
+** Metrizability
+Topological spaces in general can sometimes feel a little arbitrary:
+the rules of what defines a “topology”, while at an appropriate level of generality,
+allow all kinds of strange behavior.
+Metric spaces are a bit better behaved.
+They are, for instance, Hausdorff and first countable,
+and they come equipped with many many maps to the real numbers $\mathbb{R}$,
+one of the fundamental mathematical objects.
+So, given a space, one often wants to know if it is /metrizable./
+That is, does there exist a metric $d \colon X \times X \to \mathbb{R}$
+such that the /metric topology/ on $X$ and whatever topology it walked in with
+have the same open sets?
+
+Being metrizable already implies the existance of the nice properties,
+but it is qualitatively weaker than being /metric./
+That is, given a metrizable space,
+it doesn't follow that one can easily put to hand the “right” metric to look at it with.
+* CW complexes
+One way to build new topological spaces from old ones is to take some shapes and glue.
+For us, the shapes will be discs,
+and we’ll glue pretty arbitrarily,
+but always along the boundary spheres
+in such a way that we can build up our space “one dimension at a time”.
+
+Formally, imagine beginning with a bunch of discs,
+sorted by dimension but otherwise fairly arbitrary.
+Let’s let $e^{n}_{i}$ denote an \(n\)-dimensional disc,
+where $i$ is drawn from some indexing set $I$.
+We'll say that our CW complex is /countable/
+if $I$ can be taken to be the counting numbers $\mathbb{N}$.
+If we have zero \(n\)-dimensional discs for $n$ above some threshold $N$,
+then we'll say our CW complex, whatever it is, is \(N\)-dimensional.
+
+Here's the guts of the definition:
+imagine laying out your \(0\)-dimensional discs (or /\(0\)-cells/ for short),
+then connect them up with \(1\)-cells in some way,
+then layer on the \(2\)-cells so that the circle boundary of each \(2\)-dimensional disc
+drizzles over what you have already in any way you'd like,
+and then continue with the higher-dimensional cells.
+
+Explicitly, define $X^{0}$ to be a discrete set of points, one for each \(0\)-cell.
+Then supposing $X^{n}$ has been defined,
+define $X^{n+1}$ by taking a map $f^{n+1}_{i}\colon S^{n} \to X^{n}$,
+one for each \((n + 1)\)-cell,
+forming the disjoint union
+\[
+  \coprod_{i} e_i^{n+1} \sqcup X^n
+\]
+and taking the quotient by identifying each point on the boundary circle of $e^{n+1}_{i}$
+with its image under $f^{n+1}_{i}$.
+
+** The name CW
+As far as I understand it, the name CW is an abbreviation for two topological facts about the complex.
+One of them, “closure-finiteness”
+requires that the closure of each /open/ \(n\)-cell contains only finitely many cells,
+all of dimension less than \(n\).
+This follows by construction from the compactness of $S^{n-1}$.
+
+The other one, “weak topology” is confusing,
+since “weak” with respect to topologies
+now typically means the exact opposite of what it means in this context.
+What’s relevant is that a set is closed in $X$ if and only if it meets each closed cell in a closed set.
+
+** Not all CW complexes are metrizable
+Maybe the simplest example is the following:
+begin with $e_{0}^{0}, e_{1}^{0}, \ldots$ a countable collection of \(0\)-cells
+and a countable collection $e_{1}^{1}, e_{2}^{1}, \ldots$ a countable collection of \(1\)-cells.
+The boundary “\(0\)-sphere” of each \(1\)-cell is just a two-point set;
+so attach the \(1\)-cell by sending one end of $e_{i}^{1}$ to $e_{0}^{0}$
+and the other to $e_{i}^{0}$.
+The picture is a little spiky star-shaped graph,
+with countably infinitely many edges coming out of a single vertex. Call this $X$.
+
+Although I haven’t talked extensively—and I don’t want to—about the topology on $X$,
+it should be intuitively clear that any open neighborhood of the center vertex
+contains points from each edge.
+So, supposing $X$ were a metric space,
+we could choose a sequence of points in $X$,
+one from each $e_{i}^{1}$,
+such that the \(n\)th point is at distance $\frac{1}{n}$ from $e_{0}^{0}$.
+These points /converge/ [[{{% ref "posts/for-completeness" %}}][in the sense of the previous post]] to $e_{0}^{0}$
+in the metric.
+But! notice that the collection of these points
+actually meets each closed cell in a closed set, namely a single point.
+Since the a sequence converges—if at all—to a limit point of the sequence thought of as a set,
+this is a contradiction.
+Therefore $X$ is not metrizable.
+
+** Continuous injections into metric spaces
+I want to prove the following:
+
+#+begin_quote
+*Theorem.* Every countable CW complex of dimension $N$ admits
+a continuous injection into $\mathbb{R}^{k(N)}$
+for some increasing function $k(N)$ of $N$.
+#+end_quote
+
+It turns out that if $X = X^{N}$ is additionally /locally finite,/
+the map we construct is an embedding,
+but I won't prove it.
+When the map is an embedding (i.e. a /homeomorphism/ onto its image),
+our previous observation allows us to give $X$ the structure of a metric space.
+When we have merely a continuous injection,
+we still have a metric on the /set/ $X$,
+but the metric topology and the CW topology may differ,
+as the previous example shows.
+What is true from the construction is that the metric topology is “weaker”
+or “coarser”, in the sense that it has fewer open sets.
+
+The function $k(n)$ we will use may be defined equivalently as
+$k(n) = \frac{1}{2}(n+1)(n+2)$
+or as the function satisfying $k(0) = 1$ and $k(n) = k(n-1) + n + 1$.
+The optimal function turns out to be $k(n) = 2n + 1$
+for Big Theorem reasons whose proof I haven’t attempted to understand.
+
+The construction is inductive and explicit:
+points of $e^{n+1}_{i}$
+may be written as $t\vec v$ for $t \in [0,1]$ and $\vec v \in S^{n}$.
+If $f^{n+1}_{i} \colon S^{n} \to X^{n}$ is the attaching map
+and $\iota_{n} \colon X^{n} \to \mathbb{R}^{k(n)}$ is the function inductively supposed to exist,
+let $\vec v_{k(n) + 1}$ denote the point of $\mathbb{R}^{k(n+1)}$
+whose \((k(n) + 1)\)st coordinate is $1$ and all other coordinates are $0$.
+
+The function on $e^{n+1}_{i}$ defined as
+$t\vec v \mapsto (t\iota_{n}f^{n+1}_{i}(\vec v), (1-t)t\vec v, (1-t))$
+has the property that it agrees with $\iota_{n}$
+for points in the boundary \(n\)-sphere of $e^{n+1}_{i}$
+and is injective.
+To make distinct \(n+1\)-cells have distinct image,
+we will add to this function the function $t\vec v \mapsto 2 i (1 - t) \vec v_{k(n) + 1}$.
+(The $2$ is there because the diameter of the unit disc is $2$.)
+
+Therefore we may inductively define $\iota_{n+1}$
+as agreeing with $\iota_{n}$ on $X^{n}$
+and otherwise being the sum of the functions above.
+Checking continuity is straightforward.
