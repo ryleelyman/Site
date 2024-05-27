@@ -1,0 +1,212 @@
+---
+title: "Stacks, heaps and garbage collectors—oh my!"
+math: false
+date: 2024-05-25T13:33:00-04:00
+summary: >
+  This is a second post about hither,
+  a little stack-based programming language I wrote.
+  In this post I want to talk about the code behind hither a little bit.
+---
+
+This is a second post about [[https://github.com/ryleelyman/hither][hither]],
+a little stack-based programming language I wrote.
+In this post I want to talk about the code behind hither a little bit.
+
+* hither’s types
+the basic players in the hither virtual machine are the /stack/
+(of which there are really two)
+and the /cell./
+The stacks hold cells, and the cells are the data.
+
+Here’s how cells are defined.
+
+#+begin_src zig
+  pub const Cell = struct {
+      pub const Tag = enum(u2) {
+          slice,
+          integer,
+          number,
+          builtin,
+      };
+
+      tag: Tag,
+      slice_is: enum(u2) {
+          string,
+          word,
+          definition,
+      } = .string,
+      data: packed union {
+          slice: packed struct {
+              address: u32,
+              length: u32,
+          },
+          integer: i64,
+          number: f64,
+          builtin: *const fn (*Hither) Error!void,
+      },
+  };
+#+end_src
+
+Zig has “tagged” unions, so in theory the =tag= field could be replaced
+by writing something like =Cell = union(enum) {…};=
+but that ends up wasting a lot of space on the tag.
+“Packed” unions, however, do not have a tag,
+letting us sneak in the =slice_is= enum into some of the tag’s space.
+
+(By the way, I think Rust and/or Typescript uses the word “enum”
+for what is more or less what Zig and C would call a “union”,
+and reserves “enum” for a type which “enumrates” a list of constant values.)
+
+Anyway, the =data= field takes up 8 bytes
+(well, assuming pointers aren’t any bigger than that lol),
+which can either be a function pointer,
+a floating point number, an integer, or a “slice”
+pointing to some data that exists on hither’s “heap”, more about which later.
+
+Ah, this is a good place to mention something:
+hither doesn’t have a “bytecode” layer.
+Maybe it should?
+Who knows, certainly not me.
+All of this is to say—the builtins are functionally the only “actual code” that hither can run.
+The hither interpreter looks up words in a hash table
+and pushes the result of that lookup onto the stack.
+
+The stack, by the way,
+is a Zig off-the-shelf special,
+a =std.MultiArrayList(Cell)=.
+In Zig, =MultiArrayList= is a neat generic data structure
+that performs a “struct of arrays” transform on data automatically.
+That is, under the hood,
+a =std.MultiArrayList(Cell)= has /three/ lists,
+one for =tag=, =slice_is= and =data=.
+This saves a little memory and is just conceptually really cool.
+
+* hither’s data
+The first version of hither was true to the conceptual description of Forth
+that I read about on [[https://www.forth.com/starting-forth/9-forth-execution/][Forth's website]]:
+essentially anything and everything hither related lived on a single stack,
+one big blob of data sectioned off relevantly.
+Although I never ran into issues,
+I began to feel a little guilty about my usage of the “pad” and “dictionary”,
+the former mostly a place to store strings
+and the latter a place to store “compiled” hither definitions.
+Since I didn’t have a good way to tell whether or not a definition or string
+was “in use”, every lambda, every little string lived as long as hither did.
+
+Since the hither interpreter has a well-defined “end of execution”
+moment every time the interpreter finishes parsing a line,
+garbage collection seemed like a great fit.
+I followed [[https://maplant.com/2020-04-25-Writing-a-Simple-Garbage-Collector-in-C.html][this post on writing a garbage collector in C]],
+although ended up trying to slightly “Ziggify” the resulting code.
+Also, my “heap” is entirely pre-allocated and does not grow—it wouldn’t
+be too much harder to let it grow, as the link above demonstrates,
+but I didn’t want to.
+
+Here is the Heap struct
+
+#+begin_src zig
+  pub const Heap = struct {
+      used: ?*Header,
+      free: ?*Header,
+      buf: [*]align(@sizeOf(Header)) u8,
+      capacity_in_headers: usize,
+
+      pub const Header = struct {
+          size_in_headers: u32,
+          used_size_in_bytes: u32,
+          next: ?*Header,
+
+          comptime std.debug.assert(@alignOf(Header) < @sizeOf(Header));
+      };
+  };
+#+end_src
+
+=used= and =free= are the heads of linked lists,
+with elements drawn from =buf=.
+A =Header= delimits a chunk of memory from =buf=,
+counting itself, and keeping track of how much of itself
+in bytes is actually in use.
+It’s very important (hence the compile-time assertion)
+that Headers are happy to be /aligned/ a little smaller than their /size./
+
+** Alignment
+Oh yeah, alignment.
+Alignment is goofy:
+basically when data is large-ish,
+your CPU expects to accesss that data /aligned/ at some /multiple/ of the byte.
+For example, a =u32= is 4 bytes, and the CPU is so much happier
+to grab that data as if /all/ data were stored in 4-byte chunks
+that the Zig compiler will do its best to enforce that.
+Remember that all data has an /address,/
+describing “where” in memory that data can be found.
+
+#+begin_src zig
+test {
+    std.testing.log_level = .debug;
+    var u: u32 = 40;
+    std.log.debug("0x{x}", .{@intFromPtr(&u)});
+}
+#+end_src
+
+The above test on my machine prints something like
+=[default] (debug): 0x16fc72edc=.
+That’s a number in hexadecimal,
+and notice that its last digit, =c= is 12 in decimal,
+which is /divisible by 4,/
+the alignment of a =u32=.
+
+** Tagging pointers
+Anyway, we can exploit the fact that the last couple digits (in binary)
+of a naturally-aligned =Header= are zero for garbage-collection purposes.
+
+#+begin_src zig
+pub fn tag(header: *Header) void {
+    if (isPtrTagged(header.next)) return;
+    header.next = @ptrFromInt(@intFromPtr(header.next) + @alignOf(Header));
+}
+#+end_src
+
+Because our =Header= structs are drawn from =Heap.buf=,
+which is /overaligned/ to =@sizeOf(Header)=,
+adding the alignment of =Header= to a pointer to a Header
+yields a valid (i.e. not underaligned)
+pointer to a Header.
+Of course, we have to remember not to actually /use/ this address
+as written.
+
+This done, the garbage collector is really simple to write:
+
+#+begin_src zig
+fn markAndSweep(hither: *Hither) void {
+    // mark
+    for (hither.dictionary.keys()) |key| {
+        const addr = hither.heap.addressOf(key.ptr) catch continue;
+        const header = hither.heap.containingInUseHeader(addr) orelse continue;
+        header.tag();
+    }
+    for (hither.dictionary.values()) |cell| hither.tagContainingHeader(cell);
+    // sweep
+    var used = hither.heap.used;
+    while (used) |ptr| {
+        used = Heap.Header.unTagPtr(ptr.next);
+        if (Heap.Header.isPtrTagged(ptr.next)) continue;
+        hither.heap.discard(ptr);
+    }
+    used = hither.heap.used;
+    while (used) |ptr| : (used = ptr.next) {
+        ptr.next = Heap.Header.unTagPtr(ptr.next);
+    }
+}
+#+end_src
+
+Basically we have a couple utilities that,
+given some data that could be on hither’s heap,
+grab the corresponding header.
+We “tag” the header to show that it’s in use,
+and then discard any header which is not tagged.
+
+The rest of my code is essentially unaware of the existence of this heap
+(except when I need to go fetch the actual data corresponding to a slice,
+of course).
+This is because Zig has an =Allocator= pattern,
+which you can easily implement your own version of, so I did.
