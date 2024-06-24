@@ -1,0 +1,28 @@
+---
+title: "Weeknote 240623"
+math: false
+date: 2024-06-23T22:02:00-04:00
+summary: >
+  A “weeknote”, I am told, is best written on a Friday,
+  and yet here I am putting this second one up on Sunday night.
+  I am sovereign of my domain name, I shall do as I see fit.
+---
+
+A “weeknote”, I am told, is best written on a Friday,
+and yet here I am putting this second one up on Sunday night.
+I am sovereign of my domain name, I shall do as I see fit.
+
+- Like 15 people came out to my show last Saturday expressly to see me perform?
+- I'm thoroughly touched. I haven't had that many people show up for me since college.
+- I'm writing / performing music for a play that will be put on in November
+  that my friend Raymond wrote and is producing / directing.
+- The name of the play is “The Play About The Blowjob”, and our first rehearsal was this afternoon.
+- It was so fun! I read for one of the characters that doesn’t at the moment have an actor
+  and had a blast.
+- My cat Nastya is so loved. She might not be around for much longer.
+- I worked and reworked at the way TUI interaction feels all this week.
+- Realized that rather than “entities”, what I wanted was “events”,
+  which can be both posted and handler registered for.
+- So put together a “pub-sub” model inspired by =mediator_lua=.
+- This system is really great, especially that it’s accessible from basically anywhere.
+  
