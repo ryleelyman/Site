@@ -9,7 +9,7 @@ starting in Fall 2024, I’ll be an assistant professor in the math department.
 I have two email addresses;
 for academic things, please use <rylee.lyman@rutgers.edu>.
 Otherwise you’re welcome to write to <rylee.alanza@gmail.com>.
-You can find my CV [here](/pdf/Lyman.pdf).
+You can find my CV [here](/pdfs/Lyman.pdf).
 
 Mathematically, I’m interested in many things.
 My favorite topics are group actions on trees and outer automorphisms of such groups.
